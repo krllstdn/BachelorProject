@@ -1478,97 +1478,294 @@ The ultimate goal is immunosuppression without drugs because drugs are often
 \end_layout
 
 \begin_layout Section
-Tranplantation from medical point of view
-\end_layout
-
-\begin_layout Subsection
 Immunology
 \end_layout
 
 \begin_layout Standard
-Immune system is a complex defense system that evolved to protect multicellular
- organisms from pathogens, from as tiny as viruses to as big as multicellular
- parasites.
- It is designed to be able to respond to such challanges: it consists of
- many cells and tissues that compose complex systems and reaction pathways.
+The immune system is a sophisticated defense mechanism that evolved to protect
+ multicellular organisms from pathogens such as bacteria, fungi, viruses,
+ and parasites.
+ It consists of many cells and tissues that compose a complex system that
+ detects, evaluates, and responds to the invader.
+ The immune system is divided into humoral and cell-mediated immunity.
+ Humoral is mediated by soluble immunoglobulin proteins referred to as antibodie
+s, while cell-mediated involves pathogen-specific T Lymphocytes that either
+ destroy the invader or assist other cells in doing so.
+ Both are essential for a complete immune response.
 \end_layout
 
 \begin_layout Standard
-Immunity can be divided into two parts: humoral and cell-mediated.
- Humoral (means liquid) immunity is mediated by soluble immunoglobulin proteins
- referred to as antibodies.
- Cell-mediated immunity is a system that consist of pathogen-specific T
- lymphocytes that either destroy the invader alone or help other cells.
- The complete immune response needs activation of both humoral and cell-mediated
- immunity.
+Lymphocyte is a type of white blood cell that is responsible for both humoral
+ and cell-mediated immune responses.
+ There are two types of lymphocytes: T lymphocytes (T cells) and B lymphocytes
+ (B cells).
+ B cells mediate humoral response by producing antigen-specific antibodies.
+ An antigen is any molecular structure that binds to an antibody or specific
+ surface T cell receptor, triggering an immune response.
+ Once B-cell encountered an antigen it starts to produce antibodies specific
+ to it, antibodies then bind to it, marking the invader for destruction.
+ T cells when encountering an antigen start to proliferate forming an army
+ of T cells that will eliminate the invader and will form long-term memory
+ about the pathogen.
 \end_layout
 
 \begin_layout Standard
-Lymphocyte is a type of white blood cells that is responsible for both humoral
- and cell-mediated immune response.
- There are two types of lymphocytes: T lymphocytes, often are referred to
- as T-cells, and B lymphocytes, often referred to as B cells.
- T cells induce cell-mediated response.
- B cells mediate humoral response by producing antibodies to specific antigen
- that triggered an immune response.
- Antigen is any molecular structure that binds to antibodies or specific
- receptors on T-cell.
- This binding will trigger an immune response.
- The theory that describes how this works is named Clonal selection theory
- and it states that once the antigen is bound to antigen-specific receptor
- on the surface of B-cell receptor it starts to produce in an enormous quantitie
-s soluble form of its receptor (antibody) that binds to the antigen, marking
- it for the destruction.
- T-cells with antigen-specific receptor start to proliterate (hence the
- name) forming the army of cells, help B-cells in antibody production and
- attack marked invader.
+Physical barriers: epithelia and mucous membranes constitute the first line
+ of defense.
+ To activate the immune system the pathogen must first breach physical barriers.
+ The immune system categorizes pathogens by common characteristics and designs
+ its response accordingly.
+ Pathogen detection and categorization rely on the interaction between pathogen
+ and T-cell receptors, as well as soluble antibodies.
+ Binders for T cell receptors and antibodies can be the whole pathogen’s
+ body, its part, or molecules excreted by it.
 \end_layout
 
 \begin_layout Standard
-Pathogens are organisms that cause diseases.
- There are four types of pathogens: bacteria, viruses, fungi and parasytes.
- The process of inducing the disease is called pathogenesis.
- The immune system categorizes them by common characteristics and designs
- its response in accordance to that.
- To activate immune response tthe invader needs first to breach the physical
- barriers of the body that consists of epithelial cells and mucuous membranes.
- Victims of severe burns clearly demonstrate the importance of these barriers
- – if they are not treated with a lot of medications they might die from
- multiple infections.
+Pathogens are recognized and categorized by molecular patterns that are
+ associated with a particular pathogen and are referred to as pathogen-associate
+d molecular patterns (PAMPs).
+ Pathogen recognition receptors (PRRs), which are excreted by white blood
+ cells, bind to PAMPs initiating the cascade of events that will mark a
+ pathogen for destruction.
 \end_layout
 
 \begin_layout Standard
-The effective immune response is one that is tailored to the nature of an
- invader.
- To initalize proper immune response the invader's chemical structures have
- to be properly detected and evaluated.
- The pathogen detection means chemical interaction between the pathogen
- and receptors on immune cells, although the soluble receptors such as antibodie
-s can also be involved.
- Binders for these receptors can be the whole pathogen's body, its part
- or molecules excreted by the invader.
- The immune response will vary depending on the number of and a type of
- receptors involved.
- For example viruses operate inside of cells so the response include detecting
- and destroying the infected cells, meaning that the response must be different
- from one related to bacterial infection.
+Pathogen-host interaction is a continuous arms race, as pathogens usually
+ have a short life cycle and can modify their DNA to elude the host's recognitio
+n systems.
+ The generation of diversity in developing cells is designed to combat this.
+ When lymphocytes are developing in bone marrow random PRRs are generated,
+ then cells are tested on non-reactivity to host cells.
+ If the test is passed the cell is released into circulation.
+ The principle of recognizing self vs.
+ non-self is called tolerance.
 \end_layout
 
 \begin_layout Standard
+There are two interconnected systems of response: innate and adaptive.
+ Innate includes primitive built-in cellular and molecular mechanisms aimed
+ at preventing infections and quickly demolishing common pathogens.
+ It consists of physical and molecular barriers as well as PRRs that are
+ encoded in DNA and therefore are inherited.
+ Innate immunity provides a fast and effective response which however is
+ not very specific and cannot differentiate small differences.
+ Adaptive immunity is constituted by both humoral, where antibodies neutralize
+ and eradicate extracellular microbes and toxins, and cell-mediated immunity,
+ where T lymphocytes exterminate intracellular invaders.
+\end_layout
 
+\begin_layout Standard
+Adaptive immunity is much slower but more able to recognize small differences.
+ It typically starts to act within 5 to 6 days after initial exposure.
+ Because it takes time to create an army of cells with specific receptors.
+ After pathogen extermination, some of the lymphocytes with the specific
+ receptor become memory cells, making it easier to fight this type of pathogen.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In conclusion, the immune system is a complex network of molecules, cells,
+ tissues, and organs that cooperate in protecting the organism from pathogens.
+ The system can be divided into two main branches: innate and adaptive,
+ which cooperate in protecting the host from infections while developing
+ long-term immunity to specific pathogens.
+ Understanding the mechanisms of the immune system is essential to understanding
+ the domain of kidney transplantation.
 \end_layout
 
 \begin_layout Section
-Problematic of the kidney exchange
+Immunology of kidney transplant
+\end_layout
+
+\begin_layout Standard
+The process of transplantation inevitably includes termination of blood
+ flow, and, as a result, oxygenation.
+ Therefore cell is unable to generate sufficient amount of energy to maintain
+ homeostasis, leading to damage or death.
+ Damage or death is associated with DAMP release that might be detected
+ by both innate and adaptive immunity.
+\end_layout
+
+\begin_layout Subsection
+Immune system activation Peritransplant
+\end_layout
+
+\begin_layout Standard
+The process of transplantation inevitably includes termination of blood
+ flow, and, as a result, oxygenation.
+ Therefore cell is unable to generate sufficient amount of energy to maintain
+ homeostasis, leading to damage or death.
+ Damage or death is associated with DAMP release that might be detected
+ by both innate and adaptive immunity.
+ Mostly it is the ancient innate immunity that is activated with its soluble
+ arm - complement system.
+\end_layout
+
+\begin_layout Paragraph*
+Damage signals
+\end_layout
+
+\begin_layout Standard
+Many DAMPS are recognized by the same PRRs that mediate response to PAMPs.
+ These DAMPS include molecules that are normally hidden from the immune
+ system and are produced during ischemia, such as extrecellular ATP, heat
+ shock proteins (HSPs), uric acid, etc.
+ Likewise, oxidative stress and decline in intracellular potassium may act
+ as intracellular damage signals.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Complement
+\end_layout
+
+\begin_layout Standard
+Complement system is comprised of series of proteine kinases that are sequential
+ly activated resulting in membrane attack complex (MAC) formation.
+ MAC include complement components C5 to C9, which are inserted into pathogen
+ cell membrane resulting in compromising cell integrity leading to cell
+ death.
+\end_layout
+
+\begin_layout Standard
+There are three pathways of complement system activation: the classical
+ pathway, the alternative pathway, and the mannose-binding lectin (MBL)
+ pathway.
+ The classical pathway is activated by IgM and IgG antibodies and participates
+ in antibody-mediated rejection, that will be discussed further.
+ Alternative complement is always active and therefore must be controlled
+ by a regulatory proteins, to prevent inadequate responses.
+ The MBL pathway is activated by damaged endothelium, a cell tissue that
+ covers organs and vessels, and carbohydrates present on pathogens.
+ Either pathway results in C3 convertase that cleaves C3.
+ This cleavage leads to a cascade of reactions that culminate in MAC formation.
+\end_layout
+
+\begin_layout Standard
+Long ischemia time results in endothelial cell damage that is acossiated
+ with ischemia-reperfusion injury (IRI).
+ IRI activates MBL and alternative complement pathways.
+\end_layout
+
+\begin_layout Standard
+Gene silencing using small interfering RNA (siRNA) might be a promising
+ instrument in organ transplantation, because it can be appliend to an allograft
+ during cold reperfusion and it has been shown to mitigate IRI in animal
+ models.
+ Other strategies of supressing local complement activation would also be
+ useful.
+\end_layout
+
+\begin_layout Subsection
+Stimulation of Adaptive Alloimmunity
+\end_layout
+
+\begin_layout Standard
+Immune response to a graft occurs in two main stages: afferent and efferent
+ arms.
+ In afferent stage, recipient lymphocytes are stimulated by donor antigens
+ and start to proliterate and send signals to other cells.
+ In efferent arm, leukocytes migrate to the transplanted organ and donor
+ specific antibodies are produced.
+ 
+\end_layout
+
+\begin_layout Standard
+For the immune system to be activated graft must express antigens that will
+ be considered by the host's immune system as foreign.
+ These include ABO antigens, human leukocyte antigens (HLA), and polymorphic
+ non-HLA 
+\begin_inset Quotes sld
+\end_inset
+
+auto-antigens
+\begin_inset Quotes srd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph
+ABO blood group antigens
+\end_layout
+
+\begin_layout Standard
+ABO system is used to group blood into groups, based on presence or absense
+ of antigens on a blood cell surface.
+ There are four major blood groups: A, B, O and AB.
+\end_layout
+
+\begin_layout Standard
+When allocating an organ to transplant the first thing that is considered
+ is ABO blood group antigens compatibility.
+ ABO antigens are expressed almost by any cell in the allograft, and if
+ the transplantation to be carried out in ABO-incompatible donor and recipient
+ it would result in a hyperacute antibody-mediated rejection.
+\end_layout
+
+\begin_layout Standard
+Donors with blood group O are so called 
+\begin_inset Quotes sld
+\end_inset
+
+universal donors
+\begin_inset Quotes srd
+\end_inset
+
+.
+ Organs from them can be safely transplanted to recipients with any ABO
+ blood group.
+ Whereas, recipient with AB group can safely receive organ from recipient
+ with any ABO blood group and is called a 
+\begin_inset Quotes sld
+\end_inset
+
+universal recipient
+\begin_inset Quotes srd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+HLA
+\end_layout
+
+\begin_layout Subsection
+T Cell-mediated rejection
+\end_layout
+
+\begin_layout Subsection
+B Cell-mediated rejection
+\end_layout
+
+\begin_layout Subsection
+Transplant tolerance
+\end_layout
+
+\begin_layout Subsection
+Factors Influencing rejection beyond the graft - microbiome
+\end_layout
+
+\begin_layout Section
+Conclusion
 \end_layout
 
 \begin_layout Chapter
-Machine Learning Background
+Machine Learning Backg round
 \end_layout
 
 \begin_layout Section
-Introduction to the topic of Artificial Intelligence and Machine learning
- and its applications in medicine and in KEP in particular.
+Machine learning overview 
 \end_layout
 
 \begin_layout Chapter
@@ -1684,10 +1881,40 @@ key "key-1"
 
 \end_inset
 
-Punt, J.
- et al.
- (2019) Immunology.
- New York, NY: Macmillan Education.
+PUNT, Jenni et al.
+ Kuby immunology.
+ Eight.
+ vyd.
+ New York: Macmillan Education, 2019.
+ ISBN 9781319114701;1319114709;
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+ABBAS, Abul K., Andrew H.
+ LICHTMAN a Shiv PILLAI.
+ Basic immunology: functions and disorders of the immune system.
+ Sixth.
+ vyd.
+ Philadelphia: Elsevier, 2020.
+ ISBN 9780323549431;0323549438;
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+NCI Dictionary of Cancer terms (no date) National Cancer Institute.
+ Available at: https://www.cancer.gov/publications/dictionaries/cancer-terms/def/a
+bo-blood-group-system (Accessed: March 6, 2023).
  
 \end_layout
 
