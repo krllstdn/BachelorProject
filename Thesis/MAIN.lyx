@@ -1404,10 +1404,7 @@ As the organ preservation for more than 6 hours was achieved in mid 60s
  template for the United Network of Organ Sharing (UNOS) that controls organ
  allocation and placement, monitors performance of transplant centers and
  organ procurement organizations, collects data, and controls quality.
- UNOS has been a force for order and good, but to some its effectiveness
- has seemed compromised by the excessive scale of its tasks and the number
- and size of its committees and inevitable bureaucracy ( WRITE SOMETHING
- GOOD ABOUT THEM!!!)
+ They kindly provided us with data for this paper.
 \end_layout
 
 \begin_layout Subsection
@@ -1702,6 +1699,14 @@ ABO blood group antigens
 ABO system is used to group blood into groups, based on presence or absense
  of antigens on a blood cell surface.
  There are four major blood groups: A, B, O and AB.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-7"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1734,14 +1739,194 @@ universal recipient
 \end_inset
 
 .
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
 HLA
 \end_layout
 
+\begin_layout Standard
+Histocompatibility antigens are genetically encoded antigens that cover
+ cell surfaces.
+ They differ between individuals of the same species and therefore trigger
+ an immune response in case of allograft.
+ In all vertebraes histocompatibility antigens are divided into single major
+ histocompatibility complex (MHC) and numerous minor histocompatibility
+ (miH) systems.
+ In case of either MHC or miH incompatibility the result is an immune response
+ to the graft, more severe in case of MHC than miH.
+ Rejection in MHC-compatible donor-recipient pair is usually delayed, in
+ some cases forever.
+ Although, sometimes miH mismatch might be so severe that it would be comparable
+ to full MHC mismatch.
+ 
+\end_layout
+
+\begin_layout Standard
+MHC antigens are proteins that cover cell surfaces to help the immune system
+ to recognize self vs.
+ non-self.
+ Major histocompatibility comples is divided into MHC class I and MHC class
+ II.
+ MHC class I cover surfaces of most cells and are liable for activation
+ of cytotoxic CD8 cells, that help to find and destroy infected cells.
+ MHC class II are found on certain immune cells and play crucial role in
+ immune response coordination.
+ In humans MHC class 1 are divided into three subgroups each, as can be
+ seen on table 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+MHC class division
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MHC class I
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MHC class II
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HLA-A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HLA-DR
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HLA-B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HLA-DP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HLA-C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HLA-DQ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In clinical practice, clinicians asses and try to match donors and recipient
+ according to the number of HLA-A, -B, and -DR mismatches, ranging from
+ zero mismatches (0-0-0) to a maximum of 6 mismatches (2-2-2).
+ Generally more emphasis is placed on DR loci due to capability of CD4 T
+ cell activation, which might trigger both humoral and cellular adaptive
+ immune responses.
+\end_layout
+
+\begin_layout Standard
+Minor histocompatibility proteins can act as antigens, although weaker than
+ MHC.
+ However if prior sensitisation exists it could result in severe immune
+ response that might result in graft loss.
+ 
+\end_layout
+
 \begin_layout Subsection
 T Cell-mediated rejection
+\end_layout
+
+\begin_layout Standard
+T cell-mediated rejection or TCMR is the most common type of allograft rejection
+, as it still happens in 20% of transplantations mostly within first 6 months
+ posttrasplant.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -1922,6 +2107,21 @@ NCI Dictionary of Cancer terms (no date) National Cancer Institute.
  Available at: https://www.cancer.gov/publications/dictionaries/cancer-terms/def/a
 bo-blood-group-system (Accessed: March 6, 2023).
  
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+Dean L.
+ Blood Groups and Red Cell Antigens [Internet].
+ Bethesda (MD): National Center for Biotechnology Information (US); 2005.
+ Chapter 2, Blood group antigens are surface markers on the red blood cell
+ membrane.
+ Available from: https://www.ncbi.nlm.nih.gov/books/NBK2264/
 \end_layout
 
 \end_body
