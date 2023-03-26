@@ -348,8 +348,8 @@ Estimating patient's life expectancy after a successful kidney transplant
 \series bold
 \size huge
 \lang czech
-Odhad délky Zivota pacienta po úspsné transplantaci ledviny pomocí metod
- strojového ucení
+Odhad délky života pacienta po úspěšné transplantaci ledviny pomocí metod
+ strojového učení
 \end_layout
 
 \begin_layout Standard
@@ -419,7 +419,7 @@ Kyrylo Stadniuk
 Supervisor: 
 \series bold
 Ing.
- Tomáš Kouřím
+ Tomáš Kouřim
 \end_layout
 
 \begin_layout Labeling
@@ -474,9 +474,12 @@ Acknowledgment:
 
 \begin_layout Standard
 \noindent
-I would like to thank Ing.
- Tomáš Kouřím for his expert guidance and express my gratitude to PaedDr
- Eliška Rafajová for her language assistance.
+I am grateful to Ing.
+ Tomáš Kouřim for his expert guidance and to Dr.
+ Pavel Strachota for his invaluable support and insightful feedback throughout
+ this project.
+ I would also like to extend my sincerest appreciation to PaedDr Eliška
+ Rafajová for her language assistance.
 \end_layout
 
 \begin_layout Standard
@@ -577,8 +580,8 @@ Název práce:
 \series bold
 \size huge
 \lang czech
-Odhad délky Zivota pacienta po úspsné transplantaci ledviny pomocí metod
- strojového ucení
+Odhad délky života pacienta po úspěšné transplantaci ledviny pomocí metod
+ strojového učení
 \end_layout
 
 \begin_layout Standard
@@ -1691,7 +1694,7 @@ auto-antigens
  
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection*
 ABO blood group antigens
 \end_layout
 
@@ -1749,7 +1752,7 @@ literal "false"
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection*
 HLA
 \end_layout
 
@@ -1926,19 +1929,63 @@ T Cell-mediated rejection
 T cell-mediated rejection or TCMR is the most common type of allograft rejection
 , as it still happens in 20% of transplantations mostly within first 6 months
  posttrasplant.
- 
+ Immune system cells migrate through vessels to the graft, become activated
+ and start to attack the organ.
+ Complement may also play role in it.
 \end_layout
 
 \begin_layout Subsection
 B Cell-mediated rejection
 \end_layout
 
+\begin_layout Standard
+B cells are immune system cells that produce antibodies.
+ Alloantibodies are antibodies that react to donor-specific HLA antigens
+ and might cause hyperacute rejection, acute antibody-mediated rejection
+ (ABMR), and chronic ABMR.
+ About 30% of patients have sensitivities and have certain HLA antibodies.
+ It might cease transplantation or require antibody suppression strategy.
+ Even low amount of antibodies below crossmatch cutoff doubles the risk
+ of ABMR and increases the risk of graft failure by 76%.
+ Additionally, donor specific antibodies might develop posttransplant and
+ cause an actue ABMR.
+ 
+\end_layout
+
+\begin_layout Standard
+Acute AMBR is rarely seen in patients withour prior sensitization and is
+ highly difficult to treat.
+ AMBR is characterized by decline in allograft function, presense of DSA
+ and signs of acute vascular injury.
+ A progressive reduction in graft function over time is observed almost
+ universally.
+\end_layout
+
 \begin_layout Subsection
 Transplant tolerance
 \end_layout
 
+\begin_layout Standard
+Taking into account the detrimental effect of long-term immunosuppression
+ one of the primary objectives in transplantation is the induction of immunologi
+c non-responsiveness (tolerance) to an allograft.
+ The are a couple a pathways of immune non-responsivenes generation described
+ in literature, however it haven't gone further animal models yet.
+\end_layout
+
 \begin_layout Subsection
 Factors Influencing rejection beyond the graft - microbiome
+\end_layout
+
+\begin_layout Standard
+Human body is very complex system where every subsystem influences other
+ subsystems and the whole system in general.
+ It is clear that gut microbiome has a profound influence on immune system.
+ It is possible microflora on the allograft might cause rejection.
+ Immunosupression, profilactory antibbiotics, diet changes and other restriction
+s asossiated with organ transplantation result in decrease in gut microbiome
+ diversity that result in systematic inflammation, that might contribute
+ to alloimunnity, as well as autoimunnity.
 \end_layout
 
 \begin_layout Section
@@ -1946,23 +1993,119 @@ Conclusion
 \end_layout
 
 \begin_layout Chapter
-Machine Learning Backg round
+Machine Learning Background
 \end_layout
 
 \begin_layout Section
-Machine learning overview 
+Machine Learning Overview
+\end_layout
+
+\begin_layout Subsection
+Supervised Learning
+\end_layout
+
+\begin_layout Subsection
+Unsupervised Learning
+\end_layout
+
+\begin_layout Section
+Popular Machine Learning Libraries and Their Comparison
+\end_layout
+
+\begin_layout Subsection
+Sci-kit learn
+\end_layout
+
+\begin_layout Subsection
+Tensorflow
+\end_layout
+
+\begin_layout Subsection
+PyTorch
+\end_layout
+
+\begin_layout Subsection
+Comparison
 \end_layout
 
 \begin_layout Chapter
-Data Preparation
+Data Preparation and Analysis
+\end_layout
+
+\begin_layout Section
+Exploratory Data Analysis
+\end_layout
+
+\begin_layout Subsection
+...
+\end_layout
+
+\begin_layout Section
+Data preparation
+\end_layout
+
+\begin_layout Subsection
+Feature selection
+\end_layout
+
+\begin_layout Subsection
+Handling Numerical Values
+\end_layout
+
+\begin_layout Subsection
+Handling Categorical Values
 \end_layout
 
 \begin_layout Chapter
-Analysis and results
+Machine Learning Model
+\end_layout
+
+\begin_layout Section
+Model selection
+\end_layout
+
+\begin_layout Section
+Model comparison
+\end_layout
+
+\begin_layout Section
+Final Model
 \end_layout
 
 \begin_layout Chapter
-Application in Txmatching
+Applications
+\end_layout
+
+\begin_layout Section
+Txmatching
+\end_layout
+
+\begin_layout Subsection
+Frontend 
+\end_layout
+
+\begin_layout Subsection
+Backend
+\end_layout
+
+\begin_layout Subsection
+MLOps
+\end_layout
+
+\begin_layout Section
+KidneyLife
+\end_layout
+
+\begin_layout Subsection
+Frontend 
+\end_layout
+
+\begin_layout Subsection
+Backend
+\end_layout
+
+\begin_layout Subsection
+MLOps
 \end_layout
 
 \begin_layout Chapter*
