@@ -37,7 +37,7 @@
 %\addtocontents{lof}{\protect\thispagestyle{empty}}
 %\addtocontents{lot}{\protect\thispagestyle{empty}}
 
-%% Shifts the top line of the TOC (not the title) 1cm upwards 
+%% Shifts the top line of the TOC (not the title) 1cm upwards
 %% so that the whole TOC fits on 1 page. Additional page size
 %% adjustment is performed at the point where the TOC
 %% is inserted.
@@ -331,7 +331,7 @@ status collapsed
 \series bold
 \size huge
 Estimating patient's life expectancy after a successful kidney transplant
- using machine learning methods 
+ using machine learning methods
 \end_layout
 
 \begin_layout Standard
@@ -408,7 +408,7 @@ ends the centered part (the required new paragraph before "}" is inserted
 \begin_layout Labeling
 \paragraph_spacing single
 \labelwidthstring MMMMMMMMM
-Author: 
+Author:
 \series bold
 Kyrylo Stadniuk
 \end_layout
@@ -416,7 +416,7 @@ Kyrylo Stadniuk
 \begin_layout Labeling
 \paragraph_spacing single
 \labelwidthstring MMMMMMMMM
-Supervisor: 
+Supervisor:
 \series bold
 Ing.
  Tomáš Kouřim
@@ -425,7 +425,7 @@ Ing.
 \begin_layout Labeling
 \paragraph_spacing single
 \labelwidthstring MMMMMMMMM
-Consultant: 
+Consultant:
 \series bold
 Ing.
  Pavel Strachota, Ph.D.
@@ -437,7 +437,7 @@ Language
 \begin_inset space ~
 \end_inset
 
-advisor: 
+advisor:
 \series bold
 PaedDr.
  Eliška Rafajová
@@ -478,7 +478,7 @@ I am grateful to Ing.
  Tomáš Kouřim for his expert guidance and to Dr.
  Pavel Strachota for his invaluable support and insightful feedback throughout
  this project.
- I would also like to extend my sincerest appreciation to PaedDr Eliška
+ I would also like to extend my sincerest appreciation to PaedDr. Eliška
  Rafajová for her language assistance.
 \end_layout
 
@@ -521,7 +521,7 @@ I declare that this Bachelor's Degree Project is entirely my own work and
 
 \begin_layout Standard
 \noindent
-Prague, 
+Prague,
 \begin_inset ERT
 status open
 
@@ -658,7 +658,7 @@ Druh práce:
 Vedoucí práce:
 \emph default
  Ing.
- Tomás Kourim Mild Blue, s.r.o., Plzenská 27, Praha 5
+ Tomás Kourim Mild Blue, s.r.o., Plzeňská 27, Praha 5
 \end_layout
 
 \begin_layout Standard
@@ -675,7 +675,7 @@ Vedoucí práce:
 
 \emph on
 \lang czech
-Konzultant: 
+Konzultant:
 \emph default
 Ing.
  Pavel Strachota, Ph.D.
@@ -757,7 +757,7 @@ Abstrakt:
  na 10 řádků.
  Abstrakt max.
  na 10 řádků.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1018,7 +1018,7 @@ Advancements in surgical methods and techniques at the beginning of the
 \begin_layout Standard
 The same year other similar transplantations were made.
  Another physician, Alfred von Decastello, performed a dog-to-dog kidney
- allograft at the Institute of Experimental Pathology in Vienna.
+ allograft (explain, this is an uncommon word) at the Institute of Experimental Pathology in Vienna.
  The kidney produced urine for a while but then stopped working.
  Later Ullman performed a dog-to-goat kidney xenograft (cross-species transplant
 ), and to his surprise kidney produced some urine, but later stopped.
@@ -1071,7 +1071,7 @@ The first recorded human renal xenograft
 
  was performed by Mathieu Jaboulay in 1906.
  He chose a pig and a goat as donor animals and performed two xenografts.
- One kidney was transported to the arm and the second to the thigh.
+ One kidney was transported (transported? the word is used like that?) to the arm and the second to the thigh.
  Each kidney functioned for one hour
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1095,7 +1095,7 @@ The second and third human transplants performed by Ernst Unger were far
  The kidney was transplanted from an ape to dying from renal failure young
  woman.
  The kidney never worked.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1124,7 +1124,7 @@ literal "false"
 The period of the 1930s and 1940s was rather stagnant compared to the beginning
  of the century.
  European surgical centers that studied transplantology before were in decline.
- Moyo Clinic in the US was conducting some cautious experiments without
+ Mayo Clinic in the US was conducting some cautious experiments without
  considering Carrol's works and attempts at immunosuppression.
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1183,7 +1183,7 @@ In 1946, at the Peter Bent Brigham Hospital in Boston, a group of surgeons:
  The short period of kidney functioning may have helped the patient to recover
  from acute renal failure.
  It ignited the hospital's interest in renal transplantation.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1192,7 +1192,7 @@ Simonsen in Denmark, Dempster in London, and Küss in Paris concluded that
  Further, both Simonsen and Dempster deduced that the immune response was
  responsible for graft failure and both hypothesized that the humoral mechanism
  of rejection was probable.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1216,7 +1216,7 @@ pic hormone (more known as cortisone).
  blood group matching between the donor and recipient, and host bilateral
  nephrectomy could be beneficial for the success of the transplant.
  These conclusions were later confirmed by subsequent studies.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1232,7 +1232,7 @@ tion and with increased confidence on December 23, 1954 in Boston Joseph
  because the technical possibilty of kidney transplantation was evident
  and the cases of successful skin allografts between identical twins were
  known for decades, but nonetheless it was an important milestone that aroused
- the interest in further experiments 
+ the interest in further experiments
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1,key-4"
@@ -1265,7 +1265,7 @@ pressive properties, that relieved their condition.
 
 \begin_layout Standard
 In 1958, Murray’s team transplantation on humans utilizing the Main-Prehn
- method conducted lethal total body irradiation (TBI) on two patients with
+ method conducted lethal (to znamena smrtelne, podle me kdyz nekomu dal "smrtelnou davku radiace" tak umre tak jako tak = fakt je to spravne?) total body irradiation (TBI) on two patients with
  additional bone marrow transplant.
  Ten more recipients were irradiated with sub-lethal TBI, but without donor
  bone marrow transplant.
@@ -1300,7 +1300,7 @@ It was obvious that TBI is not the best choice and that it is necessary
  Schwarz and Dameshek's paper and performed his own experiment in dogs and
  found that it signifficantly prolonged dog's survival.
  Charles Zukoski and David Hume found the same outcomes.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1374,7 +1374,7 @@ Hemodialysis for renal failure was created by Willem Kolff from Holland
 Acceptance of brain death as a real death.
  Before the mid 60s the kadaver transplantation was limited by the ischemic
  damage.
- Now the additional organs were available from 
+ Now the additional organs were available from
 \begin_inset Quotes sld
 \end_inset
 
@@ -1427,7 +1427,7 @@ Although tissue typing was suggested by Alexis Carrel in the beginning of
  test predicts hyperacute rejection.
  2) matching can reliably identify optimal donor within a family.
  It was assumed that the same would work for non-related recipients.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1435,7 +1435,7 @@ However, when in 1970 Terasaki reviewed his large database of cadaver renal
  allografts he found no correlation with the typing.
  This raised a lot of agitation in tissue typing community and his grant
  even was temporalily suspended until others didn't report the same.
- Now it is conclded that the 
+ Now it is conclded that the
 \end_layout
 
 \begin_layout Subsection
@@ -1620,7 +1620,7 @@ Many DAMPS are recognized by the same PRRs that mediate response to PAMPs.
  shock proteins (HSPs), uric acid, etc.
  Likewise, oxidative stress and decline in intracellular potassium may act
  as intracellular damage signals.
- 
+
 \end_layout
 
 \begin_layout Paragraph
@@ -1675,14 +1675,14 @@ Immune response to a graft occurs in two main stages: afferent and efferent
  and start to proliterate and send signals to other cells.
  In efferent arm, leukocytes migrate to the transplanted organ and donor
  specific antibodies are produced.
- 
+
 \end_layout
 
 \begin_layout Standard
 For the immune system to be activated graft must express antigens that will
  be considered by the host's immune system as foreign.
  These include ABO antigens, human leukocyte antigens (HLA), and polymorphic
- non-HLA 
+ non-HLA
 \begin_inset Quotes sld
 \end_inset
 
@@ -1691,7 +1691,7 @@ auto-antigens
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1721,7 +1721,7 @@ When allocating an organ to transplant the first thing that is considered
 \end_layout
 
 \begin_layout Standard
-Donors with blood group O are so called 
+Donors with blood group O are so called
 \begin_inset Quotes sld
 \end_inset
 
@@ -1733,7 +1733,7 @@ universal donors
  Organs from them can be safely transplanted to recipients with any ABO
  blood group.
  Whereas, recipient with AB group can safely receive organ from recipient
- with any ABO blood group and is called a 
+ with any ABO blood group and is called a
 \begin_inset Quotes sld
 \end_inset
 
@@ -1770,7 +1770,7 @@ Histocompatibility antigens are genetically encoded antigens that cover
  some cases forever.
  Although, sometimes miH mismatch might be so severe that it would be comparable
  to full MHC mismatch.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1784,7 +1784,7 @@ MHC antigens are proteins that cover cell surfaces to help the immune system
  MHC class II are found on certain immune cells and play crucial role in
  immune response coordination.
  In humans MHC class 1 are divided into three subgroups each, as can be
- seen on table 
+ seen on table
 \end_layout
 
 \begin_layout Standard
@@ -1918,7 +1918,7 @@ Minor histocompatibility proteins can act as antigens, although weaker than
  MHC.
  However if prior sensitisation exists it could result in severe immune
  response that might result in graft loss.
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -1949,7 +1949,7 @@ B cells are immune system cells that produce antibodies.
  of ABMR and increases the risk of graft failure by 76%.
  Additionally, donor specific antibodies might develop posttransplant and
  cause an actue ABMR.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2081,7 +2081,7 @@ Txmatching
 \end_layout
 
 \begin_layout Subsection
-Frontend 
+Frontend
 \end_layout
 
 \begin_layout Subsection
@@ -2097,7 +2097,7 @@ KidneyLife
 \end_layout
 
 \begin_layout Subsection
-Frontend 
+Frontend
 \end_layout
 
 \begin_layout Subsection
@@ -2171,7 +2171,7 @@ literal "false"
 Nobel prize in physiology or medicine (2022) Our Scientists.
  Available at: https://www.rockefeller.edu/our-scientists/alexis-carrel/2565-nobel
 -prize/ (Accessed: February 6, 2023).
- 
+
 \end_layout
 
 \begin_layout Bibliography
@@ -2249,7 +2249,7 @@ literal "false"
 NCI Dictionary of Cancer terms (no date) National Cancer Institute.
  Available at: https://www.cancer.gov/publications/dictionaries/cancer-terms/def/a
 bo-blood-group-system (Accessed: March 6, 2023).
- 
+
 \end_layout
 
 \begin_layout Bibliography
