@@ -953,7 +953,7 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Chapter*
+\begin_layout Chapter
 Introduction
 \end_layout
 
@@ -965,12 +965,19 @@ status open
 
 
 \backslash
-addcontentsline{toc}{chapter}{Introduction}
+pagestyle{headings}
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The goal of this paper is to explore fields of kidney transplantation and
+ machine learning, create and apply machine learning model in real-world
+ application.
+ 
 \end_layout
 
 \begin_layout Chapter
@@ -991,6 +998,10 @@ pagestyle{headings}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Why kidney fail
 \end_layout
 
 \begin_layout Section
@@ -1034,7 +1045,7 @@ In Lyon in the department headed by Mathieu Jabourday, his assistants Carrel,
  stricture, and embolism
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-5"
+key "key-13"
 literal "false"
 
 \end_inset
@@ -1112,7 +1123,7 @@ These early experiments demonstrated that technically kidney transplantation
  experiments were never formally published
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-3"
+key "key-11"
 literal "false"
 
 \end_inset
@@ -1128,7 +1139,7 @@ The period of the 1930s and 1940s was rather stagnant compared to the beginning
  considering Carrol's works and attempts at immunosuppression.
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-5"
+key "key-13"
 literal "false"
 
 \end_inset
@@ -1164,7 +1175,7 @@ n transplantation.
  patients eventually recovering and living normally thereafter
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-4"
+key "key-12"
 literal "false"
 
 \end_inset
@@ -1563,7 +1574,7 @@ Adaptive immunity is much slower but more able to recognize small differences.
  receptor become memory cells, making it easier to fight this type of pathogen.
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-5"
+key "key-13"
 literal "false"
 
 \end_inset
@@ -1744,7 +1755,7 @@ universal recipient
 .
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1"
+key "key-9"
 literal "false"
 
 \end_inset
@@ -1996,16 +2007,457 @@ Conclusion
 Machine Learning Background
 \end_layout
 
-\begin_layout Section
-Machine Learning Overview
+\begin_layout Standard
+
+\series bold
+What is ML
+\series default
+: Machine learning (ML) is a subfield of computer science that consists
+ of building algorithms that are capable of processing large amounts of
+ data, finding patterns and making some actions such as predictions based
+ on new data.
+ Machine learning is an intersection of many fields of science such as statistic
+s, theory of probability, linear algebra, calculus and multivariable calculus
+ (multiple fields of mathematics, etc.) 
+\begin_inset Quotes sld
+\end_inset
+
+Machine learning is the field of study that gives computers the ability
+ to learn without being explicitly programmed.
+\begin_inset Quotes srd
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+
+\series bold
+Why is this importan
+\series default
+t: ML shines in problems that either too complex or have no known algorithm.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+ It can help us learn.
+ We can extract previously unknown correclations from the data and create
+ knowledge.
+ It might have less error in decision making than humans.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+How it is divided
+\series default
+: Machine learning can be divided into four parts supervised, semi-supervised,
+ unsupervised and reinforcement learning.
+ Supervised learning means that we labeled our data and we want to predict
+ labels from the data.
+ Semi-supervised learning means that only a part of our data is labeled.
+ Unsupervised means that our data is unlabeled.
+ In reinforcement learning we create an environment, set up rewards for
+ doing certain things and let the machine (actor) to act actions that produce
+ the highest reward.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+How it is important in medicine
+\series default
+: Every field suffers from human errors, and medicine is no exception.
+ (people get tired, wrong institutions, etc...) According to Makary et.
+ al., medical error is the third death cause in the United States 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-11"
+literal "false"
+
+\end_inset
+
+.
+ Machine learning also make mistakes, but if we manage to get at least 1%
+ better than human error this will be a success.
+ Human body is a complex system, where other humans (dopctors) can't possibly
+ comprehend everything that is going on and how is it related to each other.
+ Also it can help us gain insights from data that were already accumulated
+ and possibly make some discoveries.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Why machine learning in not learning: 
+\series default
+It is important to note that machine learning is rather marketing term.
+ Machines can't learn.
+ If we were to at least slightly distort inputs, machine wouldn't be able
+ to 
+\begin_inset Quotes sld
+\end_inset
+
+learn
+\begin_inset Quotes srd
+\end_inset
+
+.
+ This is very different from learning in humans and animals.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+ It is debatable that statistics and mathematics can really produce consciousnes
+s.
+\end_layout
+
+\begin_layout Standard
+In this chapter we will cover all theoretical background needed for solving
+ our problem, this includes classical machine learning, deep learning, statistic
+al survival analysis, basic steps that are required to create machine learining
+ systems, how to preprocess data and what algorithms are worth of our attention
+ in solving tasks like this.
+ We will begin by exploring what is supervised learning.
+\end_layout
+
+\begin_layout Section
 Supervised Learning
 \end_layout
 
+\begin_layout Standard
+Supervised learning is the process of training a model on data where the
+ outcome is known to make predictions for data where the outcome is not
+ known
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-12"
+literal "false"
+
+\end_inset
+
+.
+ 
+\emph on
+Classification
+\emph default
+ and 
+\emph on
+regression
+\emph default
+ are common supervised learning tasks.
+ In this section we will define these problems and necessary terminology,
+ describe commonly used algorithms that are used to solve these types of
+ problems.
+\end_layout
+
+\begin_layout Standard
+In supervised learning the 
+\emph on
+dataset
+\emph default
+ is the collection of labeled examples 
+\begin_inset Formula $\{(x_{i},y_{i})\}_{i=1}^{N}$
+\end_inset
+
+, where each individual 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is called a 
+\emph on
+feature vector
+\emph default
+.
+ A feature vector is a vector that in each its dimension 
+\begin_inset Formula $j=1,...,D$
+\end_inset
+
+ contains a value that describes an example in some way.
+ This value is called a 
+\emph on
+feature
+\emph default
+ and is denoted as 
+\begin_inset Formula $x^{(j)}$
+\end_inset
+
+.
+ The 
+\emph on
+label
+\emph default
+ 
+\begin_inset Formula $y^{i}$
+\end_inset
+
+ might be either a finite set of classes 
+\begin_inset Formula $\{1,2,...,C\}$
+\end_inset
+
+, in case of classification task, or a real number, a vector, a matrix or
+ graph, in case of a regression.
+ The goal of supervised learning algorithm is to create a model using the
+ dataset that will take the feature vector as input and produce label or
+ more complex structre as a output.
+\end_layout
+
+\begin_layout Standard
+Classification is a problem of assigning a label to unlabeled example.
+ This problem is solved by a classification learning algorithm that takes
+ a labeled set of examples as an input and produces a model that takes unlabeled
+ example as input and outputs a label, a number associated with it or a
+ probability of belonging to a certain class out of which it is easy to
+ deduce the class.
+ If the set of labels has only two classes we talk about 
+\emph on
+binary classification
+\emph default
+.
+ Consequentlhy, if the set of labels has three or more classes it is a 
+\emph on
+multiclass classification
+\emph default
+.
+ Some algorithms are binary classifiers by definition, while others are
+ multiclass classifiers.
+ It is possible to create an 
+\emph on
+ensemble
+\emph default
+ out of binary classifiers that will be able to perform multiclass classificatio
+n.
+ Ensemble is a combination of algorithms that are connected together to
+ perform one task.
+\end_layout
+
+\begin_layout Standard
+Regression is a problem of predicting a 
+\emph on
+target value
+\emph default
+ given an unlabeled example.
+ The problem is solved by regression learning algorithm that takes a set
+ of labeled examples as inputs and produces a model that takes unlabeled
+ example as input and outputs a target value.
+ 
+\end_layout
+
 \begin_layout Subsection
+LinearRegression
+\end_layout
+
+\begin_layout Standard
+Linear regression is a popular regression learning algorithm.
+ The model it produces is a linear combination of all features
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+What is the model: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+What we are trying to minimize(loss function):
+\series default
+ dfsdfsdf
+\end_layout
+
+\begin_layout Subsection
+LogisticRegression
+\end_layout
+
+\begin_layout Subsection
+SVM
+\end_layout
+
+\begin_layout Subsection
+DecisionTrees
+\end_layout
+
+\begin_layout Subsection
+RandomForests
+\end_layout
+
+\begin_layout Section
 Unsupervised Learning
+\end_layout
+
+\begin_layout Standard
+*100 page ml book* 1.2.4
+\end_layout
+
+\begin_layout Subsection
+Clustering
+\end_layout
+
+\begin_layout Standard
+Clustering
+\end_layout
+
+\begin_layout Standard
+Anomaly detection
+\end_layout
+
+\begin_layout Standard
+Novelty detection
+\end_layout
+
+\begin_layout Standard
+Visualization
+\end_layout
+
+\begin_layout Standard
+Dimensionality reduction
+\end_layout
+
+\begin_layout Section
+Semi-supervised learning
+\end_layout
+
+\begin_layout Section
+Reinforcement Learning
+\end_layout
+
+\begin_layout Section
+Data Preprocessing
+\end_layout
+
+\begin_layout Standard
+Feature engineering
+\end_layout
+
+\begin_layout Standard
+- One hot encoding / Ordinal encoding
+\end_layout
+
+\begin_layout Standard
+- Binning
+\end_layout
+
+\begin_layout Standard
+- Normalization
+\end_layout
+
+\begin_layout Standard
+- Standartization
+\end_layout
+
+\begin_layout Standard
+- dealing with missing features
+\end_layout
+
+\begin_layout Standard
+- Data imputation
+\end_layout
+
+\begin_layout Standard
+- 
+\end_layout
+
+\begin_layout Section
+Survival Analysis
+\end_layout
+
+\begin_layout Standard
+survival function
+\end_layout
+
+\begin_layout Standard
+hazard function
+\end_layout
+
+\begin_layout Standard
+Cox Proportional hazards method - linear model
+\end_layout
+
+\begin_layout Standard
+Survival Trees
+\end_layout
+
+\begin_layout Standard
+Random Survival Forests 
+\end_layout
+
+\begin_layout Standard
+R or python
+\end_layout
+
+\begin_layout Standard
+useless with large amounts of data
+\end_layout
+
+\begin_layout Section
+Machine learning workflow
+\end_layout
+
+\begin_layout Standard
+0.
+ define problem type and what objectives you want to achieve.
+\end_layout
+
+\begin_layout Standard
+1.
+ gather data
+\end_layout
+
+\begin_layout Standard
+2.
+ Analyse data
+\end_layout
+
+\begin_layout Standard
+3.
+ Create dataset: feature engineering
+\end_layout
+
+\begin_layout Standard
+4.
+ Apply algos for the given problem type
+\end_layout
+
+\begin_layout Standard
+5.
+ Chose the best, fine tune it, run on the whole dataset and/or modify the
+ dataset
+\end_layout
+
+\begin_layout Standard
+6.
+ Repeat
+\end_layout
+
+\begin_layout Standard
+7.
+ Deploy
+\end_layout
+
+\begin_layout Section
+Challenges of machine learning
+\end_layout
+
+\begin_layout Standard
+Poor quality data
+\end_layout
+
+\begin_layout Standard
+Over
 \end_layout
 
 \begin_layout Section
@@ -2016,16 +2468,68 @@ Popular Machine Learning Libraries and Their Comparison
 Sci-kit learn
 \end_layout
 
+\begin_layout Standard
+- pros
+\end_layout
+
+\begin_layout Standard
+- cons
+\end_layout
+
+\begin_layout Standard
+- where it is used
+\end_layout
+
+\begin_layout Subsection
+Keras
+\end_layout
+
 \begin_layout Subsection
 Tensorflow
+\end_layout
+
+\begin_layout Standard
+- pros
+\end_layout
+
+\begin_layout Standard
+- cons
+\end_layout
+
+\begin_layout Standard
+- where it can be used
+\end_layout
+
+\begin_layout Standard
+it is more corporate driven
 \end_layout
 
 \begin_layout Subsection
 PyTorch
 \end_layout
 
+\begin_layout Standard
+- pros
+\end_layout
+
+\begin_layout Standard
+- cons
+\end_layout
+
+\begin_layout Standard
+- where it can be used
+\end_layout
+
+\begin_layout Standard
+it is more research driven
+\end_layout
+
 \begin_layout Subsection
 Comparison
+\end_layout
+
+\begin_layout Section
+Conclusion
 \end_layout
 
 \begin_layout Chapter
@@ -2062,6 +2566,11 @@ Machine Learning Model
 
 \begin_layout Section
 Model selection
+\end_layout
+
+\begin_layout Standard
+we have a lot of censored and missing data, so we had to handle missing
+ data and remove censored ones.
 \end_layout
 
 \begin_layout Section
@@ -2255,7 +2764,8 @@ bo-blood-group-system (Accessed: March 6, 2023).
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-2"
+key "key-8"
+literal "false"
 
 \end_inset
 
@@ -2265,6 +2775,75 @@ Dean L.
  Chapter 2, Blood group antigens are surface markers on the red blood cell
  membrane.
  Available from: https://www.ncbi.nlm.nih.gov/books/NBK2264/
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-9"
+literal "false"
+
+\end_inset
+
+Aurélien Géron.
+ Hands-on Machine Learning with Scikit-Learn and TensorFlow Concepts, Tools,
+ and Techniques to Build Intelligent Systems.
+ O’Reilly Media, Inc., Sept.
+ 2019.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-10"
+literal "false"
+
+\end_inset
+
+Andriy Burkov.
+ THE HUNDRED-PAGE MACHINE LEARNING BOOK.
+ Andriy Burkov, 2019.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-11"
+literal "false"
+
+\end_inset
+
+Makary M A, Daniel M.
+ Medical error—the third leading cause of death in the US BMJ 2016; 353
+ :i2139 doi:10.1136/bmj.i2139
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-12"
+literal "false"
+
+\end_inset
+
+Bruce, P., Bruce, A., & Gedeck, P.
+ (2020).
+ Practical statistics for data scientists: 50+ Essential concepts using
+ R and python (2nd ed.).
+ O’Reilly Media.
+ p.
+ 141
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-13"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
