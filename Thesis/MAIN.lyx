@@ -2300,31 +2300,266 @@ Unsupervised Learning
 \end_layout
 
 \begin_layout Standard
-*100 page ml book* 1.2.4
+
+\emph on
+Unsupervised learning
+\emph default
+ is the kind of learning that operates with the dataset without lables.
+ It proves useful during EDA and 
+\emph on
+dimensionality reduction
+\emph default
+, but otherwise it is not very useful in practical applications, as unlabeled
+ dataset means no feedback about how well your model performs.
+ 
+\end_layout
+
+\begin_layout Standard
+We will cover this part very briefly, as it is not closely related to our
+ task.
+ Albeit something will be used as a data preprocessing step, such as dimensional
+ity reduction, or during exploratory data analysis.
+\end_layout
+
+\begin_layout Standard
+There are more approaches but we are going to cover only three, that might
+ prove useful to our task.
+ 
+\emph on
+Clustering
+\emph default
+ is identifying similar instances and assigning them to groups of similar
+ instances - clusters.
+ It can be used for data analysis, customer segmentation, as a dimensionality
+ reduction technique, anomaly detection.
+ Clustering might be 
+\emph on
+soft
+\emph default
+ and 
+\emph on
+hard.
+ 
+\emph default
+Hard clustering means that an instance might belong to only one class.
+ In soft clustering instance has a score of belonging to a particular cluster.
+ The score might be the distance from the cluster centroid or an affinity
+ (similarity score).
+
+\emph on
+ 
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Dimensionality reduction
+\emph default
+ is useful for visualization and for acceleration of learning.
+ Datasets often have a lot of redundant data or it might be the case that
+ the task requires a lot of features.
+ A lot of algorithms, such as linear model, SVMs, decision trees, do not
+ handle high dimensional data well.
+ So called 
+\emph on
+curse of dimensionality
+\emph default
+ states that high dimensional data can cause slow learning and prevent us
+ from getting an optimal model.
+ So the reduction of the data dimensionality might be a good idea.
+ Its worth noting though that dimensionality reduction algorithm might loose
+ some useful information, while decreasing training time.
+ A lot of modern algorithms, such as neural networks or ensemle algorithms,
+ handle high dimensional data very well, so dimensionality reduction techniques
+ are used less than in the past.
+ They are still used however for data visualisation and for cases when we
+ need to build an interpretable model and we are limited in number of algorithms
+ we can use.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Anomaly
+\emph default
+ (
+\emph on
+outlier
+\emph default
+) 
+\emph on
+detection
+\emph default
+ involves detection of instances strongly deviating from the norm.
+ These instances are called 
+\emph on
+outliers
+\emph default
+ or 
+\emph on
+anomalies
+\emph default
+, normal instances are referred to as 
+\emph on
+inliers.
+ 
+\emph default
+It is useful in many applications.
+ It can be used as a data preprocessing step - to remove outliers from the
+ dataset, which might improve the performance of the resulting model.
+ Also, it can be used in 
+\emph on
+fraud detection 
+\emph default
+task and in detection of faulty products in manufacturing facility.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Novelty detectio
+\emph default
+n is closely related task to the anomaly detection.
+ The only thing different about them is that the novelty detection makes
+ an assumption that the dataset the model was trained on was not contaminated
+ by outliers, while the anomaly detection does not make this assumption.
+ 
 \end_layout
 
 \begin_layout Subsection
-Clustering
+KMeans 
 \end_layout
 
 \begin_layout Standard
-Clustering
+
+\series bold
+Finding optimal numbers of clusters
+\series default
+:
 \end_layout
 
 \begin_layout Standard
-Anomaly detection
+Advantages of kmeans
 \end_layout
 
 \begin_layout Standard
-Novelty detection
+
+\series bold
+Limitations of KMeans
+\series default
+: 
+\end_layout
+
+\begin_layout Subsection
+Principal Component Analysis (PCA)
 \end_layout
 
 \begin_layout Standard
-Visualization
+Finds the closest hyperplane and project the data onto it.
 \end_layout
 
 \begin_layout Standard
-Dimensionality reduction
+
+\series bold
+What is principal component:
+\series default
+ Principal components are vectors that define new coordinate system.
+ First vector goes in the direction of the highest variance.
+ Second vector is orthogonal to the first one and goes in the direction
+ of the second highest variance, and so on.
+ If we were to reduce dimensionality to 
+\begin_inset Formula $D_{new}<D$
+\end_inset
+
+, we would pick 
+\begin_inset Formula $D_{new}$
+\end_inset
+
+ largest principal components and 
+\emph on
+project
+\emph default
+ instances onto them.
+ 
+\end_layout
+
+\begin_layout Standard
+(Create images) 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Choosing the number of dimensions
+\series default
+: It is not adviced to choose the number of dimensions arbitrarily.
+ Usually such number of dimensions is chosen that preserves large amount
+ of variance (e.g.
+ 95%), or in case of visualization we reduce number of dimensions down to
+ 2 or 3.
+\end_layout
+
+\begin_layout Standard
+There are different versions of PCA; kernel PCA, Incremental PCA (online
+ or batch PCA), Randomized PCA.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Kernel PCA
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Incremental PC
+\series default
+A:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Randomized PCA
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Limits of PCA
+\end_layout
+
+\begin_layout Subsection
+Gaussian Mixturesx
+\end_layout
+
+\begin_layout Standard
+Gaussian mixtures is common algorithm that can be used for anomaly detection.
+ Gaussian Mixtures assumes that the dataset is generated by several Gaussian
+ distributions.
+ Any instance lying in the region of low density is an anomaly.
+ The density threshold has be specified.
+ If one gets too many 
+\emph on
+false positives
+\emph default
+ (good products labeles as faulty) them need to decrease the the threshold,
+ consequently if we get too many 
+\emph on
+false negatives (
+\emph default
+faulty products labeled as good) the threshold has to be increased.
+ Gaussian mixtures belong to 
+\emph on
+soft clustering.
+\end_layout
+
+\begin_layout Standard
+Gaussian mixtures require the number of clusters to be specified
 \end_layout
 
 \begin_layout Section
@@ -2373,6 +2608,14 @@ Feature engineering
 
 \begin_layout Section
 Survival Analysis
+\end_layout
+
+\begin_layout Standard
+Kaplan-Meier Survival Curves 
+\end_layout
+
+\begin_layout Standard
+the Log-Rank Test
 \end_layout
 
 \begin_layout Standard
