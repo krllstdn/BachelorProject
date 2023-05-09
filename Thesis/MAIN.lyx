@@ -2456,15 +2456,11 @@ Principal Component Analysis (PCA)
 \end_layout
 
 \begin_layout Standard
-Finds the closest hyperplane and project the data onto it.
-\end_layout
 
-\begin_layout Standard
-
-\series bold
-What is principal component:
-\series default
- Principal components are vectors that define new coordinate system.
+\emph on
+Principal components
+\emph default
+ are vectors that define new coordinate system.
  First vector goes in the direction of the highest variance.
  Second vector is orthogonal to the first one and goes in the direction
  of the second highest variance, and so on.
@@ -2489,11 +2485,7 @@ project
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Choosing the number of dimensions
-\series default
-: It is not adviced to choose the number of dimensions arbitrarily.
+It is not adviced to choose the number of dimensions arbitrarily.
  Usually such number of dimensions is chosen that preserves large amount
  of variance (e.g.
  95%), or in case of visualization we reduce number of dimensions down to
@@ -2503,38 +2495,11 @@ Choosing the number of dimensions
 \begin_layout Standard
 There are different versions of PCA; kernel PCA, Incremental PCA (online
  or batch PCA), Randomized PCA.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Kernel PCA
-\series default
-:
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Incremental PC
-\series default
-A:
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Randomized PCA
-\series default
-:
-\end_layout
-
-\begin_layout Standard
-Limits of PCA
+ But covering those lies beyond this paper.
 \end_layout
 
 \begin_layout Subsection
-Gaussian Mixturesx
+Gaussian Mixtures
 \end_layout
 
 \begin_layout Standard
@@ -2559,7 +2524,8 @@ soft clustering.
 \end_layout
 
 \begin_layout Standard
-Gaussian mixtures require the number of clusters to be specified
+Gaussian mixtures require the number of clusters to be specified.
+ It needs to be run a couple of times to avoid suboptimal solutions.
 \end_layout
 
 \begin_layout Section
