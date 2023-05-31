@@ -977,7 +977,7 @@ pagestyle{headings}
 The goal of this paper is to explore fields of kidney transplantation and
  machine learning, create and apply machine learning model in real-world
  application.
- 
+
 \end_layout
 
 \begin_layout Chapter
@@ -1318,7 +1318,7 @@ It was obvious that TBI is not the best choice and that it is necessary
 6-MP was used in three tranplantations at Royal Free Hospital, but without
  success, However Kuss and assosiates reported one prolonged graft survival
  from a nonrelated donor.
- The TBI was main agent and intermittent usage of azathioprine and prednisone
+ The TBI was main agent and intermittent usage of azathioprine and prednisone (dve cizi slova najednou jako blesk z cisteho nebe. Trochu vysvetleno az pozdeji)
  was used as an additional therapy.
 \end_layout
 
@@ -1328,7 +1328,7 @@ Gertrude Elion and George Hitchings provided Roy Calne with the 6-MP derivative
  Calne showed even longer graft survival with azathioprine.
  Both Elion and Hitchings were awarded with the Nobel Prize for the development
  of 6-MP and azathioprine.
- In 1961 Azathioprine became available for human use.
+ In 1961 Azathioprine (velke nebo male A tedy?) became available for human use.
 \end_layout
 
 \begin_layout Subsection
@@ -1348,7 +1348,7 @@ In 1963 National Research Council organized a small conference constisting
 \end_layout
 
 \begin_layout Standard
-The gloom continued untill Tom Starzl, until then unknown, did his presentation
+The gloom continued untill Tom Starzl, until then unknown, did his presentation (hele to je uz dost jako pohadka, ze se objevi nejaky neznamy doktor a zmeni svet. Taky to je uz asi 48. clovek, co se zde vyskytuje. Mozna trochu konsolidovat by to chtelo)
  where he described his protocol that allowed graft survival for more than
  one year in 70% of cases.
  He was not believed at first, but then he showed medical records of his
@@ -1378,12 +1378,14 @@ During the period from 1964 to 1980 nothing groundbreaking had happened,
 Hemodialysis for renal failure was created by Willem Kolff from Holland
  during WWII.
  But it couldn't be used for chronic renal failure untill 1960 when was
- invented Teflon arteriovenous conduits for long-term vascular access.
+ invented Teflon arteriovenous conduits for long-term vascular access. (tady je ta anlglictina uz hodne originalni... telfon asi s malym t, ne?)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 Acceptance of brain death as a real death.
- Before the mid 60s the kadaver transplantation was limited by the ischemic
+\end_layout
+\begin_layout Standard
+ Before the mid 60s the cadaver transplantation was limited by the ischemic
  damage.
  Now the additional organs were available from
 \begin_inset Quotes sld
@@ -1397,7 +1399,7 @@ heartbeating kadavers
 \end_layout
 
 \begin_layout Standard
-Cold for organ preservation.
+Cold for organ preservation. (nadpis?)
  This was suggested in 1905 by Carrel's colleague Charles Guthrerie.
  Initially, Starzl used total body hypothermia to protect donor organs,
  but by 1960 switched to infusing cold solution into the portal vein to
@@ -1418,7 +1420,7 @@ As the organ preservation for more than 6 hours was achieved in mid 60s
  template for the United Network of Organ Sharing (UNOS) that controls organ
  allocation and placement, monitors performance of transplant centers and
  organ procurement organizations, collects data, and controls quality.
- They kindly provided us with data for this paper.
+ They kindly provided me with data for this paper. (to je zas trochu vytrzene z kontextu, ne? Normalne bych rekl, ze to sem nepatri, ale kdyz to jsou ti od kterych jsou data, tak by si to naopak mozna zaslouzilo trochu rozvest, ne?)
 \end_layout
 
 \begin_layout Subsection
@@ -1432,7 +1434,7 @@ Although tissue typing was suggested by Alexis Carrel in the beginning of
  Testing for antibodies was not reliable until 1964 when Paul Terasaki invented
  a microxytotoxicity assay.
  Test included mixing donor's lymphocytes and recipient's serum and quickly
- has became the standard and was name crossmatch.
+ has became the standard and was name crossmatch. corssmatch je dulezity pojem, to muzes trochu vice rozvest. A sjednotit crossmatch a cross-match.
  For a couple of years Terasaki performed typing for most of U.S.
  transplant centers and found a couple of observations: 1) Positive cross-match
  test predicts hyperacute rejection.
@@ -1446,7 +1448,7 @@ However, when in 1970 Terasaki reviewed his large database of cadaver renal
  allografts he found no correlation with the typing.
  This raised a lot of agitation in tissue typing community and his grant
  even was temporalily suspended until others didn't report the same.
- Now it is conclded that the
+ Now it is conclded that the ????
 \end_layout
 
 \begin_layout Subsection
@@ -1454,7 +1456,7 @@ Antilymphocyte serum
 \end_layout
 
 \begin_layout Standard
-Next mark was cyclosporine, a fungal derivative with immunosuppressive propertie
+jak jako next? to uplne nenavazuje na predchozi, ne? Next mark was cyclosporine, a fungal derivative with immunosuppressive propertie
 s discovered in 1976 by Jean-François Borel.
  It revolutionized the renal and extrarenal transplants, proving to be much
  better than the previous drug azathioprine.
@@ -1469,6 +1471,7 @@ Tom Starzl discovered that donor leukocyte chimerism was present in patients
 \end_layout
 
 \begin_layout Standard
+to je jeste v procesu, jo?
 chimerism is an important cause (not the consequence) of successful transplantat
 ion,
 \end_layout
@@ -1485,7 +1488,7 @@ Conclusion and challenges of the field
 
 \begin_layout Standard
 The ultimate goal is immunosuppression without drugs because drugs are often
- toxic and the proper dosing might be tricky.
+ toxic and the proper dosing might be tricky. s takovym prohlasenim bych byl dost opatrny = nedaval bych ho tam
 \end_layout
 
 \begin_layout Section
@@ -1506,6 +1509,7 @@ s, while cell-mediated involves pathogen-specific T Lymphocytes that either
 \end_layout
 
 \begin_layout Standard
+uplne z hlavy tomu nerozumim a z toho popisu to uplne nepochopim
 Lymphocyte is a type of white blood cell that is responsible for both humoral
  and cell-mediated immune responses.
  There are two types of lymphocytes: T lymphocytes (T cells) and B lymphocytes
@@ -1597,11 +1601,12 @@ Immunology of kidney transplant
 \end_layout
 
 \begin_layout Standard
+co? proc zacinat takto?
 The process of transplantation inevitably includes termination of blood
  flow, and, as a result, oxygenation.
  Therefore cell is unable to generate sufficient amount of energy to maintain
  homeostasis, leading to damage or death.
- Damage or death is associated with DAMP release that might be detected
+ Damage or death is associated with DAMP co to je damp? release that might be detected
  by both innate and adaptive immunity.
 \end_layout
 
@@ -2018,7 +2023,7 @@ What is ML
  on new data.
  Machine learning is an intersection of many fields of science such as statistic
 s, theory of probability, linear algebra, calculus and multivariable calculus
- (multiple fields of mathematics, etc.) 
+ (multiple fields of mathematics, etc.)
 \begin_inset Quotes sld
 \end_inset
 
@@ -2072,7 +2077,7 @@ How it is important in medicine
 \series default
 : Every field suffers from human errors, and medicine is no exception.
  (people get tired, wrong institutions, etc...) According to Makary et.
- al., medical error is the third death cause in the United States 
+ al., medical error is the third death cause in the United States
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-11"
@@ -2092,12 +2097,12 @@ literal "false"
 \begin_layout Standard
 
 \series bold
-Why machine learning in not learning: 
+Why machine learning in not learning:
 \series default
 It is important to note that machine learning is rather marketing term.
  Machines can't learn.
  If we were to at least slightly distort inputs, machine wouldn't be able
- to 
+ to
 \begin_inset Quotes sld
 \end_inset
 
@@ -2143,11 +2148,11 @@ literal "false"
 \end_inset
 
 .
- 
+
 \emph on
 Classification
 \emph default
- and 
+ and
 \emph on
 regression
 \emph default
@@ -2158,46 +2163,46 @@ regression
 \end_layout
 
 \begin_layout Standard
-In supervised learning the 
+In supervised learning the
 \emph on
 dataset
 \emph default
- is the collection of labeled examples 
+ is the collection of labeled examples
 \begin_inset Formula $\{(x_{i},y_{i})\}_{i=1}^{N}$
 \end_inset
 
-, where each individual 
+, where each individual
 \begin_inset Formula $x_{i}$
 \end_inset
 
- is called a 
+ is called a
 \emph on
 feature vector
 \emph default
 .
- A feature vector is a vector that in each its dimension 
+ A feature vector is a vector that in each its dimension
 \begin_inset Formula $j=1,...,D$
 \end_inset
 
  contains a value that describes an example in some way.
- This value is called a 
+ This value is called a
 \emph on
 feature
 \emph default
- and is denoted as 
+ and is denoted as
 \begin_inset Formula $x^{(j)}$
 \end_inset
 
 .
- The 
+ The
 \emph on
 label
 \emph default
- 
+
 \begin_inset Formula $y^{i}$
 \end_inset
 
- might be either a finite set of classes 
+ might be either a finite set of classes
 \begin_inset Formula $\{1,2,...,C\}$
 \end_inset
 
@@ -2215,19 +2220,19 @@ Classification is a problem of assigning a label to unlabeled example.
  example as input and outputs a label, a number associated with it or a
  probability of belonging to a certain class out of which it is easy to
  deduce the class.
- If the set of labels has only two classes we talk about 
+ If the set of labels has only two classes we talk about
 \emph on
 binary classification
 \emph default
 .
- Consequentlhy, if the set of labels has three or more classes it is a 
+ Consequentlhy, if the set of labels has three or more classes it is a
 \emph on
 multiclass classification
 \emph default
 .
  Some algorithms are binary classifiers by definition, while others are
  multiclass classifiers.
- It is possible to create an 
+ It is possible to create an
 \emph on
 ensemble
 \emph default
@@ -2238,7 +2243,7 @@ n.
 \end_layout
 
 \begin_layout Standard
-Regression is a problem of predicting a 
+Regression is a problem of predicting a
 \emph on
 target value
 \emph default
@@ -2246,7 +2251,7 @@ target value
  The problem is solved by regression learning algorithm that takes a set
  of labeled examples as inputs and produces a model that takes unlabeled
  example as input and outputs a target value.
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -2261,7 +2266,7 @@ Linear regression is a popular regression learning algorithm.
 \begin_layout Standard
 
 \series bold
-What is the model: 
+What is the model:
 \end_layout
 
 \begin_layout Standard
@@ -2305,13 +2310,13 @@ Unsupervised Learning
 Unsupervised learning
 \emph default
  is the kind of learning that operates with the dataset without lables.
- It proves useful during EDA and 
+ It proves useful during EDA and
 \emph on
 dimensionality reduction
 \emph default
 , but otherwise it is not very useful in practical applications, as unlabeled
  dataset means no feedback about how well your model performs.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2324,7 +2329,7 @@ ity reduction, or during exploratory data analysis.
 \begin_layout Standard
 There are more approaches but we are going to cover only three, that might
  prove useful to our task.
- 
+
 \emph on
 Clustering
 \emph default
@@ -2332,14 +2337,14 @@ Clustering
  instances - clusters.
  It can be used for data analysis, customer segmentation, as a dimensionality
  reduction technique, anomaly detection.
- Clustering might be 
+ Clustering might be
 \emph on
 soft
 \emph default
- and 
+ and
 \emph on
 hard.
- 
+
 \emph default
 Hard clustering means that an instance might belong to only one class.
  In soft clustering instance has a score of belonging to a particular cluster.
@@ -2347,7 +2352,7 @@ Hard clustering means that an instance might belong to only one class.
  (similarity score).
 
 \emph on
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2360,7 +2365,7 @@ Dimensionality reduction
  the task requires a lot of features.
  A lot of algorithms, such as linear model, SVMs, decision trees, do not
  handle high dimensional data well.
- So called 
+ So called
 \emph on
 curse of dimensionality
 \emph default
@@ -2386,33 +2391,33 @@ Anomaly
 \emph on
 outlier
 \emph default
-) 
+)
 \emph on
 detection
 \emph default
  involves detection of instances strongly deviating from the norm.
- These instances are called 
+ These instances are called
 \emph on
 outliers
 \emph default
- or 
+ or
 \emph on
 anomalies
 \emph default
-, normal instances are referred to as 
+, normal instances are referred to as
 \emph on
 inliers.
- 
+
 \emph default
 It is useful in many applications.
  It can be used as a data preprocessing step - to remove outliers from the
  dataset, which might improve the performance of the resulting model.
- Also, it can be used in 
+ Also, it can be used in
 \emph on
-fraud detection 
+fraud detection
 \emph default
 task and in detection of faulty products in manufacturing facility.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2424,11 +2429,11 @@ n is closely related task to the anomaly detection.
  The only thing different about them is that the novelty detection makes
  an assumption that the dataset the model was trained on was not contaminated
  by outliers, while the anomaly detection does not make this assumption.
- 
+
 \end_layout
 
 \begin_layout Subsection
-KMeans 
+KMeans
 \end_layout
 
 \begin_layout Standard
@@ -2448,7 +2453,7 @@ Advantages of kmeans
 \series bold
 Limitations of KMeans
 \series default
-: 
+:
 \end_layout
 
 \begin_layout Subsection
@@ -2464,24 +2469,24 @@ Principal components
  First vector goes in the direction of the highest variance.
  Second vector is orthogonal to the first one and goes in the direction
  of the second highest variance, and so on.
- If we were to reduce dimensionality to 
+ If we were to reduce dimensionality to
 \begin_inset Formula $D_{new}<D$
 \end_inset
 
-, we would pick 
+, we would pick
 \begin_inset Formula $D_{new}$
 \end_inset
 
- largest principal components and 
+ largest principal components and
 \emph on
 project
 \emph default
  instances onto them.
- 
+
 \end_layout
 
 \begin_layout Standard
-(Create images) 
+(Create images)
 \end_layout
 
 \begin_layout Standard
@@ -2508,17 +2513,17 @@ Gaussian mixtures is common algorithm that can be used for anomaly detection.
  distributions.
  Any instance lying in the region of low density is an anomaly.
  The density threshold has be specified.
- If one gets too many 
+ If one gets too many
 \emph on
 false positives
 \emph default
  (good products labeles as faulty) them need to decrease the the threshold,
- consequently if we get too many 
+ consequently if we get too many
 \emph on
 false negatives (
 \emph default
 faulty products labeled as good) the threshold has to be increased.
- Gaussian mixtures belong to 
+ Gaussian mixtures belong to
 \emph on
 soft clustering.
 \end_layout
@@ -2569,7 +2574,7 @@ Feature engineering
 \end_layout
 
 \begin_layout Standard
-- 
+-
 \end_layout
 
 \begin_layout Section
@@ -2577,7 +2582,7 @@ Survival Analysis
 \end_layout
 
 \begin_layout Standard
-Kaplan-Meier Survival Curves 
+Kaplan-Meier Survival Curves
 \end_layout
 
 \begin_layout Standard
@@ -2601,7 +2606,7 @@ Survival Trees
 \end_layout
 
 \begin_layout Standard
-Random Survival Forests 
+Random Survival Forests
 \end_layout
 
 \begin_layout Standard
