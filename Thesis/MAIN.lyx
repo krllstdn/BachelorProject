@@ -1773,7 +1773,7 @@ HLA
 \end_layout
 
 \begin_layout Standard
-Histocompatibility antigens are genetically encoded antigens that cover
+Histocompatibility antigens to jsou human leukocyte antigens https://en.wikipedia.org/wiki/Human_leukocyte_antigen are genetically encoded antigens that cover
  cell surfaces.
  They differ between individuals of the same species and therefore trigger
  an immune response in case of allograft.
@@ -1961,7 +1961,7 @@ B cells are immune system cells that produce antibodies.
  (ABMR), and chronic ABMR.
  About 30% of patients have sensitivities and have certain HLA antibodies.
  It might cease transplantation or require antibody suppression strategy.
- Even low amount of antibodies below crossmatch cutoff doubles the risk
+ Even low amount of antibodies below crossmatch cutoff (zniceho nic pouzijes odborny termin cutoff. ten do bakalarky podle patri, ale neni mozne ho takhle z niceho nic napsat a nijak to neuvest) doubles the risk
  of ABMR and increases the risk of graft failure by 76%.
  Additionally, donor specific antibodies might develop posttransplant and
  cause an actue ABMR.
@@ -1971,7 +1971,7 @@ B cells are immune system cells that produce antibodies.
 \begin_layout Standard
 Acute AMBR is rarely seen in patients withour prior sensitization and is
  highly difficult to treat.
- AMBR is characterized by decline in allograft function, presense of DSA
+ AMBR is characterized by decline in allograft function, presense of DSA (donor specific antibodies = ja to vim, co to znamena. Bezny ctenar nemuze mit tuseni)
  and signs of acute vascular injury.
  A progressive reduction in graft function over time is observed almost
  universally.
