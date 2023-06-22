@@ -2014,15 +2014,16 @@ What is ML
 \series default
 : Machine learning (ML) is a subfield of computer science that consists
  of building algorithms that are capable of processing large amounts of
- data, finding patterns and making some actions such as predictions based
- on new data.
+ data, finding patterns and making some actions such as predictions or even
+ generating new data.
  Machine learning is an intersection of many fields of science such as statistic
-s, theory of probability, linear algebra, calculus and multivariable calculus
- (multiple fields of mathematics, etc.) 
+s, theory of probability, linear algebra, calculus and, of cource, computer
+ science.
+ As Arthur Samuel eloquently put it: 
 \begin_inset Quotes sld
 \end_inset
 
-Machine learning is the field of study that gives computers the ability
+[Machine learning is the] field of study that gives computers the ability
  to learn without being explicitly programmed.
 \begin_inset Quotes srd
 \end_inset
@@ -2035,7 +2036,8 @@ Machine learning is the field of study that gives computers the ability
 \series bold
 Why is this importan
 \series default
-t: ML shines in problems that either too complex or have no known algorithm.
+t: Machine learning excels in problems that are either overly complex or
+ have no known algorithm.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-9"
@@ -2054,15 +2056,19 @@ literal "false"
 \series bold
 How it is divided
 \series default
-: Machine learning can be divided into four parts supervised, semi-supervised,
- unsupervised and reinforcement learning.
+: Based on the problem and, therefore, on our approach to building the dataset(t
+ell somewhere the difference between the dataset and raw data) and the model,
+ machine learning can be divided into four sub-fields: supervised, semi-supervis
+ed, unsupervised and reinforcement learning.
  Supervised learning means that we labeled our data and we want to predict
  labels from the data.
- Semi-supervised learning means that only a part of our data is labeled.
+ (explain labeled data!) Semi-supervised learning means that only a part
+ of our data is labeled.
  Unsupervised means that our data is unlabeled.
  In reinforcement learning we create an environment, set up rewards for
- doing certain things and let the machine (actor) to act actions that produce
- the highest reward.
+ doing certain things and punishment for other things, and let the machine
+ (actor) to perform actions that produce the highest reward.
+ A separate subsection is dedicated to each subfield.
 \end_layout
 
 \begin_layout Standard
@@ -2082,9 +2088,9 @@ literal "false"
 
 .
  Machine learning also make mistakes, but if we manage to get at least 1%
- better than human error this will be a success.
- Human body is a complex system, where other humans (dopctors) can't possibly
- comprehend everything that is going on and how is it related to each other.
+ less error than human error this will be a success.
+ Human body is a complex system, where other humans (doctors) can't possibly
+ comprehend everything that is going on and how it is related to each other.
  Also it can help us gain insights from data that were already accumulated
  and possibly make some discoveries.
 \end_layout
@@ -2116,6 +2122,7 @@ literal "false"
 
  It is debatable that statistics and mathematics can really produce consciousnes
 s.
+ Luckily the debate lies beyond this paper.
 \end_layout
 
 \begin_layout Standard
@@ -2536,6 +2543,11 @@ Semi-supervised learning
 Reinforcement Learning
 \end_layout
 
+\begin_layout Standard
+mention RLHF - reinforcement learning through human feedback.
+ LLMs
+\end_layout
+
 \begin_layout Section
 Data Preprocessing
 \end_layout
@@ -2577,7 +2589,346 @@ Survival Analysis
 \end_layout
 
 \begin_layout Standard
-Kaplan-Meier Survival Curves 
+
+\series bold
+Definition
+\series default
+: 
+\emph on
+Survival analysis,
+\emph default
+ also known as 
+\emph on
+time-to-event analysis
+\emph default
+, is a statistical method used to analyze the time until an event of interest
+ occurs.
+ Its name originates from the clinical and biological research, where these
+ methods are used mostly to analyze survival time, hence the name.
+ These methods, however, found their uses in areas far beyond clinical setting.
+ 
+\end_layout
+
+\begin_layout Standard
+The most pronounced feature of these methods is the ability to handle censored
+ data.
+ Censoring is a situation when the information about the survival time is
+ known only partially.
+ For example, in the dataset used in this work there are 
+\series bold
+(number of patients)
+\series default
+ that were still alive until last date of observation 
+\series bold
+(date of observation
+\series default
+).
+ And we do not know what happened to them after that date — they are censored.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=0.6
+\backslash
+textwidth]{Images/censoring_ill}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{caption}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{fig1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Look at the figure 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{fig1}
+\end_layout
+
+\end_inset
+
+.
+ On the y axis we can see individual patients.
+ x axis corresponds to timeline of the study (right side is the end of the
+ study.
+ Cross (X) denotes an occurance of the event, circle (O) corresponds to
+ subject's exit from the study, the absence of sign means that the subject
+ is censored.
+ 
+\end_layout
+
+\begin_layout Standard
+There are two types of censoring: left and right censoring.
+ Right censoring, the most common one, happens when we know that event didn't
+ happen up to a certain point — the patient didn't attend follow-ups after
+ a certain time or the study ended when he was still alive.
+ Lets look at the figure 3.1
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{fig1}
+\end_layout
+
+\end_inset
+
+, E and F are obviously right censored, as the event didn't happen during
+ study and B is also right censored, as the subject dropped out of study.
+ Left censoring, being much less common, describes the situation when the
+ subject's survival time is unkonows, but we know that it is less than a
+ certain time.
+ For example, wh
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Why survival analysis is important
+\series default
+ :
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Where is it used
+\series default
+ :
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Relation to machine learning
+\series default
+: Because we are predicting a numerical value(rather values), from the machine
+ learning point of view, survival analysis might be considered a regression,
+ but instead of one numerical value we predict a continuous value - survival
+ function or hazard function, and a dataset is obviously censored.
+ 
+\emph on
+Survival function
+\emph default
+ 
+\begin_inset Formula $S(t)$
+\end_inset
+
+ shows us the probability of patient 
+\emph on
+surviving
+\emph default
+ at a given time 
+\begin_inset Formula $t$
+\end_inset
+
+ and can be denoted as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S(t)=P(T>t).\label{eq:f_surv}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $t$
+\end_inset
+
+ is any specific 
+\emph on
+time
+\emph default
+ of interest, 
+\begin_inset Formula $T$
+\end_inset
+
+ is random variable for subject's survival time.
+ For instance, if we want to know if a patient is going to live for more
+ than 5 years after kidney transplant, 
+\begin_inset Formula $t$
+\end_inset
+
+ is equal to 5 and we ask whether 
+\begin_inset Formula $T$
+\end_inset
+
+ is greater than 
+\begin_inset Formula $t$
+\end_inset
+
+ (probability question).
+ The function is declining in the range from 0 to infinity.
+\end_layout
+
+\begin_layout Standard
+Hazard function 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ tells us the probability of given event 
+\emph on
+happening
+\emph default
+ at a given point of time 
+\begin_inset Formula $t,$
+\end_inset
+
+ provided the event did not happen before time 
+\begin_inset Formula $t$
+\end_inset
+
+, and is denoted as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+h(t)=\underset{\Delta t\rightarrow o}{lim}\frac{P(t\leq T<t+\Delta t|T\geq t)}{\Delta t}.\label{eq:f_hazard}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Subject's survival time 
+\begin_inset Formula $T$
+\end_inset
+
+ lies between 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $t+\Delta t$
+\end_inset
+
+ provided that survival time 
+\begin_inset Formula $T$
+\end_inset
+
+ is greater or equal than 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Sometimes, the hazard function is called a conditional failure rate
+\end_layout
+
+\begin_layout Standard
+Considering the facts that survival function describes the probability of
+ patient surviving to a given point of time 
+\begin_inset Formula $t$
+\end_inset
+
+ and hazard function shows us the probability of person dying at any given
+ point of time 
+\begin_inset Formula $t$
+\end_inset
+
+, we can say that they provide complementary information about survival
+ and risk over time.
+ 
+\end_layout
+
+\begin_layout Standard
+(Provide example images both for the survival and hazard functions for some
+ random patient from the dataset)
+\end_layout
+
+\begin_layout Standard
+- Cumulative hazard function
+\end_layout
+
+\begin_layout Standard
+Survival analysis methods
+\end_layout
+
+\begin_layout Standard
+- Kaplan-Meier Survival Curves 
+\end_layout
+
+\begin_layout Standard
+- CoxPH
+\end_layout
+
+\begin_layout Standard
+- Regularized Cox
+\end_layout
+
+\begin_layout Subsection
+Survival Gradient Boosting
+\end_layout
+
+\begin_layout Standard
+Performance Metrics
+\end_layout
+
+\begin_layout Standard
+—
 \end_layout
 
 \begin_layout Standard
@@ -2600,16 +2951,16 @@ Cox Proportional hazards method - linear model
 Survival Trees
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 Random Survival Forests 
 \end_layout
 
 \begin_layout Standard
-R or python
+useless with large amounts of data
 \end_layout
 
-\begin_layout Standard
-useless with large amounts of data
+\begin_layout Section
+Deep Learning
 \end_layout
 
 \begin_layout Section
@@ -2774,12 +3125,17 @@ Machine Learning Model
 \end_layout
 
 \begin_layout Section
-Model selection
+Problem Definition
 \end_layout
 
 \begin_layout Standard
-we have a lot of censored and missing data, so we had to handle missing
- data and remove censored ones.
+Clearly, the problem involves survival time and we have a censored dataset,
+ therefore the survival analysis methods from the section 3.6 are the best
+ choice
+\end_layout
+
+\begin_layout Section
+Model selection
 \end_layout
 
 \begin_layout Section
@@ -2795,19 +3151,11 @@ Applications
 \end_layout
 
 \begin_layout Section
+Existing Solutions
+\end_layout
+
+\begin_layout Subsection
 Txmatching
-\end_layout
-
-\begin_layout Subsection
-Frontend 
-\end_layout
-
-\begin_layout Subsection
-Backend
-\end_layout
-
-\begin_layout Subsection
-MLOps
 \end_layout
 
 \begin_layout Section
@@ -3049,6 +3397,20 @@ Bruce, P., Bruce, A., & Gedeck, P.
 LatexCommand bibitem
 key "key-13"
 literal "false"
+
+\end_inset
+
+Kleinbaum, D.
+ G., & Klein, M.
+ (2011).
+ Survival analysis: A self-learning text, third edition (3rd ed.).
+ Springer.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
 
 \end_inset
 
