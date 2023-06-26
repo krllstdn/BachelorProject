@@ -3079,7 +3079,8 @@ conditional failure rate.
 \series bold
 Cumulative hazard function
 \series default
-: 
+: This is basically area under the hazard function that allows to say which
+ group has a greater risk.
 \end_layout
 
 \begin_layout Standard
@@ -3313,6 +3314,11 @@ Time-dependent Brier Score:
 
 \begin_layout Subsection
 Survival Gradient Boosting
+\end_layout
+
+\begin_layout Standard
+mention it is an ensemble model and the way it is implemented in the scikit-surv
+ival.
 \end_layout
 
 \begin_layout Standard
@@ -3585,13 +3591,115 @@ Machine Learning Model
 \end_layout
 
 \begin_layout Section
-Problem Definition
+Problem Formulation
 \end_layout
 
 \begin_layout Standard
-Clearly, the problem involves survival time and we have a censored dataset,
- therefore the survival analysis methods from the section 3.6 are the best
- choice
+We can formulate the problem of predicting the survival time after a successful
+ kidney transplant as a regression, classification and survival analysis.
+\end_layout
+
+\begin_layout Standard
+The obvious choise would be to use some regression model, but it is not
+ the best choice for the following reasons:
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\series bold
+The censored dataset
+\series default
+.
+ The dataset has a high level of censoring – (
+\series bold
+provide a number
+\series default
+).
+ In dataset we have a number of days survived and whether the person is
+ alive or not.
+ If we are to consider people who are still alive with the ones who died
+ we would introduce too much noise to the model, making it useless.
+ We can't predict a number of days survived based on data where both alive
+ and died patients are mixed.
+ 
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\series bold
+Censoring removal would produce bias
+\series default
+ 
+\series bold
+and signifficantly reduce the dataset
+\series default
+.
+ We could get rid of all censored instances, but that would reduce the dataset
+ from 
+\series bold
+500 000
+\series default
+ to about 
+\series bold
+120 000
+\series default
+ instances and introduce signifficant bias: we would only consider people
+ who passed away, and most of them have done so before the indroduction
+ of modern techniques of treating the rejection.
+ So the model created from such a dataset would be highly biased and therefore
+ useless.
+\end_layout
+
+\begin_layout Standard
+3.
+ 
+\series bold
+Regression predicts only one single number.
+
+\series default
+ This is a problem, because on longer time frames there are too much factors
+ that we can't account for this would produce incorrect predictions.
+\end_layout
+
+\begin_layout Standard
+Another way of formulating the problem is classification.
+ We can theoretically divide the dataset into groups: 
+\begin_inset Quotes sld
+\end_inset
+
+less than one year
+\begin_inset Quotes srd
+\end_inset
+
+, 
+\begin_inset Quotes sld
+\end_inset
+
+one to five years
+\begin_inset Quotes srd
+\end_inset
+
+, 
+\begin_inset Quotes sld
+\end_inset
+
+five and more
+\begin_inset Quotes srd
+\end_inset
+
+, or even more groups, as it was done by ...., and train some classifier based
+ on them.
+ And again we would face the problem of censoring and bias mentioned above.
+ So the classification is also no the best choice.
+\end_layout
+
+\begin_layout Standard
+Superior way of problem formulation is in terms of survival analysis.
+ Survival analysis methods handle censoring and provide better form of predictio
+n: survival function or hazard function, i.e.
+ survival probability or failing rate at each moment in time
 \end_layout
 
 \begin_layout Section
@@ -3626,6 +3734,14 @@ Final Model
 
 \begin_layout Section
 Discussion
+\end_layout
+
+\begin_layout Section
+Limitations
+\end_layout
+
+\begin_layout Section
+Further work
 \end_layout
 
 \begin_layout Chapter
