@@ -2057,13 +2057,18 @@ literal "false"
 How it is divided
 \series default
 : Based on the problem and, therefore, on our approach to building the dataset(t
-ell somewhere the difference between the dataset and raw data) and the model,
- machine learning can be divided into four sub-fields: supervised, semi-supervis
-ed, unsupervised and reinforcement learning.
+\series bold
+ell somewhere the difference between the dataset and raw data
+\series default
+) and the model, machine learning can be divided into four sub-fields: supervise
+d, semi-supervised, unsupervised and reinforcement learning.
  Supervised learning means that we labeled our data and we want to predict
  labels from the data.
- (explain labeled data!) Semi-supervised learning means that only a part
- of our data is labeled.
+ (
+\series bold
+explain labeled data
+\series default
+!) Semi-supervised learning means that only a part of our data is labeled.
  Unsupervised means that our data is unlabeled.
  In reinforcement learning we create an environment, set up rewards for
  doing certain things and punishment for other things, and let the machine
@@ -2087,8 +2092,8 @@ literal "false"
 \end_inset
 
 .
- Machine learning also make mistakes, but if we manage to get at least 1%
- less error than human error this will be a success.
+ Machine learning also makes mistakes, but if we manage to get at least
+ 1% less error than human error this will be a success.
  Human body is a complex system, where other humans (doctors) can't possibly
  comprehend everything that is going on and how it is related to each other.
  Also it can help us gain insights from data that were already accumulated
@@ -2126,11 +2131,11 @@ s.
 \end_layout
 
 \begin_layout Standard
-In this chapter we will cover all theoretical background needed for solving
- our problem, this includes classical machine learning, deep learning, statistic
-al survival analysis, basic steps that are required to create machine learining
- systems, how to preprocess data and what algorithms are worth of our attention
- in solving tasks like this.
+In this chapter we will cover all theoretical background that might prove
+ useful for solving our problem, this includes classical machine learning,
+ deep learning, statistical survival analysis, basic steps that are required
+ to create machine learining systems, how to preprocess data and what algorithms
+ are worth of our attention in solving tasks like this.
  We will begin by exploring what is supervised learning.
 \end_layout
 
@@ -2242,6 +2247,7 @@ ensemble
 n.
  Ensemble is a combination of algorithms that are connected together to
  perform one task.
+ More on that in subsection 3.1.5 talking about random forests.
 \end_layout
 
 \begin_layout Standard
@@ -2256,8 +2262,28 @@ target value
  
 \end_layout
 
+\begin_layout Standard
+In the following subsections we are going to explore some techniques for
+ supervised learning.
+ Classification and regression tasks are similar in many ways and often
+ for each classifier there is an equivalent regressor, and vice versa.
+ For most of the covered models exists its analogue in the other task.
+\end_layout
+
 \begin_layout Subsection
-LinearRegression
+Performance Metrics
+\end_layout
+
+\begin_layout Standard
+mean square error
+\end_layout
+
+\begin_layout Standard
+area under a curve
+\end_layout
+
+\begin_layout Subsection
+Linear Regression
 \end_layout
 
 \begin_layout Standard
@@ -2287,7 +2313,7 @@ What we are trying to minimize(loss function):
 \end_layout
 
 \begin_layout Subsection
-LogisticRegression
+Logistic Regression
 \end_layout
 
 \begin_layout Standard
@@ -2307,7 +2333,7 @@ support vectors
 \end_layout
 
 \begin_layout Subsection
-DecisionTrees
+Decision Trees and Random Forests
 \end_layout
 
 \begin_layout Standard
@@ -2316,10 +2342,6 @@ highly interpretable model
 
 \begin_layout Standard
 builds trees that can be visualized and show the model's reasoning
-\end_layout
-
-\begin_layout Subsection
-RandomForests
 \end_layout
 
 \begin_layout Standard
@@ -2588,96 +2610,427 @@ Reinforcement Learning
 \end_layout
 
 \begin_layout Standard
+burkov 11.7 page 152
+\end_layout
+
+\begin_layout Standard
 mention RLHF - reinforcement learning through human feedback.
  LLMs
 \end_layout
 
 \begin_layout Section
-Data Preprocessing
+Data Preparation
 \end_layout
 
 \begin_layout Standard
+Due to the curse of dimensionality, we cannot load raw data to an algorithm
+ and expect it to perform well - most of the times it has way too many features,
+ and most of them have very low predictive power.
+ We need to build a dataset first.
+ Feature engineering is responsible for transforming raw data into a dataset.
+ It is a labor-demanding process that requires creativity and, most inportantly,
+ domain knowledge.
+\end_layout
 
-\series bold
-Feature engineering
-\series default
-: Feature engineering is the process of creating new features from the raw
- data.
+\begin_layout Standard
+Our goal in this step is to create 
+\emph on
+informative
+\emph default
+ features or features with high 
+\emph on
+predictive power
+\emph default
+.
+ For example, in our task of predicting survival time, donor-recipient blood
+ group compatibility or recipient age have much higher predictive power
+ than donor's or recipient's citizenship.
+\end_layout
+
+\begin_layout Standard
+We can create new features with higher predictive power out of those with
+ low predictive power.
  For example, calculation of eGFR, metric of kidney function estimated on
- patient's age, gender and serum creatinine level, will potentially give
+ patient's age, gender and serum creatinine level, could potentially give
  more information to the learning algorithm, than all those features separately.
 \end_layout
 
 \begin_layout Standard
-- 
+In the following subsections we will cover some popular feature engineering
+ techniques.
+\end_layout
+
+\begin_layout Subsection
+
 \series bold
-One hot encoding
+Handling Categorical Features
+\end_layout
+
+\begin_layout Standard
+Most of the machine learning algorithms work with numerical features.
+ To handle categorical features, such as age or blood group, we can use
+ 
+\emph on
+one-hot encoding
+\emph default
+ to convert it to a several binary ones.
+ Let's take blood groups as an example.
+ There are four main blood groups: A, B, AB and O.
+ We can convert single feature into a vector of four numerical values:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{align*}   
+\end_layout
+
+\begin_layout Plain Layout
+
+A&=[1,0,0,0] 
+\backslash
+
+\backslash
+   
+\end_layout
+
+\begin_layout Plain Layout
+
+B&=[0,1,0,0] 
+\backslash
+
+\backslash
+   
+\end_layout
+
+\begin_layout Plain Layout
+
+AB&=[0,0,1,0] 
+\backslash
+
+\backslash
+   
+\end_layout
+
+\begin_layout Plain Layout
+
+O&=[0,0,0,1]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{align*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By doing so we increase the dimensionality of our dataset, but this is a
+ necessary evil, because if we were to assign a number to each group (1
+ to A, 2 to B, and so on) in order to reduce amount of dimensions, that
+ would imply that there is some gradation between these values, when there
+ is none.
+\end_layout
+
+\begin_layout Standard
+However, if the categorical feature implies some gradation (e.g.
+ 
+\begin_inset Quotes sld
+\end_inset
+
+bad
+\begin_inset Quotes srd
+\end_inset
+
+, 
+\begin_inset Quotes sld
+\end_inset
+
+average
+\begin_inset Quotes srd
+\end_inset
+
+, 
+\begin_inset Quotes sld
+\end_inset
+
+good
+\begin_inset Quotes srd
+\end_inset
+
+, 
+\begin_inset Quotes sld
+\end_inset
+
+excellent
+\begin_inset Quotes srd
+\end_inset
+
+) numerating each value would be a right practice.
+ Assigning a number to values that have ranking is called 
+\emph on
+ordinal encoding
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Binning
+\emph default
+ (or 
+\series bold
+bucketing
 \series default
-: One-hot vector is vector representation of
+) is the process of converting numerical values into multiple binary features,
+ called 
+\emph on
+bins
+\emph default
+ or 
+\emph on
+buckets
+\emph default
+.
+ For example, we could transform patient's age into age range bins: 0 to
+ 18 years old, 18 to 25 y.o., 25 to 40 years old, and so on.
+ This might help an algorithm to learn better on smaller datasets.
+ 
 \end_layout
 
-\begin_layout Standard
-One hot encoding is used for categorical values, such as gender, age group,
- etc, where there are not too many potential values.
-\end_layout
-
-\begin_layout Standard
-- Ordinal encoding
-\end_layout
-
-\begin_layout Standard
-- Binning
-\end_layout
-
-\begin_layout Standard
+\begin_layout Subsection
 
 \series bold
+Feature Scaling
+\end_layout
+
+\begin_layout Standard
+Different ranges of feature values might pose a problem to some machine
+ learning algorithms, as they don't handle them very well.
+ It might result in slowed training time or worse performance.
+ This problem is solved by 
+\emph on
+normalization
+\emph default
+ and 
+\emph on
+standartization
+\emph default
+ techniques.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
 Normalization
-\series default
-:
+\emph default
+ (also known as 
+\emph on
+min-max scaling
+\emph default
+) is a technique of converting an actual range of numerical feature values
+ into a standard range of values: 
+\begin_inset Formula $[-1,1]$
+\end_inset
+
+ or 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ without loosing any information.
+ The normalization formula for value 
+\begin_inset Formula $x^{(j)}$
+\end_inset
+
+ for feature 
+\begin_inset Formula $j$
+\end_inset
+
+, looks like following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\bar{x}^{(j)}=\frac{x^{(j)}-min(j)}{max(j)-min(j)},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $min(j)$
+\end_inset
+
+ and 
+\begin_inset Formula $max(j)$
+\end_inset
+
+ are minimal and maximal values of feature 
+\begin_inset Formula $j$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 
-\series bold
+\emph on
 Standartization
-\series default
-:
+\emph default
+ is a scaling technique that scales numerical data in such a way that after
+ scaling it has properties of 
+\emph on
+standard normal distribution
+\emph default
+ with the mean µ (average value) equal to zero and the standard deviation
+ from the mean 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ equal to 1.
+ The standartization formula for value 
+\begin_inset Formula $x^{(j)}$
+\end_inset
+
+ for feature 
+\begin_inset Formula $j$
+\end_inset
+
+, looks like following:
 \end_layout
 
 \begin_layout Standard
-- 
+\begin_inset Formula 
+\[
+\hat{x}^{(j)}=\frac{x^{(j)}-\mu^{(j)}}{\sigma^{(j)}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Typically, standartization is used for supervised learning (it works better
+ with standartization), in case, feature values are formed by standard distribut
+ion (bell-curve) or feature has outliers.
+ In other cases normalization is preferred.
+\end_layout
+
+\begin_layout Subsection
+
 \series bold
-Dealing with missing features
-\series default
-: There are a couple of popular ways of dealing with the missing values.
- Here are a couple of them:
+Handling missing feature values
 \end_layout
 
 \begin_layout Standard
-– dropping rows with missing values.
+Often datasets have missing values and to handle them we have one of the
+ following options:
+\end_layout
+
+\begin_layout Itemize
+Dropping rows with missing values.
  The most obvious and bruteforce way of dealing with them.
- If there are not so much of missing values, or we have a dataset that is
- large enough, the usage of this technique would be appropriate.
+ If there are not so much missing values, or we have a dataset that is large
+ enough, the usage of this technique would be appropriate.
+\end_layout
+
+\begin_layout Itemize
+Dropping a feature.
+ If there are way too many missing values compared to the size of the dataset,
+ it is better to remove the feature altogether.
+\end_layout
+
+\begin_layout Itemize
+Regression Imputation.
+ Imputation means filling in the missing value.
+ Using machine learning regression algorithm to predict missing feature
+ values.
+\end_layout
+
+\begin_layout Itemize
+Mean/median impitation.
+ Filling missing values with mean or median.
+\end_layout
+
+\begin_layout Itemize
+Constant value imputation.
+ Filling missing values with clearly too high or too low value for the algorithm
+ to understand that it is an outlier and this particular value should not
+ be considered, while other features might be.
+ This method is not recommended, as it can bring bias.
 \end_layout
 
 \begin_layout Standard
-– filling the missing values with median, or clearly too high or too low
- value for the algorithm to understand that it is an outlier and this particular
- value should not be considered, while other features might be.
+It is often impossible to tell which data imputation method would work the
+ best and it should be checked experimentally.
+\end_layout
+
+\begin_layout Subsection
+Three datasets
+\end_layout
+
+\begin_layout Standard
+It is a common practice to divide the data set into three parts
+\end_layout
+
+\begin_layout Itemize
+Training set
+\end_layout
+
+\begin_layout Itemize
+Validation set
+\end_layout
+
+\begin_layout Itemize
+Test set
+\end_layout
+
+\begin_layout Standard
+Training set is the biggest one and is used to train the model.
+ Validation and test sets are of the same size and are called 
+\emph on
+hold-out sets.
+ 
+\emph default
+They are used to validate the model.
  
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Data imputatio
-\series default
-n:
+The reason we need three sets is that if we were to train a model on the
+ whole dataset and then validate its performance on the same data, it would
+ simply recall the result it has already seen.
+ This is called overfitting: the model performs well on the data it has
+ seen and performs poorly on unseen data.
+ What we want instead is the model's ability to generalize on unseen data.
+ 
 \end_layout
 
 \begin_layout Standard
-- 
+The workflow with this setup is following: we train a model on the training
+ set, validate it on the test set with some performance metric, then adjust
+ the model's parameters so that it perfoms better.
+ Repeat until the model performance stops improving.
+\end_layout
+
+\begin_layout Standard
+K-Fold 
+\end_layout
+
+\begin_layout Standard
+Grid search
 \end_layout
 
 \begin_layout Section
@@ -2712,8 +3065,8 @@ churns
 
  from a subscription, in engineering, to estimate the longevity of certain
  products, or its parts.
- In social sciences, estimate the longevity of a marriage or a dropout rate
- in academic setting.
+ In social sciences, estimate the longevity of a marriage or a student dropout
+ rate in academic setting.
 \end_layout
 
 \begin_layout Standard
@@ -2826,9 +3179,9 @@ ref{fig1}
 Left and right censoring: 
 \series default
 There are two types of censoring: left and right censoring.
- Right censoring, the most common one, happens when we know that event didn't
- happen up to a certain point — the patient didn't attend follow-ups after
- a certain time or the study ended when he was still alive.
+ Right censoring, the most common one, happens when we know that event did
+ not happen up to a certain point — the patient didn't attend follow-ups
+ after a certain time or the study ended when he was still alive.
  Lets look at the figure 3.1
 \begin_inset ERT
 status open
@@ -2847,11 +3200,9 @@ ref{fig1}
  Left censoring, being much less common, describes the situation when the
  subject's survival time is unkonown, but we know that it is less than a
  certain time.
- For example, wh (
-\series bold
-add appropriate left censoring example
-\series default
-)
+ For example, in epidimiology studies we may not know when exactly the patient
+ was infected.
+ but we know that he is infected.
 \end_layout
 
 \begin_layout Standard
@@ -3269,7 +3620,25 @@ Kaplan-Meier Survival Curves
 \end_layout
 
 \begin_layout Standard
-it is one of the ways to create a survival function
+it is one of the ways to create a survival function.
+ 
+\end_layout
+
+\begin_layout Standard
+non-parametric - does not take covariates into account.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes sld
+\end_inset
+
+The main assumption of the Kaplan-Meier estimator is that censored data
+ has the same probability of survival as uncensored data.
+ 
+\begin_inset Quotes sld
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3283,16 +3652,12 @@ Log-Rank Test
  curves of the two groups.
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-Goals of survival analysis
-\series default
-:
-\end_layout
-
 \begin_layout Subsection
 Performance Metrics
+\end_layout
+
+\begin_layout Standard
+documentation scikit-survival
 \end_layout
 
 \begin_layout Standard
@@ -3337,8 +3702,8 @@ Survival analysis methods
 - Regularized Cox
 \end_layout
 
-\begin_layout Standard
-Cox Proportional hazards method - linear model
+\begin_layout Subsection
+Cox Proportional hazards method
 \end_layout
 
 \begin_layout Standard
@@ -3407,6 +3772,14 @@ natural language processing
 
 \begin_layout Standard
 neural networks for survival estimation
+\end_layout
+
+\begin_layout Standard
+survival neural networks
+\end_layout
+
+\begin_layout Standard
+deepSurv
 \end_layout
 
 \begin_layout Section
@@ -3600,8 +3973,12 @@ We can formulate the problem of predicting the survival time after a successful
 \end_layout
 
 \begin_layout Standard
-The obvious choise would be to use some regression model, but it is not
- the best choice for the following reasons:
+We are predicting survival time, some number, and the obvious choice would
+ be to use some 
+\emph on
+regression
+\emph default
+ model, but it is not the best choice for the following reasons:
 \end_layout
 
 \begin_layout Standard
@@ -3618,7 +3995,7 @@ provide a number
 ).
  In dataset we have a number of days survived and whether the person is
  alive or not.
- If we are to consider people who are still alive with the ones who died
+ If we were to consider people who are still alive with the ones who died
  we would introduce too much noise to the model, making it useless.
  We can't predict a number of days survived based on data where both alive
  and died patients are mixed.
@@ -3649,7 +4026,7 @@ and signifficantly reduce the dataset
  who passed away, and most of them have done so before the indroduction
  of modern techniques of treating the rejection.
  So the model created from such a dataset would be highly biased and therefore
- useless.
+ inaccurate.
 \end_layout
 
 \begin_layout Standard
@@ -3664,7 +4041,11 @@ Regression predicts only one single number.
 \end_layout
 
 \begin_layout Standard
-Another way of formulating the problem is classification.
+Another way of formulating the problem is 
+\emph on
+classification
+\emph default
+.
  We can theoretically divide the dataset into groups: 
 \begin_inset Quotes sld
 \end_inset
@@ -3692,11 +4073,15 @@ five and more
 , or even more groups, as it was done by ...., and train some classifier based
  on them.
  And again we would face the problem of censoring and bias mentioned above.
- So the classification is also no the best choice.
+ So the classification is also not the best choice.
 \end_layout
 
 \begin_layout Standard
-Superior way of problem formulation is in terms of survival analysis.
+Superior way of problem formulation is in terms of 
+\emph on
+survival analysis
+\emph default
+.
  Survival analysis methods handle censoring and provide better form of predictio
 n: survival function or hazard function, i.e.
  survival probability or failing rate at each moment in time
