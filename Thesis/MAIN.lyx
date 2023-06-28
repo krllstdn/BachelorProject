@@ -2790,9 +2790,9 @@ ordinal encoding
 Binning
 \emph default
  (or 
-\series bold
+\emph on
 bucketing
-\series default
+\emph default
 ) is the process of converting numerical values into multiple binary features,
  called 
 \emph on
@@ -2969,7 +2969,7 @@ Constant value imputation.
  Filling missing values with clearly too high or too low value for the algorithm
  to understand that it is an outlier and this particular value should not
  be considered, while other features might be.
- This method is not recommended, as it can bring bias.
+ This method is not recommended, as it can introduce bias.
 \end_layout
 
 \begin_layout Standard
@@ -2978,7 +2978,7 @@ It is often impossible to tell which data imputation method would work the
 \end_layout
 
 \begin_layout Subsection
-Three datasets
+Model Training and Hyperparameter Tuning
 \end_layout
 
 \begin_layout Standard
@@ -2986,51 +2986,119 @@ It is a common practice to divide the data set into three parts
 \end_layout
 
 \begin_layout Itemize
-Training set
+Training set (about 70% of the whole dataset)
 \end_layout
 
 \begin_layout Itemize
-Validation set
+Validation set (15% of the whole dataset)
 \end_layout
 
 \begin_layout Itemize
-Test set
+Test set (15% of the whole dataset)
 \end_layout
 
 \begin_layout Standard
-Training set is the biggest one and is used to train the model.
+Training set is the largest of them and is used to train the machine learning
+ model.
  Validation and test sets are of the same size and are called 
 \emph on
 hold-out sets.
  
 \emph default
-They are used to validate the model.
+They are used in subsequent stages of model evaluation.
  
 \end_layout
 
 \begin_layout Standard
-The reason we need three sets is that if we were to train a model on the
- whole dataset and then validate its performance on the same data, it would
- simply recall the result it has already seen.
- This is called overfitting: the model performs well on the data it has
- seen and performs poorly on unseen data.
- What we want instead is the model's ability to generalize on unseen data.
- 
+The reason behind the use of separate training and validation sets is to
+ prevent overfitting - situation when the model performs well on training
+ data but poorly on unseen data.
+ Overfitting might occur if the model is tested and evaluated on the same
+ dataset, and as a result it memorizes the training examples and fails to
+ make accurate predictions on unseen data.
+ To mitigate this we use the validation set to fine-tune the model and the
+ test set to asess its performance before deploying it to production.
 \end_layout
 
 \begin_layout Standard
-The workflow with this setup is following: we train a model on the training
- set, validate it on the test set with some performance metric, then adjust
+The workflow is following: we train the model on the training set, then
+ validate it on the validation set using the chosen metric, then adjust
  the model's parameters so that it perfoms better.
- Repeat until the model performance stops improving.
+ This process is repeated until the significant improvement is no longer
+ observed.
+ Lastly, we asses model's perfomance on the test set.
+ This iterative process is called hyperparameter tuning.
 \end_layout
 
 \begin_layout Standard
-K-Fold 
+An alternative to the three sets technique is 
+\emph on
+k-fold cross validation
+\emph default
+.
+ It works as follows: the dataset is divided into 
+\begin_inset Formula $k$
+\end_inset
+
+ subsets, or 
+\emph on
+folds, 
+\emph default
+of equal size.
+ One fold is put aside as a validation set while other 
+\begin_inset Formula $k-1$
+\end_inset
+
+ are used as a training set.
+ The model is trained exactly 
+\emph on
+k
+\emph default
+ times with each fold being used as a validation set only once.
+ The only downside is that it is highly computationally expensive with high
+ 
+\emph on
+k
+\emph default
+ value and larger datasets as the model will be trained multiple times.
 \end_layout
 
 \begin_layout Standard
+A 
+\emph on
+hyperparameter
+\emph default
+ is a parameter that is set up before model training (regular model parameters
+ are calculated during training).
+ Each model has a different set of hyperparameters and they profoundly influence
+ model's performance.
+ (
+\series bold
+Add hyperparameter examples from already covered models
+\series default
+) The process of finding optimal combination of hyperparameters is called
+ 
+\emph on
+hyperparameter tuning
+\emph default
+.
+ One solution would be manually select hyperparameters and see how they
+ influence performance.
+ But there is a better way - grid search.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\emph on
 Grid search
+\emph default
+ is a traditional way of perfroming the hyperparameter fine-tuning.
+ We define hyperparameters we want to experiment with, provide values we
+ want to try and the algorithm will train a model for each possible combination
+ of hyperparameters, asses their performance using k-fold cross validation
+ and return the bes combination of hyperparameters (at least in scikit-learn's
+ implementation)
 \end_layout
 
 \begin_layout Section
@@ -3808,18 +3876,25 @@ Machine learning workflow
 
 \begin_layout Standard
 4.
- Apply algos for the given problem type
+ Train a lot of models for the given problem type on the reduced dataset,
+ shortlist a couple of the most promising ones.
 \end_layout
 
 \begin_layout Standard
 5.
- Choose the best, fine tune it, run on the whole dataset and/or modify the
- dataset
+ Fine tune the most promising ones using the validation set until no signiffican
+t improvements are seen.
+ 
 \end_layout
 
 \begin_layout Standard
 6.
- Repeat
+ Asses on the test set
+\end_layout
+
+\begin_layout Standard
+7.
+ Run on the whole dataset and/or modify the dataset
 \end_layout
 
 \begin_layout Standard
