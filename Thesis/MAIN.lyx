@@ -2008,14 +2008,10 @@ Machine Learning Background
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-What is ML
-\series default
-: Machine learning (ML) is a subfield of computer science that consists
- of building algorithms that are capable of processing large amounts of
- data, finding patterns and making some actions such as predictions or even
- generating new data.
+Machine learning is a subfield of computer science that consists of building
+ algorithms that are capable of processing large amounts of data, finding
+ patterns and making some actions such as predictions or even generating
+ new data.
  Machine learning is an intersection of many fields of science such as statistic
 s, theory of probability, linear algebra, calculus and, of cource, computer
  science.
@@ -2032,12 +2028,8 @@ s, theory of probability, linear algebra, calculus and, of cource, computer
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Why is this importan
-\series default
-t: Machine learning excels in problems that are either overly complex or
- have no known algorithm.
+Machine learning excels in problems that are either overly complex or have
+ no known algorithm.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-9"
@@ -2052,24 +2044,20 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-How it is divided
-\series default
-: Based on the problem and, therefore, on our approach to building the dataset(t
+Based on the problem and, therefore, on our approach to building a dataset(t
 \series bold
 ell somewhere the difference between the dataset and raw data
 \series default
 ) and the model, machine learning can be divided into four sub-fields: supervise
 d, semi-supervised, unsupervised and reinforcement learning.
- Supervised learning means that we labeled our data and we want to predict
- labels from the data.
+ Supervised learning means that data are labeled and we want to predict
+ labels from the unlabeled data.
  (
 \series bold
 explain labeled data
 \series default
 !) Semi-supervised learning means that only a part of our data is labeled.
- Unsupervised means that our data is unlabeled.
+ Unsupervised learning deals with unlabeled data.
  In reinforcement learning we create an environment, set up rewards for
  doing certain things and punishment for other things, and let the machine
  (actor) to perform actions that produce the highest reward.
@@ -2077,11 +2065,7 @@ explain labeled data
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-How it is important in medicine
-\series default
-: Every field suffers from human errors, and medicine is no exception.
+Every field suffers from human errors, and medicine is no exception.
  (people get tired, wrong institutions, etc...) According to Makary et.
  al., medical error is the third death cause in the United States 
 \begin_inset CommandInset citation
@@ -2101,10 +2085,6 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Why machine learning in not learning: 
-\series default
 It is important to note that machine learning is rather marketing term.
  Machines can't learn.
  If we were to at least slightly distort inputs, machine wouldn't be able
@@ -2134,8 +2114,7 @@ s.
 In this chapter we will cover all theoretical background that might prove
  useful for solving our problem, this includes classical machine learning,
  deep learning, statistical survival analysis, basic steps that are required
- to create machine learining systems, how to preprocess data and what algorithms
- are worth of our attention in solving tasks like this.
+ to create machine learining systems, how to preprocess data.
  We will begin by exploring what is supervised learning.
 \end_layout
 
@@ -2164,7 +2143,7 @@ Classification
 regression
 \emph default
  are common supervised learning tasks.
- In this section we will define these problems and necessary terminology,
+ In this section we will define these problems, necessary terminology and
  describe commonly used algorithms that are used to solve these types of
  problems.
 \end_layout
@@ -2175,11 +2154,11 @@ In supervised learning the
 dataset
 \emph default
  is the collection of labeled examples 
-\begin_inset Formula $\{(x_{i},y_{i})\}_{i=1}^{N}$
+\begin_inset Formula $\{(\overline{x}_{i},y_{i})\}_{i=1}^{N}$
 \end_inset
 
 , where each individual 
-\begin_inset Formula $x_{i}$
+\begin_inset Formula $\overline{x}_{i}$
 \end_inset
 
  is called a 
@@ -2267,7 +2246,7 @@ In the following subsections we are going to explore some techniques for
  supervised learning.
  Classification and regression tasks are similar in many ways and often
  for each classifier there is an equivalent regressor, and vice versa.
- For most of the covered models exists its analogue in the other task.
+ More on that in the following sections.
 \end_layout
 
 \begin_layout Subsection
@@ -2275,11 +2254,19 @@ Performance Metrics
 \end_layout
 
 \begin_layout Standard
-mean square error
+mean square error (MSE)
 \end_layout
 
 \begin_layout Standard
-area under a curve
+confusion matrix
+\end_layout
+
+\begin_layout Standard
+precision/recall
+\end_layout
+
+\begin_layout Standard
+area under the ROC curve
 \end_layout
 
 \begin_layout Subsection
@@ -2294,22 +2281,279 @@ Linear regression is a popular regression learning algorithm.
 \begin_layout Standard
 
 \series bold
-What is the model: 
+Problem statement: 
+\series default
+Given a collection of labeled examples
+\series bold
+ 
+\series default
+
+\begin_inset Formula $\{(\overline{x}_{i},y_{i})\}_{i=1}^{N}$
+\end_inset
+
+, create a model 
+\begin_inset Formula 
+\begin{equation}
+f_{\bar{w},b}(\overline{x})=\overline{w}\overline{x}+b\label{eq:lin_reg}
+\end{equation}
+
+\end_inset
+
+.
+ Where N is the size of the collection, 
+\begin_inset Formula $\overline{x}_{i}$
+\end_inset
+
+ is a 
+\emph on
+feature vector 
+\emph default
+of D dimensions of example 
+\begin_inset Formula $i=1,…,N$
+\end_inset
+
+, every feature 
+\begin_inset Formula $x_{i}^{(J)}\epsilon\mathbb{R},$
+\end_inset
+
+ 
+\begin_inset Formula $y_{i}\epsilon\mathbb{R}$
+\end_inset
+
+ is target value.
+ 
+\begin_inset Formula $\overline{w}$
+\end_inset
+
+ is D-dimensional vector of parameters and 
+\begin_inset Formula $b\epsilon\mathbb{R}$
+\end_inset
+
+.
+ Notation 
+\begin_inset Formula $f_{\bar{w},b}(\overline{x})$
+\end_inset
+
+ mens that 
+\begin_inset Formula $f$
+\end_inset
+
+ is parametrized by 
+\begin_inset Formula $\overline{w}$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $ $
+To train the linear regression means to find optimal values 
+\begin_inset Formula $(\overline{w}^{*},b^{*})$
+\end_inset
+
+ of parameters 
+\begin_inset Formula $\overline{w}$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ so that the model makes as accurate predictions as possible.
+ In graphical terms it means finding such a hyperplane that fits datapoints
+ from the training set as good, as possible, as it can be seen on the image
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{lin_reg_img}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=0.6
+\backslash
+textwidth]{Images/linear_regression}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Linear regression for two-dimensional data}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{lin_reg_img}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
+To find optimal parameters we need to minimize the following expression:
+\end_layout
 
-\series bold
-What we are trying to minimize(loss function):
-\series default
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{N}\mathop{\underset{i=1...N}{\sum}(}f_{\bar{w},b}(\overline{x_{i}})-y_{i})^{2}\label{eq:mse}
+\end{equation}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+called 
+\emph on
+mean squared error (MSE), 
+\emph default
+the 
+\emph on
+loss function 
+\emph default
+that comprises of 
+\emph on
+squared error loss 
+\emph default
+
+\begin_inset Formula $(f_{\bar{w},b}(\overline{x_{i}})-y_{i})^{2}$
+\end_inset
+
+, another 
+\emph on
+loss function 
+\emph default
+that
+\emph on
  
+\emph default
+evaluates individual predictions
+\emph on
+.
+ 
+\emph default
+Loss function is a measure of how well a model performs overall (MSE) or
+ for any individual prediction (square error loss).
+
+\emph on
+ 
+\end_layout
+
+\begin_layout Standard
+There is a 
+\emph on
+closed-form solution
+\emph default
+ for finding the optimal values 
+\begin_inset Formula $(\overline{w}^{*},b^{*})$
+\end_inset
+
+.
+ Closed-form solution means simple algrebraic expression that gives the
+ result directly.
+ This is a 
+\emph on
+normal equation
+\emph default
+, and it looks like the following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We could select other loss function, but according to Andriy Burkov it would
+ be a different algorithm.
+ For example we could take the absolute difference of 
+\begin_inset Formula $f(x_{i})$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+ But that would create us problems as the derivative of absolute value is
+ not continuous, and therefore the function is not smooth.
+ Non-smooth functions create unnecessary complications during the optimisation
+ process.
+ 
+\end_layout
+
+\begin_layout Standard
+Linear models are usually resilient to overfitting because they are simple.
+ Overfitting is a situation when the model learns the intricacies of the
+ training dataset so well that it remembers actual values rather than learn
+ underlying pattern.
+ Overfit model is unable to make accurate predictions when confronted with
+ the unseen data.
+ More on overfitting in section 3.6.
+\end_layout
+
+\begin_layout Standard
+how does the prediction look like (formula):
 \end_layout
 
 \begin_layout Subsection
@@ -2318,6 +2562,22 @@ Logistic Regression
 
 \begin_layout Standard
 probability of an instance belonging to a certain class.
+\end_layout
+
+\begin_layout Standard
+descr:
+\end_layout
+
+\begin_layout Standard
+problem statement:
+\end_layout
+
+\begin_layout Standard
+function
+\end_layout
+
+\begin_layout Standard
+loss function
 \end_layout
 
 \begin_layout Subsection
@@ -2377,8 +2637,12 @@ Unsupervised Learning
 \emph on
 Unsupervised learning
 \emph default
- is the kind of learning that operates with the dataset without lables.
- It proves useful during EDA and 
+ operates with the dataset without lables.
+ It proves useful during 
+\emph on
+exploratory data analysis (EDA)
+\emph default
+ and 
 \emph on
 dimensionality reduction
 \emph default
@@ -2977,7 +3241,7 @@ It is often impossible to tell which data imputation method would work the
  best and it should be checked experimentally.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Model Training and Hyperparameter Tuning
 \end_layout
 
@@ -3018,6 +3282,12 @@ The reason behind the use of separate training and validation sets is to
  make accurate predictions on unseen data.
  To mitigate this we use the validation set to fine-tune the model and the
  test set to asess its performance before deploying it to production.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Underfitting: 
 \end_layout
 
 \begin_layout Standard
@@ -3097,8 +3367,20 @@ Grid search
  We define hyperparameters we want to experiment with, provide values we
  want to try and the algorithm will train a model for each possible combination
  of hyperparameters, asses their performance using k-fold cross validation
- and return the bes combination of hyperparameters (at least in scikit-learn's
- implementation)
+ and return the best combination of hyperparameters (at least it works that
+ way in scikit-learn's implementation GridSearchCV).
+\end_layout
+
+\begin_layout Standard
+Grid search is great when we try out relatively few hyperparameter combinations,
+ but when there are a lot of values it is preferrable to use RandomizedSearch
+ (RandomizedSearchCV in scikit-learn) instead.
+ It works more or less the same way as grid search, does but instead of
+ trying every possible combination from provided values it tries only given
+ number of hyperparameter combinations selected randomly.
+ Main reason it is better than the grid search is that it gives you more
+ control over how much computational power and time you want to spend on
+ the hyperparameter tuning.
 \end_layout
 
 \begin_layout Section
@@ -4173,7 +4455,7 @@ bottleneck in a number of instances each model can train on.
 
 \begin_layout Standard
 different groups of people have different expected life expectancy -> separate
- models for different groups of people for the result maximisation.
+ models for different groups of people for the result maximization.
 \end_layout
 
 \begin_layout Standard
