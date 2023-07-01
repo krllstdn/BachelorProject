@@ -2190,7 +2190,7 @@ feature
 label
 \emph default
 
-\begin_inset Formula $y^{i}$
+\begin_inset Formula $y^{i}$ // tohle je divne, v predchozim odstavci je $y_{i}$, tady $y^{i}$
 \end_inset
 
  might be either a finite set of classes
@@ -3505,12 +3505,13 @@ exploratory data analysis (EDA)
 dimensionality reduction
 \emph default
 , but otherwise it is not very useful in practical applications, as unlabeled
- dataset means no feedback about how well your model performs.
+ dataset means no feedback about how well your model performs. // no to neni taky uplne pravda, uzitecne to je a tohle sem nepis. Annomaly detection na tom stoji komplet
 
 \end_layout
 
 \begin_layout Standard
 We will cover this part very briefly, as it is not closely related to our
+// uz se pouziva I will cover... A tohle je taky trochu nestastne receno. Kdyz to neni dulezite, tak proc o tom vubec neco psat? Spis zdurazni ty veci, ktere treba pouzit chces
  task.
  Albeit something will be used as a data preprocessing step, such as dimensional
 ity reduction, or during exploratory data analysis.
