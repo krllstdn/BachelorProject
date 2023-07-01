@@ -37,7 +37,7 @@
 %\addtocontents{lof}{\protect\thispagestyle{empty}}
 %\addtocontents{lot}{\protect\thispagestyle{empty}}
 
-%% Shifts the top line of the TOC (not the title) 1cm upwards 
+%% Shifts the top line of the TOC (not the title) 1cm upwards
 %% so that the whole TOC fits on 1 page. Additional page size
 %% adjustment is performed at the point where the TOC
 %% is inserted.
@@ -331,7 +331,7 @@ status collapsed
 \series bold
 \size huge
 Estimating patient's life expectancy after a successful kidney transplant
- using machine learning methods 
+ using machine learning methods
 \end_layout
 
 \begin_layout Standard
@@ -408,7 +408,7 @@ ends the centered part (the required new paragraph before "}" is inserted
 \begin_layout Labeling
 \paragraph_spacing single
 \labelwidthstring MMMMMMMMM
-Author: 
+Author:
 \series bold
 Kyrylo Stadniuk
 \end_layout
@@ -416,7 +416,7 @@ Kyrylo Stadniuk
 \begin_layout Labeling
 \paragraph_spacing single
 \labelwidthstring MMMMMMMMM
-Supervisor: 
+Supervisor:
 \series bold
 Ing.
  Tomáš Kouřim
@@ -425,7 +425,7 @@ Ing.
 \begin_layout Labeling
 \paragraph_spacing single
 \labelwidthstring MMMMMMMMM
-Consultant: 
+Consultant:
 \series bold
 Ing.
  Pavel Strachota, Ph.D.
@@ -437,7 +437,7 @@ Language
 \begin_inset space ~
 \end_inset
 
-advisor: 
+advisor:
 \series bold
 PaedDr.
  Eliška Rafajová
@@ -521,7 +521,7 @@ I declare that this Bachelor's Degree Project is entirely my own work and
 
 \begin_layout Standard
 \noindent
-Prague, 
+Prague,
 \begin_inset ERT
 status open
 
@@ -675,7 +675,7 @@ Vedoucí práce:
 
 \emph on
 \lang czech
-Konzultant: 
+Konzultant:
 \emph default
 Ing.
  Pavel Strachota, Ph.D.
@@ -757,7 +757,7 @@ Abstrakt:
  na 10 řádků.
  Abstrakt max.
  na 10 řádků.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -977,7 +977,7 @@ pagestyle{headings}
 The goal of this paper is to explore fields of kidney transplantation and
  machine learning, create and apply machine learning model in real-world
  application.
- 
+
 \end_layout
 
 \begin_layout Chapter
@@ -1106,7 +1106,7 @@ The second and third human transplants performed by Ernst Unger were far
  The kidney was transplanted from an ape to dying from renal failure young
  woman.
  The kidney never worked.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1194,7 +1194,7 @@ In 1946, at the Peter Bent Brigham Hospital in Boston, a group of surgeons:
  The short period of kidney functioning may have helped the patient to recover
  from acute renal failure.
  It ignited the hospital's interest in renal transplantation.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1203,7 +1203,7 @@ Simonsen in Denmark, Dempster in London, and Küss in Paris concluded that
  Further, both Simonsen and Dempster deduced that the immune response was
  responsible for graft failure and both hypothesized that the humoral mechanism
  of rejection was probable.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1227,7 +1227,7 @@ pic hormone (more known as cortisone).
  blood group matching between the donor and recipient, and host bilateral
  nephrectomy could be beneficial for the success of the transplant.
  These conclusions were later confirmed by subsequent studies.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1243,7 +1243,7 @@ tion and with increased confidence on December 23, 1954 in Boston Joseph
  because the technical possibilty of kidney transplantation was evident
  and the cases of successful skin allografts between identical twins were
  known for decades, but nonetheless it was an important milestone that aroused
- the interest in further experiments 
+ the interest in further experiments
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1,key-4"
@@ -1311,7 +1311,7 @@ It was obvious that TBI is not the best choice and that it is necessary
  Schwarz and Dameshek's paper and performed his own experiment in dogs and
  found that it signifficantly prolonged dog's survival.
  Charles Zukoski and David Hume found the same outcomes.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1385,7 +1385,7 @@ Hemodialysis for renal failure was created by Willem Kolff from Holland
 Acceptance of brain death as a real death.
  Before the mid 60s the kadaver transplantation was limited by the ischemic
  damage.
- Now the additional organs were available from 
+ Now the additional organs were available from
 \begin_inset Quotes sld
 \end_inset
 
@@ -1438,7 +1438,7 @@ Although tissue typing was suggested by Alexis Carrel in the beginning of
  test predicts hyperacute rejection.
  2) matching can reliably identify optimal donor within a family.
  It was assumed that the same would work for non-related recipients.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1446,7 +1446,7 @@ However, when in 1970 Terasaki reviewed his large database of cadaver renal
  allografts he found no correlation with the typing.
  This raised a lot of agitation in tissue typing community and his grant
  even was temporalily suspended until others didn't report the same.
- Now it is conclded that the 
+ Now it is conclded that the
 \end_layout
 
 \begin_layout Subsection
@@ -1631,7 +1631,7 @@ Many DAMPS are recognized by the same PRRs that mediate response to PAMPs.
  shock proteins (HSPs), uric acid, etc.
  Likewise, oxidative stress and decline in intracellular potassium may act
  as intracellular damage signals.
- 
+
 \end_layout
 
 \begin_layout Paragraph
@@ -1686,14 +1686,14 @@ Immune response to a graft occurs in two main stages: afferent and efferent
  and start to proliterate and send signals to other cells.
  In efferent arm, leukocytes migrate to the transplanted organ and donor
  specific antibodies are produced.
- 
+
 \end_layout
 
 \begin_layout Standard
 For the immune system to be activated graft must express antigens that will
  be considered by the host's immune system as foreign.
  These include ABO antigens, human leukocyte antigens (HLA), and polymorphic
- non-HLA 
+ non-HLA
 \begin_inset Quotes sld
 \end_inset
 
@@ -1702,7 +1702,7 @@ auto-antigens
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1732,7 +1732,7 @@ When allocating an organ to transplant the first thing that is considered
 \end_layout
 
 \begin_layout Standard
-Donors with blood group O are so called 
+Donors with blood group O are so called
 \begin_inset Quotes sld
 \end_inset
 
@@ -1744,7 +1744,7 @@ universal donors
  Organs from them can be safely transplanted to recipients with any ABO
  blood group.
  Whereas, recipient with AB group can safely receive organ from recipient
- with any ABO blood group and is called a 
+ with any ABO blood group and is called a
 \begin_inset Quotes sld
 \end_inset
 
@@ -1781,7 +1781,7 @@ Histocompatibility antigens are genetically encoded antigens that cover
  some cases forever.
  Although, sometimes miH mismatch might be so severe that it would be comparable
  to full MHC mismatch.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1795,7 +1795,7 @@ MHC antigens are proteins that cover cell surfaces to help the immune system
  MHC class II are found on certain immune cells and play crucial role in
  immune response coordination.
  In humans MHC class 1 are divided into three subgroups each, as can be
- seen on table 
+ seen on table
 \end_layout
 
 \begin_layout Standard
@@ -1929,7 +1929,7 @@ Minor histocompatibility proteins can act as antigens, although weaker than
  MHC.
  However if prior sensitisation exists it could result in severe immune
  response that might result in graft loss.
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -1960,7 +1960,7 @@ B cells are immune system cells that produce antibodies.
  of ABMR and increases the risk of graft failure by 76%.
  Additionally, donor specific antibodies might develop posttransplant and
  cause an actue ABMR.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2055,11 +2055,11 @@ explain labeled data
 Semi-supervised learning:
 \series default
  means that only a part of our data is labeled.
- 
+
 \end_layout
 
 \begin_layout Standard
-In 
+In
 \series bold
 reinforcement learning:
 \series default
@@ -2072,7 +2072,7 @@ t for other things, and let the machine (actor) to perform actions that
 \begin_layout Standard
 Every field suffers from human errors, and medicine is no exception.
  (people get tired, wrong institutions, etc...) According to Makary et.
- al., medical error is the third death cause in the United States 
+ al., medical error is the third death cause in the United States // hele to je odvazne, v tom clanku to sice nejak je, ale ja bych se takto ostremu a kontroverznimu tvrzeni vyhnul
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-11"
@@ -2093,7 +2093,7 @@ literal "false"
 It is important to note that machine learning is rather marketing term.
  Machines can't learn.
  If we were to at least slightly distort inputs, machine wouldn't be able
- to 
+ to
 \begin_inset Quotes sld
 \end_inset
 
@@ -2112,7 +2112,7 @@ literal "false"
 
  It is debatable that statistics and mathematics can really produce consciousnes
 s.
- Luckily the debate lies beyond this paper.
+ Luckily the debate lies beyond this paper. // tenhle odstavec je take dost odvazny...
 \end_layout
 
 \begin_layout Standard
@@ -2139,11 +2139,11 @@ literal "false"
 \end_inset
 
 .
- 
+
 \emph on
 Classification
 \emph default
- and 
+ and
 \emph on
 regression
 \emph default
@@ -2154,46 +2154,46 @@ regression
 \end_layout
 
 \begin_layout Standard
-In supervised learning the 
+In supervised learning the
 \emph on
 dataset
 \emph default
- is the collection of labeled examples 
+ is the collection of labeled examples
 \begin_inset Formula $\{(\overline{x}_{i},y_{i})\}_{i=1}^{N}$
 \end_inset
 
-, where each individual 
+, where each individual
 \begin_inset Formula $\overline{x}_{i}$
 \end_inset
 
- is called a 
+ is called a
 \emph on
 feature vector
 \emph default
 .
- A feature vector is a vector that in each its dimension 
+ A feature vector is a vector that in each its dimension
 \begin_inset Formula $j=1,...,D$
 \end_inset
 
  contains a value that describes an example in some way.
- This value is called a 
+ This value is called a
 \emph on
 feature
 \emph default
- and is denoted as 
+ and is denoted as
 \begin_inset Formula $x^{(j)}$
 \end_inset
 
 .
- The 
+ The
 \emph on
 label
 \emph default
- 
+
 \begin_inset Formula $y^{i}$
 \end_inset
 
- might be either a finite set of classes 
+ might be either a finite set of classes
 \begin_inset Formula $\{1,2,...,C\}$
 \end_inset
 
@@ -2211,19 +2211,19 @@ Classification is a problem of assigning a label to unlabeled example.
  example as input and outputs a label, a number associated with it or a
  probability of belonging to a certain class out of which it is easy to
  deduce the class.
- If the set of labels has only two classes we talk about 
+ If the set of labels has only two classes we talk about
 \emph on
 binary classification
 \emph default
 .
- Consequentlhy, if the set of labels has three or more classes it is a 
+ Consequentlhy, if the set of labels has three or more classes it is a
 \emph on
 multiclass classification
 \emph default
 .
  Some algorithms are binary classifiers by definition, while others are
  multiclass classifiers.
- It is possible to create an 
+ It is possible to create an
 \emph on
 ensemble
 \emph default
@@ -2235,7 +2235,7 @@ n.
 \end_layout
 
 \begin_layout Standard
-Regression is a problem of predicting a 
+Regression is a problem of predicting a
 \emph on
 target value
 \emph default
@@ -2243,7 +2243,7 @@ target value
  The problem is solved by regression learning algorithm that takes a set
  of labeled examples as inputs and produces a model that takes unlabeled
  example as input and outputs a target value.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2289,18 +2289,18 @@ show what is a linear combinarion)
 \begin_layout Standard
 The problem we are trying to solve is formulated as follows:
 \series bold
- 
+
 \series default
 Given a collection of labeled examples
 \series bold
- 
+
 \series default
 
 \begin_inset Formula $\{(\overline{x}_{i},y_{i})\}_{i=1}^{N}$
 \end_inset
 
-, create a model 
-\begin_inset Formula 
+, create a model
+\begin_inset Formula
 \begin{equation}
 f_{\bar{w},b}(\overline{x})=\overline{w}\overline{x}+b\label{eq:lin_reg}
 \end{equation}
@@ -2308,49 +2308,49 @@ f_{\bar{w},b}(\overline{x})=\overline{w}\overline{x}+b\label{eq:lin_reg}
 \end_inset
 
 .
- Where N is the size of the collection, 
+ Where N is the size of the collection,
 \begin_inset Formula $\overline{x}_{i}$
 \end_inset
 
- is a 
+ is a
 \emph on
-feature vector 
+feature vector
 \emph default
-of D dimensions of example 
+of D dimensions of example
 \begin_inset Formula $i=1,…,N$
 \end_inset
 
-, every feature 
+, every feature
 \begin_inset Formula $x_{i}^{(J)}\epsilon\mathbb{R},$
 \end_inset
 
- 
+
 \begin_inset Formula $y_{i}\epsilon\mathbb{R}$
 \end_inset
 
  is target value.
- 
+
 \begin_inset Formula $\overline{w}$
 \end_inset
 
- is D-dimensional vector of parameters and 
+ is D-dimensional vector of parameters and
 \begin_inset Formula $b\epsilon\mathbb{R}$
 \end_inset
 
 .
- Notation 
+ Notation
 \begin_inset Formula $f_{\bar{w},b}(\overline{x})$
 \end_inset
 
- means that 
+ means that
 \begin_inset Formula $f$
 \end_inset
 
- is parametrized by 
+ is parametrized by
 \begin_inset Formula $\overline{w}$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $b$
 \end_inset
 
@@ -2358,22 +2358,22 @@ of D dimensions of example
 \end_layout
 
 \begin_layout Standard
-To train the linear regression means to find optimal values 
+To train the linear regression means to find optimal values
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
- of parameters 
+ of parameters
 \begin_inset Formula $\overline{w}$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $b$
 \end_inset
 
  so that the model makes as accurate predictions as possible.
  In graphical terms it means finding such a hyperplane that fits datapoints
  from the training set as good, as possible, as it can be seen on the image
- 
+
 \begin_inset ERT
 status open
 
@@ -2454,7 +2454,7 @@ To find optimal parameters we need to minimize the following expression:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 \frac{1}{N}\mathop{\underset{i=1...N}{\sum}(}f_{\bar{w},b}(\overline{x_{i}})-y_{i})^{2}.\label{eq:mse}
 \end{equation}
@@ -2465,17 +2465,17 @@ To find optimal parameters we need to minimize the following expression:
 \end_layout
 
 \begin_layout Standard
-It iscalled 
+It iscalled
 \emph on
-mean squared error (MSE), 
+mean squared error (MSE),
 \emph default
-the 
+the
 \emph on
-loss function 
+loss function
 \emph default
-that comprises of 
+that comprises of
 \emph on
-squared error loss 
+squared error loss
 \emph default
 
 \begin_inset Formula $(f_{\bar{w},b}(\overline{x_{i}})-y_{i})^{2}$
@@ -2483,37 +2483,37 @@ squared error loss
 
 , another loss function
 \emph on
- 
+
 \emph default
 that
 \emph on
- 
+
 \emph default
 evaluates individual predictions
 \emph on
 .
- 
+
 \emph default
 Loss function is a measure of how well a model performs overall (MSE) or
  for any individual prediction (square error loss).
 
 \emph on
- 
+
 \end_layout
 
 \begin_layout Standard
-There is a 
+There is a
 \emph on
 closed-form solution
 \emph default
- for finding the optimal values 
+ for finding the optimal values
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
 .
  Closed-form solution means simple algrebraic expression that gives the
  result directly.
- In case of linear regression it is the 
+ In case of linear regression it is the
 \emph on
 normal equation
 \emph default
@@ -2521,7 +2521,7 @@ normal equation
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 \mathbf{\overline{\mathbf{w}}^{*}=(x^{T}x)x^{T}y}.\label{eq:norm_eq}
 \end{equation}
@@ -2532,11 +2532,11 @@ normal equation
 \end_layout
 
 \begin_layout Standard
-Where 
+Where
 \begin_inset Formula $x^{T}$
 \end_inset
 
-means transposed feature vector 
+means transposed feature vector
 \begin_inset Formula $x$
 \end_inset
 
@@ -2546,11 +2546,11 @@ means transposed feature vector
 \begin_layout Standard
 We could select other loss function, but according to Andriy Burkov it would
  be a different algorithm.
- For example we could take the absolute difference of 
+ For example we could take the absolute difference of
 \begin_inset Formula $f(x_{i})$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $y_{i}$
 \end_inset
 
@@ -2559,7 +2559,7 @@ We could select other loss function, but according to Andriy Burkov it would
  not continuous, and therefore the function is not smooth.
  Non-smooth functions create unnecessary complications during the optimisation
  process.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2585,12 +2585,12 @@ Logistic regression
  to a particular class.
  If the predicted probability of example belonging to a certain class is
  greater than 50% then the model concludes that it does belong to the class
- (referred to as positive class and is labeled as 
+ (referred to as positive class and is labeled as
 \begin_inset Formula $1$
 \end_inset
 
 ), otherwise it predicts that example does not belong to that class (but
- belongs to the negative class, labeled 
+ belongs to the negative class, labeled
 \begin_inset Formula $0$
 \end_inset
 
@@ -2602,11 +2602,11 @@ Logistic regression
 \end_layout
 
 \begin_layout Standard
-As with the linear regression, in logistic regression we want to model 
+As with the linear regression, in logistic regression we want to model
 \begin_inset Formula $y$
 \end_inset
 
- as a linear combination of 
+ as a linear combination of
 \begin_inset Formula $\overline{x}$
 \end_inset
 
@@ -2621,7 +2621,7 @@ The logistic regression model looks like the following:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 f_{\bar{w},b}(\overline{x})\stackrel{def}{=}\frac{1}{1+e^{-(wx+b)}}.\label{eq:log_reg}
 \end{equation}
@@ -2633,15 +2633,15 @@ f_{\bar{w},b}(\overline{x})\stackrel{def}{=}\frac{1}{1+e^{-(wx+b)}}.\label{eq:lo
 
 \begin_layout Standard
 Just like with the linear regression, our task is to find optimal values
- 
+
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
- for parameters 
+ for parameters
 \begin_inset Formula $\overline{w}$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $b$
 \end_inset
 
@@ -2649,11 +2649,11 @@ Just like with the linear regression, our task is to find optimal values
 \end_layout
 
 \begin_layout Standard
-Once we found 
+Once we found
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
- for the 
+ for the
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:log_reg"
@@ -2663,7 +2663,7 @@ noprefix "false"
 
 \end_inset
 
-, in other words we trained the model, we can apply the model 
+, in other words we trained the model, we can apply the model
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:log_reg"
@@ -2673,33 +2673,33 @@ noprefix "false"
 
 \end_inset
 
- on features 
+ on features
 \begin_inset Formula $x_{i}$
 \end_inset
 
- from an example 
+ from an example
 \begin_inset Formula $(x_{i},y_{i})$
 \end_inset
 
 .
- The output value lies in range 
+ The output value lies in range
 \begin_inset Formula $0<p<1$
 \end_inset
 
  .
- If 
+ If
 \begin_inset Formula $y_{i}$
 \end_inset
 
  is a positive class
 \series bold
- 
+
 \series default
-the probability of being a positive class is given by 
+the probability of being a positive class is given by
 \begin_inset Formula $p$
 \end_inset
 
-, if it is negative, the probability is given by 
+, if it is negative, the probability is given by
 \begin_inset Formula $1-p$
 \end_inset
 
@@ -2767,20 +2767,20 @@ end{figure}
 \end_layout
 
 \begin_layout Standard
-By looking at the graph we can see that indeed if the 
+By looking at the graph we can see that indeed if the
 \begin_inset Formula $y$
 \end_inset
 
- has the value less than 
+ has the value less than
 \begin_inset Formula $\frac{1}{2}$
 \end_inset
 
- it has negative 
+ it has negative
 \begin_inset Formula $x$
 \end_inset
 
  values and will be marked as negative, and positive if it is larger than
- 
+
 \begin_inset Formula $\frac{1}{2}$
 \end_inset
 
@@ -2789,27 +2789,27 @@ By looking at the graph we can see that indeed if the
 \end_layout
 
 \begin_layout Standard
-Instead of minimizing MSE, in logistic regression we are trying to 
+Instead of minimizing MSE, in logistic regression we are trying to
 \emph on
 maximize
 \emph default
- the 
+ the
 \emph on
 likelihood function
 \emph default
 .
  In statistics likelihood function tells how likely the example is according
  to our model.
- The objective function in logistic regression is called 
+ The objective function in logistic regression is called
 \emph on
 maximum likelihood.
- 
+
 \emph default
 It looks like the following:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 L_{\bar{w},b}\stackrel{def}{=}\underset{i=1...N}{\prod}f_{\bar{w},b}(\overline{x}_{i})^{y_{i}}(1-f_{\bar{w},b}(\overline{x}_{i}))^{(1-y_{i})}.\label{eq:max_likelihood}
 \end{equation}
@@ -2820,7 +2820,7 @@ L_{\bar{w},b}\stackrel{def}{=}\underset{i=1...N}{\prod}f_{\bar{w},b}(\overline{x
 \end_layout
 
 \begin_layout Standard
-Because of the exponential function in 
+Because of the exponential function in
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:max_likelihood"
@@ -2830,12 +2830,12 @@ noprefix "false"
 
 \end_inset
 
- for easier calculations it is better to use the 
+ for easier calculations it is better to use the
 \emph on
-log-likelihood 
+log-likelihood
 \emph default
 instead.
- As 
+ As
 \begin_inset Formula $Log$
 \end_inset
 
@@ -2843,15 +2843,15 @@ instead.
  its argument.
  The solution to this optimization problem is the same as the solution to
  the original problem.
- 
+
 \emph on
-Log-likelihood 
+Log-likelihood
 \emph default
 function looks like the following:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 LogL_{\bar{w},b}\stackrel{def}{=}ln(L_{\overline{w},b}(\overline{x}))\stackrel[i=1]{N}{\sum}y_{i}lnf_{\bar{w},b}(\overline{x})+(1-y_{i})ln(1-f_{\bar{w},b}(\overline{x})).\label{eq:log_likelihood}
 \end{equation}
@@ -2863,7 +2863,7 @@ LogL_{\bar{w},b}\stackrel{def}{=}ln(L_{\overline{w},b}(\overline{x}))\stackrel[i
 
 \begin_layout Standard
 Unfortunately, there is no closed-form solution for this optimisation problem.
- But the function is convex, so 
+ But the function is convex, so
 \emph on
 gradient descent
 \emph default
@@ -2881,7 +2881,7 @@ Support Vector Machines
 \begin_layout Standard
 
 \series bold
-Description: 
+Description:
 \series default
 \emph on
 Support vector machine (SVM)
@@ -2901,7 +2901,7 @@ LinearSVM
 \end_layout
 
 \begin_layout Standard
-The concept behind support vector machines is demonstrated on Figure 
+The concept behind support vector machines is demonstrated on Figure
 \begin_inset ERT
 status open
 
@@ -2916,82 +2916,82 @@ ref{svm1_img}
 
 .
  The image is comprised of two classes represented by the red and blue dots,
- divided by solid line termed the 
+ divided by solid line termed the
 \emph on
 dicision boundary
 \emph default
- 
+
 \begin_inset Formula $\overline{w}\overline{x}-b=0$
 \end_inset
 
- with two dashed lines by its sides known as 
+ with two dashed lines by its sides known as
 \emph on
 support vectors
 \emph default
- 
+
 \begin_inset Formula $\overline{w}\overline{x}-b=1$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $\overline{w}\overline{x}-b=-1$
 \end_inset
 
 .
  Support vectors are determined by closest instances of a class to the decision
  boundary, which can be seen in the figure.
- 
+
 \end_layout
 
 \begin_layout Standard
-The distance between the closest instances of two classes is called 
+The distance between the closest instances of two classes is called
 \emph on
-margin 
+margin
 \emph default
-and is equal to 
+and is equal to
 \begin_inset Formula $\frac{2}{||\overline{w}||}$
 \end_inset
 
-, where 
+, where
 \begin_inset Formula $||\overline{w}||$
 \end_inset
 
- is the Equclidian norm and 
+ is the Equclidian norm and
 \begin_inset Formula $\overline{w}$
 \end_inset
 
  is a parameter vector of the same dimensionality as the feature vector.
  So the smaller the norm, the larger the margin is.
  The larger the margin, the better model generalizes.
- The primary objective of the model is to find the largest margin 
+ The primary objective of the model is to find the largest margin
 \begin_inset Formula $\frac{2}{||\overline{w}||}$
 \end_inset
 
-, so, to do that we need to 
+, so, to do that we need to
 \emph on
-minimize 
+minimize
 \emph default
 the Euclidian norm defined by the expression
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 ||\overline{w}||=\sqrt{\stackrel[j=1]{D}{\sum}(w^{(j)})^{2}}
 \]
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
-The fundamental assumption is that classes are 
+The fundamental assumption is that classes are
 \emph on
 linearly separable
 \emph default
 , implying they can be separated by a hyperplane (decision boundary) with
  no instances of one class lying among instances of the opposite class.
- It is illustrated on the figure 
+ It is illustrated on the figure
 \begin_inset ERT
 status open
 
@@ -3008,45 +3008,47 @@ ref{svm2_img}
  In this case the algorithm won't be able to find optimal solution with
  no instances lying between the support vectors and the decision boundary.
  (Consequentlt, the model is highly sensitive to outliers.
- This type of SVM is called 
+ This type of SVM is called
 \emph on
 hard margin classification.
- )
+)
 \end_layout
 
 \begin_layout Standard
 Now let's look at this from the mathematical point of view.
- As was mentioned before, the decision boundary is defined by the following
- expression: 
+ As was mentioned before, the decision boundary is defined by the
+following
+ expression
+:
 \begin_inset Formula $\overline{w}\overline{x}-b=0$
 \end_inset
 
-, where 
+, where
 \begin_inset Formula $\overline{w}\overline{x}$
 \end_inset
 
- is a 
+ is a
 \emph on
 linear combination
 \emph default
- that looks like this: 
+ that looks like this:
 \begin_inset Formula $w_{1}x_{1}+w_{2}x_{2}+....+w_{D}x_{D}$
 \end_inset
 
 , where D is the number of dimensions.
- The supporting vectors are defined by the following equations 
+ The supporting vectors are defined by the following equations
 \begin_inset Formula $\overline{w}\overline{x}-b=1$
 \end_inset
 
-, and 
+, and
 \begin_inset Formula $\overline{w}\overline{x}-b=-1$
 \end_inset
 
-, these two equations can be reduced to one 
+, these two equations can be reduced to one
 \begin_inset Formula $y_{i}(\overline{w}\overline{x}-b)\geqslant1$
 \end_inset
 
- (as 
+ (as
 \begin_inset Formula $y_{i}=(1or-1)$
 \end_inset
 
@@ -3054,8 +3056,8 @@ linear combination
 \end_layout
 
 \begin_layout Standard
-The model is described by the equation 
-\begin_inset Formula 
+The model is described by the equation
+\begin_inset Formula
 \[
 f(x)=sign(\overline{w}\overline{x}-b).
 \]
@@ -3073,16 +3075,16 @@ Sign returns +1 if the input is positive, and -1 if it is negative, that
 \begin_layout Standard
 
 \series bold
-What is margin: 
+What is margin:
 \series default
 Margin is the distance between the closest instances of two classes.
  Large margin contributes to a better generalization.
- Margin is equal to 
+ Margin is equal to
 \begin_inset Formula $\frac{2}{||\overline{w}|}$
 \end_inset
 
 .
- So the smaller is the Euklidian norm 
+ So the smaller is the Euklidian norm
 \begin_inset Formula $||\overline{w}||$
 \end_inset
 
@@ -3092,13 +3094,13 @@ Margin is the distance between the closest instances of two classes.
 \begin_layout Standard
 
 \series bold
-What we are minimizing: 
+What we are minimizing:
 \series default
 
 \begin_inset Formula $||\overline{w}||=\sqrt{\stackrel[j=1]{D}{\sum}(w^{(j)})^{2}}$
 \end_inset
 
- - this is called 
+ - this is called
 \emph on
 Euclidian norm
 \emph default
@@ -3108,14 +3110,14 @@ Euclidian norm
 \begin_layout Standard
 
 \series bold
-Optimisation Constraints: 
+Optimisation Constraints:
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset Formula $\overline{w}\overline{x_{i}}-b\geqslant1$
 \end_inset
 
- if 
+ if
 \begin_inset Formula $y_{i}=+1$
 \end_inset
 
@@ -3123,7 +3125,7 @@ Optimisation Constraints:
 \begin_inset Formula $\overline{w}\overline{x_{i}}-b\leqslant-1$
 \end_inset
 
- if 
+ if
 \begin_inset Formula $y_{i}=-1$
 \end_inset
 
@@ -3133,26 +3135,26 @@ Optimisation Constraints:
 \begin_layout Standard
 
 \series bold
-Objective: 
+Objective:
 \series default
-Minimize 
+Minimize
 \begin_inset Formula $||\overline{w}||$
 \end_inset
 
- subject to constraint 
+ subject to constraint
 \begin_inset Formula $y_{i}(\overline{w}\overline{x_{i}}-b)\geqslant1$
 \end_inset
 
- for 
+ for
 \begin_inset Formula $i=1,...,N$
 \end_inset
 
 , where N is the number of features.
- Minimizing 
+ Minimizing
 \begin_inset Formula $||\overline{w}||$
 \end_inset
 
- is equal to minimizing 
+ is equal to minimizing
 \begin_inset Formula $\frac{1}{2}||\overline{w}||^{2}$
 \end_inset
 
@@ -3161,7 +3163,7 @@ Minimize
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 min\frac{1}{2}||\overline{w}||^{2}\text{such that }y_{i}(\overline{w}\overline{x_{i}}-b)\geqslant1,i=1,...,N
 \]
@@ -3172,20 +3174,20 @@ min\frac{1}{2}||\overline{w}||^{2}\text{such that }y_{i}(\overline{w}\overline{x
 \end_layout
 
 \begin_layout Standard
-To train the SVM means to find optimal values 
+To train the SVM means to find optimal values
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
- of parameters 
+ of parameters
 \begin_inset Formula $\overline{w}$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $b$
 \end_inset
 
  so that the model makes as accurate predictions as possible.
- The process of finding 
+ The process of finding
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
@@ -3198,11 +3200,11 @@ To train the SVM means to find optimal values
 Dealing with noise:
 \series default
  To introduce the ability of SVM to handle nonlinearly separable data we
- define the 
+ define the
 \emph on
-hinge loss 
+hinge loss
 \emph default
-function: 
+function:
 \begin_inset Formula $max(0,1-y_{i}(\overline{w}\overline{x_{i}}-b)).$
 \end_inset
 
@@ -3214,7 +3216,7 @@ function:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 C||\overline{w}||^{2}+\frac{1}{N}\stackrel[j=1]{N}{\sum}max(0,1-y_{i}(\overline{w}\overline{x_{i}}-b)),\label{eq:svm_loss}
 \end{equation}
@@ -3226,7 +3228,7 @@ C||\overline{w}||^{2}+\frac{1}{N}\stackrel[j=1]{N}{\sum}max(0,1-y_{i}(\overline{
 
 \begin_layout Standard
 where C is the hyperparameter that determines the tradeoff between increasing
- the size of the decision boundary and ensuring that each 
+ the size of the decision boundary and ensuring that each
 \begin_inset Formula $x_{i}$
 \end_inset
 
@@ -3243,12 +3245,12 @@ ng future examples well (generalization).
 \end_layout
 
 \begin_layout Standard
-SVM with the hinge loss function is called 
+SVM with the hinge loss function is called
 \emph on
 softmargin SVM
 \emph default
 , while original formulation that optimizes the Euclidian norm is referred
- to as 
+ to as
 \emph on
 hard-margin SVM.
 \end_layout
@@ -3258,12 +3260,12 @@ hard-margin SVM.
 \series bold
 Soft margin classification:
 \series default
- 
+
 \emph on
-Soft margin classification 
+Soft margin classification
 \emph default
 tries to mitigate the downsides of the hard margin classification by trying
- to find a balance between keeping the 
+ to find a balance between keeping the
 \begin_inset Quotes sld
 \end_inset
 
@@ -3272,7 +3274,7 @@ road
 \end_inset
 
  as large as possible and mitigating the margin outliers (instances that
- lie on the 
+ lie on the
 \begin_inset Quotes sld
 \end_inset
 
@@ -3281,7 +3283,7 @@ road
 \end_inset
 
  or on the opposite side).
- In Scikit-Learn's SVM this balance is controlled by the 
+ In Scikit-Learn's SVM this balance is controlled by the
 \begin_inset Formula $C$
 \end_inset
 
@@ -3300,15 +3302,15 @@ Kernels and dealing with nonlinearity:
  Kernel trick means transfroming the original space to a higher dimensional
  one during the cost function optimisation with the hope that in higher
  dimensional space it will become linearly separable.
- In mathematical language: kernel trick is mapping 
+ In mathematical language: kernel trick is mapping
 \begin_inset Formula $\varphi:\overline{x}\rightarrow\varphi(\overline{x})$
 \end_inset
 
-, where 
+, where
 \begin_inset Formula $\varphi(\overline{x})$
 \end_inset
 
- is vector of higher dimensionality than 
+ is vector of higher dimensionality than
 \begin_inset Formula $\overline{x}.$
 \end_inset
 
@@ -3494,17 +3496,17 @@ Unsupervised Learning
 Unsupervised learning
 \emph default
  operates with the dataset without lables.
- It proves useful during 
+ It proves useful during
 \emph on
 exploratory data analysis (EDA)
 \emph default
- and 
+ and
 \emph on
 dimensionality reduction
 \emph default
 , but otherwise it is not very useful in practical applications, as unlabeled
  dataset means no feedback about how well your model performs.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -3517,7 +3519,7 @@ ity reduction, or during exploratory data analysis.
 \begin_layout Standard
 There are more approaches but we are going to cover only three, that might
  prove useful to our task.
- 
+
 \emph on
 Clustering
 \emph default
@@ -3525,14 +3527,14 @@ Clustering
  instances - clusters.
  It can be used for data analysis, customer segmentation, as a dimensionality
  reduction technique, anomaly detection.
- Clustering might be 
+ Clustering might be
 \emph on
 soft
 \emph default
- and 
+ and
 \emph on
 hard.
- 
+
 \emph default
 Hard clustering means that an instance might belong to only one class.
  In soft clustering instance has a score of belonging to a particular cluster.
@@ -3540,7 +3542,7 @@ Hard clustering means that an instance might belong to only one class.
  (similarity score).
 
 \emph on
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -3553,7 +3555,7 @@ Dimensionality reduction
  the task requires a lot of features.
  A lot of algorithms, such as linear model, SVMs, decision trees, do not
  handle high dimensional data well.
- So called 
+ So called
 \emph on
 curse of dimensionality
 \emph default
@@ -3579,33 +3581,33 @@ Anomaly
 \emph on
 outlier
 \emph default
-) 
+)
 \emph on
 detection
 \emph default
  involves detection of instances strongly deviating from the norm.
- These instances are called 
+ These instances are called
 \emph on
 outliers
 \emph default
- or 
+ or
 \emph on
 anomalies
 \emph default
-, normal instances are referred to as 
+, normal instances are referred to as
 \emph on
 inliers.
- 
+
 \emph default
 It is useful in many applications.
  It can be used as a data preprocessing step - to remove outliers from the
  dataset, which might improve the performance of the resulting model.
- Also, it can be used in 
+ Also, it can be used in
 \emph on
-fraud detection 
+fraud detection
 \emph default
 task and in detection of faulty products in manufacturing facility.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -3617,11 +3619,11 @@ n is closely related task to the anomaly detection.
  The only thing different about them is that the novelty detection makes
  an assumption that the dataset the model was trained on was not contaminated
  by outliers, while the anomaly detection does not make this assumption.
- 
+
 \end_layout
 
 \begin_layout Subsection
-KMeans 
+KMeans
 \end_layout
 
 \begin_layout Standard
@@ -3641,7 +3643,7 @@ Advantages of kmeans
 \series bold
 Limitations of KMeans
 \series default
-: 
+:
 \end_layout
 
 \begin_layout Subsection
@@ -3657,24 +3659,24 @@ Principal components
  First vector goes in the direction of the highest variance.
  Second vector is orthogonal to the first one and goes in the direction
  of the second highest variance, and so on.
- If we were to reduce dimensionality to 
+ If we were to reduce dimensionality to
 \begin_inset Formula $D_{new}<D$
 \end_inset
 
-, we would pick 
+, we would pick
 \begin_inset Formula $D_{new}$
 \end_inset
 
- largest principal components and 
+ largest principal components and
 \emph on
 project
 \emph default
  instances onto them.
- 
+
 \end_layout
 
 \begin_layout Standard
-(Create images) 
+(Create images)
 \end_layout
 
 \begin_layout Standard
@@ -3701,17 +3703,17 @@ Gaussian mixtures is common algorithm that can be used for anomaly detection.
  distributions.
  Any instance lying in the region of low density is an anomaly.
  The density threshold has be specified.
- If one gets too many 
+ If one gets too many
 \emph on
 false positives
 \emph default
  (good products labeles as faulty) them need to decrease the the threshold,
- consequently if we get too many 
+ consequently if we get too many
 \emph on
 false negatives (
 \emph default
 faulty products labeled as good) the threshold has to be increased.
- Gaussian mixtures belong to 
+ Gaussian mixtures belong to
 \emph on
 soft clustering.
 \end_layout
@@ -3737,11 +3739,11 @@ Due to the curse of dimensionality and inherent noise, we cannot load raw
 \end_layout
 
 \begin_layout Standard
-Our goal in this step is to create 
+Our goal in this step is to create
 \emph on
 informative
 \emph default
- features or features with high 
+ features or features with high
 \emph on
 predictive power
 \emph default
@@ -3773,7 +3775,7 @@ Handling Categorical Features
 \begin_layout Standard
 Most of the machine learning algorithms work with numerical features.
  To handle categorical features, such as age or blood group, we can use
- 
+
 \emph on
 one-hot encoding
 \emph default
@@ -3791,34 +3793,34 @@ status open
 
 
 \backslash
-begin{align*}   
+begin{align*}
 \end_layout
 
 \begin_layout Plain Layout
 
-A&=[1,0,0,0] 
+A&=[1,0,0,0]
 \backslash
 
 \backslash
-   
+
 \end_layout
 
 \begin_layout Plain Layout
 
-B&=[0,1,0,0] 
+B&=[0,1,0,0]
 \backslash
 
 \backslash
-   
+
 \end_layout
 
 \begin_layout Plain Layout
 
-AB&=[0,0,1,0] 
+AB&=[0,0,1,0]
 \backslash
 
 \backslash
-   
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3848,7 +3850,7 @@ By doing so we increase the dimensionality of our dataset, but this is a
 
 \begin_layout Standard
 However, if the categorical feature implies some gradation (e.g.
- 
+
 \begin_inset Quotes sld
 \end_inset
 
@@ -3856,7 +3858,7 @@ bad
 \begin_inset Quotes srd
 \end_inset
 
-, 
+,
 \begin_inset Quotes sld
 \end_inset
 
@@ -3864,7 +3866,7 @@ average
 \begin_inset Quotes srd
 \end_inset
 
-, 
+,
 \begin_inset Quotes sld
 \end_inset
 
@@ -3872,7 +3874,7 @@ good
 \begin_inset Quotes srd
 \end_inset
 
-, 
+,
 \begin_inset Quotes sld
 \end_inset
 
@@ -3881,7 +3883,7 @@ excellent
 \end_inset
 
 ) numerating each value would be a right practice.
- Assigning a number to values that have ranking is called 
+ Assigning a number to values that have ranking is called
 \emph on
 ordinal encoding
 \emph default
@@ -3893,16 +3895,16 @@ ordinal encoding
 \emph on
 Binning
 \emph default
- (or 
+ (or
 \emph on
 bucketing
 \emph default
 ) is the process of converting numerical values into multiple binary features,
- called 
+ called
 \emph on
 bins
 \emph default
- or 
+ or
 \emph on
 buckets
 \emph default
@@ -3910,7 +3912,7 @@ buckets
  For example, we could transform patient's age into age range bins: 0 to
  18 years old, 18 to 25 y.o., 25 to 40 years old, and so on.
  This might help an algorithm to learn better on smaller datasets.
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -3923,11 +3925,11 @@ Feature Scaling
 Different ranges of feature values might pose a problem to some machine
  learning algorithms, as they don't handle them very well.
  It might result in slowed training time or worse performance.
- This problem is solved by 
+ This problem is solved by
 \emph on
 normalization
 \emph default
- and 
+ and
 \emph on
 standartization
 \emph default
@@ -3939,25 +3941,25 @@ standartization
 \emph on
 Normalization
 \emph default
- (also known as 
+ (also known as
 \emph on
 min-max scaling
 \emph default
 ) is a technique of converting an actual range of numerical feature values
- into a standard range of values: 
+ into a standard range of values:
 \begin_inset Formula $[-1,1]$
 \end_inset
 
- or 
+ or
 \begin_inset Formula $[0,1]$
 \end_inset
 
  without loosing any information.
- The normalization formula for value 
+ The normalization formula for value
 \begin_inset Formula $x^{(j)}$
 \end_inset
 
- for feature 
+ for feature
 \begin_inset Formula $j$
 \end_inset
 
@@ -3965,22 +3967,22 @@ min-max scaling
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 \bar{x}^{(j)}=\frac{x^{(j)}-min(j)}{max(j)-min(j)},
 \]
 
 \end_inset
 
-where 
+where
 \begin_inset Formula $min(j)$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $max(j)$
 \end_inset
 
- are minimal and maximal values of feature 
+ are minimal and maximal values of feature
 \begin_inset Formula $j$
 \end_inset
 
@@ -3993,21 +3995,21 @@ where
 Standartization
 \emph default
  is a scaling technique that scales numerical data in such a way that after
- scaling it has properties of 
+ scaling it has properties of
 \emph on
 standard normal distribution
 \emph default
  with the mean µ (average value) equal to zero and the standard deviation
- from the mean 
+ from the mean
 \begin_inset Formula $\sigma$
 \end_inset
 
  equal to 1.
- The standartization formula for value 
+ The standartization formula for value
 \begin_inset Formula $x^{(j)}$
 \end_inset
 
- for feature 
+ for feature
 \begin_inset Formula $j$
 \end_inset
 
@@ -4015,7 +4017,7 @@ standard normal distribution
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 \hat{x}^{(j)}=\frac{x^{(j)}-\mu^{(j)}}{\sigma^{(j)}}.
 \]
@@ -4104,13 +4106,13 @@ Test set (15% of the whole dataset)
 \begin_layout Standard
 Training set is the largest of them and is used to train the machine learning
  model.
- Validation and test sets are of the same size and are called 
+ Validation and test sets are of the same size and are called
 \emph on
 hold-out sets.
- 
+
 \emph default
 They are used in subsequent stages of model evaluation.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -4127,7 +4129,7 @@ The reason behind the use of separate training and validation sets is to
 \begin_layout Standard
 
 \series bold
-Underfitting: 
+Underfitting:
 \end_layout
 
 \begin_layout Standard
@@ -4141,32 +4143,32 @@ The workflow is following: we train the model on the training set, then
 \end_layout
 
 \begin_layout Standard
-An alternative to the three sets technique is 
+An alternative to the three sets technique is
 \emph on
 k-fold cross validation
 \emph default
 .
- It works as follows: the dataset is divided into 
+ It works as follows: the dataset is divided into
 \begin_inset Formula $k$
 \end_inset
 
- subsets, or 
+ subsets, or
 \emph on
-folds, 
+folds,
 \emph default
 of equal size.
- One fold is put aside as a validation set while other 
+ One fold is put aside as a validation set while other
 \begin_inset Formula $k-1$
 \end_inset
 
  are used as a training set.
- The model is trained exactly 
+ The model is trained exactly
 \emph on
 k
 \emph default
  times with each fold being used as a validation set only once.
  The only downside is that it is highly computationally expensive with high
- 
+
 \emph on
 k
 \emph default
@@ -4174,7 +4176,7 @@ k
 \end_layout
 
 \begin_layout Standard
-A 
+A
 \emph on
 hyperparameter
 \emph default
@@ -4187,7 +4189,7 @@ hyperparameter
 Add hyperparameter examples from already covered models
 \series default
 ) The process of finding optimal combination of hyperparameters is called
- 
+
 \emph on
 hyperparameter tuning
 \emph default
@@ -4195,7 +4197,7 @@ hyperparameter tuning
  One solution would be manually select hyperparameters and see how they
  influence performance.
  But there is a better way - grid search.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -4232,11 +4234,11 @@ Survival Analysis
 \series bold
 Definition
 \series default
-: 
+:
 \emph on
 Survival analysis,
 \emph default
- also known as 
+ also known as
 \emph on
 time-to-event analysis
 \emph default
@@ -4245,7 +4247,7 @@ time-to-event analysis
  Its name originates from the clinical and biological research, where these
  methods are used mostly to analyze survival time, hence the name.
  These methods, however, found their uses in areas far beyond clinical setting:
- in business to analyze the time until the customer 
+ in business to analyze the time until the customer
 \begin_inset Quotes sld
 \end_inset
 
@@ -4262,17 +4264,17 @@ churns
 \begin_layout Standard
 
 \series bold
-Censoring: 
+Censoring:
 \series default
 The most pronounced feature of these methods is the ability to handle censored
  data.
  Censoring is a situation when the information about the survival time is
  known only partially.
- For example, in the dataset used in this work there are 
+ For example, in the dataset used in this work there are
 \series bold
 (number of patients)
 \series default
- that were still alive until last date of observation 
+ that were still alive until last date of observation
 \series bold
 (date of observation
 \series default
@@ -4341,7 +4343,7 @@ end{figure}
 \end_layout
 
 \begin_layout Standard
-Look at the figure 
+Look at the figure
 \begin_inset ERT
 status open
 
@@ -4360,13 +4362,13 @@ ref{fig1}
  study.
  Cross (X) denotes an occurance of the event, circle (O) corresponds to
  subject's exit from the study.
- 
+
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-Left and right censoring: 
+Left and right censoring:
 \series default
 There are two types of censoring: left and right censoring.
  Right censoring, the most common one, happens when we know that event did
@@ -4398,7 +4400,7 @@ ref{fig1}
 \begin_layout Standard
 
 \series bold
-Censoring assumptions: 
+Censoring assumptions:
 \series default
 They are very similar, however, they have very subtle differences that we
  are going cover in the following paragraphs.
@@ -4426,14 +4428,14 @@ Random an independent censoring assume that those who left the study are
  no different from those who stayed and therefore the percentage of survival
  is the same in both groups with respect to their survival experience.
  They are the same if assumed in one group.
- Censoring is 
+ Censoring is
 \emph on
 independent
 \emph default
  if the censoring percentage in one group differs from the censoring percentage
  in the other group.
  In contrast, if the censoring percentages are the same, the censoring is
- 
+
 \emph on
 random
 \emph default
@@ -4458,19 +4460,19 @@ Relation to machine learning
  learning point of view, survival analysis might be considered a regression,
  but instead of one numerical value we predict a continuous value - survival
  function or hazard function, and, obviously, the dataset is censored.
- 
+
 \emph on
 Survival function (also survivor function)
 \emph default
- 
+
 \begin_inset Formula $S(t)$
 \end_inset
 
- shows us the probability of patient 
+ shows us the probability of patient
 \emph on
 surviving (event doesn't happen)
 \emph default
- at a given time 
+ at a given time
 \begin_inset Formula $t$
 \end_inset
 
@@ -4478,7 +4480,7 @@ surviving (event doesn't happen)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 S(t)=P(T>t).\label{eq:f_surv}
 \end{equation}
@@ -4489,29 +4491,29 @@ S(t)=P(T>t).\label{eq:f_surv}
 \end_layout
 
 \begin_layout Standard
-Where 
+Where
 \begin_inset Formula $t$
 \end_inset
 
- is any specific 
+ is any specific
 \emph on
 time
 \emph default
- of interest, 
+ of interest,
 \begin_inset Formula $T$
 \end_inset
 
  is random variable for subject's survival time.
  For instance, if we want to know if a patient is going to live for more
- than 5 years after kidney transplant, 
+ than 5 years after kidney transplant,
 \begin_inset Formula $t$
 \end_inset
 
- is equal to 5 and we ask whether 
+ is equal to 5 and we ask whether
 \begin_inset Formula $T$
 \end_inset
 
- is greater than 
+ is greater than
 \begin_inset Formula $t$
 \end_inset
 
@@ -4523,27 +4525,27 @@ time
 \end_layout
 
 \begin_layout Standard
-Hazard function 
+Hazard function
 \begin_inset Formula $h(t)$
 \end_inset
 
- tells us the probability of given event 
+ tells us the probability of given event
 \emph on
 happening
 \emph default
- at a given point of time 
+ at a given point of time
 \begin_inset Formula $t,$
 \end_inset
 
- provided the event did not happen before time 
+ provided the event did not happen before time
 \begin_inset Formula $t$
 \end_inset
 
-, and is denoted as 
+, and is denoted as
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 h(t)=\underset{\Delta t\rightarrow o}{lim}\frac{P(t\leq T<t+\Delta t|T\geq t)}{\Delta t}.\label{eq:f_hazard}
 \end{equation}
@@ -4554,33 +4556,33 @@ h(t)=\underset{\Delta t\rightarrow o}{lim}\frac{P(t\leq T<t+\Delta t|T\geq t)}{\
 \end_layout
 
 \begin_layout Standard
-Subject's survival time 
+Subject's survival time
 \begin_inset Formula $T$
 \end_inset
 
- lies between 
+ lies between
 \begin_inset Formula $t$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $t+\Delta t$
 \end_inset
 
- provided that survival time 
+ provided that survival time
 \begin_inset Formula $T$
 \end_inset
 
- is greater or equal than 
+ is greater or equal than
 \begin_inset Formula $t$
 \end_inset
 
 .
- Sometimes, the hazard function is called a 
+ Sometimes, the hazard function is called a
 \emph on
 conditional failure rate.
 
 \emph default
- It is a rate because it is a conditional probability per unit of time 
+ It is a rate because it is a conditional probability per unit of time
 \begin_inset Formula $\Delta t$
 \end_inset
 
@@ -4588,11 +4590,11 @@ conditional failure rate.
  As it is not a probability, but a rate, the scale for this ratio is from
  0 to infinity — depends on the measure of time in days, weeks or years.
  When we consider the limit of the expression as the time interval approaches
- zero we basically get the instantenious potential of failing at time 
+ zero we basically get the instantenious potential of failing at time
 \begin_inset Formula $t$
 \end_inset
 
- per unit time, given survival up to time 
+ per unit time, given survival up to time
 \begin_inset Formula $t$
 \end_inset
 
@@ -4613,11 +4615,11 @@ Cumulative hazard function
 \series bold
 The relationsip between the two
 \series default
-: There is a clear relationship between the survival function 
+: There is a clear relationship between the survival function
 \begin_inset Formula $S(t)$
 \end_inset
 
- and the hazard function 
+ and the hazard function
 \begin_inset Formula $h(t)$
 \end_inset
 
@@ -4626,7 +4628,7 @@ The relationsip between the two
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 S(t)=exp\left[-\intop_{0}^{t}h(u)du\right]\label{eq:haz_to_surv}
 \end{equation}
@@ -4638,12 +4640,12 @@ S(t)=exp\left[-\intop_{0}^{t}h(u)du\right]\label{eq:haz_to_surv}
 
 \begin_layout Standard
 Equation ...
- tells that the survival function 
+ tells that the survival function
 \begin_inset Formula $S(t)$
 \end_inset
 
  is equal to the exponential of the negative integral of the hazard function
- from zero to 
+ from zero to
 \begin_inset Formula $t$
 \end_inset
 
@@ -4651,7 +4653,7 @@ Equation ...
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 h(t)=-\left[\frac{dS(t)/dt}{S(t)}\right]\label{eq:surv_to_haz}
 \end{equation}
@@ -4664,15 +4666,15 @@ h(t)=-\left[\frac{dS(t)/dt}{S(t)}\right]\label{eq:surv_to_haz}
 \begin_layout Standard
 Equation ...
  tells us that the hazard function is equal to the negative derivative of
- the survival function 
+ the survival function
 \begin_inset Formula $S(t)$
 \end_inset
 
- with respect to 
+ with respect to
 \begin_inset Formula $t$
 \end_inset
 
- divided by 
+ divided by
 \begin_inset Formula $S(t).$
 \end_inset
 
@@ -4681,12 +4683,12 @@ Equation ...
 
 \begin_layout Standard
 Considering the facts that survival function describes the probability of
- patient surviving to a given point of time 
+ patient surviving to a given point of time
 \begin_inset Formula $t$
 \end_inset
 
  and hazard function shows us the probability of person dying at any given
- point of time 
+ point of time
 \begin_inset Formula $t$
 \end_inset
 
@@ -4760,7 +4762,7 @@ end{figure}
 \end_layout
 
 \begin_layout Standard
-Take a look at figure 
+Take a look at figure
 \begin_inset ERT
 status open
 
@@ -4774,7 +4776,7 @@ ref{fig2}
 \end_inset
 
 .
- 
+
 \emph on
 a)
 \emph default
@@ -4790,12 +4792,12 @@ a)
 \series bold
 Kaplan-Meier Survival Curves
 \series default
-: 
+:
 \end_layout
 
 \begin_layout Standard
 it is one of the ways to create a survival function.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -4808,7 +4810,7 @@ non-parametric - does not take covariates into account.
 
 The main assumption of the Kaplan-Meier estimator is that censored data
  has the same probability of survival as uncensored data.
- 
+
 \begin_inset Quotes sld
 \end_inset
 
@@ -4844,11 +4846,11 @@ Uno's c_index: Handles high levels of censoring (provide a number) very
 \end_layout
 
 \begin_layout Standard
-Time-dependent Area under the ROC: 
+Time-dependent Area under the ROC:
 \end_layout
 
 \begin_layout Standard
-Time-dependent Brier Score: 
+Time-dependent Brier Score:
 \end_layout
 
 \begin_layout Subsection
@@ -4885,7 +4887,7 @@ Survival Trees
 \end_layout
 
 \begin_layout Subsection
-Random Survival Forests 
+Random Survival Forests
 \end_layout
 
 \begin_layout Standard
@@ -4994,7 +4996,7 @@ Machine learning workflow
 5.
  Fine tune the most promising ones using the validation set until no signiffican
 t improvements are seen.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -5160,7 +5162,7 @@ We can formulate the problem of predicting the survival time after a successful
 
 \begin_layout Standard
 We are predicting survival time, some number, and the obvious choice would
- be to use some 
+ be to use some
 \emph on
 regression
 \emph default
@@ -5169,7 +5171,7 @@ regression
 
 \begin_layout Standard
 1.
- 
+
 \series bold
 The censored dataset
 \series default
@@ -5185,26 +5187,26 @@ provide a number
  we would introduce too much noise to the model, making it highly inaccurate.
  It is impossible to predict a number of days survived with regression methods
  based on dataset where both alive and died patients are mixed.
- 
+
 \end_layout
 
 \begin_layout Standard
 2.
- 
+
 \series bold
 Censoring removal would produce bias
 \series default
- 
+
 \series bold
 and signifficantly reduce the dataset
 \series default
 .
  We could get rid of all censored instances, but that would reduce the dataset
- from 
+ from
 \series bold
 500 000
 \series default
- to about 
+ to about
 \series bold
 120 000
 \series default
@@ -5217,7 +5219,7 @@ and signifficantly reduce the dataset
 
 \begin_layout Standard
 3.
- 
+
 \series bold
 Regression predicts only one single number.
 
@@ -5227,12 +5229,12 @@ Regression predicts only one single number.
 \end_layout
 
 \begin_layout Standard
-Another way of formulating the problem is 
+Another way of formulating the problem is
 \emph on
 classification
 \emph default
 .
- We can theoretically divide the dataset into groups: 
+ We can theoretically divide the dataset into groups:
 \begin_inset Quotes sld
 \end_inset
 
@@ -5240,7 +5242,7 @@ less than one year
 \begin_inset Quotes srd
 \end_inset
 
-, 
+,
 \begin_inset Quotes sld
 \end_inset
 
@@ -5248,7 +5250,7 @@ one to five years
 \begin_inset Quotes srd
 \end_inset
 
-, 
+,
 \begin_inset Quotes sld
 \end_inset
 
@@ -5263,7 +5265,7 @@ five and more
 \end_layout
 
 \begin_layout Standard
-Superior way of problem formulation is in terms of 
+Superior way of problem formulation is in terms of
 \emph on
 survival analysis
 \emph default
@@ -5344,7 +5346,7 @@ KidneyLife
 \end_layout
 
 \begin_layout Subsection
-Frontend 
+Frontend
 \end_layout
 
 \begin_layout Subsection
@@ -5418,7 +5420,7 @@ literal "false"
 Nobel prize in physiology or medicine (2022) Our Scientists.
  Available at: https://www.rockefeller.edu/our-scientists/alexis-carrel/2565-nobel
 -prize/ (Accessed: February 6, 2023).
- 
+
 \end_layout
 
 \begin_layout Bibliography
@@ -5496,7 +5498,7 @@ literal "false"
 NCI Dictionary of Cancer terms (no date) National Cancer Institute.
  Available at: https://www.cancer.gov/publications/dictionaries/cancer-terms/def/a
 bo-blood-group-system (Accessed: March 6, 2023).
- 
+
 \end_layout
 
 \begin_layout Bibliography
