@@ -2889,6 +2889,9 @@ Support vector machine (SVM)
  is a very popular a and powerful machine learning algorithm that can perform
  wide range of tasks including linear and nonlinear classification, regression
  and outlier detection on small- to medium-sized datasets.
+ (
+\series bold
+positive class +1, negative -1)
 \end_layout
 
 \begin_layout Paragraph*
@@ -2898,7 +2901,7 @@ LinearSVM
 \end_layout
 
 \begin_layout Standard
-The concept behind SVM is demonstrated on the figure 
+The concept behind support vector machines is demonstrated on Figure 
 \begin_inset ERT
 status open
 
@@ -2912,20 +2915,20 @@ ref{svm1_img}
 \end_inset
 
 .
- The image consists of two classes (red and blue dots), solid line that
- divides them, called the 
+ The image is comprised of two classes represented by the red and blue dots,
+ divided by solid line termed the 
 \emph on
 dicision boundary
 \emph default
- (
+ 
 \begin_inset Formula $\overline{w}\overline{x}-b=0$
 \end_inset
 
-) and two dashed lines called 
+ with two dashed lines by its sides known as 
 \emph on
 support vectors
 \emph default
- (
+ 
 \begin_inset Formula $\overline{w}\overline{x}-b=1$
 \end_inset
 
@@ -2933,34 +2936,62 @@ support vectors
 \begin_inset Formula $\overline{w}\overline{x}-b=-1$
 \end_inset
 
-).
- Support vectors are defined by the furthest instance of a class.
- (these instances are empasised on the image), they are 
-\begin_inset Quotes sld
+.
+ Support vectors are determined by closest instances of a class to the decision
+ boundary, which can be seen in the figure.
+ 
+\end_layout
+
+\begin_layout Standard
+The distance between the closest instances of two classes is called 
+\emph on
+margin 
+\emph default
+and is equal to 
+\begin_inset Formula $\frac{2}{||\overline{w}||}$
 \end_inset
 
-supported
-\begin_inset Quotes srd
+, where 
+\begin_inset Formula $||\overline{w}||$
 \end_inset
 
- by those instances.
- SVM's objective is to fit the widest possible 
-\begin_inset Quotes sld
+ is the Equclidian norm and 
+\begin_inset Formula $\overline{w}$
 \end_inset
 
-road
-\begin_inset Quotes srd
+ is a parameter vector of the same dimensionality as the feature vector.
+ So the smaller the norm, the larger the margin is.
+ The larger the margin, the better model generalizes.
+ The primary objective of the model is to find the largest margin 
+\begin_inset Formula $\frac{2}{||\overline{w}||}$
 \end_inset
 
-, so to speak, between the classes.
- The fundamental assumption is that classes are 
+, so, to do that we need to 
+\emph on
+minimize 
+\emph default
+the Euclidian norm defined by the expression
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+||\overline{w}||=\sqrt{\stackrel[j=1]{D}{\sum}(w^{(j)})^{2}}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The fundamental assumption is that classes are 
 \emph on
 linearly separable
 \emph default
-, i.e.
- they can be separated by a hyperplane (decision boundary) with no instances
- of one class lying among instances of the opposite class as it is illustrated
- on the figure 
+, implying they can be separated by a hyperplane (decision boundary) with
+ no instances of one class lying among instances of the opposite class.
+ It is illustrated on the figure 
 \begin_inset ERT
 status open
 
@@ -2974,60 +3005,27 @@ ref{svm2_img}
 \end_inset
 
 .
- It means that it is highly sensitive to outliers.
+ In this case the algorithm won't be able to find optimal solution with
+ no instances lying between the support vectors and the decision boundary.
+ (Consequentlt, the model is highly sensitive to outliers.
  This type of SVM is called 
 \emph on
 hard margin classification.
- 
+ )
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Soft margin classification:
-\series default
- 
-\emph on
-Soft margin classification 
-\emph default
-tries to mitigate the downsides of the hard margin classification by trying
- to find a balance between keeping the 
-\begin_inset Quotes sld
-\end_inset
-
-road
-\begin_inset Quotes srd
-\end_inset
-
- as large as possible and mitigating the margin outliers (instances that
- lie on the 
-\begin_inset Quotes sld
-\end_inset
-
-road
-\begin_inset Quotes srd
-\end_inset
-
- or on the opposite side).
- In Scikit-Learn's SVM this balance is controlled by the 
-\begin_inset Formula $C$
-\end_inset
-
- hyperparameter.
- Smaller values lead to wider street and more margin violations, larger
- values lead to narrower street and less margin violations.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-The decision boundary
-\series default
-: 
+Now let's look at this from the mathematical point of view.
+ As was mentioned before, the decision boundary is defined by the following
+ expression: 
 \begin_inset Formula $\overline{w}\overline{x}-b=0$
 \end_inset
 
-, where wx is a 
+, where 
+\begin_inset Formula $\overline{w}\overline{x}$
+\end_inset
+
+ is a 
 \emph on
 linear combination
 \emph default
@@ -3036,14 +3034,7 @@ linear combination
 \end_inset
 
 , where D is the number of dimensions.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-The supporting vectors
-\series default
-: 
+ The supporting vectors are defined by the following equations 
 \begin_inset Formula $\overline{w}\overline{x}-b=1$
 \end_inset
 
@@ -3051,7 +3042,7 @@ The supporting vectors
 \begin_inset Formula $\overline{w}\overline{x}-b=-1$
 \end_inset
 
-, compact way is 
+, these two equations can be reduced to one 
 \begin_inset Formula $y_{i}(\overline{w}\overline{x}-b)\geqslant1$
 \end_inset
 
@@ -3059,19 +3050,24 @@ The supporting vectors
 \begin_inset Formula $y_{i}=(1or-1)$
 \end_inset
 
-)
+).
 \end_layout
 
 \begin_layout Standard
+The model is described by the equation 
+\begin_inset Formula 
+\[
+f(x)=sign(\overline{w}\overline{x}-b).
+\]
 
-\series bold
-The model:
-\series default
- 
-\begin_inset Formula $f(x)=sign(\overline{w}\overline{x}-b$
 \end_inset
 
-)
+
+\end_layout
+
+\begin_layout Standard
+Sign returns +1 if the input is positive, and -1 if it is negative, that
+ corresponds to the positive and negative classes defined earlier.
 \end_layout
 
 \begin_layout Standard
@@ -3124,9 +3120,6 @@ Optimisation Constraints:
 \end_inset
 
 
-\end_layout
-
-\begin_layout Enumerate
 \begin_inset Formula $\overline{w}\overline{x_{i}}-b\leqslant-1$
 \end_inset
 
@@ -3258,6 +3251,43 @@ softmargin SVM
  to as 
 \emph on
 hard-margin SVM.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soft margin classification:
+\series default
+ 
+\emph on
+Soft margin classification 
+\emph default
+tries to mitigate the downsides of the hard margin classification by trying
+ to find a balance between keeping the 
+\begin_inset Quotes sld
+\end_inset
+
+road
+\begin_inset Quotes srd
+\end_inset
+
+ as large as possible and mitigating the margin outliers (instances that
+ lie on the 
+\begin_inset Quotes sld
+\end_inset
+
+road
+\begin_inset Quotes srd
+\end_inset
+
+ or on the opposite side).
+ In Scikit-Learn's SVM this balance is controlled by the 
+\begin_inset Formula $C$
+\end_inset
+
+ hyperparameter.
+ Smaller values lead to wider street and more margin violations, larger
+ values lead to narrower street and less margin violations.
 \end_layout
 
 \begin_layout Standard
@@ -3696,9 +3726,10 @@ Data Preparation
 \end_layout
 
 \begin_layout Standard
-Due to the curse of dimensionality, we cannot load raw data to an algorithm
- and expect it to perform well - most of the times it has way too many features,
- and most of them have very low predictive power.
+Due to the curse of dimensionality and inherent noise, we cannot load raw
+ data to an algorithm and expect it to perform well - most of the times
+ it has way too many features, and most of them have very low predictive
+ power.
  We need to build a dataset first.
  Feature engineering is responsible for transforming raw data into a dataset.
  It is a labor-demanding process that requires creativity and, most inportantly,
@@ -4416,22 +4447,6 @@ random
 \series default
 : distribution of survival times T provides no information about the distributio
 n of censorship times C.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Why survival analysis is important
-\series default
- :
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Where is it used
-\series default
- :
 \end_layout
 
 \begin_layout Standard
