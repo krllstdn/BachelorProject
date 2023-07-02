@@ -2298,7 +2298,7 @@ Given a collection of labeled examples
 
 \begin_inset Formula $\{(\overline{x}_{i},y_{i})\}_{i=1}^{N}$
 \end_inset
-
+// podle me je docela consensu, ze se pouziva `beta` jako vektor parametru a `epsilon` jako vektor chyb
 , create a model
 \begin_inset Formula
 \begin{equation}
@@ -2321,11 +2321,11 @@ of D dimensions of example
 \end_inset
 
 , every feature
-\begin_inset Formula $x_{i}^{(J)}\epsilon\mathbb{R},$
+\begin_inset Formula $x_{i}^{(J)}\in\mathbb{R},$
 \end_inset
 
 
-\begin_inset Formula $y_{i}\epsilon\mathbb{R}$
+\begin_inset Formula $y_{i}\in\mathbb{R}$
 \end_inset
 
  is target value.
@@ -2523,7 +2523,7 @@ normal equation
 \begin_layout Standard
 \begin_inset Formula
 \begin{equation}
-\mathbf{\overline{\mathbf{w}}^{*}=(x^{T}x)x^{T}y}.\label{eq:norm_eq}
+\mathbf{\overline{\mathbf{w}}^{*}=(x^{T}x)^{-1}x^{T}y}.\label{eq:norm_eq} // hele takove chyby nedelej, na tom te u statnic uvari, kdyz si toho nekdo vsimne https://www.youtube.com/watch?v=0tKfzD4rebE&ab_channel=MathGeeks
 \end{equation}
 
 \end_inset
@@ -2853,6 +2853,7 @@ function looks like the following:
 \begin_layout Standard
 \begin_inset Formula
 \begin{equation}
+//fakt?
 LogL_{\bar{w},b}\stackrel{def}{=}ln(L_{\overline{w},b}(\overline{x}))\stackrel[i=1]{N}{\sum}y_{i}lnf_{\bar{w},b}(\overline{x})+(1-y_{i})ln(1-f_{\bar{w},b}(\overline{x})).\label{eq:log_likelihood}
 \end{equation}
 
@@ -3775,7 +3776,7 @@ Handling Categorical Features
 
 \begin_layout Standard
 Most of the machine learning algorithms work with numerical features.
- To handle categorical features, such as age or blood group, we can use
+ To handle categorical features, such as age or blood group, we can use // age mi prijde dost numericky...
 
 \emph on
 one-hot encoding
@@ -3947,7 +3948,7 @@ Normalization
 min-max scaling
 \emph default
 ) is a technique of converting an actual range of numerical feature values
- into a standard range of values:
+ into a standard range of values: // ten vzorecek to ale udela na [0, 1] ne?
 \begin_inset Formula $[-1,1]$
 \end_inset
 
