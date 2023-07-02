@@ -4131,7 +4131,7 @@ The reason behind the use of separate training and validation sets is to
 \begin_layout Standard
 
 \series bold
-Underfitting:
+Underfitting: // tady neco chybi asi
 \end_layout
 
 \begin_layout Standard
@@ -4212,7 +4212,7 @@ Grid search
  want to try and the algorithm will train a model for each possible combination
  of hyperparameters, asses their performance using k-fold cross validation
  and return the best combination of hyperparameters (at least it works that
- way in scikit-learn's implementation GridSearchCV).
+ way in scikit-learn's implementation GridSearchCV). // no takhle to funguje obecne, zavorky vynech
 \end_layout
 
 \begin_layout Standard
