@@ -3321,14 +3321,6 @@ There are multiple kernel functions.
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-SVM regression
-\series default
-:
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -3491,55 +3483,36 @@ Unsupervised Learning
 \begin_layout Standard
 
 \emph on
-Unsupervised learning
+Unsupervised learning 
 \emph default
- operates with the dataset without lables.
- It proves useful during 
+deals with a dataset that does not have labels.
+ It proves useful during
 \emph on
-exploratory data analysis (EDA)
+ exploratory data analysis (EDA), dimensionality reduction, 
 \emph default
- and 
+and
 \emph on
-dimensionality reduction
-\emph default
-, but otherwise it is not very useful in practical applications, as unlabeled
- dataset means no feedback about how well your model performs.
- 
+ anomaly detection.
 \end_layout
 
 \begin_layout Standard
-We will cover this part very briefly, as it is not closely related to our
- task.
- Albeit something will be used as a data preprocessing step, such as dimensional
-ity reduction, or during exploratory data analysis.
+I will cover this part briefly, as it is not closely related to our task.
+ Although, certain elements might be used during exploratory data analysis
+ or a data preprocessing step.
 \end_layout
 
 \begin_layout Standard
-There are more approaches but we are going to cover only three, that might
- prove useful to our task.
- 
-\emph on
-Clustering
-\emph default
- is identifying similar instances and assigning them to groups of similar
- instances - clusters.
- It can be used for data analysis, customer segmentation, as a dimensionality
- reduction technique, anomaly detection.
- Clustering might be 
-\emph on
-soft
-\emph default
- and 
-\emph on
-hard.
- 
-\emph default
-Hard clustering means that an instance might belong to only one class.
- In soft clustering instance has a score of belonging to a particular cluster.
+There are three main branches of supervised learning: clustering, dimensionality
+ reduction, and anomaly detection.
+ Clustering is a method that identifies similar instances and groups them
+ into groups of similar instances - clusters.
+ It has applications in data analysis, customer segmentation, dimensionality
+ reduction, and anomaly detection.
+ Clustering might be either soft, where an instance has a score of belonging
+ to a particular cluster, or hard, where an instance belongs to only one
+ class.
  The score might be the distance from the cluster centroid or an affinity
  (similarity score).
-
-\emph on
  
 \end_layout
 
@@ -3551,72 +3524,61 @@ Dimensionality reduction
  is useful for visualization and for acceleration of learning.
  Datasets often have a lot of redundant data or it might be the case that
  the task requires a lot of features.
- A lot of algorithms, such as linear model, SVMs, decision trees, do not
- handle high dimensional data well.
+ A lot of algorithms, such as linear model, SVMs, decision trees, might
+ have its performance compromised due to high-dimensional data.
  So called 
 \emph on
 curse of dimensionality
 \emph default
  states that high dimensional data can cause slow learning and prevent us
  from getting an optimal model.
- So the reduction of the data dimensionality might be a good idea.
- Its worth noting though that dimensionality reduction algorithm might loose
- some useful information, while decreasing training time.
+ Consequently, the reduction of the data dimensionality might be a good
+ idea.
+ However, it is worth noting that dimensionality reduction algorithm might
+ loose some useful information.
  A lot of modern algorithms, such as neural networks or ensemle algorithms,
- handle high dimensional data very well, so dimensionality reduction techniques
+ handle high dimensional data very well, and dimensionality reduction techniques
  are used less than in the past.
- They are still used however for data visualisation and for cases when we
- need to build an interpretable model and we are limited in number of algorithms
- we can use.
+ However, they are still used for data visualisation and for cases when
+ we need to build an interpretable model, while we are limited in number
+ of algorithms we can use.
 \end_layout
 
 \begin_layout Standard
 
 \emph on
-Anomaly
+Anomaly (outlier) 
 \emph default
- (
-\emph on
-outlier
-\emph default
-) 
-\emph on
-detection
-\emph default
- involves detection of instances strongly deviating from the norm.
+detection involves the detection of instances strongly deviating from the
+ norm.
  These instances are called 
 \emph on
 outliers
 \emph default
- or 
+ or anomalies, while regular ones are referred to as 
 \emph on
-anomalies
+inliers
 \emph default
-, normal instances are referred to as 
-\emph on
-inliers.
- 
-\emph default
-It is useful in many applications.
+.
+ Anomaly detection is useful in many applications.
  It can be used as a data preprocessing step - to remove outliers from the
  dataset, which might improve the performance of the resulting model.
- Also, it can be used in 
+ Also, it can be used in the 
 \emph on
-fraud detection 
+fraud detection
 \emph default
-task and in detection of faulty products in manufacturing facility.
- 
+ task and the detection of faulty products in manufacturing facilities.
 \end_layout
 
 \begin_layout Standard
 
 \emph on
-Novelty detectio
+Novelty detection 
 \emph default
-n is closely related task to the anomaly detection.
- The only thing different about them is that the novelty detection makes
- an assumption that the dataset the model was trained on was not contaminated
- by outliers, while the anomaly detection does not make this assumption.
+is a closely related task to anomaly detection.
+ The only thing different about them is that novelty detection assumes that
+ the dataset, the model was trained on, was not contaminated by outliers,
+ while anomaly detection does not make this assumption.
  
 \end_layout
 
@@ -3651,11 +3613,11 @@ Principal Component Analysis (PCA)
 \begin_layout Standard
 
 \emph on
-Principal components
+Principal components 
 \emph default
- are vectors that define new coordinate system.
- First vector goes in the direction of the highest variance.
- Second vector is orthogonal to the first one and goes in the direction
+are vectors that define a new coordinate system.
+ The first vector goes in the direction of the highest variance.
+ The second vector is orthogonal to the first one and goes in the direction
  of the second highest variance, and so on.
  If we were to reduce dimensionality to 
 \begin_inset Formula $D_{new}<D$
@@ -3678,16 +3640,13 @@ project
 \end_layout
 
 \begin_layout Standard
-It is not adviced to choose the number of dimensions arbitrarily.
- Usually such number of dimensions is chosen that preserves large amount
+It is not advised to choose the number of dimensions arbitrarily.
+ Usually, such a number of dimensions is chosen that preserves a large amount
  of variance (e.g.
- 95%), or in case of visualization we reduce number of dimensions down to
- 2 or 3.
-\end_layout
-
-\begin_layout Standard
-There are different versions of PCA; kernel PCA, Incremental PCA (online
- or batch PCA), Randomized PCA.
+ 95%), or in the case of visualization we reduce the number of dimensions
+ down to 2 or 3.
+ There are different versions of PCA; kernel PCA, Incremental PCA (online
+ or batch PCA), and Randomized PCA.
  But covering those lies beyond this paper.
 \end_layout
 
@@ -3696,28 +3655,17 @@ Gaussian Mixtures
 \end_layout
 
 \begin_layout Standard
-Gaussian mixtures is common algorithm that can be used for anomaly detection.
+Gaussian mixtures is a common algorithm that can be used for anomaly detection.
  Gaussian Mixtures assume that the dataset is generated by several Gaussian
  distributions.
- Any instance lying in the region of low density is an anomaly.
- The density threshold has be specified.
- If one gets too many 
-\emph on
-false positives
-\emph default
- (good products labeles as faulty) them need to decrease the the threshold,
- consequently if we get too many 
-\emph on
-false negatives (
-\emph default
-faulty products labeled as good) the threshold has to be increased.
- Gaussian mixtures belong to 
-\emph on
-soft clustering.
-\end_layout
-
-\begin_layout Standard
-Gaussian mixtures require the number of clusters to be specified.
+ Any instance lying in a region of low density is an anomaly.
+ The density threshold has to be specified.
+ If one gets too many false positives (good products labeled as faulty)
+ they need to decrease the threshold.
+ Consequently, if we get too many false negatives (faulty products labeled
+ as good) the threshold has to be increased.
+ Gaussian mixtures belong to soft clustering.
+ Gaussian mixtures require the number of clusters to be specified.
  It needs to be run a couple of times to avoid suboptimal solutions.
 \end_layout
 
@@ -3726,41 +3674,52 @@ Data Preparation
 \end_layout
 
 \begin_layout Standard
-Due to the curse of dimensionality and inherent noise, we cannot load raw
- data to an algorithm and expect it to perform well - most of the times
- it has way too many features, and most of them have very low predictive
- power.
+Due to factors such as the curse of dimensionality and inherent noise, we
+ cannot load raw data to an algorithm and expect good performance.
+ More often than not, the raw data has too many features, and most of them
+ have very little predictive power.
  We need to build a dataset first.
- Feature engineering is responsible for transforming raw data into a dataset.
- It is a labor-demanding process that requires creativity and, most inportantly,
+ 
+\emph on
+Feature engineering
+\emph default
+ is responsible for transforming raw data into a dataset.
+ It is a labor-demanding process that requires creativity and, most importantly,
  domain knowledge.
+ 
 \end_layout
 
 \begin_layout Standard
-Our goal in this step is to create 
+The objective of this stage is to create 
 \emph on
 informative
 \emph default
- features or features with high 
+ features or features with 
 \emph on
-predictive power
+high predictive power
 \emph default
 .
  For example, in our task of predicting survival time, donor-recipient blood
- group compatibility or recipient age have much higher predictive power
- than donor's or recipient's citizenship.
+ group compatibility or recipient age is likely to have much higher predictive
+ power than the donor's or recipient's citizenship.
+ 
 \end_layout
 
 \begin_layout Standard
-We can create new features with higher predictive power out of those with
- low predictive power.
- For example, calculation of eGFR, metric of kidney function estimated on
- patient's age, gender and serum creatinine level, could potentially give
- more information to the learning algorithm, than all those features separately.
+Moreover, it is possible to create new features with higher predictive power
+ out of those with low predictive power.
+ For example, the calculation of the 
+\emph on
+estimated Glomerular Filtration Rate (eGFR)
+\emph default
+, the metric of kidney function estimated on a patient's age, gender, and
+ serum creatinine level, could potentially give more information to the
+ learning algorithm than all those features separately.
+ 
 \end_layout
 
 \begin_layout Standard
-In the following subsections we will cover some popular feature engineering
+In the following subsections, we will cover some popular feature engineering
  techniques.
 \end_layout
 
@@ -3771,16 +3730,16 @@ Handling Categorical Features
 \end_layout
 
 \begin_layout Standard
-Most of the machine learning algorithms work with numerical features.
- To handle categorical features, such as age or blood group, we can use
- 
+The majority of machine learning algorithms primarily operate with numerical
+ features.
+ To handle categorical features (the ones with only a couple of possible
+ values), such as age group or blood group, we can use 
 \emph on
 one-hot encoding
 \emph default
- to convert it to a several binary ones.
- Let's take blood groups as an example.
- There are four main blood groups: A, B, AB and O.
- We can convert single feature into a vector of four numerical values:
+ to convert it to several binary ones.
+ For instance, consider four primary blood groups: A, B, AB, and O.
+ We can convert a single feature into a vector of four numerical values:
 \end_layout
 
 \begin_layout Standard
@@ -3839,53 +3798,25 @@ end{align*}
 \end_layout
 
 \begin_layout Standard
-By doing so we increase the dimensionality of our dataset, but this is a
- necessary evil, because if we were to assign a number to each group (1
- to A, 2 to B, and so on) in order to reduce amount of dimensions, that
- would imply that there is some gradation between these values, when there
+This technique will increase the dimensionality of the dataset, but this
+ is a trade-off we have to make.
+ Because if we were to assign a number to each group (1 to A, 2 to B, etc.),
+ that would imply gradation or ranking among these categories, while there
  is none.
+ 
 \end_layout
 
 \begin_layout Standard
-However, if the categorical feature implies some gradation (e.g.
- 
-\begin_inset Quotes sld
-\end_inset
-
-bad
-\begin_inset Quotes srd
-\end_inset
-
-, 
-\begin_inset Quotes sld
-\end_inset
-
-average
-\begin_inset Quotes srd
-\end_inset
-
-, 
-\begin_inset Quotes sld
-\end_inset
-
-good
-\begin_inset Quotes srd
-\end_inset
-
-, 
-\begin_inset Quotes sld
-\end_inset
-
-excellent
-\begin_inset Quotes srd
-\end_inset
-
-) numerating each value would be a right practice.
- Assigning a number to values that have ranking is called 
+However, if the categorical feature does suggest some gradation, for example,
+ university marks as ”fail”, ”average”, ”good”, or ”excellent”, an enumeration
+ of each value would be appropriate.
+ This practice of assigning a number to categories that have ranking is
+ called 
 \emph on
 ordinal encoding
 \emph default
 .
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3897,8 +3828,8 @@ Binning
 \emph on
 bucketing
 \emph default
-) is the process of converting numerical values into multiple binary features,
- called 
+) is the technique used for converting numerical values into multiple binary
+ features, called 
 \emph on
 bins
 \emph default
@@ -3907,10 +3838,10 @@ bins
 buckets
 \emph default
 .
- For example, we could transform patient's age into age range bins: 0 to
- 18 years old, 18 to 25 y.o., 25 to 40 years old, and so on.
- This might help an algorithm to learn better on smaller datasets.
- 
+ For example, a patient's age can be transformed into age-range bins: 0
+ to 18 years old, 18 to 25 y.o., 25 to 40 years old, and so on.
+ This technique might help an algorithm to learn better, particularly with
+ smaller datasets.
 \end_layout
 
 \begin_layout Subsection
@@ -3931,7 +3862,7 @@ normalization
 \emph on
 standartization
 \emph default
- techniques.
+ scaling techniques.
 \end_layout
 
 \begin_layout Standard
@@ -3990,7 +3921,7 @@ where
 \begin_layout Standard
 
 \emph on
-Standartization
+Standardization
 \emph default
  is a scaling technique that scales numerical data in such a way that after
  scaling it has properties of 
@@ -4003,7 +3934,7 @@ standard normal distribution
 \end_inset
 
  equal to 1.
- The standartization formula for value 
+ The standardization formula for value 
 \begin_inset Formula $x^{(j)}$
 \end_inset
 
@@ -4026,8 +3957,8 @@ standard normal distribution
 \end_layout
 
 \begin_layout Standard
-Typically, standartization is used for supervised learning (it works better
- with standartization), in case, feature values are formed by standard distribut
+Typically, standardization is used for supervised learning (it works better
+ with standardization), in case, feature values are formed by standard distribut
 ion (bell-curve) or feature has outliers.
  In other cases normalization is preferred.
 \end_layout
@@ -4039,40 +3970,62 @@ Handling missing feature values
 \end_layout
 
 \begin_layout Standard
-Often datasets have missing values and to handle them we have one of the
- following options:
+Datasets frequently have missing values, and to handle them, we have one
+ of the following options:
 \end_layout
 
-\begin_layout Itemize
-Dropping rows with missing values.
- The most obvious and bruteforce way of dealing with them.
- If there are not so much missing values, or we have a dataset that is large
- enough, the usage of this technique would be appropriate.
+\begin_layout Enumerate
+
+\series bold
+Removal of rows with missing values
+\series default
+.
+ The most direct and straightforward approach to managing missing data.
+ If missing values are sparse or the dataset is large enough, the usage
+ of this technique would be appropriate.
 \end_layout
 
-\begin_layout Itemize
-Dropping a feature.
- If there are way too many missing values compared to the size of the dataset,
- it is better to remove the feature altogether.
+\begin_layout Enumerate
+
+\series bold
+Feature removal
+\series default
+.
+ If the dataset has an excessive amount of missing values relative to its
+ size, it is better to remove the feature altogether.
 \end_layout
 
-\begin_layout Itemize
-Regression Imputation.
+\begin_layout Enumerate
+
+\series bold
+Regression imputation
+\series default
+.
  Imputation means filling in the missing value.
  Using machine learning regression algorithm to predict missing feature
  values.
 \end_layout
 
-\begin_layout Itemize
-Mean/median impitation.
- Filling missing values with mean or median.
+\begin_layout Enumerate
+
+\series bold
+Mean/median imputation
+\series default
+.
+ This method involves filling missing feature values with their mean or
+ median value.
 \end_layout
 
-\begin_layout Itemize
-Constant value imputation.
- Filling missing values with clearly too high or too low value for the algorithm
- to understand that it is an outlier and this particular value should not
- be considered, while other features might be.
+\begin_layout Enumerate
+
+\series bold
+Constant value imputation
+\series default
+.
+ This technique entails filling missing values with clearly too-high or
+ too-low values.
+ The motivation is for the algorithm to discern the value as an outlier
+ while considering other features.
  This method is not recommended, as it can introduce bias.
 \end_layout
 
@@ -4090,137 +4043,93 @@ It is a common practice to divide the data set into three parts
 \end_layout
 
 \begin_layout Itemize
-Training set (about 70% of the whole dataset)
+Training set (constitutes about 70% of the dataset)
 \end_layout
 
 \begin_layout Itemize
-Validation set (15% of the whole dataset)
+Validation set (15% of the dataset)
 \end_layout
 
 \begin_layout Itemize
-Test set (15% of the whole dataset)
+Test set (15% of the dataset)
 \end_layout
 
 \begin_layout Standard
-Training set is the largest of them and is used to train the machine learning
- model.
- Validation and test sets are of the same size and are called 
-\emph on
-hold-out sets.
- 
-\emph default
-They are used in subsequent stages of model evaluation.
- 
+The training set, being the largest of them, is employed to train the machine
+ learning model.
+ Validation and test sets, which are of identical sizes and often called
+ hold-out sets, are used in subsequent stages of model evaluation.
 \end_layout
 
 \begin_layout Standard
-The reason behind the use of separate training and validation sets is to
- prevent overfitting - situation when the model performs well on training
+The rationale behind the use of separate training and validation sets is
+ to prevent overfitting - a situation when the model performs well on training
  data but poorly on unseen data.
- Overfitting might occur if the model is tested and evaluated on the same
- dataset, and as a result it memorizes the training examples and fails to
- make accurate predictions on unseen data.
- To mitigate this we use the validation set to fine-tune the model and the
- test set to asess its performance before deploying it to production.
+ Overfitting can occur if the model is tested and evaluated on the same
+ dataset.
+ As a result, the model may memorize the training examples and fail to make
+ accurate predictions on unseen data.
+ To alleviate this, we use the validation set to fine-tune the model and
+ the test set to assess its performance before deploying it to production.
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Underfitting: 
+A typical workflow involves training the model on the training set, validation
+ on the validation set using the selected metric, then adjusting the model's
+ parameters to improve its performance.
+ This process is repeated until no substantial improvement is observed.
+ Finally, the model's performance is assessed on the test set.
+ This iterative process is referred to as hyperparameter tuning.
 \end_layout
 
 \begin_layout Standard
-The workflow is following: we train the model on the training set, then
- validate it on the validation set using the chosen metric, then adjust
- the model's parameters so that it perfoms better.
- This process is repeated until the significant improvement is no longer
- observed.
- Lastly, we asses model's perfomance on the test set.
- This iterative process is called hyperparameter tuning.
+An alternative to the three-sets technique is k-fold cross-validation.
+ This technique involves splitting the dataset into k subsets, or folds,
+ of equal size.
+ One fold is used as a validation set, while the other k-1 folds constitute
+ a training set.
+ The model is trained exactly k times, with each fold serving as a validation
+ set only once.
+ The only drawback is that it is highly computationally expensive, particularly
+ with a high k value and larger datasets, as the model will be trained k
+ times.
 \end_layout
 
 \begin_layout Standard
-An alternative to the three sets technique is 
-\emph on
-k-fold cross validation
-\emph default
-.
- It works as follows: the dataset is divided into 
-\begin_inset Formula $k$
-\end_inset
-
- subsets, or 
-\emph on
-folds, 
-\emph default
-of equal size.
- One fold is put aside as a validation set while other 
-\begin_inset Formula $k-1$
-\end_inset
-
- are used as a training set.
- The model is trained exactly 
-\emph on
-k
-\emph default
- times with each fold being used as a validation set only once.
- The only downside is that it is highly computationally expensive with high
- 
-\emph on
-k
-\emph default
- value and larger datasets as the model will be trained multiple times.
+A hyperparameter is a parameter specified before model training, in contrast
+ to regular parameters, that are calculated during training.
+ Each model possesses a different set of hyperparameters, and they profoundly
+ influence the model's performance.
+ For example, the number of trees in Random Forest or the C hyperparameter
+ in Support Vector Machines.
+ The task of finding the optimal combination of hyperparameters is called
+ hyperparameter tuning.
+ One strategy would be manually select hyperparameters and observe their
+ impact on performance.
+ However, a better way is to utilize grid search.
 \end_layout
 
 \begin_layout Standard
-A 
-\emph on
-hyperparameter
-\emph default
- is a parameter that is set up before model training (regular model parameters
- are calculated during training).
- Each model has a different set of hyperparameters and they profoundly influence
- model's performance.
- (
-\series bold
-Add hyperparameter examples from already covered models
-\series default
-) The process of finding optimal combination of hyperparameters is called
- 
-\emph on
-hyperparameter tuning
-\emph default
-.
- One solution would be manually select hyperparameters and see how they
- influence performance.
- But there is a better way - grid search.
- 
+Grid search is a standard way of performing hyperparameter fine-tuning.
+ It includes defining hyperparameters to experiment with, providing values
+ for each hyperparameter to be tested, and training a model for each possible
+ combination of hyperparameters.
+ The performance of each individual model is assessed using k-fold cross-validat
+ion, and the best combination of hyperparameters is selected.
+ This approach is used in sci-kit-learn's implementation - GridSearchCV.
 \end_layout
 
 \begin_layout Standard
-
-\emph on
-Grid search
-\emph default
- is a traditional way of perfroming the hyperparameter fine-tuning.
- We define hyperparameters we want to experiment with, provide values we
- want to try and the algorithm will train a model for each possible combination
- of hyperparameters, asses their performance using k-fold cross validation
- and return the best combination of hyperparameters (at least it works that
- way in scikit-learn's implementation GridSearchCV).
-\end_layout
-
-\begin_layout Standard
-Grid search is great when we try out relatively few hyperparameter combinations,
- but when there are a lot of values it is preferrable to use RandomizedSearch
- (RandomizedSearchCV in scikit-learn) instead.
- It works more or less the same way as grid search, does but instead of
- trying every possible combination from provided values it tries only given
- number of hyperparameter combinations selected randomly.
- Main reason it is better than the grid search is that it gives you more
- control over how much computational power and time you want to spend on
- the hyperparameter tuning.
+Grid search proves to be effective when dealing with relatively few hyperparamet
+er combinations.
+ However, with larger number of hyperparameter combinations, it is advisable
+ to use RandomizedSearch (RandomizedSearchCV in sci-kit-learn).
+ This method is very similar to grid search, but instead of trying every
+ possible combination of provided values, it tests only a specified number
+ of randomly selected hyperparameter combinations.
+ This method's primary advantage over grid search lies in more control over
+ computational power and the time one wants to dedicate to hyperparameter
+ tuning.
 \end_layout
 
 \begin_layout Section
@@ -5153,18 +5062,20 @@ Problem Formulation
 \end_layout
 
 \begin_layout Standard
-We can formulate the problem of predicting the survival time after a successful
- kidney transplant in three ways: as a regression, classification and survival
- analysis.
+Predicting the survival time after a successful kidney transplant can be
+ approached in three ways: as a regression problem, classification problem,
+ or through survival analysis.
+ 
 \end_layout
 
 \begin_layout Standard
-We are predicting survival time, some number, and the obvious choice would
- be to use some 
+A 
 \emph on
 regression
 \emph default
- model, but it is not the best choice for the following reasons:
+ model may seem an intuitive choice, as we want to predict a numerical value
+ – the survival time.
+ But it is not the best option for the following reasons:
 \end_layout
 
 \begin_layout Standard
@@ -5174,17 +5085,13 @@ regression
 The censored dataset
 \series default
 .
- The dataset has a high level of censoring – (
-\series bold
-provide a number
-\series default
-).
- The dataset contains a number of days survived and whether the person is
- alive or not.
- If we were to consider people who are still alive with the ones who died
- we would introduce too much noise to the model, making it highly inaccurate.
- It is impossible to predict a number of days survived with regression methods
- based on dataset where both alive and died patients are mixed.
+ The dataset has a high level of censoring – 76%.
+ The dataset contains the number of days survived, along with the survival
+ status.
+ Including both living and deceased patients would introduce too much noise
+ to the model, making it highly inaccurate.
+ It is impossible to predict the number of days survived with regression
+ methods based on a dataset comprised of both living and deceased patients.
  
 \end_layout
 
@@ -5199,20 +5106,13 @@ Censoring removal would produce bias
 and signifficantly reduce the dataset
 \series default
 .
- We could get rid of all censored instances, but that would reduce the dataset
- from 
-\series bold
-500 000
-\series default
- to about 
-\series bold
-120 000
-\series default
- instances and introduce signifficant bias: we would only consider people
- who passed away, and most of them have done so before the indroduction
- of modern techniques of treating the rejection.
- So the model created from such a dataset would be highly biased and therefore
- inaccurate.
+ We could remove all censored instances, but that would reduce the dataset
+ from 500 000 to roughly 120 000 examples.
+ It would also introduce significant bias, as the dataset would contain
+ only deceased patients, and most of them passed away before the introduction
+ of modern techniques for treating the rejection.
+ As a result, the model created from such a dataset would be highly inaccurate.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5222,8 +5122,9 @@ and signifficantly reduce the dataset
 Regression predicts only one single number.
 
 \series default
- This is a problem, because on longer time frames there are too much factors
- that we can't account for this would produce incorrect predictions.
+ It poses a problem, especially over extended time frames, as there are
+ too many factors that we can’t account for, leading to incorrect predictions.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5232,48 +5133,24 @@ Another way of formulating the problem is
 classification
 \emph default
 .
- We can theoretically divide the dataset into groups: 
-\begin_inset Quotes sld
-\end_inset
-
-less than one year
-\begin_inset Quotes srd
-\end_inset
-
-, 
-\begin_inset Quotes sld
-\end_inset
-
-one to five years
-\begin_inset Quotes srd
-\end_inset
-
-, 
-\begin_inset Quotes sld
-\end_inset
-
-five and more
-\begin_inset Quotes srd
-\end_inset
-
-, or even more groups, as it was done by ....
- et al., and train some classifier based on them.
- And again we would face problems of censoring and bias mentioned above.
+ We can theoretically divide the dataset into groups: ”less than one year”,
+ ”one to five years”, ”five and more”, or even more groups and train a classifie
+r based on them, as it was done by ....
+ et al..
+ And again, we would face problems of censoring and bias mentioned above.
  So the classification is also not the best option.
+ 
 \end_layout
 
 \begin_layout Standard
-Superior way of problem formulation is in terms of 
+A more appropriate way of problem formulation is in terms of 
 \emph on
 survival analysis
 \emph default
 .
- Survival analysis methods handle censoring and provide better form of predictio
-n: survival function or hazard function, i.e.
- survival probability or failing rate at each moment in time.
- (
-\series bold
-add more reasons why it is superior way)
+ Survival analysis methods handle censoring and provide a better form of
+ prediction: survival function or hazard function, which represents survival
+ probability or the failure rate at each moment in time, respectively.
 \end_layout
 
 \begin_layout Section
