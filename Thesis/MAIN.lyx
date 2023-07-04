@@ -2009,12 +2009,12 @@ Machine Learning Background
 
 \begin_layout Standard
 Machine learning is a subfield of computer science that consists of building
- algorithms that are capable of processing large amounts of data, finding
- patterns and making some actions such as predictions or even generating
- new data.
- Machine learning is an intersection of many fields of science such as statistic
-s, theory of probability, linear algebra, calculus and, of cource, computer
- science.
+ algorithms capable of processing large amounts of data, finding patterns,
+ and performing actions such as predictions or generating new data.
+ Machine learning is an intersection of many fields of science, such as
+ statistics, the theory of probability, linear algebra, calculus, and, of
+ course, computer science.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2028,99 +2028,79 @@ literal "false"
 \end_inset
 
  It can help us learn.
- We can extract previously unknown correclations from the data and create
+ We can extract previously unknown correlations from the data and create
  knowledge.
- It might have less error in decision making than humans.
+ It might have fewer errors in decision-making than humans.
 \end_layout
 
 \begin_layout Standard
-Based on the problem and, therefore, on our approach to building a dataset(t
-\series bold
-ell somewhere the difference between the dataset and raw data
-\series default
-) and the model, machine learning can be divided into four sub-fields: supervise
-d, semi-supervised, unsupervised and reinforcement learning.
- Supervised learning means that data are labeled and we want to predict
- labels from the unlabeled data.
- (
-\series bold
-explain labeled data
-\series default
-!) Unsupervised learning deals with unlabeled data.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Semi-supervised learning:
-\series default
- means that only a part of our data is labeled.
+Based on the problem and, therefore, on our approach to building a dataset
+ and the model, machine learning can be divided into four sub-fields: 
+\emph on
+supervised
+\emph default
+, 
+\emph on
+semi-supervised
+\emph default
+, 
+\emph on
+unsupervised
+\emph default
+, and 
+\emph on
+reinforcement learning
+\emph default
+.
  
+\emph on
+Supervised learning
+\emph default
+ means that data are labeled, and we want to predict labels from the unlabeled
+ data.
+ What is labeled data is explained in the following section dedicated to
+ supervised learning.
+ Unsupervised learning deals with unlabeled data.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Semi-supervised
+\emph default
+ learning deals with partially labeled data, and we need to label the rest
+ of them either manually, or using techniques such as 
+\emph on
+clustering
+\emph default
+.
 \end_layout
 
 \begin_layout Standard
 In 
-\series bold
-reinforcement learning:
-\series default
- we create an environment, set up rewards for doing certain things and punishmen
-t for other things, and let the machine (actor) to perform actions that
- produce the highest reward.
- A separate subsection is dedicated to each subfield.
+\emph on
+reinforcement learning
+\emph default
+, we create an environment, set up rewards for performing certain actions
+ and punishment for others, and let the machine (actor) perform actions
+ that produce the highest reward.
 \end_layout
 
 \begin_layout Standard
 Every field suffers from human errors, and medicine is no exception.
- (people get tired, wrong institutions, etc...) According to Makary et.
- al., medical error is the third death cause in the United States 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-11"
-literal "false"
-
-\end_inset
-
-.
  Machine learning also makes mistakes, but if we manage to get at least
- 1% less error than human error this will be a success.
- Human body is a complex system, where other humans (doctors) can't possibly
- comprehend everything that is going on and how it is related to each other.
- Also it can help us gain insights from data that were already accumulated
- and possibly make some discoveries.
+ 1% less error than human error, this will be a success.
+ The human body is a complex system it is very hard to comprehend everything
+ happening and how it relates to each other.
+ Also, it can help us gain insights from accumulated data and make discoveries.
 \end_layout
 
 \begin_layout Standard
-It is important to note that machine learning is rather marketing term.
- Machines can't learn.
- If we were to at least slightly distort inputs, machine wouldn't be able
- to 
-\begin_inset Quotes sld
-\end_inset
-
-learn
-\begin_inset Quotes srd
-\end_inset
-
-.
- This is very different from learning in humans and animals.
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-10"
-literal "false"
-
-\end_inset
-
- It is debatable that statistics and mathematics can really produce consciousnes
-s.
- Luckily the debate lies beyond this paper.
-\end_layout
-
-\begin_layout Standard
-In this chapter we will cover all theoretical background that might prove
- useful for solving our problem, this includes classical machine learning,
- deep learning, statistical survival analysis, basic steps that are required
- to create machine learining systems and how to preprocess data.
- We will begin by exploring what is supervised learning.
+In this chapter, we will cover all theoretical backgrounds that might prove
+ useful for solving our problem, including classical machine learning, deep
+ learning, statistical survival analysis, basic steps that are required
+ to create machine learning systems, and how to preprocess data.
+ We will begin by exploring supervised learning.
 \end_layout
 
 \begin_layout Section
@@ -2536,7 +2516,7 @@ Where
 \begin_inset Formula $x^{T}$
 \end_inset
 
-means transposed feature vector 
+means transposed feature matrix 
 \begin_inset Formula $x$
 \end_inset
 
