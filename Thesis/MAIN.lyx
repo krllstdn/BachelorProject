@@ -2871,12 +2871,12 @@ f(x)=sign(\overline{w}\overline{x}-b).
 \end_layout
 
 \begin_layout Standard
-Function 
+The function 
 \begin_inset Formula $sign$
 \end_inset
 
  returns +1 if the input is positive, and -1 if it is negative.
- To train the SVM means to find optimal values 
+ Train the SVM means to find optimal values 
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
@@ -3161,7 +3161,7 @@ These two equations can be reduced to one
 \end_layout
 
 \begin_layout Standard
-The optimisation problem we want to solve is the following: Minimize 
+The optimization problem we want to solve is the following: Minimize 
 \begin_inset Formula $||\overline{w}||$
 \end_inset
 
@@ -3230,7 +3230,7 @@ C||\overline{w}||^{2}+\frac{1}{N}\stackrel[j=1]{N}{\sum}max(0,1-y_{i}(\overline{
 \end_layout
 
 \begin_layout Standard
-where C is the hyper parameter that determines the tradeoff between increasing
+where C is the hyperparameter that determines the tradeoff between increasing
  the size of the decision boundary and ensuring that each 
 \begin_inset Formula $x_{i}$
 \end_inset
@@ -3295,7 +3295,7 @@ We can adapt SVM to work with nonlinearly separable datasets by applying
 \begin_inset Formula $\varphi(\overline{x})$
 \end_inset
 
- is vector of higher dimensionality than 
+ is a vector of higher dimensionality than 
 \begin_inset Formula $\overline{x}.$
 \end_inset
 
