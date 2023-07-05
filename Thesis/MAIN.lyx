@@ -4669,74 +4669,6 @@ useless with large amounts of data
 \end_layout
 
 \begin_layout Section
-Deep Learning
-\end_layout
-
-\begin_layout Standard
-neuron
-\end_layout
-
-\begin_layout Standard
-neuron's parts
-\end_layout
-
-\begin_layout Standard
-neuron activation function
-\end_layout
-
-\begin_layout Standard
-layers
-\end_layout
-
-\begin_layout Standard
-dropout
-\end_layout
-
-\begin_layout Standard
-backpropagation
-\end_layout
-
-\begin_layout Subsection
-gradient descent
-\end_layout
-
-\begin_layout Standard
-stochastic gradient descent
-\end_layout
-
-\begin_layout Standard
-feed forward
-\end_layout
-
-\begin_layout Standard
-different architectures
-\end_layout
-
-\begin_layout Standard
-transformers
-\end_layout
-
-\begin_layout Standard
-convolutional neural networks
-\end_layout
-
-\begin_layout Standard
-natural language processing
-\end_layout
-
-\begin_layout Standard
-neural networks for survival estimation
-\end_layout
-
-\begin_layout Standard
-survival neural networks
-\end_layout
-
-\begin_layout Standard
-deepSurv
-\end_layout
-
-\begin_layout Section
 Machine Learning Workflow
 \end_layout
 
@@ -4786,18 +4718,6 @@ t improvements are seen.
 \begin_layout Standard
 7.
  Deploy
-\end_layout
-
-\begin_layout Section
-Challenges of machine learning
-\end_layout
-
-\begin_layout Standard
-Poor quality data
-\end_layout
-
-\begin_layout Standard
-Over
 \end_layout
 
 \begin_layout Section
