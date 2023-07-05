@@ -1009,7 +1009,7 @@ The history of kidney transplantation.
 \end_layout
 
 \begin_layout Subsection
-Early animal experiments
+Early Animal Experiments
 \end_layout
 
 \begin_layout Standard
@@ -1072,7 +1072,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Early human transplantation
+Early Human Transplantation
 \end_layout
 
 \begin_layout Standard
@@ -1184,7 +1184,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-First successes
+First Successes
 \end_layout
 
 \begin_layout Standard
@@ -1255,7 +1255,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Attempts in immunosuppression
+Attempts in Immunosuppression
 \end_layout
 
 \begin_layout Standard
@@ -1332,7 +1332,7 @@ Gertrude Elion and George Hitchings provided Roy Calne with the 6-MP derivative
 \end_layout
 
 \begin_layout Subsection
-Gloom then revolution
+Gloom Then Revolution
 \end_layout
 
 \begin_layout Standard
@@ -1422,7 +1422,7 @@ As the organ preservation for more than 6 hours was achieved in mid 60s
 \end_layout
 
 \begin_layout Subsection
-Tissue typing
+Tissue Typing
 \end_layout
 
 \begin_layout Standard
@@ -1450,7 +1450,7 @@ However, when in 1970 Terasaki reviewed his large database of cadaver renal
 \end_layout
 
 \begin_layout Subsection
-Antilymphocyte serum
+Antilymphocyte Serum
 \end_layout
 
 \begin_layout Standard
@@ -1621,7 +1621,7 @@ The process of transplantation inevitably includes termination of blood
 \end_layout
 
 \begin_layout Paragraph*
-Damage signals
+Damage Signals
 \end_layout
 
 \begin_layout Standard
@@ -1706,7 +1706,7 @@ auto-antigens
 \end_layout
 
 \begin_layout Subsubsection*
-ABO blood group antigens
+ABO Blood Group Antigens
 \end_layout
 
 \begin_layout Standard
@@ -1973,7 +1973,7 @@ Acute AMBR is rarely seen in patients withour prior sensitization and is
 \end_layout
 
 \begin_layout Subsection
-Transplant tolerance
+Transplant Tolerance
 \end_layout
 
 \begin_layout Standard
@@ -1985,7 +1985,7 @@ c non-responsiveness (tolerance) to an allograft.
 \end_layout
 
 \begin_layout Subsection
-Factors Influencing rejection beyond the graft - microbiome
+Factors Influencing Rejection Beyond the Graft - Microbiome
 \end_layout
 
 \begin_layout Standard
@@ -2261,13 +2261,10 @@ Linear Regression
 \begin_layout Standard
 Linear regression is a popular regression learning algorithm.
  The model it produces is a linear combination of all features.
- (
-\series bold
-show what is a linear combinarion)
 \end_layout
 
 \begin_layout Standard
-The problem we are trying to solve is formulated as follows:
+The problem formulation we are trying to solve is as follows:
 \series bold
  
 \series default
@@ -2308,12 +2305,12 @@ of D dimensions of example
 \begin_inset Formula $y_{i}\epsilon\mathbb{R}$
 \end_inset
 
- is target value.
+ is the target value.
  
 \begin_inset Formula $\overline{w}$
 \end_inset
 
- is D-dimensional vector of parameters and 
+ is a D-dimensional vector of parameters and 
 \begin_inset Formula $b\epsilon\mathbb{R}$
 \end_inset
 
@@ -2351,9 +2348,8 @@ To train the linear regression means to find optimal values
 \end_inset
 
  so that the model makes as accurate predictions as possible.
- In graphical terms it means finding such a hyperplane that fits datapoints
- from the training set as good, as possible, as it can be seen on the image
- 
+ In graphical terms, it means finding such a hyperplane that fits data points
+ from the training set as well as possible, as can be seen in image 
 \begin_inset ERT
 status open
 
@@ -2445,7 +2441,7 @@ To find optimal parameters we need to minimize the following expression:
 \end_layout
 
 \begin_layout Standard
-It iscalled 
+It is called 
 \emph on
 mean squared error (MSE), 
 \emph default
@@ -2474,10 +2470,8 @@ evaluates individual predictions
 .
  
 \emph default
-Loss function is a measure of how well a model performs overall (MSE) or
- for any individual prediction (square error loss).
-
-\emph on
+The loss function measures model's overall performance (MSE) or evaluates
+ each prediction (square error loss).
  
 \end_layout
 
@@ -2491,9 +2485,9 @@ closed-form solution
 \end_inset
 
 .
- Closed-form solution means simple algrebraic expression that gives the
+ A closed-form solution is a simple algebraic expression that gives the
  result directly.
- In case of linear regression it is the 
+ In the case of linear regression, it is the 
 \emph on
 normal equation
 \emph default
@@ -2524,9 +2518,9 @@ means transposed feature matrix
 \end_layout
 
 \begin_layout Standard
-We could select other loss function, but according to Andriy Burkov it would
- be a different algorithm.
- For example we could take the absolute difference of 
+We could select another loss function, but according to Andriy Burkov, it
+ would be a different algorithm.
+ For example, we could take the absolute difference between 
 \begin_inset Formula $f(x_{i})$
 \end_inset
 
@@ -2535,18 +2529,17 @@ We could select other loss function, but according to Andriy Burkov it would
 \end_inset
 
 .
- But that would create us problems as the derivative of absolute value is
- not continuous, and therefore the function is not smooth.
- Non-smooth functions create unnecessary complications during the optimisation
+ But that would create problems as the derivative of absolute value is not
+ continuous, and therefore the function is not smooth.
+ Non-smooth functions create unnecessary complications during the optimization
  process.
  
 \end_layout
 
 \begin_layout Standard
 Linear models are usually resilient to overfitting because they are simple.
- Overfitting is a situation when the model learns the intricacies of the
- training dataset so well that it remembers actual values rather than learn
- underlying pattern.
+ Overfitting is when the model learns the intricacies of the training dataset
+ so well that it remembers actual values rather than learn underlying pattern.
  Overfit model is unable to make accurate predictions when confronted with
  the unseen data.
  More on overfitting in section 3.6.
@@ -2559,30 +2552,24 @@ Logistic Regression
 \begin_layout Standard
 
 \emph on
-Logistic regression
+Logistic regression 
 \emph default
- is a binary classifier that estimates the probability of an example belonging
+is a binary classifier that estimates the probability of an example belonging
  to a particular class.
- If the predicted probability of example belonging to a certain class is
- greater than 50% then the model concludes that it does belong to the class
- (referred to as positive class and is labeled as 
-\begin_inset Formula $1$
-\end_inset
-
-), otherwise it predicts that example does not belong to that class (but
- belongs to the negative class, labeled 
-\begin_inset Formula $0$
-\end_inset
-
-).
+ If the predicted probability of the instance belonging to a class is greater
+ than 50%, then the model concludes that it does belong to the class (referred
+ to as positive class and labeled as 1).
+ Otherwise, it predicts that the example does not belong to that class (but
+ belongs to the negative class, labeled 0).
  Logistic regression comes from statistics, where its mathematical formulation
- is indeed similar to regression.
- Multiclass classification is implemented in softmax regression, multiclass
- vartiant of logistic regression.
+ is similar to a regression, hence the name.
+ Multiclass classification is available in softmax regression, a multiclass
+ variant of logistic regression.
+ 
 \end_layout
 
 \begin_layout Standard
-As with the linear regression, in logistic regression we want to model 
+As with linear regression, in logistic regression, we want to model 
 \begin_inset Formula $y$
 \end_inset
 
@@ -2590,10 +2577,8 @@ As with the linear regression, in logistic regression we want to model
 \begin_inset Formula $\overline{x}$
 \end_inset
 
-, but in this case it is not that straightforward.
- (
-\series bold
-think how to make this paragraph better)
+, but in this case, it is not that straightforward.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2612,8 +2597,7 @@ f_{\bar{w},b}(\overline{x})\stackrel{def}{=}\frac{1}{1+e^{-(wx+b)}}.\label{eq:lo
 \end_layout
 
 \begin_layout Standard
-Just like with the linear regression, our task is to find optimal values
- 
+Similar to linear regression, our task is to find optimal values 
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
@@ -2643,7 +2627,7 @@ noprefix "false"
 
 \end_inset
 
-, in other words we trained the model, we can apply the model 
+, in other words, we trained the model, we can apply the model 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:log_reg"
@@ -2671,15 +2655,13 @@ noprefix "false"
 \begin_inset Formula $y_{i}$
 \end_inset
 
- is a positive class
-\series bold
- 
-\series default
-the probability of being a positive class is given by 
+ is a positive class, the probability of being a positive class is given
+ by 
 \begin_inset Formula $p$
 \end_inset
 
-, if it is negative, the probability is given by 
+.
+ If it is negative, the probability is given by 
 \begin_inset Formula $1-p$
 \end_inset
 
@@ -2747,11 +2729,11 @@ end{figure}
 \end_layout
 
 \begin_layout Standard
-By looking at the graph we can see that indeed if the 
+In the figure we can see that if the 
 \begin_inset Formula $y$
 \end_inset
 
- has the value less than 
+ has a value less than 
 \begin_inset Formula $\frac{1}{2}$
 \end_inset
 
@@ -2759,17 +2741,21 @@ By looking at the graph we can see that indeed if the
 \begin_inset Formula $x$
 \end_inset
 
- values and will be marked as negative, and positive if it is larger than
+ values and will be marked as negative and positive if it is greater than
  
 \begin_inset Formula $\frac{1}{2}$
 \end_inset
 
  .
- Although the threshold may differ, depending on the context.
+ Although, the threshold may be different, depending on the context.
 \end_layout
 
 \begin_layout Standard
-Instead of minimizing MSE, in logistic regression we are trying to 
+Instead of 
+\emph on
+minimizing
+\emph default
+ MSE, in logistic regression, we are trying to 
 \emph on
 maximize
 \emph default
@@ -2778,14 +2764,14 @@ maximize
 likelihood function
 \emph default
 .
- In statistics likelihood function tells how likely the example is according
- to our model.
+ In statistics, the likelihood function tells how likely the example is
+ according to our model.
  The objective function in logistic regression is called 
 \emph on
-maximum likelihood.
- 
+maximum likelihood
 \emph default
-It looks like the following:
+.
+ It looks like the following: 
 \end_layout
 
 \begin_layout Standard
@@ -2810,24 +2796,20 @@ noprefix "false"
 
 \end_inset
 
- for easier calculations it is better to use the 
+, it is better to use the 
 \emph on
-log-likelihood 
+log-likelihood
 \emph default
-instead.
+ instead to make calculations easier.
  As 
 \begin_inset Formula $Log$
 \end_inset
 
- is strictly increasing function maximizing it is the same as maximizing
+ is a strictly increasing function, maximizing it is the same as maximizing
  its argument.
  The solution to this optimization problem is the same as the solution to
  the original problem.
- 
-\emph on
-Log-likelihood 
-\emph default
-function looks like the following:
+ The log-likelihood function looks like the following: 
 \end_layout
 
 \begin_layout Standard
@@ -2842,16 +2824,11 @@ LogL_{\bar{w},b}\stackrel{def}{=}ln(L_{\overline{w},b}(\overline{x}))\stackrel[i
 \end_layout
 
 \begin_layout Standard
-Unfortunately, there is no closed-form solution for this optimisation problem.
- But the function is convex, so 
-\emph on
-gradient descent
-\emph default
- (or any onther optimisation algorithm) more or less guarantees the finding
- of the global minimum, provided not too large learning rate and given enough
- time.
- More on gradient descent in section ...
- dedicated to deep learning.
+Unfortunately, there is no closed-form solution for this optimization problem.
+ But the function is convex, so gradient descent (or any other optimization
+ algorithm) more or less guarantees the finding of the global minimum, provided
+ not too large a learning rate and given enough time.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -2860,177 +2837,25 @@ Support Vector Machines
 
 \begin_layout Standard
 
-\series bold
-Description: 
-\series default
 \emph on
 Support vector machine (SVM)
 \emph default
- is a very popular a and powerful machine learning algorithm that can perform
- wide range of tasks including linear and nonlinear classification, regression
- and outlier detection on small- to medium-sized datasets.
- (
-\series bold
-positive class +1, negative -1)
+ is a widely-used and powerful machine learning algorithm that can perform
+ a wide range of tasks, including linear and nonlinear classification, regressio
+n, and outlier detection on small- to medium-sized datasets.
 \end_layout
 
-\begin_layout Paragraph*
+\begin_layout Subsubsection*
 
 \series bold
-LinearSVM
+Linear SVM
 \end_layout
 
 \begin_layout Standard
-The concept behind support vector machines is demonstrated on Figure 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{svm1_img}
-\end_layout
-
-\end_inset
-
-.
- The image is comprised of two classes represented by the red and blue dots,
- divided by solid line termed the 
-\emph on
-dicision boundary
-\emph default
+In its classical formulation, the support vector machine is a binary classifier.
+ Classes are called positive and negative and are labeled +1 and -1, respectivel
+y.
  
-\begin_inset Formula $\overline{w}\overline{x}-b=0$
-\end_inset
-
- with two dashed lines by its sides known as 
-\emph on
-support vectors
-\emph default
- 
-\begin_inset Formula $\overline{w}\overline{x}-b=1$
-\end_inset
-
- and 
-\begin_inset Formula $\overline{w}\overline{x}-b=-1$
-\end_inset
-
-.
- Support vectors are determined by closest instances of a class to the decision
- boundary, which can be seen in the figure.
- 
-\end_layout
-
-\begin_layout Standard
-The distance between the closest instances of two classes is called 
-\emph on
-margin 
-\emph default
-and is equal to 
-\begin_inset Formula $\frac{2}{||\overline{w}||}$
-\end_inset
-
-, where 
-\begin_inset Formula $||\overline{w}||$
-\end_inset
-
- is the Equclidian norm and 
-\begin_inset Formula $\overline{w}$
-\end_inset
-
- is a parameter vector of the same dimensionality as the feature vector.
- So the smaller the norm, the larger the margin is.
- The larger the margin, the better model generalizes.
- The primary objective of the model is to find the largest margin 
-\begin_inset Formula $\frac{2}{||\overline{w}||}$
-\end_inset
-
-, so, to do that we need to 
-\emph on
-minimize 
-\emph default
-the Euclidian norm defined by the expression
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-||\overline{w}||=\sqrt{\stackrel[j=1]{D}{\sum}(w^{(j)})^{2}}
-\]
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-The fundamental assumption is that classes are 
-\emph on
-linearly separable
-\emph default
-, implying they can be separated by a hyperplane (decision boundary) with
- no instances of one class lying among instances of the opposite class.
- It is illustrated on the figure 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{svm2_img}
-\end_layout
-
-\end_inset
-
-.
- In this case the algorithm won't be able to find optimal solution with
- no instances lying between the support vectors and the decision boundary.
- (Consequentlt, the model is highly sensitive to outliers.
- This type of SVM is called 
-\emph on
-hard margin classification.
- )
-\end_layout
-
-\begin_layout Standard
-Now let's look at this from the mathematical point of view.
- As was mentioned before, the decision boundary is defined by the following
- expression: 
-\begin_inset Formula $\overline{w}\overline{x}-b=0$
-\end_inset
-
-, where 
-\begin_inset Formula $\overline{w}\overline{x}$
-\end_inset
-
- is a 
-\emph on
-linear combination
-\emph default
- that looks like this: 
-\begin_inset Formula $w_{1}x_{1}+w_{2}x_{2}+....+w_{D}x_{D}$
-\end_inset
-
-, where D is the number of dimensions.
- The supporting vectors are defined by the following equations 
-\begin_inset Formula $\overline{w}\overline{x}-b=1$
-\end_inset
-
-, and 
-\begin_inset Formula $\overline{w}\overline{x}-b=-1$
-\end_inset
-
-, these two equations can be reduced to one 
-\begin_inset Formula $y_{i}(\overline{w}\overline{x}-b)\geqslant1$
-\end_inset
-
- (as 
-\begin_inset Formula $y_{i}=(1or-1)$
-\end_inset
-
-).
 \end_layout
 
 \begin_layout Standard
@@ -3046,113 +2871,12 @@ f(x)=sign(\overline{w}\overline{x}-b).
 \end_layout
 
 \begin_layout Standard
-Sign returns +1 if the input is positive, and -1 if it is negative, that
- corresponds to the positive and negative classes defined earlier.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-What is margin: 
-\series default
-Margin is the distance between the closest instances of two classes.
- Large margin contributes to a better generalization.
- Margin is equal to 
-\begin_inset Formula $\frac{2}{||\overline{w}|}$
+Function 
+\begin_inset Formula $sign$
 \end_inset
 
-.
- So the smaller is the Euklidian norm 
-\begin_inset Formula $||\overline{w}||$
-\end_inset
-
-, the larger the margin is, the better is generalization.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-What we are minimizing: 
-\series default
-
-\begin_inset Formula $||\overline{w}||=\sqrt{\stackrel[j=1]{D}{\sum}(w^{(j)})^{2}}$
-\end_inset
-
- - this is called 
-\emph on
-Euclidian norm
-\emph default
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Optimisation Constraints: 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\overline{w}\overline{x_{i}}-b\geqslant1$
-\end_inset
-
- if 
-\begin_inset Formula $y_{i}=+1$
-\end_inset
-
-
-\begin_inset Formula $\overline{w}\overline{x_{i}}-b\leqslant-1$
-\end_inset
-
- if 
-\begin_inset Formula $y_{i}=-1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Objective: 
-\series default
-Minimize 
-\begin_inset Formula $||\overline{w}||$
-\end_inset
-
- subject to constraint 
-\begin_inset Formula $y_{i}(\overline{w}\overline{x_{i}}-b)\geqslant1$
-\end_inset
-
- for 
-\begin_inset Formula $i=1,...,N$
-\end_inset
-
-, where N is the number of features.
- Minimizing 
-\begin_inset Formula $||\overline{w}||$
-\end_inset
-
- is equal to minimizing 
-\begin_inset Formula $\frac{1}{2}||\overline{w}||^{2}$
-\end_inset
-
- so we can use quadratic programming optimisation.
- So the resulting optimistaion problem looks like this:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-min\frac{1}{2}||\overline{w}||^{2}\text{such that }y_{i}(\overline{w}\overline{x_{i}}-b)\geqslant1,i=1,...,N
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-To train the SVM means to find optimal values 
+ returns +1 if the input is positive, and -1 if it is negative.
+ To train the SVM means to find optimal values 
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
@@ -3173,131 +2897,45 @@ To train the SVM means to find optimal values
 \end_layout
 
 \begin_layout Standard
+The concept behind support vector machines is demonstrated in Figure 
+\begin_inset ERT
+status open
 
-\series bold
-Dealing with noise:
-\series default
- To introduce the ability of SVM to handle nonlinearly separable data we
- define the 
+\begin_layout Plain Layout
+
+
+\backslash
+ref{svm1_img}
+\end_layout
+
+\end_inset
+
+.
+ The image consists of two classes represented by the red and blue dots,
+ divided by a solid line termed the 
 \emph on
-hinge loss 
+decision boundary
 \emph default
-function: 
-\begin_inset Formula $max(0,1-y_{i}(\overline{w}\overline{x_{i}}-b)).$
-\end_inset
-
- It is zero if the constraits 1 and 2 are satisfied.
- If it is not zero it means that the datapoint does not lie on the right
- side of the decision boundary.
- The function value is proportional to the distance from the decision boundary.
- The resulting cost function looks like the following:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-C||\overline{w}||^{2}+\frac{1}{N}\stackrel[j=1]{N}{\sum}max(0,1-y_{i}(\overline{w}\overline{x_{i}}-b)),\label{eq:svm_loss}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-where C is the hyperparameter that determines the tradeoff between increasing
- the size of the decision boundary and ensuring that each 
-\begin_inset Formula $x_{i}$
-\end_inset
-
- lies on the correct side of the decision boundary.
- Its value is chosen experimentally.
- C handles the tradeoff between classifying the training data well and classifyi
-ng future examples well (generalization).
- For higher values of C the misclassification error will be almost negligible
- so the algorithm will try to find the highest margin without considering
- it.
- For lower values of C, the algorithm will try to make fewer mistakes by
- sacrificing the margin size.
- The larger margin is better for the generalization.
-\end_layout
-
-\begin_layout Standard
-SVM with the hinge loss function is called 
-\emph on
-softmargin SVM
-\emph default
-, while original formulation that optimizes the Euclidian norm is referred
- to as 
-\emph on
-hard-margin SVM.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Soft margin classification:
-\series default
  
+\begin_inset Formula $\overline{w}\overline{x}-b=0$
+\end_inset
+
+ with two dashed lines by its sides known as 
 \emph on
-Soft margin classification 
+support vectors
 \emph default
-tries to mitigate the downsides of the hard margin classification by trying
- to find a balance between keeping the 
-\begin_inset Quotes sld
+ 
+\begin_inset Formula $\overline{w}\overline{x}-b=1$
 \end_inset
 
-road
-\begin_inset Quotes srd
+ and 
+\begin_inset Formula $\overline{w}\overline{x}-b=-1$
 \end_inset
 
- as large as possible and mitigating the margin outliers (instances that
- lie on the 
-\begin_inset Quotes sld
-\end_inset
-
-road
-\begin_inset Quotes srd
-\end_inset
-
- or on the opposite side).
- In Scikit-Learn's SVM this balance is controlled by the 
-\begin_inset Formula $C$
-\end_inset
-
- hyperparameter.
- Smaller values lead to wider street and more margin violations, larger
- values lead to narrower street and less margin violations.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Kernels and dealing with nonlinearity:
-\series default
- We can adapt SVM to work with nonlinearly separable datasets by applying
- the kernel trick.
- Kernel trick means transfroming the original space to a higher dimensional
- one during the cost function optimisation with the hope that in higher
- dimensional space it will become linearly separable.
- In mathematical language: kernel trick is mapping 
-\begin_inset Formula $\varphi:\overline{x}\rightarrow\varphi(\overline{x})$
-\end_inset
-
-, where 
-\begin_inset Formula $\varphi(\overline{x})$
-\end_inset
-
- is vector of higher dimensionality than 
-\begin_inset Formula $\overline{x}.$
-\end_inset
-
- The kernel trick allows us to save a lot of non-necessary computations.
-\end_layout
-
-\begin_layout Standard
-There are multiple kernel functions.
- The most videly used are linear, polynomial, radial basis function (RBF),
+.
+ Support vectors are defined by the closest instances of a class to the
+ decision boundary.
+ These instances are emphasized in the figure.
 \end_layout
 
 \begin_layout Standard
@@ -3361,6 +2999,73 @@ end{figure}
 \end_layout
 
 \begin_layout Standard
+The distance between the closest instances of two classes is called 
+\emph on
+margin 
+\emph default
+and is equal to 
+\begin_inset Formula $\frac{2}{||\overline{w}||}$
+\end_inset
+
+, where 
+\begin_inset Formula $||\overline{w}||$
+\end_inset
+
+ is the Euclidean norm and 
+\begin_inset Formula $\overline{w}$
+\end_inset
+
+ is a parameter vector of the same dimensionality as the feature vector.
+ So the smaller the norm, the larger the margin is.
+ The larger the margin, the better model generalizes.
+ The primary objective of the model is to find the largest possible margin
+ 
+\begin_inset Formula $\frac{2}{||\overline{w}||}$
+\end_inset
+
+, so, to do that we need to 
+\emph on
+minimize 
+\emph default
+the Euclidian norm defined by the expression
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+||\overline{w}||=\sqrt{\stackrel[j=1]{D}{\sum}(w^{(j)})^{2}}.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The fundamental assumption of support vector machines is that classes are
+ linearly separable, implying their instances can be separated by a hyperplane
+ (decision boundary) with no examples of one class lying among the ones
+ of the opposite class.
+ It is illustrated in the figure 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{svm2_img}
+\end_layout
+
+\end_inset
+
+.
+ In this case, the algorithm won't be able to find an optimal solution with
+ no instances lying between the support vectors and the decision boundary.
+ Consequently, the model is highly sensitive to outliers.
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -3391,7 +3096,7 @@ textwidth]{Images/svm2}
 
 
 \backslash
-caption{Linearly inseparable dataset}
+caption{Linearly non separable dataset}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3418,6 +3123,188 @@ end{figure}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Every optimization problem requires constraints, and for the support vector
+ machine, they are the following:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\overline{w}\overline{x_{i}}-b\geqslant+1$
+\end_inset
+
+ if 
+\begin_inset Formula $y_{i}=+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\overline{w}\overline{x_{i}}-b\leqslant-1$
+\end_inset
+
+ if 
+\begin_inset Formula $y_{i}=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+These two equations can be reduced to one 
+\begin_inset Formula $y_{i}(\overline{w}\overline{x}-b)\geqslant1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The optimisation problem we want to solve is the following: Minimize 
+\begin_inset Formula $||\overline{w}||$
+\end_inset
+
+ subject to constraint 
+\begin_inset Formula $y_{i}(\overline{w}\overline{x_{i}}-b)\geqslant1$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,...,N$
+\end_inset
+
+, where N is the number of features.
+ This problem can be modified so that the quadratic programming techniques
+ could be used in the optimization process.
+ The modified formula is 
+\begin_inset Formula $\frac{1}{2}||\overline{w}||^{2}$
+\end_inset
+
+, and minimization of it would also mean minimization of 
+\begin_inset Formula $||\overline{w}||$
+\end_inset
+
+.
+ The updated optimization problem looks like this:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+min\frac{1}{2}||\overline{w}||^{2}\text{such that }y_{i}(\overline{w}\overline{x_{i}}-b)\geqslant1,i=1,...,N\label{eq:svm_optimisation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Handling Noise
+\end_layout
+
+\begin_layout Standard
+To introduce the ability of SVM to handle nonlinearly separable data (but
+ not to the extreme), we define the hinge loss function: 
+\begin_inset Formula $max(0,1-y_{i}(\overline{w}\overline{x_{i}}-b)).$
+\end_inset
+
+ It is zero if the constraints 1 and 2 are satisfied.
+ If it is not, the data point does not lie on the right side of the decision
+ boundary.
+ The function value is proportional to the distance from the decision boundary.
+ The resulting cost function looks like the following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+C||\overline{w}||^{2}+\frac{1}{N}\stackrel[j=1]{N}{\sum}max(0,1-y_{i}(\overline{w}\overline{x_{i}}-b)),\label{eq:svm_loss}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where C is the hyper parameter that determines the tradeoff between increasing
+ the size of the decision boundary and ensuring that each 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ lies on the correct side of the decision boundary.
+ Its value is chosen experimentally.
+ C handles the tradeoff between classifying the training data well and classifyi
+ng future examples well (generalization).
+ For higher values of C, the misclassification error will be almost negligible,
+ so the algorithm will try to find the highest margin without considering
+ it.
+ For lower values of C, the algorithm will try to make fewer mistakes by
+ sacrificing the margin size.
+ A larger margin is better for the generalization.
+ (Smaller values lead to wider streets and more margin violations, larger
+ values lead to narrower streets and fewer margin violations.)
+\end_layout
+
+\begin_layout Standard
+SVM with the hinge loss function is called 
+\emph on
+soft-margin SVM
+\emph default
+, while the original formulation that optimizes the Euclidian norm is referred
+ to as 
+\emph on
+hard-margin SVM
+\emph default
+.
+ 
+\emph on
+Soft margin classification
+\emph default
+ tries to mitigate the downsides of the 
+\emph on
+hard margin classification
+\emph default
+ by trying to find a balance between keeping the margin as large as possible
+ and mitigating the margin outliers (instances that lie on the margin or
+ the opposite side).
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Handling Non-linearity
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+We can adapt SVM to work with nonlinearly separable datasets by applying
+ the kernel trick.
+ The kernel trick means transforming the original space to a higher dimensional
+ one during the cost function optimization with the hope that, in higher
+ dimensional space, it will become linearly separable.
+ In mathematical language: the kernel trick is mapping 
+\begin_inset Formula $\varphi:\overline{x}\rightarrow\varphi(\overline{x})$
+\end_inset
+
+, where 
+\begin_inset Formula $\varphi(\overline{x})$
+\end_inset
+
+ is vector of higher dimensionality than 
+\begin_inset Formula $\overline{x}.$
+\end_inset
+
+ The kernel trick allows us to save a lot of non-necessary computations.
+\end_layout
+
+\begin_layout Standard
+There are multiple kernel functions.
+ The most widely used are linear, polynomial, radial basis function (RBF),
 \end_layout
 
 \begin_layout Subsection
@@ -3516,10 +3403,10 @@ curse of dimensionality
  idea.
  However, it is worth noting that dimensionality reduction algorithm might
  loose some useful information.
- A lot of modern algorithms, such as neural networks or ensemle algorithms,
+ A lot of modern algorithms, such as neural networks or ensemble algorithms,
  handle high dimensional data very well, and dimensionality reduction techniques
  are used less than in the past.
- However, they are still used for data visualisation and for cases when
+ However, they are still used for data visualization and for cases when
  we need to build an interpretable model, while we are limited in number
  of algorithms we can use.
 \end_layout
@@ -4850,7 +4737,7 @@ deepSurv
 \end_layout
 
 \begin_layout Section
-Machine learning workflow
+Machine Learning Workflow
 \end_layout
 
 \begin_layout Standard
