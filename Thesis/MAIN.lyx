@@ -4005,54 +4005,35 @@ Survival Analysis
 
 \begin_layout Standard
 
-\series bold
-Definition
-\series default
-: 
 \emph on
-Survival analysis,
+Survival analysis, 
 \emph default
- also known as 
+also known as
 \emph on
-time-to-event analysis
+ time-to-event analysis, 
 \emph default
-, is a statistical method used to analyze the time until an event of interest
+is a statistical method used to analyze the time until an event of interest
  occurs.
- Its name originates from the clinical and biological research, where these
- methods are used mostly to analyze survival time, hence the name.
- These methods, however, found their uses in areas far beyond clinical setting:
- in business to analyze the time until the customer 
-\begin_inset Quotes sld
-\end_inset
-
-churns
-\begin_inset Quotes srd
-\end_inset
-
- from a subscription, in engineering, to estimate the longevity of certain
- products, or its parts.
+ Its name originates from clinical and biological research, where these
+ methods are used to analyze survival time, hence the name.
+ These methods, however, found their uses in areas far beyond clinical settings:
+ in business to predict the time until the customer ”churns” from a subscription
+, and in engineering, to estimate the product longevity or their parts.
  In social sciences, estimate the longevity of a marriage or a student dropout
- rate in academic setting.
+ rate in an academic setting.
+\end_layout
+
+\begin_layout Subsubsection*
+Censoring
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Censoring: 
-\series default
-The most pronounced feature of these methods is the ability to handle censored
+The most distinct feature of these methods is the ability to handle censored
  data.
- Censoring is a situation when the information about the survival time is
- known only partially.
- For example, in the dataset used in this work there are 
-\series bold
-(number of patients)
-\series default
- that were still alive until last date of observation 
-\series bold
-(date of observation
-\series default
-).
+ Censoring refers to a circumstance when the information about survival
+ time is only partially known.
+ For example, in the dataset used in this work, there are 370 000 patients
+ that were reportedly alive at the time of the last date of observation.
  And we do not know what happened to them after that date — they are censored.
 \end_layout
 
@@ -4131,24 +4112,18 @@ ref{fig1}
 \end_inset
 
 .
- On the y axis we can see individual patients.
- x axis corresponds to timeline of the study (right side is the end of the
- study.
- Cross (X) denotes an occurance of the event, circle (O) corresponds to
- subject's exit from the study.
- 
+ On the y-axis, we can see individual patients, while the x-axis corresponds
+ to the study timeline (the right side is the end of the study).
+ Cross (X) denotes an occurrence of the event, and circle (O) corresponds
+ to the subject's exit from the study.
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Left and right censoring: 
-\series default
 There are two types of censoring: left and right censoring.
- Right censoring, the most common one, happens when we know that event did
+ Right censoring, the most common one, occurs when we know that event did
  not happen up to a certain point — the patient didn't attend follow-ups
- after a certain time or the study ended when he was still alive.
- Lets look at the figure 3.1
+ after a certain point in time or the study ended when he was still alive.
+ As shown in Figure
 \begin_inset ERT
 status open
 
@@ -4161,76 +4136,171 @@ ref{fig1}
 
 \end_inset
 
-, E and F are obviously right censored, as the event didn't happen during
- study and B is also right censored, as the subject dropped out of study.
+, patients E and F are right-censored, as the event didn't happen during
+ the study, and B is also right-censored, as the subject dropped out of
+ the study.
  Left censoring, being much less common, describes the situation when the
- subject's survival time is unkonown, but we know that it is less than a
- certain time.
- For example, in epidimiology studies we may not know when exactly the patient
- was infected.
- but we know that he is infected.
+ subject's survival time is unknown, but we know it is less than a specific
+ time.
+ For example, in epidemiologic studies, we may not know when the patient
+ was infected, but we know when the first symptoms occurred.
+\end_layout
+
+\begin_layout Subsubsection*
+Censoring Assumptions
 \end_layout
 
 \begin_layout Standard
+There are three types of censoring assumptions: random, independent and
+ non-informative.
 
 \series bold
-Censoring assumptions: 
+ 
 \series default
-They are very similar, however, they have very subtle differences that we
- are going cover in the following paragraphs.
+They are have similarities, but there are differences that we are going
+ cover in the following paragraphs.
+ (
+\series bold
+add that they are needed to handle censored individuals
+\series default
+)
 \end_layout
 
 \begin_layout Standard
+In case of 
+\emph on
+random censoring
+\emph default
+, subjects censored at time 
+\begin_inset Formula $t$
+\end_inset
 
-\series bold
--Random
-\series default
-: censored subjects are representative of the remaining subjects provided
+ are asumed to have the same failure rate as remaining subjects provided
  the same survival experience.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
--Independent
-\series default
-: censoring is independent if it is random within any subgroup
-\end_layout
-
-\begin_layout Standard
-Random an independent censoring assume that those who left the study are
- no different from those who stayed and therefore the percentage of survival
- is the same in both groups with respect to their survival experience.
- They are the same if assumed in one group.
  Censoring is 
 \emph on
 independent
 \emph default
- if the censoring percentage in one group differs from the censoring percentage
- in the other group.
- In contrast, if the censoring percentages are the same, the censoring is
- 
+ if it is random within any subgroup of interest.
+ If we consider only one subgroup, then we wouldn't see the difference between
+ random and independent.
+ For example, let's take a three year disease occurence study with 100 subjects
+ at risk.
+ Individuals are followed for three years and by the end of the study 20
+ of them contract the disease.
+ We calculate the three-year disease risk as 20% and three-year survival
+ as 80%.
+ Now, suppose we want to continue the study for an additional two years
+ on the remaining 80 individuals.
+ However 40 of them refuse to continue in the study, and therefore are lost
+ to follow-up (censored).
+ Out of 40 remaining subjects, 5 contract the disease.
+ How would we estimate the five-year survival?
+\end_layout
+
+\begin_layout Standard
+And these assumptions come to a rescue.
+ Under an assumption of random and independent censoring, we would assume
+ that those who remained in the study are no different from those who left.
+ Therefore we would estimate that out of 40 censored individuals, 5 contracted
+ the disease - the same amount, as with those who remained.
+ Consequently, we would calculate the five-year risk as 20 individuals in
+ the first three-year period, plus 5 out of 40 observed, plus 5 estimated
+ out 40 censored and we would get 30% five-year risk of disease contraction
+ and 70% five-year survival under random and independent censoring assumptions.
+ In this case random and idependent censoring are the same, as no predictor
+ variables were considered.
+\end_layout
+
+\begin_layout Standard
+Let's expand our example to illustrate the difference between random and
+ independent censoring.
+ Let's introduce another group to the study: group B (the first is group
+ A) with 100 individuals.
+ In the first three years, 40 contracted the disease and 10 left the study.
+ So, the calculated three-year risk for group B is 40%.
+ Out of 50 remaining, between 3 and 5 years 10 contracted the disease.
+ The risk is 20% for years between 3 and 5.
+ Under independent assuption, we estimate that out of 10 censored, 2 contracted
+ the disease.
+ Let's calculate the five-year risk for the group B: 40 got the disease
+ in the first three years, plus 10 out of 50 observed in the 3-5 year period,
+ plus 2 estimated out of 10 censored, and we would get 52% five-year risk
+ and 48% five-year survival for group B under independent censoring assumptions.
+\end_layout
+
+\begin_layout Standard
+As we can see, the five-year risk in two groups differs signifficantly (30%
+ against 52%) and the censoring proportion is also very different (50% against
+ 17%) hence, the overall 
 \emph on
-random
+censoring is not random
 \emph default
 .
+ However, it is random within groups A and B, therefore, the 
+\emph on
+censoring is independent.
+
+\emph default
+ Because independent censoring is random censoring conditional on each level
+ of covariates.
 \end_layout
 
 \begin_layout Standard
-
-\series bold
--Non-informative censoring
-\series default
-: distribution of survival times T provides no information about the distributio
-n of censorship times C.
+If instead, in group B 30 subjects out of 60 were censored at the three
+ year mark, the censoring proportion would be the same in both groups and
+ the overall censoring would be 
+\emph on
+random, 
+\emph default
+as those censored would be the representatives of those remained at risk.
 \end_layout
 
 \begin_layout Standard
+The opposite of independent censoring is 
+\emph on
+non-independent
+\emph default
+ censoring.
+ Let's illustrate it with an example.
+ Consider a drug study, where some subjects are censored due to occurance
+ of side-effects.
+ Most likely those censored due to side effects are not representative of
+ those who are still in the study.
+ If they indeed are more vulnerable to a health outcome, we would likely
+ overestimate their survival under an assumption of independent censoring,
+ introducing bias.
+ Henceforth the independent/non-independent censoring affects the accuracy
+ the most.
+ Many analytical techniques, such as Kaplan-Meier survival estimation, the
+ log rank test, the cox model operate under an assumption of independent
+ censoring in presence of right-censored data.
+ 
+\end_layout
 
-\series bold
-Relation to machine learning
-\series default
-: Because we are predicting a numerical value(rather values), from the machine
+\begin_layout Standard
+Non-informative censoring distribution of time-to-event T provides no informatio
+n about the distribution of time-to-censorship C, otherwise the censoring
+ is informative.
+ To best illustrate what is non-informative censoring, let's illustrate
+ what is an informative censoring.
+ Let's take a group of subjects under random and independent censoring assumptio
+ns.
+ Every time the subject A gets an event, subject B selected randomly leaves
+ the study (e.g.
+ B is A's relative).
+ If the censored subjects are representative of subjects at risk it would
+ be random and independet censoring.
+ Here the censoring mechanism is directly related to event occurance, so
+ the censoring is informative.
+\end_layout
+
+\begin_layout Subsubsection*
+Survival function
+\end_layout
+
+\begin_layout Standard
+Because we are predicting a numerical value(rather values), from the machine
  learning point of view, survival analysis might be considered a regression,
  but instead of one numerical value we predict a continuous value - survival
  function or hazard function, and, obviously, the dataset is censored.
@@ -4296,6 +4366,10 @@ time
  As it is a probability, the function value ranges only from 0 to 1.
  Theoretically, the graph of the survival function must be smooth, but in
  reality it is represented by a step function.
+\end_layout
+
+\begin_layout Subsubsection*
+Hazard function
 \end_layout
 
 \begin_layout Standard
@@ -4377,19 +4451,21 @@ conditional failure rate.
 
 \begin_layout Standard
 
-\series bold
+\emph on
 Cumulative hazard function
-\series default
-: This is basically area under the hazard function that allows to say which
- group has a greater risk.
+\emph default
+ is basically area under the hazard function that allows to say which group
+ has a greater risk.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection*
 
 \series bold
 The relationsip between the two
-\series default
-: There is a clear relationship between the survival function 
+\end_layout
+
+\begin_layout Standard
+There is a clear relationship between the survival function 
 \begin_inset Formula $S(t)$
 \end_inset
 
@@ -4413,7 +4489,16 @@ S(t)=exp\left[-\intop_{0}^{t}h(u)du\right]\label{eq:haz_to_surv}
 \end_layout
 
 \begin_layout Standard
-Equation ...
+Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:haz_to_surv"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
  tells that the survival function 
 \begin_inset Formula $S(t)$
 \end_inset
@@ -4438,7 +4523,16 @@ h(t)=-\left[\frac{dS(t)/dt}{S(t)}\right]\label{eq:surv_to_haz}
 \end_layout
 
 \begin_layout Standard
-Equation ...
+Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:surv_to_haz"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
  tells us that the hazard function is equal to the negative derivative of
  the survival function 
 \begin_inset Formula $S(t)$
@@ -4561,12 +4655,10 @@ a)
  function increases.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection*
 
 \series bold
 Kaplan-Meier Survival Curves
-\series default
-: 
 \end_layout
 
 \begin_layout Standard
@@ -4656,8 +4748,8 @@ Survival analysis methods
 Cox Proportional hazards method
 \end_layout
 
-\begin_layout Standard
-Survival Trees
+\begin_layout Subsection
+Survival Forest
 \end_layout
 
 \begin_layout Subsection
@@ -4721,7 +4813,20 @@ t improvements are seen.
 \end_layout
 
 \begin_layout Section
-Overview of Machine Learning Libraries
+Overview of Machine Learning Libraries and Tools
+\end_layout
+
+\begin_layout Standard
+python.
+ what is the main disadvantage
+\end_layout
+
+\begin_layout Standard
+numpy 
+\end_layout
+
+\begin_layout Standard
+pandas
 \end_layout
 
 \begin_layout Subsection
@@ -4817,7 +4922,7 @@ Exploratory Data Analysis
 \end_layout
 
 \begin_layout Standard
-- box plots
+- box plots for the most important features
 \end_layout
 
 \begin_layout Subsection
@@ -4945,6 +5050,12 @@ Model selection
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+Exploration of censoring inherent to the dataset.
+\end_layout
+
+\begin_layout Standard
 bottleneck in a number of instances each model can train on.
  +
 \end_layout
@@ -4966,6 +5077,46 @@ Create an ensemble of a couple of learners.
 Model comparison
 \end_layout
 
+\begin_layout Standard
+Dataset demographic groups:
+\end_layout
+
+\begin_layout Itemize
+- deceased donor all
+\end_layout
+
+\begin_layout Itemize
+- living donor all
+\end_layout
+
+\begin_layout Itemize
+- deceased donor subgroup
+\end_layout
+
+\begin_layout Itemize
+- living donor subgroup
+\end_layout
+
+\begin_layout Standard
+For each group apply main algorithms (gradient boosting, RSF, CoxPH, etc).
+\end_layout
+
+\begin_layout Standard
+demography selectors:
+\end_layout
+
+\begin_layout Itemize
+age group
+\end_layout
+
+\begin_layout Itemize
+gender
+\end_layout
+
+\begin_layout Itemize
+ethnicity
+\end_layout
+
 \begin_layout Section
 Final Model
 \end_layout
@@ -4975,15 +5126,33 @@ Scoring algorithm
 \end_layout
 
 \begin_layout Standard
-the cumulative hazard suits the place of score very well
+the cumulative hazard suits the place of transplantation score very well
 \end_layout
 
 \begin_layout Section
 Limitations
 \end_layout
 
+\begin_layout Standard
+these models probably aren't suitable for KEP (check results), bc they're
+ slow, but are good for prediction estimated survival and when it is best
+ to intervene.
+\end_layout
+
+\begin_layout Standard
+Not taking advantage of the followup data
+\end_layout
+
 \begin_layout Section
 Further work
+\end_layout
+
+\begin_layout Standard
+more thorough hyperparameter tuning
+\end_layout
+
+\begin_layout Standard
+deep survival neural network
 \end_layout
 
 \begin_layout Chapter
@@ -5001,6 +5170,10 @@ Existing Solutions
 
 \begin_layout Subsection
 Txmatching
+\end_layout
+
+\begin_layout Standard
+Txmatching is 
 \end_layout
 
 \begin_layout Section
