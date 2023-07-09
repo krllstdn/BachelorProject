@@ -3478,6 +3478,10 @@ Principal Component Analysis (PCA)
 \end_layout
 
 \begin_layout Standard
+napsat uvod co to je a jak a k cemu to je
+\end_layout
+
+\begin_layout Standard
 
 \emph on
 Principal components 
@@ -3504,6 +3508,19 @@ project
 
 \begin_layout Standard
 (Create images) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+nb,nmn
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3570,6 +3587,8 @@ high predictive power
  group compatibility or recipient age is likely to have much higher predictive
  power than the donor's or recipient's citizenship.
  
+\series bold
+vic to rozvest.
 \end_layout
 
 \begin_layout Standard
@@ -3719,7 +3738,11 @@ Feature Scaling
 
 \begin_layout Standard
 Different ranges of feature values might pose a problem to some machine
- learning algorithms, as they don't handle them very well.
+ learning algorithms
+\series bold
+, as they don't handle them very well
+\series default
+.
  It might result in slowed training time or worse performance.
  This problem is solved by 
 \emph on
@@ -3746,6 +3769,10 @@ min-max scaling
 \begin_inset Formula $[-1,1]$
 \end_inset
 
+ 
+\series bold
+pridat vzorec pro '-1
+\series default
  or 
 \begin_inset Formula $[0,1]$
 \end_inset
@@ -3795,8 +3822,8 @@ Standardization
 \emph on
 standard normal distribution
 \emph default
- with the mean µ (average value) equal to zero and the standard deviation
- from the mean 
+ with the mean µ=0 (average value) and the standard deviation from the mean
+ 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -4159,11 +4186,7 @@ There are three types of censoring assumptions: random, independent and
 \series default
 They are have similarities, but there are differences that we are going
  cover in the following paragraphs.
- (
-\series bold
-add that they are needed to handle censored individuals
-\series default
-)
+ We need censoring assumptions to be able to handle censored subjects.
 \end_layout
 
 \begin_layout Standard
@@ -4590,6 +4613,66 @@ begin{center}
 
 
 \backslash
+includegraphics[width=0.8
+\backslash
+textwidth]{Images/EDA/Kaplan-Meier/Whole_dataset}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Kaplan-Meir survival curve for the whole dataset}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{km_whole_ds}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 includegraphics[width=0.9
 \backslash
 textwidth]{Images/survival_and_hazard_funcs}
@@ -4728,28 +4811,8 @@ mention it is an ensemble model and the way it is implemented in the scikit-surv
 ival.
 \end_layout
 
-\begin_layout Standard
-—
-\end_layout
-
-\begin_layout Standard
-Survival analysis methods
-\end_layout
-
-\begin_layout Standard
-- CoxPH
-\end_layout
-
-\begin_layout Standard
-- Regularized Cox
-\end_layout
-
 \begin_layout Subsection
 Cox Proportional hazards method
-\end_layout
-
-\begin_layout Subsection
-Survival Forest
 \end_layout
 
 \begin_layout Subsection
@@ -4865,10 +4928,6 @@ Tensorflow
 - where it can be used
 \end_layout
 
-\begin_layout Standard
-it is more corporate driven
-\end_layout
-
 \begin_layout Subsection
 PyTorch
 \end_layout
@@ -4901,12 +4960,1106 @@ Conclusion
 Data Preparation and Analysis
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+In this chapter I will:
+\end_layout
+
+\begin_layout Itemize
+make sense of the dataset
+\end_layout
+
+\begin_layout Itemize
+explore features, their impact on the survival, how do they correlate
+\end_layout
+
+\begin_layout Itemize
+explain my data pipeline and my approach to data processing
+\end_layout
+
+\begin_layout Itemize
+explain how do I build the dataset
+\end_layout
+
+\begin_layout Itemize
+the code for the image generation can be found in the github + give a link
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this chapter we age going to look into the UNOS dataset.
+ Make sense of the dataset.
+ Explore important features and their relationship with each other.
+ Look into survival time for 
+\end_layout
+
+\begin_layout Standard
+The dataset provided by the IKEM (Institute of Clinical and Experimental
+ Medicine in Prague) that I had from the beginning was not suitable for
+ any meaningful analysis.
+ That is why it was decided to look for the dataset elsewhere.
+\end_layout
+
+\begin_layout Standard
+The data reported here have been supplied by the United Network for Organ
+ Sharing as the contractor for the Organ Procurement and Transplantation
+ Network.
+ The interpretation and reporting of these data are the responsibility of
+ the author(s) and in no way should be seen as an official policy of or
+ interpretation by the OPTN or the U.S.
+ Government.
+\end_layout
+
+\begin_layout Standard
+The dataset is not for the open use.
+ If you are interested in testing the results achieved in this paper, you
+ need to acquire the data first.
+ The requirements for the data acquirement are written here 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+give a link to the UNOS website
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The dataset consists of 993 806 of records for both transplanted patients
+ and ones from teh waiting list, and 450 features comprised of waiting list
+ data and already transplanted patients for kidney and pancreas transplant
+ from October 1, 1987 to the present.
+ Kidney transplants have 490 172 records.
+\end_layout
+
+\begin_layout Standard
+The following features will be considered.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Feature description
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Type
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Abbreviation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Donor Age
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Recipient Age
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Donor Type
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Donor gender
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Recipient gender
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Donor blood group
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Recipient blood group
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Recipient on dyalisis
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Recipient creatinine at the time of tx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Features
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Data Loading
+\end_layout
+
+\begin_layout Standard
+The data were provided in a form of a MongoDB database dump.
+ We cannot work with the database dump.
+ So it was necessary to run the database first and import the database dump
+ there.
+ I set up the database in a Docker container (Docker is container management
+ system + 
+\series bold
+explain what is container
+\series default
+) locally on my PC, as the university cluster unfortunatelly does not have
+ Docker.
+ The data from the database and table kidpan were then exported to CSV,
+ compressed into zip and uploaded to the cluster.
+\end_layout
+
+\begin_layout Standard
+The pandas DataFrame method read_csv() loaded data for too long to work
+ comfortably (5 minutes), as the CSV file had the size of 80GB, so it was
+ decided to use parquet file instead.
+ It was done by dumping the pandas DataFrame into Parquet database file
+ using DataFrame.to_parquet() method.
+ Parquet is used for efficient cloud computing.
+ Parquet provides more efficient way of loading data, as it works on the
+ principles of databases, so the loading time of the whole dataset was decreased
+ to 38 seconds.
+ Additionally, it allows for specifying what columns to load, reducing the
+ data loading time to 21 seconds.
+ Thus using this technology has signifficantly improved the workflow.
+\end_layout
+
+\begin_layout Section
+Data preprocessing pipeline
+\end_layout
+
+\begin_layout Standard
+In this section I will describe the data pipeline that I use to create the
+ dataset out of the raw data.
+ The pipeline can be found in github repository of this paper: 
+\begin_inset CommandInset href
+LatexCommand href
+name "survival_pipeline.py"
+target "https://github.com/krllstdn/BachelorProject/blob/main/Code/surv_data_pipeline/survival_pipline.py"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The work with the pipeline is pretty straightforward: we initialize the
+ class and call the 
+\emph on
+load()
+\emph default
+ method.
+ As is shown in the following block of python code:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+from surv_data_pipeline.survival_pipline import ScikitSurvivalDataLoader
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+loader = ScikitSurvivalDataLoader()
+\end_layout
+
+\begin_layout Plain Layout
+
+X, y = loader.load()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Two main constants of the class are 
+\emph on
+categorical_values 
+\emph default
+and 
+\emph on
+numerical_values.
+ 
+\emph default
+Categorical and numerical features must be specified there.
+ It is important for following preprocessing steps.
+\end_layout
+
+\begin_layout Standard
+The main method of the class 
+\emph on
+ScikitSurvivalDataLoader 
+\emph default
+is 
+\emph on
+load().
+ 
+\emph default
+This method loads the data into the pandas DataFrame, applies exclusion
+ criteria (more on that later), handles NaN values and returns X and y,
+ X being numerical (categorical values were handled with OneHot encoding
+ and numerical values were scaled) and y having format of (PSTATUS, PTIME),
+ first one is the boolean censoring indicator (True - event happened, False
+ - otherwise), PTIME is the number of days survived.
+ This format is required by the Scikit-survival Library to build survival
+ estimators.
+ 
+\end_layout
+
+\begin_layout Standard
+The first step is to load the data into pandas DataFrame from the parquet
+ file.
+ Fortunately, pandas has support for this kind of files.
+ It is performed by the Pandas method 
+\emph on
+read_parquet(path, engine, columns).
+ 
+\emph default
+In 
+\emph on
+path
+\emph default
+ we need to specify the path to the parquet file, 
+\emph on
+engine
+\emph default
+ specifies what parquet library should be used, I use 'auto', it tries 
+\emph on
+pyarrow
+\emph default
+ if it doesn't work it uses 
+\emph on
+fastparquet.
+
+\emph default
+ In 
+\emph on
+columns 
+\emph default
+we need to specify the columns we want to load.
+ (explain more what is pyarrow and parquet)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Description of feature engineering step
+\series default
+: 
+\end_layout
+
+\begin_layout Standard
+The next step is to divide the dataset into training, validation and test
+ sets, the reasons behind that, were explained in the datapreprocessing
+ section of the previous chapter.
+ These sets are then assigned as class variables to the class and are sent
+ to preprocessing method 
+\emph on
+_handle_nan(), 
+\emph default
+where the NaN values are filled with median, specific value, or examples
+ with such values are deleted with the pandas DataFrame method 
+\emph on
+drop_na(), 
+\emph default
+depending on the 
+\emph on
+fill_na_with_median
+\emph default
+ boolean parameter.
+\end_layout
+
+\begin_layout Standard
+After the NaN handling step, the training set is send to the method 
+\emph on
+_get_X_y()
+\emph default
+ where the numerical values are standartized (
+\series bold
+Why? Try normalization) 
+\series default
+and categorical are encoded with the OneHot encoding with the Scikit-Survival
+ methods 
+\emph on
+standardize()
+\emph default
+ and 
+\emph on
+encode_categorical().
+ 
+\emph default
+Numerical and categorical values then comprise the 
+\emph on
+X
+\emph default
+ set, directly used in the training.
+
+\emph on
+ 
+\emph default
+The target value set is constructed with 
+\emph on
+Surv.from_arrays()
+\emph default
+ utility that accepts event and survival time and builds the 
+\emph on
+y
+\emph default
+ value acceptable to scikit-survival algorithms.
+ The class variable 
+\emph on
+df 
+\emph default
+is then set to None with the goal of memory optimisation.
+ X and y are then returned.
+\end_layout
+
+\begin_layout Standard
+When we need the validation and the test sets, we just call methods 
+\emph on
+get_validate_X_y() 
+\emph default
+and 
+\emph on
+get_test_X_y()
+\emph default
+ which will provide us with the sets for the hyperparameter tuning step
+ with the validation set and the final evaluation step with the test set.
+\end_layout
+
 \begin_layout Section
 Exploratory Data Analysis
 \end_layout
 
 \begin_layout Standard
-- how many transplantations we have
+In this section we are going to cover all the most signifficant features,
+ because there is no space for all of them.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Column
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Count
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Unique
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Top
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PTIME
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+490 172
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11246
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PSTATUS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+492 954
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pandas describe (Befor preprocessing)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- how many kidney transplantations we have : 490172
 \end_layout
 
 \begin_layout Standard
@@ -4925,28 +6078,906 @@ Exploratory Data Analysis
 - box plots for the most important features
 \end_layout
 
+\begin_layout Standard
+kaplain maeir curve for living vs.
+ deceased donors.
+\end_layout
+
+\begin_layout Standard
+censoring percentage
+\end_layout
+
 \begin_layout Subsection
-...
+Survival Data
+\end_layout
+
+\begin_layout Standard
+In this subsection we are going to explore the 
+\emph on
+y
+\emph default
+ axis that is going to be used for the training of the survival estimators.
+ The 
+\emph on
+y
+\emph default
+ value consists of censoring status, which is a boolean value, and time
+ to event, which is a numerical value representing the survival time or
+ the time at which it was censored.
+ The column PSTATUS is a censoring status, while the PTIME column represents
+ the time-to-event variable.
+\end_layout
+
+\begin_layout Standard
+To best visualize the time-to-event variable we are going to use a box plot.
+ A box plot is a simple, yet powerful statistical graph based on quartiles,
+ that allows to quickly make sense of the data distribution.
+ (odkaz na statistics for data scientists) It is based on three quartiles:
+ the first(
+\begin_inset Formula $Q_{1}$
+\end_inset
+
+), the second(
+\begin_inset Formula $Q_{2}$
+\end_inset
+
+) and the third (
+\begin_inset Formula $Q_{3}).$
+\end_inset
+
+ First quartile corresponds to 25 percentile and means that 25% of the datapoint
+s are below it.
+ The second quartile corresponds to 50% percentile, or median, and it means
+ that below and above that point lies an equal amount of data points.
+ The third quartile corresponds to 75 percentile and it means that below
+ it lies 75% of data points.
+ The quartiles form the box: the first quartile forms the left edge(or bottom
+ edge, in case of horizontal box plot), the third quartile forms the right
+ edge (or top edge) of the box and the median is drawed inside of the box.
+ The box itself represents interquartile range (IQR), that is calculated
+ as 
+\begin_inset Formula $IQR=Q_{3}-Q_{1}$
+\end_inset
+
+.
+ The lines that lie beyond the box are called 
+\emph on
+whiskers
+\emph default
+ and indicate a range for 
+\begin_inset Quotes sld
+\end_inset
+
+a bulk of the data
+\begin_inset Quotes srd
+\end_inset
+
+.
+ The whiskers extend to the furthest points outside of the box, except they
+ cannot be longer than 1,5 times the IQR.
+ The values lying outside of the whiskers are considered outliers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=1
+\backslash
+textwidth]{Images/EDA/Kaplan-Meier/PTIME_box}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{(Box plot for the survival time)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{box_surv_time}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Look at the Figure 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{box_surv_time}
+\end_layout
+
+\end_inset
+
+, there you can see the box plot of patient survival time (PTIME column).
+ The 
+\begin_inset Formula $Q_{1}$
+\end_inset
+
+is equal to 867 days (2.4 years), the median is 2136 days (5.85 years) and
+ the third quantile 
+\begin_inset Formula $Q_{3}$
+\end_inset
+
+is equal to 3828 days (10.5 years).
+ The interquartile range (IQR) is equal to 2961 days.
+ This makes up the box.
+ The left whisker extends from 0 day up to the first quartile of 867 days.
+ The right whisker is much longer, and extends from the third quartile up
+ to the 
+\begin_inset Formula $Q_{3}+1.5*IQR$
+\end_inset
+
+, which in our case is equal to 8269,5 days.
+ The values above 8269,5 can be considered outliers.
+ There are less than 
+\series bold
+10 000
+\series default
+ (
+\series bold
+get the actual value
+\series default
+) outliers, which is not that much compared to the 490 000 of total kidney
+ transplantations.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Rozvest co se bude delat s outlierama.
+
+\series default
+ It is not the wisest choice to simply remove the outliers, as they still
+ might have useful information to the model.
+ However it has to be estimated experimentally.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Explain PSTATUS
+\series default
+: 
+\end_layout
+
+\begin_layout Standard
+how much there are censored
+\end_layout
+
+\begin_layout Standard
+how much there are events that happened
+\end_layout
+
+\begin_layout Standard
+what is the percentage of censoring
+\end_layout
+
+\begin_layout Standard
+draw a bar chart
+\end_layout
+
+\begin_layout Subsection
+Age
+\end_layout
+
+\begin_layout Standard
+Age is the best predictor of the survival time in kidney transplantation
+ [
+\series bold
+add references
+\series default
+] 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{box_age_vs_age_don}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add some visualization for the age: zakomentovano v j.notebooku
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=0.8
+\backslash
+textwidth]{Images/EDA/box_age_vs_age_don}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Box plot for the recipient age versus donor age}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{box_age_vs_age_don}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donors are usually younger than the recipients.
+ Median recipient age is ....
+ median donor age is ....
+ the difference is 
+\series bold
+10 
+\series default
+years.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=0.8
+\backslash
+textwidth]{Images/EDA/hex_bin_age_vs_surv_time}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Hexagonal binning for the recipient age versus survival time}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{hb_age_ptime}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- age (negatively) correlates with the survival time 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{hb_age_ptime}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Donor Type
+\end_layout
+
+\begin_layout Standard
+Recipients with kidneys from living donors live longer
+\end_layout
+
+\begin_layout Standard
+Why (speculations): - less damage to the kidney
+\end_layout
+
+\begin_layout Standard
+- more time to select the best donor (in case with deceased donors often
+ there's no time to make full in depth immunologic HLA screening that may
+ allow for mismatches)
+\end_layout
+
+\begin_layout Standard
+- The quality of organs is worse 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{km_donor_types}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Google papers about that
+\end_layout
+
+\begin_layout Plain Layout
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4317718/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=0.8
+\backslash
+textwidth]{Images/EDA/Kaplan-Meier/Donor_type}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Kaplan-Meir survival curve donor types}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{km_donor_types}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Gender
+\end_layout
+
+\begin_layout Standard
+- Women usually live longer, not only the case with tranplants, but in general
+\end_layout
+
+\begin_layout Standard
+how much there are men and women 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{km_sex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Find paper to cite
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=0.8
+\backslash
+textwidth]{Images/EDA/Kaplan-Meier/Gender}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Kaplan-Meir survival curve for genders}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{km_sex}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The Use of Dialysis
+\end_layout
+
+\begin_layout Standard
+- people who used dialysis live less 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{km_dialysis}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+OFC find paper, altough it literature it was referred to as common knowledge
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=0.8
+\backslash
+textwidth]{Images/EDA/Kaplan-Meier/Dialysis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Kaplan-Meir survival curve for using dialysis or not}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{km_dialysis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Race
+\end_layout
+
+\begin_layout Standard
+- whites have more survival probaility than others.
+ the probability then converges to the rest
+\end_layout
+
+\begin_layout Standard
+- native americans live less (low amount of them - hard to tell)
+\end_layout
+
+\begin_layout Standard
+- all other have roughly the same survival probability 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{km_race}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+google papers about that (if they are exitst)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=0.8
+\backslash
+textwidth]{Images/EDA/Kaplan-Meier/Race}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Kaplan-Meir survival curve for ethnicities}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{km_race}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Data preparation
+Exclusion criteria and noice reduction
 \end_layout
 
-\begin_layout Subsection
-Feature selection
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Exclude
 \end_layout
 
-\begin_layout Subsection
-Handling Numerical Values
+\begin_layout Itemize
+children
 \end_layout
 
-\begin_layout Subsection
-Handling Categorical Values
+\begin_layout Itemize
+people who died from undrelated reasons (suicide, trauma, etc.)
+\end_layout
+
+\begin_layout Itemize
+older transplantations
+\end_layout
+
+\begin_layout Itemize
+excessive amount of censored instances
+\end_layout
+
+\begin_layout Plain Layout
+Divide the dataset into two parts: deceased and living
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Dataset building
 \end_layout
 
 \begin_layout Chapter
 Machine Learning Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+In this chapter I will:
+\end_layout
+
+\begin_layout Itemize
+Explain how do I approach the problem of estimating the survival time
+\end_layout
+
+\begin_layout Itemize
+Explain how do I approach the model selection
+\end_layout
+
+\begin_layout Itemize
+Explain the way of fine-tuning the selected model
+\end_layout
+
+\begin_layout Itemize
+Speculate why some models perform better than the others.
+\end_layout
+
+\begin_layout Itemize
+Explain my choice for the demographics in the dataset
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -5043,6 +7074,16 @@ survival analysis
  Survival analysis methods handle censoring and provide a better form of
  prediction: survival function or hazard function, which represents survival
  probability or the failure rate at each moment in time, respectively.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+vic to rozvest
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -5050,27 +7091,67 @@ Model selection
 \end_layout
 
 \begin_layout Standard
+The algorithms provided by the scikit-survival do not handle large datasets
+ very well (never ending training process and worse results probably due
+ to the noise) that is why I chose to train different models for different
+ demographics, as one specific model for one specific demographic will perform
+ better that one model trained for all demographics.
+ In addition, the living donor transplantation differs a bit from the diseased
+ transplantation, that might introduce some noice into the model.
+\end_layout
+
+\begin_layout Standard
+The way I approach the model selection model automation with the class SurvivalE
+stimators defined in 
+\begin_inset CommandInset href
+LatexCommand href
+name "estimator_automation.py"
+target "https://github.com/krllstdn/BachelorProject/blob/main/Code/surv_data_pipeline/estimator_automation.py"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Run the following class and short list the most promising models.
+ In this case it is survival gradient boosting and random survival forests.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 
 \series bold
 Exploration of censoring inherent to the dataset.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 bottleneck in a number of instances each model can train on.
  +
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 different groups of people have different expected life expectancy -> separate
  models for different groups of people for the result maximization.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 –
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Create an ensemble of a couple of learners.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -5115,6 +7196,16 @@ gender
 
 \begin_layout Itemize
 ethnicity
+\end_layout
+
+\begin_layout Subsection
+Model result comparison
+\end_layout
+
+\begin_layout Standard
+tell about the results and try to explain the results of models.
+ (linear model are sensitive to outliers, and Gradient boosting and RSF
+ are robust 
 \end_layout
 
 \begin_layout Section
@@ -5432,6 +7523,10 @@ key "key-1"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
