@@ -67,6 +67,29 @@
 theorems-ams
 \end_modules
 \maintain_unincluded_children false
+\begin_local_layout
+Format 49
+
+Float
+
+Type listing
+
+GuiName "Code listing"
+
+Placement tbp
+
+Extension lol
+
+NumberWithin chapter
+
+Style ruled
+
+ListName "List of code listings"
+
+LaTeXBuiltin false
+
+End
+\end_local_layout
 \language american
 \language_package default
 \inputencoding utf8
@@ -4738,6 +4761,39 @@ a)
  function increases.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/EDA/Kaplan-Meier/Whole_dataset.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Kaplan-Meir survival curve for the whole dataset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection*
 
 \series bold
@@ -5368,10 +5424,6 @@ Features
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -5443,6 +5495,7 @@ load()
 
 \begin_layout Standard
 \begin_inset listings
+lstparams "language=Python,numbers=left,basicstyle={\ttfamily},breaklines=true,tabsize=4"
 inline false
 status open
 
@@ -6159,58 +6212,39 @@ a bulk of the data
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/EDA/Kaplan-Meier/PTIME_box.png
+	scale 60
+
+\end_inset
 
 
-\backslash
-begin{figure}
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Box plot for the survival time
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "box_surv_time"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=1
-\backslash
-textwidth]{Images/EDA/Kaplan-Meier/PTIME_box}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{(Box plot for the survival time)}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{box_surv_time}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -6220,15 +6254,12 @@ end{figure}
 
 \begin_layout Standard
 Look at the Figure 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{box_surv_time}
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "box_surv_time"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -6319,15 +6350,12 @@ Age is the best predictor of the survival time in kidney transplantation
 add references
 \series default
 ] 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{box_age_vs_age_don}
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "box_age_vs_age_don"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -6348,58 +6376,39 @@ add some visualization for the age: zakomentovano v j.notebooku
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/EDA/box_age_vs_age_don.png
+	scale 50
+
+\end_inset
 
 
-\backslash
-begin{figure}
+\begin_inset CommandInset label
+LatexCommand label
+name "box_age_vs_age_don"
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Box plot for the recipient age versus donor age
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=0.8
-\backslash
-textwidth]{Images/EDA/box_age_vs_age_don}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{Box plot for the recipient age versus donor age}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{box_age_vs_age_don}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -6419,58 +6428,63 @@ years.
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/EDA/hex_bin_age_vs_surv_time.png
+	scale 60
+
+\end_inset
 
 
-\backslash
-begin{figure}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Hexagonal binning for the recipient age versus survival time
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "hb_age_ptime"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=0.8
-\backslash
-textwidth]{Images/EDA/hex_bin_age_vs_surv_time}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{Hexagonal binning for the recipient age versus survival time}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{hb_age_ptime}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -6480,15 +6494,12 @@ end{figure}
 
 \begin_layout Standard
 - age (negatively) correlates with the survival time 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{hb_age_ptime}
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "hb_age_ptime"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -6515,15 +6526,12 @@ Why (speculations): - less damage to the kidney
 
 \begin_layout Standard
 - The quality of organs is worse 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{km_donor_types}
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "km_donor_types"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -6548,58 +6556,39 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4317718/
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/EDA/Kaplan-Meier/Donor_type.png
+	scale 50
+
+\end_inset
 
 
-\backslash
-begin{figure}
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Kaplan-Meir survival curve donor types
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "km_donor_types"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=0.8
-\backslash
-textwidth]{Images/EDA/Kaplan-Meier/Donor_type}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{Kaplan-Meir survival curve donor types}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{km_donor_types}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -6617,15 +6606,12 @@ Gender
 
 \begin_layout Standard
 how much there are men and women 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{km_sex}
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "km_sex"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -6646,58 +6632,39 @@ Find paper to cite
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/EDA/Kaplan-Meier/Gender.png
+	scale 55
+
+\end_inset
 
 
-\backslash
-begin{figure}
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Kaplan-Meir survival curve for genders
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "km_sex"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=0.8
-\backslash
-textwidth]{Images/EDA/Kaplan-Meier/Gender}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{Kaplan-Meir survival curve for genders}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{km_sex}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -6711,15 +6678,12 @@ The Use of Dialysis
 
 \begin_layout Standard
 - people who used dialysis live less 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{km_dialysis}
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "km_dialysis"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -6740,58 +6704,35 @@ OFC find paper, altough it literature it was referred to as common knowledge
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/EDA/Kaplan-Meier/Dialysis.png
+	scale 55
+
+\end_inset
 
 
-\backslash
-begin{figure}
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Kaplan-Meir survival curve for using dialysis or not
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
 
 
-\backslash
-begin{center}
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "km_dialysis"
 
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=0.8
-\backslash
-textwidth]{Images/EDA/Kaplan-Meier/Dialysis}
-\end_layout
-
-\begin_layout Plain Layout
+\end_inset
 
 
-\backslash
-caption{Kaplan-Meir survival curve for using dialysis or not}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{km_dialysis}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -6834,7 +6775,7 @@ ref{km_race}
 status open
 
 \begin_layout Plain Layout
-google papers about that (if they are exitst)
+google papers about that (if they exitst)
 \end_layout
 
 \end_inset
@@ -6843,58 +6784,42 @@ google papers about that (if they are exitst)
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/EDA/Kaplan-Meier/Race.png
+	scale 55
+
+\end_inset
 
 
-\backslash
-begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Kaplan-Meir survival curve for ethnicities
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "km_race"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=0.8
-\backslash
-textwidth]{Images/EDA/Kaplan-Meier/Race}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{Kaplan-Meir survival curve for ethnicities}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{km_race}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -7209,7 +7134,25 @@ tell about the results and try to explain the results of models.
 \end_layout
 
 \begin_layout Section
-Final Model
+Final Mode
+\end_layout
+
+\begin_layout Section
+Result analysis
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+plot the survival functions of multiple predictions and draw a red line
+ of actual survival.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
