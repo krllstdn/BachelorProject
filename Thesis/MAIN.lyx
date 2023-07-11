@@ -1086,7 +1086,7 @@ Later Carrel moved to the United States where he continued his research
  By this time, his method of suturing had been widely adopted in human surgeries
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-6"
+key "key-19"
 literal "false"
 
 \end_inset
@@ -1738,7 +1738,7 @@ ABO system is used to group blood into groups, based on presence or absense
  There are four major blood groups: A, B, O and AB.
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-7"
+key "key-20"
 literal "false"
 
 \end_inset
@@ -5684,426 +5684,23 @@ Exploratory Data Analysis
 \end_layout
 
 \begin_layout Standard
-In this section we are going to cover all the most signifficant features,
- because there is no space for all of them.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
+Goals of this section:
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="10" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Column
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Count
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Unique
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Top
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-PTIME
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-490 172
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-11246
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-PSTATUS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-492 954
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Pandas describe (Befor preprocessing)
-\end_layout
-
-\end_inset
-
-
+- explore how different features influence survival
 \end_layout
 
 \begin_layout Plain Layout
+- look into the literature: what does it say
+\end_layout
 
+\begin_layout Plain Layout
+- explain why is this the case, speculate and link to the literature
 \end_layout
 
 \end_inset
@@ -6112,32 +5709,10 @@ Pandas describe (Befor preprocessing)
 \end_layout
 
 \begin_layout Standard
-- how many kidney transplantations we have : 490172
-\end_layout
-
-\begin_layout Standard
-- median age
-\end_layout
-
-\begin_layout Standard
-- age distribution
-\end_layout
-
-\begin_layout Standard
-- survival time distribution
-\end_layout
-
-\begin_layout Standard
-- box plots for the most important features
-\end_layout
-
-\begin_layout Standard
-kaplain maeir curve for living vs.
- deceased donors.
-\end_layout
-
-\begin_layout Standard
-censoring percentage
+In this section we are going to cover all the most signifficant features.
+ The data were not adjusted to limit the influence of other factors, so
+ the correlations I am trying to make here might not be fully correct, however
+ some are confirmed in literature.
 \end_layout
 
 \begin_layout Subsection
@@ -6284,7 +5859,8 @@ is equal to 3828 days (10.5 years).
 
 , which in our case is equal to 8269,5 days.
  The values above 8269,5 can be considered outliers.
- There are less than 
+ As can be seen from the figure (almost straight black line, consisting
+ of individual dots) there are a lot of them.There are less than 
 \series bold
 10 000
 \series default
@@ -6294,20 +5870,49 @@ get the actual value
 \series default
 ) outliers, which is not that much compared to the 490 000 of total kidney
  transplantations.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-Rozvest co se bude delat s outlierama.
-
-\series default
  It is not the wisest choice to simply remove the outliers, as they still
  might have useful information to the model.
  However it has to be estimated experimentally.
- 
+ The handling of outliers will be described in the section dedicated to
+ the dataset building.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/EDA/bar_PSTATUS.png
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bar chart of PSTATUS colum that provides information on censoring.
+ 0 corresponds to censored instance, 1 corresponds to event happening.
+ There are 308823 censored instances, and 181349 times event happened.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:bar_pstatus"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -6316,27 +5921,23 @@ Rozvest co se bude delat s outlierama.
 \end_layout
 
 \begin_layout Standard
+Look at the figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:bar_pstatus"
+plural "false"
+caps "false"
+noprefix "false"
 
-\series bold
-Explain PSTATUS
-\series default
-: 
-\end_layout
+\end_inset
 
-\begin_layout Standard
-how much there are censored
-\end_layout
-
-\begin_layout Standard
-how much there are events that happened
-\end_layout
-
-\begin_layout Standard
-what is the percentage of censoring
-\end_layout
-
-\begin_layout Standard
-draw a bar chart
+, where there is plotted the distribution of the PSTATUS column values.
+ 0 corresponds to censored instances, 1 corresponds to event happening.
+ As can be seen, the distribution is quite uneven, and there is much larger
+ amount of censored instances than ones with the event happening, as there
+ are 308 823 censored instances and only 181 349 non-censored ones.
+ The percentage of censoring is 63%, which is quite high.
+ Handling it will be described in the section dedicated to the dataset building.
 \end_layout
 
 \begin_layout Subsection
@@ -6344,18 +5945,20 @@ Age
 \end_layout
 
 \begin_layout Standard
-Age is the best predictor of the survival time in kidney transplantation
- [
-\series bold
-add references
-\series default
-] 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "box_age_vs_age_don"
-plural "false"
-caps "false"
-noprefix "false"
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Goals of this subsection:
+\end_layout
+
+\begin_layout Plain Layout
+- explore how donor age and recipient age influence survival
+\end_layout
+
+\begin_layout Plain Layout
+- look into the literature: what does it say
+\end_layout
 
 \end_inset
 
@@ -6363,16 +5966,9 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add some visualization for the age: zakomentovano v j.notebooku
-\end_layout
-
-\end_inset
-
-
+In this subsection we are going to explore both the donor and recipint ages
+ in the dataset, and will see what the literature tells about their importance
+ to long-term survival.
 \end_layout
 
 \begin_layout Standard
@@ -6389,17 +5985,18 @@ status collapsed
 \end_inset
 
 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Box plot for the recipient age versus donor age.
+ 
 \begin_inset CommandInset label
 LatexCommand label
-name "box_age_vs_age_don"
+name "fig:box_age_vs_age_don"
 
 \end_inset
 
 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Box plot for the recipient age versus donor age
 \end_layout
 
 \end_inset
@@ -6417,14 +6014,24 @@ Box plot for the recipient age versus donor age
 \end_layout
 
 \begin_layout Standard
-Donors are usually younger than the recipients.
- Median recipient age is ....
- median donor age is ....
- the difference is 
-\series bold
-10 
-\series default
-years.
+As can be seen on the box plot in the Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:box_age_vs_age_don"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, in this dataset donors are usually younger than the recipients by median
+ 11 years.
+ Median recipient age in the dataset is 50, median donor age is 39.
+ The vast majority, 75% of the recipients aged lie between 38 and 60 years
+ old, making IQR of 22, while 75% of the donor age lie between 26 and 50
+ years old, making IQR of 24.
+ Interestingly, there are not many outliers, as the whiskers cover ages
+ from about 5 to 93, covering the most of human life range.
 \end_layout
 
 \begin_layout Standard
@@ -6468,15 +6075,16 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Hexagonal binning for the recipient age versus survival time
-\end_layout
+Hexagonal binning for the recipient age versus survival time.
+ The brighter the color of the hexagon is, the more instances lie in it.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:hb_age_ptime"
 
 \end_inset
 
 
-\begin_inset CommandInset label
-LatexCommand label
-name "hb_age_ptime"
+\end_layout
 
 \end_inset
 
@@ -6493,13 +6101,67 @@ name "hb_age_ptime"
 \end_layout
 
 \begin_layout Standard
-- age (negatively) correlates with the survival time 
+In the Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "hb_age_ptime"
+reference "fig:hb_age_ptime"
 plural "false"
 caps "false"
 noprefix "false"
+
+\end_inset
+
+ you can see the hexagonal binning for the recipient age vs.
+ the survival time.
+ The hexagonal binning is a substitute for a scatter plot for large datasets,
+ as scatter plots do not handle large data sets very well.
+ The hexagonal binning plot consists of colored hexagons, and the darker
+ the color is, the more instances lie in it.
+\end_layout
+
+\begin_layout Standard
+The figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:hb_age_ptime"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ more or less corresponds to box plots 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "box_surv_time"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:box_age_vs_age_don"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, as the majority of colored hexons lie in box ranges for age and the survival
+ time.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+mozna hexagonal binning plot je k nicemu - neukazuje relaci mezi vekem a
+ dobou preziti, to je proste mnozstvi
+\end_layout
 
 \end_inset
 
@@ -6511,21 +6173,40 @@ Donor Type
 \end_layout
 
 \begin_layout Standard
-Recipients with kidneys from living donors live longer
+In this subsection we are going to explore the influence of donor type (living
+ or diseased) on the survival.
+ Recipients with kidneys from living donors live longer, this is a well
+ established fact
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-16"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-17"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Add citation from some meta analysis
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Why (speculations): - less damage to the kidney
-\end_layout
-
-\begin_layout Standard
-- more time to select the best donor (in case with deceased donors often
- there's no time to make full in depth immunologic HLA screening that may
- allow for mismatches)
-\end_layout
-
-\begin_layout Standard
-- The quality of organs is worse 
+Let's look at the Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_donor_types"
@@ -6535,24 +6216,19 @@ noprefix "false"
 
 \end_inset
 
-
+, where are plotted two Kaplan-Meier survival curves for all patients from
+ the dataset, without taking into account other covatiates.
+ On the graph we can see that the survival probability of living donor transplan
+t is indeed significantly higher than the survival probability of deceased.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Google papers about that
-\end_layout
-
-\begin_layout Plain Layout
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4317718/
-\end_layout
-
-\end_inset
-
-
+This is the case because often there is no time to make full HLA screening,
+ that may allow for HLA mismatches.
+ Additionally, deceased transplants may suffer from mild kidney damage due
+ to the delay in transplantation.
+ While living donor transplants are often performed between siblings that
+ have similar HLA, that creates better compativility.
 \end_layout
 
 \begin_layout Standard
@@ -6601,11 +6277,85 @@ Gender
 \end_layout
 
 \begin_layout Standard
-- Women usually live longer, not only the case with tranplants, but in general
+In this subsection we are going to explore the gender distribution in our
+ dataset, and its influence on survival.
 \end_layout
 
 \begin_layout Standard
-how much there are men and women 
+Let's explore the distribution of gender in our dataset.
+ Take a look at the figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:bar_gender"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ There are 297279 men and 192882 women - the 35% difference.
+ Despite the fact that the chronic kidney disease is more common in women,
+ the end stage kidney failure and therefore kidney transplantation is more
+ common in men
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-19"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/EDA/bar_gender.png
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bar chart for gender 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:bar_gender"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's take a look at gender's influence on survival.
+ In the Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_sex"
@@ -6615,20 +6365,32 @@ noprefix "false"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Find paper to cite
-\end_layout
+ we can see the Kaplan-Meier survival curves for men and women on the whole
+ dataset.
+ As can be seen from the graph, females generally have less risk than their
+ male counterparts.
+ Women usually live longer 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-14"
+literal "false"
 
 \end_inset
 
+.
+ Quite signifficant factor is the difference between male and female immune
+ responses - males ususally have greater risk to get an infection, than
+ females, and the intesity of the infection is higher
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-15"
+literal "false"
 
+\end_inset
+
+.
+ Furthermore, the influence of immunosuppresants make the problem of infection
+ even worse.
 \end_layout
 
 \begin_layout Standard
@@ -6663,10 +6425,6 @@ name "km_sex"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -6674,20 +6432,6 @@ name "km_sex"
 
 \begin_layout Subsection
 The Use of Dialysis
-\end_layout
-
-\begin_layout Standard
-- people who used dialysis live less 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "km_dialysis"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -6701,6 +6445,51 @@ OFC find paper, altough it literature it was referred to as common knowledge
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+In this subsection we are going to explore the influence of dialysis on
+ survival.
+ In the figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "km_dialysis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we can see two survival curves for the patients who were on dialysis, and
+ for those who were not.
+ The whole dataset was used.
+ As can be seen in the Figure, the patients who were on dialysis before
+ the transplantation have a greater risk, while those who were not.
+ This agrees with .....
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-20"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add some meta analysis or link to a textbook 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Why exactly this is the case, unfortunately, I was not able to find.
+ The literatures just states it as fact.
 \end_layout
 
 \begin_layout Standard
@@ -6745,49 +6534,46 @@ Race
 \end_layout
 
 \begin_layout Standard
-- whites have more survival probaility than others.
- the probability then converges to the rest
-\end_layout
-
-\begin_layout Standard
-- native americans live less (low amount of them - hard to tell)
-\end_layout
-
-\begin_layout Standard
-- all other have roughly the same survival probability 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{km_race}
-\end_layout
+In this subsection we are going to explore the survival curves for different
+ ethnic groups.
+ In the Figure 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-18"
+literal "false"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-google papers about that (if they exitst)
-\end_layout
+ are plotted 7 survival curves for different ethnicities.
+ As can be seen on the image, 5 ethnicities share about the same survival
+ probability during the cource of 8000 days, while two of them differ substantia
+lly from the other.
+ White americans had higher survival probability than other ethnical groups,
+ later converging to the others.
+ This corresponds to (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-18"
+literal "false"
 
 \end_inset
 
+) examining graft survival.
+ 
+\end_layout
 
+\begin_layout Standard
+The least survival probability had multiracial group.
+ Their number, however, was the lowest - only 1849 instances, so it is not
+ enough to make any conclusions.They might be later removed, as the definition
+ is too vague and there are not many instances.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -6866,6 +6652,10 @@ Divide the dataset into two parts: deceased and living
 
 \begin_layout Section
 Dataset building
+\end_layout
+
+\begin_layout Standard
+Handling outliers
 \end_layout
 
 \begin_layout Chapter
@@ -7462,7 +7252,125 @@ Kleinbaum, D.
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-1"
+key "key-14"
+literal "false"
+
+\end_inset
+
+ Ostan R, Monti D, Gueresi P, Bussolotto M, Franceschi C, Baggio G.
+ Gender, aging and longevity in humans: an update of an intriguing/neglected
+ scenario paving the way to a gender-specific medicine.
+ Clin Sci (Lond).
+ 2016 Oct 1;130(19):1711-25.
+ doi: 10.1042/CS20160004.
+ PMID: 27555614; PMCID: PMC4994139.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-15"
+literal "false"
+
+\end_inset
+
+vom Steeg LG, Klein SL.
+ SeXX Matters in Infectious Disease Pathogenesis.
+ PLoS Pathog.
+ 2016 Feb 18;12(2):e1005374.
+ doi: 10.1371/journal.ppat.1005374.
+ PMID: 26891052; PMCID: PMC4759457.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-16"
+literal "false"
+
+\end_inset
+
+Rodrigues S, Escoli R, Eusébio C, Dias L, Almeida M, Martins LS, Pedroso
+ S, Henriques AC, Cabrita A.
+ A Survival Analysis of Living Donor Kidney Transplant.
+ Transplant Proc.
+ 2019 Jun;51(5):1575-1578.
+ doi: 10.1016/j.transproceed.2019.01.047.
+ Epub 2019 Jan 21.
+ PMID: 31155195.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-17"
+literal "false"
+
+\end_inset
+
+Nemati E, Einollahi B, Lesan Pezeshki M, Porfarziani V, Fattahi MR.
+ Does kidney transplantation with deceased or living donor affect graft
+ survival? Nephrourol Mon.
+ 2014 Jul 5;6(4):e12182.
+ doi: 10.5812/numonthly.12182.
+ PMID: 25695017; PMCID: PMC4317718.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-18"
+literal "false"
+
+\end_inset
+
+Pisavadia B, Arshad A, Chappelow I, Nightingale P, Anderson B, Nath J, Sharif
+ A.
+ Ethnicity matching and outcomes after kidney transplantation in the United
+ Kingdom.
+ PLoS One.
+ 2018 Apr 13;13(4):e0195038.
+ doi: 10.1371/journal.pone.0195038.
+ PMID: 29652887; PMCID: PMC5898720.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-19"
+literal "false"
+
+\end_inset
+
+Guillermo García García, Arpana Iyengar, François Kaze, Ciara Kierans, Cesar
+ Padilla-Altamira, Valerie A.
+ Luyckx, Sex and gender differences in chronic kidney disease and access
+ to care around the globe, Seminars in Nephrology, Volume 42, Issue 2, 2022,
+ Pages 101-113, ISSN 0270-9295, https://doi.org/10.1016/j.semnephrol.2022.04.001.
+ (https://www.sciencedirect.com/science/article/pii/S0270929522000092)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-20"
+literal "false"
+
+\end_inset
+
+Mange KC, Joffe MM, Feldman HI.
+ Effect of the use or nonuse of long-term dialysis on the subsequent survival
+ of renal transplants from living donors.
+ N Engl J Med.
+ 2001 Mar 8;344(10):726-31.
+ doi: 10.1056/NEJM200103083441004.
+ PMID: 11236776.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-8"
 
 \end_inset
 
