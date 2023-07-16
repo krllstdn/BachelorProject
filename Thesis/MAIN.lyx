@@ -4777,6 +4777,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/EDA/Kaplan-Meier/Whole_dataset.png
+	scale 50
 
 \end_inset
 
@@ -5084,58 +5085,6 @@ https://arxiv.org/pdf/0811.1645.pdf
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Machine Learning Workflow
-\end_layout
-
-\begin_layout Standard
-0.
- define problem type and what objectives you want to achieve.
-\end_layout
-
-\begin_layout Standard
-1.
- gather data
-\end_layout
-
-\begin_layout Standard
-2.
- Analyse data
-\end_layout
-
-\begin_layout Standard
-3.
- Create dataset: feature engineering
-\end_layout
-
-\begin_layout Standard
-4.
- Train a lot of models for the given problem type on the reduced dataset,
- shortlist a couple of the most promising ones.
-\end_layout
-
-\begin_layout Standard
-5.
- Fine tune the most promising ones using the validation set until no signiffican
-t improvements are seen.
- 
-\end_layout
-
-\begin_layout Standard
-6.
- Asses on the test set
-\end_layout
-
-\begin_layout Standard
-7.
- Run on the whole dataset and/or modify the dataset
-\end_layout
-
-\begin_layout Standard
-7.
- Deploy
 \end_layout
 
 \begin_layout Section
