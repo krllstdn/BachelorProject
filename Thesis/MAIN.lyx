@@ -1024,10 +1024,6 @@ pagestyle{headings}
 \end_layout
 
 \begin_layout Section
-Why kidney fail
-\end_layout
-
-\begin_layout Section
 The history of kidney transplantation.
 \end_layout
 
@@ -4107,6 +4103,16 @@ The most distinct feature of these methods is the ability to handle censored
  For example, in the dataset used in this work, there are 370 000 patients
  that were reportedly alive at the time of the last date of observation.
  And we do not know what happened to them after that date — they are censored.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+change the images to the normal ones and make them in lyx style
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4632,73 +4638,13 @@ Considering the facts that survival function describes the probability of
  and risk over time.
  Of the two discussed functions the survival function is used much more
  often as it is more appealing in the context of survival analysis and in
- the practical part of this paper(bachelor project/thesis) I am going to
- estimate exactly the survival function.
+ the practical part of this paper(bachelor project/thesis) we are going
+ to estimate exactly the survival function.
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
 change the images to the normal ones and make them in lyx style
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{figure}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=0.8
-\backslash
-textwidth]{Images/EDA/Kaplan-Meier/Whole_dataset}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{Kaplan-Meir survival curve for the whole dataset}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{km_whole_ds}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -4797,7 +4743,7 @@ a)
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4834,66 +4780,82 @@ Kaplan-Meier Survival Curves
 \end_layout
 
 \begin_layout Standard
-it is one of the ways to create a survival function.
- 
+Kaplan-Meier is a non-parametric method of survival function creation.
+ It is 
+\emph on
+non-parametric
+\emph default
+ because it does not take into account any covariates, or parameters, and
+ requires only the survival time and the censoring indicator.
+ It works under an independent censoring assumption.
 \end_layout
 
 \begin_layout Standard
-non-parametric - does not take covariates into account.
+The general Kaplan-Meier formula for plotting the survival function is the
+ following: 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Quotes sld
+\begin_inset Formula 
+\[
+\hat{S}(t_{(f)})=\hat{S}(t_{(f-1)})\times\hat{P}(T>t_{(f)}|T\geq f_{(f)}),
+\]
+
 \end_inset
 
-The main assumption of the Kaplan-Meier estimator is that censored data
- has the same probability of survival as uncensored data.
- 
-\begin_inset Quotes sld
-\end_inset
-
 
 \end_layout
 
 \begin_layout Standard
+That can be read as the survival function 
+\begin_inset Formula $\hat{S}$
+\end_inset
 
-\series bold
-Log-Rank Test
-\series default
-: It is a way to compare two survival functions.
- Often used in studies, where there is a target group and a placebo (control)
- group to assess the efficacy of the studied thing by comparing the survival
- curves of the two groups.
+ of time 
+\begin_inset Formula $t_{(f)}$
+\end_inset
+
+ is equal to the probability of surving past the previous time point 
+\begin_inset Formula $t_{(f-1)}$
+\end_inset
+
+ times the conditional probability of surviving past the time 
+\begin_inset Formula $t_{(f)}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+These survival curves are often compared using the log-rank Test.
+ 
+\emph on
+Log-rank test
+\emph default
+ is a way to compare two survival functions, that is often used in studies,
+ where there is a target group and a placebo (control) group to assess the
+ efficacy of the studied thing by comparing the survival curves of the two
+ groups 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
 Performance Metrics
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- Given their important role in health research, it is essential that the
- performance of a prediction model is evaluated in data not used for model
- development, using appropriate statistical methods
-\end_layout
-
-\begin_layout Plain Layout
-- This model evaluation process is generally termed ‘model validation’ [7,
- 8].
- The general idea of validating a prediction model is to establish that
- it performs well for new patients.
-\end_layout
-
-\begin_layout Plain Layout
-- 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5134,38 +5096,6 @@ Time-dependent Area under the ROC
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- Given a predicted risk score , the ROC curve compares the false positive
- rate (1 - specificity) against the true positive rate (sensitivity) for
- each possible value of .
-\end_layout
-
-\begin_layout Plain Layout
-- sensitivity and specificity become time-dependent measures, when we extend
- AUC to time
-\end_layout
-
-\begin_layout Plain Layout
-- doesn't take into account the absolute values of the predicted risks.
-\end_layout
-
-\begin_layout Plain Layout
-- By computing the area under the cumulative/dynamic ROC at time , we can
- determine how well a model can distinguish subjects who fail by a given
- time ( ) from subjects who fail after this time ( ).
- Hence, it is most relevant if one wants to predict the occurrence of an
- event in a period up to time rather than at a specific time point .
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 The 
 \emph on
 area under the receiver operating characteristics curve
@@ -5240,48 +5170,74 @@ In survival analysis, we extend the ROC to continuous outcomes, where a
  patient is alive at the start of the observation, but might experience
  an event at some point later.
  Specificity and sensitivity, therefore, become time-dependent measures.
-\end_layout
+ Here we consider 
+\emph on
+cumulative cases
+\emph default
+ and 
+\emph on
+dynamic controls
+\emph default
+ at any given point of time 
+\begin_inset Formula $t$
+\end_inset
 
-\begin_layout Subsubsection
-Time-dependent Brier Score: 
-\end_layout
+.
+ 
+\emph on
+Cumulative cases
+\emph default
+ are all subjects who experienced an event prior to or at time 
+\begin_inset Formula $t$
+\end_inset
 
-\begin_layout Standard
+.
+ While 
+\emph on
+dynamic controls
+\emph default
+ are those who are yet to experience the event after time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ By calculating the ROC AUC for any given time point 
+\begin_inset Formula $t$
+\end_inset
+
+, we can tell how well the model can distinguish patients who fail by a
+ given time 
+\begin_inset Formula $t_{i}<t$
+\end_inset
+
+ from subjects who fail after this time 
+\begin_inset Formula $t_{i}>t$
+\end_inset
+
+.
+ It is useful only if we want to predict an event happening in a period
+ up to time 
+\begin_inset Formula $t$
+\end_inset
+
+, rather than at a specific time-point 
+\begin_inset Formula $t$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-22"
+literal "false"
+
+\end_inset
+
+.
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-- an extension of the mean squared error to right censored data.
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-- time-dependent Brier score is only applicable for models that are able
- to estimate a survival function.
- (no SVM)
-\end_layout
-
-\begin_layout Plain Layout
-- is often used to assess calibration.
-\end_layout
-
-\begin_layout Plain Layout
-—If a model predicts a 10% risk of experiencing an event at time , the observed
- frequency in the data should match this percentage for a well calibrated
- model.
-\end_layout
-
-\begin_layout Plain Layout
-- c_index isn't able to tell us about calibration
-\end_layout
-
-\begin_layout Plain Layout
-- Brier score asseses both discrimination and calibration.
-\end_layout
-
-\begin_layout Plain Layout
-- 
+check for plrsm
 \end_layout
 
 \end_inset
@@ -5289,12 +5245,289 @@ status open
 
 \end_layout
 
-\begin_layout Subsection
-Cox Proportional hazards method
+\begin_layout Subsubsection
+Time-dependent Brier Score 
 \end_layout
 
 \begin_layout Standard
-the prediction - independent of time risk score
+Time-dependent ROC AUC and concordance index are great to assess the overall
+ discrimination among all time points (mean AUC and c-index) or the discriminati
+on at any individual time point (the ROC graph), but they tells us nothing
+ about the accuracy of individual predictions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-22"
+literal "false"
+
+\end_inset
+
+.
+ We would want something similar to regression performance measures used
+ in machine learning.
+ Fortunately, such metric exists.
+ Time-dependent Brier score is a modification of mean squared error (MSE)
+ that handles right censored data.
+\end_layout
+
+\begin_layout Standard
+While concordance index and time-dependent ROC AUC measure only discrimination,
+ the time-dependent Brier score measures both discrimination and calibration,
+ making it a metric of 
+\begin_inset Quotes sld
+\end_inset
+
+overall performance
+\begin_inset Quotes srd
+\end_inset
+
+.
+ It is defined by the following equation:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/brier_equation.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+change to a real equation!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+where 
+\series bold
+
+\begin_inset Formula $\hat{\pi(t|\mathbf{x})}$
+\end_inset
+
+
+\series default
+is a model’s predicted probability of remaining event-free up to time point
+ for feature vector 
+\series bold
+x
+\series default
+, and 
+\begin_inset Formula $\frac{1}{\hat{G}(t)}$
+\end_inset
+
+ is the inverse probability of censoring weight 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-22"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Cox Proportional Hazards Method
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Intro
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+The Cox proportional hazards model is defined in terms of a hazard at time
+ 
+\begin_inset Formula $t$
+\end_inset
+
+ for a subject with given vector of explanatory variables 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+h(t,\mathbf{X})=h_{0}(t)\times exp\left[\sum_{i=1}^{p}\beta_{i}X_{i}\right]\label{eq:cox_ph}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\series bold
+
+\begin_inset Formula $h_{o}(t)$
+\end_inset
+
+
+\series default
+ is a 
+\emph on
+baseline hazard function
+\emph default
+.
+ Due to the fact that the exponential function has no 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ is called 
+\emph on
+time-independent.
+
+\emph default
+ The exponential function ensures that the function is non-negative, satisfying
+ the definition of the hazard function.
+\end_layout
+
+\begin_layout Standard
+Despite the fact that the equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cox_ph"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ contains the baseline hazard function, it is not specified.
+ Fortunately, we can calculate the hazard ratio, a measure of effect, without
+ having to estimate it.
+ Similarly, the hazard function 
+\begin_inset Formula $h(t,\mathbf{X})$
+\end_inset
+
+ and the survival function 
+\begin_inset Formula $S(t,\mathbf{X})$
+\end_inset
+
+ can be estimated without the estimation of the baseline function.
+ So with minimal assumptions we can estimate everything we need (h,S and
+ HR).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Why cox ph is popular
+\series default
+: Being a semi-parametric, this model is a safe choice due to the fact that
+ it consistently delivers a sufficiently reliable result.
+ The risk of choosing the wrong model, as it often happens with parametric
+ models, is practically non-existent.
+ However, if one is sure that a parametric suits the problem, they should
+ use the parametric model.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Optimisation: 
+\series default
+Similar to logistic regression, the CoxPH uses the 
+\emph on
+maximum likelihood 
+\emph default
+function 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:max_likelihood"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to calculate its parameters (
+\begin_inset Formula $\hat{\beta_{i}}$
+\end_inset
+
+).
+ However, due to the fact that the maximal likelihood considers only a part
+ of patients, namely those who experienced an event, the formula is called
+ 
+\series bold
+\emph on
+partial
+\series default
+\emph default
+ 
+\emph on
+likelihood.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Hazard ratio:
+\series default
+ Hazard ratio is a measure of influence of an intervention on the outcome.
+ A hazard ratio is defined as the hazard for one individual divided by the
+ hazard for the other, and is calculated with the following formula:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{HR}=\frac{h(t,X^{*}\mathbf{)}}{h(t,X)}=exp\left[\sum_{i=1}^{p}\hat{\beta_{i}}(X^{*}-X)\right]\label{eq:cox_ph_hazard_ratio}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+PH assumption
+\series default
+: As can be seen, the equation does not contain 
+\begin_inset Formula $t$
+\end_inset
+
+ and the basic hazard function, making it a 
+\emph on
+proportional hazard assumption
+\emph default
+.
 \end_layout
 
 \begin_layout Subsection
@@ -5373,6 +5606,10 @@ https://arxiv.org/pdf/0811.1645.pdf
 
 \begin_layout Section
 Overview of Machine Learning Libraries and Tools
+\end_layout
+
+\begin_layout Standard
+for the survival analysis the python library scikit-survival was used
 \end_layout
 
 \begin_layout Standard
