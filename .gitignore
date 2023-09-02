@@ -1,2 +1,7 @@
 *.lyx~
 *.lyx#
+.DS_Store
+Thesis/.DS_Store
+Thesis/Images/.DS_Store
+Thesis/Images/EDA/.DS_Store
+Thesis/Images/EDA/Kaplan-Meier/.DS_Store
