@@ -1,4 +1,4 @@
-
+import Button from "./button"
 
 function SideBarItem() {
     return (
@@ -6,16 +6,6 @@ function SideBarItem() {
             <p><strong>Pair id</strong> 123</p>
             <p><strong>Blood group:</strong> A</p>
             <p><strong>Type</strong> Deceased</p>
-        </div>
-    )
-}
-
-function AddPairButton() {
-    return (
-        <div className="add-pair-button mt-6"> 
-            <button className="bg-primary rounded-md p-2 w-full text-white">
-                Add Pair +
-            </button>
         </div>
     )
 }
@@ -30,7 +20,7 @@ function SideBar() {
                 <SideBarItem />
                 <SideBarItem />
 
-                <AddPairButton />
+                <Button name="Add Pair +" />
             </div>
         </div>
     )
