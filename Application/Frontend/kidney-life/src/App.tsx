@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SideBar from './Components/sidebar';
-import NavBar from './Components/navbar';
+import SideBar from './components/sidebar';
+import NavBar from './components/navbar';
+import AddNewPair from './components/addNewPair';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
         </div>
         <div className="sidebar">
           <SideBar />
+        </div>
+        <div className="add-new-pair">
+          <AddNewPair />
         </div>
       </body>
   );
