@@ -1,8 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  mode: 'jit',
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#031d44', // good
+        secondary: '#ddf1f8' , // good '#c7e8f3'
+        tertiary: '#bbe3f1',
+        quaternary: '#a9d9e9',
+      }
+    },
   },
   plugins: [],
 }
