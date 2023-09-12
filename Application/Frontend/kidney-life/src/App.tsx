@@ -4,6 +4,7 @@ import './App.css';
 import SideBar from './components/sidebar';
 import NavBar from './components/navbar';
 import AddNewPair from './components/addNewPair';
+import AddNewPairNew from './components/addNewPair';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <SideBar />
         </div>
         <div className="add-new-pair">
-          <AddNewPair />
+          <AddNewPairNew />
         </div>
       </body>
   );
