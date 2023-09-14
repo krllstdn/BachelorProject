@@ -1,6 +1,7 @@
 import Button from "./button"
 
 function SideBarItem() {
+    // use ternary operator and props to show different info: donor or recipient
     return (
         <div className="bg-tertiary mt-4 p-3 rounded-md">
             <p><strong>Pair id</strong> 123</p>
@@ -12,6 +13,8 @@ function SideBarItem() {
 
 
 function SideBar() {
+    // use ternary operator and props to show different info: donor or recipient
+    // i need to do tabs here
     return (
         <div className="flex flex-col bg-secondary p-4 w-72 h-auto ml-8 mt-5 
                         mb-8 rounded-md">

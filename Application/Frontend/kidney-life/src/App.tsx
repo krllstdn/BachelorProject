@@ -2,9 +2,10 @@ import React from 'react';
 import './App.css';
 import SideBar from './components/sidebar';
 import NavBar from './components/navbar';
+import AddNewPairNew from './components/addNewPairNew';
+import AddNewPairExisting from './components/addNewPairExisting';
 import AddNewPair from './components/addNewPair';
-import AddNewPairNew from './components/addNewPair';
-import { AddNewPairExisting } from './components/addNewPair';
+
 
 function App() {
   return (
