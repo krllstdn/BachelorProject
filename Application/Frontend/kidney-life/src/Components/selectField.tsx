@@ -4,6 +4,7 @@ type SelectFieldProps = {
     text: string;
     options: string[];
     value?: string;
+    key?: number;
     onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 };
 
@@ -11,8 +12,8 @@ type SelectFieldProps = {
 function SelectField(props: SelectFieldProps) {
     return (
         <div className="bg-quaternary p-3 text-left flex mb-3">
-            <label className="text-primary font-semibold mr-3">{props.text}</label>
-            <select className="flex-grow border-0 bg-inherit outline-none border-primary"
+            <label htmlFor={props.name} className="text-primary font-semibold mr-3">{props.text}</label>
+            <select name={props.name} key={props.key} className="flex-grow border-0 bg-inherit outline-none border-primary"
                 onChange={props.onChange} value={props.value}>
                 {props.options.map((option, index) => (
                     <option key={index} value={option}>{option}</option>

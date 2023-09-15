@@ -4,6 +4,7 @@ type InputFieldProps = {
     name: string;
     text: string;
     value?: string;
+    key: number;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
