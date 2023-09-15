@@ -6,6 +6,8 @@ import AddNewPairNew from './components/addNewPairNew';
 import AddNewPairExisting from './components/addNewPairExisting';
 import AddNewPair from './components/addNewPair';
 import InfoDisplay from './components/infoDisplay';
+import Button from './components/button';
+import ParamDisplay from './components/paramDisplay';
 
 function App() {
   const infoDataRecipient = {
@@ -32,6 +34,16 @@ function App() {
     }
   };
 
+  const infoPrediction = {
+    header: "Prediction",
+    fields: {
+        "Probability": "0.8",
+        "Confidence": "0.9",
+        "Years": "5.3",
+        "Risk Score": "0.7"
+  }
+  };
+
   return (
       <div className="App-body">
         <div className="navbar">
@@ -41,12 +53,20 @@ function App() {
           {/* <AddNewPairExisting /> */}
           {/* <AddNewPairNew /> */}
         </div>
-        <div className="main flex justify-between pr-5">
+        <div className="main flex pr-5 w-screen">
           <div className="sidebar inline-block">
             <SideBar />
           </div>
-          <InfoDisplay data={infoDataRecipient} />
-          <InfoDisplay data={infoDataDonor} />
+          <div className="w-full">
+            <div className="flex justify-between">
+              <InfoDisplay data={infoPrediction} />
+              <ParamDisplay />
+            </div>
+            <div className="flex justify-between">
+              <InfoDisplay data={infoDataRecipient} />
+              <InfoDisplay data={infoDataDonor} />
+            </div>
+          </div>
         </div>
       </div>
   );

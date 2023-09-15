@@ -22,6 +22,10 @@ function SideBar() {
             <div className="flex flex-col flex-grow">
                 <SideBarItem />
                 <SideBarItem />
+                <SideBarItem />
+                <SideBarItem />
+                <SideBarItem />
+                <SideBarItem />
 
                 <Button name="Add Pair +" />
             </div>
