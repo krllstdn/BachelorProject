@@ -9,7 +9,7 @@ export default function Button(props: ButtonProps) {
     return (
         <div className="add-pair-button mt-6"> 
             <button className="bg-primary rounded-md p-2 w-full text-white
-                                hover:bg-quinary focus:bg-quaternary"
+                                hover:bg-quinary focus:text-primary focus:bg-quaternary"
                     id="add-pair-button"
                     onClick={props.onClick} >
                 {props.name}
