@@ -17,7 +17,7 @@ function AddNewPairNew() {
     const useOfDyalisis = ["Yes", "No"]
     const race = ["White", "Black", "Asian", "Other"]
     const gender = ["Male", "Female"]
-    const donorType = ["Living", "Deceased"]
+    const donorType = ["Living", "Deceased"]       
 
     const [recipientFirstName, setRecipientFirstName] = useState<string>("");
     const [recipientLastName, setRecipientLastName] = useState<string>("");
@@ -47,6 +47,30 @@ function AddNewPairNew() {
         donorRace: setDonorRace,
         donorDonorType: setDonorDonorType,
     };
+
+    const selectDonorFieldsConfig = [
+        { name: "donorGender", text: "Gender:", options: gender, value: donorGender },
+        { name: "donorBloodType", text: "Blood type:", options: bloodTypes, value: donorBloodType },
+        { name: "donorRace", text: "Race:", options: race, value: donorRace },
+        { name: "donorDonorType", text: "Donor type:", options: donorType, value: donorDonorType }
+    ];
+
+    const selectRecipientFieldsConfig = [
+        { name: "recipientGender", text: "Gender:", options: gender, value: recipientGender },
+        { name: "recipientBloodType", text: "Blood type:", options: bloodTypes, value: recipientBloodType },
+        { name: "recipientRace", text: "Race:", options: race, value: recipientRace },
+        { name: "recipientUseOfDyalisis", text: "Use of dialysis:", options: useOfDyalisis, value: recipientUseOfDyalisis }
+    ];
+
+    const inputDonorFieldsConfig = [
+        { name: "donorFirstName", text: "First name:", value: donorFirstName },
+        { name: "donorLastName", text: "Last name:", value: donorLastName }
+    ];
+
+    const inputRecipientFieldsConfig = [
+        { name: "recipientFirstName", text: "First name:", value: recipientFirstName },
+        { name: "recipientLastName", text: "Last name:", value: recipientLastName }
+    ];
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -84,47 +108,40 @@ function AddNewPairNew() {
                         <div className="text-center">
                             <h2 className="text-2xl font-semibold mb-2">
                                 New Recipient</h2>
-                            <InputField name="recipientFirstName" text="First name:"
-                                        value={recipientFirstName} 
-                                        onChange={handleInputChange} />
-                            <InputField name="recipientLastName" text="Last name:"
-                                        value={recipientLastName} 
-                                        onChange={handleInputChange} />
-                            <SelectField name="recipientGender" text="Gender:"
-                                        options={gender} value={recipientGender} 
-                                        onChange={handleSelectChange} />
-                            <SelectField name="recipientBloodType" text="Blood type:"
-                                        options={bloodTypes} value={recipientBloodType} 
-                                        onChange={handleSelectChange} />
-                            <SelectField name="recipientRace" text="Race:"
-                                        options={race} value={recipientRace} 
-                                        onChange={handleSelectChange} />
-                            <SelectField name="recipientUseOfDyalisis"
-                                        text="Use of dialysis:" options={useOfDyalisis} 
-                                        value={recipientUseOfDyalisis} 
-                                        onChange={handleSelectChange} />
+                            {inputRecipientFieldsConfig.map((config, index) => (
+                                <InputField name={config.name} 
+                                            key={index}
+                                            text={config.text}
+                                            value={config.value} 
+                                            onChange={handleInputChange} />
+                            ))}
+                            {selectRecipientFieldsConfig.map((config, index) => (
+                                <SelectField key={index} 
+                                            name={config.name} 
+                                            text={config.text}
+                                            options={config.options} 
+                                            value={config.value} 
+                                            onChange={handleSelectChange} />
+                            ))}
                         </div>
                         <div className="text-center">
                             <h2 className="text-2xl font-semibold mb-2">New Donor</h2>
                             {/* add validation logic */}
-                            <InputField name="donorFirstName" text="First name:"
-                                        value={donorFirstName} 
-                                        onChange={handleInputChange} />
-                            <InputField name="donorLastName" text="Last name:"
-                                        value={donorLastName} 
-                                        onChange={handleInputChange} />
-                            <SelectField name="donorGender" text="Gender:" 
-                                        options={gender} value={donorGender}
-                                        onChange={handleSelectChange} />
-                            <SelectField name="donorBloodType" text="Blood type:" 
-                                        options={bloodTypes} value={donorBloodType}
-                                        onChange={handleSelectChange}/>
-                            <SelectField name="donorRace" text="Race:" 
-                                        options={race} value={donorRace}
-                                        onChange={handleSelectChange} />
-                            <SelectField name="donorDonorType" text="Donor type:" 
-                                        options={donorType} value={donorDonorType}
-                                        onChange={handleSelectChange} />
+                            {inputDonorFieldsConfig.map((config, index) => (
+                                <InputField name={config.name} 
+                                            key={index}
+                                            text={config.text}
+                                            value={config.value} 
+                                            onChange={handleInputChange} />
+                            ))}
+                            {selectDonorFieldsConfig.map((config, index) => (
+                                <SelectField key={index} 
+                                            name={config.name} 
+                                            text={config.text}
+                                            options={config.options} 
+                                            value={config.value} 
+                                            onChange={handleSelectChange} />
+                            ))}
                         </div>
                     </div>
                 </form>
