@@ -1,9 +1,7 @@
-import Button from "./button"
-import { AddNewPairButton } from "./button"
-import SideBar from "./sidebar"
 import React, { useState } from 'react';
-import InputField from "./inputField"
-import SelectField from "./selectField"
+import Button from "./button";
+import InputField from "./inputField";
+import SelectField from "./selectField";
 
 
 type SetterMap = {
@@ -72,15 +70,7 @@ function AddNewPairNew() {
         { name: "recipientLastName", text: "Last name:", value: recipientLastName }
     ];
 
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = event.target;
-        const setter = setters[name];
-        if (setter) {
-            setter(value);
-        }
-    };
-
-    const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = event.target;
         const setter = setters[name];
         if (setter) {
@@ -108,39 +98,39 @@ function AddNewPairNew() {
                         <div className="text-center">
                             <h2 className="text-2xl font-semibold mb-2">
                                 New Recipient</h2>
-                            {inputRecipientFieldsConfig.map((config, index) => (
+                            {inputRecipientFieldsConfig.map((config) => (
                                 <InputField name={config.name} 
-                                            key={index}
+                                            key={config.name}
                                             text={config.text}
                                             value={config.value} 
                                             onChange={handleInputChange} />
                             ))}
-                            {selectRecipientFieldsConfig.map((config, index) => (
-                                <SelectField key={index} 
+                            {selectRecipientFieldsConfig.map((config) => (
+                                <SelectField key={config.name} 
                                             name={config.name} 
                                             text={config.text}
                                             options={config.options} 
                                             value={config.value} 
-                                            onChange={handleSelectChange} />
+                                            onChange={handleInputChange} />
                             ))}
                         </div>
                         <div className="text-center">
                             <h2 className="text-2xl font-semibold mb-2">New Donor</h2>
                             {/* add validation logic */}
-                            {inputDonorFieldsConfig.map((config, index) => (
+                            {inputDonorFieldsConfig.map((config) => (
                                 <InputField name={config.name} 
-                                            key={index}
+                                            key={config.name}
                                             text={config.text}
                                             value={config.value} 
                                             onChange={handleInputChange} />
                             ))}
-                            {selectDonorFieldsConfig.map((config, index) => (
-                                <SelectField key={index} 
+                            {selectDonorFieldsConfig.map((config) => (
+                                <SelectField key={config.name} 
                                             name={config.name} 
                                             text={config.text}
                                             options={config.options} 
                                             value={config.value} 
-                                            onChange={handleSelectChange} />
+                                            onChange={handleInputChange} />
                             ))}
                         </div>
                     </div>

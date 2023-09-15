@@ -3,8 +3,8 @@
 type InputFieldProps = {
     name: string;
     text: string;
-    value?: string;
-    key: number;
+    value: string;
+    key: string;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 

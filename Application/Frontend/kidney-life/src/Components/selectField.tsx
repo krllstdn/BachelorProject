@@ -3,8 +3,8 @@ type SelectFieldProps = {
     name: string;
     text: string;
     options: string[];
-    value?: string;
-    key?: number;
+    value: string;
+    key: string;
     onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 };
 
