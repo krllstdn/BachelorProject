@@ -17,7 +17,7 @@ function SideBar() {
     // i need to do tabs here
     return (
         <div className="flex flex-col bg-secondary p-4 w-72 h-auto ml-8 mt-5 
-                        mb-8 rounded-md">
+                        mb-8 mr-5 rounded-md">
             <h1 className="text-center text-2xl font-semibold">Pairs</h1>
             <div className="flex flex-col flex-grow">
                 <SideBarItem />
