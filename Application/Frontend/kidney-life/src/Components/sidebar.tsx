@@ -11,8 +11,11 @@ function SideBarItem() {
     )
 }
 
+type ButtonComponentProps = {
+    onButtonClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  }
 
-function SideBar() {
+function SideBar(props: ButtonComponentProps) {
     // use ternary operator and props to show different info: donor or recipient
     // i need to do tabs here
     return (
@@ -27,7 +30,7 @@ function SideBar() {
                 <SideBarItem />
                 <SideBarItem />
 
-                <Button name="Add Pair +" />
+                <Button name="Add Pair +" onClick={props.onButtonClick} />
             </div>
         </div>
     )
