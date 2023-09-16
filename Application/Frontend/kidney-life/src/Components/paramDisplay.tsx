@@ -1,5 +1,6 @@
 import React from 'react';
 import SelectField from './selectField';
+import Button from './button';
 
 // type ParamDisplayProps = {
 //     data: {
@@ -50,7 +51,7 @@ function ParamDisplay() {
         <div className="info-display flex-grow mt-2">
             <div className="bg-secondary m-3 mb-0 p-4 pr-8 pl-8 rounded-md text-lg 
                             ">
-                <h2 className='text-3xl font-semibold mb-4'>Parameters</h2>
+                <h2 className='text-3xl font-semibold mb-4 mt-1'>Parameters</h2>
                 {selectParametersConfig.map((config) => (
                     <SelectField key={config.name}
                                 name={config.name}
@@ -59,7 +60,12 @@ function ParamDisplay() {
                                 value={config.value}
                                 onChange={handleSelectChange} />
                 ))}
-
+                
+                <div className="flex justify-end">
+                    <div className="w-40">
+                        <Button name="Estimate" onClick={() => {}} />
+                    </div>
+                </div>
             </div>
         </div>
     );

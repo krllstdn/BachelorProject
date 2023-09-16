@@ -17,7 +17,7 @@ function InfoDisplay(props: InfoDisplayProps) {
 
     return (
         <div className="info-display flex-grow mt-2">
-            <div className="bg-secondary m-3 mb-0 p-12 pb-14 rounded-md text-lg 
+            <div className="bg-secondary m-3 mb-0 p-12 pb-28 rounded-md text-lg 
                             ">
                 <h2 className='text-3xl font-semibold mb-2'>{data.header}</h2>
                 <ul>
