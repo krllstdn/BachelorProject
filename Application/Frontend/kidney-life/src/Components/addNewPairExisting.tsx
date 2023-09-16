@@ -1,6 +1,9 @@
 
+type AddNewPairExistingProps = {
+    onClose: () => void;
+}
 
-function AddNewPairExisting() {
+function AddNewPairExisting(props: AddNewPairExistingProps) {
     return (
         <div className="absolute top-0 left-0 z-10 flex justify-center 
                         items-center bg-opacity-10 bg-black backdrop-blur-sm 
@@ -18,6 +21,9 @@ function AddNewPairExisting() {
 
                     </div>
                 </div>
+                <button className="absolute top-0 right-0 text-primary pr-5 pt-2
+                                    text-3xl" type="button" 
+                                    onClick={props.onClose}> &times;</button>
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import SideBar from './components/sidebar';
 import NavBar from './components/navbar';
@@ -44,18 +44,57 @@ function App() {
   }
   };
 
+  const VIEWS = {
+    NONE: 'NONE',
+    ADD_NEW_PAIR: 'ADD_NEW_PAIR',
+    ADD_NEW_PAIR_NEW: 'ADD_NEW_PAIR_NEW',
+    ADD_NEW_PAIR_EXISTING: 'ADD_NEW_PAIR_EXISTING'
+  };
+
+  const [currentView, setCurrentView] = useState(VIEWS.NONE);
+
+  const handleOpenAddNewPair = () => {
+    setCurrentView(VIEWS.ADD_NEW_PAIR);
+  };
+
+  const handleClose = () => {
+    setCurrentView(VIEWS.NONE);
+  };
+
+  const handleOpenAddNewPairNew = () => {
+    setCurrentView(VIEWS.ADD_NEW_PAIR_NEW);
+  };
+
+  const handleOpenAddNewPairExisting = () => {
+    setCurrentView(VIEWS.ADD_NEW_PAIR_EXISTING);
+  };
+
   return (
       <div className="App-body">
         <div className="navbar">
           <NavBar />
         </div>
         <div className="add-new-pair">
+        {currentView === VIEWS.ADD_NEW_PAIR && (
+          <AddNewPair
+            onClickNew={handleOpenAddNewPairNew}
+            onClickExisting={handleOpenAddNewPairExisting}
+            onClose={handleClose}
+          />
+        )}
+        {currentView === VIEWS.ADD_NEW_PAIR_NEW && (
+          <AddNewPairNew onClose={handleClose} />
+        )}
+
+        {currentView === VIEWS.ADD_NEW_PAIR_EXISTING && (
+          <AddNewPairExisting onClose={handleClose} />
+        )}
           {/* <AddNewPairExisting /> */}
           {/* <AddNewPairNew /> */}
         </div>
         <div className="main flex pr-5 w-screen">
           <div className="sidebar inline-block">
-            <SideBar />
+            <SideBar onButtonClick={handleOpenAddNewPair}/>
           </div>
           <div className="w-full">
             <div className="flex justify-between">

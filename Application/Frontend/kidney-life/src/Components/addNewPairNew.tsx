@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import Button from "./button";
 import InputField from "./inputField";
 import SelectField from "./selectField";
+import { type } from 'os';
 
 
 type SetterMap = {
     [key: string]: React.Dispatch<React.SetStateAction<string>>;
 };
 
+type AddNewPairNewProps = {
+    onClose: () => void;
+}
 
-function AddNewPairNew() {
+function AddNewPairNew(props: AddNewPairNewProps) {
     // array of options for select fields
     const bloodTypes = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
     const useOfDyalisis = ["Yes", "No"]
@@ -83,6 +87,13 @@ function AddNewPairNew() {
         console.log(recipientLastName);
         console.log(donorFirstName);
         console.log(donorLastName);
+        
+        // todo: add validation logic
+        const isCorrect = true;
+
+        if (isCorrect) {
+            props.onClose();
+        }
     };
 
     return (
@@ -136,7 +147,8 @@ function AddNewPairNew() {
                     </div>
                 </form>
                 <button className="absolute top-0 right-0 text-primary pr-5 pt-2
-                                    text-3xl" type="button"> &times;</button>
+                                    text-3xl" type="button" 
+                                    onClick={props.onClose}> &times;</button>
                 <div className="w-full flex justify-center items-center">
                     <div className="w-40">
                         {/* <AddNewPairButton /> */}
