@@ -8,6 +8,8 @@ import AddNewPair from './components/addNewPair';
 import InfoDisplay from './components/infoDisplay';
 import Button from './components/button';
 import ParamDisplay from './components/paramDisplay';
+import {SideBarItem} from './components/sidebar';
+import { Tab } from './components/tabs';
 
 function App() {
   const infoDataRecipient = {
@@ -69,6 +71,15 @@ function App() {
     setCurrentView(VIEWS.ADD_NEW_PAIR_EXISTING);
   };
 
+  const tab: Tab[] = [
+    {
+        title: "Pairs",
+        content: <div>
+                    <SideBarItem />
+                    <SideBarItem />
+                </div>
+    }];
+
   return (
       <div className="App-body">
         <div className="navbar">
@@ -89,21 +100,19 @@ function App() {
         {currentView === VIEWS.ADD_NEW_PAIR_EXISTING && (
           <AddNewPairExisting onClose={handleClose} />
         )}
-          {/* <AddNewPairExisting /> */}
-          {/* <AddNewPairNew /> */}
         </div>
         <div className="main flex pr-5 w-screen">
           <div className="sidebar inline-block">
-            <SideBar onButtonClick={handleOpenAddNewPair}/>
+            <SideBar tabs={tab} onButtonClick={handleOpenAddNewPair}/>
           </div>
           <div className="w-full">
             <div className="flex justify-between">
-              <InfoDisplay data={infoPrediction} />
+              <InfoDisplay data={infoPrediction} styles='m-3 mb-0 p-12 pb-28'/>
               <ParamDisplay />
             </div>
             <div className="flex justify-between">
-              <InfoDisplay data={infoDataRecipient} />
-              <InfoDisplay data={infoDataDonor} />
+              <InfoDisplay data={infoDataRecipient} styles='m-3 mb-0 p-12 pb-28' />
+              <InfoDisplay data={infoDataDonor} styles='m-3 mb-0 p-12 pb-28'/>
             </div>
           </div>
         </div>
