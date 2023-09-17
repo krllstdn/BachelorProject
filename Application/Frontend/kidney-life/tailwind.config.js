@@ -4,6 +4,9 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
     extend: {
+      borderWidth: {
+        '6': '6px',
+      },
       colors: {
         primary: '#031d44', // good
         secondary: '#ddf1f8' , // good '#c7e8f3'

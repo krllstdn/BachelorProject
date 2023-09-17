@@ -2,16 +2,36 @@ import Button from "./button"
 import { Tab } from "./tabs";
 import Tabs from "./tabs";
 
-export function SideBarItem() {
 
+export type SideBarItemData = {
+    [key: string]: string | number;
+};
+
+export type SideBarItemProps = {
+    key: number;
+    isSelected: boolean;
+    onClick: () => void;
+    fields: SideBarItemData;
+};
+
+export function SideBarItem({key =1, 
+                             isSelected=false, 
+                             onClick=()=>{},
+                             fields = {"Pair id": 123, 
+                                        "Blood group": "A", 
+                                        "Type": "Deceased"} 
+                            }: SideBarItemProps) {
     return (
-        <div className="bg-tertiary mt-4 p-3 rounded-md">
-            <p><strong>Pair id</strong> 123</p>
-            <p><strong>Blood group:</strong> A</p>
-            <p><strong>Type</strong> Deceased</p>
+        <div key={key} onClick={onClick} className={"bg-tertiary mt-4 p-3 rounded-md transition duration-800 cursor-pointer "
+                                 + (isSelected ? "border-r-6 border-primary" : "")
+                                 }>
+            {Object.entries(                    fields).map(([text, value]) => (
+                <p key={text}><strong>{text}:</strong> {value}</p>
+            ))}
         </div>
     )
 }
+
 
 type SidebarProps = {
     onButtonClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
