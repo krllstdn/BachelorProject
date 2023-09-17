@@ -49,7 +49,7 @@ function ParamDisplay() {
 
     return (
         <div className="info-display flex-grow mt-2">
-            <div className="bg-secondary m-3 mb-0 p-4 pr-8 pl-8 rounded-md text-lg 
+            <div className="bg-secondary m-3 mb-0 p-4 pb-5 pr-8 pl-8 rounded-md text-lg 
                             ">
                 <h2 className='text-3xl font-semibold mb-4 mt-1'>Parameters</h2>
                 {selectParametersConfig.map((config) => (
