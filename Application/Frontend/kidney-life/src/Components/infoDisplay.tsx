@@ -7,9 +7,15 @@ type InfoDisplayProps = {
         fields: {
             [key: string]: string;
         };
-    };
+    },
+    styles?: string,
+    textSize?: string,
 };
 
+
+InfoDisplay.defaultProps = {
+    textSize: "text-3xl",
+}
 
 
 function InfoDisplay(props: InfoDisplayProps) {
@@ -17,9 +23,8 @@ function InfoDisplay(props: InfoDisplayProps) {
 
     return (
         <div className="info-display flex-grow mt-2">
-            <div className="bg-secondary m-3 mb-0 p-12 pb-28 rounded-md text-lg 
-                            ">
-                <h2 className='text-3xl font-semibold mb-2'>{data.header}</h2>
+            <div className={"bg-secondary rounded-md text-lg "+props.styles} >
+                <h2 className={props.textSize+' font-semibold mb-3'}>{data.header}</h2>
                 <ul>
                     {Object.entries(data.fields).map(([key, value]) => (
                         <li key={key} className='text-xl mb-1'>
