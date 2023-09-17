@@ -1,7 +1,9 @@
 import Button from "./button"
+import { Tab } from "./tabs";
+import Tabs from "./tabs";
 
-function SideBarItem() {
-    // use ternary operator and props to show different info: donor or recipient
+export function SideBarItem() {
+
     return (
         <div className="bg-tertiary mt-4 p-3 rounded-md">
             <p><strong>Pair id</strong> 123</p>
@@ -11,26 +13,21 @@ function SideBarItem() {
     )
 }
 
-type ButtonComponentProps = {
-    onButtonClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+type SidebarProps = {
+    onButtonClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    tabs: Tab[]; 
   }
 
-function SideBar(props: ButtonComponentProps) {
-    // use ternary operator and props to show different info: donor or recipient
-    // i need to do tabs here
-    return (
-        <div className="flex flex-col bg-secondary p-4 w-72 h-auto ml-8 mt-5 
-                        mb-8 mr-5 rounded-md">
-            <h1 className="text-center text-2xl font-semibold">Pairs</h1>
-            <div className="flex flex-col flex-grow">
-                <SideBarItem />
-                <SideBarItem />
-                <SideBarItem />
-                <SideBarItem />
-                <SideBarItem />
-                <SideBarItem />
+function SideBar(props: SidebarProps) {
 
-                <Button name="Add Pair +" onClick={props.onButtonClick} />
+    return (
+        <div className="flex flex-col bg-secondary p-4 pt-2 pb-2 w-72 h-auto ml-8 mt-2 
+                        mb-0 mr-5 rounded-md md:ml-2">
+
+            <div className="flex flex-col flex-grow">
+
+                <Tabs onButtonClick={props.onButtonClick} tabs={props.tabs} />
+
             </div>
         </div>
     )
