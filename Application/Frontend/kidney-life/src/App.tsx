@@ -71,13 +71,31 @@ function App() {
     setCurrentView(VIEWS.ADD_NEW_PAIR_EXISTING);
   };
 
+  const sidebarItemsData = [
+    {
+      "Pair id": 123,
+      "Donor Blood Group": "A",
+      "Recipient Blood Group": "B",
+      "Type": "Deceased"
+    },
+    {
+      "Pair id": 124,
+      "Donor Blood Group": "A",
+      "Recipient Blood Group": "B",
+      "Type": "Living"
+    },
+    {
+      "Pair id": 125,
+      "Donor Blood Group": "A",
+      "Recipient Blood Group": "B",
+      "Type": "Living"
+    },
+  ]
+
   const tab: Tab[] = [
     {
         title: "Pairs",
-        content: <div>
-                    <SideBarItem />
-                    <SideBarItem />
-                </div>
+        content: sidebarItemsData
     }];
 
   return (

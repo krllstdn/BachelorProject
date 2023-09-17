@@ -8,23 +8,53 @@ type AddNewPairExistingProps = {
 }
 
 function AddNewPairExisting(props: AddNewPairExistingProps) {
+    const donorItemsData = [
+        {
+          "Donor id": 123,
+          "Blood Group": "A",
+          "Type": "Deceased"
+        },
+        {
+          "Donor id": 124,
+          "Blood Group": "A",
+          "Type": "Living"
+        },
+        {
+          "Donor id": 125,
+          "Blood Group": "A",
+          "Type": "Living"
+        },
+      ]
+
+    const recipientItemsData = [
+        {
+            "Recipient id": 123,
+            "Blood Group": "A",
+            "Use of Dyalisis": "No",
+        },
+        {
+            "Recipient id": 124,
+            "Blood Group": "A",
+            "Use of Dyalisis": "No",
+        },
+        {
+            "Recipient id": 125,
+            "Blood Group": "A",
+            "Use of Dyalisis": "No",
+        },
+    ]
+
     const tabRecipient =[
         {
             title: "Recipients",
-            content: <div>
-                        <SideBarItem />
-                        <SideBarItem />
-                    </div>
+            content: recipientItemsData
         },
     ]
 
     const tabDonor =[
         {
             title: "Donors",
-            content: <div>
-                        <SideBarItem />
-                        <SideBarItem />
-                    </div>
+            content: donorItemsData
         }
     ]
 
