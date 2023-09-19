@@ -1,15 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "./button";
 import InputField from "./inputField";
 import SelectField from "./selectField";
-import { SetterMap } from "./addNewPairNew";
-import {
-  bloodTypes,
-  useOfDyalisis,
-  race,
-  gender,
-  donorType,
-} from "./constants";
 import { usePatientData } from "./usePatientData";
 import {
   generateSelectDonorFieldsConfig,
@@ -23,49 +15,21 @@ type EditPatientProps = {
 };
 
 function EditPatient(props: EditPatientProps) {
-  // array of options for select fields
-
   const {
     recipientFirstName,
-    setRecipientFirstName,
     recipientLastName,
-    setRecipientLastName,
     recipientGender,
-    setRecipientGender,
     recipientBloodType,
-    setRecipientBloodType,
     recipientRace,
-    setRecipientRace,
     recipientUseOfDyalisis,
-    setRecipientUseOfDyalisis,
     donorFirstName,
-    setDonorFirstName,
     donorLastName,
-    setDonorLastName,
     donorGender,
-    setDonorGender,
     donorBloodType,
-    setDonorBloodType,
     donorRace,
-    setDonorRace,
     donorDonorType,
-    setDonorDonorType,
+    setByKey,
   } = usePatientData();
-
-  const setters: SetterMap = {
-    recipientFirstName: setRecipientFirstName,
-    recipientLastName: setRecipientLastName,
-    recipientGender: setRecipientGender,
-    recipientBloodType: setRecipientBloodType,
-    recipientRace: setRecipientRace,
-    recipientUseOfDyalisis: setRecipientUseOfDyalisis,
-    donorFirstName: setDonorFirstName,
-    donorLastName: setDonorLastName,
-    donorGender: setDonorGender,
-    donorBloodType: setDonorBloodType,
-    donorRace: setDonorRace,
-    donorDonorType: setDonorDonorType,
-  };
 
   const selectDonorFieldsConfig = generateSelectDonorFieldsConfig({
     donorGender: donorGender,
@@ -95,10 +59,7 @@ function EditPatient(props: EditPatientProps) {
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = event.target;
-    const setter = setters[name];
-    if (setter) {
-      setter(value);
-    }
+    setByKey(name, value);
   };
 
   const buttonOnClick = () => {
@@ -125,13 +86,11 @@ function EditPatient(props: EditPatientProps) {
         className="relative w-1/2 md:w-2/3 bg-secondary pr-5 pl-5 
                               pt-5 pb-8 rounded-md border-2 border-primary"
       >
-        <h1 className="text-center text-3xl font-semibold mb-2">
-          Add new pair: New
-        </h1>
+        <h1 className="text-center text-3xl font-semibold mb-2">Edit</h1>
         <form>
           <div className="flex justify-evenly">
             <div className="text-center">
-              <h2 className="text-2xl font-semibold mb-2">New Recipient</h2>
+              <h2 className="text-2xl font-semibold mb-2">Edit Recipient</h2>
               {inputRecipientFieldsConfig.map((config) => (
                 <InputField
                   name={config.name}
@@ -153,7 +112,7 @@ function EditPatient(props: EditPatientProps) {
               ))}
             </div>
             <div className="text-center">
-              <h2 className="text-2xl font-semibold mb-2">New Donor</h2>
+              <h2 className="text-2xl font-semibold mb-2">Edit Donor</h2>
               {/* add validation logic */}
               {inputDonorFieldsConfig.map((config) => (
                 <InputField
@@ -183,7 +142,6 @@ function EditPatient(props: EditPatientProps) {
           type="button"
           onClick={props.onClose}
         >
-          {" "}
           &times;
         </button>
         <div className="w-full flex justify-center items-center">

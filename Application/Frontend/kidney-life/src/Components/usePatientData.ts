@@ -79,6 +79,13 @@ export const usePatientData = ({
     donorDonorType: setDonorDonorType,
   };
 
+  const setByKey = (key: string, value: string) => {
+    const setter = setters[key];
+    if (setter) {
+      setter(value);
+    }
+  };
+
   return {
     recipientFirstName,
     setRecipientFirstName,
@@ -104,5 +111,6 @@ export const usePatientData = ({
     setDonorRace,
     donorDonorType,
     setDonorDonorType,
+    setByKey,
   };
 };

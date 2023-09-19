@@ -1,14 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "./button";
 import InputField from "./inputField";
 import SelectField from "./selectField";
-import {
-  bloodTypes,
-  useOfDyalisis,
-  race,
-  gender,
-  donorType,
-} from "./constants";
 import { usePatientData } from "./usePatientData";
 import {
   generateSelectDonorFieldsConfig,
@@ -28,45 +21,19 @@ type AddNewPairNewProps = {
 function AddNewPairNew(props: AddNewPairNewProps) {
   const {
     recipientFirstName,
-    setRecipientFirstName,
     recipientLastName,
-    setRecipientLastName,
     recipientGender,
-    setRecipientGender,
     recipientBloodType,
-    setRecipientBloodType,
     recipientRace,
-    setRecipientRace,
     recipientUseOfDyalisis,
-    setRecipientUseOfDyalisis,
     donorFirstName,
-    setDonorFirstName,
     donorLastName,
-    setDonorLastName,
     donorGender,
-    setDonorGender,
     donorBloodType,
-    setDonorBloodType,
     donorRace,
-    setDonorRace,
     donorDonorType,
-    setDonorDonorType,
+    setByKey,
   } = usePatientData();
-
-  const setters: SetterMap = {
-    recipientFirstName: setRecipientFirstName,
-    recipientLastName: setRecipientLastName,
-    recipientGender: setRecipientGender,
-    recipientBloodType: setRecipientBloodType,
-    recipientRace: setRecipientRace,
-    recipientUseOfDyalisis: setRecipientUseOfDyalisis,
-    donorFirstName: setDonorFirstName,
-    donorLastName: setDonorLastName,
-    donorGender: setDonorGender,
-    donorBloodType: setDonorBloodType,
-    donorRace: setDonorRace,
-    donorDonorType: setDonorDonorType,
-  };
 
   const selectDonorFieldsConfig = generateSelectDonorFieldsConfig({
     donorGender: donorGender,
@@ -96,10 +63,7 @@ function AddNewPairNew(props: AddNewPairNewProps) {
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = event.target;
-    const setter = setters[name];
-    if (setter) {
-      setter(value);
-    }
+    setByKey(name, value);
   };
 
   const buttonOnClick = () => {
