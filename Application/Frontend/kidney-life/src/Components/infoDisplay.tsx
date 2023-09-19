@@ -10,6 +10,7 @@ type InfoDisplayProps = {
   styles?: string;
   textSize?: string;
   onDelete?: () => void;
+  onEdit?: () => void;
 };
 
 InfoDisplay.defaultProps = {
@@ -35,10 +36,10 @@ function InfoDisplay(props: InfoDisplayProps) {
           ))}
         </ul>
         <button
-          className="absolute top-0 right-10 text-primary p-8 pt-8
+          className="absolute top-0 right-12 text-primary p-6 pt-6
                                     text-3xl"
           type="button"
-          onClick={() => {}}
+          onClick={props.onEdit}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +57,7 @@ function InfoDisplay(props: InfoDisplayProps) {
           </svg>
         </button>
         <button
-          className="absolute top-0 right-0 text-primary p-8 pt-8
+          className="absolute top-0 right-0 text-primary p-6 pt-6
         text-3xl"
           type="button"
           onClick={props.onDelete}

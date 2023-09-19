@@ -4,6 +4,7 @@ import SideBar from "./sidebar";
 import InfoDisplay from "./infoDisplay";
 import { useState } from "react";
 import ConfirmDelete from "./confirmDelete";
+import EditPatient from "./editPatient";
 
 function PatientsPage() {
   const [activeTab, setActiveTab] = useState(0);
@@ -120,6 +121,10 @@ function PatientsPage() {
     setCurrentView(VIEWS.CONFIRM_DELETE);
   };
 
+  const handleOpenEdit = () => {
+    setCurrentView(VIEWS.EDIT);
+  };
+
   return (
     <div>
       <div className="navbar">
@@ -133,11 +138,13 @@ function PatientsPage() {
           {activeTab === 0 && (
             <div className="flex w-full justify-between">
               <InfoDisplay
+                onEdit={handleOpenEdit}
                 onDelete={handleOpenConfirmDelete}
                 data={infoDataRecipient}
                 styles="p-5 mr-5 grow"
               />
               <InfoDisplay
+                onEdit={handleOpenEdit}
                 onDelete={handleOpenConfirmDelete}
                 data={infoDataDonor}
                 styles="p-5 grow"
@@ -147,6 +154,7 @@ function PatientsPage() {
           {activeTab === 1 && (
             <div className="flex w-1/2">
               <InfoDisplay
+                onEdit={handleOpenEdit}
                 onDelete={handleOpenConfirmDelete}
                 data={infoDataRecipient}
                 styles="p-5 grow"
@@ -156,6 +164,7 @@ function PatientsPage() {
           {activeTab === 2 && (
             <div className="flex w-1/2">
               <InfoDisplay
+                onEdit={handleOpenEdit}
                 onDelete={handleOpenConfirmDelete}
                 data={infoDataDonor}
                 styles="p-5 grow"
@@ -167,6 +176,7 @@ function PatientsPage() {
       {currentView === VIEWS.CONFIRM_DELETE && (
         <ConfirmDelete onClose={handleClose} />
       )}
+      {currentView === VIEWS.EDIT && <EditPatient onClose={handleClose} />}
     </div>
   );
 }
