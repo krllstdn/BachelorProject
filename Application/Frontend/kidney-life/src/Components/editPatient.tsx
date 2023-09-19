@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "./button";
 import InputField from "./inputField";
 import SelectField from "./selectField";
+import { SetterMap } from "./addNewPairNew";
 import {
   bloodTypes,
   useOfDyalisis,
@@ -17,15 +18,13 @@ import {
   generateInputRecipientFieldsConfig,
 } from "./fieldConfig";
 
-export type SetterMap = {
-  [key: string]: React.Dispatch<React.SetStateAction<string>>;
-};
-
-type AddNewPairNewProps = {
+type EditPatientProps = {
   onClose: () => void;
 };
 
-function AddNewPairNew(props: AddNewPairNewProps) {
+function EditPatient(props: EditPatientProps) {
+  // array of options for select fields
+
   const {
     recipientFirstName,
     setRecipientFirstName,
@@ -119,12 +118,12 @@ function AddNewPairNew(props: AddNewPairNewProps) {
   return (
     <div
       className="absolute top-0 left-0 z-10 flex justify-center 
-                        items-center bg-opacity-10 bg-black backdrop-blur-sm 
-                        h-screen w-screen"
+                          items-center bg-opacity-10 bg-black backdrop-blur-sm 
+                          h-screen w-screen"
     >
       <div
         className="relative w-1/2 md:w-2/3 bg-secondary pr-5 pl-5 
-                            pt-5 pb-8 rounded-md border-2 border-primary"
+                              pt-5 pb-8 rounded-md border-2 border-primary"
       >
         <h1 className="text-center text-3xl font-semibold mb-2">
           Add new pair: New
@@ -180,7 +179,7 @@ function AddNewPairNew(props: AddNewPairNewProps) {
         </form>
         <button
           className="absolute top-0 right-0 text-primary pr-5 pt-2
-                                    text-3xl"
+                                      text-3xl"
           type="button"
           onClick={props.onClose}
         >
@@ -189,7 +188,6 @@ function AddNewPairNew(props: AddNewPairNewProps) {
         </button>
         <div className="w-full flex justify-center items-center">
           <div className="w-40">
-            {/* <AddNewPairButton /> */}
             <Button name="Add pair +" onClick={buttonOnClick}></Button>
           </div>
         </div>
@@ -198,4 +196,4 @@ function AddNewPairNew(props: AddNewPairNewProps) {
   );
 }
 
-export default AddNewPairNew;
+export default EditPatient;
