@@ -1,6 +1,7 @@
 import Button from "./button";
 import { Tab } from "./tabs";
 import Tabs from "./tabs";
+import { Dispatch, SetStateAction } from "react";
 
 export type SideBarItemData = {
   [key: string]: string | number;
@@ -40,6 +41,7 @@ export function SideBarItem({
 type SidebarProps = {
   onButtonClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   tabs: Tab[];
+  setActiveTab?: Dispatch<SetStateAction<number>>;
 };
 
 function SideBar(props: SidebarProps) {
@@ -49,7 +51,11 @@ function SideBar(props: SidebarProps) {
                         mb-0 mr-5 rounded-md md:ml-2"
     >
       <div className="flex flex-col flex-grow">
-        <Tabs onButtonClick={props.onButtonClick} tabs={props.tabs} />
+        <Tabs
+          onButtonClick={props.onButtonClick}
+          tabs={props.tabs}
+          setActiveTab={props.setActiveTab}
+        />
       </div>
     </div>
   );

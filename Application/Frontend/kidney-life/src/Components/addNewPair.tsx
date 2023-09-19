@@ -10,8 +10,8 @@ function AddNewPair(props: ButtonComponentProps) {
   return (
     <div
       className="absolute top-0 left-0 z-10 flex justify-center 
-                        items-center bg-opacity-10 bg-black backdrop-blur-sm 
-                        h-screen w-screen"
+                 items-center bg-opacity-10 bg-black backdrop-blur-sm 
+                 h-screen w-screen"
     >
       <div
         className="relative w-96 bg-secondary pr-5 pl-5 pt-5 pb-8
