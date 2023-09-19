@@ -107,6 +107,7 @@ function PatientsPage() {
   const VIEWS = {
     NONE: "NONE",
     CONFIRM_DELETE: "CONFIRM_DELETE",
+    EDIT: "EDIT",
   };
 
   const [currentView, setCurrentView] = useState(VIEWS.NONE);
@@ -114,6 +115,7 @@ function PatientsPage() {
   const handleClose = () => {
     setCurrentView(VIEWS.NONE);
   };
+
   const handleOpenConfirmDelete = () => {
     setCurrentView(VIEWS.CONFIRM_DELETE);
   };
@@ -152,7 +154,7 @@ function PatientsPage() {
             </div>
           )}
           {activeTab === 2 && (
-            <div>
+            <div className="flex w-1/2">
               <InfoDisplay
                 onDelete={handleOpenConfirmDelete}
                 data={infoDataDonor}
