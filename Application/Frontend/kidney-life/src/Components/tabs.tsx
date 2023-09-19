@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "./button";
 import { SideBarItemData } from "./sidebar";
 import { SideBarItem } from "./sidebar";
+import { Dispatch, SetStateAction } from "react";
 
 export type Tab = {
   title: string;
@@ -11,12 +12,15 @@ export type Tab = {
 type TabsProps = {
   tabs: Tab[];
   onButtonClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  setActiveTab?: Dispatch<SetStateAction<number>>;
 };
 
 function Tabs(props: TabsProps) {
   const tabs = props.tabs;
+  const setActiveTab = props.setActiveTab || (() => {});
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [selectedItem, setSelectedItem] = useState<number | null>(0);
+  const [fadeOut, setFadeOut] = useState(false);
 
   if (tabs.length === 1) {
     return (
@@ -47,23 +51,45 @@ function Tabs(props: TabsProps) {
     <div>
       <div className="tabs-header">
         {tabs.map((tab, index) => (
-          <button key={index} onClick={() => setActiveTabIndex(index)}>
+          <button
+            key={index}
+            onClick={() => {
+              setFadeOut(true);
+
+              setTimeout(() => {
+                setActiveTabIndex(index);
+                setActiveTab(index);
+                setFadeOut(false);
+              }, 150);
+            }}
+            className={
+              "mr-4 mt-4 mb-1 text-xl font-semibold transition duration-800 " +
+              (activeTabIndex === index ? "border-b-3 border-primary" : "")
+            }
+          >
             {tab.title}
           </button>
         ))}
       </div>
-      <div className="tabs-content">
-        {tabs[0].content.map(
-          (item, index) =>
+      {tabs.map((tab, index) => (
+        <div
+          key={index}
+          className={`tabs-content transition-opacity duration-800 ease-in ${
+            activeTabIndex === index ? "opacity-100" : "opacity-0 hidden"
+          }`}
+        >
+          {tab.content.map((item, itemIndex) =>
             SideBarItem({
               fields: item,
-              key: index,
-              isSelected: selectedItem === index,
-              onClick: () => setSelectedItem(index),
-            }) // why is it a function?
-        )}
-      </div>
-      <div className="mt-4">
+              key: itemIndex,
+              isSelected: selectedItem === itemIndex,
+              onClick: () => setSelectedItem(itemIndex),
+            })
+          )}
+        </div>
+      ))}
+
+      <div className="mt-5 mb-2">
         <Button
           name={"Add " + tabs[activeTabIndex].title + " +"}
           onClick={props.onButtonClick}
