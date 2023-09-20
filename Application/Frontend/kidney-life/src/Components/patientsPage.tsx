@@ -5,6 +5,7 @@ import InfoDisplay from "./infoDisplay";
 import { useState } from "react";
 import ConfirmDelete from "./confirmDelete";
 import EditPatient from "./editPatient";
+import { infoDisplayTypes, formTypes } from "./constants";
 
 function PatientsPage() {
   const [activeTab, setActiveTab] = useState(0);
@@ -109,6 +110,9 @@ function PatientsPage() {
     NONE: "NONE",
     CONFIRM_DELETE: "CONFIRM_DELETE",
     EDIT: "EDIT",
+    EDIT_DONOR: "EDIT_DONOR",
+    EDIT_RECIPIENT: "EDIT_RECIPIENT",
+    // EDIT_PAIR: "EDIT_PAIR",
   };
 
   const [currentView, setCurrentView] = useState(VIEWS.NONE);
@@ -125,6 +129,14 @@ function PatientsPage() {
     setCurrentView(VIEWS.EDIT);
   };
 
+  const handleOpenEditDonor = () => {
+    setCurrentView(VIEWS.EDIT_DONOR);
+  };
+
+  const handleOpenEditRecipient = () => {
+    setCurrentView(VIEWS.EDIT_RECIPIENT);
+  };
+
   return (
     <div>
       <div className="navbar">
@@ -138,36 +150,40 @@ function PatientsPage() {
           {activeTab === 0 && (
             <div className="flex w-full justify-between">
               <InfoDisplay
-                onEdit={handleOpenEdit}
+                onEdit={handleOpenEditRecipient}
                 onDelete={handleOpenConfirmDelete}
                 data={infoDataRecipient}
                 styles="p-5 mr-5 grow"
+                type={infoDisplayTypes.RECIPIENT}
               />
               <InfoDisplay
-                onEdit={handleOpenEdit}
+                onEdit={handleOpenEditDonor}
                 onDelete={handleOpenConfirmDelete}
                 data={infoDataDonor}
                 styles="p-5 grow"
+                type={infoDisplayTypes.DONOR}
               />
             </div>
           )}
           {activeTab === 1 && (
             <div className="flex w-1/2">
               <InfoDisplay
-                onEdit={handleOpenEdit}
+                onEdit={handleOpenEditRecipient}
                 onDelete={handleOpenConfirmDelete}
                 data={infoDataRecipient}
                 styles="p-5 grow"
+                type={infoDisplayTypes.RECIPIENT}
               />
             </div>
           )}
           {activeTab === 2 && (
             <div className="flex w-1/2">
               <InfoDisplay
-                onEdit={handleOpenEdit}
+                onEdit={handleOpenEditDonor}
                 onDelete={handleOpenConfirmDelete}
                 data={infoDataDonor}
                 styles="p-5 grow"
+                type={infoDisplayTypes.DONOR}
               />
             </div>
           )}
@@ -177,6 +193,12 @@ function PatientsPage() {
         <ConfirmDelete onClose={handleClose} />
       )}
       {currentView === VIEWS.EDIT && <EditPatient onClose={handleClose} />}
+      {currentView === VIEWS.EDIT_DONOR && (
+        <EditPatient displayType={formTypes.DONOR} onClose={handleClose} />
+      )}
+      {currentView === VIEWS.EDIT_RECIPIENT && (
+        <EditPatient displayType={formTypes.RECIPIENT} onClose={handleClose} />
+      )}
     </div>
   );
 }
