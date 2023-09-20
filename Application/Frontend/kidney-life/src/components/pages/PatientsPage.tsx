@@ -5,106 +5,20 @@ import InfoDisplay from "../cards/InfoDisplay";
 import { useState } from "react";
 import ConfirmDelete from "../modals/ConfirmDelete";
 import EditPatient from "../forms/EditPatient";
-import { infoDisplayTypes, formTypes } from "../../helpers/constants";
+import {
+  infoDisplayTypes,
+  formTypes,
+  tabDonor,
+  tabPair,
+  tabRecipient,
+  infoDataDonor,
+  infoDataRecipient,
+} from "../../helpers/constants";
 
 function PatientsPage() {
   const [activeTab, setActiveTab] = useState(0);
 
-  const donorItemsData = [
-    {
-      "Donor id": 123,
-      "Blood Group": "A",
-      Type: "Deceased",
-    },
-    {
-      "Donor id": 124,
-      "Blood Group": "A",
-      Type: "Living",
-    },
-    {
-      "Donor id": 125,
-      "Blood Group": "A",
-      Type: "Living",
-    },
-  ];
-
-  const recipientItemsData = [
-    {
-      "Recipient id": 123,
-      "Blood Group": "A",
-      "Use of Dyalisis": "No",
-    },
-    {
-      "Recipient id": 124,
-      "Blood Group": "A",
-      "Use of Dyalisis": "No",
-    },
-    {
-      "Recipient id": 125,
-      "Blood Group": "A",
-      "Use of Dyalisis": "No",
-    },
-  ];
-
-  const pairItemsData = [
-    {
-      "Pair id": 123,
-      "Donor Blood Group": "A",
-      "Recipient Blood Group": "B",
-      Type: "Deceased",
-    },
-    {
-      "Pair id": 124,
-      "Donor Blood Group": "A",
-      "Recipient Blood Group": "B",
-      Type: "Living",
-    },
-    {
-      "Pair id": 125,
-      "Donor Blood Group": "A",
-      "Recipient Blood Group": "B",
-      Type: "Living",
-    },
-  ];
-
-  const tabs: Tab[] = [
-    {
-      title: "Pairs",
-      content: pairItemsData,
-    },
-    {
-      title: "Recipients",
-      content: recipientItemsData,
-    },
-    {
-      title: "Donors",
-      content: donorItemsData,
-    },
-  ];
-
-  const infoDataRecipient = {
-    header: "Recipient info",
-    fields: {
-      Name: "John Doe",
-      Age: "25",
-      "Blood Group": "A+",
-      Gender: "Male",
-      "Use of Dyalisis": "No",
-      Race: "White",
-    },
-  };
-
-  const infoDataDonor = {
-    header: "Donor info",
-    fields: {
-      Name: "Jane Doe",
-      Age: "25",
-      "Blood Group": "A+",
-      Gender: "Female",
-      "Donor Type": "Living",
-      Race: "White",
-    },
-  };
+  const tabs: Tab[] = [tabPair[0], tabRecipient[0], tabDonor[0]];
 
   const VIEWS = {
     NONE: "NONE",

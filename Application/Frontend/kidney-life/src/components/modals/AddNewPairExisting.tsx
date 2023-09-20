@@ -4,6 +4,12 @@ import Button from "../buttons/Button";
 import InfoDisplay from "../cards/InfoDisplay";
 import CloseIcon from "../buttons/CloseButton";
 import BackIcon from "../buttons/BackButton";
+import {
+  tabRecipient,
+  tabDonor,
+  infoDataDonor,
+  infoDataRecipient,
+} from "../../helpers/constants";
 
 type AddNewPairExistingProps = {
   onClose: () => void;
@@ -11,80 +17,6 @@ type AddNewPairExistingProps = {
 };
 
 function AddNewPairExisting(props: AddNewPairExistingProps) {
-  const donorItemsData = [
-    {
-      "Donor id": 123,
-      "Blood Group": "A",
-      Type: "Deceased",
-    },
-    {
-      "Donor id": 124,
-      "Blood Group": "A",
-      Type: "Living",
-    },
-    {
-      "Donor id": 125,
-      "Blood Group": "A",
-      Type: "Living",
-    },
-  ];
-
-  const recipientItemsData = [
-    {
-      "Recipient id": 123,
-      "Blood Group": "A",
-      "Use of Dyalisis": "No",
-    },
-    {
-      "Recipient id": 124,
-      "Blood Group": "A",
-      "Use of Dyalisis": "No",
-    },
-    {
-      "Recipient id": 125,
-      "Blood Group": "A",
-      "Use of Dyalisis": "No",
-    },
-  ];
-
-  const tabRecipient = [
-    {
-      title: "Recipients",
-      content: recipientItemsData,
-    },
-  ];
-
-  const tabDonor = [
-    {
-      title: "Donors",
-      content: donorItemsData,
-    },
-  ];
-
-  const infoDataRecipient = {
-    header: "Recipient info",
-    fields: {
-      Name: "John Doe",
-      Age: "25",
-      "Blood Group": "A+",
-      Gender: "Male",
-      "Use of Dyalisis": "No",
-      Race: "White",
-    },
-  };
-
-  const infoDataDonor = {
-    header: "Donor info",
-    fields: {
-      Name: "Jane Doe",
-      Age: "25",
-      "Blood Group": "A+",
-      Gender: "Female",
-      "Donor Type": "Living",
-      Race: "White",
-    },
-  };
-
   return (
     <div
       className="absolute top-0 left-0 z-10 flex justify-center 
