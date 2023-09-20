@@ -9,9 +9,15 @@ import {
   generateInputDonorFieldsConfig,
   generateInputRecipientFieldsConfig,
 } from "./fieldConfig";
+import { formTypes } from "./constants";
 
 type EditPatientProps = {
   onClose: () => void;
+  displayType: string;
+};
+
+EditPatient.defaultProps = {
+  displayType: formTypes.PAIR,
 };
 
 function EditPatient(props: EditPatientProps) {
@@ -63,11 +69,6 @@ function EditPatient(props: EditPatientProps) {
   };
 
   const buttonOnClick = () => {
-    console.log(recipientFirstName);
-    console.log(recipientLastName);
-    console.log(donorFirstName);
-    console.log(donorLastName);
-
     // todo: add validation logic
     const isCorrect = true;
 
@@ -89,51 +90,110 @@ function EditPatient(props: EditPatientProps) {
         <h1 className="text-center text-3xl font-semibold mb-2">Edit</h1>
         <form>
           <div className="flex justify-evenly">
-            <div className="text-center">
-              <h2 className="text-2xl font-semibold mb-2">Edit Recipient</h2>
-              {inputRecipientFieldsConfig.map((config) => (
-                <InputField
-                  name={config.name}
-                  key={config.name}
-                  text={config.text}
-                  value={config.value}
-                  onChange={handleInputChange}
-                />
-              ))}
-              {selectRecipientFieldsConfig.map((config) => (
-                <SelectField
-                  key={config.name}
-                  name={config.name}
-                  text={config.text}
-                  options={config.options}
-                  value={config.value}
-                  onChange={handleInputChange}
-                />
-              ))}
-            </div>
-            <div className="text-center">
-              <h2 className="text-2xl font-semibold mb-2">Edit Donor</h2>
-              {/* add validation logic */}
-              {inputDonorFieldsConfig.map((config) => (
-                <InputField
-                  name={config.name}
-                  key={config.name}
-                  text={config.text}
-                  value={config.value}
-                  onChange={handleInputChange}
-                />
-              ))}
-              {selectDonorFieldsConfig.map((config) => (
-                <SelectField
-                  key={config.name}
-                  name={config.name}
-                  text={config.text}
-                  options={config.options}
-                  value={config.value}
-                  onChange={handleInputChange}
-                />
-              ))}
-            </div>
+            {props.displayType === formTypes.RECIPIENT && (
+              <div className="text-center">
+                <div>
+                  <h2 className="text-2xl font-semibold mb-2">
+                    Edit Recipient
+                  </h2>
+                  {inputRecipientFieldsConfig.map((config) => (
+                    <InputField
+                      name={config.name}
+                      key={config.name}
+                      text={config.text}
+                      value={config.value}
+                      onChange={handleInputChange}
+                    />
+                  ))}
+                  {selectRecipientFieldsConfig.map((config) => (
+                    <SelectField
+                      key={config.name}
+                      name={config.name}
+                      text={config.text}
+                      options={config.options}
+                      value={config.value}
+                      onChange={handleInputChange}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+            {props.displayType === formTypes.DONOR && (
+              <div className="text-center">
+                <h2 className="text-2xl font-semibold mb-2">Edit Donor</h2>
+                {inputDonorFieldsConfig.map((config) => (
+                  <InputField
+                    name={config.name}
+                    key={config.name}
+                    text={config.text}
+                    value={config.value}
+                    onChange={handleInputChange}
+                  />
+                ))}
+                {selectDonorFieldsConfig.map((config) => (
+                  <SelectField
+                    key={config.name}
+                    name={config.name}
+                    text={config.text}
+                    options={config.options}
+                    value={config.value}
+                    onChange={handleInputChange}
+                  />
+                ))}
+              </div>
+            )}
+            {props.displayType === formTypes.PAIR && (
+              <div className="justify-evenly">
+                <div className="text-center">
+                  <div>
+                    <h2 className="text-2xl font-semibold mb-2">
+                      Edit Recipient
+                    </h2>
+                    {inputRecipientFieldsConfig.map((config) => (
+                      <InputField
+                        name={config.name}
+                        key={config.name}
+                        text={config.text}
+                        value={config.value}
+                        onChange={handleInputChange}
+                      />
+                    ))}
+                    {selectRecipientFieldsConfig.map((config) => (
+                      <SelectField
+                        key={config.name}
+                        name={config.name}
+                        text={config.text}
+                        options={config.options}
+                        value={config.value}
+                        onChange={handleInputChange}
+                      />
+                    ))}
+                  </div>
+                </div>
+                <div className="text-center">
+                  <h2 className="text-2xl font-semibold mb-2">Edit Donor</h2>
+                  {inputDonorFieldsConfig.map((config) => (
+                    <InputField
+                      name={config.name}
+                      key={config.name}
+                      text={config.text}
+                      value={config.value}
+                      onChange={handleInputChange}
+                    />
+                  ))}
+                  {selectDonorFieldsConfig.map((config) => (
+                    <SelectField
+                      key={config.name}
+                      name={config.name}
+                      text={config.text}
+                      options={config.options}
+                      value={config.value}
+                      onChange={handleInputChange}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </form>
         <button
@@ -146,7 +206,7 @@ function EditPatient(props: EditPatientProps) {
         </button>
         <div className="w-full flex justify-center items-center">
           <div className="w-40">
-            <Button name="Add pair +" onClick={buttonOnClick}></Button>
+            <Button name="Save changes" onClick={buttonOnClick}></Button>
           </div>
         </div>
       </div>
