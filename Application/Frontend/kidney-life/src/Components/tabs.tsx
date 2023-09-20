@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Button from "./button";
-import { SideBarItemData } from "./sidebar";
-import { SideBarItem } from "./sidebar";
+import Button from "./Button";
+import { SideBarItemData } from "./Sidebar";
+import { SideBarItem } from "./Sidebar";
 import { Dispatch, SetStateAction } from "react";
 
 export type Tab = {

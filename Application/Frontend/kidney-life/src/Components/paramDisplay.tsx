@@ -1,6 +1,6 @@
 import React from "react";
-import SelectField from "./selectField";
-import Button from "./button";
+import SelectField from "./SelectField";
+import Button from "./Button";
 
 // type ParamDisplayProps = {
 //     data: {

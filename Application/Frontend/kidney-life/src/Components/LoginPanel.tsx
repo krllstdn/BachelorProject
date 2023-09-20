@@ -1,5 +1,5 @@
-import InputField from "./inputField";
-import Button from "./button";
+import InputField from "./InputField";
+import Button from "./Button";
 
 function LoginPanel() {
   return (

@@ -1,14 +1,14 @@
 import React from "react";
-import Button from "./button";
-import InputField from "./inputField";
-import SelectField from "./selectField";
-import { usePatientData } from "./usePatientData";
+import Button from "./Button";
+import InputField from "./InputField";
+import SelectField from "./SelectField";
+import { usePatientData } from "../helpers/usePatientData";
 import {
   generateSelectDonorFieldsConfig,
   generateSelectRecipientFieldsConfig,
   generateInputDonorFieldsConfig,
   generateInputRecipientFieldsConfig,
-} from "./fieldConfig";
+} from "../helpers/fieldConfig";
 
 export type SetterMap = {
   [key: string]: React.Dispatch<React.SetStateAction<string>>;
