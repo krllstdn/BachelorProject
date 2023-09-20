@@ -1,6 +1,6 @@
-import { SideBarItem } from "./sidebar";
-import SideBar from "./sidebar";
-import { Tab } from "./tabs";
+import { SideBarItem } from "./Sidebar";
+import SideBar from "./Sidebar";
+import { Tab } from "./Tabs";
 
 function PatientsSidebar() {
   const recipientItemsData = [

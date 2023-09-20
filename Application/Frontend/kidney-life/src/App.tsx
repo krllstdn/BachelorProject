@@ -1,7 +1,6 @@
-import React, { useState } from "react";
 import "./App.css";
-import DashboardPage from "./components/dashboardPage";
-import PatientsPage from "./components/patientsPage";
+import DashboardPage from "./components/DashboardPage";
+import PatientsPage from "./components/PatientsPage";
 import LoginPage from "./components/LoginPage";
 
 function App() {

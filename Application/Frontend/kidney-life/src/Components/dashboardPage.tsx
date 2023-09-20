@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import SideBar from "./sidebar";
-import NavBar from "./navbar";
-import AddNewPairNew from "./addNewPairNew";
-import AddNewPairExisting from "./addNewPairExisting";
-import AddNewPair from "./addNewPair";
-import InfoDisplay from "./infoDisplay";
-import ParamDisplay from "./paramDisplay";
-import { Tab } from "./tabs";
+import SideBar from "./Sidebar";
+import NavBar from "./Navbar";
+import AddNewPairNew from "./AddNewPairNew";
+import AddNewPairExisting from "./AddNewPairExisting";
+import AddNewPair from "./AddNewPair";
+import InfoDisplay from "./InfoDisplay";
+import ParamDisplay from "./ParamDisplay";
+import { Tab } from "./Tabs";
 
 function DashboardPage() {
   const infoDataRecipient = {

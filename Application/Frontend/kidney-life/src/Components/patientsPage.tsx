@@ -1,11 +1,11 @@
-import NavBar from "./navbar";
-import { Tab } from "./tabs";
-import SideBar from "./sidebar";
-import InfoDisplay from "./infoDisplay";
+import NavBar from "./Navbar";
+import { Tab } from "./Tabs";
+import SideBar from "./Sidebar";
+import InfoDisplay from "./InfoDisplay";
 import { useState } from "react";
-import ConfirmDelete from "./confirmDelete";
-import EditPatient from "./editPatient";
-import { infoDisplayTypes, formTypes } from "./constants";
+import ConfirmDelete from "./ConfirmDelete";
+import EditPatient from "./EditPatient";
+import { infoDisplayTypes, formTypes } from "../helpers/constants";
 
 function PatientsPage() {
   const [activeTab, setActiveTab] = useState(0);

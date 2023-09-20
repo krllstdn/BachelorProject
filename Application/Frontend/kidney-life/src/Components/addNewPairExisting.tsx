@@ -1,7 +1,7 @@
-import SideBar from "./sidebar";
-import { SideBarItem } from "./sidebar";
-import Button from "./button";
-import InfoDisplay from "./infoDisplay";
+import SideBar from "./Sidebar";
+import { SideBarItem } from "./Sidebar";
+import Button from "./Button";
+import InfoDisplay from "./InfoDisplay";
 
 type AddNewPairExistingProps = {
   onClose: () => void;
