@@ -14,7 +14,10 @@ module.exports = {
         tertiary: '#bbe3f1',
         quaternary: '#a9d9e9',
         quinary: '#063a89', // '07439d', 
-      }
+      },
+      width: {
+        '128': '32rem',
+      },
     },
   },
   plugins: [],
