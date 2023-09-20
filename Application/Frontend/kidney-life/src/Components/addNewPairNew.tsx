@@ -9,6 +9,8 @@ import {
   generateInputDonorFieldsConfig,
   generateInputRecipientFieldsConfig,
 } from "../helpers/fieldConfig";
+import CloseIcon from "./CloseIcon";
+import BackIcon from "./BackIcon";
 
 export type SetterMap = {
   [key: string]: React.Dispatch<React.SetStateAction<string>>;
@@ -16,6 +18,7 @@ export type SetterMap = {
 
 type AddNewPairNewProps = {
   onClose: () => void;
+  onBack: () => void;
 };
 
 function AddNewPairNew(props: AddNewPairNewProps) {
@@ -142,15 +145,8 @@ function AddNewPairNew(props: AddNewPairNewProps) {
             </div>
           </div>
         </form>
-        <button
-          className="absolute top-0 right-0 text-primary pr-5 pt-2
-                                    text-3xl"
-          type="button"
-          onClick={props.onClose}
-        >
-          {" "}
-          &times;
-        </button>
+        <CloseIcon onClick={props.onClose} />
+        <BackIcon onClick={props.onBack} />
         <div className="w-full flex justify-center items-center">
           <div className="w-40">
             {/* <AddNewPairButton /> */}

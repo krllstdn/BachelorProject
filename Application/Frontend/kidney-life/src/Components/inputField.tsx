@@ -13,7 +13,7 @@ function InputField(props: InputFieldProps) {
       <label className="text-primary font-semibold mr-3">{props.text}</label>
       <input
         name={props.name}
-        className="border-none outline-none bg-inherit border-primary w-9/12"
+        className="border-none outline-none bg-inherit border-primary w-7/12"
         type={props.type ? props.type : "text"}
         onChange={props.onChange}
         value={props.value}
