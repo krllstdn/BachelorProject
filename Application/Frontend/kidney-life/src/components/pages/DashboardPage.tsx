@@ -7,32 +7,9 @@ import AddNewPair from "../modals/AddNewPair";
 import InfoDisplay from "../cards/InfoDisplay";
 import ParamDisplay from "../cards/ParamDisplay";
 import { Tab } from "../forms/Tabs";
+import { infoDataDonor, infoDataRecipient } from "../../helpers/constants";
 
 function DashboardPage() {
-  const infoDataRecipient = {
-    header: "Recipient info",
-    fields: {
-      Name: "John Doe",
-      Age: "25",
-      "Blood Group": "A+",
-      Gender: "Male",
-      "Use of Dyalisis": "No",
-      Race: "White",
-    },
-  };
-
-  const infoDataDonor = {
-    header: "Donor info",
-    fields: {
-      Name: "Jane Doe",
-      Age: "25",
-      "Blood Group": "A+",
-      Gender: "Female",
-      "Donor Type": "Living",
-      Race: "White",
-    },
-  };
-
   const infoPrediction = {
     header: "Prediction",
     fields: {
