@@ -1,16 +1,16 @@
 import React from "react";
-import Button from "./Button";
-import InputField from "./InputField";
-import SelectField from "./SelectField";
-import { usePatientData } from "../helpers/usePatientData";
+import Button from "../buttons/Button";
+import InputField from "../forms/InputField";
+import SelectField from "../forms/SelectField";
+import { usePatientData } from "../../helpers/usePatientData";
 import {
   generateSelectDonorFieldsConfig,
   generateSelectRecipientFieldsConfig,
   generateInputDonorFieldsConfig,
   generateInputRecipientFieldsConfig,
-} from "../helpers/fieldConfig";
-import CloseIcon from "./CloseIcon";
-import BackIcon from "./BackIcon";
+} from "../../helpers/fieldConfig";
+import CloseIcon from "../buttons/CloseButton";
+import BackIcon from "../buttons/BackButton";
 
 export type SetterMap = {
   [key: string]: React.Dispatch<React.SetStateAction<string>>;

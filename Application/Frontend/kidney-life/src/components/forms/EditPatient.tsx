@@ -1,15 +1,15 @@
 import React from "react";
-import Button from "./Button";
+import Button from "../buttons/Button";
 import InputField from "./InputField";
 import SelectField from "./SelectField";
-import { usePatientData } from "../helpers/usePatientData";
+import { usePatientData } from "../../helpers/usePatientData";
 import {
   generateSelectDonorFieldsConfig,
   generateSelectRecipientFieldsConfig,
   generateInputDonorFieldsConfig,
   generateInputRecipientFieldsConfig,
-} from "../helpers/fieldConfig";
-import { formTypes } from "../helpers/constants";
+} from "../../helpers/fieldConfig";
+import { formTypes } from "../../helpers/constants";
 
 type EditPatientProps = {
   onClose: () => void;

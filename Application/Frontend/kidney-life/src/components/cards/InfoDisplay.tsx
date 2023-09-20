@@ -1,5 +1,5 @@
 import React from "react";
-import { formTypes, infoDisplayTypes } from "../helpers/constants";
+import { formTypes, infoDisplayTypes } from "../../helpers/constants";
 
 type InfoDisplayProps = {
   data: {
