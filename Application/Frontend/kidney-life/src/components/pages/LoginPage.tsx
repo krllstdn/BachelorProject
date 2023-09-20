@@ -1,4 +1,4 @@
-import LoginPanel from "./LoginPanel";
+import LoginPanel from "../forms/LoginPanel";
 
 function LoginPage() {
   return (

@@ -1,6 +1,6 @@
-import Button from "./Button";
-import { Tab } from "./Tabs";
-import Tabs from "./Tabs";
+import Button from "../buttons/Button";
+import { Tab } from "../forms/Tabs";
+import Tabs from "../forms/Tabs";
 import { Dispatch, SetStateAction } from "react";
 
 export type SideBarItemData = {

@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "../buttons/Button";
 
 type ConfirmDeleteProps = {
   onClickYes?: (event: React.MouseEvent<HTMLButtonElement>) => void;
