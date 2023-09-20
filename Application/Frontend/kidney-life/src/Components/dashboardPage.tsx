@@ -110,11 +110,14 @@ function DashboardPage() {
           />
         )}
         {currentView === VIEWS.ADD_NEW_PAIR_NEW && (
-          <AddNewPairNew onClose={handleClose} />
+          <AddNewPairNew onClose={handleClose} onBack={handleOpenAddNewPair} />
         )}
 
         {currentView === VIEWS.ADD_NEW_PAIR_EXISTING && (
-          <AddNewPairExisting onClose={handleClose} />
+          <AddNewPairExisting
+            onClose={handleClose}
+            onBack={handleOpenAddNewPair}
+          />
         )}
       </div>
       <div className="main flex pr-5 w-screen">

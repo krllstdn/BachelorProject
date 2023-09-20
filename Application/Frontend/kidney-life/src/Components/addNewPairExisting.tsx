@@ -2,9 +2,12 @@ import SideBar from "./Sidebar";
 import { SideBarItem } from "./Sidebar";
 import Button from "./Button";
 import InfoDisplay from "./InfoDisplay";
+import CloseIcon from "./CloseIcon";
+import BackIcon from "./BackIcon";
 
 type AddNewPairExistingProps = {
   onClose: () => void;
+  onBack: () => void;
 };
 
 function AddNewPairExisting(props: AddNewPairExistingProps) {
@@ -124,15 +127,8 @@ function AddNewPairExisting(props: AddNewPairExistingProps) {
             />
           </div>
         </div>
-        <button
-          className="absolute top-0 right-0 text-primary pr-5 pt-2
-                                    text-3xl"
-          type="button"
-          onClick={props.onClose}
-        >
-          {" "}
-          &times;
-        </button>
+        <CloseIcon onClick={props.onClose} />
+        <BackIcon onClick={props.onBack} />
       </div>
     </div>
   );
