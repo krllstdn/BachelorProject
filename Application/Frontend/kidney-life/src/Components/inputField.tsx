@@ -3,6 +3,7 @@ type InputFieldProps = {
   text: string;
   value?: string;
   key: string;
+  type?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
@@ -12,8 +13,8 @@ function InputField(props: InputFieldProps) {
       <label className="text-primary font-semibold mr-3">{props.text}</label>
       <input
         name={props.name}
-        className="border-none outline-none bg-inherit border-primary"
-        type="text"
+        className="border-none outline-none bg-inherit border-primary w-9/12"
+        type={props.type ? props.type : "text"}
         onChange={props.onChange}
         value={props.value}
       />
