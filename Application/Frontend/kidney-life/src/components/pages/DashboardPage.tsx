@@ -98,7 +98,7 @@ function DashboardPage() {
         )}
       </div>
       <div className="main flex pr-5 w-screen">
-        <div className="sidebar inline-block">
+        <div className="sidebar inline-block ml-5">
           <SideBar tabs={tabPair} onButtonClick={handleOpenAddNewPair} />
         </div>
         <div className="w-full">
