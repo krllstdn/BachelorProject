@@ -15,6 +15,7 @@ import {
 import { infoDisplayTypes } from "../../helpers/constants";
 import ConfirmDelete from "../modals/ConfirmDelete";
 import EditPatient from "../forms/EditPatient";
+import ImageComponent from "../cards/ImageComponent";
 
 function DashboardPage() {
   const VIEWS = {
@@ -101,6 +102,9 @@ function DashboardPage() {
           <SideBar tabs={tabPair} onButtonClick={handleOpenAddNewPair} />
         </div>
         <div className="w-full">
+          <div className="flex justify-center mb-4">
+            <ImageComponent />
+          </div>
           <div className="flex justify-between">
             <InfoDisplay data={infoPrediction} styles="m-3 mb-0 p-12 pb-28" />
             <ParamDisplay />
