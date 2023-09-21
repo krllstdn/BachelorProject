@@ -48,18 +48,6 @@ function RegisterPage() {
     <div>
       <div className="navbar">
         <NavBar />
-        {/**
-         * doctor first name
-         * last name
-         * email
-         * login (optional)
-         * password
-         * confirm password
-         * Medical License Number: To verify the authenticity of the doctor.
-         * Specialization: E.g., Cardiology, Orthopedics, Pediatrics, etc.
-         * Hospital: E.g., Apollo, Fortis, Max, etc.
-         *
-         */}
       </div>
       <div className="flex justify-center">
         <div className="w-1/2 p-12">
