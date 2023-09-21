@@ -6,9 +6,9 @@ import LoginPage from "./components/pages/LoginPage";
 function App() {
   return (
     <div className="App">
-      <DashboardPage />
+      {/* <DashboardPage /> */}
       {/* <PatientsPage /> */}
-      {/* <LoginPage /> */}
+      <LoginPage />
     </div>
   );
 }

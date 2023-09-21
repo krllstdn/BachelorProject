@@ -12,6 +12,7 @@ import {
 } from "../../helpers/constants";
 import { infoDisplayTypes } from "../../helpers/constants";
 import BlurredBackdrop from "../wrappers/BlurredBackdrop";
+import ModalContainer from "../wrappers/ModalContainer";
 
 type AddNewPairExistingProps = {
   onClose: () => void;
@@ -21,12 +22,7 @@ type AddNewPairExistingProps = {
 function AddNewPairExisting(props: AddNewPairExistingProps) {
   return (
     <BlurredBackdrop>
-      <div
-        className="relative w-1/2 bg-secondary pr-5 pl-5 pt-5 pb-8
-                            rounded-md border-2 border-primary
-                            md:w-5/6 md:pl-2 md:pr-2
-                            lg:w-10/12"
-      >
+      <ModalContainer className="w-1/2 md:w-5/6 lg:w-10/12 md:pl-2 md:pr-2 pr-5 pl-5 pt-5 pb-8">
         <h1 className="text-center text-3xl font-semibold mt-4">
           Add new pair: Existing patients
         </h1>
@@ -63,7 +59,7 @@ function AddNewPairExisting(props: AddNewPairExistingProps) {
         </div>
         <CloseButton onClick={props.onClose} />
         <BackIcon onClick={props.onBack} />
-      </div>
+      </ModalContainer>
     </BlurredBackdrop>
   );
 }
