@@ -10,6 +10,9 @@ import {
   generateInputRecipientFieldsConfig,
 } from "../../helpers/fieldConfig";
 import { formTypes } from "../../helpers/constants";
+import BlurredBackdrop from "../wrappers/BlurredBackdrop";
+import ModalContainer from "../wrappers/ModalContainer";
+import CloseButton from "../buttons/CloseButton";
 
 type EditPatientProps = {
   onClose: () => void;
@@ -78,15 +81,8 @@ function EditPatient(props: EditPatientProps) {
   };
 
   return (
-    <div
-      className="absolute top-0 left-0 z-10 flex justify-center 
-                          items-center bg-opacity-10 bg-black backdrop-blur-sm 
-                          h-screen w-screen"
-    >
-      <div
-        className="relative w-1/2 md:w-2/3 bg-secondary pr-5 pl-5 
-                              pt-5 pb-8 rounded-md border-2 border-primary"
-      >
+    <BlurredBackdrop>
+      <ModalContainer className="w-1/3 pr-5 pl-5 pt-5 pb-8">
         <h1 className="text-center text-3xl font-semibold mb-2">Edit</h1>
         <form>
           <div className="flex justify-evenly">
@@ -196,21 +192,14 @@ function EditPatient(props: EditPatientProps) {
             )}
           </div>
         </form>
-        <button
-          className="absolute top-0 right-0 text-primary pr-5 pt-2
-                                      text-3xl"
-          type="button"
-          onClick={props.onClose}
-        >
-          &times;
-        </button>
+        <CloseButton onClick={props.onClose} />
         <div className="w-full flex justify-center items-center">
           <div className="w-40">
             <Button name="Save changes" onClick={buttonOnClick}></Button>
           </div>
         </div>
-      </div>
-    </div>
+      </ModalContainer>
+    </BlurredBackdrop>
   );
 }
 
