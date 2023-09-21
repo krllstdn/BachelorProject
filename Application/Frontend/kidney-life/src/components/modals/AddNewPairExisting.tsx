@@ -2,7 +2,7 @@ import SideBar from "../layout/Sidebar";
 import { SideBarItem } from "../layout/Sidebar";
 import Button from "../buttons/Button";
 import InfoDisplay from "../cards/InfoDisplay";
-import CloseIcon from "../buttons/CloseButton";
+import CloseButton from "../buttons/CloseButton";
 import BackIcon from "../buttons/BackButton";
 import {
   tabRecipient,
@@ -61,7 +61,7 @@ function AddNewPairExisting(props: AddNewPairExistingProps) {
             />
           </div>
         </div>
-        <CloseIcon onClick={props.onClose} />
+        <CloseButton onClick={props.onClose} />
         <BackIcon onClick={props.onBack} />
       </div>
     </BlurredBackdrop>

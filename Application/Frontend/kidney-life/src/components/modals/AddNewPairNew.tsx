@@ -9,7 +9,7 @@ import {
   generateInputDonorFieldsConfig,
   generateInputRecipientFieldsConfig,
 } from "../../helpers/fieldConfig";
-import CloseIcon from "../buttons/CloseButton";
+import CloseButton from "../buttons/CloseButton";
 import BackIcon from "../buttons/BackButton";
 import BlurredBackdrop from "../wrappers/BlurredBackdrop";
 
@@ -142,7 +142,7 @@ function AddNewPairNew(props: AddNewPairNewProps) {
             </div>
           </div>
         </form>
-        <CloseIcon onClick={props.onClose} />
+        <CloseButton onClick={props.onClose} />
         <BackIcon onClick={props.onBack} />
         <div className="w-full flex justify-center items-center">
           <div className="w-40">
