@@ -14,10 +14,6 @@ import BackIcon from "../buttons/BackButton";
 import BlurredBackdrop from "../wrappers/BlurredBackdrop";
 import ModalContainer from "../wrappers/ModalContainer";
 
-export type SetterMap = {
-  [key: string]: React.Dispatch<React.SetStateAction<string>>;
-};
-
 type AddNewPairNewProps = {
   onClose: () => void;
   onBack: () => void;

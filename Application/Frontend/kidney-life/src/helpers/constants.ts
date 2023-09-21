@@ -4,6 +4,13 @@ export const useOfDyalisis = ["Yes", "No"];
 export const race = ["White", "Black", "Asian", "Other"];
 export const gender = ["Male", "Female"];
 export const donorType = ["Living", "Deceased"];
+export const doctorSpecialization = [
+  "Nephrologist",
+  "Urologist",
+  "Surgeon",
+  "Immunologist",
+  "Other",
+];
 
 export enum formTypes {
   DONOR = "Donor",
