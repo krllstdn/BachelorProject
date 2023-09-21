@@ -120,3 +120,13 @@ export const infoDataDonor = {
     Race: "White",
   },
 };
+
+export const infoPrediction = {
+  header: "Prediction",
+  fields: {
+    Probability: "0.8",
+    Confidence: "0.9",
+    Years: "5.3",
+    "Risk Score": "0.7",
+  },
+};
