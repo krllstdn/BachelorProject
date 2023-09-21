@@ -1,12 +1,16 @@
-type CloseIconProps = {
-  onClick: () => void;
+type CloseButtonProps = {
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  styles?: string;
 };
 
-function CloseIcon(props: CloseIconProps) {
+CloseButton.defaultProps = {
+  styles: "pr-8 pt-6",
+};
+
+function CloseButton(props: CloseButtonProps) {
   return (
     <button
-      className="absolute top-0 right-0 text-primary pr-8 pt-6
-                            text-3xl"
+      className={"absolute top-0 right-0 text-primary text-3xl " + props.styles}
       type="button"
       onClick={props.onClick}
     >
@@ -26,4 +30,4 @@ function CloseIcon(props: CloseIconProps) {
   );
 }
 
-export default CloseIcon;
+export default CloseButton;
