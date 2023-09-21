@@ -15,6 +15,7 @@ export enum infoDisplayTypes {
   DONOR = "Donor",
   RECIPIENT = "Recipient",
   OTHER = "Other",
+  ADD_NEW_PAIR_EXISTING = "AddNewPairExisting",
 }
 
 // addNewPairExisting.tsx
