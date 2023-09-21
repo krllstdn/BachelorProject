@@ -1,6 +1,7 @@
 import Button from "../buttons/Button";
 import BlurredBackdrop from "../wrappers/BlurredBackdrop";
 import CloseButton from "../buttons/CloseButton";
+import ModalContainer from "../wrappers/ModalContainer";
 
 type ButtonComponentProps = {
   onClickNew: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -11,10 +12,7 @@ type ButtonComponentProps = {
 function AddNewPair(props: ButtonComponentProps) {
   return (
     <BlurredBackdrop>
-      <div
-        className="relative w-96 bg-secondary pr-5 pl-5 pt-7 pb-8
-                            rounded-md border-2 border-primary"
-      >
+      <ModalContainer className="w-96 pr-5 pl-5 pt-7 pb-8">
         <h1 className="text-center text-2xl font-semibold mb-3">
           Add new pair
         </h1>
@@ -23,7 +21,7 @@ function AddNewPair(props: ButtonComponentProps) {
           <Button name="Existing patients" onClick={props.onClickExisting} />
         </div>
         <CloseButton styles="pr-3 pt-3" onClick={props.onClose} />
-      </div>
+      </ModalContainer>
     </BlurredBackdrop>
   );
 }

@@ -12,6 +12,7 @@ import {
 import CloseButton from "../buttons/CloseButton";
 import BackIcon from "../buttons/BackButton";
 import BlurredBackdrop from "../wrappers/BlurredBackdrop";
+import ModalContainer from "../wrappers/ModalContainer";
 
 export type SetterMap = {
   [key: string]: React.Dispatch<React.SetStateAction<string>>;
@@ -86,10 +87,7 @@ function AddNewPairNew(props: AddNewPairNewProps) {
 
   return (
     <BlurredBackdrop>
-      <div
-        className="relative w-1/2 md:w-2/3 bg-secondary pr-5 pl-5 
-                            pt-5 pb-8 rounded-md border-2 border-primary"
-      >
+      <ModalContainer className="w-1/2 md:w-2/3 pr-5 pl-5 pt-5 pb-8">
         <h1 className="text-center text-3xl font-semibold mb-2">
           Add new pair: New
         </h1>
@@ -150,7 +148,7 @@ function AddNewPairNew(props: AddNewPairNewProps) {
             <Button name="Add pair +" onClick={buttonOnClick}></Button>
           </div>
         </div>
-      </div>
+      </ModalContainer>
     </BlurredBackdrop>
   );
 }

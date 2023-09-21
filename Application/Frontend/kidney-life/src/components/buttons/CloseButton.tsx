@@ -1,5 +1,9 @@
 type CloseButtonProps = {
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  /**
+   * Use for the following tailwind classes: pr-* pt-*
+   *
+   * */
   styles?: string;
 };
 
