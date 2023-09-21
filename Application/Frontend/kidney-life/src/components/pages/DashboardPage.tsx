@@ -7,7 +7,14 @@ import AddNewPair from "../modals/AddNewPair";
 import InfoDisplay from "../cards/InfoDisplay";
 import ParamDisplay from "../cards/ParamDisplay";
 import { Tab } from "../forms/Tabs";
-import { infoDataDonor, infoDataRecipient } from "../../helpers/constants";
+import {
+  formTypes,
+  infoDataDonor,
+  infoDataRecipient,
+} from "../../helpers/constants";
+import { infoDisplayTypes } from "../../helpers/constants";
+import ConfirmDelete from "../modals/ConfirmDelete";
+import EditPatient from "../forms/EditPatient";
 
 function DashboardPage() {
   const infoPrediction = {
@@ -25,6 +32,9 @@ function DashboardPage() {
     ADD_NEW_PAIR: "ADD_NEW_PAIR",
     ADD_NEW_PAIR_NEW: "ADD_NEW_PAIR_NEW",
     ADD_NEW_PAIR_EXISTING: "ADD_NEW_PAIR_EXISTING",
+    CONFIRM_DELETE: "CONFIRM_DELETE",
+    EDIT_DONOR: "EDIT_DONOR",
+    EDIT_RECIPIENT: "EDIT_RECIPIENT",
   };
 
   const [currentView, setCurrentView] = useState(VIEWS.NONE);
@@ -43,6 +53,18 @@ function DashboardPage() {
 
   const handleOpenAddNewPairExisting = () => {
     setCurrentView(VIEWS.ADD_NEW_PAIR_EXISTING);
+  };
+
+  const handleOpenConfirmDelete = () => {
+    setCurrentView(VIEWS.CONFIRM_DELETE);
+  };
+
+  const handleOpenEditDonor = () => {
+    setCurrentView(VIEWS.EDIT_DONOR);
+  };
+
+  const handleOpenEditRecipient = () => {
+    setCurrentView(VIEWS.EDIT_RECIPIENT);
   };
 
   const sidebarItemsData = [
@@ -96,6 +118,21 @@ function DashboardPage() {
             onBack={handleOpenAddNewPair}
           />
         )}
+
+        {currentView === VIEWS.CONFIRM_DELETE && (
+          <ConfirmDelete onClose={handleClose} />
+        )}
+
+        {currentView === VIEWS.EDIT_DONOR && (
+          <EditPatient onClose={handleClose} displayType={formTypes.DONOR} />
+        )}
+
+        {currentView === VIEWS.EDIT_RECIPIENT && (
+          <EditPatient
+            onClose={handleClose}
+            displayType={formTypes.RECIPIENT}
+          />
+        )}
       </div>
       <div className="main flex pr-5 w-screen">
         <div className="sidebar inline-block">
@@ -110,8 +147,17 @@ function DashboardPage() {
             <InfoDisplay
               data={infoDataRecipient}
               styles="m-3 mb-0 p-12 pb-28"
+              type={infoDisplayTypes.RECIPIENT}
+              onEdit={handleOpenEditRecipient}
+              onDelete={handleOpenConfirmDelete}
             />
-            <InfoDisplay data={infoDataDonor} styles="m-3 mb-0 p-12 pb-28" />
+            <InfoDisplay
+              data={infoDataDonor}
+              styles="m-3 mb-0 p-12 pb-28"
+              type={infoDisplayTypes.DONOR}
+              onEdit={handleOpenEditDonor}
+              onDelete={handleOpenConfirmDelete}
+            />
           </div>
         </div>
       </div>
