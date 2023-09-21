@@ -11,6 +11,7 @@ import {
   infoDataRecipient,
 } from "../../helpers/constants";
 import { infoDisplayTypes } from "../../helpers/constants";
+import BlurredBackdrop from "../wrappers/BlurredBackdrop";
 
 type AddNewPairExistingProps = {
   onClose: () => void;
@@ -19,11 +20,7 @@ type AddNewPairExistingProps = {
 
 function AddNewPairExisting(props: AddNewPairExistingProps) {
   return (
-    <div
-      className="absolute top-0 left-0 z-10 flex justify-center 
-                        items-center bg-opacity-10 bg-black backdrop-blur-sm 
-                        h-screen w-screen"
-    >
+    <BlurredBackdrop>
       <div
         className="relative w-1/2 bg-secondary pr-5 pl-5 pt-5 pb-8
                             rounded-md border-2 border-primary
@@ -67,7 +64,7 @@ function AddNewPairExisting(props: AddNewPairExistingProps) {
         <CloseIcon onClick={props.onClose} />
         <BackIcon onClick={props.onBack} />
       </div>
-    </div>
+    </BlurredBackdrop>
   );
 }
 

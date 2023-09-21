@@ -1,4 +1,5 @@
 import Button from "../buttons/Button";
+import BlurredBackdrop from "../wrappers/BlurredBackdrop";
 
 type ButtonComponentProps = {
   onClickNew: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -8,11 +9,7 @@ type ButtonComponentProps = {
 
 function AddNewPair(props: ButtonComponentProps) {
   return (
-    <div
-      className="absolute top-0 left-0 z-10 flex justify-center 
-                 items-center bg-opacity-10 bg-black backdrop-blur-sm 
-                 h-screen w-screen"
-    >
+    <BlurredBackdrop>
       <div
         className="relative w-96 bg-secondary pr-5 pl-5 pt-5 pb-8
                             rounded-md border-2 border-primary"
@@ -30,7 +27,7 @@ function AddNewPair(props: ButtonComponentProps) {
           &times;
         </button>
       </div>
-    </div>
+    </BlurredBackdrop>
   );
 }
 

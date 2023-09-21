@@ -11,6 +11,7 @@ import {
 } from "../../helpers/fieldConfig";
 import CloseIcon from "../buttons/CloseButton";
 import BackIcon from "../buttons/BackButton";
+import BlurredBackdrop from "../wrappers/BlurredBackdrop";
 
 export type SetterMap = {
   [key: string]: React.Dispatch<React.SetStateAction<string>>;
@@ -84,11 +85,7 @@ function AddNewPairNew(props: AddNewPairNewProps) {
   };
 
   return (
-    <div
-      className="absolute top-0 left-0 z-10 flex justify-center 
-                        items-center bg-opacity-10 bg-black backdrop-blur-sm 
-                        h-screen w-screen"
-    >
+    <BlurredBackdrop>
       <div
         className="relative w-1/2 md:w-2/3 bg-secondary pr-5 pl-5 
                             pt-5 pb-8 rounded-md border-2 border-primary"
@@ -154,7 +151,7 @@ function AddNewPairNew(props: AddNewPairNewProps) {
           </div>
         </div>
       </div>
-    </div>
+    </BlurredBackdrop>
   );
 }
 
