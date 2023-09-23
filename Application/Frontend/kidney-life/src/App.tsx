@@ -8,10 +8,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      {/* <DashboardPage /> */}
-      {/* <PatientsPage /> */}
-      {/* <LoginPage /> */}
-      {/* <RegisterPage /> */}
       <Router>
         <Routes>
           <Route path="/patients" Component={PatientsPage} />
