@@ -3,3 +3,6 @@
 .DS_Store
 .vscode/
 Application/Backend/KidneyLife/__pycache__
+Application/Backend/user/__pycache__
+Application/Backend/user/migrations/__pycache__
+Application/Backend/data
