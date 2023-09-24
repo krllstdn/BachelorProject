@@ -1,0 +1,10 @@
+KidneyLife/__pycache__
+user/__pycache__
+user/migrations/__pycache__
+data
+
+donor/__pycache__
+donor/migrations/__pycache__
+
+recipient/__pycache__
+recipient/migrations/__pycache__
