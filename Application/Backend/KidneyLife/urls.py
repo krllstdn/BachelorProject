@@ -30,4 +30,5 @@ urlpatterns = [
     path("recipient/", include("recipient.urls")),
     path("pair/", include("pair.urls")),
     path("models/", include("models.urls")),
+    path("prediction/", include("prediction.urls")),
 ]
