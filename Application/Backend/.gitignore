@@ -11,3 +11,6 @@ recipient/migrations/__pycache__
 
 pair/__pycache__
 pair/migrations/__pycache__
+
+models/__pycache__
+models/migrations/__pycache__
