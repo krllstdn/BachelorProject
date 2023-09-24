@@ -5,6 +5,6 @@ from .models import Donor
 from .serializers import DonorSerializer
 
 
-class DonorList(generics.RetrieveUpdateDestroyAPIView):
+class DonorList(generics.ListCreateAPIView):
     queryset = Donor.objects.all()
     serializer_class = DonorSerializer
