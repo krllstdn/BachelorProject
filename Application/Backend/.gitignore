@@ -8,3 +8,6 @@ donor/migrations/__pycache__
 
 recipient/__pycache__
 recipient/migrations/__pycache__
+
+pair/__pycache__
+pair/migrations/__pycache__
