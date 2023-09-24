@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "donor",
     "recipient",
     "pair",
+    "models",
 ]
 
 MIDDLEWARE = [
