@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from rest_framework import generics
 
-# Create your views here.
+from .models import Donor
+from .serializers import DonorSerializer
+
+
+class DonorList(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Donor.objects.all()
+    serializer_class = DonorSerializer
