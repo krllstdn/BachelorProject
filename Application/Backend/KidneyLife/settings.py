@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "recipient",
     "pair",
     "models",
+    "prediction",
 ]
 
 MIDDLEWARE = [
