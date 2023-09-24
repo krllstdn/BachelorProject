@@ -27,4 +27,5 @@ urlpatterns = [
     path("__debug__/", include("debug_toolbar.urls")),
     path("user/", include("user.urls")),
     path("donor/", include("donor.urls")),
+    path("recipient/", include("recipient.urls")),
 ]

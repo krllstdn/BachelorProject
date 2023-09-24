@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "user",
     "donor",
+    "recipient",
 ]
 
 MIDDLEWARE = [
