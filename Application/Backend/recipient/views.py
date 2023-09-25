@@ -8,3 +8,8 @@ from .serializers import RecipientSerializer
 class RecipientList(generics.ListCreateAPIView):
     queryset = Recipient.objects.all()
     serializer_class = RecipientSerializer
+
+
+class RecipientRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Recipient.objects.all()
+    serializer_class = RecipientSerializer
