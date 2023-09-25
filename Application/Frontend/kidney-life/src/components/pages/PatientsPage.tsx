@@ -4,7 +4,7 @@ import SideBar from "../layout/Sidebar";
 import InfoDisplay from "../cards/InfoDisplay";
 import { useState } from "react";
 import ConfirmDelete from "../modals/ConfirmDelete";
-import EditPatient from "../forms/EditPatient";
+import PatientForm from "../forms/PatientForm";
 import {
   infoDisplayTypes,
   formTypes,
@@ -13,6 +13,7 @@ import {
   tabRecipient,
   infoDataDonor,
   infoDataRecipient,
+  formFunctionalityTypes,
 } from "../../helpers/constants";
 
 function PatientsPage() {
@@ -23,10 +24,11 @@ function PatientsPage() {
   const VIEWS = {
     NONE: "NONE",
     CONFIRM_DELETE: "CONFIRM_DELETE",
-    EDIT: "EDIT",
+    EDIT_PAIR: "EDIT",
     EDIT_DONOR: "EDIT_DONOR",
     EDIT_RECIPIENT: "EDIT_RECIPIENT",
-    // EDIT_PAIR: "EDIT_PAIR",
+    CREATE_DONOR: "CREATE_DONOR",
+    CREATE_RECIPIENT: "CREATE_RECIPIENT",
   };
 
   const [currentView, setCurrentView] = useState(VIEWS.NONE);
@@ -39,8 +41,8 @@ function PatientsPage() {
     setCurrentView(VIEWS.CONFIRM_DELETE);
   };
 
-  const handleOpenEdit = () => {
-    setCurrentView(VIEWS.EDIT);
+  const handleOpenEditPair = () => {
+    setCurrentView(VIEWS.EDIT_PAIR);
   };
 
   const handleOpenEditDonor = () => {
@@ -51,6 +53,14 @@ function PatientsPage() {
     setCurrentView(VIEWS.EDIT_RECIPIENT);
   };
 
+  const handleOpenCreateDonor = () => {
+    setCurrentView(VIEWS.CREATE_DONOR);
+  };
+
+  const handleOpenCreateRecipient = () => {
+    setCurrentView(VIEWS.CREATE_RECIPIENT);
+  };
+
   return (
     <div>
       <div className="navbar">
@@ -58,7 +68,13 @@ function PatientsPage() {
       </div>
       <div className="main flex pr-5 w-screen">
         <div className="sidebar ml-3">
-          <SideBar tabs={tabs} setActiveTab={setActiveTab} />
+          <SideBar
+            tabs={tabs}
+            setActiveTab={setActiveTab}
+            onOpenCreateDonor={handleOpenCreateDonor}
+            onOpenCreateRecipient={handleOpenCreateRecipient}
+            onOpenCreatePair={handleOpenEditPair}
+          />
         </div>
         <div className="w-full flex">
           {activeTab === 0 && (
@@ -106,12 +122,40 @@ function PatientsPage() {
       {currentView === VIEWS.CONFIRM_DELETE && (
         <ConfirmDelete onClose={handleClose} />
       )}
-      {currentView === VIEWS.EDIT && <EditPatient onClose={handleClose} />}
+      {currentView === VIEWS.EDIT_PAIR && (
+        <PatientForm
+          displayType={formTypes.PAIR}
+          functionalityType={formFunctionalityTypes.EDIT}
+          onClose={handleClose}
+        />
+      )}
       {currentView === VIEWS.EDIT_DONOR && (
-        <EditPatient displayType={formTypes.DONOR} onClose={handleClose} />
+        <PatientForm
+          displayType={formTypes.DONOR}
+          functionalityType={formFunctionalityTypes.EDIT}
+          onClose={handleClose}
+        />
       )}
       {currentView === VIEWS.EDIT_RECIPIENT && (
-        <EditPatient displayType={formTypes.RECIPIENT} onClose={handleClose} />
+        <PatientForm
+          displayType={formTypes.RECIPIENT}
+          functionalityType={formFunctionalityTypes.EDIT}
+          onClose={handleClose}
+        />
+      )}
+      {currentView === VIEWS.CREATE_DONOR && (
+        <PatientForm
+          displayType={formTypes.DONOR}
+          functionalityType={formFunctionalityTypes.CREATE}
+          onClose={handleClose}
+        />
+      )}
+      {currentView === VIEWS.CREATE_RECIPIENT && (
+        <PatientForm
+          displayType={formTypes.RECIPIENT}
+          functionalityType={formFunctionalityTypes.CREATE}
+          onClose={handleClose}
+        />
       )}
     </div>
   );

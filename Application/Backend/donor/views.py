@@ -19,18 +19,18 @@ class CreateDonor(generics.CreateAPIView):
     serializer_class = CreateDonorSerializer
 
     # I am not sure if this will be needed
-    def post(self, request, *args, **kwargs):
-        if not self.request.session.exists(self.request.session.session_key):
-            self.request.session.create()
+    # def post(self, request, *args, **kwargs):
+    #     if not self.request.session.exists(self.request.session.session_key):
+    #         self.request.session.create()
 
-        serializer = self.serializer_class(data=request.data)
+    #     serializer = self.serializer_class(data=request.data)
 
-        if serializer.is_valid():
-            donor_data = serializer.data.get("donor_data")
+    #     if serializer.is_valid():
+    #         donor_data = serializer.data.get("donor_data")
 
-        return Response(
-            DonorSerializer(donor_data).data, status=status.HTTP_201_CREATED
-        )
+    #     return Response(
+    #         DonorSerializer(donor_data).data, status=status.HTTP_201_CREATED
+    #     )
 
 
 class DonorRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
