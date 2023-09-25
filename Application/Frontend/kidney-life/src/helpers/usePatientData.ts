@@ -1,4 +1,11 @@
 import { useState } from "react";
+import {
+  gender,
+  bloodTypes,
+  race,
+  useOfDyalisis,
+  donorType,
+} from "./constants";
 
 export type SetterMap = {
   [key: string]: React.Dispatch<React.SetStateAction<string>>;
@@ -22,16 +29,16 @@ type PatientDataDefaults = {
 export const usePatientData = ({
   defaultRecipientFirstName = "",
   defaultRecipientLastName = "",
-  defaultRecipientGender = "",
-  defaultRecipientBloodType = "",
-  defaultRecipientRace = "",
-  defaultRecipientUseOfDyalisis = "",
+  defaultRecipientGender = gender[0],
+  defaultRecipientBloodType = bloodTypes[0],
+  defaultRecipientRace = race[0],
+  defaultRecipientUseOfDyalisis = useOfDyalisis[0],
   defaultDonorFirstName = "",
   defaultDonorLastName = "",
-  defaultDonorGender = "",
-  defaultDonorBloodType = "",
-  defaultDonorRace = "",
-  defaultDonorType = "",
+  defaultDonorGender = gender[0],
+  defaultDonorBloodType = bloodTypes[0],
+  defaultDonorRace = race[0],
+  defaultDonorType = donorType[0],
 }: PatientDataDefaults = {}) => {
   const [recipientFirstName, setRecipientFirstName] = useState<string>(
     defaultRecipientFirstName

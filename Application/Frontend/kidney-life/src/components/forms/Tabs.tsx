@@ -13,6 +13,9 @@ type TabsProps = {
   tabs: Tab[];
   onButtonClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   setActiveTab?: Dispatch<SetStateAction<number>>;
+  onOpenCreateDonor?: () => void;
+  onOpenCreateRecipient?: () => void;
+  onOpenCreatePair?: () => void;
 };
 
 function Tabs(props: TabsProps) {
@@ -91,8 +94,14 @@ function Tabs(props: TabsProps) {
 
       <div className="mt-5 mb-2">
         <Button
-          name={"Add " + tabs[activeTabIndex].title + " +"}
-          onClick={props.onButtonClick}
+          name={"Add " + tabs[activeTabIndex].title.slice(0, -1) + " +"}
+          onClick={
+            tabs[activeTabIndex].title === "Donors"
+              ? props.onOpenCreateDonor
+              : tabs[activeTabIndex].title === "Recipients"
+              ? props.onOpenCreateRecipient
+              : props.onOpenCreatePair
+          }
         />
       </div>
     </div>

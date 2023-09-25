@@ -18,6 +18,11 @@ export enum formTypes {
   PAIR = "Pair",
 }
 
+export enum formFunctionalityTypes {
+  CREATE = "CREATE",
+  EDIT = "Edit",
+}
+
 export enum infoDisplayTypes {
   DONOR = "Donor",
   RECIPIENT = "Recipient",
