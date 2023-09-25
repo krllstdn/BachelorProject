@@ -14,7 +14,7 @@ import {
 } from "../../helpers/constants";
 import { infoDisplayTypes } from "../../helpers/constants";
 import ConfirmDelete from "../modals/ConfirmDelete";
-import EditPatient from "../forms/EditPatient";
+import PatientForm from "../forms/PatientForm";
 import ImageComponent from "../cards/ImageComponent";
 
 function DashboardPage() {
@@ -87,11 +87,11 @@ function DashboardPage() {
         )}
 
         {currentView === VIEWS.EDIT_DONOR && (
-          <EditPatient onClose={handleClose} displayType={formTypes.DONOR} />
+          <PatientForm onClose={handleClose} displayType={formTypes.DONOR} />
         )}
 
         {currentView === VIEWS.EDIT_RECIPIENT && (
-          <EditPatient
+          <PatientForm
             onClose={handleClose}
             displayType={formTypes.RECIPIENT}
           />
