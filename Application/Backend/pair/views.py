@@ -8,3 +8,8 @@ from .serializers import PairSerializer
 class PairList(generics.ListCreateAPIView):
     queryset = Pair.objects.all()
     serializer_class = PairSerializer
+
+
+class PairRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Pair.objects.all()
+    serializer_class = PairSerializer

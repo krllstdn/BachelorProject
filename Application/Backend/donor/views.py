@@ -18,6 +18,7 @@ class CreateDonor(generics.CreateAPIView):
     queryset = Donor.objects.all()
     serializer_class = CreateDonorSerializer
 
+    # I am not sure if this will be needed
     def post(self, request, *args, **kwargs):
         if not self.request.session.exists(self.request.session.session_key):
             self.request.session.create()
