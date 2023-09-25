@@ -10,6 +10,11 @@ class RecipientList(generics.ListCreateAPIView):
     serializer_class = RecipientSerializer
 
 
+class CreateRecipient(generics.CreateAPIView):
+    queryset = Recipient.objects.all()
+    serializer_class = RecipientSerializer
+
+
 class RecipientRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = Recipient.objects.all()
     serializer_class = RecipientSerializer

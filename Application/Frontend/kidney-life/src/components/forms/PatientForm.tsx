@@ -9,21 +9,23 @@ import {
   generateInputDonorFieldsConfig,
   generateInputRecipientFieldsConfig,
 } from "../../helpers/fieldConfig";
-import { formTypes } from "../../helpers/constants";
+import { formTypes, formFunctionalityTypes } from "../../helpers/constants";
 import BlurredBackdrop from "../wrappers/BlurredBackdrop";
 import ModalContainer from "../wrappers/ModalContainer";
 import CloseButton from "../buttons/CloseButton";
 
-type EditPatientProps = {
+type PatientFormProps = {
   onClose: () => void;
-  displayType: string;
+  displayType: formTypes;
+  functionalityType?: formFunctionalityTypes;
 };
 
-EditPatient.defaultProps = {
+PatientForm.defaultProps = {
   displayType: formTypes.PAIR,
+  functionalityType: formFunctionalityTypes.EDIT,
 };
 
-function EditPatient(props: EditPatientProps) {
+function PatientForm(props: PatientFormProps) {
   const {
     recipientFirstName,
     recipientLastName,
@@ -80,18 +82,119 @@ function EditPatient(props: EditPatientProps) {
     }
   };
 
+  const sendAddRecipientRequest = async () => {
+    const isCorrect = true;
+
+    if (isCorrect) {
+      const response = await fetch("http://127.0.0.1:8000/recipient/create/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          recipient_data: {
+            "First Name": recipientFirstName,
+            "Last Name": recipientLastName,
+            Gender: recipientGender,
+            "Blood Type": recipientBloodType,
+            Race: recipientRace,
+            "Use of dialysis": recipientUseOfDyalisis,
+          },
+        }),
+      });
+      if (response.ok) {
+        props.onClose();
+      } else {
+        console.log("error");
+      }
+    }
+  };
+
+  const sendAddDonorRequest = async () => {
+    const isCorrect = true;
+
+    if (isCorrect) {
+      const response = await fetch("http://127.0.0.1:8000/donor/create/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          donor_data: {
+            "First Name": donorFirstName,
+            "Last Name": donorLastName,
+            Gender: donorGender,
+            "Blood Type": donorBloodType,
+            Race: donorRace,
+            "Donor Type": donorDonorType,
+          },
+        }),
+      });
+      if (response.ok) {
+        props.onClose();
+      } else {
+        console.log("error");
+      }
+    }
+  };
+
+  const sendAddPairRequest = async () => {
+    // THIS FUNCTION IS NOT CORRECT YET
+    const isCorrect = true;
+
+    if (isCorrect) {
+      const response = await fetch("http://localhost:8080/pair", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          donor_data: {
+            donorFirstName,
+            donorLastName,
+            donorGender,
+            donorBloodType,
+            donorRace,
+            donorDonorType,
+          },
+          recipient_data: {
+            recipientFirstName,
+            recipientLastName,
+            recipientGender,
+            recipientBloodType,
+            recipientRace,
+            recipientUseOfDyalisis,
+          },
+        }),
+      });
+      if (response.ok) {
+        props.onClose();
+      } else {
+        console.log("error");
+      }
+    }
+  };
+
   return (
     <BlurredBackdrop>
       <ModalContainer className="w-1/3 pr-5 pl-5 pt-5 pb-8">
-        <h1 className="text-center text-3xl font-semibold mb-2">Edit</h1>
+        {/* <h1 className="text-center text-3xl font-semibold mb-2">Edit</h1> */}
         <form>
           <div className="flex justify-evenly">
             {props.displayType === formTypes.RECIPIENT && (
               <div className="text-center">
                 <div>
-                  <h2 className="text-2xl font-semibold mb-2">
-                    Edit Recipient
-                  </h2>
+                  {props.functionalityType === formFunctionalityTypes.EDIT && (
+                    <h2 className="text-2xl font-semibold mb-2">
+                      Edit Recipient
+                    </h2>
+                  )}
+                  {props.functionalityType ===
+                    formFunctionalityTypes.CREATE && (
+                    <h2 className="text-2xl font-semibold mb-2">
+                      Add Recipient
+                    </h2>
+                  )}
                   {inputRecipientFieldsConfig.map((config) => (
                     <InputField
                       name={config.name}
@@ -116,7 +219,13 @@ function EditPatient(props: EditPatientProps) {
             )}
             {props.displayType === formTypes.DONOR && (
               <div className="text-center">
-                <h2 className="text-2xl font-semibold mb-2">Edit Donor</h2>
+                {props.functionalityType === formFunctionalityTypes.EDIT && (
+                  <h2 className="text-2xl font-semibold mb-2">Edit Donor</h2>
+                )}
+                {props.functionalityType === formFunctionalityTypes.CREATE && (
+                  <h2 className="text-2xl font-semibold mb-2">Add Donor</h2>
+                )}
+
                 {inputDonorFieldsConfig.map((config) => (
                   <InputField
                     name={config.name}
@@ -132,7 +241,7 @@ function EditPatient(props: EditPatientProps) {
                     name={config.name}
                     text={config.text}
                     options={config.options}
-                    value={config.value}
+                    value={config.value || config.options[0]}
                     onChange={handleInputChange}
                   />
                 ))}
@@ -142,9 +251,18 @@ function EditPatient(props: EditPatientProps) {
               <div className="justify-evenly">
                 <div className="text-center">
                   <div>
-                    <h2 className="text-2xl font-semibold mb-2">
-                      Edit Recipient
-                    </h2>
+                    {props.functionalityType ===
+                      formFunctionalityTypes.EDIT && (
+                      <h2 className="text-2xl font-semibold mb-2">
+                        Edit Recipient
+                      </h2>
+                    )}
+                    {props.functionalityType ===
+                      formFunctionalityTypes.CREATE && (
+                      <h2 className="text-2xl font-semibold mb-2">
+                        Add Recipient
+                      </h2>
+                    )}
                     {inputRecipientFieldsConfig.map((config) => (
                       <InputField
                         name={config.name}
@@ -167,7 +285,13 @@ function EditPatient(props: EditPatientProps) {
                   </div>
                 </div>
                 <div className="text-center">
-                  <h2 className="text-2xl font-semibold mb-2">Edit Donor</h2>
+                  {props.functionalityType === formFunctionalityTypes.EDIT && (
+                    <h2 className="text-2xl font-semibold mb-2">Edit Donor</h2>
+                  )}
+                  {props.functionalityType ===
+                    formFunctionalityTypes.CREATE && (
+                    <h2 className="text-2xl font-semibold mb-2">Add Donor</h2>
+                  )}
                   {inputDonorFieldsConfig.map((config) => (
                     <InputField
                       name={config.name}
@@ -195,7 +319,26 @@ function EditPatient(props: EditPatientProps) {
         <CloseButton onClick={props.onClose} />
         <div className="w-full flex justify-center items-center">
           <div className="w-40">
-            <Button name="Save changes" onClick={buttonOnClick}></Button>
+            {props.functionalityType === formFunctionalityTypes.EDIT && (
+              <Button name="Save changes" onClick={buttonOnClick} />
+            )}
+            {props.functionalityType === formFunctionalityTypes.CREATE && (
+              <Button
+                name={
+                  props.displayType === formTypes.PAIR
+                    ? "Add pair"
+                    : "Add patient"
+                }
+                onClick={
+                  // account for pair in button naming!!!
+                  props.displayType === formTypes.DONOR
+                    ? sendAddDonorRequest
+                    : props.displayType === formTypes.PAIR
+                    ? sendAddPairRequest
+                    : sendAddRecipientRequest
+                }
+              />
+            )}
           </div>
         </div>
       </ModalContainer>
@@ -203,4 +346,4 @@ function EditPatient(props: EditPatientProps) {
   );
 }
 
-export default EditPatient;
+export default PatientForm;

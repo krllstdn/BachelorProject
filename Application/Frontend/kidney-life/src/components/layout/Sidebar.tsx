@@ -42,6 +42,9 @@ type SidebarProps = {
   onButtonClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   tabs: Tab[];
   setActiveTab?: Dispatch<SetStateAction<number>>;
+  onOpenCreateDonor?: () => void;
+  onOpenCreateRecipient?: () => void;
+  onOpenCreatePair?: () => void;
 };
 
 function SideBar(props: SidebarProps) {
@@ -55,6 +58,9 @@ function SideBar(props: SidebarProps) {
           onButtonClick={props.onButtonClick}
           tabs={props.tabs}
           setActiveTab={props.setActiveTab}
+          onOpenCreateDonor={props.onOpenCreateDonor}
+          onOpenCreateRecipient={props.onOpenCreateRecipient}
+          onOpenCreatePair={props.onOpenCreatePair}
         />
       </div>
     </div>
