@@ -2,13 +2,15 @@ import React from "react";
 import { formTypes, infoDisplayTypes } from "../../helpers/constants";
 import EditButton from "../buttons/EditButton";
 import DeleteButton from "../buttons/DeleteButton";
+import { PatientData } from "../../services/api";
 
 type InfoDisplayProps = {
   data: {
     header: string;
-    fields: {
-      [key: string]: string;
-    };
+    fields?: PatientData;
+    // {
+    //   [key: string]: string;
+    // };
   };
   styles?: string;
   textSize?: string;
@@ -36,7 +38,7 @@ function InfoDisplay(props: InfoDisplayProps) {
           {data.header}
         </h2>
         <ul>
-          {Object.entries(data.fields).map(([key, value]) => (
+          {Object.entries(data.fields ?? {}).map(([key, value]) => (
             <li key={key} className="text-xl mb-1">
               <strong>{key}:</strong> {value}
             </li>
