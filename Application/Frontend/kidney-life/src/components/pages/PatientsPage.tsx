@@ -11,7 +11,7 @@ import {
   tabDonor,
   tabPair,
   tabRecipient,
-  infoDataDonor,
+  // infoDataDonor,
   // infoDataRecipient,
   formFunctionalityTypes,
 } from "../../helpers/constants";
@@ -80,6 +80,7 @@ function PatientsPage() {
 
     fetchAllData();
   }, []);
+
   const recipients = recipientData?.map((recipient) => {
     return recipient.recipient_data;
   });
@@ -89,15 +90,15 @@ function PatientsPage() {
     fields: recipients?.[1],
   };
 
-  // const donors = donorData?.map((donor) => {
-  //   return donor.recipient_data;
-  // });
-  // console.log(donors);
+  const donors = donorData?.map((donor) => {
+    return donor.donor_data;
+  });
+  console.log(donors);
 
-  // const infoDataDonor = {
-  //   header: "Donor info",
-  //   fields: donors?.[4],
-  // };
+  const infoDataDonor = {
+    header: "Donor info",
+    fields: donors?.[5],
+  };
 
   return (
     <div>

@@ -4,7 +4,8 @@ export interface PatientData {
 }
 
 export interface ResultItem {
-  recipient_data: PatientData;
+  recipient_data?: PatientData;
+  donor_data?: PatientData;
 }
 
 export interface Response {
