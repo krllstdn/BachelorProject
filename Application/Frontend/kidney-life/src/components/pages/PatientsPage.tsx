@@ -38,6 +38,7 @@ function PatientsPage() {
   const [recipientData, setRecipientData] = useState<ResultItem[]>();
   const [donorData, setDonorData] = useState<ResultItem[]>();
   const [pairData, setPairData] = useState<ResultItem[]>();
+  const [selectedItem, setSelectedItem] = useState<number | null>(0);
 
   const handleClose = () => {
     setCurrentView(VIEWS.NONE);
