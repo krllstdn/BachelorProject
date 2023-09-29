@@ -1,24 +1,24 @@
-import Button from "../buttons/Button";
 import { Tab } from "../forms/Tabs";
 import Tabs from "../forms/Tabs";
 import { Dispatch, SetStateAction } from "react";
+import { PatientData } from "../../services/api";
 
 export type SideBarItemData = {
-  [key: string]: string | number;
+  [key: string]: string | number | undefined | null;
 };
 
 export type SideBarItemProps = {
   key: number;
   isSelected: boolean;
   onClick: () => void;
-  fields: SideBarItemData;
+  fields: PatientData;
 };
 
 export function SideBarItem({
   key = 1,
   isSelected = false,
   onClick = () => {},
-  fields = { "Pair id": 123, "Blood group": "A", Type: "Deceased" },
+  fields = { "Pair id": "123", "Blood group": "A", Type: "Deceased" },
 }: SideBarItemProps) {
   return (
     <div
@@ -45,6 +45,8 @@ type SidebarProps = {
   onOpenCreateDonor?: () => void;
   onOpenCreateRecipient?: () => void;
   onOpenCreatePair?: () => void;
+  donorData?: any;
+  setActiveDonor?: Dispatch<SetStateAction<number | null>>;
 };
 
 function SideBar(props: SidebarProps) {
@@ -61,6 +63,8 @@ function SideBar(props: SidebarProps) {
           onOpenCreateDonor={props.onOpenCreateDonor}
           onOpenCreateRecipient={props.onOpenCreateRecipient}
           onOpenCreatePair={props.onOpenCreatePair}
+          donorData={props.donorData}
+          setActiveDonor={props.setActiveDonor}
         />
       </div>
     </div>

@@ -8,11 +8,13 @@ import PatientForm from "../forms/PatientForm";
 import {
   infoDisplayTypes,
   formTypes,
-  tabDonor,
-  tabPair,
-  tabRecipient,
+  // tabDonor,
+  // tabPair,
+  // tabRecipient,
   // infoDataDonor,
   // infoDataRecipient,
+  recipientItemsData,
+  pairItemsData,
   formFunctionalityTypes,
 } from "../../helpers/constants";
 import { getRecipients, getDonors, getPairs } from "../../services/api";
@@ -20,8 +22,6 @@ import { Response } from "../../services/api";
 import { ResultItem, PatientData } from "../../services/api";
 
 function PatientsPage() {
-  const tabs: Tab[] = [tabPair[0], tabRecipient[0], tabDonor[0]];
-
   const VIEWS = {
     NONE: "NONE",
     CONFIRM_DELETE: "CONFIRM_DELETE",
@@ -38,7 +38,9 @@ function PatientsPage() {
   const [recipientData, setRecipientData] = useState<ResultItem[]>();
   const [donorData, setDonorData] = useState<ResultItem[]>();
   const [pairData, setPairData] = useState<ResultItem[]>();
-  const [selectedItem, setSelectedItem] = useState<number | null>(0);
+  const [selectedPair, setSelectedPair] = useState<number | null>(0);
+  const [selectedRecipient, setSelectedRecipient] = useState<number | null>(0);
+  const [selectedDonor, setSelectedDonor] = useState<number | null>(0);
 
   const handleClose = () => {
     setCurrentView(VIEWS.NONE);
@@ -67,7 +69,6 @@ function PatientsPage() {
       try {
         const recipients = await getRecipients();
         setRecipientData(recipients);
-        // console.log(recipients);
 
         const donors = await getDonors();
         setDonorData(donors);
@@ -75,7 +76,7 @@ function PatientsPage() {
         const pairs = await getPairs();
         setPairData(pairs);
       } catch (err) {
-        // Handle errors for all fetches here, e.g., show an error message.
+        console.log(err);
       }
     };
 
@@ -91,15 +92,30 @@ function PatientsPage() {
     fields: recipients?.[1],
   };
 
-  const donors = donorData?.map((donor) => {
-    return donor.donor_data;
-  });
+  const donors = donorData
+    ?.map((donor) => donor.donor_data)
+    .filter(Boolean) as PatientData[];
   console.log(donors);
 
   const infoDataDonor = {
     header: "Donor info",
     fields: donors?.[5],
   };
+
+  const tabs: Tab[] = [
+    {
+      title: "Recipients",
+      content: recipientItemsData,
+    },
+    {
+      title: "Donors",
+      content: donors,
+    },
+    {
+      title: "Pairs",
+      content: pairItemsData,
+    },
+  ];
 
   return (
     <div>
@@ -114,6 +130,8 @@ function PatientsPage() {
             onOpenCreateDonor={handleOpenCreateDonor}
             onOpenCreateRecipient={handleOpenCreateRecipient}
             onOpenCreatePair={handleOpenEditPair}
+            donorData={donors}
+            setActiveDonor={setSelectedDonor}
           />
         </div>
         <div className="w-full flex">
