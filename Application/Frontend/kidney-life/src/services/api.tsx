@@ -1,19 +1,19 @@
-export interface PatientData {
+export type PatientData = {
   // too general - be more specific if possible.
-  [key: string]: string; //| number | boolean | null | undefined;
-}
+  [key: string]: string | number | boolean | null | undefined;
+};
 
-export interface ResultItem {
+export type ResultItem = {
   recipient_data?: PatientData;
   donor_data?: PatientData;
-}
+};
 
-export interface Response {
+export type Response = {
   count: number;
   next: any;
   previous: any;
   results: ResultItem[];
-}
+};
 
 const fetchData = async (url: string): Promise<ResultItem[]> => {
   try {

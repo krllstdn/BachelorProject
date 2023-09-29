@@ -3,11 +3,11 @@ import Button from "../buttons/Button";
 import { SideBarItemData } from "../layout/Sidebar";
 import { SideBarItem } from "../layout/Sidebar";
 import { Dispatch, SetStateAction } from "react";
-import { get } from "http";
+import { PatientData } from "../../services/api";
 
 export type Tab = {
   title: string;
-  content: SideBarItemData[];
+  content?: PatientData[];
 };
 
 type TabsProps = {
@@ -17,18 +17,9 @@ type TabsProps = {
   onOpenCreateDonor?: () => void;
   onOpenCreateRecipient?: () => void;
   onOpenCreatePair?: () => void;
+  donorData?: any;
+  setActiveDonor?: Dispatch<SetStateAction<number | null>>;
 };
-
-interface ResultItem {
-  recipient_data: any; // Be more specific if possible.
-}
-
-interface Response {
-  count: number;
-  next: any;
-  previous: any;
-  results: ResultItem[];
-}
 
 function Tabs(props: TabsProps) {
   const tabs = props.tabs;
@@ -36,46 +27,19 @@ function Tabs(props: TabsProps) {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [selectedItem, setSelectedItem] = useState<number | null>(0);
   const [fadeOut, setFadeOut] = useState(false);
-  const [recipientData, setRecipientData] = useState<Response>();
-  const [donorData, setDonorData] = useState<Response>();
-  const [pairData, setPairData] = useState<Response>();
 
-  const fetchData = async (url: string, setData: Function) => {
-    try {
-      const response = await fetch(url);
-      const jsonData = await response.json();
-      setData(jsonData);
-      // console.log(jsonData);
-    } catch (err) {
-      console.error("Error fetching data", err);
-    }
-  };
-
-  const getRecipients = async () => {
-    await fetchData("http://127.0.0.1:8000/recipient", setRecipientData);
-  };
-
-  const getDonors = async () => {
-    await fetchData("http://127.0.0.1:8000/donor", setDonorData);
-  };
-
-  const getPairs = async () => {
-    await fetchData("http://127.0.0.1:8000/pair", setPairData);
-  };
-
-  useEffect(() => {
-    // getRecipients();
-    // getDonors();
-    // getPairs();
-  }, []);
-
-  const renderSideBarItem = (item: SideBarItemData, index: number) => {
+  const renderSideBarItem = (item: PatientData, index: number) => {
     return (
       <SideBarItem
         fields={item}
         key={index}
         isSelected={selectedItem === index}
-        onClick={() => setSelectedItem(index)}
+        onClick={() => {
+          setSelectedItem(index);
+          if (tabs[activeTabIndex].title === "Donors") {
+            props.setActiveDonor!(props.donorData[index]);
+          }
+        }}
       />
     );
   };
@@ -109,7 +73,7 @@ function Tabs(props: TabsProps) {
     return (
       <div>
         <h1 className="text-center text-2xl font-semibold">{tabs[0].title}</h1>
-        {tabs[0].content.map(
+        {tabs[0].content?.map(
           (item, index) =>
             SideBarItem({
               fields: item,
@@ -153,12 +117,9 @@ function Tabs(props: TabsProps) {
             activeTabIndex === index ? "opacity-100" : "opacity-0 hidden"
           }`}
         >
-          {tab.content.map((item, itemIndex) =>
+          {tab.content?.map((item, itemIndex) =>
             renderSideBarItem(item, itemIndex)
           )}
-          {/* {donorData.results.map((item, itemIndex) =>
-            renderSideBarItem(item, itemIndex)
-          )} */}
         </div>
       ))}
 
