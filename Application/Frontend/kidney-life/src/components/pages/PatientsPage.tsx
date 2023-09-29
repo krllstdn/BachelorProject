@@ -83,9 +83,11 @@ function PatientsPage() {
     fetchAllData();
   }, []);
 
-  const recipients = recipientData?.map((recipient) => {
-    return recipient.recipient_data;
-  });
+  const recipients = recipientData
+    ?.map((recipient) => {
+      return recipient.recipient_data;
+    })
+    .filter(Boolean) as PatientData[];
 
   const infoDataRecipient = {
     header: "Recipient info",
@@ -95,7 +97,7 @@ function PatientsPage() {
   const donors = donorData
     ?.map((donor) => donor.donor_data)
     .filter(Boolean) as PatientData[];
-  console.log(donors);
+  // console.log(donors);
 
   const infoDataDonor = {
     header: "Donor info",
@@ -105,7 +107,7 @@ function PatientsPage() {
   const tabs: Tab[] = [
     {
       title: "Recipients",
-      content: recipientItemsData,
+      content: recipients,
     },
     {
       title: "Donors",
