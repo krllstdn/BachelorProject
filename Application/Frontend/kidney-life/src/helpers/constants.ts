@@ -49,7 +49,7 @@ const donorItemsData = [
   },
 ];
 
-const recipientItemsData = [
+export const recipientItemsData = [
   {
     "Recipient id": 123,
     "Blood Group": "A",
@@ -67,7 +67,7 @@ const recipientItemsData = [
   },
 ];
 
-const pairItemsData = [
+export const pairItemsData = [
   {
     "Pair id": 123,
     "Donor Blood Group": "A",
