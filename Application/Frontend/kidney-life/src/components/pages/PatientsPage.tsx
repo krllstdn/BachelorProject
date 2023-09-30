@@ -91,7 +91,8 @@ function PatientsPage() {
 
   const infoDataRecipient = {
     header: "Recipient info",
-    fields: recipients?.[1],
+    fields:
+      selectedRecipient !== null ? recipients?.[selectedRecipient] : undefined,
   };
 
   const donors = donorData
@@ -100,7 +101,7 @@ function PatientsPage() {
 
   const infoDataDonor = {
     header: "Donor info",
-    fields: selectedDonor !== null ? donors?.[selectedDonor] : undefined, // just place here active donor index
+    fields: selectedDonor !== null ? donors?.[selectedDonor] : undefined,
   };
 
   const tabs: Tab[] = [
@@ -133,6 +134,7 @@ function PatientsPage() {
             onOpenCreatePair={handleOpenEditPair}
             donorData={donors}
             setActiveDonor={setSelectedDonor}
+            setActiveRecipient={setSelectedRecipient}
           />
         </div>
         <div className="w-full flex">
