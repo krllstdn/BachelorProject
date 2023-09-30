@@ -37,7 +37,7 @@ function Tabs(props: TabsProps) {
         onClick={() => {
           setSelectedItem(index);
           if (tabs[activeTabIndex].title === "Donors") {
-            props.setActiveDonor!(props.donorData[index]);
+            props.setActiveDonor!(index);
           }
         }}
       />
