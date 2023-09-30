@@ -5,10 +5,10 @@ from .models import Donor
 class DonorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Donor
-        fields = ("donor_data",)
+        fields = ("donor_id", "donor_data")
 
 
 class CreateDonorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Donor
-        fields = ("donor_data",)
+        fields = ("donor_id", "donor_data")
