@@ -1,5 +1,10 @@
 from django.urls import path
-from .views import PairList, PairRetrieveUpdateDestroy, GetDetailedPair
+from .views import (
+    PairList,
+    PairRetrieveUpdateDestroy,
+    GetDetailedPair,
+    ListDetailedPairs,
+)
 
 urlpatterns = [
     path("", PairList.as_view()),
@@ -9,4 +14,5 @@ urlpatterns = [
         name="pair-retrieve-update-destroy",
     ),
     path("detail/<int:pk>/", GetDetailedPair.as_view(), name="pair-detail"),
+    path("detail/", ListDetailedPairs.as_view(), name="pair-detailed-list"),
 ]
