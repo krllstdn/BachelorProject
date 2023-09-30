@@ -97,14 +97,17 @@ function PatientsPage() {
   const donors = donorData
     ?.map((donor) => donor.donor_data)
     .filter(Boolean) as PatientData[];
-  // console.log(donors);
 
   const infoDataDonor = {
     header: "Donor info",
-    fields: donors?.[5],
+    fields: selectedDonor !== null ? donors?.[selectedDonor] : undefined, // just place here active donor index
   };
 
   const tabs: Tab[] = [
+    {
+      title: "Pairs",
+      content: pairItemsData,
+    },
     {
       title: "Recipients",
       content: recipients,
@@ -112,10 +115,6 @@ function PatientsPage() {
     {
       title: "Donors",
       content: donors,
-    },
-    {
-      title: "Pairs",
-      content: pairItemsData,
     },
   ];
 
