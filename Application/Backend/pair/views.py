@@ -18,3 +18,8 @@ class PairRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
 class GetDetailedPair(generics.RetrieveAPIView):
     queryset = Pair.objects.all()
     serializer_class = PairDetailSerializer
+
+
+class ListDetailedPairs(generics.ListAPIView):
+    queryset = Pair.objects.all()
+    serializer_class = PairDetailSerializer
