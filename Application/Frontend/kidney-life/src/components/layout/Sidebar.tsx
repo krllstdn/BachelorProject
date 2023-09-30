@@ -47,6 +47,7 @@ type SidebarProps = {
   onOpenCreatePair?: () => void;
   donorData?: any;
   setActiveDonor?: Dispatch<SetStateAction<number | null>>;
+  setActiveRecipient?: Dispatch<SetStateAction<number | null>>;
 };
 
 function SideBar(props: SidebarProps) {
@@ -65,6 +66,7 @@ function SideBar(props: SidebarProps) {
           onOpenCreatePair={props.onOpenCreatePair}
           donorData={props.donorData}
           setActiveDonor={props.setActiveDonor}
+          setActiveRecipient={props.setActiveRecipient}
         />
       </div>
     </div>

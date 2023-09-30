@@ -19,6 +19,7 @@ type TabsProps = {
   onOpenCreatePair?: () => void;
   donorData?: any;
   setActiveDonor?: Dispatch<SetStateAction<number | null>>;
+  setActiveRecipient?: Dispatch<SetStateAction<number | null>>;
 };
 
 function Tabs(props: TabsProps) {
@@ -38,6 +39,9 @@ function Tabs(props: TabsProps) {
           setSelectedItem(index);
           if (tabs[activeTabIndex].title === "Donors") {
             props.setActiveDonor!(index);
+          }
+          if (tabs[activeTabIndex].title === "Recipients") {
+            props.setActiveRecipient!(index);
           }
         }}
       />
