@@ -48,6 +48,7 @@ type SidebarProps = {
   donorData?: any;
   setActiveDonor?: Dispatch<SetStateAction<number | null>>;
   setActiveRecipient?: Dispatch<SetStateAction<number | null>>;
+  setActivePair?: Dispatch<SetStateAction<number | null>>;
 };
 
 function SideBar(props: SidebarProps) {
@@ -67,6 +68,7 @@ function SideBar(props: SidebarProps) {
           donorData={props.donorData}
           setActiveDonor={props.setActiveDonor}
           setActiveRecipient={props.setActiveRecipient}
+          setActivePair={props.setActivePair}
         />
       </div>
     </div>
