@@ -25,7 +25,7 @@ type TabsProps = {
 
 function Tabs(props: TabsProps) {
   const tabs = props.tabs;
-  // const setActiveTab = props.setActiveTab || (() => {});
+  const setActiveTab = props.setActiveTab || (() => {});
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [selectedItem, setSelectedItem] = useState<number | null>(0);
   const [fadeOut, setFadeOut] = useState(false);
@@ -72,9 +72,7 @@ function Tabs(props: TabsProps) {
 
     setTimeout(() => {
       setActiveTabIndex(index);
-      if (typeof props.setActivePair === "function") {
-        props.setActivePair(index);
-      }
+      setActiveTab(index);
       setFadeOut(false);
     }, 150);
   };
