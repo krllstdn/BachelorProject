@@ -20,11 +20,12 @@ type TabsProps = {
   donorData?: any;
   setActiveDonor?: Dispatch<SetStateAction<number | null>>;
   setActiveRecipient?: Dispatch<SetStateAction<number | null>>;
+  setActivePair?: Dispatch<SetStateAction<number | null>>;
 };
 
 function Tabs(props: TabsProps) {
   const tabs = props.tabs;
-  const setActiveTab = props.setActiveTab || (() => {});
+  // const setActiveTab = props.setActiveTab || (() => {});
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [selectedItem, setSelectedItem] = useState<number | null>(0);
   const [fadeOut, setFadeOut] = useState(false);
@@ -42,6 +43,9 @@ function Tabs(props: TabsProps) {
           }
           if (tabs[activeTabIndex].title === "Recipients") {
             props.setActiveRecipient!(index);
+          }
+          if (tabs[activeTabIndex].title === "Pairs") {
+            props.setActivePair!(index);
           }
         }}
       />
@@ -68,7 +72,9 @@ function Tabs(props: TabsProps) {
 
     setTimeout(() => {
       setActiveTabIndex(index);
-      setActiveTab(index);
+      if (typeof props.setActivePair === "function") {
+        props.setActivePair(index);
+      }
       setFadeOut(false);
     }, 150);
   };

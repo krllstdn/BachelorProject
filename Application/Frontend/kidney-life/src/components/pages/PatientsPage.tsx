@@ -17,8 +17,13 @@ import {
   pairItemsData,
   formFunctionalityTypes,
 } from "../../helpers/constants";
-import { getRecipients, getDonors, getPairs } from "../../services/api";
-import { Response } from "../../services/api";
+import {
+  getRecipients,
+  getDonors,
+  getPairs,
+  getDetailedPairs,
+  PairDetailed,
+} from "../../services/api";
 import { ResultItem, PatientData } from "../../services/api";
 
 function PatientsPage() {
@@ -37,7 +42,7 @@ function PatientsPage() {
   const [fadeOut, setFadeOut] = useState(false);
   const [recipientData, setRecipientData] = useState<ResultItem[]>();
   const [donorData, setDonorData] = useState<ResultItem[]>();
-  const [pairData, setPairData] = useState<ResultItem[]>();
+  const [pairData, setPairData] = useState<PairDetailed[]>();
   const [selectedPair, setSelectedPair] = useState<number | null>(0);
   const [selectedRecipient, setSelectedRecipient] = useState<number | null>(0);
   const [selectedDonor, setSelectedDonor] = useState<number | null>(0);
@@ -73,7 +78,8 @@ function PatientsPage() {
         const donors = await getDonors();
         setDonorData(donors);
 
-        const pairs = await getPairs();
+        const pairs = await getDetailedPairs();
+        console.log(pairs);
         setPairData(pairs);
       } catch (err) {
         console.log(err);
@@ -92,7 +98,14 @@ function PatientsPage() {
   const infoDataRecipient = {
     header: "Recipient info",
     fields:
-      selectedRecipient !== null ? recipients?.[selectedRecipient] : undefined,
+      activeTab === 0 && selectedPair !== null
+        ? pairData?.[selectedPair]?.recipient?.recipient_data
+        : activeTab === 1 && selectedRecipient !== null
+        ? recipients?.[selectedRecipient]
+        : activeTab === 2 && selectedDonor !== null
+        ? recipients?.[selectedDonor]
+        : undefined,
+    // selectedRecipient !== null ? recipients?.[selectedRecipient] : undefined,
   };
 
   const donors = donorData
@@ -101,21 +114,50 @@ function PatientsPage() {
 
   const infoDataDonor = {
     header: "Donor info",
-    fields: selectedDonor !== null ? donors?.[selectedDonor] : undefined,
+    fields:
+      activeTab === 0 && selectedPair !== null
+        ? pairData?.[selectedPair]?.donor?.donor_data
+        : activeTab === 1 && selectedRecipient !== null
+        ? recipients?.[selectedRecipient]
+        : activeTab === 2 && selectedDonor !== null
+        ? donors?.[selectedDonor]
+        : undefined,
+
+    // selectedDonor !== null ? donors?.[selectedDonor] : undefined,
   };
 
   const tabs: Tab[] = [
     {
       title: "Pairs",
-      content: pairItemsData,
+      content: pairData?.map((pair) => {
+        return {
+          "Pair id": pair.pair_id,
+          // what "blood type", for the love of god? TODO: Change this to blood group
+          "Recipient Blood Group": pair.recipient?.recipient_data["Blood Type"],
+          "Donor Blood Group": pair.donor?.donor_data["Blood Type"],
+          Type: pair.donor?.donor_data["Donor Type"],
+        };
+      }),
     },
     {
       title: "Recipients",
-      content: recipients,
+      content: recipientData?.map((recipient) => {
+        return {
+          "Recipient id": recipient?.recipient_id,
+          "Blood group": recipient.recipient_data?.["Blood Type"],
+          "Use of dialysis": recipient.recipient_data?.["Use of dialysis"],
+        };
+      }),
     },
     {
       title: "Donors",
-      content: donors,
+      content: donorData?.map((donor) => {
+        return {
+          "Donor id": donor?.donor_id,
+          "Blood group": donor.donor_data?.["Blood Type"],
+          "Donor type": donor.donor_data?.["Donor Type"],
+        };
+      }),
     },
   ];
 
@@ -135,6 +177,7 @@ function PatientsPage() {
             donorData={donors}
             setActiveDonor={setSelectedDonor}
             setActiveRecipient={setSelectedRecipient}
+            setActivePair={setSelectedPair}
           />
         </div>
         <div className="w-full flex">

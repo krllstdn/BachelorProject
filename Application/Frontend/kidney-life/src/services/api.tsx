@@ -6,6 +6,11 @@ export type PatientData = {
 export type ResultItem = {
   recipient_data?: PatientData;
   donor_data?: PatientData;
+  pair_id?: number;
+  recipient?: PatientData; // TODO: add new type for detailed pair
+  donor?: PatientData;
+  recipient_id?: number;
+  donor_id?: number;
 };
 
 export type Response = {
@@ -13,6 +18,25 @@ export type Response = {
   next: any;
   previous: any;
   results: ResultItem[];
+};
+
+/**
+ * {pair_id: 2,
+ *  donor: {
+ *    donor_data: {},
+ *  },
+ *  recipient: {
+ *    recipient_data: {},
+ * }}
+ */
+export type PairDetailed = {
+  pair_id: number;
+  donor: {
+    donor_data: PatientData;
+  };
+  recipient: {
+    recipient_data: PatientData;
+  };
 };
 
 const fetchData = async (url: string): Promise<ResultItem[]> => {
@@ -39,6 +63,13 @@ export const getPairs = async (): Promise<ResultItem[]> => {
   return fetchData("http://127.0.0.1:8000/pair");
 };
 
-export const getDetailedPairs = async (): Promise<ResultItem[]> => {
-  return fetchData("http://127.0.0.1:8000/pair/detail/");
+export const getDetailedPairs = async (): Promise<PairDetailed[]> => {
+  try {
+    const response = await fetch("http://127.0.0.1:8000/pair/detail/");
+    const jsonData = await response.json();
+    return jsonData.results;
+  } catch (err) {
+    console.error("Error fetching data", err);
+    throw err;
+  }
 };
