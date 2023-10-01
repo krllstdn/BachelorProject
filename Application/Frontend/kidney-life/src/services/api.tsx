@@ -38,3 +38,7 @@ export const getDonors = async (): Promise<ResultItem[]> => {
 export const getPairs = async (): Promise<ResultItem[]> => {
   return fetchData("http://127.0.0.1:8000/pair");
 };
+
+export const getDetailedPairs = async (): Promise<ResultItem[]> => {
+  return fetchData("http://127.0.0.1:8000/pair/detail/");
+};
