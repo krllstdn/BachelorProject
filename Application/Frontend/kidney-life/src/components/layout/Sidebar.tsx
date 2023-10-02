@@ -45,7 +45,7 @@ type SidebarProps = {
   onOpenCreateDonor?: () => void;
   onOpenCreateRecipient?: () => void;
   onOpenCreatePair?: () => void;
-  donorData?: any;
+  donorData?: any; // ???
   setActiveDonor?: Dispatch<SetStateAction<number | null>>;
   setActiveRecipient?: Dispatch<SetStateAction<number | null>>;
   setActivePair?: Dispatch<SetStateAction<number | null>>;

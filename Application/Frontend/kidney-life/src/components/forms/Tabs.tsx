@@ -81,18 +81,12 @@ function Tabs(props: TabsProps) {
     return (
       <div>
         <h1 className="text-center text-2xl font-semibold">{tabs[0].title}</h1>
-        {tabs[0].content?.map(
-          (item, index) =>
-            SideBarItem({
-              fields: item,
-              key: index,
-              isSelected: selectedItem === index,
-              onClick: () => setSelectedItem(index),
-            }) // why is it a function?
+        {tabs[0].content?.map((item, itemIndex) =>
+          renderSideBarItem(item, itemIndex)
         )}
         <div className="mt-4">
           {props.onButtonClick ? (
-            <Button
+            <Button // TODO: change to renderAddButton()
               name={"Add " + tabs[0].title + " +"}
               onClick={props.onButtonClick}
             />
