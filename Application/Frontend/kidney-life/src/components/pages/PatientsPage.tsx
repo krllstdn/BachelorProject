@@ -105,7 +105,6 @@ function PatientsPage() {
         : activeTab === 2 && selectedDonor !== null
         ? recipients?.[selectedDonor]
         : undefined,
-    // selectedRecipient !== null ? recipients?.[selectedRecipient] : undefined,
   };
 
   const donors = donorData
@@ -122,8 +121,6 @@ function PatientsPage() {
         : activeTab === 2 && selectedDonor !== null
         ? donors?.[selectedDonor]
         : undefined,
-
-    // selectedDonor !== null ? donors?.[selectedDonor] : undefined,
   };
 
   const tabs: Tab[] = [
