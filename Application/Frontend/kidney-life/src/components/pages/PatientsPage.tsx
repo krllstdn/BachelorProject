@@ -234,7 +234,7 @@ function PatientsPage() {
           displayType={formTypes.DONOR}
           functionalityType={formFunctionalityTypes.EDIT}
           onClose={handleClose}
-          donorData={
+          donor={
             activeTab === 0 && selectedPair !== null
               ? pairData?.[selectedPair]?.donor
               : activeTab === 2 && selectedDonor !== null
@@ -248,7 +248,7 @@ function PatientsPage() {
           displayType={formTypes.RECIPIENT}
           functionalityType={formFunctionalityTypes.EDIT}
           onClose={handleClose}
-          recipientData={
+          recipient={
             activeTab === 0 && selectedPair !== null
               ? pairData?.[selectedPair]?.recipient
               : activeTab === 1 && selectedRecipient !== null
