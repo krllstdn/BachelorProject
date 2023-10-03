@@ -70,12 +70,16 @@ function PatientForm(props: PatientFormProps) {
         props.displayType === formTypes.DONOR &&
         props.functionalityType === formFunctionalityTypes.EDIT
       ) {
-        setDonorFirstName(props.donorData?.["First Name"] || "");
-        setDonorLastName(props.donorData?.["Last Name"] || "");
-        setDonorGender(props.donorData?.["Gender"] || gender[0]);
-        setDonorBloodType(props.donorData?.["Blood Type"] || bloodTypes[0]);
-        setDonorRace(props.donorData?.["Race"] || race[0]);
-        setDonorDonorType(props.donorData?.["Donor Type"] || donorType[0]);
+        setDonorFirstName(props.donorData?.donor_data?.["First Name"] || "");
+        setDonorLastName(props.donorData?.donor_data?.["Last Name"] || "");
+        setDonorGender(props.donorData?.donor_data?.["Gender"] || gender[0]);
+        setDonorBloodType(
+          props.donorData?.donor_data?.["Blood Type"] || bloodTypes[0]
+        );
+        setDonorRace(props.donorData?.donor_data?.["Race"] || race[0]);
+        setDonorDonorType(
+          props.donorData?.donor_data?.["Donor Type"] || donorType[0]
+        );
         // console.log(props.donorData);
       }
 
@@ -83,15 +87,24 @@ function PatientForm(props: PatientFormProps) {
         props.displayType === formTypes.RECIPIENT &&
         props.functionalityType === formFunctionalityTypes.EDIT
       ) {
-        setRecipientFirstName(props.recipientData?.["First Name"] || "");
-        setRecipientLastName(props.recipientData?.["Last Name"] || "");
-        setRecipientGender(props.recipientData?.["Gender"] || gender[0]);
-        setRecipientRace(props.recipientData?.["Race"] || race[0]);
+        setRecipientFirstName(
+          props.recipientData?.recipient_data?.["First Name"] || ""
+        );
+        setRecipientLastName(
+          props.recipientData?.recipient_data?.["Last Name"] || ""
+        );
+        setRecipientGender(
+          props.recipientData?.recipient_data?.["Gender"] || gender[0]
+        );
+        setRecipientRace(
+          props.recipientData?.recipient_data?.["Race"] || race[0]
+        );
         setRecipientBloodType(
-          props.recipientData?.["Blood Type"] || bloodTypes[0]
+          props.recipientData?.recipient_data?.["Blood Type"] || bloodTypes[0]
         );
         setRecipientUseOfDyalisis(
-          props.recipientData?.["Use of dialysis"] || useOfDyalisis[0]
+          props.recipientData?.recipient_data?.["Use of dialysis"] ||
+            useOfDyalisis[0]
         );
       }
     }
@@ -136,9 +149,9 @@ function PatientForm(props: PatientFormProps) {
     if (props.displayType === formTypes.DONOR) {
       sendUpdateDonorRequest(props.donorData?.["donor_id"]); // correct id
     }
-
+    // console.log(props.donorData);
     if (props.displayType === formTypes.RECIPIENT) {
-      sendUpdateRecipientRequest(props.recipientData.id); // correct id
+      sendUpdateRecipientRequest(props.recipientData?.["recipient_id"]); // correct id
     }
 
     if (isCorrect) {

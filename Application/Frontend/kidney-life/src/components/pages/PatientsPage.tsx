@@ -102,7 +102,7 @@ function PatientsPage() {
         : activeTab === 1 && selectedRecipient !== null
         ? recipients?.[selectedRecipient]
         : activeTab === 2 && selectedDonor !== null
-        ? recipients?.[selectedDonor]
+        ? recipients?.[selectedDonor] // TODO: fix this condition
         : undefined,
   };
 
@@ -115,8 +115,8 @@ function PatientsPage() {
     fields:
       activeTab === 0 && selectedPair !== null
         ? pairData?.[selectedPair]?.donor?.donor_data
-        : activeTab === 1 && selectedRecipient !== null
-        ? recipients?.[selectedRecipient]
+        : activeTab === 1 && selectedRecipient !== null // TODO: fix this condition
+        ? recipients?.[selectedRecipient] // seems weird to have recipient data here
         : activeTab === 2 && selectedDonor !== null
         ? donors?.[selectedDonor]
         : undefined,
@@ -234,7 +234,13 @@ function PatientsPage() {
           displayType={formTypes.DONOR}
           functionalityType={formFunctionalityTypes.EDIT}
           onClose={handleClose}
-          donorData={infoDataDonor.fields}
+          donorData={
+            activeTab === 0 && selectedPair !== null
+              ? pairData?.[selectedPair]?.donor
+              : activeTab === 2 && selectedDonor !== null
+              ? donorData?.[selectedDonor]
+              : undefined
+          }
         />
       )}
       {currentView === VIEWS.EDIT_RECIPIENT && (
@@ -242,7 +248,13 @@ function PatientsPage() {
           displayType={formTypes.RECIPIENT}
           functionalityType={formFunctionalityTypes.EDIT}
           onClose={handleClose}
-          recipientData={infoDataRecipient.fields}
+          recipientData={
+            activeTab === 0 && selectedPair !== null
+              ? pairData?.[selectedPair]?.recipient
+              : activeTab === 1 && selectedRecipient !== null
+              ? recipientData?.[selectedRecipient]
+              : undefined
+          }
         />
       )}
       {currentView === VIEWS.CREATE_DONOR && (
