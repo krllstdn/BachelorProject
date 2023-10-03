@@ -79,7 +79,6 @@ function PatientsPage() {
         setDonorData(donors);
 
         const pairs = await getDetailedPairs();
-        console.log(pairs);
         setPairData(pairs);
       } catch (err) {
         console.log(err);
@@ -235,6 +234,7 @@ function PatientsPage() {
           displayType={formTypes.DONOR}
           functionalityType={formFunctionalityTypes.EDIT}
           onClose={handleClose}
+          donorData={infoDataDonor.fields}
         />
       )}
       {currentView === VIEWS.EDIT_RECIPIENT && (
@@ -242,6 +242,7 @@ function PatientsPage() {
           displayType={formTypes.RECIPIENT}
           functionalityType={formFunctionalityTypes.EDIT}
           onClose={handleClose}
+          recipientData={infoDataRecipient.fields}
         />
       )}
       {currentView === VIEWS.CREATE_DONOR && (
