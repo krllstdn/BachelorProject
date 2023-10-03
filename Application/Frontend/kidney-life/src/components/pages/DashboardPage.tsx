@@ -135,13 +135,20 @@ function DashboardPage() {
         )}
 
         {currentView === VIEWS.EDIT_DONOR && (
-          <PatientForm onClose={handleClose} displayType={formTypes.DONOR} />
+          <PatientForm
+            onClose={handleClose}
+            displayType={formTypes.DONOR}
+            // pass here the data of the donor
+            donorData={infoDataDonor.fields}
+          />
         )}
 
         {currentView === VIEWS.EDIT_RECIPIENT && (
           <PatientForm
             onClose={handleClose}
             displayType={formTypes.RECIPIENT}
+            // pass here the data of the recipient
+            recipientData={infoDataRecipient.fields}
           />
         )}
       </div>
