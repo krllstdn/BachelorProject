@@ -20,15 +20,6 @@ export type Response = {
   results: ResultItem[];
 };
 
-/**
- * {pair_id: 2,
- *  donor: {
- *    donor_data: {},
- *  },
- *  recipient: {
- *    recipient_data: {},
- * }}
- */
 export type PairDetailed = {
   pair_id: number;
   donor: {
@@ -43,7 +34,6 @@ const fetchData = async (url: string): Promise<ResultItem[]> => {
   try {
     const response = await fetch(url);
     const jsonData = await response.json();
-    // console.log(jsonData.results);
     return jsonData.results;
   } catch (err) {
     console.error("Error fetching data", err);
@@ -72,4 +62,36 @@ export const getDetailedPairs = async (): Promise<PairDetailed[]> => {
     console.error("Error fetching data", err);
     throw err;
   }
+};
+
+const updateData = async (url: string, data: any): Promise<any> => {
+  try {
+    const response = await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to update data at ${url}`);
+    }
+
+    return await response.json();
+  } catch (err) {
+    console.error("Error updating data", err);
+    throw err;
+  }
+};
+
+export const updateRecipient = async (
+  id: number,
+  recipientData: any
+): Promise<any> => {
+  return updateData(`http://127.0.0.1:8000/recipient/${id}/`, recipientData);
+};
+
+export const updateDonor = async (id: number, donorData: any): Promise<any> => {
+  return updateData(`http://127.0.0.1:8000/donor/${id}/`, donorData);
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../buttons/Button";
 import InputField from "./InputField";
 import SelectField from "./SelectField";
@@ -13,11 +13,20 @@ import { formTypes, formFunctionalityTypes } from "../../helpers/constants";
 import BlurredBackdrop from "../wrappers/BlurredBackdrop";
 import ModalContainer from "../wrappers/ModalContainer";
 import CloseButton from "../buttons/CloseButton";
+import {
+  gender,
+  bloodTypes,
+  race,
+  useOfDyalisis,
+  donorType,
+} from "../../helpers/constants";
 
 type PatientFormProps = {
   onClose: () => void;
   displayType: formTypes;
   functionalityType?: formFunctionalityTypes;
+  donorData?: any; // TODO: add type
+  recipientData?: any; // TODO: add type
 };
 
 PatientForm.defaultProps = {
@@ -39,8 +48,55 @@ function PatientForm(props: PatientFormProps) {
     donorBloodType,
     donorRace,
     donorDonorType,
+    setRecipientFirstName,
+    setRecipientLastName,
+    setRecipientGender,
+    setRecipientBloodType,
+    setRecipientRace,
+    setRecipientUseOfDyalisis,
+    setDonorFirstName,
+    setDonorLastName,
+    setDonorGender,
+    setDonorBloodType,
+    setDonorRace,
+    setDonorDonorType,
+
     setByKey,
   } = usePatientData();
+
+  useEffect(() => {
+    function setValuesForEditing() {
+      if (
+        props.displayType === formTypes.DONOR &&
+        props.functionalityType === formFunctionalityTypes.EDIT
+      ) {
+        setDonorFirstName(props.donorData?.["First Name"] || "");
+        setDonorLastName(props.donorData?.["Last Name"] || "");
+        setDonorGender(props.donorData?.["Gender"] || gender[0]);
+        setDonorBloodType(props.donorData?.["Blood Type"] || bloodTypes[0]);
+        setDonorRace(props.donorData?.["Race"] || race[0]);
+        setDonorDonorType(props.donorData?.["Donor Type"] || donorType[0]);
+        // console.log(props.donorData);
+      }
+
+      if (
+        props.displayType === formTypes.RECIPIENT &&
+        props.functionalityType === formFunctionalityTypes.EDIT
+      ) {
+        setRecipientFirstName(props.recipientData?.["First Name"] || "");
+        setRecipientLastName(props.recipientData?.["Last Name"] || "");
+        setRecipientGender(props.recipientData?.["Gender"] || gender[0]);
+        setRecipientRace(props.recipientData?.["Race"] || race[0]);
+        setRecipientBloodType(
+          props.recipientData?.["Blood Type"] || bloodTypes[0]
+        );
+        setRecipientUseOfDyalisis(
+          props.recipientData?.["Use of dialysis"] || useOfDyalisis[0]
+        );
+      }
+    }
+    setValuesForEditing();
+  }, [props.donorData, props.recipientData]);
 
   const selectDonorFieldsConfig = generateSelectDonorFieldsConfig({
     donorGender: donorGender,
@@ -76,6 +132,14 @@ function PatientForm(props: PatientFormProps) {
   const buttonOnClick = () => {
     // todo: add validation logic
     const isCorrect = true;
+
+    if (props.displayType === formTypes.DONOR) {
+      sendUpdateDonorRequest(props.donorData?.["donor_id"]); // correct id
+    }
+
+    if (props.displayType === formTypes.RECIPIENT) {
+      sendUpdateRecipientRequest(props.recipientData.id); // correct id
+    }
 
     if (isCorrect) {
       props.onClose();
@@ -138,6 +202,62 @@ function PatientForm(props: PatientFormProps) {
     }
   };
 
+  const sendUpdateRecipientRequest = async (id: number) => {
+    const isCorrect = true; // You may want to replace this with actual validation
+
+    if (isCorrect) {
+      const response = await fetch(`http://127.0.0.1:8000/recipient/${id}/`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          recipient_data: {
+            "First Name": recipientFirstName,
+            "Last Name": recipientLastName,
+            Gender: recipientGender,
+            "Blood Type": recipientBloodType,
+            Race: recipientRace,
+            "Use of dialysis": recipientUseOfDyalisis,
+          },
+        }),
+      });
+      if (response.ok) {
+        props.onClose();
+      } else {
+        console.log("error");
+      }
+    }
+  };
+
+  const sendUpdateDonorRequest = async (id: number) => {
+    const isCorrect = true; // You may want to replace this with actual validation
+
+    if (isCorrect) {
+      const response = await fetch(`http://127.0.0.1:8000/donor/${id}/`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          donor_data: {
+            "First Name": donorFirstName,
+            "Last Name": donorLastName,
+            Gender: donorGender,
+            "Blood Type": donorBloodType,
+            Race: donorRace,
+            "Donor Type": donorDonorType,
+          },
+        }),
+      });
+      if (response.ok) {
+        props.onClose();
+      } else {
+        console.log("error");
+      }
+    }
+  };
+
   const sendAddPairRequest = async () => {
     // THIS FUNCTION IS NOT CORRECT YET
     const isCorrect = true;
@@ -178,7 +298,6 @@ function PatientForm(props: PatientFormProps) {
   return (
     <BlurredBackdrop>
       <ModalContainer className="w-1/3 pr-5 pl-5 pt-5 pb-8">
-        {/* <h1 className="text-center text-3xl font-semibold mb-2">Edit</h1> */}
         <form>
           <div className="flex justify-evenly">
             {props.displayType === formTypes.RECIPIENT && (
@@ -320,7 +439,7 @@ function PatientForm(props: PatientFormProps) {
         <div className="w-full flex justify-center items-center">
           <div className="w-40">
             {props.functionalityType === formFunctionalityTypes.EDIT && (
-              <Button name="Save changes" onClick={buttonOnClick} />
+              <Button name="Save changes" onClick={buttonOnClick} /> // PUT THE EDITING API FUNCTIONS HERE
             )}
             {props.functionalityType === formFunctionalityTypes.CREATE && (
               <Button
