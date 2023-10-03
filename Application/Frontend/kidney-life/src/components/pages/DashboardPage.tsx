@@ -139,7 +139,11 @@ function DashboardPage() {
             onClose={handleClose}
             displayType={formTypes.DONOR}
             // pass here the data of the donor
-            donorData={infoDataDonor.fields}
+            donorData={
+              selectedPair !== null
+                ? pairData?.[selectedPair]?.donor
+                : undefined
+            }
           />
         )}
 
@@ -148,7 +152,11 @@ function DashboardPage() {
             onClose={handleClose}
             displayType={formTypes.RECIPIENT}
             // pass here the data of the recipient
-            recipientData={infoDataRecipient.fields}
+            recipientData={
+              selectedPair !== null
+                ? pairData?.[selectedPair]?.recipient
+                : undefined
+            }
           />
         )}
       </div>
