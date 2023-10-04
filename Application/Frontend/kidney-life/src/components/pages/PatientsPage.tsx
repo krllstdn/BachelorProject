@@ -17,17 +17,18 @@ import {
   PairDetailed,
 } from "../../services/api";
 import { ResultItem, PatientData } from "../../services/api";
+import { render } from "@testing-library/react";
 
 function PatientsPage() {
-  const VIEWS = {
-    NONE: "NONE",
-    CONFIRM_DELETE: "CONFIRM_DELETE",
-    EDIT_PAIR: "EDIT",
-    EDIT_DONOR: "EDIT_DONOR",
-    EDIT_RECIPIENT: "EDIT_RECIPIENT",
-    CREATE_DONOR: "CREATE_DONOR",
-    CREATE_RECIPIENT: "CREATE_RECIPIENT",
-  };
+  enum VIEWS {
+    NONE = "NONE",
+    CONFIRM_DELETE = "CONFIRM_DELETE",
+    EDIT_PAIR = "EDIT",
+    EDIT_DONOR = "EDIT_DONOR",
+    EDIT_RECIPIENT = "EDIT_RECIPIENT",
+    CREATE_DONOR = "CREATE_DONOR",
+    CREATE_RECIPIENT = "CREATE_RECIPIENT",
+  }
 
   const [activeTab, setActiveTab] = useState(0);
   const [currentView, setCurrentView] = useState(VIEWS.NONE);
@@ -97,8 +98,6 @@ function PatientsPage() {
         ? pairData?.[selectedPair]?.recipient?.recipient_data
         : activeTab === 1 && selectedRecipient !== null
         ? recipients?.[selectedRecipient]
-        : activeTab === 2 && selectedDonor !== null
-        ? recipients?.[selectedDonor] // TODO: fix this condition
         : undefined,
   };
 
@@ -111,8 +110,6 @@ function PatientsPage() {
     fields:
       activeTab === 0 && selectedPair !== null
         ? pairData?.[selectedPair]?.donor?.donor_data
-        : activeTab === 1 && selectedRecipient !== null // TODO: fix this condition
-        ? recipients?.[selectedRecipient] // seems weird to have recipient data here
         : activeTab === 2 && selectedDonor !== null
         ? donors?.[selectedDonor]
         : undefined,
@@ -153,6 +150,96 @@ function PatientsPage() {
     },
   ];
 
+  function renderInfoDisplay(type: infoDisplayTypes) {
+    const commonProps = {
+      onDelete: handleOpenConfirmDelete,
+      styles: "p-5 grow mr-5",
+    };
+
+    if (type === infoDisplayTypes.RECIPIENT) {
+      return (
+        <InfoDisplay
+          {...commonProps}
+          onEdit={handleOpenEditRecipient}
+          data={infoDataRecipient}
+          type={infoDisplayTypes.RECIPIENT}
+        />
+      );
+    } else if (type === infoDisplayTypes.DONOR) {
+      return (
+        <InfoDisplay
+          {...commonProps}
+          onEdit={handleOpenEditDonor}
+          data={infoDataDonor}
+          type={infoDisplayTypes.DONOR}
+        />
+      );
+    }
+  }
+
+  function renderPatientForm(view: VIEWS) {
+    const commonProps = {
+      onClose: handleClose,
+      onRefreshClick: handleRefreshClick,
+    };
+    if (view === VIEWS.EDIT_PAIR) {
+      return <PatientForm displayType={formTypes.PAIR} {...commonProps} />;
+    }
+
+    if (view === VIEWS.EDIT_DONOR) {
+      return (
+        <PatientForm
+          {...commonProps}
+          functionalityType={formFunctionalityTypes.EDIT}
+          displayType={formTypes.DONOR}
+          donor={
+            activeTab === 0 && selectedPair !== null
+              ? pairData?.[selectedPair]?.donor
+              : activeTab === 2 && selectedDonor !== null
+              ? donorData?.[selectedDonor]
+              : undefined
+          }
+        />
+      );
+    }
+    if (view === VIEWS.EDIT_RECIPIENT) {
+      return (
+        <PatientForm
+          {...commonProps}
+          functionalityType={formFunctionalityTypes.EDIT}
+          displayType={formTypes.RECIPIENT}
+          recipient={
+            activeTab === 0 && selectedPair !== null
+              ? pairData?.[selectedPair]?.recipient
+              : activeTab === 1 && selectedRecipient !== null
+              ? recipientData?.[selectedRecipient]
+              : undefined
+          }
+        />
+      );
+    }
+    if (view === VIEWS.CREATE_DONOR) {
+      return (
+        <PatientForm
+          {...commonProps}
+          functionalityType={formFunctionalityTypes.CREATE}
+          displayType={formTypes.DONOR}
+        />
+      );
+    }
+    if (view === VIEWS.CREATE_RECIPIENT) {
+      return (
+        <PatientForm
+          {...commonProps}
+          functionalityType={formFunctionalityTypes.CREATE}
+          displayType={formTypes.RECIPIENT}
+        />
+      );
+    }
+
+    return null;
+  }
+
   return (
     <div>
       <div className="navbar">
@@ -175,42 +262,18 @@ function PatientsPage() {
         <div className="w-full flex">
           {activeTab === 0 && (
             <div className="flex w-full justify-between">
-              <InfoDisplay // TODO: create a render function for this component
-                onEdit={handleOpenEditRecipient}
-                onDelete={handleOpenConfirmDelete}
-                data={infoDataRecipient}
-                styles="p-5 mr-5 grow"
-                type={infoDisplayTypes.RECIPIENT}
-              />
-              <InfoDisplay
-                onEdit={handleOpenEditDonor}
-                onDelete={handleOpenConfirmDelete}
-                data={infoDataDonor}
-                styles="p-5 grow"
-                type={infoDisplayTypes.DONOR}
-              />
+              {renderInfoDisplay(infoDisplayTypes.RECIPIENT)}
+              {renderInfoDisplay(infoDisplayTypes.DONOR)}
             </div>
           )}
           {activeTab === 1 && (
             <div className="flex w-1/2">
-              <InfoDisplay
-                onEdit={handleOpenEditRecipient}
-                onDelete={handleOpenConfirmDelete}
-                data={infoDataRecipient}
-                styles="p-5 grow"
-                type={infoDisplayTypes.RECIPIENT}
-              />
+              {renderInfoDisplay(infoDisplayTypes.RECIPIENT)}
             </div>
           )}
           {activeTab === 2 && (
             <div className="flex w-1/2">
-              <InfoDisplay
-                onEdit={handleOpenEditDonor}
-                onDelete={handleOpenConfirmDelete}
-                data={infoDataDonor}
-                styles="p-5 grow"
-                type={infoDisplayTypes.DONOR}
-              />
+              {renderInfoDisplay(infoDisplayTypes.DONOR)}
             </div>
           )}
         </div>
@@ -218,57 +281,14 @@ function PatientsPage() {
       {currentView === VIEWS.CONFIRM_DELETE && (
         <ConfirmDelete onClose={handleClose} />
       )}
-      {currentView === VIEWS.EDIT_PAIR && (
-        <PatientForm
-          displayType={formTypes.PAIR}
-          functionalityType={formFunctionalityTypes.EDIT}
-          onClose={handleClose}
-        />
-      )}
-      {currentView === VIEWS.EDIT_DONOR && (
-        <PatientForm // TODO: create a render function for this component
-          displayType={formTypes.DONOR}
-          functionalityType={formFunctionalityTypes.EDIT}
-          onClose={handleClose}
-          donor={
-            activeTab === 0 && selectedPair !== null
-              ? pairData?.[selectedPair]?.donor
-              : activeTab === 2 && selectedDonor !== null
-              ? donorData?.[selectedDonor]
-              : undefined
-          }
-          onRefreshClick={handleRefreshClick}
-        />
-      )}
-      {currentView === VIEWS.EDIT_RECIPIENT && (
-        <PatientForm
-          displayType={formTypes.RECIPIENT}
-          functionalityType={formFunctionalityTypes.EDIT}
-          onClose={handleClose}
-          recipient={
-            activeTab === 0 && selectedPair !== null
-              ? pairData?.[selectedPair]?.recipient
-              : activeTab === 1 && selectedRecipient !== null
-              ? recipientData?.[selectedRecipient]
-              : undefined
-          }
-          onRefreshClick={handleRefreshClick}
-        />
-      )}
-      {currentView === VIEWS.CREATE_DONOR && (
-        <PatientForm
-          displayType={formTypes.DONOR}
-          functionalityType={formFunctionalityTypes.CREATE}
-          onClose={handleClose}
-        />
-      )}
-      {currentView === VIEWS.CREATE_RECIPIENT && (
-        <PatientForm
-          displayType={formTypes.RECIPIENT}
-          functionalityType={formFunctionalityTypes.CREATE}
-          onClose={handleClose}
-        />
-      )}
+      {currentView === VIEWS.EDIT_PAIR && renderPatientForm(VIEWS.EDIT_PAIR)}
+      {currentView === VIEWS.EDIT_DONOR && renderPatientForm(VIEWS.EDIT_DONOR)}
+      {currentView === VIEWS.EDIT_RECIPIENT &&
+        renderPatientForm(VIEWS.EDIT_RECIPIENT)}
+      {currentView === VIEWS.CREATE_DONOR &&
+        renderPatientForm(VIEWS.CREATE_DONOR)}
+      {currentView === VIEWS.CREATE_RECIPIENT &&
+        renderPatientForm(VIEWS.CREATE_RECIPIENT)}
     </div>
   );
 }
