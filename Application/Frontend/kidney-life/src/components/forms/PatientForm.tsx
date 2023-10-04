@@ -27,6 +27,7 @@ type PatientFormProps = {
   functionalityType?: formFunctionalityTypes;
   donor?: any; // TODO: add proper type
   recipient?: any; // TODO: add proper type
+  onRefreshClick?: () => void;
 };
 
 PatientForm.defaultProps = {
@@ -149,6 +150,8 @@ function PatientForm(props: PatientFormProps) {
     if (props.displayType === formTypes.RECIPIENT) {
       sendUpdateRecipientRequest(props.recipient?.["recipient_id"]);
     }
+
+    props.onRefreshClick?.();
 
     if (isCorrect) {
       props.onClose();
