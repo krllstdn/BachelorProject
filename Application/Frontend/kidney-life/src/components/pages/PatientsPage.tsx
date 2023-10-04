@@ -8,19 +8,11 @@ import PatientForm from "../forms/PatientForm";
 import {
   infoDisplayTypes,
   formTypes,
-  // tabDonor,
-  // tabPair,
-  // tabRecipient,
-  // infoDataDonor,
-  // infoDataRecipient,
-  recipientItemsData,
-  pairItemsData,
   formFunctionalityTypes,
 } from "../../helpers/constants";
 import {
   getRecipients,
   getDonors,
-  getPairs,
   getDetailedPairs,
   PairDetailed,
 } from "../../services/api";
@@ -39,7 +31,6 @@ function PatientsPage() {
 
   const [activeTab, setActiveTab] = useState(0);
   const [currentView, setCurrentView] = useState(VIEWS.NONE);
-  const [fadeOut, setFadeOut] = useState(false);
   const [recipientData, setRecipientData] = useState<ResultItem[]>();
   const [donorData, setDonorData] = useState<ResultItem[]>();
   const [pairData, setPairData] = useState<PairDetailed[]>();
@@ -69,24 +60,29 @@ function PatientsPage() {
     setCurrentView(VIEWS.CREATE_RECIPIENT);
   };
 
+  const fetchAllData = async () => {
+    try {
+      const recipients = await getRecipients();
+      setRecipientData(recipients);
+
+      const donors = await getDonors();
+      setDonorData(donors);
+
+      const pairs = await getDetailedPairs();
+      setPairData(pairs);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
-    const fetchAllData = async () => {
-      try {
-        const recipients = await getRecipients();
-        setRecipientData(recipients);
-
-        const donors = await getDonors();
-        setDonorData(donors);
-
-        const pairs = await getDetailedPairs();
-        setPairData(pairs);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
     fetchAllData();
   }, []);
+
+  const handleRefreshClick = () => {
+    // TODO: be more specific about what data to refresh
+    fetchAllData();
+  };
 
   const recipients = recipientData
     ?.map((recipient) => {
@@ -179,7 +175,7 @@ function PatientsPage() {
         <div className="w-full flex">
           {activeTab === 0 && (
             <div className="flex w-full justify-between">
-              <InfoDisplay
+              <InfoDisplay // TODO: create a render function for this component
                 onEdit={handleOpenEditRecipient}
                 onDelete={handleOpenConfirmDelete}
                 data={infoDataRecipient}
@@ -230,7 +226,7 @@ function PatientsPage() {
         />
       )}
       {currentView === VIEWS.EDIT_DONOR && (
-        <PatientForm
+        <PatientForm // TODO: create a render function for this component
           displayType={formTypes.DONOR}
           functionalityType={formFunctionalityTypes.EDIT}
           onClose={handleClose}
@@ -241,6 +237,7 @@ function PatientsPage() {
               ? donorData?.[selectedDonor]
               : undefined
           }
+          onRefreshClick={handleRefreshClick}
         />
       )}
       {currentView === VIEWS.EDIT_RECIPIENT && (
@@ -255,6 +252,7 @@ function PatientsPage() {
               ? recipientData?.[selectedRecipient]
               : undefined
           }
+          onRefreshClick={handleRefreshClick}
         />
       )}
       {currentView === VIEWS.CREATE_DONOR && (
