@@ -7,11 +7,7 @@ import AddNewPair from "../modals/AddNewPair";
 import InfoDisplay from "../cards/InfoDisplay";
 import ParamDisplay from "../cards/ParamDisplay";
 import { infoPrediction } from "../../helpers/constants";
-import {
-  formTypes,
-  // infoDataDonor,
-  // infoDataRecipient,
-} from "../../helpers/constants";
+import { formTypes } from "../../helpers/constants";
 import { infoDisplayTypes } from "../../helpers/constants";
 import ConfirmDelete from "../modals/ConfirmDelete";
 import PatientForm from "../forms/PatientForm";
@@ -20,15 +16,15 @@ import { PairDetailed, getDetailedPairs } from "../../services/api";
 import { Tab } from "../forms/Tabs";
 
 function DashboardPage() {
-  const VIEWS = {
-    NONE: "NONE",
-    ADD_NEW_PAIR: "ADD_NEW_PAIR",
-    ADD_NEW_PAIR_NEW: "ADD_NEW_PAIR_NEW",
-    ADD_NEW_PAIR_EXISTING: "ADD_NEW_PAIR_EXISTING",
-    CONFIRM_DELETE: "CONFIRM_DELETE",
-    EDIT_DONOR: "EDIT_DONOR",
-    EDIT_RECIPIENT: "EDIT_RECIPIENT",
-  };
+  enum VIEWS {
+    NONE = "NONE",
+    ADD_NEW_PAIR = "ADD_NEW_PAIR",
+    ADD_NEW_PAIR_NEW = "ADD_NEW_PAIR_NEW",
+    ADD_NEW_PAIR_EXISTING = "ADD_NEW_PAIR_EXISTING",
+    CONFIRM_DELETE = "CONFIRM_DELETE",
+    EDIT_DONOR = "EDIT_DONOR",
+    EDIT_RECIPIENT = "EDIT_RECIPIENT",
+  }
 
   const [currentView, setCurrentView] = useState(VIEWS.NONE);
   const [pairData, setPairData] = useState<PairDetailed[]>();
@@ -106,6 +102,36 @@ function DashboardPage() {
     setCurrentView(VIEWS.EDIT_RECIPIENT);
   };
 
+  const renderPatientForm = (view: VIEWS) => {
+    if (view === VIEWS.EDIT_DONOR) {
+      return (
+        <PatientForm
+          onClose={handleClose}
+          displayType={formTypes.DONOR}
+          donor={
+            selectedPair !== null ? pairData?.[selectedPair]?.donor : undefined
+          }
+        />
+      );
+    }
+
+    if (view === VIEWS.EDIT_RECIPIENT) {
+      return (
+        <PatientForm
+          onClose={handleClose}
+          displayType={formTypes.RECIPIENT}
+          recipient={
+            selectedPair !== null
+              ? pairData?.[selectedPair]?.recipient
+              : undefined
+          }
+        />
+      );
+    }
+
+    return null;
+  };
+
   return (
     <div className="App-body">
       <div className="navbar">
@@ -134,29 +160,11 @@ function DashboardPage() {
           <ConfirmDelete onClose={handleClose} />
         )}
 
-        {currentView === VIEWS.EDIT_DONOR && (
-          <PatientForm
-            onClose={handleClose}
-            displayType={formTypes.DONOR}
-            donor={
-              selectedPair !== null
-                ? pairData?.[selectedPair]?.donor
-                : undefined
-            }
-          />
-        )}
+        {currentView === VIEWS.EDIT_DONOR &&
+          renderPatientForm(VIEWS.EDIT_DONOR)}
 
-        {currentView === VIEWS.EDIT_RECIPIENT && (
-          <PatientForm
-            onClose={handleClose}
-            displayType={formTypes.RECIPIENT}
-            recipient={
-              selectedPair !== null
-                ? pairData?.[selectedPair]?.recipient
-                : undefined
-            }
-          />
-        )}
+        {currentView === VIEWS.EDIT_RECIPIENT &&
+          renderPatientForm(VIEWS.EDIT_RECIPIENT)}
       </div>
       <div className="main flex pr-5 w-screen">
         <div className="sidebar inline-block ml-5">
