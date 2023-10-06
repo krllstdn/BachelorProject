@@ -2,7 +2,7 @@ import NavBar from "../layout/Navbar";
 import InputField from "../forms/InputField";
 import SelectField from "../forms/SelectField";
 import { doctorSpecialization } from "../../helpers/constants";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SetterMap } from "../../helpers/usePatientData";
 import Button from "../buttons/Button";
 
@@ -43,6 +43,10 @@ function RegisterPage() {
     const { name, value } = event.target;
     setByKey(name, value);
   };
+
+  useEffect(() => {
+    document.title = "Register | KidneyLife";
+  }, []);
 
   return (
     <div>

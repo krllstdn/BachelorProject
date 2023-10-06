@@ -80,6 +80,7 @@ function PatientsPage() {
   };
 
   useEffect(() => {
+    document.title = "Patients | KidneyLife";
     fetchAllData();
   }, []);
 
