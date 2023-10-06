@@ -8,9 +8,6 @@ type InfoDisplayProps = {
   data: {
     header: string;
     fields?: PatientData;
-    // {
-    //   [key: string]: string;
-    // };
   };
   styles?: string;
   textSize?: string;
