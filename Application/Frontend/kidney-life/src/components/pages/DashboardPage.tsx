@@ -31,6 +31,7 @@ function DashboardPage() {
   const [selectedPair, setSelectedPair] = useState<number | null>(0);
 
   useEffect(() => {
+    document.title = "Dashboard | KidneyLife";
     const fetchPairData = async () => {
       try {
         const pairs = await getDetailedPairs();
