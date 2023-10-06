@@ -17,12 +17,12 @@ import {
   PairDetailed,
 } from "../../services/api";
 import { ResultItem, PatientData } from "../../services/api";
-import { render } from "@testing-library/react";
 
 function PatientsPage() {
   enum VIEWS {
     NONE = "NONE",
-    CONFIRM_DELETE = "CONFIRM_DELETE",
+    CONFIRM_DELETE_DONOR = "CONFIRM_DELETE_DONOR",
+    CONFIRM_DELETE_RECIPIENT = "CONFIRM_DELETE_RECIPIENT",
     EDIT_PAIR = "EDIT",
     EDIT_DONOR = "EDIT_DONOR",
     EDIT_RECIPIENT = "EDIT_RECIPIENT",
@@ -42,8 +42,11 @@ function PatientsPage() {
   const handleClose = () => {
     setCurrentView(VIEWS.NONE);
   };
-  const handleOpenConfirmDelete = () => {
-    setCurrentView(VIEWS.CONFIRM_DELETE);
+  const handleOpenConfirmDeleteDonor = () => {
+    setCurrentView(VIEWS.CONFIRM_DELETE_DONOR);
+  };
+  const handleOpenConfirmDeleteRecipient = () => {
+    setCurrentView(VIEWS.CONFIRM_DELETE_RECIPIENT);
   };
   const handleOpenEditPair = () => {
     setCurrentView(VIEWS.EDIT_PAIR);
@@ -83,6 +86,7 @@ function PatientsPage() {
   const handleRefreshClick = () => {
     // TODO: be more specific about what data to refresh
     fetchAllData();
+    console.log("refreshed");
   };
 
   const recipients = recipientData
@@ -152,7 +156,6 @@ function PatientsPage() {
 
   function renderInfoDisplay(type: infoDisplayTypes) {
     const commonProps = {
-      onDelete: handleOpenConfirmDelete,
       styles: "p-5 grow mr-5",
     };
 
@@ -160,6 +163,7 @@ function PatientsPage() {
       return (
         <InfoDisplay
           {...commonProps}
+          onDelete={handleOpenConfirmDeleteRecipient}
           onEdit={handleOpenEditRecipient}
           data={infoDataRecipient}
           type={infoDisplayTypes.RECIPIENT}
@@ -169,6 +173,7 @@ function PatientsPage() {
       return (
         <InfoDisplay
           {...commonProps}
+          onDelete={handleOpenConfirmDeleteDonor}
           onEdit={handleOpenEditDonor}
           data={infoDataDonor}
           type={infoDisplayTypes.DONOR}
@@ -240,6 +245,14 @@ function PatientsPage() {
     return null;
   }
 
+  const recipientIds = recipientData?.map((recipient) => {
+    return recipient.recipient_id;
+  });
+
+  const donorIds = donorData?.map((donor) => {
+    return donor.donor_id;
+  });
+
   return (
     <div>
       <div className="navbar">
@@ -278,8 +291,27 @@ function PatientsPage() {
           )}
         </div>
       </div>
-      {currentView === VIEWS.CONFIRM_DELETE && (
-        <ConfirmDelete onClose={handleClose} />
+      {currentView === VIEWS.CONFIRM_DELETE_DONOR && (
+        <ConfirmDelete
+          refresh={handleRefreshClick}
+          onClose={handleClose}
+          isRecipient={false}
+          patientId={
+            selectedDonor !== null ? donorIds?.[selectedDonor] : undefined
+          }
+        />
+      )}
+      {currentView === VIEWS.CONFIRM_DELETE_RECIPIENT && (
+        <ConfirmDelete
+          refresh={handleRefreshClick}
+          onClose={handleClose}
+          isRecipient={true}
+          patientId={
+            selectedRecipient !== null
+              ? recipientIds?.[selectedRecipient]
+              : undefined
+          }
+        />
       )}
       {currentView === VIEWS.EDIT_PAIR && renderPatientForm(VIEWS.EDIT_PAIR)}
       {currentView === VIEWS.EDIT_DONOR && renderPatientForm(VIEWS.EDIT_DONOR)}
