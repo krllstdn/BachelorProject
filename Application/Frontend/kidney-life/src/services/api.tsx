@@ -1,5 +1,7 @@
 export type PatientData = {
   // too general - be more specific if possible.
+  recipient_id?: number;
+  donor_id?: number;
   [key: string]: string | number | boolean | null | undefined;
 };
 
@@ -94,4 +96,30 @@ export const updateRecipient = async (
 
 export const updateDonor = async (id: number, donorData: any): Promise<any> => {
   return updateData(`http://127.0.0.1:8000/donor/${id}/`, donorData);
+};
+
+const deleteData = async (url: string): Promise<void> => {
+  try {
+    const response = await fetch(url, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to delete data at ${url}`);
+    }
+  } catch (err) {
+    console.error("Error deleting data", err);
+    throw err;
+  }
+};
+
+export const deleteRecipient = async (id: number): Promise<void> => {
+  return deleteData(`http://127.0.0.1:8000/recipient/${id}/`);
+};
+
+export const deleteDonor = async (id: number): Promise<void> => {
+  return deleteData(`http://127.0.0.1:8000/donor/${id}/`);
 };
