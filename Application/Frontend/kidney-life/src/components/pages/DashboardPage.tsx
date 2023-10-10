@@ -20,20 +20,6 @@ import { Tab } from "../forms/Tabs";
 import { usePatients, VIEWS } from "../../context/patientsPageContext";
 
 function DashboardPage() {
-  // enum VIEWS {
-  //   NONE = "NONE",
-  //   ADD_NEW_PAIR = "ADD_NEW_PAIR",
-  //   ADD_NEW_PAIR_NEW = "ADD_NEW_PAIR_NEW",
-  //   ADD_NEW_PAIR_EXISTING = "ADD_NEW_PAIR_EXISTING",
-  //   CONFIRM_DELETE = "CONFIRM_DELETE",
-  //   EDIT_DONOR = "EDIT_DONOR",
-  //   EDIT_RECIPIENT = "EDIT_RECIPIENT",
-  // }
-
-  // const [currentView, setCurrentView] = useState(VIEWS.NONE);
-  // const [pairData, setPairData] = useState<PairDetailed[]>();
-  // const [selectedPair, setSelectedPair] = useState<number | null>(0);
-
   const {
     currentView,
     setCurrentView,
@@ -80,7 +66,6 @@ function DashboardPage() {
   };
 
   const handleRefreshClick = () => {
-    // TODO: be more specific about what data to refresh
     fetchPairData();
     console.log("refreshed");
   };
@@ -115,64 +100,6 @@ function DashboardPage() {
         ? pairData?.[selectedPair]?.recipient?.recipient_data
         : undefined,
   };
-
-  // const handleOpenAddNewPair = () => {
-  //   setCurrentView(VIEWS.ADD_NEW_PAIR);
-  // };
-
-  // const handleClose = () => {
-  //   setCurrentView(VIEWS.NONE);
-  // };
-
-  // const handleOpenAddNewPairNew = () => {
-  //   setCurrentView(VIEWS.ADD_NEW_PAIR_NEW);
-  // };
-
-  // const handleOpenAddNewPairExisting = () => {
-  //   setCurrentView(VIEWS.ADD_NEW_PAIR_EXISTING);
-  // };
-
-  // const handleOpenConfirmDelete = () => {
-  //   setCurrentView(VIEWS.CONFIRM_DELETE);
-  // };
-
-  // const handleOpenEditDonor = () => {
-  //   setCurrentView(VIEWS.EDIT_DONOR);
-  // };
-
-  // const handleOpenEditRecipient = () => {
-  //   setCurrentView(VIEWS.EDIT_RECIPIENT);
-  // };
-
-  // const renderPatientForm = (view: VIEWS) => {
-  //   if (view === VIEWS.EDIT_DONOR) {
-  //     return (
-  //       <PatientForm
-  //         onClose={handleClose}
-  //         displayType={formTypes.DONOR}
-  //         donor={
-  //           selectedPair !== null ? pairData?.[selectedPair]?.donor : undefined
-  //         }
-  //       />
-  //     );
-  //   }
-
-  //   if (view === VIEWS.EDIT_RECIPIENT) {
-  //     return (
-  //       <PatientForm
-  //         onClose={handleClose}
-  //         displayType={formTypes.RECIPIENT}
-  //         recipient={
-  //           selectedPair !== null
-  //             ? pairData?.[selectedPair]?.recipient
-  //             : undefined
-  //         }
-  //       />
-  //     );
-  //   }
-
-  //   return null;
-  // };
 
   function renderPatientForm(view: VIEWS) {
     const commonProps = {
@@ -215,24 +142,6 @@ function DashboardPage() {
         />
       );
     }
-    // if (view === VIEWS.CREATE_DONOR) {
-    //   return (
-    //     <PatientForm
-    //       {...commonProps}
-    //       functionalityType={formFunctionalityTypes.CREATE}
-    //       displayType={formTypes.DONOR}
-    //     />
-    //   );
-    // }
-    // if (view === VIEWS.CREATE_RECIPIENT) {
-    //   return (
-    //     <PatientForm
-    //       {...commonProps}
-    //       functionalityType={formFunctionalityTypes.CREATE}
-    //       displayType={formTypes.RECIPIENT}
-    //     />
-    //   );
-    // }
     return null;
   }
 
