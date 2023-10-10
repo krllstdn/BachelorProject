@@ -251,20 +251,6 @@ function DashboardPage() {
             <ParamDisplay />
           </div>
           <div className="flex justify-between">
-            {/* <InfoDisplay
-              data={infoDataRecipient}
-              styles="m-3 mb-0 p-12 pb-28"
-              type={infoDisplayTypes.RECIPIENT}
-              onEdit={handleOpenEditRecipient}
-              onDelete={handleOpenConfirmDelete}
-            />
-            <InfoDisplay
-              data={infoDataDonor}
-              styles="m-3 mb-0 p-12 pb-28"
-              type={infoDisplayTypes.DONOR}
-              onEdit={handleOpenEditDonor}
-              onDelete={handleOpenConfirmDelete}
-            /> */}
             {renderInfoDisplay(infoDisplayTypes.RECIPIENT)}
             {renderInfoDisplay(infoDisplayTypes.DONOR)}
           </div>
