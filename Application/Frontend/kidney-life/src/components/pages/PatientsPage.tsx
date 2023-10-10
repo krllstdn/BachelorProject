@@ -26,9 +26,9 @@ function PatientsPage() {
     CREATE_RECIPIENT = "CREATE_RECIPIENT",
   }
 
-  const [currentView, setCurrentView] = useState(VIEWS.NONE);
-
   const {
+    currentView,
+    setCurrentView,
     donorData,
     setDonorData,
     recipientData,
@@ -148,6 +148,7 @@ function PatientsPage() {
     const commonProps = {
       styles: "p-5 grow mr-5",
     };
+    console.log(selectedDonor);
 
     if (type === infoDisplayTypes.RECIPIENT) {
       return (
@@ -155,7 +156,7 @@ function PatientsPage() {
           {...commonProps}
           onDelete={handleOpenConfirmDeleteRecipient}
           onEdit={handleOpenEditRecipient}
-          data={infoDataRecipient} // DATA PROP
+          data={infoDataRecipient}
           type={infoDisplayTypes.RECIPIENT}
         />
       );
@@ -250,16 +251,7 @@ function PatientsPage() {
       </div>
       <div className="main flex pr-5 w-screen">
         <div className="sidebar ml-3">
-          <SideBar
-            tabs={tabs}
-            // setActiveTab={setActiveTab}
-            // onOpenCreateDonor={handleOpenCreateDonor}
-            // onOpenCreateRecipient={handleOpenCreateRecipient}
-            // onOpenCreatePair={handleOpenEditPair}
-            // setActiveDonor={setSelectedDonor}
-            // setActiveRecipient={setSelectedRecipient}
-            // setActivePair={setSelectedPair}
-          />
+          <SideBar tabs={tabs} />
         </div>
         <div className="w-full flex">
           {activeTab === 0 && (
@@ -286,7 +278,12 @@ function PatientsPage() {
           onClose={handleClose}
           isRecipient={false}
           patientId={
-            selectedDonor !== null ? donorIds?.[selectedDonor] : undefined
+            // how to determine is it pair or patients
+            selectedDonor !== null && activeTab === 2
+              ? donorIds?.[selectedDonor]
+              : selectedPair !== null && activeTab === 0
+              ? pairData?.[selectedPair].donor.donor_id
+              : undefined
           }
         />
       )}
@@ -296,8 +293,10 @@ function PatientsPage() {
           onClose={handleClose}
           isRecipient={true}
           patientId={
-            selectedRecipient !== null
-              ? recipientIds?.[selectedRecipient]
+            selectedDonor !== null && activeTab === 2
+              ? donorIds?.[selectedDonor]
+              : selectedPair !== null && activeTab === 0
+              ? pairData?.[selectedPair].recipient.recipient_id
               : undefined
           }
         />

@@ -25,9 +25,11 @@ export type Response = {
 export type PairDetailed = {
   pair_id: number;
   donor: {
+    donor_id: number;
     donor_data: PatientData;
   };
   recipient: {
+    recipient_id: number;
     recipient_data: PatientData;
   };
 };
