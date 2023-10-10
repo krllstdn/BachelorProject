@@ -22,32 +22,23 @@ import { usePatients, VIEWS } from "../../context/patientsPageContext";
 function DashboardPage() {
   const {
     currentView,
-    setCurrentView,
     donorData,
-    setDonorData,
     recipientData,
-    setRecipientData,
     pairData,
     setPairData,
     activeTab,
-    setActiveTab,
     selectedDonor,
-    setSelectedDonor,
     selectedPair,
     setSelectedPair,
     selectedRecipient,
-    setSelectedRecipient,
     handleClose,
     handleOpenAddNewPair,
     handleOpenAddNewPairNew,
     handleOpenAddNewPairExisting,
     handleOpenConfirmDeleteDonor,
     handleOpenConfirmDeleteRecipient,
-    handleOpenEditPair,
     handleOpenEditDonor,
     handleOpenEditRecipient,
-    handleOpenCreateDonor,
-    handleOpenCreateRecipient,
   } = usePatients();
 
   useEffect(() => {
@@ -86,6 +77,7 @@ function DashboardPage() {
   ];
 
   const infoDataDonor = {
+    // TODO: it is used across 3 files, so it should be defined in one place
     header: "Donor info",
     fields:
       selectedPair !== null
@@ -194,6 +186,7 @@ function DashboardPage() {
           <AddNewPairExisting
             onClose={handleClose}
             onBack={handleOpenAddNewPair}
+            onRefresh={handleRefreshClick}
           />
         )}
 

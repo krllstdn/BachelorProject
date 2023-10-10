@@ -270,7 +270,7 @@ function PatientForm(props: PatientFormProps) {
     }
   };
 
-  const sendAddPairRequest = async () => {
+  const sendAddPairDetailedRequest = async () => {
     // THIS FUNCTION IS NOT CORRECT YET
     const isCorrect = true;
 
@@ -465,7 +465,7 @@ function PatientForm(props: PatientFormProps) {
                   props.displayType === formTypes.DONOR
                     ? sendAddDonorRequest
                     : props.displayType === formTypes.PAIR
-                    ? sendAddPairRequest
+                    ? sendAddPairDetailedRequest
                     : sendAddRecipientRequest
                 }
               />

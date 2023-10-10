@@ -10,8 +10,12 @@ import {
   formTypes,
   formFunctionalityTypes,
 } from "../../helpers/constants";
-import { getRecipients, getDonors, getDetailedPairs } from "../../services/api";
-import { PatientData } from "../../services/api";
+import {
+  getRecipients,
+  getDonors,
+  getDetailedPairs,
+  PatientData,
+} from "../../services/api";
 import { usePatients } from "../../context/patientsPageContext";
 
 function PatientsPage() {
@@ -28,7 +32,6 @@ function PatientsPage() {
 
   const {
     currentView,
-    setCurrentView,
     donorData,
     setDonorData,
     recipientData,
@@ -36,21 +39,14 @@ function PatientsPage() {
     pairData,
     setPairData,
     activeTab,
-    setActiveTab,
     selectedPair,
-    setSelectedPair,
     selectedRecipient,
-    setSelectedRecipient,
     selectedDonor,
-    setSelectedDonor,
     handleClose,
     handleOpenConfirmDeleteDonor,
     handleOpenConfirmDeleteRecipient,
-    handleOpenEditPair,
     handleOpenEditDonor,
     handleOpenEditRecipient,
-    handleOpenCreateDonor,
-    handleOpenCreateRecipient,
   } = usePatients();
 
   const fetchAllData = async () => {
@@ -293,8 +289,8 @@ function PatientsPage() {
           onClose={handleClose}
           isRecipient={true}
           patientId={
-            selectedDonor !== null && activeTab === 2
-              ? donorIds?.[selectedDonor]
+            selectedRecipient !== null && activeTab === 2
+              ? recipientIds?.[selectedRecipient]
               : selectedPair !== null && activeTab === 0
               ? pairData?.[selectedPair].recipient.recipient_id
               : undefined
