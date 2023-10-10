@@ -10,13 +10,9 @@ import {
   formTypes,
   formFunctionalityTypes,
 } from "../../helpers/constants";
-import {
-  getRecipients,
-  getDonors,
-  getDetailedPairs,
-  PairDetailed,
-} from "../../services/api";
-import { ResultItem, PatientData } from "../../services/api";
+import { getRecipients, getDonors, getDetailedPairs } from "../../services/api";
+import { PatientData } from "../../services/api";
+import { usePatients } from "../../context/patientsPageContext";
 
 function PatientsPage() {
   enum VIEWS {
@@ -30,39 +26,32 @@ function PatientsPage() {
     CREATE_RECIPIENT = "CREATE_RECIPIENT",
   }
 
-  const [activeTab, setActiveTab] = useState(0);
   const [currentView, setCurrentView] = useState(VIEWS.NONE);
-  const [recipientData, setRecipientData] = useState<ResultItem[]>();
-  const [donorData, setDonorData] = useState<ResultItem[]>();
-  const [pairData, setPairData] = useState<PairDetailed[]>();
-  const [selectedPair, setSelectedPair] = useState<number | null>(0);
-  const [selectedRecipient, setSelectedRecipient] = useState<number | null>(0);
-  const [selectedDonor, setSelectedDonor] = useState<number | null>(0);
 
-  const handleClose = () => {
-    setCurrentView(VIEWS.NONE);
-  };
-  const handleOpenConfirmDeleteDonor = () => {
-    setCurrentView(VIEWS.CONFIRM_DELETE_DONOR);
-  };
-  const handleOpenConfirmDeleteRecipient = () => {
-    setCurrentView(VIEWS.CONFIRM_DELETE_RECIPIENT);
-  };
-  const handleOpenEditPair = () => {
-    setCurrentView(VIEWS.EDIT_PAIR);
-  };
-  const handleOpenEditDonor = () => {
-    setCurrentView(VIEWS.EDIT_DONOR);
-  };
-  const handleOpenEditRecipient = () => {
-    setCurrentView(VIEWS.EDIT_RECIPIENT);
-  };
-  const handleOpenCreateDonor = () => {
-    setCurrentView(VIEWS.CREATE_DONOR);
-  };
-  const handleOpenCreateRecipient = () => {
-    setCurrentView(VIEWS.CREATE_RECIPIENT);
-  };
+  const {
+    donorData,
+    setDonorData,
+    recipientData,
+    setRecipientData,
+    pairData,
+    setPairData,
+    activeTab,
+    setActiveTab,
+    selectedPair,
+    setSelectedPair,
+    selectedRecipient,
+    setSelectedRecipient,
+    selectedDonor,
+    setSelectedDonor,
+    handleClose,
+    handleOpenConfirmDeleteDonor,
+    handleOpenConfirmDeleteRecipient,
+    handleOpenEditPair,
+    handleOpenEditDonor,
+    handleOpenEditRecipient,
+    handleOpenCreateDonor,
+    handleOpenCreateRecipient,
+  } = usePatients();
 
   const fetchAllData = async () => {
     try {
@@ -166,7 +155,7 @@ function PatientsPage() {
           {...commonProps}
           onDelete={handleOpenConfirmDeleteRecipient}
           onEdit={handleOpenEditRecipient}
-          data={infoDataRecipient}
+          data={infoDataRecipient} // DATA PROP
           type={infoDisplayTypes.RECIPIENT}
         />
       );
@@ -263,14 +252,13 @@ function PatientsPage() {
         <div className="sidebar ml-3">
           <SideBar
             tabs={tabs}
-            setActiveTab={setActiveTab}
-            onOpenCreateDonor={handleOpenCreateDonor}
-            onOpenCreateRecipient={handleOpenCreateRecipient}
-            onOpenCreatePair={handleOpenEditPair}
-            donorData={donors}
-            setActiveDonor={setSelectedDonor}
-            setActiveRecipient={setSelectedRecipient}
-            setActivePair={setSelectedPair}
+            // setActiveTab={setActiveTab}
+            // onOpenCreateDonor={handleOpenCreateDonor}
+            // onOpenCreateRecipient={handleOpenCreateRecipient}
+            // onOpenCreatePair={handleOpenEditPair}
+            // setActiveDonor={setSelectedDonor}
+            // setActiveRecipient={setSelectedRecipient}
+            // setActivePair={setSelectedPair}
           />
         </div>
         <div className="w-full flex">
