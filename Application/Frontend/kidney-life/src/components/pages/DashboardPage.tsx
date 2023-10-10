@@ -173,14 +173,6 @@ function DashboardPage() {
     }
   }
 
-  const recipientIds = recipientData?.map((recipient) => {
-    return recipient.recipient_id;
-  });
-
-  const donorIds = donorData?.map((donor) => {
-    return donor.donor_id;
-  });
-
   return (
     <div className="App-body">
       <div className="navbar">
@@ -211,7 +203,9 @@ function DashboardPage() {
             onClose={handleClose}
             isRecipient={false}
             patientId={
-              selectedDonor !== null ? donorIds?.[selectedDonor] : undefined
+              selectedPair !== null
+                ? pairData?.[selectedPair].donor.donor_id
+                : undefined
             }
           />
         )}
@@ -221,8 +215,8 @@ function DashboardPage() {
             onClose={handleClose}
             isRecipient={true}
             patientId={
-              selectedRecipient !== null
-                ? recipientIds?.[selectedRecipient]
+              selectedPair !== null
+                ? pairData?.[selectedPair].recipient.recipient_id
                 : undefined
             }
           />
