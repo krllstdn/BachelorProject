@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Button from "../buttons/Button";
-import { SideBarItemData } from "../layout/Sidebar";
 import { SideBarItem } from "../layout/Sidebar";
-import { Dispatch, SetStateAction } from "react";
 import { PatientData } from "../../services/api";
+import { usePatients } from "../../context/patientsPageContext";
 
 export type Tab = {
   title: string;
@@ -13,22 +12,35 @@ export type Tab = {
 type TabsProps = {
   tabs: Tab[];
   onButtonClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  setActiveTab?: Dispatch<SetStateAction<number>>;
   onOpenCreateDonor?: () => void;
   onOpenCreateRecipient?: () => void;
   onOpenCreatePair?: () => void;
-  donorData?: any;
-  setActiveDonor?: Dispatch<SetStateAction<number | null>>;
-  setActiveRecipient?: Dispatch<SetStateAction<number | null>>;
-  setActivePair?: Dispatch<SetStateAction<number | null>>;
 };
 
 function Tabs(props: TabsProps) {
   const tabs = props.tabs;
-  const setActiveTab = props.setActiveTab || (() => {});
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [selectedItem, setSelectedItem] = useState<number | null>(0);
   const [fadeOut, setFadeOut] = useState(false);
+
+  const {
+    donorData,
+    setDonorData,
+    recipientData,
+    setRecipientData,
+    pairData,
+    setPairData,
+    activeTab,
+    setActiveTab,
+    selectedPair,
+    setSelectedPair,
+    selectedRecipient,
+    setSelectedRecipient,
+    selectedDonor,
+    setSelectedDonor,
+    handleOpenCreateDonor,
+    handleOpenCreateRecipient,
+    handleOpenEditPair,
+  } = usePatients();
 
   const renderSideBarItem = (item: PatientData, index: number) => {
     return (
@@ -38,14 +50,14 @@ function Tabs(props: TabsProps) {
         isSelected={selectedItem === index}
         onClick={() => {
           setSelectedItem(index);
-          if (tabs[activeTabIndex].title === "Donors") {
-            props.setActiveDonor!(index);
+          if (tabs[activeTab].title === "Donors") {
+            setSelectedDonor!(index);
           }
-          if (tabs[activeTabIndex].title === "Recipients") {
-            props.setActiveRecipient!(index);
+          if (tabs[activeTab].title === "Recipients") {
+            setSelectedRecipient!(index);
           }
-          if (tabs[activeTabIndex].title === "Pairs") {
-            props.setActivePair!(index);
+          if (tabs[activeTab].title === "Pairs") {
+            setSelectedPair!(index);
           }
         }}
       />
@@ -55,13 +67,13 @@ function Tabs(props: TabsProps) {
   const renderAddButton = () => {
     return (
       <Button
-        name={"Add " + tabs[activeTabIndex].title.slice(0, -1) + " +"}
+        name={"Add " + tabs[activeTab].title.slice(0, -1) + " +"}
         onClick={
-          tabs[activeTabIndex].title === "Donors"
-            ? props.onOpenCreateDonor
-            : tabs[activeTabIndex].title === "Recipients"
-            ? props.onOpenCreateRecipient
-            : props.onOpenCreatePair
+          tabs[activeTab].title === "Donors"
+            ? handleOpenCreateDonor
+            : tabs[activeTab].title === "Recipients"
+            ? handleOpenCreateRecipient
+            : handleOpenEditPair
         }
       />
     );
@@ -71,7 +83,6 @@ function Tabs(props: TabsProps) {
     setFadeOut(true);
 
     setTimeout(() => {
-      setActiveTabIndex(index);
       setActiveTab(index);
       setFadeOut(false);
     }, 150);
@@ -105,7 +116,7 @@ function Tabs(props: TabsProps) {
             onClick={() => onTabClick(index)}
             className={
               "mr-4 mt-4 mb-1 text-xl font-semibold transition duration-800 " +
-              (activeTabIndex === index ? "border-b-3 border-primary" : "")
+              (activeTab === index ? "border-b-3 border-primary" : "")
             }
           >
             {tab.title}
@@ -116,7 +127,7 @@ function Tabs(props: TabsProps) {
         <div
           key={index}
           className={`tabs-content transition-opacity duration-800 ease-in ${
-            activeTabIndex === index ? "opacity-100" : "opacity-0 hidden"
+            activeTab === index ? "opacity-100" : "opacity-0 hidden"
           }`}
         >
           {tab.content?.map((item, itemIndex) =>

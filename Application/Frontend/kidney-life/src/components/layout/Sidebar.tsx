@@ -45,7 +45,6 @@ type SidebarProps = {
   onOpenCreateDonor?: () => void;
   onOpenCreateRecipient?: () => void;
   onOpenCreatePair?: () => void;
-  donorData?: any; // ???
   setActiveDonor?: Dispatch<SetStateAction<number | null>>;
   setActiveRecipient?: Dispatch<SetStateAction<number | null>>;
   setActivePair?: Dispatch<SetStateAction<number | null>>;
@@ -61,14 +60,13 @@ function SideBar(props: SidebarProps) {
         <Tabs
           onButtonClick={props.onButtonClick}
           tabs={props.tabs}
-          setActiveTab={props.setActiveTab}
+          // setActiveTab={props.setActiveTab}
           onOpenCreateDonor={props.onOpenCreateDonor}
           onOpenCreateRecipient={props.onOpenCreateRecipient}
           onOpenCreatePair={props.onOpenCreatePair}
-          donorData={props.donorData}
-          setActiveDonor={props.setActiveDonor}
-          setActiveRecipient={props.setActiveRecipient}
-          setActivePair={props.setActivePair}
+          // setActiveDonor={props.setActiveDonor}
+          // setActiveRecipient={props.setActiveRecipient}
+          // setActivePair={props.setActivePair}
         />
       </div>
     </div>
