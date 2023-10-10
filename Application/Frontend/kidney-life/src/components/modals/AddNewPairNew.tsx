@@ -140,7 +140,6 @@ function AddNewPairNew(props: AddNewPairNewProps) {
         <BackIcon onClick={props.onBack} />
         <div className="w-full flex justify-center items-center">
           <div className="w-40">
-            {/* <AddNewPairButton /> */}
             <Button name="Add pair +" onClick={buttonOnClick}></Button>
           </div>
         </div>
