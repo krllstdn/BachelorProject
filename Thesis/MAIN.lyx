@@ -4148,59 +4148,21 @@ is a statistical method used to analyze the time until an event of interest
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
 
+\begin_layout Plain Layout
+Add more formal definition of SA: ideal study has no end
+\end_layout
+
+\begin_layout Plain Layout
+- definition of 
 \series bold
-Taxonomy:
-\series default
- Survival analysis methods can be categorized as statistical and machine
- learning based methods.
- 
-\begin_inset Note Note
-status open
+event
+\end_layout
 
 \begin_layout Plain Layout
-Cover the statistical methods briefly and focus more on the ML methods
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In the context of machine learning, survival analysis is classified as a
- form of regression tasked
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-tasked? you can do better
-\end_layout
-
-\end_inset
-
- with predicting a continuous outcome, either through a survival function
- or a hazard function, rather than a single numerical value, as it is in
- classical regression.
-\end_layout
-
-\begin_layout Standard
-In this section we are going to cover necessary terminology for understanding
- survival analisis, and methods for estimating the survival curves, such
- as Cox Proportional Hazards and Random Survival Forest.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Broadly speaking, survival analysis methods can be classified into two main
- categories: statisti- cal methods and machine learning based methods.
- Statistical methods share a common goal with machine learning methods in
- that both are expected to make predictions of the survival time and estimate
- the survival probability at the estimated survival time.
- - WANG et.al.
+- 
 \end_layout
 
 \end_inset
@@ -4215,7 +4177,8 @@ Basic Terminology
 \begin_layout Standard
 In this subsection we are going to cover basic terminology required for
  survival analysis such as censoring, censoring assumptions, survival and
- hazard functions, 
+ hazard functions.
+ 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4223,18 +4186,44 @@ Censoring
 \end_layout
 
 \begin_layout Standard
-The most distinct feature of these methods is the ability to handle censored
- data.
+The most distinct feature of survival analysis methods is the ability to
+ handle censored data.
  Censoring refers to a circumstance when the information about survival
  time is only partially known.
- For example, in the dataset used in this work, there are 370 000 patients
- that were reportedly alive at the time of the last date of observation.
- And we do not know what happened to them after that date — they are censored.
-\begin_inset Note Note
-status open
+ For example, the dataset utilized in our research has 370,000 censored
+ instances out of 500,000 performed transplantations.
+ These patients were either still alive at the last date of observation
+ or were lost to follow-up.
+ This lack of complete information indicates 'censoring' in survival analysis.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
-change the images to the normal ones and make them in lyx style
+\begin_inset Graphics
+	filename Images/censoring_ill.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Censoring illustration
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Censoring-illustration"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4242,59 +4231,8 @@ change the images to the normal ones and make them in lyx style
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
 \begin_layout Plain Layout
 
-
-\backslash
-begin{figure}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=0.6
-\backslash
-textwidth]{Images/censoring_ill}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{caption}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{fig1}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -4304,15 +4242,12 @@ end{figure}
 
 \begin_layout Standard
 Look at the figure 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{fig1}
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Censoring-illustration"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -4320,46 +4255,53 @@ ref{fig1}
  On the y-axis, we can see individual patients, while the x-axis corresponds
  to the study timeline (the right side is the end of the study).
  Cross (X) denotes an occurrence of the event, and circle (O) corresponds
- to the subject's exit from the study.
+ to the patient's exit from the study.
 \end_layout
 
 \begin_layout Standard
-There are two types of censoring: left and right censoring.
- Right censoring, the most common one, occurs when we know that event did
- not happen up to a certain point — the patient didn't attend follow-ups
- after a certain point in time or the study ended when he was still alive.
- As shown in Figure
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{fig1}
-\end_layout
-
-\end_inset
-
-, patients E and F are right-censored, as the event didn't happen during
- the study, and B is also right-censored, as the subject dropped out of
- the study.
- Left censoring, being much less common, describes the situation when the
- subject's survival time is unknown, but we know it is less than a specific
- time.
- For example, in epidemiologic studies, we may not know when the patient
- was infected, but we know when the first symptoms occurred.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Think of sentence to seamlessly lead to the next section.
- What do these assumptions do, why do we need them.
-\end_layout
+There are three types of censoring: left, right, and interval censoring.
+ Right censoring, which is more common, occurs when we are sure that the
+ event did not happen by a specific time and we don't know when it will
+ happen.
+ The situation arises when the patient drops out of a study, or the study
+ ends when they are still alive, as illustrated with patients B, E, and
+ F in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Censoring-illustration"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
+.
+ 
+\end_layout
 
+\begin_layout Standard
+Left censoring is less common and happens when the event occurs before the
+ study begins or before the initial observation.
+ We know the event happened before a specific time, but the exact time is
+ unknown.
+ This type is typical in cases where a patient has already experienced the
+ event (e.g., developed a disease) before enrolling in the study.
+\end_layout
+
+\begin_layout Standard
+Interval censoring happens when the event occurs within a particular timeframe,
+ but the exact time is unknown.
+ It can be the case in studies involving periodic patient follow-up, where
+ the event can happen at any point between two visits.
+\end_layout
+
+\begin_layout Standard
+Understanding right, left, and interval censoring is essential in survival
+ analysis.
+ We will next turn our attention to the assumptions associated with these
+ censoring types.
+ These assumptions are inherent to many survival analysis methods and are,
+ therefore, critical in selecting the appropriate technique.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4850,7 +4792,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Considering the facts that survival function describes the probability of
+Considering the fact that survival function describes the probability of
  patient surviving to a given point of time 
 \begin_inset Formula $t$
 \end_inset
@@ -4978,7 +4920,7 @@ a)
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -5008,7 +4950,66 @@ Kaplan-Meir survival curve for the whole dataset
 
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
+Taxonomy of Survival Analysis Methods
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Taxonomy:
+\series default
+ Survival analysis methods can be categorized as statistical and machine
+ learning based methods.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Cover the statistical methods briefly and focus more on the ML methods
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+neural network methods will be covered in deep learning section
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Broadly speaking, survival analysis methods can be classified into two main
+ categories: statistical methods and machine learning based methods.
+ Statistical methods share a common goal with machine learning methods in
+ that both are expected to make predictions of the survival time and estimate
+ the survival probability at the estimated survival time.
+ - WANG et.al.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Statistical methods
+\end_layout
+
+\begin_layout Subsubsection
 
 \series bold
 Kaplan-Meier Survival Curves
@@ -5097,6 +5098,275 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsubsection
+Cox Proportional Hazards Method
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Intro
+\series default
+: 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+- this is a first model that we are gonna cover
+\end_layout
+
+\begin_layout Plain Layout
+- this is a semi-parametric statistical model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Cox proportional hazards model is defined in terms of a hazard at time
+ 
+\begin_inset Formula $t$
+\end_inset
+
+ for a subject with given vector of explanatory variables 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+h(t,\mathbf{X})=h_{0}(t)\times exp\left[\sum_{i=1}^{p}\beta_{i}X_{i}\right]\label{eq:cox_ph}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\series bold
+
+\begin_inset Formula $h_{o}(t)$
+\end_inset
+
+
+\series default
+ is a 
+\emph on
+baseline hazard function
+\emph default
+.
+ Due to the fact that the exponential function has no 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ is called 
+\emph on
+time-independent.
+
+\emph default
+ The exponential function ensures that the function is non-negative, satisfying
+ the definition of the hazard function.
+\end_layout
+
+\begin_layout Standard
+Despite the fact that the equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cox_ph"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ contains the baseline hazard function, it is not specified.
+ Fortunately, we can calculate the hazard ratio, a measure of effect, without
+ having to estimate it.
+ Similarly, the hazard function 
+\begin_inset Formula $h(t,\mathbf{X})$
+\end_inset
+
+ and the survival function 
+\begin_inset Formula $S(t,\mathbf{X})$
+\end_inset
+
+ can be estimated without the estimation of the baseline function.
+ So with minimal assumptions we can estimate everything we need (h,S and
+ HR).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Why cox ph is popular
+\series default
+: Being a semi-parametric, this model is a safe choice due to the fact that
+ it consistently delivers a sufficiently reliable result.
+ The risk of choosing the wrong model, as it often happens with parametric
+ models, is practically non-existent.
+ However, if one is sure that a parametric suits the problem, they should
+ use the parametric model.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Optimisation: 
+\series default
+Similar to logistic regression, the CoxPH uses the 
+\emph on
+maximum likelihood 
+\emph default
+function 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:max_likelihood"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to calculate its parameters (
+\begin_inset Formula $\hat{\beta_{i}}$
+\end_inset
+
+).
+ However, due to the fact that the maximal likelihood considers only a part
+ of patients, namely those who experienced an event, the formula is called
+ 
+\series bold
+\emph on
+partial
+\series default
+\emph default
+ 
+\emph on
+likelihood.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Hazard ratio:
+\series default
+ Hazard ratio is a measure of influence of an intervention on the outcome.
+ A hazard ratio is defined as the hazard for one individual divided by the
+ hazard for the other, and is calculated with the following formula:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{HR}=\frac{h(t,X^{*}\mathbf{)}}{h(t,X)}=exp\left[\sum_{i=1}^{p}\hat{\beta_{i}}(X^{*}-X)\right]\label{eq:cox_ph_hazard_ratio}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+PH assumption
+\series default
+: As can be seen, the equation does not contain 
+\begin_inset Formula $t$
+\end_inset
+
+ and the basic hazard function, making it a 
+\emph on
+proportional hazard assumption
+\emph default
+.
+\end_layout
+
+\begin_layout Subsubsection
+Penalized Cox Models
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+https://scikit-survival.readthedocs.io/en/stable/user_guide/coxnet.html
+\end_layout
+
+\begin_layout Plain Layout
+- cover in a bit more detail than CoxPH as this is method we are using.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Ridge
+\end_layout
+
+\begin_layout Standard
+m
+\end_layout
+
+\begin_layout Paragraph
+Lasso
+\end_layout
+
+\begin_layout Standard
+m
+\end_layout
+
+\begin_layout Paragraph
+Elastic Net
+\end_layout
+
+\begin_layout Standard
+m
+\end_layout
+
+\begin_layout Subsection
+Random Survival Forests 
+\end_layout
+
+\begin_layout Standard
+useless with large amounts of data
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-021-01375-x
+\end_layout
+
+\begin_layout Plain Layout
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6364686/
+\end_layout
+
+\begin_layout Plain Layout
+https://arxiv.org/pdf/0811.1645.pdf
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -5366,7 +5636,6 @@ status open
 - The second point can be addressed by extending the well known receiver
  operating characteristic curve (ROC curve) to possibly censored survival
  times.
- 
 \end_layout
 
 \end_inset
@@ -5566,7 +5835,7 @@ status open
 \begin_layout Plain Layout
 mention somewhere that time-dependent measures are great because they show
  the performance at each point in time, while c-index is only a number that
- tells nothing about the performance at every point in time 
+ tells nothing about the performance at every point in time
 \end_layout
 
 \end_inset
@@ -5619,10 +5888,6 @@ overall performance
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -5684,275 +5949,6 @@ status open
 
 \begin_layout Plain Layout
 Think: maybe add more text.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Cox Proportional Hazards Method
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Intro
-\series default
-: 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- this is a first model that we are gonna cover
-\end_layout
-
-\begin_layout Plain Layout
-- this is a semi-parametric statistical model
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The Cox proportional hazards model is defined in terms of a hazard at time
- 
-\begin_inset Formula $t$
-\end_inset
-
- for a subject with given vector of explanatory variables 
-\begin_inset Formula $\mathbf{X}$
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-h(t,\mathbf{X})=h_{0}(t)\times exp\left[\sum_{i=1}^{p}\beta_{i}X_{i}\right]\label{eq:cox_ph}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-where 
-\series bold
-
-\begin_inset Formula $h_{o}(t)$
-\end_inset
-
-
-\series default
- is a 
-\emph on
-baseline hazard function
-\emph default
-.
- Due to the fact that the exponential function has no 
-\begin_inset Formula $t$
-\end_inset
-
-, 
-\begin_inset Formula $\mathbf{X}$
-\end_inset
-
- is called 
-\emph on
-time-independent.
-
-\emph default
- The exponential function ensures that the function is non-negative, satisfying
- the definition of the hazard function.
-\end_layout
-
-\begin_layout Standard
-Despite the fact that the equation 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:cox_ph"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- contains the baseline hazard function, it is not specified.
- Fortunately, we can calculate the hazard ratio, a measure of effect, without
- having to estimate it.
- Similarly, the hazard function 
-\begin_inset Formula $h(t,\mathbf{X})$
-\end_inset
-
- and the survival function 
-\begin_inset Formula $S(t,\mathbf{X})$
-\end_inset
-
- can be estimated without the estimation of the baseline function.
- So with minimal assumptions we can estimate everything we need (h,S and
- HR).
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Why cox ph is popular
-\series default
-: Being a semi-parametric, this model is a safe choice due to the fact that
- it consistently delivers a sufficiently reliable result.
- The risk of choosing the wrong model, as it often happens with parametric
- models, is practically non-existent.
- However, if one is sure that a parametric suits the problem, they should
- use the parametric model.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Optimisation: 
-\series default
-Similar to logistic regression, the CoxPH uses the 
-\emph on
-maximum likelihood 
-\emph default
-function 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:max_likelihood"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- to calculate its parameters (
-\begin_inset Formula $\hat{\beta_{i}}$
-\end_inset
-
-).
- However, due to the fact that the maximal likelihood considers only a part
- of patients, namely those who experienced an event, the formula is called
- 
-\series bold
-\emph on
-partial
-\series default
-\emph default
- 
-\emph on
-likelihood.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Hazard ratio:
-\series default
- Hazard ratio is a measure of influence of an intervention on the outcome.
- A hazard ratio is defined as the hazard for one individual divided by the
- hazard for the other, and is calculated with the following formula:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\hat{HR}=\frac{h(t,X^{*}\mathbf{)}}{h(t,X)}=exp\left[\sum_{i=1}^{p}\hat{\beta_{i}}(X^{*}-X)\right]\label{eq:cox_ph_hazard_ratio}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-PH assumption
-\series default
-: As can be seen, the equation does not contain 
-\begin_inset Formula $t$
-\end_inset
-
- and the basic hazard function, making it a 
-\emph on
-proportional hazard assumption
-\emph default
-.
-\end_layout
-
-\begin_layout Subsection
-Penalized Cox Models
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-https://scikit-survival.readthedocs.io/en/stable/user_guide/coxnet.html
-\end_layout
-
-\begin_layout Plain Layout
-- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph
-Ridge
-\end_layout
-
-\begin_layout Standard
-m
-\end_layout
-
-\begin_layout Paragraph
-Lasso
-\end_layout
-
-\begin_layout Standard
-m
-\end_layout
-
-\begin_layout Paragraph
-Elastic Net
-\end_layout
-
-\begin_layout Standard
-m
-\end_layout
-
-\begin_layout Subsection
-Random Survival Forests 
-\end_layout
-
-\begin_layout Standard
-useless with large amounts of data
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-021-01375-x
-\end_layout
-
-\begin_layout Plain Layout
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6364686/
-\end_layout
-
-\begin_layout Plain Layout
-https://arxiv.org/pdf/0811.1645.pdf
 \end_layout
 
 \end_inset
