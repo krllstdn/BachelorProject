@@ -1027,6 +1027,27 @@ pagestyle{headings}
 Why kidneys fail
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Diabetes
+\end_layout
+
+\begin_layout Plain Layout
+Pollutants
+\end_layout
+
+\begin_layout Plain Layout
+Cronic Kidney disease
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 The history of kidney transplantation.
 \end_layout
@@ -4073,7 +4094,7 @@ hyperparameter
  hyperparameter tuning.
  One strategy might be to select hyperparameters manually and observe their
  impact on the performance.
- However, to utilize the grid search is a better way.
+ However, utilizing the grid search is a better way.
 \end_layout
 
 \begin_layout Standard
@@ -4121,9 +4142,80 @@ is a statistical method used to analyze the time until an event of interest
  methods are used to analyze survival time, hence the name.
  These methods, however, found their uses in areas far beyond clinical settings:
  in business to predict the time until the customer ”churns” from a subscription
-, and in engineering, to estimate the product longevity or their parts.
- In social sciences, estimate the longevity of a marriage or a student dropout
- rate in an academic setting.
+, in engineering, to estimate the product longevity or the longevity of
+ their parts, in social sciences, estimate the longevity of a marriage or
+ a student dropout rate in an academic setting.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Taxonomy:
+\series default
+ Survival analysis methods can be categorized as statistical and machine
+ learning based methods.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Cover the statistical methods briefly and focus more on the ML methods
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the context of machine learning, survival analysis is classified as a
+ form of regression tasked
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+tasked? you can do better
+\end_layout
+
+\end_inset
+
+ with predicting a continuous outcome, either through a survival function
+ or a hazard function, rather than a single numerical value, as it is in
+ classical regression.
+\end_layout
+
+\begin_layout Standard
+In this section we are going to cover necessary terminology for understanding
+ survival analisis, and methods for estimating the survival curves, such
+ as Cox Proportional Hazards and Random Survival Forest.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Broadly speaking, survival analysis methods can be classified into two main
+ categories: statisti- cal methods and machine learning based methods.
+ Statistical methods share a common goal with machine learning methods in
+ that both are expected to make predictions of the survival time and estimate
+ the survival probability at the estimated survival time.
+ - WANG et.al.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Basic Terminology
+\end_layout
+
+\begin_layout Standard
+In this subsection we are going to cover basic terminology required for
+ survival analysis such as censoring, censoring assumptions, survival and
+ hazard functions, 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4257,10 +4349,34 @@ ref{fig1}
  time.
  For example, in epidemiologic studies, we may not know when the patient
  was infected, but we know when the first symptoms occurred.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Think of sentence to seamlessly lead to the next section.
+ What do these assumptions do, why do we need them.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
 Censoring Assumptions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+restructure it + too verbose IMO
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4273,6 +4389,16 @@ There are three types of censoring assumptions: random, independent and
 They are have similarities, but there are differences that we are going
  cover in the following paragraphs.
  We need censoring assumptions to be able to handle censored subjects.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Censoring assumptions is the way censoring is handled.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4293,7 +4419,11 @@ independent
  if it is random within any subgroup of interest.
  If we consider only one subgroup, then we wouldn't see the difference between
  random and independent.
- For example, let's take a three year disease occurence study with 100 subjects
+ 
+\end_layout
+
+\begin_layout Standard
+For example, let's take a three year disease occurence study with 100 subjects
  at risk.
  Individuals are followed for three years and by the end of the study 20
  of them contract the disease.
@@ -4309,7 +4439,17 @@ independent
 
 \begin_layout Standard
 And these assumptions come to a rescue.
- Under an assumption of random and independent censoring, we would assume
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+come to rescue...
+\end_layout
+
+\end_inset
+
+Under an assumption of random and independent censoring, we would assume
  that those who remained in the study are no different from those who left.
  Therefore we would estimate that out of 40 censored individuals, 5 contracted
  the disease - the same amount, as with those who remained.
@@ -4325,7 +4465,17 @@ And these assumptions come to a rescue.
 Let's expand our example to illustrate the difference between random and
  independent censoring.
  Let's introduce another group to the study: group B (the first is group
- A) with 100 individuals.
+ A
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+group before is..
+\end_layout
+
+\end_inset
+
+) with 100 individuals.
  In the first three years, 40 contracted the disease and 10 left the study.
  So, the calculated three-year risk for group B is 40%.
  Out of 50 remaining, between 3 and 5 years 10 contracted the disease.
@@ -4391,11 +4541,21 @@ non-independent
 Non-informative censoring distribution of time-to-event T provides no informatio
 n about the distribution of time-to-censorship C, otherwise the censoring
  is informative.
- To best illustrate what is non-informative censoring, let's illustrate
- what is an informative censoring.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+weird sentence
+\end_layout
+
+\end_inset
+
+To best illustrate what is non-informative censoring, let's illustrate what
+ is an informative censoring.
  Let's take a group of subjects under random and independent censoring assumptio
 ns.
- Every time the subject A gets an event, subject B selected randomly leaves
+ Every time the subject A gets an event, randomly selected subject B leaves
  the study (e.g.
  B is A's relative).
  If the censored subjects are representative of subjects at risk it would
@@ -4405,15 +4565,24 @@ ns.
 \end_layout
 
 \begin_layout Subsubsection*
-Survival function
+Survival Function
 \end_layout
 
 \begin_layout Standard
-Because we are predicting a numerical value(rather values), from the machine
- learning point of view, survival analysis might be considered a regression,
- but instead of one numerical value we predict a continuous value - survival
- function or hazard function, and, obviously, the dataset is censored.
- 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Add citation or mention book at the beginning of section
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \emph on
 Survival function (also survivor function)
 \emph default
@@ -4473,12 +4642,12 @@ time
  (probability question).
  The function is declining in the range from 0 to infinity.
  As it is a probability, the function value ranges only from 0 to 1.
- Theoretically, the graph of the survival function must be smooth, but in
- reality it is represented by a step function.
+ In theory, the graph of the survival function must be smooth, but in reality
+ it is represented by a step function.
 \end_layout
 
 \begin_layout Subsubsection*
-Hazard function
+Hazard Function
 \end_layout
 
 \begin_layout Standard
@@ -4563,14 +4732,36 @@ conditional failure rate.
 \emph on
 Cumulative hazard function
 \emph default
- is basically area under the hazard function that allows to say which group
- has a greater risk.
+ is basically
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+
+ an area under the hazard function that allows to say which group has a
+ greater risk.
 \end_layout
 
 \begin_layout Subsubsection*
 
 \series bold
 The relationsip between the two
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+between the two->hazard f and survival f
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4673,10 +4864,19 @@ Considering the facts that survival function describes the probability of
  and risk over time.
  Of the two discussed functions the survival function is used much more
  often as it is more appealing in the context of survival analysis and in
- the practical part of this paper(bachelor project/thesis) we are going
- to estimate exactly the survival function.
+ the practical part of this paper
 \begin_inset Note Note
 status open
+
+\begin_layout Plain Layout
+(bachelor project/thesis)
+\end_layout
+
+\end_inset
+
+ we are going to estimate the survival function as well.
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Plain Layout
 change the images to the normal ones and make them in lyx style
@@ -4870,15 +5070,25 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-These survival curves are often compared using the log-rank Test.
+These survival curves are often compared using the log-rank test.
  
 \emph on
 Log-rank test
 \emph default
  is a way to compare two survival functions, that is often used in studies,
  where there is a target group and a placebo (control) group to assess the
- efficacy of the studied thing by comparing the survival curves of the two
- groups 
+ efficacy
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+efficiency?
+\end_layout
+
+\end_inset
+
+ of the studied thing by comparing the survival curves of the two groups
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -4894,7 +5104,17 @@ Performance Metrics
 \end_layout
 
 \begin_layout Standard
-Survival prediction models play an important role in healthcare.
+Survival prediction
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Estimation?
+\end_layout
+
+\end_inset
+
+ models play an important role in healthcare.
  They are often used to estimate the risk of developing a particular decease
  and have an important role in guiding the clinical management of patients.
  It is, therefore, crucial to assess their performance properly.
@@ -4912,7 +5132,7 @@ model validation
 \series bold
 Overall performance, 
 \series default
-which is the distance between the predicted and observed survival time
+which is the distance between the predicted and observed survival time.
 \end_layout
 
 \begin_layout Enumerate
@@ -4946,6 +5166,15 @@ literal "false"
 \begin_layout Standard
 The absence of bias in a situation when the validation set contains censored
  instances is a sign of good performance measure.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+sign of a good measure?
+\end_layout
+
+\end_inset
+
  Otherwise, in the presence of the high levels of censoring, the evaluation
  would be unreasonably optimistic
 \begin_inset CommandInset citation
@@ -4978,6 +5207,18 @@ concordance
  
 \emph on
 Concordance measures
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+The measures of concordance?
+\end_layout
+
+\end_inset
+
+
 \emph default
  quantify the rank correlation between the predicted risk and the observed
  survival times.
@@ -4994,8 +5235,11 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Concordance probability is a probability that from the two randomly selected
- patients 
+
+\emph on
+Concordance probability
+\emph default
+ is a probability that from the two randomly selected patients 
 \begin_inset Formula $(i,j)$
 \end_inset
 
@@ -5070,7 +5314,7 @@ literal "false"
 \begin_layout Standard
 According to the Scikit-survival's documentation and Rahman et.al., Harrel's
  concorance index is biased in the presence of censoring, and the higher
- the censoring is, the more biased it is going to get.
+ the censoring is, the more biased it gets.
  Uno et.
  al.
  proposed a modified concordance index 
@@ -5092,6 +5336,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+not sure if I like this paragraph
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5105,13 +5359,7 @@ status open
  [1], 2.
  it is not a useful measure of performance if a specific time range is of
  primary interest (e.g.
- predicting death within 2 years).
-\end_layout
-
-\begin_layout Plain Layout
-- Since version 0.8, scikit-survival supports an alternative estimator of
- the concordance index from right-censored survival data, implemented in
- concordance_index_ipcw, that addresses the first issue.
+ predicting death within 2 years)
 \end_layout
 
 \begin_layout Plain Layout
@@ -5146,6 +5394,15 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+discrimination or what?
+\end_layout
+
+\end_inset
+
  
 \end_layout
 
@@ -5162,6 +5419,16 @@ true positive rate (TPR or sensitivity)
 \emph on
 false positive rate (FPR)
 \emph default
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+it probably has also another name
+\end_layout
+
+\end_inset
+
 .
  The latter is the ratio of negative instances that are falsely classified
  as positive.
@@ -5172,6 +5439,18 @@ false positive rate (FPR)
  the 
 \emph on
 true negative rate
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+bad equation
+\end_layout
+
+\end_inset
+
+
 \emph default
  (the ratio of negative instances that are correctly classified, often referred
  to as 
@@ -5280,14 +5559,29 @@ check for plrsm
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+mention somewhere that time-dependent measures are great because they show
+ the performance at each point in time, while c-index is only a number that
+ tells nothing about the performance at every point in time 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Time-dependent Brier Score 
 \end_layout
 
 \begin_layout Standard
 Time-dependent ROC AUC and concordance index are great to assess the overall
- discrimination among all time points (mean AUC and c-index) or the discriminati
-on at any individual time point (the ROC graph), but they tells us nothing
+ discrimination among all time points (mean AUC and c-index) and the discriminat
+ion at any individual time point (the ROC graph), but they tells us nothing
  about the accuracy of individual predictions 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -5384,6 +5678,19 @@ literal "false"
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Think: maybe add more text.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Cox Proportional Hazards Method
 \end_layout
@@ -5393,7 +5700,21 @@ Cox Proportional Hazards Method
 \series bold
 Intro
 \series default
-:
+: 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+- this is a first model that we are gonna cover
+\end_layout
+
+\begin_layout Plain Layout
+- this is a semi-parametric statistical model
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5641,6 +5962,64 @@ https://arxiv.org/pdf/0811.1645.pdf
 
 \begin_layout Section
 Deep Learning
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+What is neuron
+\end_layout
+
+\begin_layout Plain Layout
+Activation Function
+\end_layout
+
+\begin_layout Plain Layout
+Optimisation Process
+\end_layout
+
+\begin_layout Plain Layout
+Backpropagation
+\end_layout
+
+\begin_layout Plain Layout
+Gradient Descent
+\end_layout
+
+\begin_layout Plain Layout
+Stochastic Gradient Descent
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Feed Forward Neural Networks
+\end_layout
+
+\begin_layout Standard
+Recurrent Neural Networks
+\end_layout
+
+\begin_layout Standard
+Generative Models for Survival Analysis
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I am going to use survival FFNN, likely DeepSurv
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -6160,15 +6539,15 @@ Data Loading
 
 \begin_layout Standard
 The data were provided in a form of a MongoDB database dump.
- We cannot work with the database dump.
+ It is impossible to perform data analysis with the database dump.
  So it was necessary to run the database first and import the database dump
  there.
- I set up the database in a Docker container (Docker is container management
+ We set up the database in a Docker container (Docker is container management
  system + 
 \series bold
 explain what is container
 \series default
-) locally on my PC, as the university cluster unfortunatelly does not have
+) locally on my Mac, as the university cluster unfortunatelly does not have
  Docker.
  The data from the database and table kidpan were then exported to CSV,
  compressed into zip and uploaded to the cluster.
@@ -6181,9 +6560,9 @@ The pandas DataFrame method read_csv() loaded data for too long to work
  It was done by dumping the pandas DataFrame into Parquet database file
  using DataFrame.to_parquet() method.
  Parquet is used for efficient cloud computing.
- Parquet provides more efficient way of loading data, as it works on the
- principles of databases, so the loading time of the whole dataset was decreased
- to 38 seconds.
+ It provides more efficient way of loading data, as it works on the principles
+ of databases, so the loading time of the whole dataset was decreased to
+ 38 seconds.
  Additionally, it allows for specifying what columns to load, reducing the
  data loading time to 21 seconds.
  Thus using this technology has signifficantly improved the workflow.
@@ -6529,6 +6908,17 @@ a bulk of the data
  The whiskers extend to the furthest points outside of the box, except they
  cannot be longer than 1,5 times the IQR.
  The values lying outside of the whiskers are considered outliers.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Think if it makes sense to include explanation of boxplot
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10449,7 +10839,14 @@ literal "false"
 
 \end_inset
 
-
+Ping Wang, Yan Li, and Chandan k.
+ Reddy.
+ 2019.
+ Machine Learning for Survival Analysis: A Survey.
+ ACM Comput.
+ Surv.
+ 51, 6, Article 110 (February 2019), 36 pages.
+ https://doi.org/10.1145/3214306
 \end_layout
 
 \begin_layout Standard
