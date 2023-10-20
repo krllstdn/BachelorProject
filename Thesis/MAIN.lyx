@@ -4300,8 +4300,8 @@ Understanding right, left, and interval censoring is essential in survival
  analysis.
  We will next turn our attention to the assumptions associated with these
  censoring types.
- These assumptions are inherent to many survival analysis methods and are,
- therefore, critical in selecting the appropriate technique.
+ These assumptions are inherent to many survival analysis methods and are
+ critical in selecting the appropriate technique.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4322,188 +4322,124 @@ restructure it + too verbose IMO
 \end_layout
 
 \begin_layout Standard
-There are three types of censoring assumptions: random, independent and
+There are three types of censoring assumptions: random, independent, and
  non-informative.
+ Each shares certain similarities but also possesses unique distinctions,
+ which we'll explore in detail.
+ Censoring assumptions is the way censoring is managed.
+\end_layout
+
+\begin_layout Enumerate
 
 \series bold
- 
+Random Censoring
 \series default
-They are have similarities, but there are differences that we are going
- cover in the following paragraphs.
- We need censoring assumptions to be able to handle censored subjects.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Censoring assumptions is the way censoring is handled.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In case of 
+: Subjects censored at time 
 \emph on
-random censoring
+t
 \emph default
-, subjects censored at time 
-\begin_inset Formula $t$
-\end_inset
-
- are asumed to have the same failure rate as remaining subjects provided
+ are assumed to have the same failure rate as remaining subjects provided
  the same survival experience.
- Censoring is 
-\emph on
-independent
-\emph default
- if it is random within any subgroup of interest.
- If we consider only one subgroup, then we wouldn't see the difference between
- random and independent.
- 
+ Subjects that were censored are selected randomly, meaning the study does
+ not influence or bias which participants are censored.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Independent Censoring
+\series default
+: Independent censoring occurs when the censoring is random within certain
+ subgroups, defined by certain covariates.
+ If no covariates are present, it defaults to random censoring.
+ This distinction might not be apparent when examining a single subgroup.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Non-Informative Censoring
+\series default
+: Non-informative censoring occurs when censored instances do not provide
+ any information on their survival prospects.
+ In other words, whether or not the patient is censored has no influence
+ on experiencing the event of interest.
 \end_layout
 
 \begin_layout Standard
-For example, let's take a three year disease occurence study with 100 subjects
- at risk.
- Individuals are followed for three years and by the end of the study 20
- of them contract the disease.
+Generally, it is safe to assume non-informative censoring when censoring
+ is independent and/or random.
+ However, these assumptions are not equivalent.
+ To better understand these concepts, let's look into examples.
+\end_layout
+
+\begin_layout Standard
+Consider a three-year disease occurrence study with 100 subjects at risk.
+ Individuals are followed for three years, and by the end of the study,
+ 20 of them contract the disease.
  We calculate the three-year disease risk as 20% and three-year survival
  as 80%.
- Now, suppose we want to continue the study for an additional two years
- on the remaining 80 individuals.
- However 40 of them refuse to continue in the study, and therefore are lost
- to follow-up (censored).
- Out of 40 remaining subjects, 5 contract the disease.
- How would we estimate the five-year survival?
-\end_layout
-
-\begin_layout Standard
-And these assumptions come to a rescue.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-come to rescue...
-\end_layout
-
-\end_inset
-
-Under an assumption of random and independent censoring, we would assume
- that those who remained in the study are no different from those who left.
- Therefore we would estimate that out of 40 censored individuals, 5 contracted
- the disease - the same amount, as with those who remained.
- Consequently, we would calculate the five-year risk as 20 individuals in
- the first three-year period, plus 5 out of 40 observed, plus 5 estimated
- out 40 censored and we would get 30% five-year risk of disease contraction
- and 70% five-year survival under random and independent censoring assumptions.
- In this case random and idependent censoring are the same, as no predictor
- variables were considered.
-\end_layout
-
-\begin_layout Standard
-Let's expand our example to illustrate the difference between random and
- independent censoring.
- Let's introduce another group to the study: group B (the first is group
- A
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-group before is..
-\end_layout
-
-\end_inset
-
-) with 100 individuals.
- In the first three years, 40 contracted the disease and 10 left the study.
- So, the calculated three-year risk for group B is 40%.
- Out of 50 remaining, between 3 and 5 years 10 contracted the disease.
- The risk is 20% for years between 3 and 5.
- Under independent assuption, we estimate that out of 10 censored, 2 contracted
+ Suppose we want to extend the study for another two years on the remaining
+ 80 individuals.
+ However, 40 refuse to continue in the study and, are, therefore, lost to
+ follow-up (censored).
+ Out of 40 remaining subjects, 5 contracted the disease.
+ Under the assumption of random and independent censoring, we would assume
+ that censored individuals are representative of the remaining subjects.
+ Therefore, we would estimate that out of 40 censored individuals, 5 contracted
  the disease.
- Let's calculate the five-year risk for the group B: 40 got the disease
- in the first three years, plus 10 out of 50 observed in the 3-5 year period,
- plus 2 estimated out of 10 censored, and we would get 52% five-year risk
- and 48% five-year survival for group B under independent censoring assumptions.
+ Consequently, we would calculate the five-year risk as 20 individuals in
+ the first three-year period plus 10 in the last two-year period, and we
+ would get a 30% five-year risk of disease contraction and 70% five-year
+ survival under random and independent censoring assumptions.
+ In this case, random and independent censoring is the same, as no predictor
+ variables are considered.
 \end_layout
 
 \begin_layout Standard
-As we can see, the five-year risk in two groups differs signifficantly (30%
- against 52%) and the censoring proportion is also very different (50% against
- 17%) hence, the overall 
-\emph on
-censoring is not random
-\emph default
-.
- However, it is random within groups A and B, therefore, the 
-\emph on
-censoring is independent.
-
-\emph default
- Because independent censoring is random censoring conditional on each level
- of covariates.
+To illustrate the difference between random and independent censoring, let's
+ introduce another group to the study: group B (the group before is A) with
+ 100 individuals.
+ In the first three years, 40 contracted the disease, and 10 left the study.
+ So, the calculated three-year risk for group B is 40%.
+ Out of 50 remaining, between 3 and 5 years, 10 contract the disease.
+ The risk is 20% for years between 3 and 5.
+ Under independent assumption, we estimate that out of 10 censored, 2 contracted
+ the disease.
+ Let's calculate the five-year risk for group B: 40 got the disease in the
+ first three years, plus 10 out of 50 observed in the 3-5 year period, plus
+ 2, estimated out of 10 censored, and we would get 52% five-year risk and
+ 48% five-year survival for group B under independent censoring assumptions.
 \end_layout
 
 \begin_layout Standard
-If instead, in group B 30 subjects out of 60 were censored at the three
- year mark, the censoring proportion would be the same in both groups and
- the overall censoring would be 
-\emph on
-random, 
-\emph default
-as those censored would be the representatives of those remained at risk.
+As we can see, the five-year risk in the two groups differs significantly
+ (30% against 52%), and the censoring proportion is also very different
+ (50% against 17%).
+ Hence, the overall censoring is not random.
+ However, it is random within groups A and B.
+ Therefore, the censoring is independent, as independent censoring is random
+ censoring conditional on each level of covariates.
 \end_layout
 
 \begin_layout Standard
-The opposite of independent censoring is 
-\emph on
-non-independent
-\emph default
- censoring.
- Let's illustrate it with an example.
- Consider a drug study, where some subjects are censored due to occurance
- of side-effects.
- Most likely those censored due to side effects are not representative of
- those who are still in the study.
- If they indeed are more vulnerable to a health outcome, we would likely
- overestimate their survival under an assumption of independent censoring,
- introducing bias.
- Henceforth the independent/non-independent censoring affects the accuracy
- the most.
- Many analytical techniques, such as Kaplan-Meier survival estimation, the
- log rank test, the cox model operate under an assumption of independent
- censoring in presence of right-censored data.
- 
+If, instead, in group B, 30 subjects out of 60 were censored at the three-year
+ mark, the censoring proportion would be the same in both groups, and the
+ overall censoring would be random, as those censored would be the representativ
+es of those who remained at risk.
 \end_layout
 
 \begin_layout Standard
-Non-informative censoring distribution of time-to-event T provides no informatio
-n about the distribution of time-to-censorship C, otherwise the censoring
- is informative.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-weird sentence
-\end_layout
-
-\end_inset
-
-To best illustrate what is non-informative censoring, let's illustrate what
- is an informative censoring.
+To best illustrate what non-informative censoring is, let's demonstrate
+ informative censoring.
  Let's take a group of subjects under random and independent censoring assumptio
 ns.
- Every time the subject A gets an event, randomly selected subject B leaves
- the study (e.g.
- B is A's relative).
+ Every time subject A gets an event, subject B leaves the study (e.g., B is
+ A's relative).
  If the censored subjects are representative of subjects at risk it would
- be random and independet censoring.
- Here the censoring mechanism is directly related to event occurance, so
- the censoring is informative.
+ be random and independent censoring.
+ Here, the censoring mechanism is directly related to event occurrence,
+ so the censoring is informative.
 \end_layout
 
 \begin_layout Subsubsection*
