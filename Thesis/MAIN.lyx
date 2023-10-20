@@ -4460,23 +4460,25 @@ Add citation or mention book at the beginning of section
 \end_layout
 
 \begin_layout Standard
-
+The 
 \emph on
-Survival function (also survivor function)
+survival function
 \emph default
- 
+, also known as the 
+\emph on
+survivor function
+\emph default
+, denoted by 
 \begin_inset Formula $S(t)$
 \end_inset
 
- shows us the probability of patient 
-\emph on
-surviving (event doesn't happen)
-\emph default
- at a given time 
+, represents the probability that the patient survives, in other words,
+ does not experience the event of interest beyond a given time 
 \begin_inset Formula $t$
 \end_inset
 
- and can be denoted as
+.
+ Mathematically, it is denoted by:
 \end_layout
 
 \begin_layout Standard
@@ -4492,36 +4494,60 @@ S(t)=P(T>t).\label{eq:f_surv}
 
 \begin_layout Standard
 Where 
+\begin_inset Formula $P$
+\end_inset
+
+ represents the probability, 
 \begin_inset Formula $t$
 \end_inset
 
- is any specific 
-\emph on
-time
-\emph default
- of interest, 
+ is any specific time of interest, and 
 \begin_inset Formula $T$
 \end_inset
 
- is random variable for subject's survival time.
- For instance, if we want to know if a patient is going to live for more
- than 5 years after kidney transplant, 
+ is the random variable for the subject's survival time.
+ For instance, if we want to know the likelihood that a patient is going
+ to live for more than five years after a kidney transplant, we set 
 \begin_inset Formula $t$
 \end_inset
 
- is equal to 5 and we ask whether 
+ equal to 5, and we evaluate 
+\begin_inset Formula $S(t)$
+\end_inset
+
+ to determine the probability that 
 \begin_inset Formula $T$
 \end_inset
 
- is greater than 
-\begin_inset Formula $t$
-\end_inset
+, actual survival time, is greater than 5 years.
+ 
+\end_layout
 
- (probability question).
- The function is declining in the range from 0 to infinity.
- As it is a probability, the function value ranges only from 0 to 1.
- In theory, the graph of the survival function must be smooth, but in reality
- it is represented by a step function.
+\begin_layout Standard
+The survival function has several key characteristics:
+\end_layout
+
+\begin_layout Enumerate
+It continually decreases or maintains its value over time, theoretically
+ extending from 0 to infinity.
+ That is, if the study lasted indefinitely, the survival function would
+ eventually fall to 0.
+ In practical research scenarios, studies do not last forever, and not every
+ patient experiences an event by the end of the study.
+\end_layout
+
+\begin_layout Enumerate
+As it represents a probability, the function value ranges from 0 to 1.
+ It starts at 1, at the beginning of the observation period, indicating
+ 100% survival probability, and declines over time, potentially reaching
+ 0, as the probability of survival decreases.
+\end_layout
+
+\begin_layout Enumerate
+Although, by definition, the graph of the survival function is smooth, in
+ reality, it is a step function.
+ This stepwise representation is due to the nature of real-world data, where
+ events are recorded at specific, discrete time points rather than continuously.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4538,10 +4564,10 @@ Hazard function
 happening
 \emph default
  at a given point of time 
-\begin_inset Formula $t,$
+\begin_inset Formula $t$
 \end_inset
 
- provided the event did not happen before time 
+, provided the event did not happen before time 
 \begin_inset Formula $t$
 \end_inset
 
@@ -4610,18 +4636,8 @@ conditional failure rate.
 \emph on
 Cumulative hazard function
 \emph default
- is basically
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-...
-\end_layout
-
-\end_inset
-
- an area under the hazard function that allows to say which group has a
- greater risk.
+ is basically an area under the hazard function that allows to say which
+ group has a greater risk.
 \end_layout
 
 \begin_layout Subsubsection*
