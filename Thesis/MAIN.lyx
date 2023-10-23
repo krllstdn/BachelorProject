@@ -4313,7 +4313,7 @@ Censoring Assumptions
 status open
 
 \begin_layout Plain Layout
-restructure it + too verbose IMO
+improve the examples 
 \end_layout
 
 \end_inset
@@ -4440,6 +4440,7 @@ ns.
  be random and independent censoring.
  Here, the censoring mechanism is directly related to event occurrence,
  so the censoring is informative.
+ 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4452,6 +4453,19 @@ status open
 
 \begin_layout Plain Layout
 Add citation or mention book at the beginning of section
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add image of hazard function
 \end_layout
 
 \end_inset
@@ -4547,7 +4561,71 @@ As it represents a probability, the function value ranges from 0 to 1.
 Although, by definition, the graph of the survival function is smooth, in
  reality, it is a step function.
  This stepwise representation is due to the nature of real-world data, where
- events are recorded at specific, discrete time points rather than continuously.
+ events are recorded at specific, discrete time points rather than continuously
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Paragraph about 
+\begin_inset Quotes sld
+\end_inset
+
+real situation
+\begin_inset Quotes srd
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+- add some concluding paragraph that leads to the hazard function
+\end_layout
+
+\begin_layout Plain Layout
+- move the additional things regarding 
+\begin_inset Quotes sld
+\end_inset
+
+real situation
+\begin_inset Quotes srd
+\end_inset
+
+ to a separate paragraph
+\end_layout
+
+\begin_layout Plain Layout
+- check if it aligns with the book
+\end_layout
+
+\begin_layout Plain Layout
+this function focuuses on not failing, but sometimes we need a function
+ that focuses on failing.
+ that leads us to the next section about hazard function.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4555,29 +4633,46 @@ Hazard Function
 \end_layout
 
 \begin_layout Standard
-Hazard function 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add image of hazard function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The survival function provides the probability of an individual surviving
+ at each given point in time.
+ This function is often preferred over the hazard function due to its more
+ intuitive appeal: it directly communicates the chance of survival.
+ However, there are scenarios where knowing the risk at each point in time
+ is necessary, necessitating the use of the hazard function.
+ 
+\end_layout
+
+\begin_layout Standard
+The hazard function, denoted as 
 \begin_inset Formula $h(t)$
 \end_inset
 
- tells us the probability of given event 
-\emph on
-happening
-\emph default
- at a given point of time 
+, represents the instantaneous potential per unit of time for the event
+ to occur, provided the subject's survival up to time 
 \begin_inset Formula $t$
 \end_inset
 
-, provided the event did not happen before time 
-\begin_inset Formula $t$
-\end_inset
-
-, and is denoted as 
+.
+ It is expressed by the following equation: 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-h(t)=\underset{\Delta t\rightarrow o}{lim}\frac{P(t\leq T<t+\Delta t|T\geq t)}{\Delta t}.\label{eq:f_hazard}
+h(t)=\underset{\Delta t\rightarrow0}{lim}\frac{P(t\leq T<t+\Delta t|T\geq t)}{\Delta t}.\label{eq:f_hazard}
 \end{equation}
 
 \end_inset
@@ -4586,11 +4681,26 @@ h(t)=\underset{\Delta t\rightarrow o}{lim}\frac{P(t\leq T<t+\Delta t|T\geq t)}{\
 \end_layout
 
 \begin_layout Standard
-Subject's survival time 
-\begin_inset Formula $T$
+Where 
+\begin_inset Formula $\Delta t$
 \end_inset
 
- lies between 
+ represents an infinitesimally small increment of time.
+ The function 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ is equal to the limit, as 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ approaches zero, of a conditional probability, divided by 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+.
+ The conditional probability statement gives the probability that a person’s
+ survival time, T, will lie in the time interval between 
 \begin_inset Formula $t$
 \end_inset
 
@@ -4598,34 +4708,55 @@ Subject's survival time
 \begin_inset Formula $t+\Delta t$
 \end_inset
 
- provided that survival time 
-\begin_inset Formula $T$
-\end_inset
-
- is greater or equal than 
+, given that the survival time is greater than or equal to 
 \begin_inset Formula $t$
 \end_inset
 
 .
- Sometimes, the hazard function is called a 
-\emph on
-conditional failure rate.
+\end_layout
 
-\emph default
- It is a rate because it is a conditional probability per unit of time 
+\begin_layout Standard
+Occasionally, due to its structure, the hazard function is referred to as
+ a conditional failure rate.
+ It is a rate because it represents a conditional probability per unit of
+ time 
 \begin_inset Formula $\Delta t$
 \end_inset
 
-.
- As it is not a probability, but a rate, the scale for this ratio is from
- 0 to infinity — depends on the measure of time in days, weeks or years.
- When we consider the limit of the expression as the time interval approaches
- zero we basically get the instantenious potential of failing at time 
+, and it is conditional on the subject surviving until time 
 \begin_inset Formula $t$
 \end_inset
 
- per unit time, given survival up to time 
+.
+ Unlike probability, this rate has a scale from 0 to infinity — depending
+ on the measure of time in days, weeks, or years.
+ Essentially, by considering the limit as the 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ approaches zero we basically get the instantaneous potential of failing
+ at time 
 \begin_inset Formula $t$
+\end_inset
+
+, given survival until that moment.
+\end_layout
+
+\begin_layout Standard
+To best illustrate the concept of instantaneous potential, let's refer to
+ the concept of velocity.
+ Velocity gives us the speed at a specific point in time.
+ For instance, the velocity of 80 km/h, means that maintaining the same
+ speed for an hour would result in traveling 80 kilometers.
+ However, it doesn't predict how much the car will travel in reality.
+ The same works with the instantaneous potential: it might be high at one
+ point, but low at another, reflecting that both are measurements at an
+ instant in time rather than an interval 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13"
+literal "false"
+
 \end_inset
 
 .
@@ -4634,10 +4765,35 @@ conditional failure rate.
 \begin_layout Standard
 
 \emph on
-Cumulative hazard function
+The cumulative hazard function 
 \emph default
- is basically an area under the hazard function that allows to say which
- group has a greater risk.
+further extends our understanding by quantifying the accumulated risk over
+ time.
+ It is an area under the hazard function that allows us to say which group
+ has a greater risk.
+ It is defined by the following function:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(t)\overset{def}{=}\int_{0}^{t}h(u)du,\text{ where }t>0.
+\]
+
+\end_inset
+
+Where 
+\begin_inset Formula $t>0$
+\end_inset
+
+ and 
+\begin_inset Formula $h(u)$
+\end_inset
+
+ represents a hazard function.
+ This integral measure enables a comprehensive comparison of risk between
+ groups, showing which has a greater risk from the perspective of accumulated
+ potential for the event to occur over time.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4782,59 +4938,32 @@ change the images to the normal ones and make them in lyx style
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/survival_and_hazard_funcs.png
+
+\end_inset
 
 
-\backslash
-begin{figure}
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Don't forget to provide example images both for the survival and hazard
+ functions for some random patient from the dataset
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=0.9
-\backslash
-textwidth]{Images/survival_and_hazard_funcs}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{(Don't forget to provide example images both for the survival and
- hazard functions for some random patient from the dataset)}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{fig2}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -10795,6 +10924,33 @@ Ping Wang, Yan Li, and Chandan k.
  Surv.
  51, 6, Article 110 (February 2019), 36 pages.
  https://doi.org/10.1145/3214306
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-24"
+literal "false"
+
+\end_inset
+
+Definitions:, 1.
+ 1.
+ (n.d.).
+ Survival distributions, hazard functions, cumulative hazards.
+ Stanford.edu.
+ Retrieved October 23, 2023, from https://web.stanford.edu/~lutian/coursepdf/unit1.
+pdf
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
