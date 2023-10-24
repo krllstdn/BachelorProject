@@ -4465,7 +4465,7 @@ Add citation or mention book at the beginning of section
 status open
 
 \begin_layout Plain Layout
-add image of hazard function
+add image of survival function
 \end_layout
 
 \end_inset
@@ -4651,7 +4651,17 @@ The survival function provides the probability of an individual surviving
  This function is often preferred over the hazard function due to its more
  intuitive appeal: it directly communicates the chance of survival.
  However, there are scenarios where knowing the risk at each point in time
- is necessary, necessitating the use of the hazard function.
+ is necessary, necessitating 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+don't like the word
+\end_layout
+
+\end_inset
+
+ the use of the hazard function.
  
 \end_layout
 
@@ -4783,10 +4793,6 @@ H(t)\overset{def}{=}\int_{0}^{t}h(u)du,\text{ where }t>0.
 \end_inset
 
 Where 
-\begin_inset Formula $t>0$
-\end_inset
-
- and 
 \begin_inset Formula $h(u)$
 \end_inset
 
@@ -4796,41 +4802,52 @@ Where
  potential for the event to occur over time.
 \end_layout
 
-\begin_layout Subsubsection*
-
-\series bold
-The relationsip between the two
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
+hazard function may be used to identify a specific model form, such as an
+ exponential, a Weibull, or a lognormal curve that fits one’s data
+\end_layout
 
-\series bold
-between the two->hazard f and survival f
+\begin_layout Plain Layout
+the survival model is usually written in terms of the hazard function.
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+The relationsip between the survival and hazard functions
 \end_layout
 
 \begin_layout Standard
-There is a clear relationship between the survival function 
+Some models, such as Cox Proportional Hazards, are written in terms of the
+ hazard function, and it is necessary to be able to estimate the survival
+ function out of the hazard function to make the model more flexible and
+ accessible to a larger audience.
+ Fortunately, there are ways to convert one into the other and vice versa.
+ In this subsection, we are going to cover ways to do that.
+ 
+\end_layout
+
+\begin_layout Standard
+To calculate the survival function 
 \begin_inset Formula $S(t)$
 \end_inset
 
- and the hazard function 
-\begin_inset Formula $h(t)$
-\end_inset
-
- – if we know one, we can determine the other.
- The relationships are the following:
+ from the hazard function, we can use the following equation:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-S(t)=exp\left[-\intop_{0}^{t}h(u)du\right]\label{eq:haz_to_surv}
+S(t)=exp\left[-\intop_{0}^{t}h(u)du\right].\label{eq:haz_to_surv}
 \end{equation}
 
 \end_inset
@@ -4853,12 +4870,13 @@ noprefix "false"
 \begin_inset Formula $S(t)$
 \end_inset
 
- is equal to the exponential of the negative integral of the hazard function
+ is equal to the exponential of the negative cumulative hazard function
  from zero to 
 \begin_inset Formula $t$
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4888,147 +4906,26 @@ noprefix "false"
 \begin_inset Formula $S(t)$
 \end_inset
 
- with respect to 
-\begin_inset Formula $t$
-\end_inset
-
- divided by 
-\begin_inset Formula $S(t).$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Considering the fact that survival function describes the probability of
- patient surviving to a given point of time 
-\begin_inset Formula $t$
-\end_inset
-
- and hazard function shows us the probability of person dying at any given
- point of time 
-\begin_inset Formula $t$
-\end_inset
-
-, we can say that they provide complementary information about survival
- and risk over time.
- Of the two discussed functions the survival function is used much more
- often as it is more appealing in the context of survival analysis and in
- the practical part of this paper
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(bachelor project/thesis)
-\end_layout
-
-\end_inset
-
- we are going to estimate the survival function as well.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-change the images to the normal ones and make them in lyx style
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/survival_and_hazard_funcs.png
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Don't forget to provide example images both for the survival and hazard
- functions for some random patient from the dataset
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Take a look at figure 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{fig2}
-\end_layout
-
+ with respect to t divided by 
+\begin_inset Formula $S(t)$
 \end_inset
 
 .
- 
-\emph on
-a)
-\emph default
- shows us a graph of the estimated survival function and b) shows us a graph
- of the estimated hazard function for a random patient from the dataset
- used.
- As we can see the survival function is declining over time, while the hazard
- function increases.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/EDA/Kaplan-Meier/Whole_dataset.png
-	scale 50
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Kaplan-Meir survival curve for the whole dataset
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
+Considering the fact that the survival function describes the probability
+ of a patient surviving up to time t and the hazard function shows us the
+ instantaneous risk of a person dying at a specific instant t, we can say
+ that they provide complementary information about survival and risk over
+ time.
+ Of the two discussed functions, the survival function is used more often
+ as it is more intuitive, and in the practical part, we will estimate the
+ survival function as well.
+ Fortunately, we will not convert them manually.
+ The scikit-survival library (more on it in the section ...) will do that for
+ us.
+  
 \end_layout
 
 \begin_layout Subsection
