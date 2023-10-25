@@ -5006,6 +5006,92 @@ Statistical Methods
 \begin_layout Standard
 This section provides a concise overview of statistical techniques, given
  our primary emphasis on machine learning methods.
+ In this subsection, we introduce three different types of statistical methods
+ that are commonly used to estimate the survival and hazard functions: non-param
+etric, semi-parametric, and parametric methods.
+\end_layout
+
+\begin_layout Standard
+Non-parametric methods are preferred in situations where the event time
+ does not adhere to any known distribution or when the proportional hazards
+ assumption is not met 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-23"
+literal "false"
+
+\end_inset
+
+.
+ There are three main non-parametric methods: the Kaplan-Meier (KM) method,
+ the Nelson-Aalen (NA) estimator, and the Life-Table (LT) method, of which
+ we will cover Kaplan-Meier in more detail.
+\end_layout
+
+\begin_layout Standard
+Semi-parametric models offer a middle ground between fully parametric models,
+ which make specific distributional assumptions, and non-parametric models,
+ which make very few assumptions.
+ Among semi-parametric methods, the Cox model is the most frequently employed
+ model for survival regression analysis.
+ It is semi-parametric as the distribution of the outcome is unknown.
+ Unlike other approaches, this method is based on the proportional hazards
+ assumption and uses partial likelihood for parameter estimation (more on
+ that look in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Cox-Proportional-Hazards"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ There are a couple of variants of the basic Cox model: the penalized Cox
+ model, which will be used in the practical part of this work, the CoxBoost
+ algorithm, and the Time-Dependent Cox model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-23"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Parametric methods shine in their accuracy and efficiency when the time
+ to the event conforms to a known distribution that can be specified in
+ terms of certain parameters.
+ With parametric models, estimating the time to the event is straightforward,
+ whereas the Cox model can make this task somewhat cumbersome or unfeasible.
+ In the domain of parametric models, linear regression is central.
+ However, the Tobit model, Buckley-James regression, and penalized regression
+ are the most favored.
+ Beyond this, other parametric models like the Accelerated Failure Time
+ (AFT) have gained traction.
+ The AFT model represents survival time as a function of covariates 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-23"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+To conclude, statistical methods in survival analysis can be broadly categorized
+ into non-parametric, semi-parametric, and parametric techniques, each with
+ its unique strengths and applications.
+ Among non-parametric methods, Kaplan-Meier stands out as particularly significa
+nt.
+ It provides a robust and intuitive way to estimate survival functions.
+ The following section delves deeper into the Kaplan-Meier method.
 \end_layout
 
 \begin_layout Standard
@@ -5013,8 +5099,7 @@ This section provides a concise overview of statistical techniques, given
 status open
 
 \begin_layout Plain Layout
-Statistical models can be divided into three types: parametric, semi-parametric
- and non-parametric.
+Think maybe add the table from the paper
 \end_layout
 
 \end_inset
@@ -5026,6 +5111,23 @@ Statistical models can be divided into three types: parametric, semi-parametric
 
 \series bold
 Kaplan-Meier Survival Curves
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+More generally, any KM estimator for the survival probability at the specified
+ survival time will be a product of the same estimate up to the previous
+ time and the observed survival rate for that given time.
+ Thus, the KM method is also sometimes referred to as a product-limit method
+ (Kaplan and Meier 1958; Lee and Wang 2003)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5104,7 +5206,14 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection
-Cox Proportional Hazards Method
+Cox Proportional Hazards Method 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Cox-Proportional-Hazards"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5122,6 +5231,10 @@ status open
 
 \begin_layout Plain Layout
 - this is a semi-parametric statistical model
+\end_layout
+
+\begin_layout Plain Layout
+don't forget to cover the PH assumption! there is a link here
 \end_layout
 
 \end_inset
