@@ -4448,32 +4448,6 @@ Survival Function
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Add citation or mention book at the beginning of section
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add image of survival function
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 The 
 \emph on
 survival function
@@ -4573,76 +4547,52 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
-Paragraph about 
-\begin_inset Quotes sld
+\align center
+\begin_inset Graphics
+	filename Images/survival_f.jpeg
+	scale 50
+
 \end_inset
 
-real situation
-\begin_inset Quotes srd
-\end_inset
 
-:
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Survival function
 \end_layout
 
 \end_inset
 
- 
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- add some concluding paragraph that leads to the hazard function
-\end_layout
-
-\begin_layout Plain Layout
-- move the additional things regarding 
-\begin_inset Quotes sld
+Survival function 
+\begin_inset Formula $S(t)$
 \end_inset
 
-real situation
-\begin_inset Quotes srd
-\end_inset
-
- to a separate paragraph
-\end_layout
-
-\begin_layout Plain Layout
-- check if it aligns with the book
-\end_layout
-
-\begin_layout Plain Layout
-this function focuuses on not failing, but sometimes we need a function
- that focuses on failing.
- that leads us to the next section about hazard function.
-\end_layout
-
-\end_inset
-
-
+ gives a comprehensive understanding of the probability of an individual
+ surviving beyond a specific time point.
+ It presents a declining or constant trend starting at 1 and potentially
+ declining to 0.
+ While understanding the probability of not failing at every time point
+ is important, knowing the instantaneous risk of failing is useful in some
+ cases, leading us to the next tool: the hazard function.
 \end_layout
 
 \begin_layout Subsubsection*
 Hazard Function
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add image of hazard function
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -4651,17 +4601,7 @@ The survival function provides the probability of an individual surviving
  This function is often preferred over the hazard function due to its more
  intuitive appeal: it directly communicates the chance of survival.
  However, there are scenarios where knowing the risk at each point in time
- is necessary, necessitating 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-don't like the word
-\end_layout
-
-\end_inset
-
- the use of the hazard function.
+ is necessary, entailing the use of the hazard function.
  
 \end_layout
 
@@ -4803,16 +4743,37 @@ Where
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
-hazard function may be used to identify a specific model form, such as an
- exponential, a Weibull, or a lognormal curve that fits one’s data
+\begin_inset Graphics
+	filename Images/hazard_f.jpeg
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-the survival model is usually written in terms of the hazard function.
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The example of a hazard function.
+ Note that it may signifficantly differ.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -4849,6 +4810,16 @@ To calculate the survival function
 \begin{equation}
 S(t)=exp\left[-\intop_{0}^{t}h(u)du\right].\label{eq:haz_to_surv}
 \end{equation}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+H(t) instead of integral
+\end_layout
 
 \end_inset
 
@@ -4923,9 +4894,22 @@ Considering the fact that the survival function describes the probability
  as it is more intuitive, and in the practical part, we will estimate the
  survival function as well.
  Fortunately, we will not convert them manually.
- The scikit-survival library (more on it in the section ...) will do that for
- us.
-  
+ The 
+\emph on
+scikit-survival
+\emph default
+ library (more on it in the section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Overview-of-Machine"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) will do that for us.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -4933,58 +4917,94 @@ Taxonomy of Survival Analysis Methods
 \end_layout
 
 \begin_layout Standard
+Survival analysis methods can be categorized as statistical and machine
+ learning based methods 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-23"
+literal "false"
 
-\series bold
-Taxonomy:
-\series default
- Survival analysis methods can be categorized as statistical and machine
- learning based methods.
+\end_inset
+
+.
+ Both are designed to estimate the survival time and the survival probability
+ at the estimated survival time.
+ Statistical methods focus on characterizing destributions of the event
+ times and the statistical properties of the parameter estimation by estimating
+ the survival curves 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+by drawing or estimating the survival curves from the data, we can glean
+ insights into the "statistical properties" of how well we've estimated
+ the parameters of the underlying distribution of survival times.
+\end_layout
+
+\end_inset
+
+.
+ Statistical methods are usually used to handle low-dimensional data.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Cover the statistical methods briefly and focus more on the ML methods
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-neural network methods will be covered in deep learning section
-\end_layout
-
-\end_inset
-
-
+Machine learning methods focus on the prediction of the event occurence
+ at a given time leveraging abilities of both classical survival analysis
+ techniques and different machine learning methods.
+ This combination breeds more effective algorithms.
+ Machine learning methods are also used to handle high-dimensional data.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Broadly speaking, survival analysis methods can be classified into two main
- categories: statistical methods and machine learning based methods.
- Statistical methods share a common goal with machine learning methods in
- that both are expected to make predictions of the survival time and estimate
- the survival probability at the estimated survival time.
- - WANG et.al.
+Based on the assumptions made and the way parameters are used in the model,
+ statistical methods can be divided into parametric, non-parametric and
+ semi-parametric methods.
+ Machine learning methods, such as survival trees, ensembles (random survival
+ forests), neural networks, support vector machines have their own branch.
+ More advanced machine learning techniques, such as active learning, transfer
+ learning and multitask learning are included as well.
 \end_layout
+
+\begin_layout Standard
+In this section we will cover some statistical methods and one machine learning
+ technique.
+ Machine learning techniques related to neural networks will be covered
+ in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Deep-Learning"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-
+, which is dedicated to these advanced survival analysis techniques.
+ 
 \end_layout
 
 \begin_layout Subsection
-Statistical methods
+Statistical Methods
+\end_layout
+
+\begin_layout Standard
+This section provides a concise overview of statistical techniques, given
+ our primary emphasis on machine learning methods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Statistical models can be divided into three types: parametric, semi-parametric
+ and non-parametric.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -5056,18 +5076,8 @@ Log-rank test
 \emph default
  is a way to compare two survival functions, that is often used in studies,
  where there is a target group and a placebo (control) group to assess the
- efficacy
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-efficiency?
-\end_layout
-
-\end_inset
-
- of the studied thing by comparing the survival curves of the two groups
- 
+ efficacy of the studied thing by comparing the survival curves of the two
+ groups 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -5935,7 +5945,14 @@ Think: maybe add more text.
 \end_layout
 
 \begin_layout Section
-Deep Learning
+Deep Learning 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Deep-Learning"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5997,7 +6014,14 @@ I am going to use survival FFNN, likely DeepSurv
 \end_layout
 
 \begin_layout Section
-Overview of Machine Learning Libraries and Tools
+Overview of Machine Learning Libraries and Tools 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Overview-of-Machine"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
