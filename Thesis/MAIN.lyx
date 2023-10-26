@@ -5303,6 +5303,19 @@ literal "false"
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add maybe some conclusion that leads to CoxPH
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Cox Proportional Hazards Method 
 \begin_inset CommandInset label
@@ -5315,38 +5328,15 @@ name "subsec:Cox-Proportional-Hazards"
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Intro
-\series default
-: 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- this is a first model that we are gonna cover
-\end_layout
-
-\begin_layout Plain Layout
-- this is a semi-parametric statistical model
-\end_layout
-
-\begin_layout Plain Layout
-don't forget to cover the PH assumption! there is a link here
-\end_layout
-
-\end_inset
-
-
+The Cox proportional hazards model is a popular semi-parametric model.
+ This section explores its formulation, key properties, and reasons for
+ its widespread use in research.
+ 
 \end_layout
 
 \begin_layout Standard
 The Cox proportional hazards model is defined in terms of a hazard at time
- 
-\begin_inset Formula $t$
-\end_inset
-
- for a subject with given vector of explanatory variables 
+ t for a subject with a given vector of explanatory variables 
 \begin_inset Formula $\mathbf{X}$
 \end_inset
 
@@ -5356,7 +5346,7 @@ The Cox proportional hazards model is defined in terms of a hazard at time
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-h(t,\mathbf{X})=h_{0}(t)\times exp\left[\sum_{i=1}^{p}\beta_{i}X_{i}\right]\label{eq:cox_ph}
+h(t,\mathbf{X})=h_{0}(t)\times exp\left[\sum_{i=1}^{p}\beta_{i}X_{i}\right],\label{eq:cox_ph}
 \end{equation}
 
 \end_inset
@@ -5378,7 +5368,12 @@ where
 baseline hazard function
 \emph default
 .
- Due to the fact that the exponential function has no 
+ Coefficients 
+\begin_inset Formula $\beta$
+\end_inset
+
+ are the parameters of interest in the model.
+ Since the exponential function has no 
 \begin_inset Formula $t$
 \end_inset
 
@@ -5389,14 +5384,33 @@ baseline hazard function
  is called 
 \emph on
 time-independent.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+can be elaborated more
+\end_layout
+
+\end_inset
+
 
 \emph default
  The exponential function ensures that the function is non-negative, satisfying
- the definition of the hazard function.
+ the definition of the hazard function
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Despite the fact that the equation 
+Even though equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:cox_ph"
@@ -5406,9 +5420,9 @@ noprefix "false"
 
 \end_inset
 
- contains the baseline hazard function, it is not specified.
+ contains the baseline hazard function, the function is not specified.
  Fortunately, we can calculate the hazard ratio, a measure of effect, without
- having to estimate it.
+ having to estimate the baseline hazard function.
  Similarly, the hazard function 
 \begin_inset Formula $h(t,\mathbf{X})$
 \end_inset
@@ -5417,30 +5431,43 @@ noprefix "false"
 \begin_inset Formula $S(t,\mathbf{X})$
 \end_inset
 
- can be estimated without the estimation of the baseline function.
- So with minimal assumptions we can estimate everything we need (h,S and
- HR).
+ can be estimated without the baseline function.
+ So, with minimal assumptions, we can estimate everything we need (h, S,
+ and HR).
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Why cox ph is popular
-\series default
-: Being a semi-parametric, this model is a safe choice due to the fact that
- it consistently delivers a sufficiently reliable result.
- The risk of choosing the wrong model, as it often happens with parametric
- models, is practically non-existent.
- However, if one is sure that a parametric suits the problem, they should
- use the parametric model.
+The hazard ratio (HR) is a measure of the influence of an intervention on
+ the outcome.
+ A hazard ratio is defined as the hazard for one individual divided by the
+ hazard for the other, as illustrated with the following formula:
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{HR}=\frac{h(t,X^{*}\mathbf{)}}{h(t,X)}=exp\left[\sum_{i=1}^{p}\hat{\beta_{i}}(X^{*}-X)\right]\label{eq:cox_ph_hazard_ratio}
+\end{equation}
 
-\series bold
-Optimisation: 
-\series default
-Similar to logistic regression, the CoxPH uses the 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As can be seen, the equation does not contain 
+\begin_inset Formula $t$
+\end_inset
+
+ and the basic hazard function, as they are canceled out, making it a 
+\emph on
+proportional hazard assumption
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Like logistic regression, the CoxPH uses the 
 \emph on
 maximum likelihood 
 \emph default
@@ -5459,9 +5486,8 @@ noprefix "false"
 \end_inset
 
 ).
- However, due to the fact that the maximal likelihood considers only a part
- of patients, namely those who experienced an event, the formula is called
- 
+ However, since the maximal likelihood considers only a part of patients,
+ namely those who experienced an event, the formula is called 
 \series bold
 \emph on
 partial
@@ -5469,24 +5495,88 @@ partial
 \emph default
  
 \emph on
-likelihood.
+likelihood
+\emph default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13"
+literal "false"
+
+\end_inset
+
+
+\emph on
+.
+
+\emph default
+ 
 \end_layout
 
 \begin_layout Standard
+Let's define the partial likelihood.
+ The subject's survival can be defined by 
+\begin_inset Formula $h(t,X)dt$
+\end_inset
 
-\series bold
-Hazard ratio:
-\series default
- Hazard ratio is a measure of influence of an intervention on the outcome.
- A hazard ratio is defined as the hazard for one individual divided by the
- hazard for the other, and is calculated with the following formula:
+ with 
+\begin_inset Formula $dt→0$
+\end_inset
+
+.
+ Consider 
+\begin_inset Formula $J$
+\end_inset
+
+ (where 
+\begin_inset Formula $J\leq N$
+\end_inset
+
+) as the total number of events of interest observed for 
+\begin_inset Formula $N$
+\end_inset
+
+ instances.
+ 
+\begin_inset Formula $T_{1}<T_{2}<\cdots<T_{J}$
+\end_inset
+
+represents the unique and sequentially ordered times to the event of interest.
+ Let 
+\begin_inset Formula $X_{j}$
+\end_inset
+
+be the vector of covariates for a subject who experiences the event at time
+ 
+\begin_inset Formula $T_{j}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R_{j}$
+\end_inset
+
+ is the set of risk subjects at 
+\begin_inset Formula $T_{j}$
+\end_inset
+
+.
+ Given that the event happens at time 
+\begin_inset Formula $T_{j}$
+\end_inset
+
+, the individual probability associated with 
+\begin_inset Formula $X_{j}$
+\end_inset
+
+ can be described as follows:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\hat{HR}=\frac{h(t,X^{*}\mathbf{)}}{h(t,X)}=exp\left[\sum_{i=1}^{p}\hat{\beta_{i}}(X^{*}-X)\right]\label{eq:cox_ph_hazard_ratio}
-\end{equation}
+\[
+\frac{h(T_{j},X_{j})dt}{\sum_{i\epsilon R_{j}}h(T_{j},X_{i})dt}.
+\]
 
 \end_inset
 
@@ -5494,19 +5584,92 @@ Hazard ratio:
 \end_layout
 
 \begin_layout Standard
+By taking the product across all subject's probabilities we get the partial
+ likelihood.
+ Based on Cox assumption and the presence of censoring, partial likelihood
+ is defined as follows:
+\end_layout
 
-\series bold
-PH assumption
-\series default
-: As can be seen, the equation does not contain 
-\begin_inset Formula $t$
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L(\beta)=\prod_{j=1}^{N}\left[\frac{exp(X_{j}\beta)}{\sum_{i\epsilon R_{j}}exp(X_{i}\beta)}\right]^{\delta_{J}}.
+\]
+
 \end_inset
 
- and the basic hazard function, making it a 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\delta_{j}$
+\end_inset
+
+ is the indicator of censoring of a given instance (1 for event occurrence,
+ 0 for censoring).
+ Therefore, if the subject is censored, 
+\begin_inset Formula $\delta=0$
+\end_inset
+
+, the individual probability is equal to 1 and the subject does not affect
+ the result.
+ The vector of coefficients 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is estimated by either maximizing partial likelihood, defined above, or
+ maximizing the negative 
 \emph on
-proportional hazard assumption
+log-partial likelihood
 \emph default
+ to improve the efficiency:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+LL(\beta)=-\sum_{j=1}^{N}\delta_{j}\{X_{j}\beta-log[\sum_{i\epsilon R_{j}}exp(X_{i}\beta)]\}.
+\]
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-23"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Being a semi-parametric, this model is a safe choice because it consistently
+ delivers a sufficiently reliable result.
+ The risk of choosing the wrong model as often happens with parametric models,
+ is practically non-existent.
+ However, if one is sure that a parametric model suits the problem, one
+ should use the parametric model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13"
+literal "false"
+
+\end_inset
+
 .
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+consider adding limitations of the cox PH
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
