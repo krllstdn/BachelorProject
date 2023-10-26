@@ -5024,8 +5024,22 @@ literal "false"
 
 .
  There are three main non-parametric methods: the Kaplan-Meier (KM) method,
- the Nelson-Aalen (NA) estimator, and the Life-Table (LT) method, of which
- we will cover Kaplan-Meier in more detail.
+ the Nelson-Aalen (NA) estimator, and the Life-Table (LT) method.
+ In the next section we will cover Kaplan-Meier in more detail.
+ Life-Table method is more convenient than Kaplan-Meier for the estimation
+ of survival curves when data subjects are segmented into distinct time
+ intervals, when dealing with an extensive number of subjects or a broad
+ population scope.
+ On the other hand, Nelson-Aalen method is used for the estimation of hazard
+ functions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-23"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5114,23 +5128,6 @@ Kaplan-Meier Survival Curves
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Itemize
-More generally, any KM estimator for the survival probability at the specified
- survival time will be a product of the same estimate up to the previous
- time and the observed survival rate for that given time.
- Thus, the KM method is also sometimes referred to as a product-limit method
- (Kaplan and Meier 1958; Lee and Wang 2003)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Kaplan-Meier is a non-parametric method of survival function creation.
  It is 
 \emph on
@@ -5149,7 +5146,7 @@ The general Kaplan-Meier formula for plotting the survival function is the
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\hat{S}(t_{(f)})=\hat{S}(t_{(f-1)})\times\hat{P}(T>t_{(f)}|T\geq f_{(f)}),
+\hat{S}(t_{(f)})=\hat{S}(t_{(f-1)})\times\hat{P}(T>t_{(f)}|T\geq f_{(f)}).
 \]
 
 \end_inset
@@ -5186,6 +5183,107 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+This function can also be expressed as a product limit:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{S}(t_{(f)})=\prod_{i=1}^{f-1}\hat{P}(T>t_{(i)}|T\geq f_{(i)}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the equation we replaced 
+\begin_inset Formula $\hat{S}(t_{(f-1)})$
+\end_inset
+
+ with the product of all fractions estimating the conditional probabilities
+ for failure times 
+\begin_inset Formula $t_{f-1}$
+\end_inset
+
+ and those preceding it 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13"
+literal "false"
+
+\end_inset
+
+.
+ Because of that the Kaplan-Meier estimator is sometimes referred to as
+ 
+\emph on
+product-limit method 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-23"
+literal "false"
+
+\end_inset
+
+.
+\emph default
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Survival-curve-estimated"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the survival curve created with KM method.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/EDA/Kaplan-Meier/Whole_dataset.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Survival curve estimated with KM 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Survival-curve-estimated"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 These survival curves are often compared using the log-rank test.
  
 \emph on
@@ -5193,8 +5291,8 @@ Log-rank test
 \emph default
  is a way to compare two survival functions, that is often used in studies,
  where there is a target group and a placebo (control) group to assess the
- efficacy of the studied thing by comparing the survival curves of the two
- groups 
+ efficacy of the treatment or intervention in the study by comparing the
+ survival curves of the two groups 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
