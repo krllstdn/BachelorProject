@@ -5731,7 +5731,7 @@ noprefix "false"
 \begin_inset Formula $\beta_{1},\ldots,\beta_{p}$
 \end_inset
 
-represent the coeficients corresponding to 
+represent the coefficients corresponding to 
 \begin_inset Formula $p$
 \end_inset
 
@@ -5765,29 +5765,29 @@ LASSO
 \end_layout
 
 \begin_layout Standard
-While 
+While the 
 \begin_inset Formula $l_{2}$
 \end_inset
 
  ridge penalty solves the mathematical problem of fitting the Cox model,
  we would still need to take into account all features, no matter how many
  there are.
- Preferrably, we would like to select a small subset of the most predictive
+ Preferably, we would like to select a small subset of the most predictive
  features and ignore the rest, as too many features might result in overfitting.
  LASSO (Least Absolute Shrinkage and Selection Operator) does exactly that.
- Rather than merely shrinking the coefficients to zero it performs feature
- selection as a part of the optimisation process, where a subset of coefficients
+ Rather than merely shrinking the coefficients to zero, it performs feature
+ selection as a part of the optimization process, where a subset of coefficients
  is set to zero and is, therefore, excluded, reducing the number of features
  we would need for prediction.
  Mathematically, we would replace the 
 \begin_inset Formula $l_{2}$
 \end_inset
 
- penalty by 
+ penalty with the 
 \begin_inset Formula $l_{1}$
 \end_inset
 
- penalty, leading to the following optimisation problem: 
+ penalty, leading to the following optimization problem: 
 \end_layout
 
 \begin_layout Standard
@@ -5808,7 +5808,7 @@ The main drawback is that we cannot directly control the number of features
 \begin_inset Formula $\alpha$
 \end_inset
 
- essentially determines the number of feature selected.
+ essentially determines the number of features selected.
  To achieve a refined model that requires fewer features, we need a data-driven
  way to determine the appropriate 
 \begin_inset Formula $\alpha$
@@ -5819,7 +5819,7 @@ The main drawback is that we cannot directly control the number of features
 \begin_inset Formula $\alpha$
 \end_inset
 
- that would ignore all features (coeffitients are set to zero) and then
+ that would ignore all features (coefficients are set to zero) and then
  gradually decreasing its value, possibly down to 1% of its starting value.
  Fortunately, it is implemented in scikit-survival's 
 \emph on
@@ -5858,8 +5858,8 @@ The LASSO method is effective for selecting a subset of discriminative features.
  However, it is not without its shortcomings.
  The first is that LASSO is unable to select more features than there are
  instances in the training data set.
- The second is its tendency to randomly select only one feature out of set
- of highly correlated ones.
+ The second is its tendency to randomly select only one feature out of a
+ set of highly correlated ones.
  The Elastic Net alleviates these issues by incorporating the 
 \begin_inset Formula $l_{1}$
 \end_inset
@@ -5868,7 +5868,7 @@ and
 \begin_inset Formula $l_{2}$
 \end_inset
 
-penalties in a weighted manner, as is shown in the following optimisation
+penalties in a weighted manner, as is shown in the following optimization
  problem:
 \end_layout
 
@@ -5907,14 +5907,14 @@ penalty (
  is a ridge penalty).
  The Elastic Net penalty combines the LASSO's feature selection capability
  and Ridge's regularization power.
- As a result, it is more stable than LASSO, and in situation of highly correlate
-d features it would select them all, while LASSO would randomly select only
- one.
+ As a result, it is more stable than LASSO, and in a situation of highly
+ correlated features, it would select them all, while LASSO would randomly
+ select only one.
  Usually, it is sufficient to give the 
 \begin_inset Formula $l_{2}$
 \end_inset
 
-penalty only a small weight to improve the stability of the LASSO, for example
+penalty only a small weight to improve the stability of the LASSO, for example,
  
 \begin_inset Formula $r=0.9$
 \end_inset
@@ -5928,7 +5928,7 @@ Similar to LASSO, the weight
 \end_inset
 
  inherently dictates the size of the chosen subset.
- Its optimal value is typically estimated in data-driven way 
+ Its optimal value is typically estimated in a data-driven way 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-25"
@@ -5937,7 +5937,7 @@ literal "false"
 \end_inset
 
 .
- More on that in practical part, where we will choose the best 
+ More on that in the practical part, where we will choose the best 
 \begin_inset Formula $\alpha$
 \end_inset
 
