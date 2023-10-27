@@ -5592,9 +5592,9 @@ By taking the product across all subject's probabilities we get the partial
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-L(\beta)=\prod_{j=1}^{N}\left[\frac{exp(X_{j}\beta)}{\sum_{i\epsilon R_{j}}exp(X_{i}\beta)}\right]^{\delta_{J}}.
-\]
+\begin{equation}
+PL(\beta)=\prod_{j=1}^{N}\left[\frac{exp(X_{j}\beta)}{\sum_{i\epsilon R_{j}}exp(X_{i}\beta)}\right]^{\delta_{J}}.\label{eq:partial-likelihood}
+\end{equation}
 
 \end_inset
 
@@ -5677,20 +5677,14 @@ Penalized Cox Models
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-https://scikit-survival.readthedocs.io/en/stable/user_guide/coxnet.html
-\end_layout
-
-\begin_layout Plain Layout
-- cover in a bit more detail than CoxPH as this is method we are using.
-\end_layout
-
-\end_inset
-
-
+The Cox proportional hazards model is often chosen, since its coefficients
+ can be interpreted in terms of hazard ratios, offering meaningful insights.
+ Yet, when estimating coefficients for many features, the standard Cox model
+ collapses due to matrix inversion getting disrupted by correlations between
+ features.
+ Feature (column) correlations make a matrix singular, i.e.
+ impossible to revert.
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -5698,15 +5692,161 @@ Ridge
 \end_layout
 
 \begin_layout Standard
-m
-\end_layout
+By incorporating an 
+\begin_inset Formula $l_{2}$
+\end_inset
 
-\begin_layout Paragraph
-Lasso
+penalty term on the coefficients, shrinking them to zero, we can avoid that
+ problem.
+ Consequently, our objective has the following form: 
 \end_layout
 
 \begin_layout Standard
-m
+\begin_inset Formula 
+\[
+arg\max_{\beta}\log PL(\beta)-\frac{\alpha}{2}\sum_{j=1}^{p}\beta_{j}^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the equation, 
+\begin_inset Formula $PL(\beta)$
+\end_inset
+
+ denotes the partial likelihood of the Cox model (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:partial-likelihood"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), terms 
+\begin_inset Formula $\beta_{1},\ldots,\beta_{p}$
+\end_inset
+
+represent the coeficients corresponding to 
+\begin_inset Formula $p$
+\end_inset
+
+ features, 
+\begin_inset Formula $\alpha\geq0$
+\end_inset
+
+ is a hyper-parameter that controls the amount shrinkage.
+ The resulting objective is referred to as 
+\emph on
+ridge regression.
+
+\emph default
+ If 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is set to zero, we get the regular Cox model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-25"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+LASSO
+\end_layout
+
+\begin_layout Standard
+While 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+ ridge penalty solves the mathematical problem of fitting the Cox model,
+ we would still need to take into account all features, no matter how many
+ there are.
+ Preferrably, we would like to select a small subset of the most predictive
+ features and ignore the rest, as too many features might result in overfitting.
+ LASSO (Least Absolute Shrinkage and Selection Operator) does exactly that.
+ Rather than merely shrinking the coefficients to zero it performs feature
+ selection as a part of the optimisation process, where a subset of coefficients
+ is set to zero and is, therefore, excluded, reducing the number of features
+ we would need for prediction.
+ Mathematically, we would replace the 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+ penalty by 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+ penalty, leading to the following optimisation problem: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+arg\max_{\beta}\log PL(\beta)-\alpha\sum_{j=1}^{p}|\beta_{j}|.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The main drawback is that we cannot directly control the number of features
+ selected.
+ However, the value of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ essentially determines the number of feature selected.
+ To achieve a refined model that requires fewer features, we need a data-driven
+ way to determine the appropriate 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ This can be accomplished by first determining the 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ that would ignore all features (coeffitients are set to zero) and then
+ gradually decreasing its value, possibly down to 1% of its starting value.
+ Fortunately, it is implemented in scikit-survival's 
+\emph on
+sksurv.linear_model.CoxnetSurvivalAnalysis.
+ 
+\emph default
+We would need to set 
+\emph on
+l1_ratio=1.0
+\emph default
+ and 
+\emph on
+alpha_min_ratio=0.01
+\emph default
+ to search for 100 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ values up to 1% of the estimated maximum 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-25"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Paragraph
@@ -5714,7 +5854,120 @@ Elastic Net
 \end_layout
 
 \begin_layout Standard
-m
+The LASSO method is effective for selecting a subset of discriminative features.
+ However, it is not without its shortcomings.
+ The first is that LASSO is unable to select more features than there are
+ instances in the training data set.
+ The second is its tendency to randomly select only one feature out of set
+ of highly correlated ones.
+ The Elastic Net alleviates these issues by incorporating the 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+penalties in a weighted manner, as is shown in the following optimisation
+ problem:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+arg\max_{\beta}\log PL(\beta)-\alpha\left(r\sum_{j=1}^{p}|\beta_{j}|+\frac{1-r}{2}\sum_{j=1}^{p}\beta_{j}^{2}\right),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $r\epsilon[0;1]$
+\end_inset
+
+ is the relative weight of the 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+penalty (
+\begin_inset Formula $r=1$
+\end_inset
+
+ is a LASSO penalty, 
+\begin_inset Formula $r=0$
+\end_inset
+
+ is a ridge penalty).
+ The Elastic Net penalty combines the LASSO's feature selection capability
+ and Ridge's regularization power.
+ As a result, it is more stable than LASSO, and in situation of highly correlate
+d features it would select them all, while LASSO would randomly select only
+ one.
+ Usually, it is sufficient to give the 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+penalty only a small weight to improve the stability of the LASSO, for example
+ 
+\begin_inset Formula $r=0.9$
+\end_inset
+
+ might suffice.
+\end_layout
+
+\begin_layout Standard
+Similar to LASSO, the weight 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ inherently dictates the size of the chosen subset.
+ Its optimal value is typically estimated in data-driven way 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-25"
+literal "false"
+
+\end_inset
+
+.
+ More on that in practical part, where we will choose the best 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ for our data set.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+don't forget to add a reference
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+conclusion + transition to RSF
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -11256,11 +11509,25 @@ pdf
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-2"
+key "key-25"
+literal "false"
 
 \end_inset
 
+Penalized Cox Models — scikit-survival 0.22.1.
+ (2015).
+ Readthedocs.io.
+ https://scikit-survival.readthedocs.io/en/stable/user_guide/coxnet.html
+\end_layout
 
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+‌
 \end_layout
 
 \begin_layout Standard
