@@ -5108,19 +5108,6 @@ nt.
  The following section delves deeper into the Kaplan-Meier method.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Think maybe add the table from the paper
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsubsection
 
 \series bold
@@ -5136,11 +5123,8 @@ non-parametric
  because it does not take into account any covariates, or parameters, and
  requires only the survival time and the censoring indicator.
  It works under an independent censoring assumption.
-\end_layout
-
-\begin_layout Standard
-The general Kaplan-Meier formula for plotting the survival function is the
- following: 
+ The general Kaplan-Meier formula for plotting the survival function is
+ the following: 
 \end_layout
 
 \begin_layout Standard
@@ -5180,10 +5164,7 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-This function can also be expressed as a product limit:
+ This function can also be expressed as a product limit:
 \end_layout
 
 \begin_layout Standard
@@ -5228,8 +5209,9 @@ literal "false"
 \end_inset
 
 .
+
 \emph default
-Figure 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Survival-curve-estimated"
@@ -5304,16 +5286,13 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add maybe some conclusion that leads to CoxPH
-\end_layout
-
-\end_inset
-
-
+To summarize, the Kaplan-Meier method provides a robust non-parametric approach
+ to estimating survival functions, emphasizing its independence from covariates.
+ While the log-rank test offers a mechanism to compare the survival curves
+ and assess treatment efficacy, there are still situations that require
+ taking covariates into consideration.
+ That leads us to the Cox proportional hazards model, which inherently handles
+ covariates.
 \end_layout
 
 \begin_layout Subsubsection
@@ -5684,7 +5663,10 @@ The Cox proportional hazards model is often chosen, since its coefficients
  features.
  Feature (column) correlations make a matrix singular, i.e.
  impossible to revert.
- 
+ In this section, we aim to explore the Ridge regression, LASSO, and Elastic
+ Net methods as extensions or modifications to the Cox model.
+ These techniques address the inherent challenges in the standard Cox model,
+ offering solutions for regularization and feature selection.
 \end_layout
 
 \begin_layout Paragraph
@@ -5696,8 +5678,8 @@ By incorporating an
 \begin_inset Formula $l_{2}$
 \end_inset
 
-penalty term on the coefficients, shrinking them to zero, we can avoid that
- problem.
+penalty term on the coefficients, shrinking them to zero, we can avoid the
+ problem with the inability to revert singular matrix.
  Consequently, our objective has the following form: 
 \end_layout
 
@@ -5958,16 +5940,20 @@ don't forget to add a reference
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-conclusion + transition to RSF
-\end_layout
-
-\end_inset
-
-
+To conclude, Ridge, LASSO, and Elastic Net offer powerful extensions of
+ the Cox PH model, especially when dealing with high-dimensional datasets
+ and highly correlated features.
+ They help to regularize the Cox model and select only the most signifficant
+ features, avoiding overfitting and assuring more stable and interpretable
+ model.
+ Nevertheless it is important to aknowledge their limitations.
+ As linear models they inherently capture only linear relationships, and
+ non-linear relationships are enigma to them.
+ That leads us to the next section dedicated to the Random Survival Forests,
+ a machine learning approach.
+ Machine learning techniques are known for their ability to catch complex
+ non-linear relationships, often outperforming traditional statistical methods
+ in predictive accuracy.
 \end_layout
 
 \begin_layout Subsection
@@ -5983,15 +5969,37 @@ useless with large amounts of data
 status open
 
 \begin_layout Plain Layout
-https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-021-01375-x
-\end_layout
-
-\begin_layout Plain Layout
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6364686/
 \end_layout
 
 \begin_layout Plain Layout
 https://arxiv.org/pdf/0811.1645.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+intro
+\end_layout
+
+\begin_layout Plain Layout
+survival trees
+\end_layout
+
+\begin_layout Plain Layout
+the concept of ensemble (idk if I already described it, if yes, reference
+ it)
+\end_layout
+
+\begin_layout Plain Layout
+the survival forest
 \end_layout
 
 \end_inset
