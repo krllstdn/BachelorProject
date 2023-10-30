@@ -5295,6 +5295,19 @@ To summarize, the Kaplan-Meier method provides a robust non-parametric approach
  covariates.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Maybe add Nelson-Aalen section?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Cox Proportional Hazards Method 
 \begin_inset CommandInset label
@@ -5931,7 +5944,7 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
-don't forget to add a reference
+don't forget to add a reference to the practical part
 \end_layout
 
 \end_inset
@@ -5957,54 +5970,120 @@ To conclude, Ridge, LASSO, and Elastic Net offer powerful extensions of
 \end_layout
 
 \begin_layout Subsection
-Random Survival Forests 
+Random Survival Forest 
 \end_layout
 
 \begin_layout Standard
-useless with large amounts of data
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6364686/
-\end_layout
-
-\begin_layout Plain Layout
-https://arxiv.org/pdf/0811.1645.pdf
-\end_layout
+Random Survival Forest (RSF) is an ensemble machine learning method tailored
+ for survival analysis.
+ It is derived from the original Random Forest method developed by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-28"
+literal "false"
 
 \end_inset
 
-
+.
+ Random Forests have gained popularity in the machine learning community
+ due to their effectiveness in classification and regression machine learning
+ tasks.
+ Random Forest is built from multiple decision trees, averaging their prediction
+s allows for more accurate predictions than any single tree can provide.
+ Similar to Random Forest, Random Survival Forest leverages the power of
+ multiple survival trees making its predictions more robust.
+ 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-intro
-\end_layout
-
-\begin_layout Plain Layout
-survival trees
-\end_layout
-
-\begin_layout Plain Layout
-the concept of ensemble (idk if I already described it, if yes, reference
- it)
-\end_layout
-
-\begin_layout Plain Layout
-the survival forest
-\end_layout
+Random Survival Forest is comprised of Survival Trees.
+ A survival tree is essentially a binary tree.
+ It is developed by the iterative splitting of children nodes into two nodes
+ until a certain criterion is met.
+ An optimal node split is the one maximizing the survival difference between
+ the children nodes.
+ It is done by iterating through all features and finding such a value for
+ a given feature that maximizes the survival difference 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-26"
+literal "false"
 
 \end_inset
 
+.
+ 
+\end_layout
 
+\begin_layout Standard
+Random Survival Forest is comprised of the following steps:
+\end_layout
+
+\begin_layout Enumerate
+Randomly draw 
+\begin_inset Formula $L$
+\end_inset
+
+ bootstrap samples of size 
+\begin_inset Formula $n$
+\end_inset
+
+ with replacement from the training dataset.
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ is about two-thirds of the original data.
+ The remaining instances, about one third, are termed out-of-bag (OOB) observati
+ons and are not included in the bootstrap sample.
+\end_layout
+
+\begin_layout Enumerate
+For each sample, develop a full-grown survival tree based on the selected
+ splitting criterion.
+ At each node, randomly select 
+\begin_inset Formula $\sqrt{p}$
+\end_inset
+
+(or other number) covariates, where 
+\begin_inset Formula $p$
+\end_inset
+
+ is the total number of covariates.
+ Stop developing when certain condition is met (for example, when the terminal
+ node has fewer observations than a predetermined threshold or the node
+ reaches purity).
+ 
+\end_layout
+
+\begin_layout Enumerate
+For each tree, calculate cumulative hazard function with Nelson-Aalen estimator.
+ Find a mean of all trees to find ensemble CHF.
+\end_layout
+
+\begin_layout Enumerate
+Use OOB data to determine the prediction error of the ensemble 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-27"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In summary, the Random Survival Forest is a robust and powerful approach
+ to survival analysis that harnesses the collective power of multiple survival
+ trees.
+ Having explored several survival analysis methods, it is crucial to be
+ able to evaluate them properly, since the standard machine learning performance
+ metrics are not always applicable to survival analysis due to the presence
+ of censoring.
+ The next section will introduce essential criteria for the evaluation of
+ survival analysis models and the primary performance metrics created for
+ this purpose.
 \end_layout
 
 \begin_layout Subsection
@@ -11531,11 +11610,59 @@ Penalized Cox Models — scikit-survival 0.22.1.
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-1"
+key "key-26"
+literal "false"
 
 \end_inset
 
-‌
+‌Hemant Ishwaran, Kogalur, U.
+ B., Blackstone, E.
+ H., & Lauer, M.
+ S.
+ (2008).
+ Random survival forests.
+ The Annals of Applied Statistics, 2(3).
+ https://doi.org/10.1214/08-aoas169
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-27"
+literal "false"
+
+\end_inset
+
+‌Wang, H., & Li, G.
+ (2017).
+ A Selective Review on Random Survival Forests for High Dimensional Data.
+ Quantitative Bio-Science, 36(2), 85–96.
+ https://doi.org/10.22283/qbs.2017.36.2.85
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-28"
+literal "false"
+
+\end_inset
+
+‌Breiman, L.
+ (2001).
+ Random forests.
+ Machine learning, 45, 5-32.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-29"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
