@@ -2739,58 +2739,37 @@ change the images to the normal ones and make them in lyx style
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
 
+\end_layout
 
-\backslash
-begin{figure}
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/logistic_regression.png
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Logistic function
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=0.6
-\backslash
-textwidth]{Images/logistic_regression}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{Logistic function}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{log_reg_img}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -2985,15 +2964,12 @@ The function
 
 \begin_layout Standard
 The concept behind support vector machines is demonstrated in Figure 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{svm1_img}
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SVM-demonstration-for"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -3026,58 +3002,36 @@ support vectors
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/svm1.jpeg
+	scale 30
+
+\end_inset
 
 
-\backslash
-begin{figure}
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SVM demonstration for two-dimensional dataset
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SVM-demonstration-for"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
 
 
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=0.6
-\backslash
-textwidth]{Images/svm1}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{SVM demonstration for two-dimensional dataset}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{svm1_img}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -3134,15 +3088,12 @@ The fundamental assumption of support vector machines is that classes are
  (decision boundary) with no examples of one class lying among the ones
  of the opposite class.
  It is illustrated in the figure 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{svm2_img}
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Linearly-non-separable"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -3153,58 +3104,40 @@ ref{svm2_img}
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/svm2.jpeg
+	scale 30
+
+\end_inset
 
 
-\backslash
-begin{figure}
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Linearly non separable dataset
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Linearly-non-separable"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=0.6
-\backslash
-textwidth]{Images/svm2}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{Linearly non separable dataset}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{svm2_img}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -4206,6 +4139,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/censoring_ill.jpg
+	scale 50
 
 \end_inset
 
@@ -4213,6 +4147,7 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -4228,10 +4163,6 @@ name "fig:Censoring-illustration"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -4726,9 +4657,9 @@ further extends our understanding by quantifying the accumulated risk over
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-H(t)\overset{def}{=}\int_{0}^{t}h(u)du,\text{ where }t>0.
-\]
+\begin{equation}
+H(t)\overset{def}{=}\int_{0}^{t}h(u)du,\text{ where }t>0.\label{eq:cumulative-hazard-function}
+\end{equation}
 
 \end_inset
 
@@ -4813,13 +4744,49 @@ S(t)=exp\left[-\intop_{0}^{t}h(u)du\right].\label{eq:haz_to_surv}
 
 \end_inset
 
+The integral in the equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:haz_to_surv"
+plural "false"
+caps "false"
+noprefix "false"
 
+\end_inset
+
+ can be replaced with 
+\begin_inset Formula $H(t)$
+\end_inset
+
+ from the 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cumulative-hazard-function"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ And we get the following 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-H(t) instead of integral
+make the paragraph better
 \end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S(t)=e^{H(t)}
+\]
 
 \end_inset
 
@@ -6034,7 +6001,7 @@ Randomly draw
 \end_inset
 
  is about two-thirds of the original data.
- The remaining instances, about one third, are termed out-of-bag (OOB) observati
+ The remaining instances, about one-third, are termed out-of-bag (OOB) observati
 ons and are not included in the bootstrap sample.
 \end_layout
 
@@ -6050,14 +6017,15 @@ For each sample, develop a full-grown survival tree based on the selected
 \end_inset
 
  is the total number of covariates.
- Stop developing when certain condition is met (for example, when the terminal
- node has fewer observations than a predetermined threshold or the node
- reaches purity).
+ Stop developing when a certain condition is met (for example, when the
+ terminal node has fewer observations than a predetermined threshold or
+ the node reaches purity).
  
 \end_layout
 
 \begin_layout Enumerate
-For each tree, calculate cumulative hazard function with Nelson-Aalen estimator.
+For each tree, calculate the cumulative hazard function with the Nelson-Aalen
+ estimator.
  Find a mean of all trees to find ensemble CHF.
 \end_layout
 
@@ -6091,27 +6059,13 @@ Performance Metrics
 \end_layout
 
 \begin_layout Standard
-Survival prediction
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Estimation?
-\end_layout
-
-\end_inset
-
- models play an important role in healthcare.
- They are often used to estimate the risk of developing a particular decease
- and have an important role in guiding the clinical management of patients.
- It is, therefore, crucial to assess their performance properly.
+Survival prediction models play a vital role in healthcare.
+ They are often used to estimate the risk of developing a particular disease
+ and are crucial in guiding the clinical management of patients.
+ It is, therefore, essential to assess their performance accurately.
  Similar to machine learning, this process of model evaluation is referred
- to as 
-\emph on
-model validation
-\emph default
-.
- There are three aspects we can asses our model on: 
+ to as model validation.
+ There are three aspects we can asses our model on:
 \end_layout
 
 \begin_layout Enumerate
@@ -6136,10 +6090,9 @@ Discrimination,
 \begin_layout Enumerate
 
 \series bold
-Calibration,
+Calibration
 \series default
- which is the agreement between the observed and predicted survival times
- 
+ is the agreement between the observed and predicted survival times 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-21"
@@ -6152,18 +6105,9 @@ literal "false"
 
 \begin_layout Standard
 The absence of bias in a situation when the validation set contains censored
- instances is a sign of good performance measure.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-sign of a good measure?
-\end_layout
-
-\end_inset
-
- Otherwise, in the presence of the high levels of censoring, the evaluation
- would be unreasonably optimistic
+ instances is a sign of a good performance measure.
+ Otherwise, in the presence of high levels of censoring, the evaluation
+ would be unreasonably optimistic 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-21"
@@ -6175,10 +6119,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In this section we are going to cover three measures of discrimination and
- one measure that assesses both the discrimintation and calibration (overall
- performance), that were used in this work.
- 
+In this section, we will cover three measures of discrimination and one
+ measure that assesses both discrimination and calibration (overall performance).
 \end_layout
 
 \begin_layout Subsubsection
@@ -6186,31 +6128,20 @@ Harrel's and Uno's Concordance Indices
 \end_layout
 
 \begin_layout Standard
-One way to measure discimination is 
+One way to measure discrimination is through 
 \emph on
 concordance
 \emph default
 .
  
 \emph on
-Concordance measures
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-The measures of concordance?
-\end_layout
-
-\end_inset
-
-
+Measures of concordance
 \emph default
  quantify the rank correlation between the predicted risk and the observed
  survival times.
- Their values usually range between 0.5 and 1, where 0.5 means that the there
- is no discrimination whatsoever, and 1 corresponds to the ideal discimination.
+ Typically, their values range between 0.5 and 1.
+ A value of 0.5 indicates no discrimination, while 1 corresponds to the ideal
+ discrimination 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-21"
@@ -6218,20 +6149,21 @@ literal "false"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
-
+The
 \emph on
-Concordance probability
+ concordance probability
 \emph default
- is a probability that from the two randomly selected patients 
+ is the probability that from the arbitrarily selected pair of patients
+ 
 \begin_inset Formula $(i,j)$
 \end_inset
 
-, one with shorter survival time has the higher predicted risk.
- Mathematically:
+, the one with a shorter survival time has the higher predicted risk.
+ Mathematically, this is expressed as:
 \end_layout
 
 \begin_layout Standard
@@ -6271,23 +6203,23 @@ Harrel's concordance index
 \begin_inset Formula $C_{H}$
 \end_inset
 
- takes into account all suitable subjects where the shorter survival time
- corresponds to an event.
+ considers all suitable pairs where the shorter survival time corresponds
+ to an event.
  
 \begin_inset Formula $C_{H}$
 \end_inset
 
- is estimated as the proportion of these pairs, where the patient with the
- shorter survival time has the higher predicted risk.
- Exists a modified version of this estimator 
+ is estimated as the proportion of these pairs in which the patient with
+ the shorter survival time has the higher predicted risk.
+ A modified version of this estimator, 
 \begin_inset Formula $C_{H}(\tau)$
 \end_inset
 
- , that only considers patients with 
+, only considers patients with 
 \begin_inset Formula $T_{i}<\tau$
 \end_inset
 
- and may provide more stable estimates
+ and may provide more stable estimates 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-21"
@@ -6299,22 +6231,22 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-According to the Scikit-survival's documentation and Rahman et.al., Harrel's
- concorance index is biased in the presence of censoring, and the higher
- the censoring is, the more biased it gets.
+According to the Scikit-survival's documentation and Rahman et.
+ al., Harrel's concordance index becomes biased in the presence of censoring.
+ The bias increases with the level of censoring.
  Uno et.
  al.
- proposed a modified concordance index 
+ introduced a modified concordance index, 
 \begin_inset Formula $C_{U}(\tau)$
 \end_inset
 
- that uses weights based on the probability of being censored.
- They found that their estimator is robust to the choice of 
+, which incorporates weights based on the probability of being censored.
+ While their estimator proved robust to the choice of 
 \begin_inset Formula $\tau$
 \end_inset
 
-, but made a remark that the error of the estimate might be quite large
- if there's too little instances beyond this time-point 
+, they noted that the error of the estimate might be quite large if there
+ are too few instances beyond this time point 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-21,key-22"
@@ -6323,16 +6255,6 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-not sure if I like this paragraph
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -6371,7 +6293,7 @@ area under the receiver operating characteristics curve
 \emph default
  (ROC AUC) is a popular performance measure for binary classification tasks.
  In survival analysis, it is used to determine how well estimated risk scores
- can distinguish diseased patients from healthy ones
+ can distinguish diseased patients from healthy ones 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-22"
@@ -6380,16 +6302,6 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-discrimination or what?
-\end_layout
-
-\end_inset
-
- 
 \end_layout
 
 \begin_layout Standard
@@ -6401,20 +6313,10 @@ In binary classification, the
 \emph on
 true positive rate (TPR or sensitivity)
 \emph default
- against 
+ against the 
 \emph on
 false positive rate (FPR)
 \emph default
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-it probably has also another name
-\end_layout
-
-\end_inset
-
 .
  The latter is the ratio of negative instances that are falsely classified
  as positive.
@@ -6425,26 +6327,14 @@ it probably has also another name
  the 
 \emph on
 true negative rate
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-bad equation
-\end_layout
-
-\end_inset
-
-
 \emph default
  (the ratio of negative instances that are correctly classified, often referred
  to as 
 \emph on
-specifity
+specificity
 \emph default
 ).
- The former is the ration of positive instances classified as positive 
+ The former is the ratio of positive instances classified as positive 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-9"
@@ -6453,16 +6343,6 @@ literal "false"
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add page 99 to the citation
-\end_layout
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -6478,7 +6358,7 @@ cumulative cases
 \emph on
 dynamic controls
 \emph default
- at any given point of time 
+ at any given point in time 
 \begin_inset Formula $t$
 \end_inset
 
@@ -6533,6 +6413,9 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -6565,10 +6448,10 @@ Time-dependent Brier Score
 \end_layout
 
 \begin_layout Standard
-Time-dependent ROC AUC and concordance index are great to assess the overall
- discrimination among all time points (mean AUC and c-index) and the discriminat
-ion at any individual time point (the ROC graph), but they tells us nothing
- about the accuracy of individual predictions 
+Time-dependent ROC AUC and concordance index are great for assessing the
+ overall discrimination among all time points (mean AUC and c-index) and
+ the discrimination at any individual time point (the ROC graph), but they
+ tell us nothing about the accuracy of individual predictions 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-22"
@@ -6579,14 +6462,14 @@ literal "false"
 .
  We would want something similar to regression performance measures used
  in machine learning.
- Fortunately, such metric exists.
+ Fortunately, such a metric exists.
  Time-dependent Brier score is a modification of mean squared error (MSE)
  that handles right censored data.
 \end_layout
 
 \begin_layout Standard
-While concordance index and time-dependent ROC AUC measure only discrimination,
- the time-dependent Brier score measures both discrimination and calibration,
+While the concordance index and time-dependent ROC AUC measure only discriminati
+on, the time-dependent Brier score measures both discrimination and calibration,
  making it a metric of 
 \begin_inset Quotes sld
 \end_inset
@@ -6640,8 +6523,8 @@ where
 
 
 \series default
-is a model’s predicted probability of remaining event-free up to time point
- for feature vector 
+is a model’s predicted probability of remaining event-free up to the time
+ point for feature vector 
 \series bold
 x
 \series default
@@ -11573,7 +11456,17 @@ Ping Wang, Yan Li, and Chandan k.
  ACM Comput.
  Surv.
  51, 6, Article 110 (February 2019), 36 pages.
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
  https://doi.org/10.1145/3214306
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -11589,8 +11482,18 @@ Definitions:, 1.
  (n.d.).
  Survival distributions, hazard functions, cumulative hazards.
  Stanford.edu.
- Retrieved October 23, 2023, from https://web.stanford.edu/~lutian/coursepdf/unit1.
-pdf
+ Retrieved October 23, 2023, from 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://web.stanford.edu/~lutian/coursepdf/unit1.pdf
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -11604,7 +11507,18 @@ literal "false"
 Penalized Cox Models — scikit-survival 0.22.1.
  (2015).
  Readthedocs.io.
- https://scikit-survival.readthedocs.io/en/stable/user_guide/coxnet.html
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://scikit-survival.readthedocs.io/en/stable/user_guide/coxnet.html
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -11615,14 +11529,12 @@ literal "false"
 
 \end_inset
 
-‌Hemant Ishwaran, Kogalur, U.
+‌Ishwaran, H., Kogalur, U.
  B., Blackstone, E.
  H., & Lauer, M.
  S.
  (2008).
  Random survival forests.
- The Annals of Applied Statistics, 2(3).
- https://doi.org/10.1214/08-aoas169
 \end_layout
 
 \begin_layout Bibliography
@@ -11633,11 +11545,10 @@ literal "false"
 
 \end_inset
 
-‌Wang, H., & Li, G.
+Wang, H., & Li, G.
  (2017).
- A Selective Review on Random Survival Forests for High Dimensional Data.
- Quantitative Bio-Science, 36(2), 85–96.
- https://doi.org/10.22283/qbs.2017.36.2.85
+ A selective review on random survival forests for high dimensional data.
+ Quantitative bio-science, 36(2), 85.
 \end_layout
 
 \begin_layout Bibliography
@@ -11648,21 +11559,10 @@ literal "false"
 
 \end_inset
 
-‌Breiman, L.
+Breiman, L.
  (2001).
  Random forests.
  Machine learning, 45, 5-32.
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-29"
-literal "false"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
