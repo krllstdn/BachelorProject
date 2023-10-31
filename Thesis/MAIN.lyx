@@ -6086,6 +6086,21 @@ In this section, we will cover three measures of discrimination and one
  measure that assesses both discrimination and calibration (overall performance).
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+mention somewhere that time-dependent measures are great because they show
+ the performance at each point in time, while c-index is only a number that
+ tells nothing about the performance at every point in time
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Harrel's and Uno's Concordance Indices
 \end_layout
@@ -6341,7 +6356,7 @@ Time-dependent Area under the ROC
 \begin_layout Standard
 The 
 \emph on
-area under the receiver operating characteristics curve
+area under the receiver operating characteristic curve
 \emph default
  (ROC AUC) is a popular performance measure for binary classification tasks.
  In survival analysis, it is used to determine how well estimated risk scores
@@ -6370,7 +6385,7 @@ true positive rate (TPR or sensitivity)
 false positive rate (FPR)
 \emph default
 .
- The latter is the ratio of negative instances that are falsely classified
+ The FPR is the ratio of negative instances that are falsely classified
  as positive.
  It is equal to 
 \begin_inset Formula $1-$
@@ -6386,7 +6401,8 @@ true negative rate
 specificity
 \emph default
 ).
- The former is the ratio of positive instances classified as positive 
+ TPR, or sensitivity, represents the ratio of positive instances classified
+ as positive 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-9"
@@ -6402,6 +6418,8 @@ In survival analysis, we extend the ROC to continuous outcomes, where a
  patient is alive at the start of the observation, but might experience
  an event at some point later.
  Specificity and sensitivity, therefore, become time-dependent measures.
+ It is specifically important, as model accuracy tends to be different at
+ different points in time.
  Here we consider 
 \emph on
 cumulative cases
@@ -6423,8 +6441,7 @@ Cumulative cases
 \begin_inset Formula $t$
 \end_inset
 
-.
- While 
+, while 
 \emph on
 dynamic controls
 \emph default
@@ -6437,7 +6454,8 @@ dynamic controls
 \begin_inset Formula $t$
 \end_inset
 
-, we can tell how well the model can distinguish patients who fail by a
+, we assess the model's ability to differentiate between patients.
+ Specifically, how well the model can distinguish patients who fail by a
  given time 
 \begin_inset Formula $t_{i}<t$
 \end_inset
@@ -6447,8 +6465,8 @@ dynamic controls
 \end_inset
 
 .
- It is useful only if we want to predict an event happening in a period
- up to time 
+ The time-dependent ROC AUC is especially useful when we want to predict
+ an event happening in a period up to time 
 \begin_inset Formula $t$
 \end_inset
 
@@ -6465,34 +6483,6 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-check for plrsm
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-mention somewhere that time-dependent measures are great because they show
- the performance at each point in time, while c-index is only a number that
- tells nothing about the performance at every point in time
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
