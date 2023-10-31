@@ -2390,26 +2390,50 @@ To train the linear regression means to find optimal values
 
  so that the model makes as accurate predictions as possible.
  In graphical terms, it means finding such a hyperplane that fits data points
- from the training set as well as possible, as shown in image 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ref{lin_reg_img}
-\end_layout
+ from the training set as well as possible, as shown in image
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Linear-regression-for"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
 .
  
-\begin_inset Note Note
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-change the images to the normal ones and make them in lyx style
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/linear_regression.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Linear regression for two-dimensional data
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Linear-regression-for"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2417,59 +2441,8 @@ change the images to the normal ones and make them in lyx style
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
 \begin_layout Plain Layout
 
-
-\backslash
-begin{figure}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[width=0.6
-\backslash
-textwidth]{Images/linear_regression}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-caption{Linear regression for two-dimensional data}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-label{lin_reg_img}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{figure}
 \end_layout
 
 \end_inset
@@ -2726,16 +2699,6 @@ noprefix "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-change the images to the normal ones and make them in lyx style
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -6133,6 +6096,20 @@ One way to measure discrimination is through
 concordance
 \emph default
 .
+ A pair of patients is 
+\emph on
+concordant
+\emph default
+ if the subject who experiences an event earlier has a greater estimated
+ risk 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-30"
+literal "false"
+
+\end_inset
+
+.
  
 \emph on
 Measures of concordance
@@ -6150,10 +6127,24 @@ literal "false"
 \end_inset
 
 .
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Think how to include names rather than only numbers
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The
+The concordance index, or C-index, is the most widely used performance metric
+ in survival analysis.
+ It is defined through the concordance probability.
+ The
 \emph on
  concordance probability
 \emph default
@@ -6162,31 +6153,15 @@ The
 \begin_inset Formula $(i,j)$
 \end_inset
 
-, the one with a shorter survival time has the higher predicted risk.
- Mathematically, this is expressed as:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-C=P(\eta_{i}>\eta_{j}|T_{i}<T_{j}),
-\]
-
+, the one with a shorter survival time 
+\begin_inset Formula $T$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-where 
-\begin_inset Formula $\eta_{i}\text{and}\eta_{j}$
+, has the higher predicted risk 
+\begin_inset Formula $M$
 \end_inset
 
-are the predicted risk scores, and 
-\begin_inset Formula $T_{i}\text{and}T_{j}$
-\end_inset
-
-are the survival times
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-21"
@@ -6195,22 +6170,50 @@ literal "false"
 \end_inset
 
 .
- 
+ Mathematically, this is expressed as:
 \end_layout
 
 \begin_layout Standard
-Harrel's concordance index 
+\begin_inset Formula 
+\[
+C=P(M_{i}>M_{j}|T_{i}<T_{j}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To compute Harrel's concordance index 
 \begin_inset Formula $C_{H}$
 \end_inset
 
- considers all suitable pairs where the shorter survival time corresponds
- to an event.
+, we consider every comparable pair of patients where the one with the shorter
+ time failed.
+ Pair is 
+\begin_inset Quotes sld
+\end_inset
+
+comparable
+\begin_inset Quotes srd
+\end_inset
+
+ if we can determine which of them experienced the event first 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-30"
+literal "false"
+
+\end_inset
+
+.
  
 \begin_inset Formula $C_{H}$
 \end_inset
 
- is estimated as the proportion of these pairs in which the patient with
- the shorter survival time has the higher predicted risk.
+ is estimated as the proportion of these pairs in which the subject with
+ the shorter survival time has a higher estimated risk.
  A modified version of this estimator, 
 \begin_inset Formula $C_{H}(\tau)$
 \end_inset
@@ -6231,11 +6234,75 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+Mathematically, Harrell's C-index is defined as a ratio between the number
+ of concordant and comparable pairs:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{C}=\frac{\sum_{i=1}^{N}\Delta_{i}\sum_{j=i+1}^{N}\left[I(T_{i}^{obs}<T_{j}^{obs})+(1-\Delta_{j})I(T_{i}^{obs}=T_{j}^{obs})\right]\left[I(M_{i}>M_{j})+\frac{1}{2}I(M_{i}=M_{j})\right]}{\sum_{i=1}^{N}\Delta_{i}\sum_{j=i+1}^{N}\left[I(T_{i}^{obs}<T_{j}^{obs})+(1-\Delta_{j})I(T_{i}^{obs}=T_{j}^{obs})\right]}.\label{eq:c-index}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $I(\cdot)$
+\end_inset
+
+ is the indicator function.
+ It is equal to 1 if its argument is true, and 0 if it is not.
+ 
+\begin_inset Formula $T^{obs}$
+\end_inset
+
+ is the observation time.
+ 
+\begin_inset Formula $\Delta_{i}$
+\end_inset
+
+ is a binary variable and 
+\begin_inset Formula $\Delta_{i}=1$
+\end_inset
+
+ if the subject 
+\begin_inset Formula $i$
+\end_inset
+
+ experienced an event during the time of observation and 
+\begin_inset Formula $\Delta_{i}=0$
+\end_inset
+
+ if they did not.
+\end_layout
+
+\begin_layout Standard
 According to the Scikit-survival's documentation and Rahman et.
- al., Harrel's concordance index becomes biased in the presence of censoring.
+ al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-21"
+literal "false"
+
+\end_inset
+
+, Harrel's concordance index becomes biased in the presence of censoring.
  The bias increases with the level of censoring.
  Uno et.
  al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-31"
+literal "false"
+
+\end_inset
+
  introduced a modified concordance index, 
 \begin_inset Formula $C_{U}(\tau)$
 \end_inset
@@ -6255,26 +6322,11 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-- While Harrell’s concordance index is easy to interpret and compute, it
- has some shortcomings: 1.
- it has been shown that it is too optimistic with increasing amount of censoring
- [1], 2.
- it is not a useful measure of performance if a specific time range is of
- primary interest (e.g.
- predicting death within 2 years)
-\end_layout
-
-\begin_layout Plain Layout
-- The second point can be addressed by extending the well known receiver
- operating characteristic curve (ROC curve) to possibly censored survival
- times.
+I was unable to find usable uno's definition
 \end_layout
 
 \end_inset
@@ -7923,7 +7975,7 @@ In this subsection we are going to explore the influence of donor type (living
  established fact
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-16"
+key "key-29"
 literal "false"
 
 \end_inset
@@ -7931,7 +7983,7 @@ literal "false"
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-17"
+key "key-30"
 literal "false"
 
 \end_inset
@@ -8283,7 +8335,7 @@ In this subsection we are going to explore the survival curves for different
  In the Figure 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-18"
+key "key-31"
 literal "false"
 
 \end_inset
@@ -8297,7 +8349,7 @@ lly from the other.
  This corresponds to (
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-18"
+key "key-31"
 literal "false"
 
 \end_inset
@@ -11535,6 +11587,16 @@ literal "false"
  S.
  (2008).
  Random survival forests.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+these 3 citations cause the glyph problem 26,27,28
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -11563,6 +11625,54 @@ Breiman, L.
  (2001).
  Random forests.
  Machine learning, 45, 5-32.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-29"
+literal "false"
+
+\end_inset
+
+Gönen M, Heller G.
+ Concordance probability and discriminatory power in proportional hazards
+ regression.
+ Biometrika 2005;92(4):1799–09.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-30"
+literal "false"
+
+\end_inset
+
+Enrico Longato, Vettoretti, M., & Barbara Di Camillo.
+ (2020).
+ A practical perspective on the concordance index for the evaluation and
+ selection of prognostic time-to-event models.
+ Journal of Biomedical Informatics, 108, 103496–103496.
+ https://doi.org/10.1016/j.jbi.2020.103496
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-31"
+literal "false"
+
+\end_inset
+
+‌Uno H, Cai T, Pencina MJ, D'Agostino RB, Wei LJ.
+ On the C-statistics for evaluating overall adequacy of risk prediction
+ procedures with censored survival data.
+ Stat Med.
+ 2011 May 10;30(10):1105-17.
+ doi: 10.1002/sim.4154.
+ Epub 2011 Jan 13.
+ PMID: 21484848; PMCID: PMC3079915.
 \end_layout
 
 \begin_layout Standard
