@@ -4044,26 +4044,75 @@ is a statistical method used to analyze the time until an event of interest
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Add more formal definition of SA: ideal study has no end
-\end_layout
-
-\begin_layout Plain Layout
-- definition of 
-\series bold
-event
-\end_layout
-
-\begin_layout Plain Layout
-- 
-\end_layout
+In the context of survival analysis, 
+\emph on
+time
+\emph default
+ (also 
+\emph on
+survival time
+\emph default
+) refers to the duration from the start of an individual's follow-up to
+ the occurrence of an event, measured in days, weeks, months, or years 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13"
+literal "false"
 
 \end_inset
 
+.
+ The term 
+\emph on
+event
+\emph default
+ (also referred to as 
+\emph on
+deat
+\emph default
+h or 
+\emph on
+failure
+\emph default
+) encompasses any occurrence that permanently changes the state of the subject.
+ It can be death, the onset of a disease, a relapse from remission, recovery,
+ or any other specified experience of interest that an individual might
+ encounter 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13,key-30"
+literal "false"
 
+\end_inset
+
+.
+ Usually, only one event of interest is considered.
+ When evaluating multiple events, the problem is categorized as 
+\emph on
+competing risks
+\emph default
+ or 
+\emph on
+recurrent events
+\emph default
+ problem 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In this section, we will delve into fundamental survival analysis terminology,
+ such as censoring and survival function.
+ We will explore the classification of the survival analysis methods, highlighti
+ng the most popular statistical methods, as well as one machine learning
+ method tailored to the needs of survival analysis.
+ Additionally, we will discuss ways to evaluate survival models effectively.
 \end_layout
 
 \begin_layout Subsection
@@ -4091,6 +4140,16 @@ The most distinct feature of survival analysis methods is the ability to
  These patients were either still alive at the last date of observation
  or were lost to follow-up.
  This lack of complete information indicates 'censoring' in survival analysis.
+ Censoring makes the application of standard statistical and machine learning
+ approaches to survival data impractical
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-27"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -4696,7 +4755,11 @@ To calculate the survival function
 \begin_inset Formula $S(t)$
 \end_inset
 
- from the hazard function, we can use the following equation:
+ from the hazard function 
+\begin_inset Formula $h(t)$
+\end_inset
+
+, we can use the following equation:
 \end_layout
 
 \begin_layout Standard
@@ -4707,56 +4770,6 @@ S(t)=exp\left[-\intop_{0}^{t}h(u)du\right].\label{eq:haz_to_surv}
 
 \end_inset
 
-The integral in the equation 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:haz_to_surv"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- can be replaced with 
-\begin_inset Formula $H(t)$
-\end_inset
-
- from the 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:cumulative-hazard-function"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- And we get the following 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-make the paragraph better
-\end_layout
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S(t)=e^{H(t)}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4777,14 +4790,29 @@ noprefix "false"
 \end_inset
 
 .
- 
+ The integral in the equation can be replaced with 
+\begin_inset Formula $H(t)$
+\end_inset
+
+ from the 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cumulative-hazard-function"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ And we get the following:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-h(t)=-\left[\frac{dS(t)/dt}{S(t)}\right]\label{eq:surv_to_haz}
-\end{equation}
+\[
+S(t)=e^{-H(t)}
+\]
 
 \end_inset
 
@@ -4811,7 +4839,18 @@ noprefix "false"
 \begin_inset Formula $S(t)$
 \end_inset
 
-.
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+h(t)=-\left[\frac{dS(t)/dt}{S(t)}\right].\label{eq:surv_to_haz}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4819,7 +4858,15 @@ Considering the fact that the survival function describes the probability
  of a patient surviving up to time t and the hazard function shows us the
  instantaneous risk of a person dying at a specific instant t, we can say
  that they provide complementary information about survival and risk over
- time.
+ time 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13"
+literal "false"
+
+\end_inset
+
+.
  Of the two discussed functions, the survival function is used more often
  as it is more intuitive, and in the practical part, we will estimate the
  survival function as well.
@@ -5306,17 +5353,6 @@ baseline hazard function
  is called 
 \emph on
 time-independent.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\emph off
-can be elaborated more
-\end_layout
-
-\end_inset
-
 
 \emph default
  The exponential function ensures that the function is non-negative, satisfying
@@ -5582,16 +5618,6 @@ literal "false"
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-consider adding limitations of the cox PH
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -6086,21 +6112,6 @@ In this section, we will cover three measures of discrimination and one
  measure that assesses both discrimination and calibration (overall performance).
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-mention somewhere that time-dependent measures are great because they show
- the performance at each point in time, while c-index is only a number that
- tells nothing about the performance at every point in time
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsubsection
 Harrel's and Uno's Concordance Indices
 \end_layout
@@ -6143,16 +6154,6 @@ literal "false"
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Think how to include names rather than only numbers
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -6306,7 +6307,7 @@ literal "false"
 
 \end_inset
 
-, Harrel's concordance index becomes biased in the presence of censoring.
+, Harrell's concordance index becomes biased in the presence of censoring.
  The bias increases with the level of censoring.
  Uno et.
  al.
@@ -6347,6 +6348,18 @@ I was unable to find usable uno's definition
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Having explored the concordance index and its modifications, it is evident
+ that it provides valuable insight into the model's discriminatory abilities.
+ Yet, it offers a singular value that characterizes a model's performance
+ across different time points without considering fluctuations in concordance
+ that tend to happen over time.
+ To enhance our evaluation of model performance in terms of discrimination
+ across varying time points, we turn our attention to another popular metric
+ in survival analysis: the ROC AUC.
+ The following section explores it in more detail.
 \end_layout
 
 \begin_layout Subsubsection
@@ -6485,6 +6498,14 @@ literal "false"
 .
 \end_layout
 
+\begin_layout Standard
+While the time-dependent ROC AUC provides a valuable measure of a model's
+ discrimination ability at various time points, it falls short in providing
+ insight into the accuracy of individual predictions – calibration.
+ To address this limitation and provide a more comprehensive model assessment,
+ we turn our attention to the time-dependent Brier score.
+\end_layout
+
 \begin_layout Subsubsection
 Time-dependent Brier Score 
 \end_layout
@@ -6502,8 +6523,8 @@ literal "false"
 \end_inset
 
 .
- We would want something similar to regression performance measures used
- in machine learning.
+ A metric analogous to regression performance measures used in machine learning
+ would be ideal.
  Fortunately, such a metric exists.
  Time-dependent Brier score is a modification of mean squared error (MSE)
  that handles right censored data.
@@ -6525,30 +6546,10 @@ overall performance
 \end_layout
 
 \begin_layout Standard
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/brier_equation.png
-	scale 60
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-change to a real equation!
-\end_layout
-
-\end_inset
-
-
-\end_layout
+\begin_inset Formula 
+\[
+BS^{c}(t)=\frac{1}{n}\sum_{i=1}^{n}I(y_{i}\leq t\wedge\delta_{i}=1)\frac{(0-\hat{\pi}(t|\mathbf{x}_{i}))^{2}}{\hat{G}(y_{i})}+I(y_{i}>t)\frac{(1-\hat{\pi}(t|\mathbf{x}_{i}))^{2}}{\hat{G}(t)}
+\]
 
 \end_inset
 
@@ -6566,7 +6567,11 @@ where
 
 \series default
 is a model’s predicted probability of remaining event-free up to the time
- point for feature vector 
+ point 
+\begin_inset Formula $t$
+\end_inset
+
+ for feature vector 
 \series bold
 x
 \series default
@@ -6583,19 +6588,48 @@ literal "false"
 \end_inset
 
 .
+ 
+\begin_inset Formula $I(\cdot)$
+\end_inset
+
+ is the indicator function.
+ 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is subject's survival time, 
+\begin_inset Formula $\delta_{i}$
+\end_inset
+
+ is event/censoring indicator.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Think: maybe add more text.
+The limitation to the time-dependent Brier Score is its applicability exclusivel
+y to the models that are capable of estimating the survival function.
+ 
+\emph on
+Integrated Brier Score
+\emph default
+ provides a scalar value for general model evaluation.
+ It is beneficial for model comparison, as time-dependent measures are a
+ bit harder to compare than scalar values, and for model fine-tuning process.
 \end_layout
 
-\end_inset
-
-
+\begin_layout Standard
+Survival analysis provides a suite of techniques for the prediction of a
+ time to event.
+ As we explored its methods and evaluation metrics, it is evident that the
+ traditional SA provides robust tools for handling censored data, evaluating
+ risk factors, and making predictions over time.
+ However, as data grows in both complexity and volume, there is a growing
+ need for more advanced modeling techniques, leading us to advanced machine
+ learning: deep learning.
+ Deep Learning, with its ability to handle large and complex datasets, promises
+ to expand traditional survival analysis methods.
+ In the following section, we will explore how deep learning can be adapted
+ for survival analysis to harness the power of neural networks for more
+ precise predictions.
 \end_layout
 
 \begin_layout Section
