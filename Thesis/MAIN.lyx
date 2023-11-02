@@ -4133,13 +4133,21 @@ Censoring
 \begin_layout Standard
 The most distinct feature of survival analysis methods is the ability to
  handle censored data.
- Censoring refers to a circumstance when the information about survival
- time is only partially known.
+ 
+\emph on
+Censoring
+\emph default
+ refers to a circumstance when the information about survival time is only
+ partially known.
  For example, the dataset utilized in our research has 370,000 censored
  instances out of 500,000 performed transplantations.
  These patients were either still alive at the last date of observation
  or were lost to follow-up.
- This lack of complete information indicates 'censoring' in survival analysis.
+ This lack of complete information indicates 
+\emph on
+censoring
+\emph default
+ in survival analysis.
  Censoring makes the application of standard statistical and machine learning
  approaches to survival data impractical 
 \begin_inset CommandInset citation
@@ -4212,10 +4220,25 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-There are three types of censoring: left, right, and interval censoring.
- Right censoring, which is more common, occurs when we are sure that the
- event did not happen by a specific time and we don't know when it will
- happen.
+There are three types of censoring: 
+\emph on
+left
+\emph default
+, 
+\emph on
+right
+\emph default
+, and 
+\emph on
+interval
+\emph default
+ censoring.
+ 
+\emph on
+Right censoring
+\emph default
+, which is more common, occurs when we are sure that the event did not happen
+ by a specific time and we don't know when it will happen.
  The situation arises when the patient drops out of a study, or the study
  ends when they are still alive, as illustrated with patients B, E, and
  F in Figure 
@@ -4233,8 +4256,12 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Left censoring is less common and happens when the event occurs before the
- study begins or before the initial observation.
+
+\emph on
+Left censoring
+\emph default
+ is less common and happens when the event occurs before the study begins
+ or before the initial observation.
  We know the event happened before a specific time, but the exact time is
  unknown.
  This type is typical in cases where a patient has already experienced the
@@ -4242,8 +4269,12 @@ Left censoring is less common and happens when the event occurs before the
 \end_layout
 
 \begin_layout Standard
-Interval censoring happens when the event occurs within a particular timeframe,
- but the exact time is unknown.
+
+\emph on
+Interval censoring
+\emph default
+ happens when the event occurs within a particular timeframe, but the exact
+ time is unknown.
  It can be the case in studies involving periodic patient follow-up, where
  the event can happen at any point between two visits.
 \end_layout
@@ -4262,21 +4293,19 @@ Censoring Assumptions
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-improve the examples 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-There are three types of censoring assumptions: random, independent, and
- non-informative.
+There are three types of censoring assumptions: 
+\emph on
+random
+\emph default
+, 
+\emph on
+independent
+\emph default
+, and 
+\emph on
+non-informative
+\emph default
+.
  Each shares certain similarities but also possesses unique distinctions,
  which we'll explore in detail.
  Censoring assumptions is the way censoring is managed.
@@ -4320,8 +4349,19 @@ Non-Informative Censoring
 \end_layout
 
 \begin_layout Standard
-Generally, it is safe to assume non-informative censoring when censoring
- is independent and/or random.
+Generally, it is safe to assume 
+\emph on
+non-informative
+\emph default
+ censoring when censoring is 
+\emph on
+independent
+\emph default
+ and/or 
+\emph on
+random
+\emph default
+.
  However, these assumptions are not equivalent.
  To better understand these concepts, let's look into examples.
 \end_layout
@@ -4540,15 +4580,23 @@ Hazard Function
 \begin_layout Standard
 The survival function provides the probability of an individual surviving
  at each given point in time.
- This function is often preferred over the hazard function due to its more
- intuitive appeal: it directly communicates the chance of survival.
+ This function is often preferred over the 
+\emph on
+hazard function
+\emph default
+ due to its more intuitive appeal: it directly communicates the chance of
+ survival.
  However, there are scenarios where knowing the risk at each point in time
  is necessary, entailing the use of the hazard function.
  
 \end_layout
 
 \begin_layout Standard
-The hazard function, denoted as 
+The 
+\emph on
+hazard function
+\emph default
+, denoted as 
 \begin_inset Formula $h(t)$
 \end_inset
 
@@ -4573,7 +4621,7 @@ h(t)=\underset{\Delta t\rightarrow0}{lim}\frac{P(t\leq T<t+\Delta t|T\geq t)}{\D
 \end_layout
 
 \begin_layout Standard
-Where 
+Here, 
 \begin_inset Formula $\Delta t$
 \end_inset
 
@@ -4592,7 +4640,11 @@ Where
 
 .
  The conditional probability statement gives the probability that a person’s
- survival time, T, will lie in the time interval between 
+ survival time, 
+\begin_inset Formula $T$
+\end_inset
+
+, will lie in the time interval between 
 \begin_inset Formula $t$
 \end_inset
 
@@ -4605,21 +4657,15 @@ Where
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-strange paragraph
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 Occasionally, due to its structure, the hazard function is referred to as
- a conditional failure rate.
+ a 
+\emph on
+conditional failure rate
+\emph default
+.
  It is a rate because it represents a conditional probability per unit of
  time 
 \begin_inset Formula $\Delta t$
@@ -4913,8 +4959,15 @@ Taxonomy of Survival Analysis Methods
 \end_layout
 
 \begin_layout Standard
-Survival analysis methods can be broadly categorized into statistical and
- machine learning based methods.
+Survival analysis methods can be broadly categorized into 
+\emph on
+statistical
+\emph default
+ and 
+\emph on
+machine learning based
+\emph default
+ methods.
  Both aim to estimate the survival time and the survival probability at
  the estimated survival time 
 \begin_inset CommandInset citation
@@ -5000,14 +5053,29 @@ Statistical Methods
 This section provides a concise overview of statistical techniques, given
  our primary emphasis on machine learning methods.
  Here, we introduce three different types of statistical methods that are
- commonly used to estimate the survival and hazard functions: non-parametric,
- semi-parametric, and parametric methods.
+ commonly used to estimate the survival and hazard functions: 
+\emph on
+non-parametric
+\emph default
+, 
+\emph on
+semi-parametric
+\emph default
+, and 
+\emph on
+parametric methods
+\emph default
+.
 \end_layout
 
 \begin_layout Standard
-Non-parametric methods are preferred in situations where the event time
- does not adhere to any known distribution or when the proportional hazards
- assumption is not met 
+
+\emph on
+Non-parametric methods
+\emph default
+ are preferred in situations where the event time does not adhere to any
+ known distribution or when the proportional hazards assumption is not met
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-23"
@@ -5036,9 +5104,13 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Semi-parametric models offer a middle ground between fully parametric models,
- which make specific distributional assumptions, and non-parametric models,
- which make very few assumptions.
+
+\emph on
+Semi-parametric models
+\emph default
+ offer a middle ground between fully parametric models, which make specific
+ distributional assumptions, and non-parametric models, which make very
+ few assumptions.
  Among semi-parametric methods, the Cox model is the most frequently employed
  model for survival regression analysis.
  It is semi-parametric as the distribution of the outcome is unknown.
@@ -5069,9 +5141,12 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Parametric methods shine in their accuracy and efficiency when the time
- to the event conforms to a known distribution that can be specified in
- terms of certain parameters.
+
+\emph on
+Parametric methods
+\emph default
+ shine in their accuracy and efficiency when the time to the event conforms
+ to a known distribution that can be specified in terms of certain parameters.
  With parametric models, estimating the time to the event is straightforward,
  whereas the Cox model can make this task somewhat cumbersome or unfeasible.
  In the domain of parametric models, linear regression is central.
@@ -5108,7 +5183,11 @@ Kaplan-Meier Survival Curves
 \end_layout
 
 \begin_layout Standard
-Kaplan-Meier is a non-parametric method of survival function creation.
+
+\emph on
+Kaplan-Meier
+\emph default
+ is a non-parametric method of survival function creation.
  It is 
 \emph on
 non-parametric
@@ -5299,19 +5378,6 @@ To summarize, the Kaplan-Meier method provides a robust non-parametric approach
  covariates.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Maybe add Nelson-Aalen section?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsubsection
 Cox Proportional Hazards Method 
 \begin_inset CommandInset label
@@ -5324,8 +5390,12 @@ name "subsec:Cox-Proportional-Hazards"
 \end_layout
 
 \begin_layout Standard
-The Cox proportional hazards model is widely used in survival analysis semi-para
-metric model.
+The 
+\emph on
+Cox proportional hazards
+\emph default
+ (also Cox PH) model is widely used in survival analysis semi-parametric
+ model.
  This section explores its formulation, key properties, and reasons for
  its widespread use in research.
  
@@ -5427,8 +5497,11 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-The hazard ratio (HR) is a measure of the influence of an intervention on
- the outcome.
+The 
+\emph on
+hazard ratio
+\emph default
+ (HR) is a measure of the influence of an intervention on the outcome.
  A hazard ratio is defined as the hazard for one individual divided by the
  hazard for the other, as illustrated with the following formula:
 \end_layout
@@ -5664,8 +5737,19 @@ The Cox proportional hazards model is often chosen, since its coefficients
  features.
  Feature (column) correlations make a matrix singular, i.e.
  impossible to revert.
- In this section, we aim to explore the Ridge regression, LASSO, and Elastic
- Net methods as extensions or modifications to the Cox model.
+ In this section, we aim to explore the 
+\emph on
+Ridge regression
+\emph default
+, 
+\emph on
+LASSO
+\emph default
+, and 
+\emph on
+Elastic Net
+\emph default
+ methods as extensions or modifications to the Cox model.
  These techniques address the inherent challenges in the standard Cox model,
  offering solutions for regularization and feature selection.
 \end_layout
@@ -5757,7 +5841,11 @@ While the
  there are.
  Preferably, we would like to select a small subset of the most predictive
  features and ignore the rest, as too many features might result in overfitting.
- LASSO (Least Absolute Shrinkage and Selection Operator) does exactly that.
+ 
+\emph on
+LASSO
+\emph default
+ (Least Absolute Shrinkage and Selection Operator) does exactly that.
  Rather than merely shrinking the coefficients to zero, it performs feature
  selection as a part of the optimization process, where a subset of coefficients
  is set to zero and is, therefore, excluded, reducing the number of features
@@ -5843,7 +5931,11 @@ The LASSO method is effective for selecting a subset of discriminative features.
  instances in the training data set.
  The second is its tendency to randomly select only one feature out of a
  set of highly correlated ones.
- The Elastic Net alleviates these issues by incorporating the 
+ The 
+\emph on
+Elastic Net
+\emph default
+ alleviates these issues by incorporating the 
 \begin_inset Formula $l_{1}$
 \end_inset
 
@@ -5962,8 +6054,11 @@ Random Survival Forest
 \end_layout
 
 \begin_layout Standard
-Random Survival Forest (RSF) is an ensemble machine learning method tailored
- for survival analysis.
+
+\emph on
+Random Survival Forest
+\emph default
+ (RSF) is an ensemble machine learning method tailored for survival analysis.
  It is derived from the original Random Forest method developed by 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -5984,7 +6079,11 @@ s allows for more accurate predictions than any single tree can provide.
 \end_layout
 
 \begin_layout Standard
-Random Survival Forest is comprised of Survival Trees.
+Random Survival Forest is comprised of 
+\emph on
+Survival Trees
+\emph default
+.
  A survival tree is essentially a binary tree.
  It is developed by the iterative splitting of children nodes into two nodes
  until a certain criterion is met.
@@ -6001,16 +6100,6 @@ literal "false"
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-threshold value?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -6199,8 +6288,15 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The concordance index, or C-index, is the most widely used performance metric
- in survival analysis.
+The 
+\emph on
+concordance index
+\emph default
+, or 
+\emph on
+C-index
+\emph default
+, is the most widely used performance metric in survival analysis.
  It is defined through the concordance probability.
  The
 \emph on
@@ -6243,7 +6339,12 @@ C=P(M_{i}>M_{j}|T_{i}<T_{j}).
 \end_layout
 
 \begin_layout Standard
-To compute Harrel's concordance index 
+
+\emph on
+Harrell's concordance index
+\emph default
+ is the most widely used implementation of concordance index.
+ To compute Harrel's concordance index 
 \begin_inset Formula $C_{H}$
 \end_inset
 
@@ -6576,8 +6677,12 @@ literal "false"
  A metric analogous to regression performance measures used in machine learning
  would be ideal.
  Fortunately, such a metric exists.
- Time-dependent Brier score is a modification of mean squared error (MSE)
- that handles right censored data.
+ 
+\emph on
+Time-dependent Brier score
+\emph default
+ is a modification of mean squared error (MSE) that handles right censored
+ data.
 \end_layout
 
 \begin_layout Standard
