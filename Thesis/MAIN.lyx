@@ -4028,12 +4028,12 @@ Survival Analysis
 \emph on
 Survival analysis, 
 \emph default
-also known as
+often referred to as
 \emph on
  time-to-event analysis, 
 \emph default
-is a statistical method used to analyze the time until an event of interest
- occurs.
+is a statistical technique employed to analyze and predict the time until
+ an event of interest occurs.
  Its name originates from clinical and biological research, where these
  methods are used to analyze survival time, hence the name.
  These methods, however, found their uses in areas far beyond clinical settings:
@@ -4120,8 +4120,8 @@ Basic Terminology
 \end_layout
 
 \begin_layout Standard
-In this subsection we are going to cover basic terminology required for
- survival analysis such as censoring, censoring assumptions, survival and
+In this subsection, we are going to cover basic terminology required for
+ survival analysis such as censoring, censoring assumptions, survival, and
  hazard functions.
  
 \end_layout
@@ -4141,7 +4141,7 @@ The most distinct feature of survival analysis methods is the ability to
  or were lost to follow-up.
  This lack of complete information indicates 'censoring' in survival analysis.
  Censoring makes the application of standard statistical and machine learning
- approaches to survival data impractical
+ approaches to survival data impractical 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-27"
@@ -4194,7 +4194,7 @@ name "fig:Censoring-illustration"
 \end_layout
 
 \begin_layout Standard
-Look at the figure 
+Look at the Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Censoring-illustration"
@@ -4328,41 +4328,34 @@ Generally, it is safe to assume non-informative censoring when censoring
 
 \begin_layout Standard
 Consider a three-year disease occurrence study with 100 subjects at risk.
- Individuals are followed for three years, and by the end of the study,
- 20 of them contract the disease.
- We calculate the three-year disease risk as 20% and three-year survival
- as 80%.
+ By the end of the study, 20 of them contracted the disease, giving a 20%
+ three-year disease risk.
  Suppose we want to extend the study for another two years on the remaining
  80 individuals.
  However, 40 refuse to continue in the study and, are, therefore, lost to
  follow-up (censored).
- Out of 40 remaining subjects, 5 contracted the disease.
- Under the assumption of random and independent censoring, we would assume
- that censored individuals are representative of the remaining subjects.
- Therefore, we would estimate that out of 40 censored individuals, 5 contracted
- the disease.
- Consequently, we would calculate the five-year risk as 20 individuals in
- the first three-year period plus 10 in the last two-year period, and we
- would get a 30% five-year risk of disease contraction and 70% five-year
- survival under random and independent censoring assumptions.
+ Of the remaining 40, 5 contracted the disease.
+ Assuming those who left were representative of the remaining subjects (random
+ and independent censoring), another 5 among the censored would have contracted
+ it.
+ Consequently, the five-year risk is 30% and the five-year survival is 70%
+ under random and independent censoring assumptions.
  In this case, random and independent censoring is the same, as no predictor
  variables are considered.
 \end_layout
 
 \begin_layout Standard
-To illustrate the difference between random and independent censoring, let's
- introduce another group to the study: group B (the group before is A) with
- 100 individuals.
+To illustrate the difference between random and independent censoring, let
+ us introduce another group to the study: group B (the group before is A)
+ with 100 individuals.
  In the first three years, 40 contracted the disease, and 10 left the study.
  So, the calculated three-year risk for group B is 40%.
- Out of 50 remaining, between 3 and 5 years, 10 contract the disease.
- The risk is 20% for years between 3 and 5.
- Under independent assumption, we estimate that out of 10 censored, 2 contracted
- the disease.
- Let's calculate the five-year risk for group B: 40 got the disease in the
- first three years, plus 10 out of 50 observed in the 3-5 year period, plus
- 2, estimated out of 10 censored, and we would get 52% five-year risk and
- 48% five-year survival for group B under independent censoring assumptions.
+ In the next two years, 10 out of 50 get the disease, yielding 20% risk
+ for years between 3 and 5.
+ Under the independent censoring assumption, we assume that out of 10 censored,
+ 2 contracted the disease.
+ The five-year risk for group B is 52% with 48% survival under independent
+ censoring assumptions.
 \end_layout
 
 \begin_layout Standard
@@ -4370,23 +4363,18 @@ As we can see, the five-year risk in the two groups differs significantly
  (30% against 52%), and the censoring proportion is also very different
  (50% against 17%).
  Hence, the overall censoring is not random.
- However, it is random within groups A and B.
- Therefore, the censoring is independent, as independent censoring is random
- censoring conditional on each level of covariates.
-\end_layout
-
-\begin_layout Standard
-If, instead, in group B, 30 subjects out of 60 were censored at the three-year
+ However, it is random within each group, so the censoring is independent.
+ If, instead, in group B, 30 subjects out of 60 were censored at the three-year
  mark, the censoring proportion would be the same in both groups, and the
  overall censoring would be random, as those censored would be the representativ
 es of those who remained at risk.
 \end_layout
 
 \begin_layout Standard
-To best illustrate what non-informative censoring is, let's demonstrate
+To best illustrate what non-informative censoring is, let us demonstrate
  informative censoring.
- Let's take a group of subjects under random and independent censoring assumptio
-ns.
+ Let us take a group of subjects under random and independent censoring
+ assumptions.
  Every time subject A gets an event, subject B leaves the study (e.g., B is
  A's relative).
  If the censored subjects are representative of subjects at risk it would
@@ -4489,6 +4477,7 @@ Although, by definition, the graph of the survival function is smooth, in
  reality, it is a step function.
  This stepwise representation is due to the nature of real-world data, where
  events are recorded at specific, discrete time points rather than continuously
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -4616,6 +4605,16 @@ Where
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+strange paragraph
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4646,8 +4645,8 @@ Occasionally, due to its structure, the hazard function is referred to as
 \end_layout
 
 \begin_layout Standard
-To best illustrate the concept of instantaneous potential, let's refer to
- the concept of velocity.
+To best illustrate the concept of instantaneous potential, let us refer
+ to the concept of velocity.
  Velocity gives us the speed at a specific point in time.
  For instance, the velocity of 80 km/h, means that maintaining the same
  speed for an hour would result in traveling 80 kilometers.
@@ -4751,7 +4750,7 @@ Some models, such as Cox Proportional Hazards, are written in terms of the
 \end_layout
 
 \begin_layout Standard
-To calculate the survival function 
+Let us start by considering how to get the survival function 
 \begin_inset Formula $S(t)$
 \end_inset
 
@@ -4759,7 +4758,8 @@ To calculate the survival function
 \begin_inset Formula $h(t)$
 \end_inset
 
-, we can use the following equation:
+.
+ The relationship is captured in the following equation:
 \end_layout
 
 \begin_layout Standard
@@ -4770,7 +4770,7 @@ S(t)=exp\left[-\intop_{0}^{t}h(u)du\right].\label{eq:haz_to_surv}
 
 \end_inset
 
-Equation 
+This equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:haz_to_surv"
@@ -4780,7 +4780,7 @@ noprefix "false"
 
 \end_inset
 
- tells that the survival function 
+ illustrates that the survival function 
 \begin_inset Formula $S(t)$
 \end_inset
 
@@ -4790,7 +4790,7 @@ noprefix "false"
 \end_inset
 
 .
- The integral in the equation can be replaced with 
+ As we can see, the integral in the equation is the 
 \begin_inset Formula $H(t)$
 \end_inset
 
@@ -4805,7 +4805,7 @@ noprefix "false"
 \end_inset
 
 .
- And we get the following:
+ And we can simplify our equation to:
 \end_layout
 
 \begin_layout Standard
@@ -4820,26 +4820,8 @@ S(t)=e^{-H(t)}
 \end_layout
 
 \begin_layout Standard
-Equation 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:surv_to_haz"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- tells us that the hazard function is equal to the negative derivative of
- the survival function 
-\begin_inset Formula $S(t)$
-\end_inset
-
- with respect to t divided by 
-\begin_inset Formula $S(t)$
-\end_inset
-
-:
+On the other hand, to obtain the hazard function from the survival function,
+ we can utilize the following relationship: 
 \end_layout
 
 \begin_layout Standard
@@ -4854,11 +4836,48 @@ h(t)=-\left[\frac{dS(t)/dt}{S(t)}\right].\label{eq:surv_to_haz}
 \end_layout
 
 \begin_layout Standard
+Here, the Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:surv_to_haz"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ denotes that the hazard function 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ is the negative derivative of the survival function 
+\begin_inset Formula $S(t)$
+\end_inset
+
+ with respect to time 
+\begin_inset Formula $t$
+\end_inset
+
+ divided by 
+\begin_inset Formula $S(t)$
+\end_inset
+
+ itself.
+\end_layout
+
+\begin_layout Standard
 Considering the fact that the survival function describes the probability
- of a patient surviving up to time t and the hazard function shows us the
- instantaneous risk of a person dying at a specific instant t, we can say
- that they provide complementary information about survival and risk over
- time 
+ of a patient surviving up to time 
+\begin_inset Formula $t$
+\end_inset
+
+ and the hazard function shows us the instantaneous risk of a person dying
+ at a specific instant 
+\begin_inset Formula $t$
+\end_inset
+
+, we can say that they provide complementary information about survival
+ and risk over time 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -4906,10 +4925,7 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Statistical methods primarily characterize distributions of the event times
+ Statistical methods primarily characterize distributions of the event times
  and the statistical properties of the parameter estimation by estimating
  the survival curves.
  Typically, statistical methods are employed for low-dimensional data 
@@ -4962,7 +4978,7 @@ literal "false"
 In this section, we will cover selected statistical methods and one machine
  learning technique.
  Machine learning techniques related to neural networks will be covered
- in section 
+ in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Deep-Learning"
@@ -4983,9 +4999,9 @@ Statistical Methods
 \begin_layout Standard
 This section provides a concise overview of statistical techniques, given
  our primary emphasis on machine learning methods.
- In this subsection, we introduce three different types of statistical methods
- that are commonly used to estimate the survival and hazard functions: non-param
-etric, semi-parametric, and parametric methods.
+ Here, we introduce three different types of statistical methods that are
+ commonly used to estimate the survival and hazard functions: non-parametric,
+ semi-parametric, and parametric methods.
 \end_layout
 
 \begin_layout Standard
@@ -5002,13 +5018,13 @@ literal "false"
 .
  There are three main non-parametric methods: the Kaplan-Meier (KM) method,
  the Nelson-Aalen (NA) estimator, and the Life-Table (LT) method.
- In the next section we will cover Kaplan-Meier in more detail.
- Life-Table method is more convenient than Kaplan-Meier for the estimation
+ In the next section, we will cover Kaplan-Meier in more detail.
+ The Life-Table method is more convenient than Kaplan-Meier for the estimation
  of survival curves when data subjects are segmented into distinct time
- intervals, when dealing with an extensive number of subjects or a broad
+ intervals when dealing with an extensive number of subjects or a broad
  population scope.
- On the other hand, Nelson-Aalen method is used for the estimation of hazard
- functions 
+ On the other hand, the Nelson-Aalen method is used for the estimation of
+ hazard functions 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-23"
@@ -5028,7 +5044,7 @@ Semi-parametric models offer a middle ground between fully parametric models,
  It is semi-parametric as the distribution of the outcome is unknown.
  Unlike other approaches, this method is based on the proportional hazards
  assumption and uses partial likelihood for parameter estimation (more on
- that look in 
+ that in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Cox-Proportional-Hazards"
@@ -5106,9 +5122,9 @@ non-parametric
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\hat{S}(t_{(f)})=\hat{S}(t_{(f-1)})\times\hat{P}(T>t_{(f)}|T\geq f_{(f)}).
-\]
+\begin{equation}
+\hat{S}(t_{(f)})=\hat{S}(t_{(f-1)})\times\hat{P}(T>t_{(f)}|T\geq f_{(f)}).\label{eq:KM}
+\end{equation}
 
 \end_inset
 
@@ -5124,7 +5140,7 @@ That can be read as the survival function
 \begin_inset Formula $t_{(f)}$
 \end_inset
 
- is equal to the probability of surving past the previous time point 
+ is equal to the probability of surviving past the previous time point 
 \begin_inset Formula $t_{(f-1)}$
 \end_inset
 
@@ -5156,7 +5172,17 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In the equation we replaced 
+In the Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:KM"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we replaced 
 \begin_inset Formula $\hat{S}(t_{(f-1)})$
 \end_inset
 
@@ -5175,7 +5201,7 @@ literal "false"
 
 .
  Because of that the Kaplan-Meier estimator is sometimes referred to as
- 
+ the 
 \emph on
 product-limit method 
 \begin_inset CommandInset citation
@@ -5198,7 +5224,7 @@ noprefix "false"
 
 \end_inset
 
- shows the survival curve created with KM method.
+ shows the survival curve created with the KM method.
  
 \end_layout
 
@@ -5219,6 +5245,7 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5244,9 +5271,9 @@ name "fig:Survival-curve-estimated"
 
 \begin_layout Standard
 These survival curves are often compared using the log-rank test.
- 
+ The 
 \emph on
-Log-rank test
+log-rank test
 \emph default
  is a way to compare two survival functions, that is often used in studies,
  where there is a target group and a placebo (control) group to assess the
@@ -5264,7 +5291,7 @@ literal "false"
 
 \begin_layout Standard
 To summarize, the Kaplan-Meier method provides a robust non-parametric approach
- to estimating survival functions, emphasizing its independence from covariates.
+ for estimating survival functions, emphasizing its independence from covariates.
  While the log-rank test offers a mechanism to compare the survival curves
  and assess treatment efficacy, there are still situations that require
  taking covariates into consideration.
@@ -5297,7 +5324,8 @@ name "subsec:Cox-Proportional-Hazards"
 \end_layout
 
 \begin_layout Standard
-The Cox proportional hazards model is a popular semi-parametric model.
+The Cox proportional hazards model is widely used in survival analysis semi-para
+metric model.
  This section explores its formulation, key properties, and reasons for
  its widespread use in research.
  
@@ -5305,7 +5333,11 @@ The Cox proportional hazards model is a popular semi-parametric model.
 
 \begin_layout Standard
 The Cox proportional hazards model is defined in terms of a hazard at time
- t for a subject with a given vector of explanatory variables 
+ 
+\begin_inset Formula $t$
+\end_inset
+
+ for a subject with a given vector of explanatory variables 
 \begin_inset Formula $\mathbf{X}$
 \end_inset
 
@@ -5332,7 +5364,7 @@ where
 
 
 \series default
- is a 
+ stands for the 
 \emph on
 baseline hazard function
 \emph default
@@ -5368,7 +5400,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Even though equation 
+Even though Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:cox_ph"
@@ -5455,7 +5487,7 @@ partial
 \emph on
 likelihood
 \emph default
-
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -5472,7 +5504,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Let's define the partial likelihood.
+Let us define the partial likelihood.
  The subject's survival can be defined by 
 \begin_inset Formula $h(t,X)dt$
 \end_inset
@@ -5499,13 +5531,13 @@ Let's define the partial likelihood.
 \begin_inset Formula $T_{1}<T_{2}<\cdots<T_{J}$
 \end_inset
 
-represents the unique and sequentially ordered times to the event of interest.
+ represents the unique and sequentially ordered times to the event of interest.
  Let 
 \begin_inset Formula $X_{j}$
 \end_inset
 
-be the vector of covariates for a subject who experiences the event at time
- 
+ be the vector of covariates for a subject who experiences the event at
+ time 
 \begin_inset Formula $T_{j}$
 \end_inset
 
@@ -5647,8 +5679,8 @@ By incorporating an
 \begin_inset Formula $l_{2}$
 \end_inset
 
-penalty term on the coefficients, shrinking them to zero, we can avoid the
- problem with the inability to revert singular matrix.
+ penalty term on the coefficients, shrinking them to zero, we can avoid
+ the problem of the inability to revert singular matrix.
  Consequently, our objective has the following form: 
 \end_layout
 
@@ -5819,7 +5851,7 @@ and
 \begin_inset Formula $l_{2}$
 \end_inset
 
-penalties in a weighted manner, as is shown in the following optimization
+ penalties in a weighted manner, as is shown in the following optimization
  problem:
 \end_layout
 
@@ -5847,7 +5879,7 @@ and
 \begin_inset Formula $l_{2}$
 \end_inset
 
-penalty (
+ penalty (
 \begin_inset Formula $r=1$
 \end_inset
 
@@ -5865,8 +5897,8 @@ penalty (
 \begin_inset Formula $l_{2}$
 \end_inset
 
-penalty only a small weight to improve the stability of the LASSO, for example,
- 
+ penalty only a small weight to improve the stability of the LASSO, for
+ example, 
 \begin_inset Formula $r=0.9$
 \end_inset
 
@@ -5912,11 +5944,11 @@ don't forget to add a reference to the practical part
 To conclude, Ridge, LASSO, and Elastic Net offer powerful extensions of
  the Cox PH model, especially when dealing with high-dimensional datasets
  and highly correlated features.
- They help to regularize the Cox model and select only the most signifficant
- features, avoiding overfitting and assuring more stable and interpretable
+ They help to regularize the Cox model and select only the most significant
+ features, avoiding overfitting and assuring a more stable and interpretable
  model.
- Nevertheless it is important to aknowledge their limitations.
- As linear models they inherently capture only linear relationships, and
+ Nevertheless, it is important to acknowledge their limitations.
+ As linear models, they inherently capture only linear relationships, and
  non-linear relationships are enigma to them.
  That leads us to the next section dedicated to the Random Survival Forests,
  a machine learning approach.
@@ -5969,10 +6001,20 @@ literal "false"
 
 .
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+threshold value?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Random Survival Forest is comprised of the following steps:
+Random Survival Forest training is comprised of the following steps:
 \end_layout
 
 \begin_layout Enumerate
@@ -6001,7 +6043,7 @@ For each sample, develop a full-grown survival tree based on the selected
 \begin_inset Formula $\sqrt{p}$
 \end_inset
 
-(or other number) covariates, where 
+ (or other number) covariates, where 
 \begin_inset Formula $p$
 \end_inset
 
@@ -6297,7 +6339,15 @@ where
 \end_layout
 
 \begin_layout Standard
-According to the Scikit-survival's documentation and Rahman et.
+According to the Scikit-survival's documentation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-22"
+literal "false"
+
+\end_inset
+
+ and Rahman et.
  al.
  
 \begin_inset CommandInset citation
@@ -6359,7 +6409,7 @@ Having explored the concordance index and its modifications, it is evident
  To enhance our evaluation of model performance in terms of discrimination
  across varying time points, we turn our attention to another popular metric
  in survival analysis: the ROC AUC.
- The following section explores it in more detail.
+ The subsequent section explores it in detail.
 \end_layout
 
 \begin_layout Subsubsection
@@ -6557,7 +6607,6 @@ BS^{c}(t)=\frac{1}{n}\sum_{i=1}^{n}I(y_{i}\leq t\wedge\delta_{i}=1)\frac{(0-\hat
 \end_layout
 
 \begin_layout Standard
-\align center
 where 
 \series bold
 
@@ -6597,15 +6646,15 @@ literal "false"
 \begin_inset Formula $y_{i}$
 \end_inset
 
- is subject's survival time, 
+ is the subject's survival time, 
 \begin_inset Formula $\delta_{i}$
 \end_inset
 
- is event/censoring indicator.
+ is the event/censoring indicator.
 \end_layout
 
 \begin_layout Standard
-The limitation to the time-dependent Brier Score is its applicability exclusivel
+The limitation of the time-dependent Brier Score is its applicability exclusivel
 y to the models that are capable of estimating the survival function.
  
 \emph on
@@ -6613,7 +6662,8 @@ Integrated Brier Score
 \emph default
  provides a scalar value for general model evaluation.
  It is beneficial for model comparison, as time-dependent measures are a
- bit harder to compare than scalar values, and for model fine-tuning process.
+ bit harder to compare than scalar values, and for the model fine-tuning
+ process.
 \end_layout
 
 \begin_layout Standard
