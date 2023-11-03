@@ -1052,44 +1052,56 @@ Cronic Kidney disease
 The history of kidney transplantation.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Early Animal Experiments
 \end_layout
 
 \begin_layout Standard
 Advancements in surgical methods and techniques at the beginning of the
  20th century eventually led to experiments with organ transplantation.
- On March 1st, 1902, Emerich Ullman, a physician at the Vienna Medical School,
- performed the first recorded organ transplantation.
- He performed an autograft, meaning the transplantation where the donor
- and the recipient are the same individual.
- Ullmann utilized the method of vascular suturing developed by Ervin Payr,
- to connect the dog's kidney to the vessels of its neck.
- The transplant was successful - the kidney produced urine.
- The dog was presented the same day to Vienna medical society eliciting
- significant interest and discussion.
+ One of the first recorded transplantations was an autograft, where the
+ donor and recipient are the same individual, performed by Emerich Ullmann
+ on March 1, 1902, at the Vienna Medical School.
+ Utilizing vascular suturing techniques developed by Ervin Payr, Ullmann
+ successfully connected the dog's kidney to the vessels of its neck, resulting
+ in the production of urine.
+ The success of this experiment was notable enough to be presented to the
+ Vienna Medical Society, sparking considerable interest.
 \end_layout
 
 \begin_layout Standard
-The same year other similar transplantations were made.
- Another physician, Alfred von Decastello, performed a dog-to-dog kidney
- allograft at the Institute of Experimental Pathology in Vienna.
- The kidney produced urine for a while but then stopped working.
- Later Ullman performed a dog-to-goat kidney xenograft (cross-species transplant
-), and to his surprise kidney produced some urine, but later stopped.
+That year, other experiments followed.
+ Alfred von Decastello performed a dog-to-dog kidney allograft, a transplant
+ between two individuals of the same species, at the Institute of Experimental
+ Pathology in Vienna.
+ Although initially, the transplanted kidney produced urine, it eventually
+ ceased.
+ Later, Ullman performed a dog-to-goat kidney xenograft, which resulted
+ in short-term function as well.
 \end_layout
 
 \begin_layout Standard
-In Lyon in the department headed by Mathieu Jabourday, his assistants Carrel,
- Briau and Villard were working on new methods of vascular suturing.
- In 1902, Alex Carrel published the method of vessel anastomosis now referred
- to as Carrel's seam.
- This technique represented a significant improvement over existing methods
- and effectively addressed the common issues of thrombosis, hemorrhage,
- stricture, and embolism
+At the same time, in Lyon, Alexis Carrel and his colleagues were working
+ on vascular suturing methods.
+ Carrel's technique, known as Carrel's seam, was a considerable improvement
+ over existing methods, addressing the common issues of thrombosis, hemorrhage,
+ stricture, and embolism 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-1"
+literal "false"
+
+\end_inset
+
+.
+ His consecutive move to The Rockefeller Institute for Medical Research
+ in the United States led to further refinements of his method and the documenta
+tion of organ rejection.
+ For his contributions, Carrel received the Nobel Prize in Medicine in 1912
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-2"
 literal "false"
 
 \end_inset
@@ -1098,33 +1110,25 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Later Carrel moved to the United States where he continued his research
- on vessel suturing and organ transplantations at The Rockefeller Institute
- for Medical Research.
- There he perfected his method and while performing autografts and allografts
- documented what later would be recognized as ”rejection”.
- For his works in 1912, he got the Nobel Prize in Medicine.
- By this time, his method of suturing had been widely adopted in human surgeries
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-19"
-literal "false"
-
-\end_inset
-
-.
+These early experiments, although varied in their outcomes, were defining
+ in shaping the future of the organ transplantation.
+ They not only illustrated the possibility of organ transplantation, but
+ also highlighted the challenges, such as rejection, that would direct the
+ course of future research.
+ The insights gained in animal experiments laid the groundwork for the next
+ big milestone in transplantation medicine: the onset of human organ transplanta
+tion.
+ This transition from animals to humans marked the beginning of a new era
+ in medical history.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Early Human Transplantation
 \end_layout
 
 \begin_layout Standard
-The first recorded human renal xenograft
-\begin_inset Formula $ $
-\end_inset
-
- was performed by Mathieu Jaboulay in 1906.
+The first recorded human renal xenograft was performed by Mathieu Jaboulay
+ in 1906.
  He chose a pig and a goat as donor animals and performed two xenografts.
  One kidney was transported to the arm and the second to the thigh.
  Each kidney functioned for one hour
@@ -1227,7 +1231,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 First Successes
 \end_layout
 
@@ -1298,7 +1302,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Attempts in Immunosuppression
 \end_layout
 
@@ -1375,7 +1379,7 @@ Gertrude Elion and George Hitchings provided Roy Calne with the 6-MP derivative
  In 1961 Azathioprine became available for human use.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Gloom Then Revolution
 \end_layout
 
@@ -1405,7 +1409,7 @@ The gloom continued untill Tom Starzl, until then unknown, did his presentation
  And his protocol became medical world standard for the next 20 years.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Plateau
 \end_layout
 
@@ -1465,7 +1469,7 @@ As the organ preservation for more than 6 hours was achieved in mid 60s
  They kindly provided us with data for this paper.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Tissue Typing
 \end_layout
 
@@ -1493,7 +1497,7 @@ However, when in 1970 Terasaki reviewed his large database of cadaver renal
  Now it is conclded that the 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Antilymphocyte Serum
 \end_layout
 
@@ -1523,7 +1527,7 @@ successful engraftment is the result of the responses of coexisting donor
  followed by peripheral clonal deletion
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Conclusion and challenges of the field
 \end_layout
 
@@ -6803,7 +6807,73 @@ name "sec:Deep-Learning"
 status open
 
 \begin_layout Plain Layout
+universal approximation theorem
+\end_layout
+
+\begin_layout Plain Layout
+architecture
+\end_layout
+
+\begin_layout Plain Layout
+weights/parametersr
+\end_layout
+
+\begin_layout Plain Layout
+independent variable
+\end_layout
+
+\begin_layout Plain Layout
+loss
+\end_layout
+
+\begin_layout Plain Layout
+poistive feedback loop -> bias
+\end_layout
+
+\begin_layout Plain Layout
+architecture is not that important - don't spend much time on thinking about
+ it.
+\end_layout
+
+\begin_layout Plain Layout
+metric for humans, loss for algos
+\end_layout
+
+\begin_layout Plain Layout
+it is better to always use pretrained models
+\end_layout
+
+\begin_layout Plain Layout
+head of the nn - last layer
+\end_layout
+
+\begin_layout Plain Layout
+transfer learning, pretrained models
+\end_layout
+
+\begin_layout Plain Layout
+fine-tuning the model (in transfer learning)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 What is neuron
+\end_layout
+
+\begin_layout Plain Layout
+epoch
+\end_layout
+
+\begin_layout Plain Layout
+fitting the model
 \end_layout
 
 \begin_layout Plain Layout
