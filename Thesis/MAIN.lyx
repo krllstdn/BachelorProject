@@ -1052,6 +1052,23 @@ Cronic Kidney disease
 The history of kidney transplantation.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+graft
+\end_layout
+
+\begin_layout Plain Layout
+allo/xeno/auto grafts
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection*
 Early Animal Experiments
 \end_layout
@@ -1127,11 +1144,25 @@ Early Human Transplantation
 \end_layout
 
 \begin_layout Standard
-The first recorded human renal xenograft was performed by Mathieu Jaboulay
- in 1906.
- He chose a pig and a goat as donor animals and performed two xenografts.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+check as supervisor and in grammarly
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first recorded human renal xenograft is credited to Mathieu Jaboulay
+ in 1906, involving a pig and a goat as donors animals and performed two
+ xenografts.
  One kidney was transported to the arm and the second to the thigh.
- Each kidney functioned for one hour
+ Although each kidney functioned only for an hour, these efforts marked
+ the beginning of human transplantation attempts 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1,key-4"
@@ -1140,38 +1171,48 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+define xenografts
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The second and third human transplants performed by Ernst Unger were far
- more known.
- On December 10, 1909, he performed a kidney transplant from a stillborn
- baby to a baboon.
- Even though the kidney produced no urine, the postmortem showed that vascular
- anastomosis (connection of vessels) was performed successfully.
- This inspired Unger to perform another transplantation that same month,
- but this time monkey-to-human xenograft.
- The kidney was transplanted from an ape to dying from renal failure young
- woman.
- The kidney never worked.
- 
+Ernst Unger's xenografts in 1909 gained more attention.
+ Hist first attempt, involving transplantation of a kidney from a stillborn
+ baby to a baboon, resulted in lack of kidney function despite a successful
+ vascular anastomosis (connection of vessels).
+ Inspired by a successful surgery, Unger attempted a monkey-to-human xenograft,
+ which also resulted in failure.
 \end_layout
 
 \begin_layout Standard
-These early experiments demonstrated that technically kidney transplantation
- was possible, but the mechanism of rejection was not yet fully understood.
- Carrel in his famous lecture about the future of transplantation (1914)
- to the International Surgical Society mentioned that the works of his colleague
- at the Rockefeller center J.B.
- Murphy might seriously impact the development of the field.
- Murphy found that irradiation and benzol treatment increased the graft
- survival of cancer in mice.
- This observation inspired Carrel to conduct his own experiments, wherein
- he irradiated recipients and found prolonged graft survival, but these
- experiments were never formally published
+These early experiments demonstrated technical feasibility of kidney transplanta
+tion, but also exposed challenge of graft rejection.
+ Alexis Carrel, in a 1914 lecture, mentioned J.
+ B.
+ Murphy's work on irradiation and benzol treatment, suggesting their potential
+ to improve graft survival 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-11"
+key "key-1"
+literal "false"
+
+\end_inset
+
+.
+ Inspired by these findings, Carrel conducted his own experiments with irradiati
+on, achieving prolonged graft survival.
+ However, these findings were never formally published 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
 literal "false"
 
 \end_inset
@@ -1182,53 +1223,75 @@ literal "false"
 \begin_layout Standard
 The period of the 1930s and 1940s was rather stagnant compared to the beginning
  of the century.
- European surgical centers that studied transplantology before were in decline.
+ European surgical centers, that studied transplantology before, were in
+ decline.
  Moyo Clinic in the US was conducting some cautious experiments without
- considering Carrol's works and attempts at immunosuppression.
+ considering Carrol's works and attempts at immunosuppression 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
-literal "false"
-
-\end_inset
-
- However, there was a notable event during this period - the first human-to-huma
-n transplantation.
- It was performed by Yurii Voronyi (in literature for some reason he is
- referred to as Voronoy) on March 3, 1933, in Kherson, Ukraine.
- The recipient was a 26-year-old woman admitted to the hospital on March
- 3, 1933, with mercury chloride poisoning induced by a suicide attempt the
- previous day that resulted in acute renal failure.
- Transplantation seemed the only viable option.
- It was known from previous experiments by other scientists that no xenograft
- ever was successful so human-to-human transplantation was the only feasible
- choice.
- The option of injuring a living person by organ removal was not even considered.
- It was known from the physiology that kidneys save their function a couple
- of hours after the reperfusion with ringer-solution and that organs keep
- some sterility a couple of hours after the host's death.
- So temporary cadaver transplantation until the woman's own kidneys would
- regenerate seemed to be a reasonable option.
- The transplantation was performed to the thigh's artery and vein using
- Carrel's seam with some modifications.
- After some time the kidney started to produce urine for a while but then
- eventually the allograft failed and 48 hours after the surgery the patient
- dies.
- The reason for graft failure was blood group mismatch and too long warm
- ischemia time - 6 hours, so the kidney began to degrade, resulting in an
- immune reaction to dead kidney cells and kidney blood cells.
- Voronyi performed another 5 such transplantations, which he considered
- as a bridge therapy until the recipient's own kidneys would recover.
- Kidneys produced urine for different durations from 1 to 7 days with 2
- patients eventually recovering and living normally thereafter
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-12"
+key "key-1"
 literal "false"
 
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+However, it was during that period that a signifficant milestone was achieved
+ by Yurii Voronyi.
+ On March 3, 1933 in Kherson, Ukraine, Voronyi performed the first human-to-huma
+n kidney transplant on a woman suffering from acute renal failure due to
+ mercury chloride poisoning.
+ Given previous failures of xenografts and ethical conserns surrounding
+ living donors, a cadaveric transplant seemed the only viable option.
+ Despite initial urine production, the transplant failed 48 after surgery
+ due to blood group incomatibility and prolonged warm ischemia, leading
+ to immune reaction .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+also better to define warm ischemia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Despite this setback, Voronyi continued to perform similar transplantations.
+ He viewed these transplants as temporary measures to bridge the gap until
+ the recipient's own kidneys could recover.
+ Out of the six transplants he performed, two patients experienced a complete
+ recovery, regaining normal kidney function 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-4"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The pioneering work of Jaboulay, Unger, and Voronyi demonstrated technical
+ feasibility of human organ transplantation and highlighted its main challenge
+ - rejection.
+ Despite the progress, the field was yet to witness success, largely due
+ to the lack of effective immunosuppression.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+finish the transition to the next section
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
@@ -1240,42 +1303,37 @@ In 1946, at the Peter Bent Brigham Hospital in Boston, a group of surgeons:
  Hufnagel, Hume, and Landsteinerhuman performed kidney transplantation under
  local anesthetic on the arm vessels.
  The short period of kidney functioning may have helped the patient to recover
- from acute renal failure.
- It ignited the hospital's interest in renal transplantation.
+ from acute renal failure, igniting the hospital's interest in renal transplanta
+tion.
  
 \end_layout
 
 \begin_layout Standard
-Simonsen in Denmark, Dempster in London, and Küss in Paris concluded that
- it is preferable to place the kidney in the pelvis.
- Further, both Simonsen and Dempster deduced that the immune response was
- responsible for graft failure and both hypothesized that the humoral mechanism
+During the same period, European surgeons were making signifficant advancements.
+ Notably, Simonsen in Denmark, Dempster in London, and Küss in Paris concluded
+ that it is preferable to place the kidney in the pelvis.
+ What is more, both Simonsen and Dempster deduced that the immune response
+ was responsible for graft failure and hypothesized that the humoral mechanism
  of rejection was probable.
  
 \end_layout
 
 \begin_layout Standard
-In the early 1950s, two groups of surgeons based in Paris and Chicago performed
- pelvic kidney transplants without immunosuppression.
+The early 1950s marked a period of active experimentation.
  In Paris, Jean Hamburger reported the first live-related kidney transplant
- between a mother and her child.
- he transplanted kidney began to function immediately.
- It functioned for 22 days until it was rejected.
-\end_layout
-
-\begin_layout Standard
-A series of nine transplantations with the thigh position of the allograft
- was closely studied in Boston and the first usage of hemodialysis for the
- preparation was recorded in Boston by David Hume in 1953.
- In some of these cases, mild successes were achieved using the adrenocorticotro
-pic hormone (more known as cortisone).
- It was hypothesized that the endogenous immunosuppression of uremia was
- responsible for the results rather than the drug regimen.
- Hume's findings were substantial as he concluded that prior blood transfusions,
- blood group matching between the donor and recipient, and host bilateral
- nephrectomy could be beneficial for the success of the transplant.
- These conclusions were later confirmed by subsequent studies.
- 
+ between a mother and her child, achieving immediate function of the transplante
+d kidney for 22 days until it was rejected.
+ Meanwhile, in Boston a series of nine transplantations with the thigh position
+ of the allograft was closely studied.
+ Moreover, in 1953 David Hume introduced pretransplant use of hemodialysis.
+ Although, some success were achieved with the administration of the adrenocorti
+cotropic hormone (more known as cortisone), it was suggested that the immunosupp
+resive effect of uremia, the excess of metabolism end products in blood,
+ were more signifficant than the drug regimen.
+ Hume's further research suggested the potential benefits of prior blood
+ transfusions, blood group compatibility and bilateral nephroctomy (removal
+ of both kidneys) of the host for transplant success, insights that were
+ later validated with further research.
 \end_layout
 
 \begin_layout Standard
@@ -1284,14 +1342,11 @@ tion and with increased confidence on December 23, 1954 in Boston Joseph
  Murray performed kidney allograft from one identical twin to another, bypassing
  the rejection barrier.
  From that time many similar surgeries were performed in Boston.
- This caused a lot of talks and predictions but all of them were negated
- when one of such recipients got pregnant and gave birth to a completely
- normal infant.
- However, in retrospective, it didn't bring anything new scientifically,
- because the technical possibilty of kidney transplantation was evident
- and the cases of successful skin allografts between identical twins were
- known for decades, but nonetheless it was an important milestone that aroused
- the interest in further experiments 
+ However, in retrospective, it wasn't a breakthrough, because the technical
+ possibilty of kidney transplantation was evident and the cases of successful
+ skin allografts between identical twins were known for decades, but nonetheless
+ it was an important milestone that aroused the interest in further experiments
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1,key-4"
@@ -1302,81 +1357,70 @@ literal "false"
 .
 \end_layout
 
+\begin_layout Standard
+To conclude, the early successess during 1950s marked a transformative period
+ in the history of kidney transplantation.
+ Not only the technical possibility of kidney transplantation was shown,
+ but also the complex immunological challenges begun to unravel.
+ Works of Hume, Murray and others underlined the critical role of immune
+ response in graft survival, starting the quest for the effective immunosuppress
+ion.
+ The following section tells more about that.
+\end_layout
+
 \begin_layout Subsection*
 Attempts in Immunosuppression
 \end_layout
 
 \begin_layout Standard
-In 1948 at Mayo Clinic patients handicapped by rheumatoid arthrytis were
- given already mentioned cortisone, adrenal cortical hormone with mild immunosup
-pressive properties, that relieved their condition.
- This popularized the research on adrenal cortical hormones, but later it
- was concluded that the steroid effect was clinically insignifficant for
- transplantation.
- After that, the experiments with irradiation, abandoned by Carrel and Murphy,
- were revitalized.
- Joan Main and Richmond Prehn showed that weakening of the immune system
- of adult mice by radiation and consequent skin and bone marrow transplantation
- from the same donor resulted in skin transplant acceptance.
- This encouraged teams in Boston and Paris to pursue the similar approach
- in humans.
+The exploration of immunosuppresion in transplantation began as early as
+ in the late 1940s.
+ At the Mayo clinic in 1948, patients with reumathoid arthritis were administere
+d cortisone, an adrenal cortical hormone with mild immunosuppressive properties,
+ which provided temporary relief.
+ Although, initially praised, its effects were deemed clinically insignifficant
+ for transplantation purposes.
+ This led researchers to revisit earlier experiments with irradiation.
+ Experiments on mice by Joan Main and Richmond Prehn showed promising results,
+ inspiring human trials in Boston and Paris.
 \end_layout
 
 \begin_layout Standard
-In 1958, Murray’s team transplantation on humans utilizing the Main-Prehn
- method conducted lethal total body irradiation (TBI) on two patients with
- additional bone marrow transplant.
- Ten more recipients were irradiated with sub-lethal TBI, but without donor
- bone marrow transplant.
- As a result 11 patients passed away within a month, the only survivor had
- sub-lethal TBI without transplanted bone marrow and he got kidney from
- his non-identical twin brother.
- This was rather revolutionary - for the first time kidney was not rejected
- from non-identical twin.
- The kidney functioned for 20 years.
- Jean Hamburger and his team performed another fraternal twin transplant
- utilizing the same irradiation technique.
- The transplant functioned for 26 years finishing with the recipient's death
- for rejection-unrelated reason.
+In 1958, Murray's team in Boston employed radiation in human transplantation,
+ achieving a signifficant breakthrough with a kidney transplant between
+ non-identical twins that lasted 20 years.
+ Similarly, in Paris, Jean Hamburger's team achieved a 26-year functioning
+ transplant using radiation.
 \end_layout
 
 \begin_layout Standard
-Between 1960 and 1962 Kuss and Hamburger performed four successful transplantati
-ons between non-twin patients with following TBI.
- This gave promise that the transplantations could be done in non-twins
- and potentially between anybody.
- The research continued.
-\end_layout
-
-\begin_layout Standard
-It was obvious that TBI is not the best choice and that it is necessary
- to find a substitution.
- In 1959, Schwarz and Damesehek from Tufts University published paper that
- described how an anticancer drug 6-mercaptopurine (6-MP) lowered immune
- response to foreign proteins in rabbits.
- Roy Calne, a training surgeon at Royal Free Hospital, London, dissapointed
- with TBI in prolongation of kidney allograft survival in dogs, noticed
- Schwarz and Dameshek's paper and performed his own experiment in dogs and
- found that it signifficantly prolonged dog's survival.
- Charles Zukoski and David Hume found the same outcomes.
+The search for safer immunosuppressive methods led to the anticancer drug
  
-\end_layout
-
-\begin_layout Standard
-6-MP was used in three tranplantations at Royal Free Hospital, but without
- success, However Kuss and assosiates reported one prolonged graft survival
- from a nonrelated donor.
- The TBI was main agent and intermittent usage of azathioprine and prednisone
- was used as an additional therapy.
-\end_layout
-
-\begin_layout Standard
-Gertrude Elion and George Hitchings provided Roy Calne with the 6-MP derivative
- - azathioprine.
- Calne showed even longer graft survival with azathioprine.
- Both Elion and Hitchings were awarded with the Nobel Prize for the development
- of 6-MP and azathioprine.
- In 1961 Azathioprine became available for human use.
+\emph on
+6-mercaptopurine
+\emph default
+ (
+\emph on
+6-MP)
+\emph default
+.
+ In 1959, Schwarz and Damesehek published paper that described how 6-MP
+ lowered immune response to foreign proteins in rabbits.
+ Roy Calne inspired by their paper performed his own experiments on dogs,
+ showing promising results, which were further backed by Charles Zukoski
+ and David Hume.
+ Despite initial setbacks Kuss and others reported prolonged graft survival
+ from non-realted donor using total body irradiation (TBI) complemented
+ by 6-MP.
+ The introduction of 
+\emph on
+azathiprine
+\emph default
+, a derivative of 6-MP, by Gertrude Elion and George Hitchings, further
+ improved results.
+ Their groundbraking work earned them the Nobel Prize, and by 1961, azathioprine
+ was available for human use declaring a new era in transplantation immunotherap
+y.
 \end_layout
 
 \begin_layout Subsection*
