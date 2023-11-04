@@ -1461,27 +1461,39 @@ Tissue Typing
 \end_layout
 
 \begin_layout Standard
-Although tissue typing was suggested by Alexis Carrel in the beginning of
- 20th century it could not be proven and used until 1958 when Jean Dausset
- discovered the first human leukocyte antigen (HLA).
- Testing for antibodies was not reliable until 1964 when Paul Terasaki invented
- a microxytotoxicity assay.
- Test included mixing donor's lymphocytes and recipient's serum and quickly
- has became the standard and was name crossmatch.
- For a couple of years Terasaki performed typing for most of U.S.
+The concept of tissue typing, originally suggested by Alexis Carrel in the
+ early 20th century, remained unproven until Jean Dausset discovered the
+ first human leukocyte antigen (HLA) in 1958.
+ It wasn't until 1964, with Paul Terasaki's development of the microcytotoxicity
+ assay, that testing for antibodies became reliable.
+ The test involved mixing the donor's lymphocytes with the recipient's serum
+ and swiftly became the standard, known as the 
+\emph on
+crossmatch test
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+For several years, Terasaki performed typing for most of U.S.
  transplant centers and found a couple of observations: 1) Positive cross-match
  test predicts hyperacute rejection.
- 2) matching can reliably identify optimal donor within a family.
- It was assumed that the same would work for non-related recipients.
+ 2) matching can reliably identify optimal donor within a family, and it
+ was assumed that the same principle would apply for non-related recipients.
  
 \end_layout
 
 \begin_layout Standard
-However, when in 1970 Terasaki reviewed his large database of cadaver renal
- allografts he found no correlation with the typing.
+However, in 1970, Terasaki's review of his large database of cadaver renal
+ allografts revealed no correlation with the typing.
  This raised a lot of agitation in tissue typing community and his grant
  even was temporalily suspended until others didn't report the same.
- Now it is conclded that the 
+ Since then, many crucial histocompatibility antigens were discovered (Class
+ II locus: D and DR).
+ Histocompatibility matching remains crucial in bone marrow transplantation
+ and in selecting family donors.
+ Nevertheless, for unrelated organ transplants, matching signifficantly
+ benefits only in cases of a perfect match.
 \end_layout
 
 \begin_layout Subsection*
