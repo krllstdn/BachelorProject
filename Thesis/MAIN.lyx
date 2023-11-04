@@ -1300,53 +1300,51 @@ First Successes
 
 \begin_layout Standard
 In 1946, at the Peter Bent Brigham Hospital in Boston, a group of surgeons:
- Hufnagel, Hume, and Landsteinerhuman performed kidney transplantation under
+ Hufnagel, Hume, and Landsteiner, performed kidney transplantation under
  local anesthetic on the arm vessels.
- The short period of kidney functioning may have helped the patient to recover
+ The short period of kidney functioning may have helped the patient recover
  from acute renal failure, igniting the hospital's interest in renal transplanta
 tion.
- 
 \end_layout
 
 \begin_layout Standard
-During the same period, European surgeons were making signifficant advancements.
+During the same period, European surgeons were making significant advancements.
  Notably, Simonsen in Denmark, Dempster in London, and Küss in Paris concluded
  that it is preferable to place the kidney in the pelvis.
- What is more, both Simonsen and Dempster deduced that the immune response
+ Furthermore, both Simonsen and Dempster deduced that the immune response
  was responsible for graft failure and hypothesized that the humoral mechanism
  of rejection was probable.
- 
 \end_layout
 
 \begin_layout Standard
 The early 1950s marked a period of active experimentation.
  In Paris, Jean Hamburger reported the first live-related kidney transplant
- between a mother and her child, achieving immediate function of the transplante
-d kidney for 22 days until it was rejected.
- Meanwhile, in Boston a series of nine transplantations with the thigh position
- of the allograft was closely studied.
- Moreover, in 1953 David Hume introduced pretransplant use of hemodialysis.
- Although, some success were achieved with the administration of the adrenocorti
-cotropic hormone (more known as cortisone), it was suggested that the immunosupp
-resive effect of uremia, the excess of metabolism end products in blood,
- were more signifficant than the drug regimen.
+ between a mother and her child, achieving the immediate function of the
+ transplanted kidney for 22 days until it was rejected.
+ Meanwhile, in Boston, a series of nine transplantations with the thigh
+ position of the allograft was closely studied.
+ Moreover, in 1953, David Hume introduced the pretransplant use of hemodialysis.
+ Although some success was achieved with the administration of the adrenocortico
+tropic hormone (more known as cortisone), it was suggested that the immunosuppre
+ssive effect of uremia, the excess of metabolism end products in blood,
+ were more significant than the drug regimen.
  Hume's further research suggested the potential benefits of prior blood
- transfusions, blood group compatibility and bilateral nephroctomy (removal
- of both kidneys) of the host for transplant success, insights that were
- later validated with further research.
+ transfusions, blood group compatibility, and bilateral nephrectomy (removal
+ of both kidneys) of the host for transplant success - insights later validated
+ with further research.
 \end_layout
 
 \begin_layout Standard
 These attempts in the early 1950s taught technical aspects of kidney transplanta
-tion and with increased confidence on December 23, 1954 in Boston Joseph
+tion, and, with increased confidence, on December 23, 1954, in Boston, Joseph
  Murray performed kidney allograft from one identical twin to another, bypassing
  the rejection barrier.
- From that time many similar surgeries were performed in Boston.
- However, in retrospective, it wasn't a breakthrough, because the technical
- possibilty of kidney transplantation was evident and the cases of successful
- skin allografts between identical twins were known for decades, but nonetheless
- it was an important milestone that aroused the interest in further experiments
- 
+ From that time, many similar surgeries were performed in Boston.
+ However, in retrospect, it wasn't a breakthrough.
+ Because the technical possibility of kidney transplantation was evident
+ and the cases of successful skin allografts between identical twins were
+ known for decades, nonetheless, it was an important milestone that aroused
+ interest in further experiments 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1,key-4"
@@ -1358,13 +1356,12 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-To conclude, the early successess during 1950s marked a transformative period
- in the history of kidney transplantation.
+To conclude, the early successes during the 1950s marked a transformative
+ period in the history of kidney transplantation.
  Not only the technical possibility of kidney transplantation was shown,
- but also the complex immunological challenges begun to unravel.
- Works of Hume, Murray and others underlined the critical role of immune
- response in graft survival, starting the quest for the effective immunosuppress
-ion.
+ but also the complex immunological challenges began to unravel.
+ Works of Hume, Murray, and others underlined the critical role of immune
+ response in graft survival, starting the quest for effective immunosuppression.
  The following section tells more about that.
 \end_layout
 
@@ -1501,15 +1498,22 @@ Cyclosporine and Tacrolimus
 \end_layout
 
 \begin_layout Standard
-The discovery of cyclosporine in 1976 by Jean-François Borel marked a signiffica
-nt milestone in the realm of transplantation.
+The discovery of 
+\emph on
+cyclosporine
+\emph default
+ in 1976 by Jean-François Borel marked a signifficant milestone in the realm
+ of transplantation.
  As a fungal derivative with potent immunosuppresive properties, cyclosporine
  drastically improved the outcomes of both renal and extrarenal transplant,
- surgassing the efficacy of the previously used drug, azathioprine.
+ surpassing the efficacy of the previously used drug, azathioprine.
  Similar to 6-MP, too achieve the best results it had to be combined with
  prednisone.
- This protocol remained standard until 1989, when Tacrolimus, an even more
- powerful immunosuppresive agent, was introduced.
+ This protocol remained standard until 1989, when 
+\emph on
+Tacrolimus
+\emph default
+, an even more powerful immunosuppresive agent, was introduced.
  Tacrolimus proved to be effective in cases where the combination of cyclosporin
 e and prednison was insufficient, effectively replacing cyclosporine as
  a usual baseline agent.
