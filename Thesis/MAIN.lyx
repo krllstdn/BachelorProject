@@ -1157,10 +1157,23 @@ check as supervisor and in grammarly
 \end_layout
 
 \begin_layout Standard
-The first recorded human renal xenograft is credited to Mathieu Jaboulay
- in 1906, involving a pig and a goat as donors animals and performed two
- xenografts.
- One kidney was transported to the arm and the second to the thigh.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+also better to define warm ischemia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first recorded human renal xenograft, a transplantation between individuals
+ of different species, is credited to Mathieu Jaboulay in 1906.
+ It involved a pig and a goat as donor animals for two xenografts.
+ One kidney was transplanted to the arm and the second to the thigh.
  Although each kidney functioned only for an hour, these efforts marked
  the beginning of human transplantation attempts 
 \begin_inset CommandInset citation
@@ -1171,30 +1184,20 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-define xenografts
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 Ernst Unger's xenografts in 1909 gained more attention.
- Hist first attempt, involving transplantation of a kidney from a stillborn
- baby to a baboon, resulted in lack of kidney function despite a successful
+ His first attempt, involving the transplantation of a kidney from a stillborn
+ baby to a baboon, resulted in a lack of kidney function despite a successful
  vascular anastomosis (connection of vessels).
  Inspired by a successful surgery, Unger attempted a monkey-to-human xenograft,
  which also resulted in failure.
 \end_layout
 
 \begin_layout Standard
-These early experiments demonstrated technical feasibility of kidney transplanta
-tion, but also exposed challenge of graft rejection.
+These early experiments demonstrated the technical feasibility of kidney
+ transplantation but also exposed the challenge of graft rejection.
  Alexis Carrel, in a 1914 lecture, mentioned J.
  B.
  Murphy's work on irradiation and benzol treatment, suggesting their potential
@@ -1221,12 +1224,11 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The period of the 1930s and 1940s was rather stagnant compared to the beginning
+The period of the 1930s and 1940s was stagnant compared to the beginning
  of the century.
- European surgical centers, that studied transplantology before, were in
- decline.
- Moyo Clinic in the US was conducting some cautious experiments without
- considering Carrol's works and attempts at immunosuppression 
+ European surgical centers that studied transplantology before were in decline.
+ Meanwhile, the Mayo Clinic in the US was conducting some cautious experiments
+ without considering Carrol's works and attempts at immunosuppression 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -1238,26 +1240,17 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-However, it was during that period that a signifficant milestone was achieved
+However, it was during that period that a significant milestone was achieved
  by Yurii Voronyi.
- On March 3, 1933 in Kherson, Ukraine, Voronyi performed the first human-to-huma
-n kidney transplant on a woman suffering from acute renal failure due to
+ On March 3, 1933, in Kherson, Ukraine, Voronyi performed the first human-to-hum
+an kidney transplant on a woman suffering from acute renal failure due to
  mercury chloride poisoning.
- Given previous failures of xenografts and ethical conserns surrounding
- living donors, a cadaveric transplant seemed the only viable option.
- Despite initial urine production, the transplant failed 48 after surgery
- due to blood group incomatibility and prolonged warm ischemia, leading
- to immune reaction .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-also better to define warm ischemia
-\end_layout
-
-\end_inset
-
-
+ Given the ethical concerns surrounding living donors and previous failures
+ of xenografts, Voronyi considered a cadaveric transplant the only viable
+ option.
+ Although there was initial urine production, the transplant failed 48 hours
+ post-surgery due to blood group incompatibility and prolonged warm ischemia,
+ triggering an immune reaction.
 \end_layout
 
 \begin_layout Standard
@@ -1277,10 +1270,10 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The pioneering work of Jaboulay, Unger, and Voronyi demonstrated technical
- feasibility of human organ transplantation and highlighted its main challenge
- - rejection.
- Despite the progress, the field was yet to witness success, largely due
+The pioneering work of Jaboulay, Unger, and Voronyi not only demonstrated
+ the technical feasibility of human organ transplantation but also highlighted
+ its main challenge of graft rejection.
+ Despite the progress, the field has yet to witness success, largely due
  to the lack of effective immunosuppression.
 \begin_inset Note Note
 status open
@@ -1323,7 +1316,7 @@ The early 1950s marked a period of active experimentation.
  transplanted kidney for 22 days until it was rejected.
  Meanwhile, in Boston, a series of nine transplantations with the thigh
  position of the allograft was closely studied.
- Moreover, in 1953, David Hume introduced the pretransplant use of hemodialysis.
+ Moreover, in 1953, David Hume introduced the pre-transplant use of hemodialysis.
  Although some success was achieved with the administration of the adrenocortico
 tropic hormone (more known as cortisone), it was suggested that the immunosuppre
 ssive effect of uremia, the excess of metabolism end products in blood,
@@ -1370,12 +1363,12 @@ Attempts in Immunosuppression
 \end_layout
 
 \begin_layout Standard
-The exploration of immunosuppresion in transplantation began as early as
+The exploration of immunosuppression in transplantation began as early as
  in the late 1940s.
- At the Mayo clinic in 1948, patients with reumathoid arthritis were administere
+ At the Mayo clinic in 1948, patients with rheumatoid arthritis were administere
 d cortisone, an adrenal cortical hormone with mild immunosuppressive properties,
  which provided temporary relief.
- Although, initially praised, its effects were deemed clinically insignifficant
+ Although, initially praised, its effects were deemed clinically insignificant
  for transplantation purposes.
  This led researchers to revisit earlier experiments with irradiation.
  Experiments on mice by Joan Main and Richmond Prehn showed promising results,
@@ -1384,8 +1377,8 @@ d cortisone, an adrenal cortical hormone with mild immunosuppressive properties,
 
 \begin_layout Standard
 In 1958, Murray's team in Boston employed radiation in human transplantation,
- achieving a signifficant breakthrough with a kidney transplant between
- non-identical twins that lasted 20 years.
+ achieving a significant breakthrough with a kidney transplant between non-ident
+ical twins that lasted 20 years.
  Similarly, in Paris, Jean Hamburger's team achieved a 26-year functioning
  transplant using radiation.
 \end_layout
@@ -1407,16 +1400,16 @@ The search for safer immunosuppressive methods led to the anticancer drug
  showing promising results, which were further backed by Charles Zukoski
  and David Hume.
  Despite initial setbacks Kuss and others reported prolonged graft survival
- from non-realted donor using total body irradiation (TBI) complemented
+ from non-related donor using total body irradiation (TBI) complemented
  by 6-MP.
  The introduction of 
 \emph on
-azathiprine
+azathioprine
 \emph default
 , a derivative of 6-MP, by Gertrude Elion and George Hitchings, further
  improved results.
- Their groundbraking work earned them the Nobel Prize, and by 1961, azathioprine
- was available for human use.
+ Their groundbreaking work earned them the Nobel Prize, and by 1961, azathioprin
+e was available for human use.
 \end_layout
 
 \begin_layout Standard
@@ -1426,8 +1419,8 @@ In 1963, a conference held by the National Research council revealed a bleak
  This changed, when Tom Starzl presented a protocol combining 6-MP with
  prednisone, leading to over one-year graft survival in 70% of cases.
  His results without exaggeration revolutionized the field, resulting in
- 50 new US transplantation programs and setting a 20-year standard in posttransp
-lant immunosuppression.
+ 50 new US transplantation programs and setting a 20-year standard in post-trans
+plant immunosuppression.
 \end_layout
 
 \begin_layout Subsection*
