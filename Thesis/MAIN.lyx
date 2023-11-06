@@ -1057,6 +1057,10 @@ The history of kidney transplantation.
 status open
 
 \begin_layout Plain Layout
+Write intro 
+\end_layout
+
+\begin_layout Plain Layout
 graft
 \end_layout
 
@@ -1275,16 +1279,9 @@ The pioneering work of Jaboulay, Unger, and Voronyi not only demonstrated
  its main challenge of graft rejection.
  Despite the progress, the field has yet to witness success, largely due
  to the lack of effective immunosuppression.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-finish the transition to the next section
-\end_layout
-
-\end_inset
-
-
+ In the next section, we will explore important moments of 1950s that transforme
+d human renal transplantation from a daring experiment to feasible medical
+ procedure.
 \end_layout
 
 \begin_layout Subsection*
@@ -1332,15 +1329,10 @@ These attempts in the early 1950s taught technical aspects of kidney transplanta
 tion, and, with increased confidence, on December 23, 1954, in Boston, Joseph
  Murray performed kidney allograft from one identical twin to another, bypassing
  the rejection barrier.
- From that time, many similar surgeries were performed in Boston.
- However, in retrospect, it wasn't a breakthrough.
- Because the technical possibility of kidney transplantation was evident
- and the cases of successful skin allografts between identical twins were
- known for decades, nonetheless, it was an important milestone that aroused
- interest in further experiments 
+ From that time, many similar surgeries were performed in Boston 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1,key-4"
+key "key-1,key-3"
 literal "false"
 
 \end_inset
@@ -1358,19 +1350,39 @@ To conclude, the early successes during the 1950s marked a transformative
  The following section tells more about that.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes sld
+\end_inset
+
+technical possibility
+\begin_inset Quotes srd
+\end_inset
+
+ repeats the conclusion of the previous section
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection*
 Attempts in Immunosuppression
 \end_layout
 
 \begin_layout Standard
 The exploration of immunosuppression in transplantation began as early as
- in the late 1940s.
- At the Mayo clinic in 1948, patients with rheumatoid arthritis were administere
+ the late 1940s.
+ At the Mayo Clinic in 1948, patients with rheumatoid arthritis were administere
 d cortisone, an adrenal cortical hormone with mild immunosuppressive properties,
  which provided temporary relief.
- Although, initially praised, its effects were deemed clinically insignificant
+ Although initially praised, its effects were deemed clinically insignificant
  for transplantation purposes.
- This led researchers to revisit earlier experiments with irradiation.
+ It led researchers to revisit earlier experiments with irradiation.
  Experiments on mice by Joan Main and Richmond Prehn showed promising results,
  inspiring human trials in Boston and Paris.
 \end_layout
@@ -1379,48 +1391,56 @@ d cortisone, an adrenal cortical hormone with mild immunosuppressive properties,
 In 1958, Murray's team in Boston employed radiation in human transplantation,
  achieving a significant breakthrough with a kidney transplant between non-ident
 ical twins that lasted 20 years.
- Similarly, in Paris, Jean Hamburger's team achieved a 26-year functioning
+ Similarly, in Paris, Jean Hamburger's team accomplished a 26-year functioning
  transplant using radiation.
+ 
 \end_layout
 
 \begin_layout Standard
-The search for safer immunosuppressive methods led to the anticancer drug
- 
-\emph on
-6-mercaptopurine
-\emph default
- (
-\emph on
-6-MP)
-\emph default
-.
- In 1959, Schwarz and Damesehek published paper that described how 6-MP
+The quest for safer immunosuppressive methods led to the anticancer drug
+ 6-mercaptopurine (6-MP).
+ In 1959, Schwarz and Damesehek published a paper that described how 6-MP
  lowered immune response to foreign proteins in rabbits.
- Roy Calne inspired by their paper performed his own experiments on dogs,
- showing promising results, which were further backed by Charles Zukoski
- and David Hume.
- Despite initial setbacks Kuss and others reported prolonged graft survival
- from non-related donor using total body irradiation (TBI) complemented
+ Inspired by their work, Roy Calne performed his own dog experiments, showing
+ promising results backed by Charles Zukoski and David Hume.
+ Despite initial setbacks, Kuss and others reported prolonged graft survival
+ from non-related donors using total body irradiation (TBI) complemented
  by 6-MP.
- The introduction of 
-\emph on
-azathioprine
-\emph default
-, a derivative of 6-MP, by Gertrude Elion and George Hitchings, further
- improved results.
+ The introduction of azathioprine in 1959, a derivative of 6-MP, by Gertrude
+ Elion and George Hitchings, further improved results.
  Their groundbreaking work earned them the Nobel Prize, and by 1961, azathioprin
 e was available for human use.
 \end_layout
 
 \begin_layout Standard
-In 1963, a conference held by the National Research council revealed a bleak
+In 1963, a conference held by the National Research Council revealed a bleak
  outlook for kidney transplantation, with less than 10% survival beyond
  three months.
- This changed, when Tom Starzl presented a protocol combining 6-MP with
- prednisone, leading to over one-year graft survival in 70% of cases.
- His results without exaggeration revolutionized the field, resulting in
- 50 new US transplantation programs and setting a 20-year standard in post-trans
-plant immunosuppression.
+ It changed when Tom Starzl presented a protocol combining 6-MP with prednisone,
+ leading to over one-year graft survival in 70% of cases.
+ His results revolutionized the field, resulting in 50 new US transplantation
+ programs and setting a 20-year standard in post-transplant immunosuppression
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In summary, the late 1940s to the early 1960s was a period of discoveries
+ and experimentation.
+ The use of cortisone in 1948, the administration of 6-MP for immunosuppression,
+ and the invention of azathioprine in 1959 led to better immunosuppression,
+ culminating in Tom Starzl's protocol, which became the standard for the
+ next two decades.
+ As we transition from this era of discovery to the period of 1964 to 1980,
+ we enter a phase of steady developments that would solidify the practice
+ of kidney transplantation.
 \end_layout
 
 \begin_layout Subsection*
@@ -1429,21 +1449,33 @@ Plateau
 
 \begin_layout Standard
 From 1964 to 1980, kidney transplantation saw gradual progress.
- Dialysis, developed during WWII, has finally became available for chronic
- renal failure as a result of invention of Teflon arteriovenous conduits
- in the 1960s.
+ Dialysis, developed during WWII, finally became available for chronic renal
+ failure as a result of the invention of Teflon arteriovenous conduits in
+ the 1960s.
  Acceptance of brain death expanded donor pools.
+ Organ preservation techniques also advanced: total body hypothermia was
+ replaced by targeted cold solutions infusions that preserved organs better.
+ By the mid-60s, longer preservation times gave way to organ exchanges between
+ centers.
+ Concerns about equitable distribution of organs led to the National Transplant
+ Act in 1984, establishing the United Network of Organ Sharing (UNOS) for
+ oversight 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
-Organ preservation techniques also advanced: total body hypothermia was
- replaced by targeted cold solutions infusions.
- By mid-60s, longer preservation times gave way to organ exchanges between
- centers..
- Concerns about equitable distribution led to the National Transplant Act
- in 1984, establishing the United Network of Organ Sharing (UNOS) for oversight.
- Data provided by UNOS have been invaluable for the research presented in
- this paper.
+As techniques were improving and donor pools expanding in the period from
+ 1964 to 1980, so was the understanding of the nuances of immune compatibility.
+ The following section describes the developments in tissue typing that
+ would further expand the field of kidney transplantation.
 \end_layout
 
 \begin_layout Subsection*
@@ -1451,9 +1483,9 @@ Tissue Typing
 \end_layout
 
 \begin_layout Standard
-The concept of tissue typing, originally suggested by Alexis Carrel in the
- early 20th century, remained unproven until Jean Dausset discovered the
- first human leukocyte antigen (HLA) in 1958.
+The concept of tissue typing, suggested by Alexis Carrel in the early 20th
+ century, remained unproven until Jean Dausset discovered the first human
+ leukocyte antigen (HLA) in 1958 (more on HLA in .
  It wasn't until 1964, with Paul Terasaki's development of the microcytotoxicity
  assay, that testing for antibodies became reliable.
  The test involved mixing the donor's lymphocytes with the recipient's serum
@@ -1465,25 +1497,42 @@ crossmatch test
 \end_layout
 
 \begin_layout Standard
-For several years, Terasaki performed typing for most of U.S.
- transplant centers and found a couple of observations: 1) Positive cross-match
+For several years, Terasaki performed typing for most U.S.
+ transplant centers and found a couple of observations: 1) Positive crossmatch
  test predicts hyperacute rejection.
- 2) matching can reliably identify optimal donor within a family, and it
- was assumed that the same principle would apply for non-related recipients.
- 
+ 2) matching can reliably identify optimal donors within a family, and it
+ was assumed that the same principle would apply to non-related recipients.
 \end_layout
 
 \begin_layout Standard
-However, in 1970, Terasaki's review of his large database of cadaver renal
- allografts revealed no correlation with the typing.
- This raised a lot of agitation in tissue typing community and his grant
- even was temporalily suspended until others didn't report the same.
- Since then, many crucial histocompatibility antigens were discovered (Class
- II locus: D and DR).
- Histocompatibility matching remains crucial in bone marrow transplantation
+However, in 1970, Terasaki's review of his extensive database of cadaver
+ renal allografts revealed no correlation with the typing.
+ It raised much agitation in the tissue typing community, and his grant
+ was temporarily suspended until others didn't report the same.
+ Since then, many crucial histocompatibility antigens have been discovered
+ (Class II locus: D and DR, more on antigens in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Immunology-of-kidney"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Histocompatibility matching remains essential in bone marrow transplantation
  and in selecting family donors.
- Nevertheless, for unrelated organ transplants, matching signifficantly
- benefits only in cases of a perfect match.
+ Nevertheless, for unrelated organ transplants, matching considerably benefits
+ only in cases of a perfect match.
+\end_layout
+
+\begin_layout Standard
+While tissue typing and matching have played a crucial role in improving
+ transplantation outcomes, the evolution of immunosuppressive drugs has
+ been equally, if not more, important.
+ The subsequent section tells more about new developments in immunosuppressive
+ drugs in upcoming years.
 \end_layout
 
 \begin_layout Subsection*
@@ -1491,29 +1540,40 @@ Cyclosporine and Tacrolimus
 \end_layout
 
 \begin_layout Standard
-The discovery of 
-\emph on
-cyclosporine
-\emph default
- in 1976 by Jean-François Borel marked a signifficant milestone in the realm
- of transplantation.
- As a fungal derivative with potent immunosuppresive properties, cyclosporine
- drastically improved the outcomes of both renal and extrarenal transplant,
+The discovery of cyclosporine in 1976 by Jean-François Borel marked a significan
+t milestone in the realm of transplantation.
+ As a fungal derivative with potent immunosuppressive properties, cyclosporine
+ drastically improved the outcomes of both renal and extra-renal transplants,
  surpassing the efficacy of the previously used drug, azathioprine.
- Similar to 6-MP, too achieve the best results it had to be combined with
+ Similar to 6-MP, to achieve the best results, it had to be combined with
  prednisone.
- This protocol remained standard until 1989, when 
-\emph on
-Tacrolimus
-\emph default
-, an even more powerful immunosuppresive agent, was introduced.
+ This protocol remained standard until 1989, when Tacrolimus, an even more
+ powerful immunosuppressive agent, was introduced.
  Tacrolimus proved to be effective in cases where the combination of cyclosporin
-e and prednison was insufficient, effectively replacing cyclosporine as
+e and prednisone was insufficient, effectively replacing cyclosporine as
  a usual baseline agent.
+\begin_inset Newline linebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In conclusion, the history of renal transplantation has been marked by groundbre
+aking discoveries and persistent challenges.
+ From the pioneering attempts of xenografts in the early 20th century to
+ the technical advancements and immunological breakthroughs of the mid-century,
+ each milestone has been essential in shaping the current landscape of organ
+ transplantation.
+ As we explored the history of kidney transplantation, a deeper understanding
+ of the immune system has become crucial.
+ This sets the stage for the next section, which examines the fundamentals
+ of immunology, laying the foundation for understanding the interplay between
+ the immune system and the transplanted organ.
 \end_layout
 
 \begin_layout Section
-Immunology
+The Introduction to Immunology
 \end_layout
 
 \begin_layout Standard
@@ -1617,7 +1677,14 @@ In conclusion, the immune system is a complex network of molecules, cells,
 \end_layout
 
 \begin_layout Section
-Immunology of kidney transplant
+Immunology of kidney transplant 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Immunology-of-kidney"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1701,6 +1768,13 @@ Gene silencing using small interfering RNA (siRNA) might be a promising
 
 \begin_layout Subsection
 Stimulation of Adaptive Alloimmunity
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Stimulation-of-Adaptive"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2021,6 +2095,19 @@ Human body is very complex system where every subsystem influences other
 s asossiated with organ transplantation result in decrease in gut microbiome
  diversity that result in systematic inflammation, that might contribute
  to alloimunnity, as well as autoimunnity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add more factors
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
