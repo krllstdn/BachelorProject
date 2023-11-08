@@ -1152,19 +1152,6 @@ Early Human Transplantation
 status open
 
 \begin_layout Plain Layout
-check as supervisor and in grammarly
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 also better to define warm ischemia
 \end_layout
 
@@ -1384,7 +1371,15 @@ d cortisone, an adrenal cortical hormone with mild immunosuppressive properties,
  for transplantation purposes.
  It led researchers to revisit earlier experiments with irradiation.
  Experiments on mice by Joan Main and Richmond Prehn showed promising results,
- inspiring human trials in Boston and Paris.
+ inspiring human trials in Boston and Paris 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1392,7 +1387,15 @@ In 1958, Murray's team in Boston employed radiation in human transplantation,
  achieving a significant breakthrough with a kidney transplant between non-ident
 ical twins that lasted 20 years.
  Similarly, in Paris, Jean Hamburger's team accomplished a 26-year functioning
- transplant using radiation.
+ transplant using radiation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -1409,7 +1412,16 @@ The quest for safer immunosuppressive methods led to the anticancer drug
  The introduction of azathioprine in 1959, a derivative of 6-MP, by Gertrude
  Elion and George Hitchings, further improved results.
  Their groundbreaking work earned them the Nobel Prize, and by 1961, azathioprin
-e was available for human use.
+e was available for human use 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1493,6 +1505,14 @@ The concept of tissue typing, suggested by Alexis Carrel in the early 20th
 \emph on
 crossmatch test
 \emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
 .
 \end_layout
 
@@ -1513,7 +1533,7 @@ However, in 1970, Terasaki's review of his extensive database of cadaver
  (Class II locus: D and DR, more on antigens in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Immunology-of-kidney"
+reference "sec:Intro-to-Immunology"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1524,7 +1544,15 @@ noprefix "false"
  Histocompatibility matching remains essential in bone marrow transplantation
  and in selecting family donors.
  Nevertheless, for unrelated organ transplants, matching considerably benefits
- only in cases of a perfect match.
+ only in cases of a perfect match 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1551,8 +1579,26 @@ t milestone in the realm of transplantation.
  powerful immunosuppressive agent, was introduced.
  Tacrolimus proved to be effective in cases where the combination of cyclosporin
 e and prednisone was insufficient, effectively replacing cyclosporine as
- a usual baseline agent.
+ a usual baseline agent 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+.
 \begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+from daring experiments it transformed into routine procedure
+\end_layout
+
 \end_inset
 
 
@@ -1574,96 +1620,235 @@ aking discoveries and persistent challenges.
 
 \begin_layout Section
 The Introduction to Immunology
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Intro-to-Immunology"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The immune system is a sophisticated defense mechanism that evolved to protect
- multicellular organisms from pathogens such as bacteria, fungi, viruses,
- and parasites.
- It consists of many cells and tissues that compose a complex system that
- detects, evaluates, and responds to the invader.
- The immune system is divided into humoral and cell-mediated immunity.
- Humoral is mediated by soluble immunoglobulin proteins referred to as antibodie
-s, while cell-mediated involves pathogen-specific T Lymphocytes that either
- destroy the invader or assist other cells in doing so.
- Both are essential for a complete immune response.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add that cells are generated in thymus and in bone marrow
+\end_layout
+
+\begin_layout Itemize
+define MHC (major histocompatibility complex)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Lymphocyte is a type of white blood cell that is responsible for both humoral
- and cell-mediated immune responses.
- There are two types of lymphocytes: T lymphocytes (T cells) and B lymphocytes
- (B cells).
- B cells mediate humoral response by producing antigen-specific antibodies.
- An antigen is any molecular structure that binds to an antibody or specific
- surface T cell receptor, triggering an immune response.
- Once B-cell encountered an antigen it starts to produce antibodies specific
- to it, antibodies then bind to it, marking the invader for destruction.
- T cells when encountering an antigen start to proliferate forming an army
- of T cells that will eliminate the invader and will form long-term memory
- about the pathogen.
+The 
+\emph on
+immune system
+\emph default
+ is a sophisticated defense mechanism that evolved to protect multicellular
+ organisms from pathogens such as bacteria, fungi, viruses, and parasites.
+ It is a network of many cells and tissues that compose a complex system
+ that detects, evaluates, and responds to the invader.
+ It is essential to understand these mechanisms, as the immune response
+ plays a crucial role in graft acceptance or rejection 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Physical barriers: epithelia and mucous membranes constitute the first line
- of defense.
- To activate the immune system the pathogen must first breach physical barriers.
- The immune system categorizes pathogens by common characteristics and designs
- its response accordingly.
- Pathogen detection and categorization rely on the interaction between pathogen
- and T-cell receptors, as well as soluble antibodies.
- Binders for T cell receptors and antibodies can be the whole pathogen’s
- body, its part, or molecules excreted by it.
+Innate and adaptive immunity are the two interconnected systems of immune
+ response.
+ 
+\emph on
+Innate immunity (
+\emph default
+also
+\emph on
+ natural 
+\emph default
+or
+\emph on
+ native)
+\emph default
+ includes primitive built-in cellular and molecular mechanisms that provide
+ rapid, albeit non-specific response to common pathogens.
+ In contrast, 
+\emph on
+adaptive (specific 
+\emph default
+or
+\emph on
+ acquired) immunity
+\emph default
+ is slower to respond but capable of providing more targeted responses 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
-Pathogens are recognized and categorized by molecular patterns that are
- associated with a particular pathogen and are referred to as pathogen-associate
-d molecular patterns (PAMPs).
- Pathogen recognition receptors (PRRs), which are excreted by white blood
- cells, bind to PAMPs initiating the cascade of events that will mark a
- pathogen for destruction.
+Physical barriers, including epithelia and mucous membranes constitute host's
+ first line of defense and are a part of innate immunity.
+ This branch of immune system not only prevents invaders from infiltrating
+ the host but also quickly destroys many microbes that succeed in breaching
+ these barriers.
+ Innate immunity provides the neccessary protection until the adaptive immunity
+ is activated.
+ It also communicates to the adaptive immunity how to best respond to the
+ invader.
+ Furthermore, innate immunity plays an important role in the clearence of
+ dead tissue and the initiation of repair after the tissue was damaged 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Adaptive immunity is broadly categorized into 
+\emph on
+humoral
+\emph default
+ and 
+\emph on
+cell-mediated immunity
+\emph default
+.
+ Central to both humoral and cell-mediated immune responses are 
+\emph on
+lymphocytes
+\emph default
+.
+ 
+\emph on
+B lymphocytes
+\emph default
+ (
+\emph on
+B cells)
+\emph default
+ mediate humoral response by producing antigen-specific antibodies on encounter
+ with the antigen.
+ Produced antibodies then bind themselves to 
+\emph on
+antigens
+\emph default
+ — foreign molecular structures, identified by common molecular patterns
+ known as 
+\emph on
+pathogen-associated molecular patterns
+\emph default
+ (
+\emph on
+PAMPs
+\emph default
+) — to mark them for destruction.
+ The immune system uses 
+\emph on
+pathogen recognition receptors
+\emph default
+ (
+\emph on
+PRRs
+\emph default
+), found on the surface of T cells, and antibodies to detect and categorize
+ 
+\emph on
+these 
+\emph default
+PAMPs, which can take the form of molecules on the surface of a pathogen
+ or its by-products.
+ PRRs bind to PAMPs and initiate targeted cascade of events that culminate
+ in pathogen's elimination 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+T cells, on the other hand, when encountering an antigen start to proliferate
+ forming an army of T cells that will eliminate the invader and will form
+ long-term memory about the pathogen.
+ Activated T cells are divided into the following categories: helper T cells
+ (
+\begin_inset Formula $CD4^{+}$
+\end_inset
+
+), that help B cells to produce antibodies and help kill ingested microbes;
+ 
+\emph on
+cytotoxic T cells
+\emph default
+ (
+\begin_inset Formula $CD8^{+}$
+\end_inset
+
+) that target and kill infected cells; 
+\emph on
+regulatory T lymphocytes
+\emph default
+ that prevent or limit immune responses; and 
+\emph on
+memory cells
+\emph default
+, that remain in the body long-term to provide faster and stronger immune
+ response if the same antigen is encountered in the future 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 Pathogen-host interaction is a continuous arms race, as pathogens usually
  have a short life cycle and can modify their DNA to elude the host's recognitio
 n systems.
- The generation of diversity in developing cells is designed to combat this.
- When lymphocytes are developing in bone marrow random PRRs are generated,
- then cells are tested on non-reactivity to host cells.
- If the test is passed the cell is released into circulation.
+ Immune system counters this with the generation of host-tolerant lymphocytes
+ with diverse PRRs during the development in bone marrow.
+ Cells that react to the host's own cells are eliminated, ensuring that
+ only non-self reactive cells are allowed in circulation.
  The principle of recognizing self vs.
- non-self is called tolerance.
-\end_layout
-
-\begin_layout Standard
-There are two interconnected systems of response: innate and adaptive.
- Innate includes primitive built-in cellular and molecular mechanisms aimed
- at preventing infections and quickly demolishing common pathogens.
- It consists of physical and molecular barriers as well as PRRs that are
- encoded in DNA and therefore are inherited.
- Innate immunity provides a fast and effective response which however is
- not very specific and cannot differentiate small differences.
- Adaptive immunity is constituted by both humoral, where antibodies neutralize
- and eradicate extracellular microbes and toxins, and cell-mediated immunity,
- where T lymphocytes exterminate intracellular invaders.
-\end_layout
-
-\begin_layout Standard
-Adaptive immunity is much slower but more able to recognize small differences.
- It typically starts to act within 5 to 6 days after initial exposure.
- Because it takes time to create an army of cells with specific receptors.
- After pathogen extermination, some of the lymphocytes with the specific
- receptor become memory cells, making it easier to fight this type of pathogen.
+ non-self is called tolerance 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-6"
 literal "false"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -1676,8 +1861,21 @@ In conclusion, the immune system is a complex network of molecules, cells,
  the domain of kidney transplantation.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+grammarly!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-Immunology of kidney transplant 
+Immunology of Kidney Transplant 
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Immunology-of-kidney"
@@ -1692,8 +1890,70 @@ The process of transplantation inevitably includes termination of blood
  flow, and, as a result, oxygenation.
  Therefore cell is unable to generate sufficient amount of energy to maintain
  homeostasis, leading to damage or death.
- Damage or death is associated with DAMP release that might be detected
- by both innate and adaptive immunity.
+ Damage or death is associated with death (or damage) associated molecular
+ patterns (DAMP) release that might be detected by both innate and adaptive
+ immunity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Kuby:
+\end_layout
+
+\begin_layout Itemize
+tissues that share sufficient antigenic similarity, allowing transfer without
+ immunologic reaction are said to be histocompatible.
+\end_layout
+
+\begin_layout Itemize
+MHC and HLA
+\end_layout
+
+\begin_layout Itemize
+the most intense immune reactions are due to ABO blood group and MHC differences
+\end_layout
+
+\begin_layout Itemize
+p539: MHC matching: parent or first-order sibling or even friends.
+ immunnosuppression and tolerance induction protocols
+\end_layout
+
+\begin_layout Itemize
+ROLE OF BLOOD GROUP AND MHC ANTIGENS IN GRAFT TOLERANCE is based
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+even when MHC antigens are identical th graft might be rejected due to the
+ differences in other loci.
+ e.g.
+ minor histocompatibility locus
+\end_layout
+
+\begin_layout Itemize
+even in cases of HLA identical matches, some degree of immunosuppresion
+ is still required.
+\end_layout
+
+\begin_layout Itemize
+blood transfusion prior might induce tolerance
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The Sensitization Stage of graft rejection is based.
+\end_layout
+
+\begin_layout Itemize
+Effector stage of graft rejection is based
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1766,6 +2026,20 @@ Gene silencing using small interfering RNA (siRNA) might be a promising
  useful.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A lot of redundant details indeed.
+ I am not sure that I need to describe complement at all.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Stimulation of Adaptive Alloimmunity
 \begin_inset CommandInset label
@@ -1804,21 +2078,23 @@ auto-antigens
 \end_layout
 
 \begin_layout Subsubsection*
-ABO Blood Group Antigens
+ABO Blood Group Antigens 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Keep
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 ABO system is used to group blood into groups, based on presence or absense
  of antigens on a blood cell surface.
  There are four major blood groups: A, B, O and AB.
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-20"
-literal "false"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1851,14 +2127,6 @@ universal recipient
 \end_inset
 
 .
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-9"
-literal "false"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1886,13 +2154,23 @@ Histocompatibility antigens are genetically encoded antigens that cover
 MHC antigens are proteins that cover cell surfaces to help the immune system
  to recognize self vs.
  non-self.
- Major histocompatibility comples is divided into MHC class I and MHC class
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+repeats
+\end_layout
+
+\end_inset
+
+Major histocompatibility complex is divided into MHC class I and MHC class
  II.
  MHC class I cover surfaces of most cells and are liable for activation
  of cytotoxic CD8 cells, that help to find and destroy infected cells.
  MHC class II are found on certain immune cells and play crucial role in
  immune response coordination.
- In humans MHC class 1 are divided into three subgroups each, as can be
+ In humans MHC classess are divided into three subgroups each, as can be
  seen on table 
 \end_layout
 
@@ -2028,6 +2306,41 @@ Minor histocompatibility proteins can act as antigens, although weaker than
  However if prior sensitisation exists it could result in severe immune
  response that might result in graft loss.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+weird sentence
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Rejection
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+hyperacute rejection
+\end_layout
+
+\begin_layout Plain Layout
+acute rejection
+\end_layout
+
+\begin_layout Plain Layout
+chronic rejection
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2041,6 +2354,16 @@ T cell-mediated rejection or TCMR is the most common type of allograft rejection
  Immune system cells migrate through vessels to the graft, become activated
  and start to attack the organ.
  Complement may also play role in it.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+too little info, no definition
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2049,8 +2372,21 @@ B Cell-mediated rejection
 
 \begin_layout Standard
 B cells are immune system cells that produce antibodies.
- Alloantibodies are antibodies that react to donor-specific HLA antigens
- and might cause hyperacute rejection, acute antibody-mediated rejection
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+defined before 
+\end_layout
+
+\end_inset
+
+Alloantibodies are antibodies that react to donor-specific HLA antigens
+ and might cause hyperacute rejection, 
+\emph on
+acute antibody-mediated rejection
+\emph default
  (ABMR), and chronic ABMR.
  About 30% of patients have sensitivities and have certain HLA antibodies.
  It might cease transplantation or require antibody suppression strategy.
@@ -2102,7 +2438,7 @@ s asossiated with organ transplantation result in decrease in gut microbiome
 status open
 
 \begin_layout Plain Layout
-add more factors
+add more factors or delete
 \end_layout
 
 \end_inset
