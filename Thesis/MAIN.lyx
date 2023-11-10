@@ -1049,7 +1049,14 @@ Cronic Kidney disease
 \end_layout
 
 \begin_layout Section
-The history of kidney transplantation.
+The history of kidney transplantation 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:history-of-kidney-transplantation"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1233,9 +1240,9 @@ literal "false"
 \begin_layout Standard
 However, it was during that period that a significant milestone was achieved
  by Yurii Voronyi.
- On March 3, 1933, in Kherson, Ukraine, Voronyi performed the first human-to-hum
-an kidney transplant on a woman suffering from acute renal failure due to
- mercury chloride poisoning.
+ On March 3, 1933, in Kherson, Ukraine, Voronyi performed the first human
+ kidney allograft on a woman suffering from acute renal failure due to mercury
+ chloride poisoning.
  Given the ethical concerns surrounding living donors and previous failures
  of xenografts, Voronyi considered a cadaveric transplant the only viable
  option.
@@ -1886,227 +1893,119 @@ name "sec:Immunology-of-kidney"
 \end_layout
 
 \begin_layout Standard
-The process of transplantation inevitably includes termination of blood
- flow, and, as a result, oxygenation.
- Therefore cell is unable to generate sufficient amount of energy to maintain
- homeostasis, leading to damage or death.
- Damage or death is associated with death (or damage) associated molecular
- patterns (DAMP) release that might be detected by both innate and adaptive
- immunity.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Kuby:
-\end_layout
-
-\begin_layout Itemize
-tissues that share sufficient antigenic similarity, allowing transfer without
- immunologic reaction are said to be histocompatible.
-\end_layout
-
-\begin_layout Itemize
-MHC and HLA
-\end_layout
-
-\begin_layout Itemize
-the most intense immune reactions are due to ABO blood group and MHC differences
-\end_layout
-
-\begin_layout Itemize
-p539: MHC matching: parent or first-order sibling or even friends.
- immunnosuppression and tolerance induction protocols
-\end_layout
-
-\begin_layout Itemize
-ROLE OF BLOOD GROUP AND MHC ANTIGENS IN GRAFT TOLERANCE is based
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-even when MHC antigens are identical th graft might be rejected due to the
- differences in other loci.
- e.g.
- minor histocompatibility locus
-\end_layout
-
-\begin_layout Itemize
-even in cases of HLA identical matches, some degree of immunosuppresion
- is still required.
-\end_layout
-
-\begin_layout Itemize
-blood transfusion prior might induce tolerance
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-The Sensitization Stage of graft rejection is based.
-\end_layout
-
-\begin_layout Itemize
-Effector stage of graft rejection is based
-\end_layout
+The degree to which the immune system responses to a graft depends on a
+ type of a graft.
+ There are 4 types of grafts, 3 of which were mentioned in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:history-of-kidney-transplantation"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-
+,:
 \end_layout
 
-\begin_layout Subsection
-Immune system activation Peritransplant
+\begin_layout Itemize
+
+\series bold
+Autograft 
+\series default
+is a transfer of body tissue from one body site to the other in the same
+ individual.
 \end_layout
 
-\begin_layout Standard
-The process of transplantation inevitably includes termination of blood
- flow, and, as a result, oxygenation.
- Therefore cell is unable to generate sufficient amount of energy to maintain
- homeostasis, leading to damage or death.
- Damage or death is associated with DAMP release that might be detected
- by both innate and adaptive immunity.
- Mostly it is the ancient innate immunity that is activated with its soluble
- arm - complement system.
+\begin_layout Itemize
+
+\series bold
+Isograft
+\series default
+ is a tissue transplanted between two geneticall identical individuals.
 \end_layout
 
-\begin_layout Paragraph*
-Damage Signals
+\begin_layout Itemize
+
+\series bold
+Allograft
+\series default
+ is a tissue transplanted between two genetically non-identical individuals
+ of the same species.
 \end_layout
 
-\begin_layout Standard
-Many DAMPS are recognized by the same PRRs that mediate response to PAMPs.
- These DAMPS include molecules that are normally hidden from the immune
- system and are produced during ischemia, such as extrecellular ATP, heat
- shock proteins (HSPs), uric acid, etc.
- Likewise, oxidative stress and decline in intracellular potassium may act
- as intracellular damage signals.
- 
-\end_layout
+\begin_layout Itemize
 
-\begin_layout Paragraph
-Complement
-\end_layout
-
-\begin_layout Standard
-Complement system is comprised of series of proteine kinases that are sequential
-ly activated resulting in membrane attack complex (MAC) formation.
- MAC include complement components C5 to C9, which are inserted into pathogen
- cell membrane resulting in compromising cell integrity leading to cell
- death.
+\series bold
+Xenograft
+\series default
+ is a tissue transplanted between individuals of different species.
 \end_layout
 
 \begin_layout Standard
-There are three pathways of complement system activation: the classical
- pathway, the alternative pathway, and the mannose-binding lectin (MBL)
- pathway.
- The classical pathway is activated by IgM and IgG antibodies and participates
- in antibody-mediated rejection, that will be discussed further.
- Alternative complement is always active and therefore must be controlled
- by a regulatory proteins, to prevent inadequate responses.
- The MBL pathway is activated by damaged endothelium, a cell tissue that
- covers organs and vessels, and carbohydrates present on pathogens.
- Either pathway results in C3 convertase that cleaves C3.
- This cleavage leads to a cascade of reactions that culminate in MAC formation.
-\end_layout
+Autografts and isografts are usually accepted, due to genetic identity.
+ Allografts are genetically dissimilar and are usually recognized by immune
+ system as a foreign body and are rejected.
+ Xenografts have the greatest genetic difference and are rejected most vigorousl
+y 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
 
-\begin_layout Standard
-Long ischemia time results in endothelial cell damage that is acossiated
- with ischemia-reperfusion injury (IRI).
- IRI activates MBL and alternative complement pathways.
-\end_layout
-
-\begin_layout Standard
-Gene silencing using small interfering RNA (siRNA) might be a promising
- instrument in organ transplantation, because it can be appliend to an allograft
- during cold reperfusion and it has been shown to mitigate IRI in animal
- models.
- Other strategies of supressing local complement activation would also be
- useful.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-A lot of redundant details indeed.
- I am not sure that I need to describe complement at all.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Stimulation of Adaptive Alloimmunity
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Stimulation-of-Adaptive"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Immune response to a graft occurs in two main stages: afferent and efferent
- arms.
- In afferent stage, recipient lymphocytes are stimulated by donor antigens
- and start to proliterate and send signals to other cells.
- In efferent arm, leukocytes migrate to the transplanted organ and donor
- specific antibodies are produced.
- 
-\end_layout
-
-\begin_layout Standard
-For the immune system to be activated graft must express antigens that will
- be considered by the host's immune system as foreign.
- These include ABO antigens, human leukocyte antigens (HLA), and polymorphic
- non-HLA 
-\begin_inset Quotes sld
-\end_inset
-
-auto-antigens
-\begin_inset Quotes srd
 \end_inset
 
 .
- 
 \end_layout
 
-\begin_layout Subsubsection*
-ABO Blood Group Antigens 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Keep
+\begin_layout Standard
+There are three reasons why the immune system may react to the allograft:
+ Damage due to ischemia, reaction to the incompatible blood group antigens,
+ and reaction to MHC and miH antigens.
 \end_layout
+
+\begin_layout Standard
+The process of transplantation inevitably includes termination of blood
+ flow, and, as a result, oxygenation.
+ Therefore cell is unable to generate sufficient amount of energy to maintain
+ homeostasis, leading to damage or death.
+ If this happens, the kidney is said to experience 
+\emph on
+ischemia reperfusion injury (IRI).
+
+\emph default
+ Cell damage or death are associated with the release of 
+\emph on
+danger associated molecular patterns
+\emph default
+ (
+\emph on
+DAMP
+\emph default
+) that might be detected by both innate and adaptive immunity, the innate
+ immunity is triggered the most.
+ Such immune response might damage the graft even more and contribute to
+ acute rejection 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
 
 \end_inset
 
-
+.
+ Because of that the time of ischemia is crucial in predicting the graft
+ (and patient) survival.
 \end_layout
 
 \begin_layout Standard
-ABO system is used to group blood into groups, based on presence or absense
- of antigens on a blood cell surface.
+ABO antigens are expressed by most cell types and if the transplantation
+ between incompatible pair were performed, it would result in hyperacute
+ antibody-mediated rejection.
+ Due to that fact it is the first thing that is evaluated before performing
+ the transplant.
  There are four major blood groups: A, B, O and AB.
-\end_layout
-
-\begin_layout Standard
-When allocating an organ to transplant the first thing that is considered
- is ABO blood group antigens compatibility.
- ABO antigens are expressed almost by any cell in the allograft, and if
- the transplantation to be carried out in ABO-incompatible donor and recipient
- it would result in a hyperacute antibody-mediated rejection.
-\end_layout
-
-\begin_layout Standard
-Donors with blood group O are so called 
+ Donors with blood group O are so called 
 \begin_inset Quotes sld
 \end_inset
 
@@ -2114,8 +2013,7 @@ universal donors
 \begin_inset Quotes srd
 \end_inset
 
-.
- Organs from them can be safely transplanted to recipients with any ABO
+ – organs from them can be safely transplanted to recipients with any ABO
  blood group.
  Whereas, recipient with AB group can safely receive organ from recipient
  with any ABO blood group and is called a 
@@ -2127,10 +2025,64 @@ universal recipient
 \end_inset
 
 .
+ In practice, however, recipients of organs from the deceased donors are
+ given ABO identical organs to avoid 
+\begin_inset Quotes sld
+\end_inset
+
+inequity of access to organs
+\begin_inset Quotes srd
+\end_inset
+
+.
+ This does not apply to living donors – organs of compatible blood group
+ are given 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Subsubsection*
-HLA
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+kuby
+\end_layout
+
+\begin_layout Itemize
+MHC is responsible for most rejections
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tissues that are genetically similar are referred to as 
+\emph on
+histocompatible
+\emph default
+.
+ Tissues that display genetic differences are 
+\emph on
+histoincompatible
+\emph default
+ and usually cause a rejection.
+ Over 40 different loci encode the antigens responsible for histocompatibility,
+ yet the most intense allograft-rejection responses are attributed to loci
+ within the major histocompatibility complex (MHC).
+ The organization of MHC in humans is called 
+\emph on
+human leykocyte antigen (HLA)
+\emph default
+.
 \end_layout
 
 \begin_layout Standard
@@ -2138,8 +2090,18 @@ Histocompatibility antigens are genetically encoded antigens that cover
  cell surfaces.
  They differ between individuals of the same species and therefore trigger
  an immune response in case of allograft.
- In all vertebraes histocompatibility antigens are divided into single major
- histocompatibility complex (MHC) and numerous minor histocompatibility
+ In all vertebraes histocompatibility antigens are divided into single 
+\emph on
+major histocompatibility complex
+\emph default
+ (
+\emph on
+MHC
+\emph default
+) and numerous 
+\emph on
+minor histocompatibility
+\emph default
  (miH) systems.
  In case of either MHC or miH incompatibility the result is an immune response
  to the graft, more severe in case of MHC than miH.
@@ -2148,43 +2110,66 @@ Histocompatibility antigens are genetically encoded antigens that cover
  Although, sometimes miH mismatch might be so severe that it would be comparable
  to full MHC mismatch.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
 MHC antigens are proteins that cover cell surfaces to help the immune system
  to recognize self vs.
  non-self.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-repeats
-\end_layout
+ Major histocompatibility complex is divided into MHC class I and MHC class
+ II.
+ MHC class I cover surfaces of most cells and are liable for activation
+ of cytotoxic CD8 cells.
+ MHC class II are found on certain immune cells and play crucial role in
+ immune response coordination 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
 
 \end_inset
 
-Major histocompatibility complex is divided into MHC class I and MHC class
- II.
- MHC class I cover surfaces of most cells and are liable for activation
- of cytotoxic CD8 cells, that help to find and destroy infected cells.
- MHC class II are found on certain immune cells and play crucial role in
- immune response coordination.
+.
  In humans MHC classess are divided into three subgroups each, as can be
- seen on table 
+ seen on Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:MHC-class-division"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 MHC class division
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:MHC-class-division"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2292,25 +2277,45 @@ HLA-DQ
 \end_layout
 
 \begin_layout Standard
+Mismatches of classes I and II are not created equal.
+ Mismatch of one or two Class I antigens has little effect on graft survival.
+ A single mismatch in Class II antigen is equivalent to mismatch of 3 or
+ 4 Class I antigens.
+ When both Class I and Class II antigens are mismatched the rejection is
+ accelerated 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 In clinical practice, clinicians asses and try to match donors and recipient
  according to the number of HLA-A, -B, and -DR mismatches, ranging from
  zero mismatches (0-0-0) to a maximum of 6 mismatches (2-2-2).
  Generally more emphasis is placed on DR loci due to capability of CD4 T
  cell activation, which might trigger both humoral and cellular adaptive
- immune responses.
+ immune responses 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Minor histocompatibility proteins can act as antigens, although weaker than
- MHC.
- However if prior sensitisation exists it could result in severe immune
- response that might result in graft loss.
- 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-weird sentence
+Importance of HLA for kidney and bone marrow transplant 
 \end_layout
 
 \end_inset
@@ -2318,8 +2323,155 @@ weird sentence
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Microcytotoxycity test 
+\end_layout
+
+\begin_layout Plain Layout
+Mixed-lymphocyte reaction
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+HLA typing of a potential donors and recipient is performed with 
+\emph on
+microcytotoxicity test
+\emph default
+.
+ Subject's white blood cells are distributed into various wells on a microtiter
+ plate and then antibodies for various class I and class II MHC alleles
+ are added to different wells.
+ After incubation, complement is added to the wells and the cytotoxicity
+ is assessed by uptake or exclusion of various dyes.
+ If a cell has MHC allele for which a particular antibody is specific, then
+ the cell will die upon addition of complement and these dead cells will
+ take up a dye 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In case when a fully HLA-compatible donor is not available, the transplantation
+ still can be successfull.
+ In this situation, a one-way mixed-lymphocyte reaction (MLR) can be used
+ to assess the degree of class II MHC compatibility.
+ The irradiated (or treated with mitomicyn C) potential donor's lymphocytes
+ play role of stimulator and normal recipient's lymphocytes take a responder
+ role.
+ Then the proliferation of recipient cells is measured.
+ Intense proliferation of recipient leykocytes indicates poor prognosis
+ for the graft survival.
+ The advantage of MLR is that it gives better understanding of the degree
+ of CD4 cell activation.
+ The disadvantage is that it takes several days to run the assay making
+ it unusable in case of cadaver transplantation.
+ While 
+\emph on
+microcytotoxicity test
+\emph default
+ takes only a couple of hours and is usually used for that.
+ HLA matching is the most important for kidney and bone-marrow transplantation.
+ Heart and liver transplants can withstand greater levels of mismatching
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Even perfect HLA matching does not guarantee the absence of rejection.
+ Organs might be rejected because of differences in minor histocompatibility
+ loci.
+ The reaction to these mismatches is less vigorous than to MHC, but it still
+ can result in graft rejection.
+ For this reason, even in HLA-identical donor recipient pairs some degree
+ of immunosuppresion is required 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Graft rejection is caused by cell-mediated immune response to alloantigens
+ (primarily MHC) expressed on the cells of the graft.
+ The process of cell-mediated graft rejection is divided into two steps:
+ Sensitisation phase, in which helper CD4 and killer CD8 recognize MHC and
+ miH alloantigens expressed on the cells of the graft and start to proliterate.
+ Effector stage in which immune destruction takes place 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+A range of effector mechanisms participate in graft rejection.
+ The most common are cell-mediated reactions involving delayed-type hypersensiti
+vity and cytotoxic T lymphocyte mediated cytotoxicity.
+ Less common mechanism are antibody-plus-complement lysis (cell disintegration)
+ and destruction by antibody-dependent cell-mediated cytotoxicity (ADCC)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+not sure I need these particular mechanisms
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Subsection
-Rejection
+Clinical Manifestations of Graft Rejection
+\end_layout
+
+\begin_layout Standard
+Graft rejection happens in different time-frames depending of the organ
+ transplanted and the immune response involved.
+ 
+\end_layout
+
+\begin_layout Itemize
+Hyperacute rejections occur within first 24 hours post-transplant
 \end_layout
 
 \begin_layout Standard
@@ -2811,7 +2963,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -8744,7 +8896,7 @@ noprefix "false"
  common in men
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-19"
+key "key-32"
 literal "false"
 
 \end_inset
@@ -12321,6 +12473,21 @@ literal "false"
  doi: 10.1002/sim.4154.
  Epub 2011 Jan 13.
  PMID: 21484848; PMCID: PMC3079915.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-32"
+literal "false"
+
+\end_inset
+
+ Kindt TJ Goldsby RA Osborne BA Kuby J.
+ Kuby Immunology.
+ 6th ed.
+ New York: W.H.
+ Freeman; 2007.
 \end_layout
 
 \begin_layout Standard
