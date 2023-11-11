@@ -1023,6 +1023,124 @@ pagestyle{headings}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The citation at the end of a paragraph indicates that the whole paragraph
+ has been taken from the source.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Clinical Aspects of Kidney Transplantation 
+\end_layout
+
+\begin_layout Standard
+Kidney transplantation stands as the most commonly performed organ transplant
+ globally.
+ Many diseases, such as diabetes and nephritis, result in chronic renal
+ failure, which can be treated with transplantation.
+ Unlike organs such as liver and heart, kidneys are relatively easier to
+ transplant, contributing to its frequency of transplantation.
+ Kidneys can be obtained from both deceased and living donors - relatives
+ or altruistic volunteers.
+ Living donors can donate one kidney and continue to lead normal, healthy
+ lives, signifficantly expanding the potential donor pool 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The importance of ABO blood group and histocompatibility matchings for kidney
+ transplantation cannot be overstated, as kidney is a heavily vascularized
+ organ.
+ Proper matching reduces the risk of rejection and improves the transplant
+ outcomes.
+ Compared to organs as the liver or bone marrow, kidneys do not present
+ additional challenges such as graft versus host disease (GVHD), simplifying
+ the transplantation process 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+However kidney transplantation is not without its challenges.
+ Two major issues confront potential recipients: the short supply of available
+ organs and the risk of sensitisation following a failed first transplant,
+ decreasing the pool of available donors even further.
+ It this case the immune system develops antibodies to the alloantigens
+ present on the graft and any further transplantation of organs with similar
+ antigens will result in hyperacute rejection.
+ This fact often leaves many patients unable to find a compatible donor
+ after one or two rejection episodes 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Recipients of kidney transplants typically require life-long immunosuppression.
+ While these medications are essential to prevent organ rejection, they
+ come with serious side-effects, such as increased risk of cancer, hypertension
+ and metabolic bone disease 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Given the high incidence of renal failure in diabetic patients - affecting
+ roughly 30% of individuals with advanced diabetes - simultaneous kidney
+ and pancreas transplants are sometimes performed.
+ This approach addresses both the renal failure and the underlying diabetes,
+ offering a comprehensive solution for these patients 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In summary kidney transplantation has become a vital and frequent medical
+ procedure, offering improved quality of life to many suffering the renal
+ failure.
+ The procedure, while simpler than other organ tranplants has its own set
+ of challenges.
+\end_layout
+
 \begin_layout Section
 Why kidneys fail
 \end_layout
@@ -1069,10 +1187,6 @@ Write intro
 
 \begin_layout Plain Layout
 graft
-\end_layout
-
-\begin_layout Plain Layout
-allo/xeno/auto grafts
 \end_layout
 
 \end_inset
@@ -1895,7 +2009,8 @@ name "sec:Immunology-of-kidney"
 \begin_layout Standard
 The degree to which the immune system responses to a graft depends on a
  type of a graft.
- There are 4 types of grafts, 3 of which were mentioned in Section 
+ There are 4 types of grafts, 3 of which were already mentioned in Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:history-of-kidney-transplantation"
@@ -1923,6 +2038,7 @@ is a transfer of body tissue from one body site to the other in the same
 Isograft
 \series default
  is a tissue transplanted between two geneticall identical individuals.
+ In humans it is usually homozygotic (identical) twins.
 \end_layout
 
 \begin_layout Itemize
@@ -1956,6 +2072,10 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsection
+Immune response to the graft
 \end_layout
 
 \begin_layout Standard
@@ -2045,23 +2165,6 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-kuby
-\end_layout
-
-\begin_layout Itemize
-MHC is responsible for most rejections
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2311,36 +2414,6 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Importance of HLA for kidney and bone marrow transplant 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Microcytotoxycity test 
-\end_layout
-
-\begin_layout Plain Layout
-Mixed-lymphocyte reaction
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 HLA typing of a potential donors and recipient is performed with 
 \emph on
 microcytotoxicity test
@@ -2470,92 +2543,124 @@ Graft rejection happens in different time-frames depending of the organ
  
 \end_layout
 
-\begin_layout Itemize
-Hyperacute rejections occur within first 24 hours post-transplant
-\end_layout
-
 \begin_layout Standard
-\begin_inset Note Note
-status open
 
-\begin_layout Plain Layout
-hyperacute rejection
-\end_layout
-
-\begin_layout Plain Layout
-acute rejection
-\end_layout
-
-\begin_layout Plain Layout
-chronic rejection
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-T Cell-mediated rejection
-\end_layout
-
-\begin_layout Standard
-T cell-mediated rejection or TCMR is the most common type of allograft rejection
-, as it still happens in 20% of transplantations mostly within first 6 months
- posttrasplant.
- Immune system cells migrate through vessels to the graft, become activated
- and start to attack the organ.
- Complement may also play role in it.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-too little info, no definition
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-B Cell-mediated rejection
-\end_layout
-
-\begin_layout Standard
-B cells are immune system cells that produce antibodies.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-defined before 
-\end_layout
-
-\end_inset
-
-Alloantibodies are antibodies that react to donor-specific HLA antigens
- and might cause hyperacute rejection, 
 \emph on
-acute antibody-mediated rejection
+Hyperacute rejection
 \emph default
- (ABMR), and chronic ABMR.
- About 30% of patients have sensitivities and have certain HLA antibodies.
- It might cease transplantation or require antibody suppression strategy.
- Even low amount of antibodies below crossmatch cutoff doubles the risk
- of ABMR and increases the risk of graft failure by 76%.
- Additionally, donor specific antibodies might develop posttransplant and
- cause an actue ABMR.
- 
+s occur within first 24 hours post-transplant.
+ It happens due to the prior sensitisation to graft antigens.
+ Antibodies specific to the graft are present in the recipient blood stream.
+ It may happen due to a several reasons: recipients of repeated blood transfusio
+ns sometimes develop signifficant amount of antibodies to MHC antigens present
+ on white blood cells from the transfused blood.
+ If these antigens are similar to ones in the graft, the hyperacute rejection
+ may take place; with repeated pregnancies women are exposed to paternal
+ alloantigens of the fetus and may develop antibodies to them; individuals
+ who had previous grafts may have antibodies to alloantigens of that graft;
+ antibodies to antigens specific to blood group type are always present
+ and don't need prior sensitisation.
+ rejections of that sort usually do not happen now, as ABO blood group matching
+ is performed prior to transplantation.
 \end_layout
 
 \begin_layout Standard
-Acute AMBR is rarely seen in patients withour prior sensitization and is
- highly difficult to treat.
- AMBR is characterized by decline in allograft function, presense of DSA
- and signs of acute vascular injury.
- A progressive reduction in graft function over time is observed almost
- universally.
+
+\emph on
+Acute rejection
+\emph default
+s happen during first few weeks post-transplant.
+ It is performed by adaptive immunity via T cell-mediated rejection.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Chronic rejections
+\emph default
+ happen from months to years after the transplantation.
+ It is mediated by both humoral and cell-mediated mechanisms.
+ While the advancements in immunosuppression and tissue typing significantly
+ improve short-term survival, little progress has been made in terms of
+ long-term survival.
+ Chronic rejections are hard to manage with immunosuppressants and may necessita
+te another transplantation.
+\end_layout
+
+\begin_layout Subsection
+Immunosuppresion
+\end_layout
+
+\begin_layout Standard
+Most of the available immunosuppression methods have the disadvantage of
+ being non-specific, meaning they suppress immune reactions to all antigens,
+ not only ones of the graft, placing the recipient at the risk of infection.
+ Some drugs target the speed of proliferation of activated lymphocytes,
+ in doing so they slow down the proliferation of all cells in the body.
+ It may pose a problem in case of rapidly dividing cells of gut epithelia
+ or bone-marrow hematopoetic stem cells, placing patients at risk of serious
+ or even life threatening complications.
+ Long-term use of immunosuppressive agents place patients at risk of cancer,
+ hypertension and metabolic bone disease.
+ In this section we will cover used immunosuppressive methods.
+\end_layout
+
+\begin_layout Standard
+One class of drugs that is used are 
+\emph on
+mitotic inhibitors
+\emph default
+.
+ They inhibit rapid cell division in all cells.
+ They are given just before and after the transplantation to stop T-cell
+ proliferation.
+ Most commonly used mitotic inhibitors are Azathioprine, Cyclophosphamide
+ and Methotrexate.
+ But as they inhibit the division of all cells in the body, they might lead
+ to serious consequences.
+\end_layout
+
+\begin_layout Standard
+Another class of drugs that is commonly used and are given together with
+ mitotic inhibitors to prevent the acute rejection are 
+\emph on
+corticosteroids
+\emph default
+.
+ They are anti-inflammatory and act on different levels of immune response.
+ Commonly used corticosteroids are 
+\emph on
+prednisone
+\emph default
+ and 
+\emph on
+dexamethasone
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Fungal metabolites, such as Cyclosporine A (CsA), Tacrolimus, and rapamycin,
+ have potent immunosuppressive properties.
+ They are used in heart, liver, kidney and bone-marrow transplants.
+ Their disadvantage is that they are nephrotoxic, meaning they damage kidneys.
+ CsA have been popular but Tacrolimus and rapamycin are much more potent
+ and might be administered at much lower doses, minimising the side-effects.
+\end_layout
+
+\begin_layout Standard
+As lymphcytes are extremely sensitive to radiation, it can be used to eliminate
+ them just before the transplantation.
+ In one such procedure, lymph nodes, spleen and thymus are irradiated.
+ Later, newer, more tolerant to the graft alloantigens lymphocytes will
+ emerge, as the bone marrow wasn’t irradiated.
+\end_layout
+
+\begin_layout Standard
+Ideal immunossuppresion would be specific to the alloantigens of the graft,
+ keeping the recipient's ability to respond to the infections.
+ Such specific immunosuppression is not yet achieved in humans, but animal
+ models suggest its possibility.
 \end_layout
 
 \begin_layout Subsection
@@ -2567,35 +2672,26 @@ Taking into account the detrimental effect of long-term immunosuppression
  one of the primary objectives in transplantation is the induction of immunologi
 c non-responsiveness (tolerance) to an allograft.
  The are a couple a pathways of immune non-responsivenes generation described
- in literature, however it haven't gone further animal models yet.
-\end_layout
-
-\begin_layout Subsection
-Factors Influencing Rejection Beyond the Graft - Microbiome
-\end_layout
-
-\begin_layout Standard
-Human body is very complex system where every subsystem influences other
- subsystems and the whole system in general.
- It is clear that gut microbiome has a profound influence on immune system.
- It is possible microflora on the allograft might cause rejection.
- Immunosupression, profilactory antibbiotics, diet changes and other restriction
-s asossiated with organ transplantation result in decrease in gut microbiome
- diversity that result in systematic inflammation, that might contribute
- to alloimunnity, as well as autoimunnity.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add more factors or delete
-\end_layout
+ in literature, however it haven't gone further animal models yet 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
 
 \end_inset
 
+.
+ Tolerance is usually induced by prior exposure to donor antigens in a way
+ that causes immune tolerance, rather than sensitisation in the recipient
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
 
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Chapter
