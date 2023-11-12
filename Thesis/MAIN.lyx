@@ -2084,16 +2084,24 @@ There are three reasons why the immune system may react to the allograft:
  and reaction to MHC and miH antigens.
 \end_layout
 
+\begin_layout Paragraph
+Ischemia Reperfusion Injury
+\end_layout
+
 \begin_layout Standard
 The process of transplantation inevitably includes termination of blood
  flow, and, as a result, oxygenation.
- Therefore cell is unable to generate sufficient amount of energy to maintain
- homeostasis, leading to damage or death.
+ This interruption in blood supply impedes cell's ability to generate sufficient
+ amount of energy to maintain homeostasis, leading to cellular damage or
+ death.
  If this happens, the kidney is said to experience 
 \emph on
 ischemia reperfusion injury (IRI).
 
 \emph default
+ IRI is a signifficant factor in the success of kidney transplantation.
+ When the blood flow is restored to the ischemic kidney, dead cells trigger
+ an innate immune response.
  Cell damage or death are associated with the release of 
 \emph on
 danger associated molecular patterns
@@ -2102,8 +2110,8 @@ danger associated molecular patterns
 \emph on
 DAMP
 \emph default
-) that might be detected by both innate and adaptive immunity, the innate
- immunity is triggered the most.
+) that might be detected by both innate and adaptive immunity, although
+ the former is predominately activated.
  Such immune response might damage the graft even more and contribute to
  acute rejection 
 \begin_inset CommandInset citation
@@ -2114,18 +2122,28 @@ literal "false"
 \end_inset
 
 .
- Because of that the time of ischemia is crucial in predicting the graft
+ Because of that the duration of ischemia is crucial in predicting the graft
  (and patient) survival.
 \end_layout
 
+\begin_layout Paragraph
+Blood Group Compatibility
+\end_layout
+
 \begin_layout Standard
-ABO antigens are expressed by most cell types and if the transplantation
- between incompatible pair were performed, it would result in hyperacute
- antibody-mediated rejection.
- Due to that fact it is the first thing that is evaluated before performing
- the transplant.
- There are four major blood groups: A, B, O and AB.
- Donors with blood group O are so called 
+ABO blood group antigens, which are expressed by most cell types, play a
+ crucial role in the compatibility of organ transplants.
+ If the transplantation between incompatible pair were performed, it would
+ result in severe and often immediate reaction known as hyperacute antibody-medi
+ated rejection (AMR).
+ The rejection is so severe that that the compatibility of ABO blood groups
+ is the first thing that is evaluated before performing the transplant.
+ 
+\end_layout
+
+\begin_layout Standard
+There are four primary blood groups: A, B, O and AB.
+ Within this system, individuals with blood group O are so called 
 \begin_inset Quotes sld
 \end_inset
 
@@ -2135,28 +2153,22 @@ universal donors
 
  – organs from them can be safely transplanted to recipients with any ABO
  blood group.
- Whereas, recipient with AB group can safely receive organ from recipient
- with any ABO blood group and is called a 
+ Whereas, recipients with AB group can safely receive organ from recipients
+ with any ABO blood group and are called a 
 \begin_inset Quotes sld
 \end_inset
 
-universal recipient
+universal recipients
 \begin_inset Quotes srd
 \end_inset
 
 .
- In practice, however, recipients of organs from the deceased donors are
- given ABO identical organs to avoid 
-\begin_inset Quotes sld
-\end_inset
-
-inequity of access to organs
-\begin_inset Quotes srd
-\end_inset
-
-.
- This does not apply to living donors – organs of compatible blood group
- are given 
+ In clinical practice, however, particularly with the deceased donors, the
+ preference is to match organ recipients with ABO-identical organs to prevent
+ potential inequities in organ allocation and access.
+ The principle of ABO-identity is somewhat more flexible in case of living
+ donors, where organs from ABO-compatible donors are considered acceptable
+ for transplantation 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2167,20 +2179,27 @@ literal "false"
 .
 \end_layout
 
+\begin_layout Paragraph
+Histocompatibility
+\end_layout
+
 \begin_layout Standard
 Tissues that are genetically similar are referred to as 
 \emph on
 histocompatible
 \emph default
 .
- Tissues that display genetic differences are 
-\emph on
-histoincompatible
-\emph default
- and usually cause a rejection.
+ Histocompatibility implies a lower risk of immune reaction, as the immune
+ system does not recognize the transplanted tissue as foreign.
+ In contrast, histoincompatible tissues, which exhibit genetic differences,
+ are typically rejected by recipient's immune system.
  Over 40 different loci encode the antigens responsible for histocompatibility,
  yet the most intense allograft-rejection responses are attributed to loci
- within the major histocompatibility complex (MHC).
+ within the 
+\emph on
+major histocompatibility complex (MHC)
+\emph default
+.
  The organization of MHC in humans is called 
 \emph on
 human leykocyte antigen (HLA)
@@ -2396,6 +2415,10 @@ literal "false"
 .
 \end_layout
 
+\begin_layout Paragraph*
+HLA Typing and Matching
+\end_layout
+
 \begin_layout Standard
 In clinical practice, clinicians asses and try to match donors and recipient
  according to the number of HLA-A, -B, and -DR mismatches, ranging from
@@ -2486,6 +2509,10 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Paragraph
+Mechanisms of Graft Rejection
 \end_layout
 
 \begin_layout Standard
