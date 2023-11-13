@@ -1804,7 +1804,7 @@ or
  native)
 \emph default
  includes primitive built-in cellular and molecular mechanisms that provide
- rapid, albeit non-specific response to common pathogens.
+ rapid, albeit non-specific responses to common pathogens.
  In contrast, 
 \emph on
 adaptive (specific 
@@ -1826,17 +1826,17 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Physical barriers, including epithelia and mucous membranes constitute host's
- first line of defense and are a part of innate immunity.
- This branch of immune system not only prevents invaders from infiltrating
+Physical barriers, including epithelia and mucous membranes, constitute
+ the host's first line of defense and are a part of innate immunity.
+ This branch of the immune system not only prevents invaders from infiltrating
  the host but also quickly destroys many microbes that succeed in breaching
  these barriers.
- Innate immunity provides the neccessary protection until the adaptive immunity
+ Innate immunity provides the necessary protection until adaptive immunity
  is activated.
  It also communicates to the adaptive immunity how to best respond to the
  invader.
- Furthermore, innate immunity plays an important role in the clearence of
- dead tissue and the initiation of repair after the tissue was damaged 
+ Furthermore, innate immunity plays an important role in the clearance of
+ dead tissue and the initiation of repair after the tissue is damaged 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-6"
@@ -1877,7 +1877,7 @@ B cells)
 \emph on
 antigens
 \emph default
- — foreign molecular structures, identified by common molecular patterns
+ — foreign molecular structures identified by common molecular patterns
  known as 
 \emph on
 pathogen-associated molecular patterns
@@ -1902,8 +1902,8 @@ these
 \emph default
 PAMPs, which can take the form of molecules on the surface of a pathogen
  or its by-products.
- PRRs bind to PAMPs and initiate targeted cascade of events that culminate
- in pathogen's elimination 
+ PRRs bind to PAMPs and initiate a targeted cascade of events that culminate
+ in the pathogen's elimination 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-6"
@@ -1915,9 +1915,9 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-T cells, on the other hand, when encountering an antigen start to proliferate
- forming an army of T cells that will eliminate the invader and will form
- long-term memory about the pathogen.
+T lymphocytes, on the other hand, when encountering an antigen, start to
+ proliferate, forming an army of T cells that will eliminate the invader
+ and will form long-term memory about the pathogen.
  Activated T cells are divided into the following categories: helper T cells
  (
 \begin_inset Formula $CD4^{+}$
@@ -1956,10 +1956,10 @@ literal "false"
 Pathogen-host interaction is a continuous arms race, as pathogens usually
  have a short life cycle and can modify their DNA to elude the host's recognitio
 n systems.
- Immune system counters this with the generation of host-tolerant lymphocytes
- with diverse PRRs during the development in bone marrow.
+ The immune system counters this with the generation of host-tolerant lymphocyte
+s with diverse PRRs during the development in bone marrow.
  Cells that react to the host's own cells are eliminated, ensuring that
- only non-self reactive cells are allowed in circulation.
+ only non-self-reactive cells are allowed in circulation.
  The principle of recognizing self vs.
  non-self is called tolerance 
 \begin_inset CommandInset citation
@@ -2080,8 +2080,9 @@ Immune response to the graft
 
 \begin_layout Standard
 There are three reasons why the immune system may react to the allograft:
- Damage due to ischemia, reaction to the incompatible blood group antigens,
- and reaction to MHC and miH antigens.
+ damage due to ischemia, reaction to the incompatible blood group antigens,
+ and reaction to major histocompatibility complex (MHC) and minor histocompatibi
+lity (miH) antigens.
 \end_layout
 
 \begin_layout Paragraph
@@ -2184,15 +2185,18 @@ Histocompatibility
 \end_layout
 
 \begin_layout Standard
-Tissues that are genetically similar are referred to as 
+Tissues that are genetically similar, known as 
 \emph on
-histocompatible
+histocompatible,
 \emph default
-.
- Histocompatibility implies a lower risk of immune reaction, as the immune
+ are less likely to trigger an immune response post-transplant, as the immune
  system does not recognize the transplanted tissue as foreign.
- In contrast, histoincompatible tissues, which exhibit genetic differences,
- are typically rejected by recipient's immune system.
+ Conversely, 
+\emph on
+histoincompatible
+\emph default
+ tissues, which exhibit genetic differences, typically trigger an immune
+ response.
  Over 40 different loci encode the antigens responsible for histocompatibility,
  yet the most intense allograft-rejection responses are attributed to loci
  within the 
@@ -2209,9 +2213,7 @@ human leykocyte antigen (HLA)
 
 \begin_layout Standard
 Histocompatibility antigens are genetically encoded antigens that cover
- cell surfaces.
- They differ between individuals of the same species and therefore trigger
- an immune response in case of allograft.
+ cell surfaces and play an important role in recognizing self versus non-self.
  In all vertebraes histocompatibility antigens are divided into single 
 \emph on
 major histocompatibility complex
@@ -2225,33 +2227,12 @@ MHC
 minor histocompatibility
 \emph default
  (miH) systems.
- In case of either MHC or miH incompatibility the result is an immune response
- to the graft, more severe in case of MHC than miH.
+ Mismatches in either of them results in immune reaction, most severe in
+ case of MHC.
  Rejection in MHC-compatible donor-recipient pair is usually delayed, in
  some cases forever.
  Although, sometimes miH mismatch might be so severe that it would be comparable
- to full MHC mismatch.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-1"
-literal "false"
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-MHC antigens are proteins that cover cell surfaces to help the immune system
- to recognize self vs.
- non-self.
- Major histocompatibility complex is divided into MHC class I and MHC class
- II.
- MHC class I cover surfaces of most cells and are liable for activation
- of cytotoxic CD8 cells.
- MHC class II are found on certain immune cells and play crucial role in
- immune response coordination 
+ to MHC mismatch 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2260,8 +2241,24 @@ literal "false"
 \end_inset
 
 .
- In humans MHC classess are divided into three subgroups each, as can be
- seen on Table 
+ 
+\end_layout
+
+\begin_layout Standard
+The MHC itself is divided into class I and class II antigens.
+ MHC class I antigens cover surfaces of most cells and can activate cytotoxic
+ CD8 cells, while MHC class II antigens are found on certain immune cells
+ and play crucial role in immune response coordination 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
+
+\end_inset
+
+.
+ In humans, each MHC class is further divided into three subgroups, as can
+ be seen on Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:MHC-class-division"
@@ -2399,12 +2396,13 @@ HLA-DQ
 \end_layout
 
 \begin_layout Standard
-Mismatches of classes I and II are not created equal.
- Mismatch of one or two Class I antigens has little effect on graft survival.
- A single mismatch in Class II antigen is equivalent to mismatch of 3 or
- 4 Class I antigens.
- When both Class I and Class II antigens are mismatched the rejection is
- accelerated 
+It is important to note that mismatches of classes I and II have different
+ impact on graft survival.
+ Mismatch of one or two class I antigens has little effect on graft survival,
+ whereas a single mismatch in class II antigen is equivalent to mismatch
+ of 3 or 4 class I antigens.
+ When there are mismatches in both class I and class II antigens, the risk
+ and severity of the rejection are notably increased 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2443,8 +2441,8 @@ microcytotoxicity test
 \emph default
 .
  Subject's white blood cells are distributed into various wells on a microtiter
- plate and then antibodies for various class I and class II MHC alleles
- are added to different wells.
+ plate and then specific antibodies for various class I and class II MHC
+ alleles are added to different wells.
  After incubation, complement is added to the wells and the cytotoxicity
  is assessed by uptake or exclusion of various dyes.
  If a cell has MHC allele for which a particular antibody is specific, then
@@ -2461,54 +2459,40 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In case when a fully HLA-compatible donor is not available, the transplantation
+When a fully HLA-compatible donor is not available, the transplantation
  still can be successfull.
- In this situation, a one-way mixed-lymphocyte reaction (MLR) can be used
- to assess the degree of class II MHC compatibility.
+ In this situation, a one-way mixed-lymphocyte reaction (MLR) test can be
+ used to assess the degree of class II MHC compatibility.
  The irradiated (or treated with mitomicyn C) potential donor's lymphocytes
  play role of stimulator and normal recipient's lymphocytes take a responder
  role.
  Then the proliferation of recipient cells is measured.
  Intense proliferation of recipient leykocytes indicates poor prognosis
  for the graft survival.
- The advantage of MLR is that it gives better understanding of the degree
- of CD4 cell activation.
- The disadvantage is that it takes several days to run the assay making
- it unusable in case of cadaver transplantation.
- While 
+ The MLR gives better understanding of the degree of CD4 cell activation
+ but it takes several days to run the assay, often making it less suitable
+ in case of cadaver transplantation compared to quicker 
 \emph on
-microcytotoxicity test
+microcytotoxicity test, 
 \emph default
- takes only a couple of hours and is usually used for that.
- HLA matching is the most important for kidney and bone-marrow transplantation.
- Heart and liver transplants can withstand greater levels of mismatching
+which takes only a couple of hours.
+ Notably, even perfect HLA matching does not guarantee the rejection-free
+ transplantation.
+ Minor histocompatibility loci mismatches can still lead to graft rejection,
+ necessitating at least some degree of immunosuppression even in HLA-identical
+ pairings.
+ This is particularly critical in kidney and bone-marrow transplants, where
+ HLA matching is vital, whereas heart and liver transplantation can withstand
+ greater levels of mismatching 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
  
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Even perfect HLA matching does not guarantee the absence of rejection.
- Organs might be rejected because of differences in minor histocompatibility
- loci.
- The reaction to these mismatches is less vigorous than to MHC, but it still
- can result in graft rejection.
- For this reason, even in HLA-identical donor recipient pairs some degree
- of immunosuppresion is required 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Paragraph
@@ -2516,12 +2500,15 @@ Mechanisms of Graft Rejection
 \end_layout
 
 \begin_layout Standard
-Graft rejection is caused by cell-mediated immune response to alloantigens
- (primarily MHC) expressed on the cells of the graft.
- The process of cell-mediated graft rejection is divided into two steps:
- Sensitisation phase, in which helper CD4 and killer CD8 recognize MHC and
- miH alloantigens expressed on the cells of the graft and start to proliterate.
- Effector stage in which immune destruction takes place 
+Graft rejection is primarily a consequence of cell-mediated immune response
+ to alloantigens, predominantly MHC antigens, present on the cells of the
+ graft.
+ The process of cell-mediated graft rejection is divided into two phases.
+ The first is known as the sensitisation phase, involves the recognition
+ of MHC and miH alloantigens by helper CD4 and killer CD8 cells, leading
+ to their proliferation.
+ The second stage, the effector stage, is where the actual destruction of
+ the graft occurs 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2534,10 +2521,10 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-A range of effector mechanisms participate in graft rejection.
+A range of effector mechanisms are involved in graft rejection.
  The most common are cell-mediated reactions involving delayed-type hypersensiti
 vity and cytotoxic T lymphocyte mediated cytotoxicity.
- Less common mechanism are antibody-plus-complement lysis (cell disintegration)
+ Less common mechanisms are antibody-plus-complement lysis (cell disintegration)
  and destruction by antibody-dependent cell-mediated cytotoxicity (ADCC)
  
 \begin_inset CommandInset citation
@@ -2548,15 +2535,6 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-not sure I need these particular mechanisms
-\end_layout
-
-\end_inset
-
  
 \end_layout
 
@@ -2565,9 +2543,9 @@ Clinical Manifestations of Graft Rejection
 \end_layout
 
 \begin_layout Standard
-Graft rejection happens in different time-frames depending of the organ
- transplanted and the immune response involved.
- 
+The onset and severity of graft rejection varies depending of the organ
+ transplanted and the underlying immune response mechanisms involved.
+ There are three types of rejection: hyperacute, acute and chronic rejections.
 \end_layout
 
 \begin_layout Standard
@@ -2575,20 +2553,25 @@ Graft rejection happens in different time-frames depending of the organ
 \emph on
 Hyperacute rejection
 \emph default
-s occur within first 24 hours post-transplant.
- It happens due to the prior sensitisation to graft antigens.
- Antibodies specific to the graft are present in the recipient blood stream.
+s occur within the first 24 hours post-transplant.
+ This form of rejection is attributed to the prior sensitisation to graft
+ antigens, with specific antibodies already present in the blood stream.
  It may happen due to a several reasons: recipients of repeated blood transfusio
 ns sometimes develop signifficant amount of antibodies to MHC antigens present
- on white blood cells from the transfused blood.
- If these antigens are similar to ones in the graft, the hyperacute rejection
- may take place; with repeated pregnancies women are exposed to paternal
- alloantigens of the fetus and may develop antibodies to them; individuals
- who had previous grafts may have antibodies to alloantigens of that graft;
- antibodies to antigens specific to blood group type are always present
- and don't need prior sensitisation.
- rejections of that sort usually do not happen now, as ABO blood group matching
- is performed prior to transplantation.
+ on white blood cells of the transfused blood; women, through repeated pregnanci
+es, can become sensitized to paternal alloantigens of the fetus; individuals
+ with previous grafts may have antibodies against alloantigens of that graft;
+ and naturally occuring antibodies to blood group antigens are always present,
+ although pre-transplant blood group mathing has made rejections of this
+ nature rare 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2596,22 +2579,39 @@ ns sometimes develop signifficant amount of antibodies to MHC antigens present
 \emph on
 Acute rejection
 \emph default
-s happen during first few weeks post-transplant.
- It is performed by adaptive immunity via T cell-mediated rejection.
+s typically happen within the first few weeks post-transplant.
+ This type of rejection is primarily mediated by adaptive immunity via T
+ cell responses 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 
 \emph on
-Chronic rejections
+Chronic rejections, 
 \emph default
- happen from months to years after the transplantation.
+on the other hand, happen from months to years after the transplantation.
  It is mediated by both humoral and cell-mediated mechanisms.
  While the advancements in immunosuppression and tissue typing significantly
  improve short-term survival, little progress has been made in terms of
  long-term survival.
  Chronic rejections are hard to manage with immunosuppressants and may necessita
-te another transplantation.
+te another transplantation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2619,17 +2619,20 @@ Immunosuppresion
 \end_layout
 
 \begin_layout Standard
-Most of the available immunosuppression methods have the disadvantage of
- being non-specific, meaning they suppress immune reactions to all antigens,
- not only ones of the graft, placing the recipient at the risk of infection.
- Some drugs target the speed of proliferation of activated lymphocytes,
- in doing so they slow down the proliferation of all cells in the body.
- It may pose a problem in case of rapidly dividing cells of gut epithelia
- or bone-marrow hematopoetic stem cells, placing patients at risk of serious
- or even life threatening complications.
- Long-term use of immunosuppressive agents place patients at risk of cancer,
- hypertension and metabolic bone disease.
- In this section we will cover used immunosuppressive methods.
+Most of the available immunosuppression methods, while essential in preventing
+ graft rejections, have the disadvantage of being non-specific, meaning
+ they suppress immune reactions to all antigens, not only ones of the graft,
+ placing the recipient at the risk of infection and, in some cases, more
+ severe complications.
+ For instance, some drugs target the speed of proliferation of activated
+ lymphocytes, in doing so they slow down the proliferation of all cells
+ in the body.
+ It can be particularly problematic for rapidly dividing cells, such as
+ those of gut epithelia or bone-marrow hematopoetic stem cells, placing
+ patients at risk of serious or even life-threatening complications.
+ Moreover, long-term use of immunosuppressive agents place patients at risk
+ of cancer, hypertension and metabolic bone disease.
+ In this section we will delve into commonly used immunosuppressive methods.
 \end_layout
 
 \begin_layout Standard
@@ -2638,23 +2641,27 @@ One class of drugs that is used are
 mitotic inhibitors
 \emph default
 .
- They inhibit rapid cell division in all cells.
- They are given just before and after the transplantation to stop T-cell
- proliferation.
- Most commonly used mitotic inhibitors are Azathioprine, Cyclophosphamide
+ They inhibit rapid cell division in 
+\emph on
+all
+\emph default
+ cells and are administered just before and after the transplantation to
+ stop T-cell proliferation.
+ Most commonly used mitotic inhibitors include Azathioprine, Cyclophosphamide
  and Methotrexate.
- But as they inhibit the division of all cells in the body, they might lead
- to serious consequences.
+ However, their broad action on cell division can lead to signifficant adverse
+ effects.
 \end_layout
 
 \begin_layout Standard
-Another class of drugs that is commonly used and are given together with
- mitotic inhibitors to prevent the acute rejection are 
+
 \emph on
-corticosteroids
+Corticosteroids,
 \emph default
-.
- They are anti-inflammatory and act on different levels of immune response.
+ another class of drugs often used in conjunction with mitotic inhibitors
+ to prevent acute rejection.
+ They have anti-inflammatory properties and act on different levels of immune
+ response.
  Commonly used corticosteroids are 
 \emph on
 prednisone
@@ -2667,27 +2674,27 @@ dexamethasone
 \end_layout
 
 \begin_layout Standard
-Fungal metabolites, such as Cyclosporine A (CsA), Tacrolimus, and rapamycin,
- have potent immunosuppressive properties.
- They are used in heart, liver, kidney and bone-marrow transplants.
- Their disadvantage is that they are nephrotoxic, meaning they damage kidneys.
- CsA have been popular but Tacrolimus and rapamycin are much more potent
- and might be administered at much lower doses, minimising the side-effects.
+Fungal metabolites, such as Cyclosporine A (CsA), Tacrolimus, and rapamycin
+ are also widely used due to their potent immunosuppressive properties in
+ heart, liver, kidney and bone-marrow transplants.
+ A major drawback is their nephrotoxicity.
+ While CsA has been popular, Tacrolimus and rapamycin, being much more potent,
+ might be administered at much lower doses, minimising the side-effects.
 \end_layout
 
 \begin_layout Standard
-As lymphcytes are extremely sensitive to radiation, it can be used to eliminate
- them just before the transplantation.
+Radiation, due to its effectiveness in destroying lymphocytes, is another
+ method used to eliminate them before transplantation.
  In one such procedure, lymph nodes, spleen and thymus are irradiated.
  Later, newer, more tolerant to the graft alloantigens lymphocytes will
- emerge, as the bone marrow wasn’t irradiated.
+ emerge, as the bone marrow wasn’t affected.
 \end_layout
 
 \begin_layout Standard
-Ideal immunossuppresion would be specific to the alloantigens of the graft,
- keeping the recipient's ability to respond to the infections.
+Ideal immunossuppresion would be antigen-specific, targeting only alloantigens
+ of the graft, preserving the recipient's ability to respond to infections.
  Such specific immunosuppression is not yet achieved in humans, but animal
- models suggest its possibility.
+ models suggest its feasibility.
 \end_layout
 
 \begin_layout Subsection
@@ -2698,7 +2705,7 @@ Transplant Tolerance
 Taking into account the detrimental effect of long-term immunosuppression
  one of the primary objectives in transplantation is the induction of immunologi
 c non-responsiveness (tolerance) to an allograft.
- The are a couple a pathways of immune non-responsivenes generation described
+ The are several pathways of immune non-responsivenes generation described
  in literature, however it haven't gone further animal models yet 
 \begin_inset CommandInset citation
 LatexCommand cite
