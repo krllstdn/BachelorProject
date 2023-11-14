@@ -1023,6 +1023,197 @@ pagestyle{headings}
 
 \end_layout
 
+\begin_layout Section
+Why Kidneys Fail
+\end_layout
+
+\begin_layout Standard
+Kidneys are bean-shaped reddish-brown organs that filter blood from waste
+ products, regulate blood pressure, help in the production of red blood
+ cells, maintain the correct amount of fluid in the body.
+ Most people have two kidneys on both sides of the spine under the lower
+ ribs.
+ Every minute about one liter of blood is filtered.
+ Each kidney is comprised of about 1 million small nephrons.
+ Each nephron is made of a very small filter called 
+\emph on
+glomerulus
+\emph default
+ that is attached to a tubule.
+ Blood is filtered in the nephrons that filters out waste products and excretes
+ them with a small amount of fluid as urine.
+ Urine flows through a ureter into the bladder.
+ urine passes from the bladder through uretra out of the body 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-33"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A healthy kidney can considerably increase its work capacity.
+ Each kidney performs 50% of the normal kidney function.
+ In case one kidney is lost, the remaining one can extend its capacity up
+ to 75% of normal kidney function.
+ The kidney function is measured with so-called 
+\emph on
+glomerular filtration rate (GFR)
+\emph default
+ that can also be estimated with a mathematical formula 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-33"
+literal "false"
+
+\end_inset
+
+.
+ This estimated value is called 
+\emph on
+estimated GFR
+\emph default
+ (or 
+\emph on
+eGFR
+\emph default
+).
+ A GFR of 100 corresponds to a 100% kidney function, but normally the higher,
+ the better 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-33"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Chronic Kidney Disease
+\end_layout
+
+\begin_layout Standard
+Chronic kidney disease (CKD) is a common condition characterized by a gradual
+ loss of kidney function over time with no cure 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-34,key-35"
+literal "false"
+
+\end_inset
+
+.
+ Diabetes and high blood pressure are responsible for the majority of cases
+ of chronic kidney disease 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-34"
+literal "false"
+
+\end_inset
+
+.
+ High blood sugar tends to damage glomeruli, hindering kidney function 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-34"
+literal "false"
+
+\end_inset
+
+.
+ High blood pressure damages kidney blood vessels, impeding blood pressure
+ regulation and creating a negative feedback loop 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-37"
+literal "false"
+
+\end_inset
+
+.
+ Although, it is till unclear what causes what: high blood pressure damages
+ kidneys and starts the loop, or kidney damage increases blood pressure
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-35"
+literal "false"
+
+\end_inset
+
+.
+ One thing is clear — they are connected.
+\end_layout
+
+\begin_layout Standard
+There are 5 stages of CKD.
+ First being mild and culminating in 
+\emph on
+kidney failure
+\emph default
+ or 
+\emph on
+end-stage renal disease (ESRN), 
+\emph default
+where kidneys cease their function fully.
+ Such condition can be treated only by dialysis or kidney transplant.
+ Dialysis is a machine meant to replace the kidney function.
+ However it can't do it fully and the expected life expectancy of people
+ on dialysis is in average 5-10 years, however some might live 20-30 years
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-36"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The other option is kidney transplantation.
+ There is usually a long wait to receive a compatible kidney, however, if
+ person has a living donor willing to sacrifice his kidney the process can
+ go faster.
+ Transplantation necessitates the use of immunosuppressants, which have
+ their own side effects 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-36"
+literal "false"
+
+\end_inset
+
+.
+ More on transplantation in the following sections.
+\end_layout
+
+\begin_layout Standard
+Other reasons for kidney failure include heavy metal poisoning, polycystic
+ kidney disease, an infection, nephrotoxic drug, lupus, physical injury,
+ etc 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-36,key-37"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Clinical Aspects of Kidney Transplantation 
+\end_layout
+
 \begin_layout Standard
 \begin_inset Note Note
 status open
@@ -1035,10 +1226,6 @@ The citation at the end of a paragraph indicates that the whole paragraph
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Clinical Aspects of Kidney Transplantation 
 \end_layout
 
 \begin_layout Standard
@@ -1139,31 +1326,6 @@ In summary kidney transplantation has become a vital and frequent medical
  failure.
  The procedure, while simpler than other organ tranplants has its own set
  of challenges.
-\end_layout
-
-\begin_layout Section
-Why kidneys fail
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Diabetes
-\end_layout
-
-\begin_layout Plain Layout
-Pollutants
-\end_layout
-
-\begin_layout Plain Layout
-Cronic Kidney disease
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -1709,10 +1871,9 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Newline linebreak
-\end_inset
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -1982,19 +2143,6 @@ In conclusion, the immune system is a complex network of molecules, cells,
  the domain of kidney transplantation.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-grammarly!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Immunology of Kidney Transplant 
 \begin_inset CommandInset label
@@ -2072,6 +2220,17 @@ literal "false"
 \end_inset
 
 .
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+idk if this the right start of the section
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2726,6 +2885,19 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+write some conclusion to the chapter
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -4837,7 +5009,7 @@ censoring
  approaches to survival data impractical 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-27"
+key "key-38"
 literal "false"
 
 \end_inset
@@ -5657,7 +5829,7 @@ machine learning based
  the estimated survival time 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5669,7 +5841,7 @@ literal "false"
  Typically, statistical methods are employed for low-dimensional data 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5685,7 +5857,7 @@ On the other hand, machine learning methods focus on the prediction of the
  Machine learning methods are mostly used with high-dimensional data 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5704,7 +5876,7 @@ Statistical methods can be further subdivided based on their assumptions
  learning, and multitask learning are included as well 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5763,7 +5935,7 @@ Non-parametric methods
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5780,7 +5952,7 @@ literal "false"
  hazard functions 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5817,7 +5989,7 @@ noprefix "false"
  algorithm, and the Time-Dependent Cox model 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5842,7 +6014,7 @@ Parametric methods
  The AFT model represents survival time as a function of covariates 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5970,7 +6142,7 @@ literal "false"
 product-limit method 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -6384,7 +6556,7 @@ LL(\beta)=-\sum_{j=1}^{N}\delta_{j}\{X_{j}\beta-log[\sum_{i\epsilon R_{j}}exp(X_
 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -6504,7 +6676,7 @@ ridge regression.
  is set to zero, we get the regular Cox model 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-37"
 literal "false"
 
 \end_inset
@@ -6597,7 +6769,7 @@ alpha_min_ratio=0.01
  values up to 1% of the estimated maximum 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-37"
 literal "false"
 
 \end_inset
@@ -6691,7 +6863,7 @@ Similar to LASSO, the weight
  Its optimal value is typically estimated in a data-driven way 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-37"
 literal "false"
 
 \end_inset
@@ -6726,7 +6898,7 @@ To conclude, Ridge, LASSO, and Elastic Net offer powerful extensions of
  model.
  Nevertheless, it is important to acknowledge their limitations.
  As linear models, they inherently capture only linear relationships, and
- non-linear relationships are enigma to them.
+ non-linear relationships remain uncaptured.
  That leads us to the next section dedicated to the Random Survival Forests,
  a machine learning approach.
  Machine learning techniques are known for their ability to catch complex
@@ -6778,7 +6950,7 @@ Survival Trees
  a given feature that maximizes the survival difference 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-26"
+key "key-39"
 literal "false"
 
 \end_inset
@@ -6838,7 +7010,7 @@ For each tree, calculate the cumulative hazard function with the Nelson-Aalen
 Use OOB data to determine the prediction error of the ensemble 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-27"
+key "key-38"
 literal "false"
 
 \end_inset
@@ -6900,7 +7072,7 @@ Calibration
  is the agreement between the observed and predicted survival times 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-34"
 literal "false"
 
 \end_inset
@@ -6915,7 +7087,7 @@ The absence of bias in a situation when the validation set contains censored
  would be unreasonably optimistic 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-34"
 literal "false"
 
 \end_inset
@@ -6963,7 +7135,7 @@ Measures of concordance
  discrimination 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-34"
 literal "false"
 
 \end_inset
@@ -7003,7 +7175,7 @@ C-index
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-34"
 literal "false"
 
 \end_inset
@@ -7069,7 +7241,7 @@ literal "false"
  and may provide more stable estimates 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-34"
 literal "false"
 
 \end_inset
@@ -7128,7 +7300,7 @@ where
 According to the Scikit-survival's documentation 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-35"
 literal "false"
 
 \end_inset
@@ -7138,7 +7310,7 @@ literal "false"
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-34"
 literal "false"
 
 \end_inset
@@ -7212,7 +7384,7 @@ area under the receiver operating characteristic curve
  can distinguish diseased patients from healthy ones 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-35"
 literal "false"
 
 \end_inset
@@ -7326,7 +7498,7 @@ dynamic controls
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-35"
 literal "false"
 
 \end_inset
@@ -7353,7 +7525,7 @@ Time-dependent ROC AUC and concordance index are great for assessing the
  tell us nothing about the accuracy of individual predictions 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-35"
 literal "false"
 
 \end_inset
@@ -7421,7 +7593,7 @@ x
  is the inverse probability of censoring weight 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-35"
 literal "false"
 
 \end_inset
@@ -7754,7 +7926,7 @@ In this chapter we age going to look into the UNOS dataset.
 
 \begin_layout Standard
 The dataset provided by the IKEM (Institute of Clinical and Experimental
- Medicine in Prague) that I had from the beginning was not suitable for
+ Medicine in Prague) that we had from the beginning was not suitable for
  any meaningful analysis.
  That is why it was decided to look for the dataset elsewhere.
 \end_layout
@@ -7788,7 +7960,7 @@ give a link to the UNOS website
 
 \begin_layout Standard
 The dataset consists of 993 806 of records for both transplanted patients
- and ones from teh waiting list, and 450 features comprised of waiting list
+ and ones from the waiting list, and 450 features comprised of waiting list
  data and already transplanted patients for kidney and pancreas transplant
  from October 1, 1987 to the present.
  Kidney transplants have 490 172 records.
@@ -8135,10 +8307,18 @@ The data were provided in a form of a MongoDB database dump.
  So it was necessary to run the database first and import the database dump
  there.
  We set up the database in a Docker container (Docker is container management
- system + 
+ system
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
++ 
 \series bold
 explain what is container
-\series default
+\end_layout
+
+\end_inset
+
 ) locally on my Mac, as the university cluster unfortunatelly does not have
  Docker.
  The data from the database and table kidpan were then exported to CSV,
@@ -9195,7 +9375,7 @@ noprefix "false"
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-20"
+key "key-33"
 literal "false"
 
 \end_inset
@@ -9495,7 +9675,7 @@ classification
 r based on them, as it was done by ....
  et al..
  And again, we would face problems of censoring and bias mentioned above.
- So the classification is also not the best option.
+ So the classification is not the best option as well.
  
 \end_layout
 
@@ -9924,11 +10104,21 @@ noprefix "false"
  designed to imitate the GridSearchCV but without the k-fold cross-validation.
  The script optimizes for the Integrated Brier Score (IBS) that directly
  tells the accuracy of predictions.
- The script can be found: here (
+ The script can be found: here
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(
 \series bold
 add link
 \series default
-).
+)
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -12620,7 +12810,116 @@ literal "false"
  Freeman; 2007.
 \end_layout
 
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-33"
+literal "false"
+
+\end_inset
+
+Health.
+ (2022).
+ Kidneys.
+ Vic.gov.au.
+ https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/kidneys
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-34"
+literal "false"
+
+\end_inset
+
+‌Facts About Chronic Kidney Disease.
+ (2020, May 15).
+ National Kidney Foundation; https://www.kidney.org/atoz/content/about-chronic-kid
+ney-disease
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-35"
+literal "false"
+
+\end_inset
+
+‌Kamyar Kalantar-Zadeh, Jafar, T.
+ H., Nitsch, D., Neuen, B.
+ L., & Perkovic, V.
+ (2021).
+ Chronic kidney disease.
+ The Lancet, 398(10302), 786–802.
+ https://doi.org/10.1016/s0140-6736(21)00519-5
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-36"
+literal "false"
+
+\end_inset
+
+‌Holland, K.
+ (2019, May 23).
+ Everything You Need to Know About Kidney Failure.
+ Healthline; Healthline Media.
+ https://www.healthline.com/health/kidney-failure#outlook
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-37"
+literal "false"
+
+\end_inset
+
+‌Causes of chronic kidney disease.
+ (2022, August 29).
+ National Institute of Diabetes and Digestive and Kidney Diseases; NIDDK
+ - National Institute of Diabetes and Digestive and Kidney Diseases.
+ https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease
+-ckd/causes
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-38"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-39"
+literal "false"
+
+\end_inset
+
+‌
+\end_layout
+
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The bug probably ruined some citations and will continue to ruin new ones
+ on the addition
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
