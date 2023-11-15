@@ -1024,26 +1024,25 @@ pagestyle{headings}
 \end_layout
 
 \begin_layout Section
-Why Kidneys Fail
+Kidney — An Overview
 \end_layout
 
 \begin_layout Standard
-Kidneys are bean-shaped reddish-brown organs that filter blood from waste
- products, regulate blood pressure, help in the production of red blood
- cells, maintain the correct amount of fluid in the body.
- Most people have two kidneys on both sides of the spine under the lower
- ribs.
- Every minute about one liter of blood is filtered.
- Each kidney is comprised of about 1 million small nephrons.
- Each nephron is made of a very small filter called 
+Kidneys, essential reddish-brown, bean-shaped organs located on both sides
+ of the spine beneath the lower ribs, perform critical functions, such as
+ filtering blood, regulating blood pressure, aiding red blood cell production,
+ and maintaining fluid balance.
+ Each minute, about one liter of blood is filtered.
+ Structurally, a kidney consists of about 1 million 
+\emph on
+nephrons
+\emph default
+, each consisting of a small filter called a 
 \emph on
 glomerulus
 \emph default
- that is attached to a tubule.
- Blood is filtered in the nephrons that filters out waste products and excretes
- them with a small amount of fluid as urine.
- Urine flows through a ureter into the bladder.
- urine passes from the bladder through uretra out of the body 
+, attached to a tubule, responsible for filtering waste products from the
+ blood and excreting them with small amounts of fluid as urine 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-33"
@@ -1055,15 +1054,14 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-A healthy kidney can considerably increase its work capacity.
- Each kidney performs 50% of the normal kidney function.
- In case one kidney is lost, the remaining one can extend its capacity up
- to 75% of normal kidney function.
- The kidney function is measured with so-called 
+Each kidney performs 50% of the normal kidney function.
+ However, if one kidney is lost, the remaining kidney can adapt, increasing
+ its capacity to as much as 75% of normal function.
+ The 
 \emph on
 glomerular filtration rate (GFR)
 \emph default
- that can also be estimated with a mathematical formula 
+ measures kidney function 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-33"
@@ -1072,134 +1070,35 @@ literal "false"
 \end_inset
 
 .
- This estimated value is called 
+ There are two types of GFR: 
 \emph on
-estimated GFR
+measured GFR (mGFR)
 \emph default
- (or 
+ and 
 \emph on
-eGFR
+estimated GFR (eGFR)
 \emph default
-).
- A GFR of 100 corresponds to a 100% kidney function, but normally the higher,
- the better 
+.
+ Measuring mGFR is a problematic and lengthy process, so healthcare practitioner
+s use a formula to calculate eGFR.
+ An eGFR of 90 and above is the normal range.
+ An eGFR of 15-89 is a range for different stages of chronic kidney disease.
+ Values below 15 might indicate renal failure 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-33"
+key "key-38"
 literal "false"
 
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Paragraph
-Chronic Kidney Disease
 \end_layout
 
 \begin_layout Standard
-Chronic kidney disease (CKD) is a common condition characterized by a gradual
- loss of kidney function over time with no cure 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-34,key-35"
-literal "false"
-
-\end_inset
-
-.
- Diabetes and high blood pressure are responsible for the majority of cases
- of chronic kidney disease 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-34"
-literal "false"
-
-\end_inset
-
-.
- High blood sugar tends to damage glomeruli, hindering kidney function 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-34"
-literal "false"
-
-\end_inset
-
-.
- High blood pressure damages kidney blood vessels, impeding blood pressure
- regulation and creating a negative feedback loop 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-37"
-literal "false"
-
-\end_inset
-
-.
- Although, it is till unclear what causes what: high blood pressure damages
- kidneys and starts the loop, or kidney damage increases blood pressure
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-35"
-literal "false"
-
-\end_inset
-
-.
- One thing is clear — they are connected.
-\end_layout
-
-\begin_layout Standard
-There are 5 stages of CKD.
- First being mild and culminating in 
-\emph on
-kidney failure
-\emph default
- or 
-\emph on
-end-stage renal disease (ESRN), 
-\emph default
-where kidneys cease their function fully.
- Such condition can be treated only by dialysis or kidney transplant.
- Dialysis is a machine meant to replace the kidney function.
- However it can't do it fully and the expected life expectancy of people
- on dialysis is in average 5-10 years, however some might live 20-30 years
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-36"
-literal "false"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-The other option is kidney transplantation.
- There is usually a long wait to receive a compatible kidney, however, if
- person has a living donor willing to sacrifice his kidney the process can
- go faster.
- Transplantation necessitates the use of immunosuppressants, which have
- their own side effects 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-36"
-literal "false"
-
-\end_inset
-
-.
- More on transplantation in the following sections.
-\end_layout
-
-\begin_layout Standard
-Other reasons for kidney failure include heavy metal poisoning, polycystic
- kidney disease, an infection, nephrotoxic drug, lupus, physical injury,
- etc 
+Impairment in kidney function can have serious health consequences.
+ There are many reasons why kidneys may become dysfunctional, such as chronic
+ kidney disease, heavy metal poisoning, polycystic kidney disease, an infection,
+ nephrotoxic drugs, lupus, physical injury, and so on 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36,key-37"
@@ -1208,6 +1107,92 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+Let us consider one of them in a bit more detail.
+ 
+\emph on
+Chronic kidney disease (CKD)
+\emph default
+ is an incurable condition characterized by a gradual reduction in kidney
+ function over time 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-34,key-35"
+literal "false"
+
+\end_inset
+
+.
+ About 10% of the population worldwide is affected by some form of chronic
+ kidney disease 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-35"
+literal "false"
+
+\end_inset
+
+.
+ Diabetes and high blood pressure are responsible for the majority of cases
+ of chronic kidney disease, with high blood sugar damaging the glomeruli
+ and high blood pressure damaging the kidney blood vessels 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-34,key-37"
+literal "false"
+
+\end_inset
+
+.
+ The latter interaction creates a negative feedback loop, where it is unclear
+ whether kidney damage causes high blood pressure or vice versa 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-35"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+CKD progresses in 5 stages, ultimately culminating in 
+\emph on
+end-stage renal disease (ESRD)
+\emph default
+, where kidneys fail.
+ Treatment options include dialysis, a mechanical process that substitutes
+ kidney function but cannot fully replicate it, leading to a reduced life
+ expectancy of, on average, 5 to 10 years.
+ Alternatively, kidney transplantation offers a more permanent solution
+ but requires a compatible donor, waiting for which can take many months
+ or years, and the use of immunosuppressants after the transplantation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-36"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In conclusion, the kidneys play an essential role in maintaining overall
+ health with their ability to filter waste, regulate blood pressure, and
+ balance fluids.
+ Chronic kidney disease, resulting from various causes such as diabetes
+ and hypertension, progressively impairs these functions, leading to end-stage
+ renal disease.
+ While dialysis offers temporary relief, it cannot fully substitute for
+ a healthy kidney, which brings us to the crucial role of kidney transplantation.
+ Kidney transplantation offers a more conclusive and sustainable solution
+ for patients with ESRD, albeit accompanied by challenges related to donor
+ compatibility, surgical procedures, and life-long immunosuppression, which
+ will be discussed in the subsequent section.
 \end_layout
 
 \begin_layout Section
@@ -1230,15 +1215,15 @@ The citation at the end of a paragraph indicates that the whole paragraph
 
 \begin_layout Standard
 Kidney transplantation stands as the most commonly performed organ transplant
- globally.
- Many diseases, such as diabetes and nephritis, result in chronic renal
- failure, which can be treated with transplantation.
- Unlike organs such as liver and heart, kidneys are relatively easier to
- transplant, contributing to its frequency of transplantation.
+ worldwide.
+ This prevalence is partly due to the high incidence of diseases such as
+ diabetes or chronic kidney disease, which often lead to chronic renal failure.
+ Unlike organs such as the liver and heart, kidney transplantation is relatively
+ straightforward, contributing to its frequency of transplantation.
  Kidneys can be obtained from both deceased and living donors - relatives
  or altruistic volunteers.
- Living donors can donate one kidney and continue to lead normal, healthy
- lives, signifficantly expanding the potential donor pool 
+ Living donors can donate one kidney and continue to lead normal and healthy
+ lives, significantly expanding the potential donor pool 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -1251,12 +1236,12 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The importance of ABO blood group and histocompatibility matchings for kidney
- transplantation cannot be overstated, as kidney is a heavily vascularized
+ABO blood group and histocompatibility matchings for kidney transplantation
+ are of utmost importance, especially since the kidney is a heavily vascularized
  organ.
- Proper matching reduces the risk of rejection and improves the transplant
- outcomes.
- Compared to organs as the liver or bone marrow, kidneys do not present
+ Proper matching substantially reduces the risk of rejection and improves
+ transplant outcomes.
+ Compared to organs such as the liver or bone marrow, kidneys do not present
  additional challenges such as graft versus host disease (GVHD), simplifying
  the transplantation process 
 \begin_inset CommandInset citation
@@ -1270,13 +1255,14 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-However kidney transplantation is not without its challenges.
- Two major issues confront potential recipients: the short supply of available
- organs and the risk of sensitisation following a failed first transplant,
+However, kidney transplantation, despite its advances, faces significant
+ challenges.
+ Two critical issues confront potential recipients: the scarcity of available
+ organs and the risk of sensitization following a failed first transplant,
  decreasing the pool of available donors even further.
- It this case the immune system develops antibodies to the alloantigens
- present on the graft and any further transplantation of organs with similar
- antigens will result in hyperacute rejection.
+ In such cases, the immune system develops antibodies to the graft alloantigens,
+ and any further transplantation of organs with similar antigens will result
+ in hyperacute rejection.
  This fact often leaves many patients unable to find a compatible donor
  after one or two rejection episodes 
 \begin_inset CommandInset citation
@@ -1292,8 +1278,8 @@ literal "false"
 \begin_layout Standard
 Recipients of kidney transplants typically require life-long immunosuppression.
  While these medications are essential to prevent organ rejection, they
- come with serious side-effects, such as increased risk of cancer, hypertension
- and metabolic bone disease 
+ are associated with severe side effects, such as increased risk of cancer,
+ hypertension, and metabolic bone disease 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -1308,8 +1294,8 @@ literal "false"
 Given the high incidence of renal failure in diabetic patients - affecting
  roughly 30% of individuals with advanced diabetes - simultaneous kidney
  and pancreas transplants are sometimes performed.
- This approach addresses both the renal failure and the underlying diabetes,
- offering a comprehensive solution for these patients 
+ This approach addresses renal failure and underlying diabetes, offering
+ a comprehensive solution for these patients 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -1321,15 +1307,21 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In summary kidney transplantation has become a vital and frequent medical
- procedure, offering improved quality of life to many suffering the renal
+In summary, kidney transplantation has become a vital and frequent medical
+ procedure, offering improved quality of life to many suffering from kidney
  failure.
- The procedure, while simpler than other organ tranplants has its own set
- of challenges.
+ The procedure, while simpler than other organ transplants, has its own
+ set of challenges.
+ The following section will delve into the history of kidney transplantation,
+ showing its path from the initial daring experiments to the most frequently
+ performed organ transplantation today.
+ The historical perspective will provide insights into the advancements
+ in surgical techniques, immunosuppressive therapy, and donor-recipient
+ matching that have shaped the current state of kidney transplantation.
 \end_layout
 
 \begin_layout Section
-The history of kidney transplantation 
+The History of Kidney Transplantation 
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:history-of-kidney-transplantation"
@@ -1428,19 +1420,6 @@ tion.
 
 \begin_layout Subsection*
 Early Human Transplantation
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-also better to define warm ischemia
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -12895,7 +12874,9 @@ literal "false"
 
 \end_inset
 
-
+Estimated Glomerular Filtration Rate (eGFR).
+ (2015, December 24).
+ National Kidney Foundation; https://www.kidney.org/atoz/content/gfr
 \end_layout
 
 \begin_layout Bibliography
@@ -12906,12 +12887,16 @@ literal "false"
 
 \end_inset
 
-‌
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
 status open
+
+\begin_layout Plain Layout
+the following bad citation: 30
+\end_layout
 
 \begin_layout Plain Layout
 The bug probably ruined some citations and will continue to ruin new ones
