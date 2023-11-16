@@ -1080,7 +1080,7 @@ estimated GFR (eGFR)
 \emph default
 .
  Measuring mGFR is a problematic and lengthy process, so healthcare practitioner
-s use a formula to calculate eGFR.
+s usually use a formula to calculate eGFR.
  An eGFR of 90 and above is the normal range.
  An eGFR of 15-89 is a range for different stages of chronic kidney disease.
  Values below 15 might indicate renal failure 
@@ -1107,10 +1107,7 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Let us consider one of them in a bit more detail.
+ Let us consider one of them in a bit more detail.
  
 \emph on
 Chronic kidney disease (CKD)
@@ -1313,8 +1310,8 @@ In summary, kidney transplantation has become a vital and frequent medical
  The procedure, while simpler than other organ transplants, has its own
  set of challenges.
  The following section will delve into the history of kidney transplantation,
- showing its path from the initial daring experiments to the most frequently
- performed organ transplantation today.
+ showing its path from the initial experiments to the most frequently performed
+ organ transplantation today.
  The historical perspective will provide insights into the advancements
  in surgical techniques, immunosuppressive therapy, and donor-recipient
  matching that have shaped the current state of kidney transplantation.
@@ -1504,10 +1501,7 @@ However, it was during that period that a significant milestone was achieved
  Although there was initial urine production, the transplant failed 48 hours
  post-surgery due to blood group incompatibility and prolonged warm ischemia,
  triggering an immune reaction.
-\end_layout
-
-\begin_layout Standard
-Despite this setback, Voronyi continued to perform similar transplantations.
+ Despite this setback, Voronyi continued to perform similar transplantations.
  He viewed these transplants as temporary measures to bridge the gap until
  the recipient's own kidneys could recover.
  Out of the six transplants he performed, two patients experienced a complete
@@ -1531,6 +1525,16 @@ The pioneering work of Jaboulay, Unger, and Voronyi not only demonstrated
  In the next section, we will explore important moments of 1950s that transforme
 d human renal transplantation from a daring experiment to feasible medical
  procedure.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+not sure I like the sentence
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
@@ -1565,8 +1569,8 @@ The early 1950s marked a period of active experimentation.
  Moreover, in 1953, David Hume introduced the pre-transplant use of hemodialysis.
  Although some success was achieved with the administration of the adrenocortico
 tropic hormone (more known as cortisone), it was suggested that the immunosuppre
-ssive effect of uremia, the excess of metabolism end products in blood,
- were more significant than the drug regimen.
+ssive effect the excess of metabolism end products in blood were more significan
+t than the drug regimen.
  Hume's further research suggested the potential benefits of prior blood
  transfusions, blood group compatibility, and bilateral nephrectomy (removal
  of both kidneys) of the host for transplant success - insights later validated
@@ -1575,7 +1579,17 @@ ssive effect of uremia, the excess of metabolism end products in blood,
 
 \begin_layout Standard
 These attempts in the early 1950s taught technical aspects of kidney transplanta
-tion, and, with increased confidence, on December 23, 1954, in Boston, Joseph
+tion 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+sounds too much like the start of a summary
+\end_layout
+
+\end_inset
+
+, and, with increased confidence, on December 23, 1954, in Boston, Joseph
  Murray performed kidney allograft from one identical twin to another, bypassing
  the rejection barrier.
  From that time, many similar surgeries were performed in Boston 
@@ -1592,31 +1606,10 @@ literal "false"
 \begin_layout Standard
 To conclude, the early successes during the 1950s marked a transformative
  period in the history of kidney transplantation.
- Not only the technical possibility of kidney transplantation was shown,
- but also the complex immunological challenges began to unravel.
  Works of Hume, Murray, and others underlined the critical role of immune
- response in graft survival, starting the quest for effective immunosuppression.
- The following section tells more about that.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Quotes sld
-\end_inset
-
-technical possibility
-\begin_inset Quotes srd
-\end_inset
-
- repeats the conclusion of the previous section
-\end_layout
-
-\end_inset
-
-
+ response in graft survival, starting the quest for effective immunosuppression,
+ to which the subsequent section is dedicated.
+ 
 \end_layout
 
 \begin_layout Subsection*
@@ -1795,7 +1788,7 @@ However, in 1970, Terasaki's review of his extensive database of cadaver
  (Class II locus: D and DR, more on antigens in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Intro-to-Immunology"
+reference "sec:Immunology-of-kidney"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1826,7 +1819,7 @@ While tissue typing and matching have played a crucial role in improving
 \end_layout
 
 \begin_layout Subsection*
-Cyclosporine and Tacrolimus
+Advancements in Immunosuppression
 \end_layout
 
 \begin_layout Standard
@@ -1850,19 +1843,6 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-from daring experiments it transformed into routine procedure
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1900,6 +1880,10 @@ add that cells are generated in thymus and in bone marrow
 
 \begin_layout Itemize
 define MHC (major histocompatibility complex)
+\end_layout
+
+\begin_layout Itemize
+lymphocyte is a white blood cell
 \end_layout
 
 \end_inset
@@ -2134,20 +2118,9 @@ name "sec:Immunology-of-kidney"
 \end_layout
 
 \begin_layout Standard
-The degree to which the immune system responses to a graft depends on a
- type of a graft.
- There are 4 types of grafts, 3 of which were already mentioned in Section
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:history-of-kidney-transplantation"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-,:
+The degree to which the immune system responds to a graft depends on the
+ type of graft.
+ There are four types of grafts:
 \end_layout
 
 \begin_layout Itemize
@@ -2155,8 +2128,7 @@ noprefix "false"
 \series bold
 Autograft 
 \series default
-is a transfer of body tissue from one body site to the other in the same
- individual.
+is body tissue transfer from one body site to the other in the same individual.
 \end_layout
 
 \begin_layout Itemize
@@ -2164,8 +2136,8 @@ is a transfer of body tissue from one body site to the other in the same
 \series bold
 Isograft
 \series default
- is a tissue transplanted between two geneticall identical individuals.
- In humans it is usually homozygotic (identical) twins.
+ is a tissue transplanted between two genetically identical individuals.
+ In humans, it is usually homozygotic (identical) twins.
 \end_layout
 
 \begin_layout Itemize
@@ -2186,11 +2158,12 @@ Xenograft
 \end_layout
 
 \begin_layout Standard
-Autografts and isografts are usually accepted, due to genetic identity.
- Allografts are genetically dissimilar and are usually recognized by immune
- system as a foreign body and are rejected.
- Xenografts have the greatest genetic difference and are rejected most vigorousl
-y 
+Autografts and isografts are generally accepted because they are genetically
+ identical.
+ Allografts, being genetically different, are typically identified as foreign
+ by the immune system and consequently rejected.
+ Xenografts, which have the most significant genetic differences, are the
+ most vigorously rejected by the immune system 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2228,31 +2201,27 @@ Ischemia Reperfusion Injury
 \end_layout
 
 \begin_layout Standard
-The process of transplantation inevitably includes termination of blood
- flow, and, as a result, oxygenation.
- This interruption in blood supply impedes cell's ability to generate sufficient
- amount of energy to maintain homeostasis, leading to cellular damage or
+The transplantation process inevitably includes termination of blood flow
+ and, as a result, oxygenation.
+ This interruption in blood supply impedes the cell's ability to generate
+ sufficient energy to maintain homeostasis, leading to cellular damage or
  death.
  If this happens, the kidney is said to experience 
 \emph on
-ischemia reperfusion injury (IRI).
-
+ischemia-reperfusion injury (IRI)
 \emph default
- IRI is a signifficant factor in the success of kidney transplantation.
- When the blood flow is restored to the ischemic kidney, dead cells trigger
+.
+ IRI is a significant factor in the success of kidney transplantation.
+ When the blood flow to the ischemic kidney is restored, dead cells trigger
  an innate immune response.
  Cell damage or death are associated with the release of 
 \emph on
-danger associated molecular patterns
+danger-associated molecular patterns (DAMP)
 \emph default
- (
-\emph on
-DAMP
-\emph default
-) that might be detected by both innate and adaptive immunity, although
- the former is predominately activated.
- Such immune response might damage the graft even more and contribute to
- acute rejection 
+ that might be detected by both innate and adaptive immunity, although the
+ former is predominately activated.
+ Such an immune response might damage the graft even more and contribute
+ to acute rejection 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2261,8 +2230,8 @@ literal "false"
 \end_inset
 
 .
- Because of that the duration of ischemia is crucial in predicting the graft
- (and patient) survival.
+ Because of that, the duration of ischemia is crucial in predicting the
+ graft (and patient) survival.
 \end_layout
 
 \begin_layout Paragraph
@@ -2270,44 +2239,28 @@ Blood Group Compatibility
 \end_layout
 
 \begin_layout Standard
-ABO blood group antigens, which are expressed by most cell types, play a
- crucial role in the compatibility of organ transplants.
- If the transplantation between incompatible pair were performed, it would
- result in severe and often immediate reaction known as hyperacute antibody-medi
-ated rejection (AMR).
- The rejection is so severe that that the compatibility of ABO blood groups
- is the first thing that is evaluated before performing the transplant.
- 
+ABO blood group antigens, expressed by most cell types, play a crucial role
+ in the compatibility of organ transplants.
+ If the transplantation between incompatible pairs were performed, it would
+ result in a severe and often immediate reaction known as hyperacute antibody-me
+diated rejection (AMR).
+ The rejection risk is so high that the ABO blood group compatibility is
+ the first thing checked before performing the transplant.
 \end_layout
 
 \begin_layout Standard
-There are four primary blood groups: A, B, O and AB.
- Within this system, individuals with blood group O are so called 
-\begin_inset Quotes sld
-\end_inset
-
-universal donors
-\begin_inset Quotes srd
-\end_inset
-
- – organs from them can be safely transplanted to recipients with any ABO
+There are four primary blood groups: A, B, O, and AB.
+ Within this system, individuals with blood group O are so-called ”universal
+ donors” – organs from them can be transplanted to recipients with any ABO
  blood group.
- Whereas, recipients with AB group can safely receive organ from recipients
- with any ABO blood group and are called a 
-\begin_inset Quotes sld
-\end_inset
-
-universal recipients
-\begin_inset Quotes srd
-\end_inset
-
-.
- In clinical practice, however, particularly with the deceased donors, the
- preference is to match organ recipients with ABO-identical organs to prevent
- potential inequities in organ allocation and access.
- The principle of ABO-identity is somewhat more flexible in case of living
- donors, where organs from ABO-compatible donors are considered acceptable
- for transplantation 
+ Whereas recipients in the AB group can safely receive organs from recipients
+ with any ABO blood group and are called ”universal recipients”.
+ In clinical practice, however, particularly with deceased donors, the preferenc
+e is to match organ recipients with ABO-identical organs to prevent potential
+ inequities in organ allocation and access.
+ In the case of living donors, the principle of ABO-identity is somewhat
+ more flexible, where organs from ABO-compatible donors are considered acceptabl
+e for transplantation 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2323,54 +2276,63 @@ Histocompatibility
 \end_layout
 
 \begin_layout Standard
-Tissues that are genetically similar, known as 
+Genetically similar tissues, known as 
 \emph on
-histocompatible,
+histocompatible
 \emph default
- are less likely to trigger an immune response post-transplant, as the immune
- system does not recognize the transplanted tissue as foreign.
+, are less likely to trigger an immune response post-transplant, as the
+ immune system does not recognize the transplanted tissue as foreign.
  Conversely, 
 \emph on
 histoincompatible
 \emph default
- tissues, which exhibit genetic differences, typically trigger an immune
+ tissues, characterized by genetic differences, typically trigger an immune
  response.
- Over 40 different loci encode the antigens responsible for histocompatibility,
- yet the most intense allograft-rejection responses are attributed to loci
- within the 
+ Although more than 40 distinct loci encode the antigens responsible for
+ histocompatibility, the most vigorous allograft-rejection responses are
+ attributed to loci within the 
 \emph on
 major histocompatibility complex (MHC)
 \emph default
 .
  The organization of MHC in humans is called 
 \emph on
-human leykocyte antigen (HLA)
+human leukocyte antigen (HLA)
 \emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Standard
-Histocompatibility antigens are genetically encoded antigens that cover
- cell surfaces and play an important role in recognizing self versus non-self.
- In all vertebraes histocompatibility antigens are divided into single 
+Histocompatibility antigens, genetically encoded antigens that cover cell
+ surfaces, play a crucial role in recognizing self versus non-self.
+ In all vertebrates, histocompatibility antigens are categorized into a
+ single 
 \emph on
-major histocompatibility complex
+major histocompatibility complex (MHC) 
 \emph default
- (
+and
 \emph on
-MHC
+ 
 \emph default
-) and numerous 
+numerous
 \emph on
-minor histocompatibility
+ minor histocompatibility (miH)
 \emph default
- (miH) systems.
- Mismatches in either of them results in immune reaction, most severe in
- case of MHC.
+ systems.
+ Mismatches in either MHC or miH result in an immune reaction, most severe
+ in the case of MHC.
  Rejection in MHC-compatible donor-recipient pair is usually delayed, in
  some cases forever.
- Although, sometimes miH mismatch might be so severe that it would be comparable
- to MHC mismatch 
+ However, the miH mismatch might be so drastic that it would be comparable
+ to the MHC mismatch 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2384,9 +2346,10 @@ literal "false"
 
 \begin_layout Standard
 The MHC itself is divided into class I and class II antigens.
- MHC class I antigens cover surfaces of most cells and can activate cytotoxic
- CD8 cells, while MHC class II antigens are found on certain immune cells
- and play crucial role in immune response coordination 
+ MHC class I antigens cover the surfaces of most cells and can activate
+ cytotoxic CD8 cells.
+ MHC class II antigens, found on specific immune cells, play an essential
+ role in immune response coordination 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2395,8 +2358,8 @@ literal "false"
 \end_inset
 
 .
- In humans, each MHC class is further divided into three subgroups, as can
- be seen on Table 
+ In humans, each MHC class is further divided into three subgroups, as illustrat
+ed in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:MHC-class-division"
@@ -2534,13 +2497,13 @@ HLA-DQ
 \end_layout
 
 \begin_layout Standard
-It is important to note that mismatches of classes I and II have different
- impact on graft survival.
- Mismatch of one or two class I antigens has little effect on graft survival,
- whereas a single mismatch in class II antigen is equivalent to mismatch
+It is important to note that class I and II mismatches differ in their impact
+ on graft survival.
+ A mismatch of one or two class I antigens has little effect on graft survival,
+ whereas a single mismatch in class II antigen is equivalent to a mismatch
  of 3 or 4 class I antigens.
- When there are mismatches in both class I and class II antigens, the risk
- and severity of the rejection are notably increased 
+ When there are mismatches in both class I and II antigens, the risk and
+ severity of the rejection are notably increased 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2556,11 +2519,11 @@ HLA Typing and Matching
 \end_layout
 
 \begin_layout Standard
-In clinical practice, clinicians asses and try to match donors and recipient
+In clinical practice, clinicians asses and try to match donors and recipients
  according to the number of HLA-A, -B, and -DR mismatches, ranging from
  zero mismatches (0-0-0) to a maximum of 6 mismatches (2-2-2).
- Generally more emphasis is placed on DR loci due to capability of CD4 T
- cell activation, which might trigger both humoral and cellular adaptive
+ Generally, more emphasis is placed on DR loci due to the capability of
+ CD4 T cell activation, which might trigger both humoral and cellular adaptive
  immune responses 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2573,19 +2536,19 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-HLA typing of a potential donors and recipient is performed with 
+HLA typing of potential donors and recipient is conducted with a 
 \emph on
 microcytotoxicity test
 \emph default
 .
- Subject's white blood cells are distributed into various wells on a microtiter
- plate and then specific antibodies for various class I and class II MHC
- alleles are added to different wells.
- After incubation, complement is added to the wells and the cytotoxicity
- is assessed by uptake or exclusion of various dyes.
- If a cell has MHC allele for which a particular antibody is specific, then
- the cell will die upon addition of complement and these dead cells will
- take up a dye 
+ The subject's white blood cells are distributed into various wells on a
+ microtiter plate, after which specific antibodies for various class I and
+ class II MHC alleles are added to different wells.
+ Following incubation, complement is introduced to the wells, and cytotoxicity
+ is assessed by the cells' absorption of various dyes.
+ If a cell has an MHC allele for which a particular antibody is specific,
+ then the cell will die upon the addition of a complement, and these dead
+ cells will take up a dye 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2597,31 +2560,28 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-When a fully HLA-compatible donor is not available, the transplantation
- still can be successfull.
+Even when a fully HLA-compatible donor is not available, the transplantation
+ still can be successful.
  In this situation, a one-way mixed-lymphocyte reaction (MLR) test can be
  used to assess the degree of class II MHC compatibility.
- The irradiated (or treated with mitomicyn C) potential donor's lymphocytes
- play role of stimulator and normal recipient's lymphocytes take a responder
- role.
- Then the proliferation of recipient cells is measured.
- Intense proliferation of recipient leykocytes indicates poor prognosis
- for the graft survival.
- The MLR gives better understanding of the degree of CD4 cell activation
- but it takes several days to run the assay, often making it less suitable
- in case of cadaver transplantation compared to quicker 
-\emph on
-microcytotoxicity test, 
-\emph default
-which takes only a couple of hours.
- Notably, even perfect HLA matching does not guarantee the rejection-free
- transplantation.
+ The irradiated (or treated with mitomycin C) potential donor's lymphocytes
+ play the role of stimulator, and the unaltered recipient's lymphocytes
+ take a responder role.
+ Then, the proliferation of recipient cells is measured.
+ The intense recipient leukocyte proliferation indicates a poor prognosis
+ for graft survival.
+ The MLR gives a better understanding of the degree of CD4 cell activation.
+ However, it takes several days to run the assay, often making it less suitable
+ in the case of cadaver transplantation compared to a quicker microcytotoxicity
+ test, which takes only a couple of hours.
+ Notably, even perfect HLA matching does not guarantee rejection-free transplant
+ation.
  Minor histocompatibility loci mismatches can still lead to graft rejection,
- necessitating at least some degree of immunosuppression even in HLA-identical
+ necessitating at least some level of immunosuppression even in HLA-identical
  pairings.
- This is particularly critical in kidney and bone-marrow transplants, where
+ It is particularly critical in kidney and bone marrow transplants, where
  HLA matching is vital, whereas heart and liver transplantation can withstand
- greater levels of mismatching 
+ higher levels of mismatching 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2638,11 +2598,10 @@ Mechanisms of Graft Rejection
 \end_layout
 
 \begin_layout Standard
-Graft rejection is primarily a consequence of cell-mediated immune response
- to alloantigens, predominantly MHC antigens, present on the cells of the
- graft.
+Graft rejection is mainly due to cell-mediated immune response to alloantigens,
+ predominantly MHC antigens, present on the graft cells.
  The process of cell-mediated graft rejection is divided into two phases.
- The first is known as the sensitisation phase, involves the recognition
+ The first is known as the sensitization phase, which involves the recognition
  of MHC and miH alloantigens by helper CD4 and killer CD8 cells, leading
  to their proliferation.
  The second stage, the effector stage, is where the actual destruction of
@@ -2660,8 +2619,8 @@ literal "false"
 
 \begin_layout Standard
 A range of effector mechanisms are involved in graft rejection.
- The most common are cell-mediated reactions involving delayed-type hypersensiti
-vity and cytotoxic T lymphocyte mediated cytotoxicity.
+ The most prevalent are cell-mediated reactions involving delayed-type hypersens
+itivity and cytotoxic T lymphocyte-mediated cytotoxicity.
  Less common mechanisms are antibody-plus-complement lysis (cell disintegration)
  and destruction by antibody-dependent cell-mediated cytotoxicity (ADCC)
  
@@ -2681,26 +2640,27 @@ Clinical Manifestations of Graft Rejection
 \end_layout
 
 \begin_layout Standard
-The onset and severity of graft rejection varies depending of the organ
+The onset and severity of graft rejection varies depending on the organ
  transplanted and the underlying immune response mechanisms involved.
- There are three types of rejection: hyperacute, acute and chronic rejections.
+ Rejection can be categorized into three types: hyperacute, acute, and chronic
+ rejections.
 \end_layout
 
 \begin_layout Standard
 
 \emph on
-Hyperacute rejection
+Hyperacute rejections
 \emph default
-s occur within the first 24 hours post-transplant.
- This form of rejection is attributed to the prior sensitisation to graft
- antigens, with specific antibodies already present in the blood stream.
- It may happen due to a several reasons: recipients of repeated blood transfusio
-ns sometimes develop signifficant amount of antibodies to MHC antigens present
+ occur within the first 24 hours post-transplant.
+ This type of rejection occurs due to the prior sensitization to graft antigens,
+ with specific antibodies already present in the bloodstream.
+ It may happen due to several reasons: recipients of repeated blood transfusions
+ sometimes develop significant amounts of antibodies to MHC antigens present
  on white blood cells of the transfused blood; women, through repeated pregnanci
 es, can become sensitized to paternal alloantigens of the fetus; individuals
  with previous grafts may have antibodies against alloantigens of that graft;
- and naturally occuring antibodies to blood group antigens are always present,
- although pre-transplant blood group mathing has made rejections of this
+ and naturally occurring antibodies to blood group antigens are always present,
+ although pre-transplant blood group matching has made rejections of this
  nature rare 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2715,9 +2675,9 @@ literal "false"
 \begin_layout Standard
 
 \emph on
-Acute rejection
+Acute rejections
 \emph default
-s typically happen within the first few weeks post-transplant.
+ typically happen within the first few weeks post-transplant.
  This type of rejection is primarily mediated by adaptive immunity via T
  cell responses 
 \begin_inset CommandInset citation
@@ -2733,10 +2693,10 @@ literal "false"
 \begin_layout Standard
 
 \emph on
-Chronic rejections, 
+Chronic rejections
 \emph default
-on the other hand, happen from months to years after the transplantation.
- It is mediated by both humoral and cell-mediated mechanisms.
+, on the other hand, happen from months to years after the transplantation
+ and are mediated by both humoral and cell-mediated mechanisms.
  While the advancements in immunosuppression and tissue typing significantly
  improve short-term survival, little progress has been made in terms of
  long-term survival.
@@ -2753,7 +2713,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Immunosuppresion
+Immunosuppression
 \end_layout
 
 \begin_layout Standard
@@ -2763,40 +2723,64 @@ Most of the available immunosuppression methods, while essential in preventing
  placing the recipient at the risk of infection and, in some cases, more
  severe complications.
  For instance, some drugs target the speed of proliferation of activated
- lymphocytes, in doing so they slow down the proliferation of all cells
- in the body.
+ lymphocytes.
+ In doing so, they slow down the proliferation of all cells in the body.
  It can be particularly problematic for rapidly dividing cells, such as
- those of gut epithelia or bone-marrow hematopoetic stem cells, placing
- patients at risk of serious or even life-threatening complications.
- Moreover, long-term use of immunosuppressive agents place patients at risk
- of cancer, hypertension and metabolic bone disease.
- In this section we will delve into commonly used immunosuppressive methods.
+ those of gut epithelia or bone marrow hematopoietic stem cells, placing
+ patients at risk of severe or even life-threatening complications.
+ Moreover, long-term use of immunosuppressive agents puts patients at risk
+ of cancer, hypertension, and metabolic bone disease.
+ In this section, we will delve into commonly used immunosuppressive methods
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-One class of drugs that is used are 
+A class of drugs known as 
 \emph on
 mitotic inhibitors
 \emph default
-.
- They inhibit rapid cell division in 
+ is used to inhibit rapid cell division across all cells.
+ These are administered just before and after the transplantation to stop
+ T-cell proliferation.
+ The most commonly used mitotic inhibitors include 
 \emph on
-all
+Azathioprine
 \emph default
- cells and are administered just before and after the transplantation to
- stop T-cell proliferation.
- Most commonly used mitotic inhibitors include Azathioprine, Cyclophosphamide
- and Methotrexate.
- However, their broad action on cell division can lead to signifficant adverse
- effects.
+, 
+\emph on
+Cyclophosphamide
+\emph default
+, and 
+\emph on
+Methotrexate
+\emph default
+.
+ However, their broad action on cell division can lead to significant adverse
+ effects 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 
 \emph on
-Corticosteroids,
+Corticosteroids
 \emph default
- another class of drugs often used in conjunction with mitotic inhibitors
+, another class of drugs, are often used in conjunction with mitotic inhibitors
  to prevent acute rejection.
  They have anti-inflammatory properties and act on different levels of immune
  response.
@@ -2808,31 +2792,67 @@ prednisone
 \emph on
 dexamethasone
 \emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Standard
-Fungal metabolites, such as Cyclosporine A (CsA), Tacrolimus, and rapamycin
+Fungal metabolites, such as 
+\emph on
+Cyclosporine A (CsA)
+\emph default
+, 
+\emph on
+Tacrolimus
+\emph default
+, and 
+\emph on
+rapamycin
+\emph default
  are also widely used due to their potent immunosuppressive properties in
- heart, liver, kidney and bone-marrow transplants.
- A major drawback is their nephrotoxicity.
- While CsA has been popular, Tacrolimus and rapamycin, being much more potent,
- might be administered at much lower doses, minimising the side-effects.
+ heart, liver, kidney, and bone marrow transplants.
+ A substantial drawback is their nephrotoxicity.
+ While CsA has been widely used, Tacrolimus and rapamycin, being much more
+ potent, might be administered at much lower doses, minimizing the side
+ effects 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Radiation, due to its effectiveness in destroying lymphocytes, is another
- method used to eliminate them before transplantation.
- In one such procedure, lymph nodes, spleen and thymus are irradiated.
+Radiation, known for its effectiveness in destroying lymphocytes, is another
+ lymphocyte elimination method employed just before transplantation.
+ In one such procedure, lymph nodes, spleen, and thymus are irradiated.
  Later, newer, more tolerant to the graft alloantigens lymphocytes will
- emerge, as the bone marrow wasn’t affected.
+ emerge, as the bone marrow was unaffected 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Ideal immunossuppresion would be antigen-specific, targeting only alloantigens
+Ideal immunosuppression would be antigen-specific, targeting only alloantigens
  of the graft, preserving the recipient's ability to respond to infections.
- Such specific immunosuppression is not yet achieved in humans, but animal
- models suggest its feasibility.
+ Such specific immunosuppression has not been achieved in humans yet, but
+ animal models suggest its feasibility.
 \end_layout
 
 \begin_layout Subsection
@@ -2840,11 +2860,12 @@ Transplant Tolerance
 \end_layout
 
 \begin_layout Standard
-Taking into account the detrimental effect of long-term immunosuppression
+Taking into account the detrimental effect of long-term immunosuppression,
  one of the primary objectives in transplantation is the induction of immunologi
 c non-responsiveness (tolerance) to an allograft.
- The are several pathways of immune non-responsivenes generation described
- in literature, however it haven't gone further animal models yet 
+ There are several pathways of immune non-responsiveness generation described
+ in the literature.
+ However, it has not gone further than animal models yet 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2854,7 +2875,7 @@ literal "false"
 
 .
  Tolerance is usually induced by prior exposure to donor antigens in a way
- that causes immune tolerance, rather than sensitisation in the recipient
+ that causes immune tolerance rather than sensitization in the recipient
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2970,7 +2991,7 @@ Every field is affected by human errors, and medicine is no exception.
 \series bold
  
 \series default
-all processesand and how they  relate to each other.
+all processes and and how they  relate to each other.
  In addition, machine learning can help us gain insight into them through
  accumulated data and discover new relations between them.
 \end_layout
