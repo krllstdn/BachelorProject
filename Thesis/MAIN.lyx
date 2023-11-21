@@ -1028,10 +1028,11 @@ Kidney — An Overview
 \end_layout
 
 \begin_layout Standard
-Kidneys, essential reddish-brown, bean-shaped organs located on both sides
- of the spine beneath the lower ribs, perform critical functions, such as
- filtering blood, regulating blood pressure, aiding red blood cell production,
- and maintaining fluid balance.
+The kidneys are organs essential to maintaining overall health and well-being.
+ These reddish-brown, bean-shaped organs located on both sides of the spine
+ beneath the lower ribs, perform critical functions, such as filtering blood,
+ regulating blood pressure, aiding red blood cell production, and maintaining
+ fluid balance.
  Each minute, about one liter of blood is filtered.
  Structurally, a kidney consists of about 1 million 
 \emph on
@@ -1057,11 +1058,11 @@ literal "false"
 Each kidney performs 50% of the normal kidney function.
  However, if one kidney is lost, the remaining kidney can adapt, increasing
  its capacity to as much as 75% of normal function.
- The 
+ Kidney function is measured with 
 \emph on
 glomerular filtration rate (GFR)
 \emph default
- measures kidney function 
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-33"
@@ -1107,7 +1108,17 @@ literal "false"
 \end_inset
 
 .
- Let us consider one of them in a bit more detail.
+ Among these conditions, chronic kidney disease is particularly significant
+ due to its prevalence — about 10% of the population worldwide is affected
+ by some form of chronic kidney disease 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-35"
+literal "false"
+
+\end_inset
+
+.
  
 \emph on
 Chronic kidney disease (CKD)
@@ -1117,16 +1128,6 @@ Chronic kidney disease (CKD)
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-34,key-35"
-literal "false"
-
-\end_inset
-
-.
- About 10% of the population worldwide is affected by some form of chronic
- kidney disease 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-35"
 literal "false"
 
 \end_inset
@@ -1164,9 +1165,19 @@ end-stage renal disease (ESRD)
  Treatment options include dialysis, a mechanical process that substitutes
  kidney function but cannot fully replicate it, leading to a reduced life
  expectancy of, on average, 5 to 10 years.
- Alternatively, kidney transplantation offers a more permanent solution
- but requires a compatible donor, waiting for which can take many months
- or years, and the use of immunosuppressants after the transplantation 
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+rewrite sentence
+\end_layout
+
+\end_inset
+
+Alternatively, kidney transplantation offers a more permanent solution but
+ requires a compatible donor, waiting for which can take many months or
+ years, and the use of immunosuppressants after the transplantation 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36"
@@ -1188,8 +1199,8 @@ In conclusion, the kidneys play an essential role in maintaining overall
  a healthy kidney, which brings us to the crucial role of kidney transplantation.
  Kidney transplantation offers a more conclusive and sustainable solution
  for patients with ESRD, albeit accompanied by challenges related to donor
- compatibility, surgical procedures, and life-long immunosuppression, which
- will be discussed in the subsequent section.
+ compatibility and life-long immunosuppression, which will be discussed
+ in the subsequent section.
 \end_layout
 
 \begin_layout Section
@@ -1230,6 +1241,16 @@ literal "false"
 
 .
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+work on the flow: remove things mentioned before
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1270,6 +1291,17 @@ literal "false"
 \end_inset
 
 .
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+antigens before their definition
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
