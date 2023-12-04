@@ -1028,12 +1028,11 @@ Kidney — An Overview
 \end_layout
 
 \begin_layout Standard
-The kidneys are organs essential to maintaining overall health and well-being.
- These reddish-brown, bean-shaped organs located on both sides of the spine
- beneath the lower ribs, perform critical functions, such as filtering blood,
- regulating blood pressure, aiding red blood cell production, and maintaining
- fluid balance.
- Each minute, about one liter of blood is filtered.
+The kidneys are reddish-brown, bean-shaped organs located on both sides
+ of the spine beneath the lower ribs.
+ They serve several critical functions, such as filtering blood, regulating
+ blood pressure, aiding red blood cell production, and maintaining the fluid
+ balance.
  Structurally, a kidney consists of about 1 million 
 \emph on
 nephrons
@@ -1097,9 +1096,9 @@ literal "false"
 
 \begin_layout Standard
 Impairment in kidney function can have serious health consequences.
- There are many reasons why kidneys may become dysfunctional, such as chronic
- kidney disease, heavy metal poisoning, polycystic kidney disease, an infection,
- nephrotoxic drugs, lupus, physical injury, and so on 
+ There are many reasons why kidneys may become dysfunctional, such as end-stage
+ chronic kidney disease, heavy metal poisoning, polycystic kidney disease,
+ an infection, nephrotoxic drugs, lupus, physical injury, etc 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36,key-37"
@@ -1108,9 +1107,9 @@ literal "false"
 \end_inset
 
 .
- Among these conditions, chronic kidney disease is particularly significant
- due to its prevalence — about 10% of the population worldwide is affected
- by some form of chronic kidney disease 
+ Among these conditions, chronic kidney disease is the most prevalent —
+ about 10% of the population worldwide is affected by some form of chronic
+ kidney disease 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-35"
@@ -1144,8 +1143,9 @@ literal "false"
 \end_inset
 
 .
- The latter interaction creates a negative feedback loop, where it is unclear
- whether kidney damage causes high blood pressure or vice versa 
+ The latter interaction is associated with a negative feedback loop, where
+ it is unclear whether kidney damage causes high blood pressure or vice
+ versa 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-35"
@@ -1162,22 +1162,20 @@ CKD progresses in 5 stages, ultimately culminating in
 end-stage renal disease (ESRD)
 \emph default
 , where kidneys fail.
- Treatment options include dialysis, a mechanical process that substitutes
- kidney function but cannot fully replicate it, leading to a reduced life
- expectancy of, on average, 5 to 10 years.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-rewrite sentence
-\end_layout
-
-\end_inset
-
-Alternatively, kidney transplantation offers a more permanent solution but
- requires a compatible donor, waiting for which can take many months or
- years, and the use of immunosuppressants after the transplantation 
+ Treatment options include 
+\emph on
+dialysis
+\emph default
+, a mechanical process that substitutes kidney function but cannot fully
+ replicate it.
+ It leads to a reduced life expectancy of, on average, 5 to 10 years.
+ Alternatively, 
+\emph on
+kidney transplantation
+\emph default
+ offers a more permanent solution but requires a compatible donor, waiting
+ for which can take many months or years, and the use of immunosuppressants
+ after the transplantation 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36"
@@ -1192,15 +1190,17 @@ literal "false"
 In conclusion, the kidneys play an essential role in maintaining overall
  health with their ability to filter waste, regulate blood pressure, and
  balance fluids.
+ Kidney failure has serious health implications and there are multiple reasons
+ for it.
  Chronic kidney disease, resulting from various causes such as diabetes
- and hypertension, progressively impairs these functions, leading to end-stage
+ and hypertension, progressively impairs kidney function, leading to end-stage
  renal disease.
  While dialysis offers temporary relief, it cannot fully substitute for
  a healthy kidney, which brings us to the crucial role of kidney transplantation.
  Kidney transplantation offers a more conclusive and sustainable solution
  for patients with ESRD, albeit accompanied by challenges related to donor
- compatibility and life-long immunosuppression, which will be discussed
- in the subsequent section.
+ compatibility and life-long immunosuppression.
+ Both of which will be discussed in the subsequent section.
 \end_layout
 
 \begin_layout Section
@@ -1225,7 +1225,8 @@ The citation at the end of a paragraph indicates that the whole paragraph
 Kidney transplantation stands as the most commonly performed organ transplant
  worldwide.
  This prevalence is partly due to the high incidence of diseases such as
- diabetes or chronic kidney disease, which often lead to chronic renal failure.
+ diabetes and chronic kidney disease, which often lead to chronic renal
+ failure.
  Unlike organs such as the liver and heart, kidney transplantation is relatively
  straightforward, contributing to its frequency of transplantation.
  Kidneys can be obtained from both deceased and living donors - relatives
@@ -1241,22 +1242,20 @@ literal "false"
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-work on the flow: remove things mentioned before
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-ABO blood group and histocompatibility matchings for kidney transplantation
- are of utmost importance, especially since the kidney is a heavily vascularized
- organ.
+ABO blood group and histocompatibility (defined in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Immunology-of-kidney"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) matchings for kidney transplantation are of utmost importance.
  Proper matching substantially reduces the risk of rejection and improves
  transplant outcomes.
  Compared to organs such as the liver or bone marrow, kidneys do not present
@@ -1280,7 +1279,17 @@ However, kidney transplantation, despite its advances, faces significant
  decreasing the pool of available donors even further.
  In such cases, the immune system develops antibodies to the graft alloantigens,
  and any further transplantation of organs with similar antigens will result
- in hyperacute rejection.
+ in hyperacute rejection (many of these termes are explained in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Immunology-of-kidney"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
  This fact often leaves many patients unable to find a compatible donor
  after one or two rejection episodes 
 \begin_inset CommandInset citation
@@ -1292,21 +1301,11 @@ literal "false"
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-antigens before their definition
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 Recipients of kidney transplants typically require life-long immunosuppression.
- While these medications are essential to prevent organ rejection, they
+ While immunosuppressants are essential to prevent organ rejection, they
  are associated with severe side effects, such as increased risk of cancer,
  hypertension, and metabolic bone disease 
 \begin_inset CommandInset citation
@@ -1368,10 +1367,6 @@ status open
 Write intro 
 \end_layout
 
-\begin_layout Plain Layout
-graft
-\end_layout
-
 \end_inset
 
 
@@ -1382,27 +1377,36 @@ Early Animal Experiments
 \end_layout
 
 \begin_layout Standard
-Advancements in surgical methods and techniques at the beginning of the
- 20th century eventually led to experiments with organ transplantation.
- One of the first recorded transplantations was an autograft, where the
- donor and recipient are the same individual, performed by Emerich Ullmann
- on March 1, 1902, at the Vienna Medical School.
- Utilizing vascular suturing techniques developed by Ervin Payr, Ullmann
- successfully connected the dog's kidney to the vessels of its neck, resulting
- in the production of urine.
+Advancements in surgical methods at the beginning of the 20th century eventually
+ led to experiments with organ transplantation.
+ One of the first recorded transplantations was an 
+\emph on
+autograft
+\emph default
+, where the donor and recipient are the same individual, performed by Emerich
+ Ullmann on March 1, 1902, at the Vienna Medical School.
+ Ullmann successfully connected the dog's kidney to the vessels of its neck,
+ which resulted in the urine production.
  The success of this experiment was notable enough to be presented to the
  Vienna Medical Society, sparking considerable interest.
 \end_layout
 
 \begin_layout Standard
 That year, other experiments followed.
- Alfred von Decastello performed a dog-to-dog kidney allograft, a transplant
- between two individuals of the same species, at the Institute of Experimental
- Pathology in Vienna.
+ Alfred von Decastello performed a dog-to-dog kidney 
+\emph on
+allograft
+\emph default
+, a transplant between two individuals of the same species, at the Institute
+ of Experimental Pathology in Vienna.
  Although initially, the transplanted kidney produced urine, it eventually
  ceased.
- Later, Ullman performed a dog-to-goat kidney xenograft, which resulted
- in short-term function as well.
+ Later, Ullman performed a dog-to-goat kidney 
+\emph on
+xenograft
+\emph default
+, a transplantation between individuals of different species, which resulted
+ in brief function time as well.
 \end_layout
 
 \begin_layout Standard
@@ -1441,8 +1445,8 @@ These early experiments, although varied in their outcomes, were defining
  also highlighted the challenges, such as rejection, that would direct the
  course of future research.
  The insights gained in animal experiments laid the groundwork for the next
- big milestone in transplantation medicine: the onset of human organ transplanta
-tion.
+ big milestone in transplantation medicine: the advent of human organ transplant
+ation.
  This transition from animals to humans marked the beginning of a new era
  in medical history.
 \end_layout
@@ -1452,9 +1456,12 @@ Early Human Transplantation
 \end_layout
 
 \begin_layout Standard
-The first recorded human renal xenograft, a transplantation between individuals
- of different species, is credited to Mathieu Jaboulay in 1906.
- It involved a pig and a goat as donor animals for two xenografts.
+Two first recorded human renal 
+\emph on
+xenografts
+\emph default
+ are credited to Mathieu Jaboulay in 1906.
+ It involved a pig and a goat as donor animals.
  One kidney was transplanted to the arm and the second to the thigh.
  Although each kidney functioned only for an hour, these efforts marked
  the beginning of human transplantation attempts 
@@ -1466,20 +1473,17 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Ernst Unger's xenografts in 1909 gained more attention.
+ Ernst Unger's xenografts in 1909 gained more attention.
  His first attempt, involving the transplantation of a kidney from a stillborn
  baby to a baboon, resulted in a lack of kidney function despite a successful
- vascular anastomosis (connection of vessels).
+ connection of vessels.
  Inspired by a successful surgery, Unger attempted a monkey-to-human xenograft,
  which also resulted in failure.
 \end_layout
 
 \begin_layout Standard
-These early experiments demonstrated the technical feasibility of kidney
- transplantation but also exposed the challenge of graft rejection.
+These experiments demonstrated the technical feasibility of kidney transplantati
+on but also exposed the challenge of graft rejection.
  Alexis Carrel, in a 1914 lecture, mentioned J.
  B.
  Murphy's work on irradiation and benzol treatment, suggesting their potential
@@ -1557,16 +1561,6 @@ The pioneering work of Jaboulay, Unger, and Voronyi not only demonstrated
  In the next section, we will explore important moments of 1950s that transforme
 d human renal transplantation from a daring experiment to feasible medical
  procedure.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-not sure I like the sentence
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection*
@@ -1583,7 +1577,7 @@ tion.
 \end_layout
 
 \begin_layout Standard
-During the same period, European surgeons were making significant advancements.
+Meanwhile, European surgeons were making significant advancements.
  Notably, Simonsen in Denmark, Dempster in London, and Küss in Paris concluded
  that it is preferable to place the kidney in the pelvis.
  Furthermore, both Simonsen and Dempster deduced that the immune response
@@ -1600,30 +1594,12 @@ The early 1950s marked a period of active experimentation.
  position of the allograft was closely studied.
  Moreover, in 1953, David Hume introduced the pre-transplant use of hemodialysis.
  Although some success was achieved with the administration of the adrenocortico
-tropic hormone (more known as cortisone), it was suggested that the immunosuppre
-ssive effect the excess of metabolism end products in blood were more significan
-t than the drug regimen.
+tropic hormone (more known as cortisone), it was deemed clinically insignificant.
  Hume's further research suggested the potential benefits of prior blood
- transfusions, blood group compatibility, and bilateral nephrectomy (removal
- of both kidneys) of the host for transplant success - insights later validated
- with further research.
-\end_layout
-
-\begin_layout Standard
-These attempts in the early 1950s taught technical aspects of kidney transplanta
-tion 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-sounds too much like the start of a summary
-\end_layout
-
-\end_inset
-
-, and, with increased confidence, on December 23, 1954, in Boston, Joseph
- Murray performed kidney allograft from one identical twin to another, bypassing
- the rejection barrier.
+ transfusions, blood group compatibility, and removal of host's both kidneys
+ for transplant success - insights later validated with further research.
+ On December 23, 1954, in Boston, Joseph Murray performed kidney allograft
+ from one identical twin to another, bypassing the rejection barrier.
  From that time, many similar surgeries were performed in Boston 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1693,7 +1669,7 @@ The quest for safer immunosuppressive methods led to the anticancer drug
  lowered immune response to foreign proteins in rabbits.
  Inspired by their work, Roy Calne performed his own dog experiments, showing
  promising results backed by Charles Zukoski and David Hume.
- Despite initial setbacks, Kuss and others reported prolonged graft survival
+ Despite initial setbacks, Küss and others reported prolonged graft survival
  from non-related donors using total body irradiation (TBI) complemented
  by 6-MP.
  The introduction of azathioprine in 1959, a derivative of 6-MP, by Gertrude
@@ -1737,9 +1713,9 @@ In summary, the late 1940s to the early 1960s was a period of discoveries
  and the invention of azathioprine in 1959 led to better immunosuppression,
  culminating in Tom Starzl's protocol, which became the standard for the
  next two decades.
- As we transition from this era of discovery to the period of 1964 to 1980,
- we enter a phase of steady developments that would solidify the practice
- of kidney transplantation.
+ The next section is dedicated to a phase of steady developments, in literature
+ referred to as plateau, that would solidify the practice of kidney transplantat
+ion.
 \end_layout
 
 \begin_layout Subsection*
@@ -1754,7 +1730,7 @@ From 1964 to 1980, kidney transplantation saw gradual progress.
  Acceptance of brain death expanded donor pools.
  Organ preservation techniques also advanced: total body hypothermia was
  replaced by targeted cold solutions infusions that preserved organs better.
- By the mid-60s, longer preservation times gave way to organ exchanges between
+ By the mid-60s, longer preservation times allowed organ exchanges between
  centers.
  Concerns about equitable distribution of organs led to the National Transplant
  Act in 1984, establishing the United Network of Organ Sharing (UNOS) for
@@ -1784,7 +1760,17 @@ Tissue Typing
 \begin_layout Standard
 The concept of tissue typing, suggested by Alexis Carrel in the early 20th
  century, remained unproven until Jean Dausset discovered the first human
- leukocyte antigen (HLA) in 1958 (more on HLA in .
+ leukocyte antigen (HLA) in 1958 (more on HLA in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Immunology-of-kidney"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) .
  It wasn't until 1964, with Paul Terasaki's development of the microcytotoxicity
  assay, that testing for antibodies became reliable.
  The test involved mixing the donor's lymphocytes with the recipient's serum
@@ -1829,9 +1815,7 @@ noprefix "false"
 
 ).
  Histocompatibility matching remains essential in bone marrow transplantation
- and in selecting family donors.
- Nevertheless, for unrelated organ transplants, matching considerably benefits
- only in cases of a perfect match 
+ and in selecting family donors 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-3"
@@ -1881,14 +1865,24 @@ literal "false"
 In conclusion, the history of renal transplantation has been marked by groundbre
 aking discoveries and persistent challenges.
  From the pioneering attempts of xenografts in the early 20th century to
- the technical advancements and immunological breakthroughs of the mid-century,
- each milestone has been essential in shaping the current landscape of organ
- transplantation.
- As we explored the history of kidney transplantation, a deeper understanding
- of the immune system has become crucial.
+ the technical advancements and immunological breakthroughs of the mid-century
+ — each milestone has been essential in shaping the current landscape of
+ organ transplantation As we explored the history of kidney transplantation,
+ a deeper understanding of the immune system has become crucial.
  This sets the stage for the next section, which examines the fundamentals
  of immunology, laying the foundation for understanding the interplay between
  the immune system and the transplanted organ.
+ .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+don't like the paragraph
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -2018,6 +2012,10 @@ cell-mediated immunity
 \emph on
 lymphocytes
 \emph default
+, also known as 
+\emph on
+white blood cells
+\emph default
 .
  
 \emph on
@@ -2052,12 +2050,22 @@ pathogen recognition receptors
 PRRs
 \emph default
 ), found on the surface of T cells, and antibodies to detect and categorize
- 
+ these
 \emph on
-these 
+ 
 \emph default
 PAMPs, which can take the form of molecules on the surface of a pathogen
- or its by-products.
+ or its by-products
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+not ideal sentence
+\end_layout
+
+\end_inset
+
+.
  PRRs bind to PAMPs and initiate a targeted cascade of events that culminate
  in the pathogen's elimination 
 \begin_inset CommandInset citation
@@ -2126,6 +2134,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+MHC can be explained here
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2193,7 +2211,17 @@ Xenograft
 Autografts and isografts are generally accepted because they are genetically
  identical.
  Allografts, being genetically different, are typically identified as foreign
- by the immune system and consequently rejected.
+ by the immune system and consequently
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+don't like the word
+\end_layout
+
+\end_inset
+
+ rejected.
  Xenografts, which have the most significant genetic differences, are the
  most vigorously rejected by the immune system 
 \begin_inset CommandInset citation
@@ -2235,7 +2263,7 @@ Ischemia Reperfusion Injury
 \begin_layout Standard
 The transplantation process inevitably includes termination of blood flow
  and, as a result, oxygenation.
- This interruption in blood supply impedes the cell's ability to generate
+ This interruption in blood supply inhibits the cell's ability to generate
  sufficient energy to maintain homeostasis, leading to cellular damage or
  death.
  If this happens, the kidney is said to experience 
@@ -2246,12 +2274,17 @@ ischemia-reperfusion injury (IRI)
  IRI is a significant factor in the success of kidney transplantation.
  When the blood flow to the ischemic kidney is restored, dead cells trigger
  an innate immune response.
- Cell damage or death are associated with the release of 
+ It is associated with the release of 
 \emph on
-danger-associated molecular patterns (DAMP)
+danger-associated molecular patterns (DAMP) 
 \emph default
- that might be detected by both innate and adaptive immunity, although the
- former is predominately activated.
+from the compromised cells
+\emph on
+,
+\emph default
+ serving as a critical alert mechanism.
+ These DAMPs are recognized by both innate and adaptive immunity, although
+ the former is predominately activated.
  Such an immune response might damage the graft even more and contribute
  to acute rejection 
 \begin_inset CommandInset citation
@@ -2275,7 +2308,7 @@ ABO blood group antigens, expressed by most cell types, play a crucial role
  in the compatibility of organ transplants.
  If the transplantation between incompatible pairs were performed, it would
  result in a severe and often immediate reaction known as hyperacute antibody-me
-diated rejection (AMR).
+diated rejection (AMR or ABMR).
  The rejection risk is so high that the ABO blood group compatibility is
  the first thing checked before performing the transplant.
 \end_layout
