@@ -1908,10 +1908,6 @@ add that cells are generated in thymus and in bone marrow
 define MHC (major histocompatibility complex)
 \end_layout
 
-\begin_layout Itemize
-lymphocyte is a white blood cell
-\end_layout
-
 \end_inset
 
 
@@ -2049,8 +2045,8 @@ pathogen recognition receptors
 \emph on
 PRRs
 \emph default
-), found on the surface of T cells, and antibodies to detect and categorize
- these
+), found on the surface of T cells, in conjunction with antibodies to detect
+ and categorize these
 \emph on
  
 \emph default
@@ -2211,17 +2207,7 @@ Xenograft
 Autografts and isografts are generally accepted because they are genetically
  identical.
  Allografts, being genetically different, are typically identified as foreign
- by the immune system and consequently
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-don't like the word
-\end_layout
-
-\end_inset
-
- rejected.
+ by the immune system and as a result rejected.
  Xenografts, which have the most significant genetic differences, are the
  most vigorously rejected by the immune system 
 \begin_inset CommandInset citation
@@ -2233,16 +2219,6 @@ literal "false"
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-idk if this the right start of the section
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -4956,13 +4932,13 @@ often referred to as
 \emph default
 is a statistical technique employed to analyze and predict the time until
  an event of interest occurs.
- Its name originates from clinical and biological research, where these
- methods are used to analyze survival time, hence the name.
- These methods, however, found their uses in areas far beyond clinical settings:
+ Its name originates from clinical and biological research where these methods
+ are used to analyze survival time.
+ These methods, however, found their use in areas far beyond clinical settings:
  in business to predict the time until the customer ”churns” from a subscription
-, in engineering, to estimate the product longevity or the longevity of
- their parts, in social sciences, estimate the longevity of a marriage or
- a student dropout rate in an academic setting.
+; in engineering to estimate the product longevity or the longevity of its
+ parts; in social sciences to estimate the longevity of a marriage; or to
+ estimate a student dropout rate in an academic setting.
 \end_layout
 
 \begin_layout Standard
@@ -4975,7 +4951,8 @@ time
 survival time
 \emph default
 ) refers to the duration from the start of an individual's follow-up to
- the occurrence of an event, measured in days, weeks, months, or years 
+ the occurrence of an event.
+ It is measured in days, weeks, months, or years 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -4997,7 +4974,7 @@ h or
 failure
 \emph default
 ) encompasses any occurrence that permanently changes the state of the subject.
- It can be death, the onset of a disease, a relapse from remission, recovery,
+ It can be death, the onset of a disease, a relapse from remission, a recovery,
  or any other specified experience of interest that an individual might
  encounter 
 \begin_inset CommandInset citation
@@ -5042,9 +5019,9 @@ Basic Terminology
 \end_layout
 
 \begin_layout Standard
-In this subsection, we are going to cover basic terminology required for
- survival analysis such as censoring, censoring assumptions, survival, and
- hazard functions.
+In this subsection, we are going to cover the basic terminology required
+ for survival analysis such as censoring, censoring assumptions, survival,
+ and hazard functions.
  
 \end_layout
 
@@ -5207,7 +5184,7 @@ Understanding right, left, and interval censoring is essential in survival
  We will next turn our attention to the assumptions associated with these
  censoring types.
  These assumptions are inherent to many survival analysis methods and are
- critical in selecting the appropriate technique.
+ critical in selecting an appropriate technique.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -5228,8 +5205,8 @@ independent
 non-informative
 \emph default
 .
- Each shares certain similarities but also possesses unique distinctions,
- which we'll explore in detail.
+ Each shares certain similarities but also possesses unique distinctions
+ which we will explore in detail.
  Censoring assumptions is the way censoring is managed.
 \end_layout
 
@@ -5254,7 +5231,7 @@ t
 Independent Censoring
 \series default
 : Independent censoring occurs when the censoring is random within certain
- subgroups, defined by certain covariates.
+ subgroups, defined by specific covariates.
  If no covariates are present, it defaults to random censoring.
  This distinction might not be apparent when examining a single subgroup.
 \end_layout
@@ -5266,8 +5243,8 @@ Non-Informative Censoring
 \series default
 : Non-informative censoring occurs when censored instances do not provide
  any information on their survival prospects.
- In other words, whether or not the patient is censored has no influence
- on experiencing the event of interest.
+ In other words, whether or not the patient is censored, has no influence
+ on experiencing the event.
 \end_layout
 
 \begin_layout Standard
@@ -5285,11 +5262,12 @@ random
 \emph default
 .
  However, these assumptions are not equivalent.
- To better understand these concepts, let's look into examples.
+ To better understand these concepts, let us look into some examples.
 \end_layout
 
 \begin_layout Standard
-Consider a three-year disease occurrence study with 100 subjects at risk.
+Consider a three-year disease occurrence study with 100 subjects at risk
+ (group A).
  By the end of the study, 20 of them contracted the disease, giving a 20%
  three-year disease risk.
  Suppose we want to extend the study for another two years on the remaining
@@ -5302,14 +5280,13 @@ Consider a three-year disease occurrence study with 100 subjects at risk.
  it.
  Consequently, the five-year risk is 30% and the five-year survival is 70%
  under random and independent censoring assumptions.
- In this case, random and independent censoring is the same, as no predictor
+ In this case, random and independent censoring are the same, as no predictor
  variables are considered.
 \end_layout
 
 \begin_layout Standard
 To illustrate the difference between random and independent censoring, let
- us introduce another group to the study: group B (the group before is A)
- with 100 individuals.
+ us introduce another group to the study: group B with 100 individuals.
  In the first three years, 40 contracted the disease, and 10 left the study.
  So, the calculated three-year risk for group B is 40%.
  In the next two years, 10 out of 50 get the disease, yielding 20% risk
@@ -5326,10 +5303,21 @@ As we can see, the five-year risk in the two groups differs significantly
  (50% against 17%).
  Hence, the overall censoring is not random.
  However, it is random within each group, so the censoring is independent.
- If, instead, in group B, 30 subjects out of 60 were censored at the three-year
- mark, the censoring proportion would be the same in both groups, and the
- overall censoring would be random, as those censored would be the representativ
-es of those who remained at risk.
+ On other hand, if in group B, 30 subjects out of 60 were censored at the
+ three-year mark, the censoring proportion would be the same in both groups,
+ and the overall censoring would be random as those censored would be the
+ representatives of those who remained at risk.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+50 vs.
+ 17???
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5341,7 +5329,7 @@ To best illustrate what non-informative censoring is, let us demonstrate
  A's relative).
  If the censored subjects are representative of subjects at risk it would
  be random and independent censoring.
- Here, the censoring mechanism is directly related to event occurrence,
+ Here, the censoring mechanism is directly related to the event occurrence,
  so the censoring is informative.
  
 \end_layout
@@ -5364,7 +5352,17 @@ survivor function
 \end_inset
 
 , represents the probability that the patient survives, in other words,
- does not experience the event of interest beyond a given time 
+ does not experience the event of interest beyond the
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+
+ given time 
 \begin_inset Formula $t$
 \end_inset
 
@@ -5375,7 +5373,7 @@ survivor function
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-S(t)=P(T>t).\label{eq:f_surv}
+S(t)=P(T>t),\label{eq:f_surv}
 \end{equation}
 
 \end_inset
@@ -5384,7 +5382,7 @@ S(t)=P(T>t).\label{eq:f_surv}
 \end_layout
 
 \begin_layout Standard
-Where 
+where 
 \begin_inset Formula $P$
 \end_inset
 
@@ -5429,14 +5427,14 @@ It continually decreases or maintains its value over time, theoretically
 
 \begin_layout Enumerate
 As it represents a probability, the function value ranges from 0 to 1.
- It starts at 1, at the beginning of the observation period, indicating
- 100% survival probability, and declines over time, potentially reaching
- 0, as the probability of survival decreases.
+ At the beginning of the observation period it starts at 1, indicating 100%
+ survival probability, and declines over time, potentially reaching 0 as
+ the probability of survival decreases.
 \end_layout
 
 \begin_layout Enumerate
-Although, by definition, the graph of the survival function is smooth, in
- reality, it is a step function.
+Although the graph of the survival function is smooth by definition, in
+ reality it is a step function.
  This stepwise representation is due to the nature of real-world data, where
  events are recorded at specific, discrete time points rather than continuously
  
@@ -5491,8 +5489,18 @@ Survival function
  It presents a declining or constant trend starting at 1 and potentially
  declining to 0.
  While understanding the probability of not failing at every time point
- is important, knowing the instantaneous risk of failing is useful in some
- cases, leading us to the next tool: the hazard function.
+ is important, knowing the instantaneous risk might also be useful, leading
+ us to the next tool: the hazard function.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+kouknut na tuhle vetu a prepsat
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -5562,11 +5570,11 @@ Here,
 
 .
  The conditional probability statement gives the probability that a person’s
- survival time, 
+ survival time 
 \begin_inset Formula $T$
 \end_inset
 
-, will lie in the time interval between 
+ will lie in the time interval between 
 \begin_inset Formula $t$
 \end_inset
 
@@ -5620,8 +5628,8 @@ To best illustrate the concept of instantaneous potential, let us refer
  speed for an hour would result in traveling 80 kilometers.
  However, it doesn't predict how much the car will travel in reality.
  The same works with the instantaneous potential: it might be high at one
- point, but low at another, reflecting that both are measurements at an
- instant in time rather than an interval 
+ point but low at another, reflecting that both are measurements at an instant
+ in time rather than an interval 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -5639,7 +5647,7 @@ The cumulative hazard function
 \emph default
 further extends our understanding by quantifying the accumulated risk over
  time.
- It is an area under the hazard function that allows us to say which group
+ It is the area under the hazard function that allows us to say which group
  has a greater risk.
  It is defined by the following function:
 \end_layout
@@ -5685,6 +5693,17 @@ status collapsed
 \begin_layout Plain Layout
 The example of a hazard function.
  Note that it may signifficantly differ.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+divna veta.
+ vyhodit
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5704,7 +5723,7 @@ The example of a hazard function.
 \begin_layout Subsubsection*
 
 \series bold
-The relationsip between the survival and hazard functions
+The Relationship Between the Survival and Hazard Functions
 \end_layout
 
 \begin_layout Standard
@@ -5713,12 +5732,12 @@ Some models, such as Cox Proportional Hazards, are written in terms of the
  function out of the hazard function to make the model more flexible and
  accessible to a larger audience.
  Fortunately, there are ways to convert one into the other and vice versa.
- In this subsection, we are going to cover ways to do that.
+ In this subsection, we are going to describe techniques for these conversions.
  
 \end_layout
 
 \begin_layout Standard
-Let us start by considering how to get the survival function 
+Let us start by considering how to obtain the survival function 
 \begin_inset Formula $S(t)$
 \end_inset
 
@@ -5738,7 +5757,7 @@ S(t)=exp\left[-\intop_{0}^{t}h(u)du\right].\label{eq:haz_to_surv}
 
 \end_inset
 
-This equation 
+Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:haz_to_surv"
@@ -5804,7 +5823,7 @@ h(t)=-\left[\frac{dS(t)/dt}{S(t)}\right].\label{eq:surv_to_haz}
 \end_layout
 
 \begin_layout Standard
-Here, the Equation 
+Here, Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:surv_to_haz"
@@ -5830,7 +5849,7 @@ noprefix "false"
 \begin_inset Formula $S(t)$
 \end_inset
 
- itself.
+.
 \end_layout
 
 \begin_layout Standard
@@ -5839,7 +5858,7 @@ Considering the fact that the survival function describes the probability
 \begin_inset Formula $t$
 \end_inset
 
- and the hazard function shows us the instantaneous risk of a person dying
+, and the hazard function shows the instantaneous risk of a person dying
  at a specific instant 
 \begin_inset Formula $t$
 \end_inset
@@ -5855,14 +5874,14 @@ literal "false"
 
 .
  Of the two discussed functions, the survival function is used more often
- as it is more intuitive, and in the practical part, we will estimate the
- survival function as well.
+ as it is more intuitive.
+ In the practical part, we will estimate the survival function as well.
  Fortunately, we will not convert them manually.
  The 
 \emph on
 scikit-survival
 \emph default
- library (more on it in the section 
+ library (more on it in the Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Overview-of-Machine"
