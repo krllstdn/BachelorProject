@@ -1,3 +1,10 @@
+import AdditionalInfoIcon from "../miscellaneous/AdditionalInfoIcon";
+
+type Option = {
+  value: string;
+  label: string;
+};
+
 type SelectFieldProps = {
   name: string;
   text: string;
@@ -7,7 +14,7 @@ type SelectFieldProps = {
   onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 };
 
-function SelectField(props: SelectFieldProps) {
+export default function SelectField(props: SelectFieldProps) {
   return (
     <div className="bg-quaternary p-3 text-left flex mb-3">
       <label htmlFor={props.name} className="text-primary font-semibold mr-3">
@@ -30,4 +37,36 @@ function SelectField(props: SelectFieldProps) {
   );
 }
 
-export default SelectField;
+type SelectFieldCoxProps = {
+  name: string;
+  text: string;
+  options: Option[];
+  value: string;
+  key: string;
+  description?: string;
+  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+};
+
+export function SelectFieldCox(props: SelectFieldCoxProps) {
+  return (
+    <div className="bg-quaternary p-3 text-left flex mb-3 text-sm">
+      <label htmlFor={props.name} className="text-primary  font-semibold mr-3">
+        {props.text + ":"}
+      </label>
+      <select
+        name={props.name}
+        key={props.key}
+        className="flex-grow border-0 bg-inherit outline-none border-primary"
+        onChange={props.onChange}
+        value={props.value}
+      >
+        {props.options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+      {props.description && <AdditionalInfoIcon text={props.description} />}
+    </div>
+  );
+}
