@@ -1,15 +1,17 @@
+import AdditionalInfoIcon from "../miscellaneous/AdditionalInfoIcon";
 type InputFieldProps = {
   name: string;
   text: string;
   value?: string;
   key: string;
   type?: string;
+  description?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 function InputField(props: InputFieldProps) {
   return (
-    <div className="bg-quaternary p-3 mb-3">
+    <div className="bg-quaternary p-3 mb-3 text-sm flex justify-between">
       <label className="text-primary font-semibold mr-3">{props.text}</label>
       <input
         name={props.name}
@@ -18,6 +20,7 @@ function InputField(props: InputFieldProps) {
         onChange={props.onChange}
         value={props.value}
       />
+      {props.description && <AdditionalInfoIcon text={props.description} />}
     </div>
   );
 }

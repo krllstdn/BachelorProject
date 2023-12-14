@@ -1,105 +1,138 @@
 {
   "model_pickle_path": "Application/Backend/models/models/COXNET_DECEASED_MODEL.pickle",
-  "features": {
-    "ON_DIALYSIS": {
-      "type": "categorical",
-      "description": "Whether or not the recipient was on dialysis prior to transplant",
-      "possible_values": {
-        "Y": "Yes",
-        "N": "No"
-      }
+  "features": [
+    {
+        "name": "ON_DIALYSIS",
+        "type": "categorical",
+        "short_description": "On Dialysis?",
+        "description": "Whether or not the recipient was on dialysis prior to transplant",
+        "possible_values": {
+            "Y": "Yes",
+            "N": "No"
+        }
     },
-    "PRE_TX_TXFUS": {
-      "type": "categorical",
-      "description": "Whether or not the recipient had pre-transplant blood transfusions",
-      "possible_values": {
-        "Y": "Yes",
-        "N": "No"
+    {
+        "name": "PRE_TX_TXFUS",
+        "type": "categorical",
+        "short_description": "Blood Transfusions?",
+        "description": "Whether or not the recipient had pre-transplant blood transfusions",
+        "possible_values": {
+            "Y": "Yes",
+            "N": "No"
+        }
     },
-    "GENDER": {
-      "type": "categorical",
-      "description": "Recipient gender",
-      "possible_values": {
-        "M": "Male",
-        "F": "Female"
-      }}
+    {
+        "name": "GENDER",
+        "type": "categorical",
+        "short_description": "Recipient gender",
+        "description": "Recipient gender",
+        "possible_values": {
+            "M": "Male",
+            "F": "Female"
+        }
     },
-    "ETHCAT": {
-      "type": "categorical",
-      "description": "Recipient ethnicity",
-      "possible_values": {
-        "1": "White, non-Hispanic",
-        "2": "Black, non-Hispanic",
-        "4": "Hispanic/Latino",
-        "5": "Asian, non-Hispanic",
-        "6": "American Indian/Alaska Native, non-Hispanic",
-        "7": "Native Hawaiian/Other Pacific Islander, non-Hispanic",
-        "9": "Multiracial, non-Hispanic"        
-      }
+    {
+        "name": "ETHCAT",
+        "type": "categorical",
+        "short_description": "Recipient ethnicity",
+        "description": "Recipient ethnicity",
+        "possible_values": {
+            "1": "White, non-Hispanic",
+            "2": "Black, non-Hispanic",
+            "4": "Hispanic/Latino",
+            "5": "Asian, non-Hispanic",
+            "6": "American Indian/Alaska Native, non-Hispanic",
+            "7": "Native Hawaiian/Other Pacific Islander, non-Hispanic",
+            "9": "Multiracial, non-Hispanic"        
+        }
     },
-    "DIABETES_DON": {
-      "type": "categorical",
-      "description": "Whether or not the donor has diabetes",
-      "possible_values": {
-        "Y": "Yes",
-        "N": "No",
-        "U": "Unknown"
-      }
+    {
+        "name": "DIABETES_DON",
+        "type": "categorical",
+        "short_description": "Donor diabetes",
+        "description": "Whether or not the donor has diabetes",
+        "possible_values": {
+            "Y": "Yes",
+            "N": "No",
+            "U": "Unknown"
+        }
     },
-    "DIAB": {
-      "type": "categorical",
-      "description": "Whether or not the recipient has diabetes",
-      "possible_values": {
-        "Y": "Yes",
-        "N": "No",
-        "U": "Unknown"
-      }
+    {
+        "name": "DIAB",
+        "type": "categorical",
+        "short_description": "Recipient diabetes",
+        "description": "Whether or not the recipient has diabetes",
+        "possible_values": {
+            "Y": "Yes",
+            "N": "No",
+            "U": "Unknown"
+        }
     },
-    "HCV_SEROSTATUS": {
-      "type": "categorical",
-      "description": "Whether or not the recipient has Hepatitis C",
-      "possible_values": {
-        "N": "Negative",
-        "P": "Positive",
-        "ND": "Not Done",
-        "U": "Unknown"
-      }
+    {
+        "name": "HCV_SEROSTATUS",
+        "type": "categorical",
+        "short_description": "Recipient Hepatitis C",
+        "description": "Whether or not the recipient has Hepatitis C",
+        "possible_values": {
+            "N": "Negative",
+            "P": "Positive",
+            "ND": "Not Done",
+            "U": "Unknown"
+        }
     },
-    "AGE": {
-      "type": "numerical",
-      "description": "Recipient age at transplant"
+    {
+        "name": "AGE",
+        "type": "numerical",
+        "short_description": "Recipient age",
+        "description": "Recipient age at transplant"
     },
-    "BMI_CALC": {
-      "type": "numerical",
-      "description": "Recipient BMI at transplant"
+    {
+        "name": "BMI_CALC",
+        "type": "numerical",
+        "short_description": "Recipient BMI",
+        "description": "Recipient BMI at transplant"
     },
-    "AGE_DON": {
-      "type": "numerical",
-      "description": "Donor age at transplant"
+    {
+        "name": "AGE_DON",
+        "type": "numerical",
+        "short_description": "Donor age",
+        "description": "Donor age at transplant"
     },
-    "CREAT_TRR": {
-      "type": "numerical",
-      "description": "Recipient creatinine at transplant"
+    {
+        "name": "CREAT_TRR",
+        "type": "numerical",
+        "short_description": "Recipient creatinine",
+        "description": "Recipient creatinine at transplant"
     },
-    "NPKID": {
-      "type": "numerical",
-      "description": "Number of previous kidney transplants"
+    {
+        "name": "NPKID",
+        "type": "numerical",
+        "short_description": "Prev. tx number",
+        "description": "Number of previous kidney transplants"
     },
-    "RDR2": {
-      "type": "numerical",
-      "description": "RDR2 Antigen"
+    {
+        "name": "RDR2",
+        "type": "numerical",
+        "short_description": "RDR2",
+        "description": "RDR2 Antigen"
     },
-    "DR53": {
-      "type": "numerical",
-      "description": "DR53 Antigen"
+    {
+        "name": "DR53",
+        "type": "numerical",
+        "short_description": "DR53",
+        "description": "DR53 Antigen"
     },
-    "DR2": {
-      "type": "numerical",
-      "description": "DR2 Antigen"
+    {
+        "name": "DR2",
+        "type": "numerical",
+        "short_description": "DR2",
+        "description": "DR2 Antigen"
     },
-    "COLD_ISCH_KI": {
-      "type": "numerical",
-      "description": "Cold Ischemic Time"
+    {
+        "name": "COLD_ISCH_KI",
+        "type": "numerical",
+        "short_description": "Cold Ischemic Time",
+        "description": "Cold Ischemic Time"
     }
-  }
+]
 }
