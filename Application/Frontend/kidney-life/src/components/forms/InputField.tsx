@@ -11,8 +11,10 @@ type InputFieldProps = {
 
 function InputField(props: InputFieldProps) {
   return (
-    <div className="bg-quaternary p-3 mb-3 text-sm flex justify-between">
-      <label className="text-primary font-semibold mr-3">{props.text}</label>
+    <div className="bg-quaternary rounded p-3 mb-3 text-sm flex justify-between">
+      <label className="text-primary font-semibold mr-3">
+        {props.text + ":"}
+      </label>
       <input
         name={props.name}
         className="border-none outline-none bg-inherit border-primary w-7/12"

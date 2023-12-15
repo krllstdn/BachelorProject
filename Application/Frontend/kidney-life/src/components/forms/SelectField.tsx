@@ -41,7 +41,7 @@ type SelectFieldCoxProps = {
   name: string;
   text: string;
   options: Option[];
-  value: string;
+  value: string | number;
   key: string;
   description?: string;
   onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
@@ -49,7 +49,7 @@ type SelectFieldCoxProps = {
 
 export function SelectFieldCox(props: SelectFieldCoxProps) {
   return (
-    <div className="bg-quaternary p-3 text-left flex mb-3 text-sm">
+    <div className="bg-quaternary rounded p-3 text-left flex mb-3 text-sm">
       <label htmlFor={props.name} className="text-primary  font-semibold mr-3">
         {props.text + ":"}
       </label>

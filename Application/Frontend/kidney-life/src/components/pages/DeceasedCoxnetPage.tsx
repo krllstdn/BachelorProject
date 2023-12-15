@@ -20,18 +20,45 @@ type FeaturesData = {
 };
 
 function DeceasedCoxnetPage() {
-  //   const [featureStates, setFeatureStates] = useState(
-  //     features.features.reduce((acc, feature) => {
-  //       acc[feature.name] = feature.type === "categorical" ? "" : 0; // initial state
-  //       return acc;
-  //     }, {})
-  //   );
+  const [featureStates, setFeatureStates] = useState(
+    features.features.reduce(
+      (acc: { [key: string]: string | number }, feature) => {
+        acc[feature.name] =
+          feature.type === "categorical"
+            ? Object.keys(feature.possible_values || {})[0]
+            : 0; // initial state
+        return acc;
+      },
+      {}
+    )
+  );
+
+  const sendRequest = async () => {
+    try {
+      const response = await fetch("http://your-api-url", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(featureStates),
+      });
+
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div>
       {/* <div className="flex items-center justify-center min-h-screen"> */}
       <ModalContainer className="w-2/5 h-full pr-5 pl-5 pt-6 pb-8 ml-7 mt-3">
-        <h1 className="text-3xl text-center pb-5">Deceased Coxnet Page</h1>
+        <h1 className="text-3xl text-center pb-5">Coxnet Deceased</h1>
         {features.features.map((feature) =>
           feature.type === "categorical" ? (
             <SelectFieldCox
@@ -39,8 +66,14 @@ function DeceasedCoxnetPage() {
               //   label={feature.description}
               key={feature.name}
               text={feature.short_description}
-              value=""
+              value={featureStates[feature.name]}
               description={feature.description}
+              onChange={(e) =>
+                setFeatureStates({
+                  ...featureStates,
+                  [feature.name]: e.target.value,
+                })
+              }
               options={Object.entries(feature.possible_values || {}).map(
                 ([key, value]) => ({
                   value: key,
@@ -56,10 +89,20 @@ function DeceasedCoxnetPage() {
               key={feature.name}
               text={feature.short_description}
               description={feature.description}
+              onChange={(e) =>
+                setFeatureStates({
+                  ...featureStates,
+                  [feature.name]: e.target.value,
+                })
+              }
             />
           )
         )}
-        <Button additionalStyles="mt-3" name="Submit" />
+        <Button
+          additionalStyles="mt-3"
+          name="Submit"
+          onClick={() => console.log(featureStates)}
+        />
       </ModalContainer>
       {/* </div> */}
     </div>
