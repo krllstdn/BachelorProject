@@ -5955,7 +5955,7 @@ Statistical methods can be further subdivided based on their assumptions
  methods.
  Machine learning methods, encompassing methods like survival trees, ensembles
  (random survival forests), neural networks, and support vector machines
- form a distinct category.
+ form a distinct category. // to neni veta
  Advanced machine learning techniques, such as active learning, transfer
  learning, and multitask learning are included as well
 \begin_inset CommandInset citation
