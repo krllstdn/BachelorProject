@@ -5969,7 +5969,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In this section, we will cover selected statistical methods and one machine
+In this section, we will cover selected statistical methods and one machine // tahle section konci, v te uz nic nepokryjes
  learning technique.
  Machine learning techniques related to neural networks will be covered
  in Section
@@ -5992,7 +5992,7 @@ Statistical Methods
 
 \begin_layout Standard
 This section provides a concise overview of statistical techniques, given
- our primary emphasis on machine learning methods.
+ our primary emphasis on machine learning methods. //given our primary emphasis on machine learning methods ???? co to ma byt?
  Here, we introduce three different types of statistical methods that are
  commonly used to estimate the survival and hazard functions:
 \emph on
@@ -6030,7 +6030,7 @@ literal "false"
  In the next section, we will cover Kaplan-Meier in more detail.
  The Life-Table method is more convenient than Kaplan-Meier for the estimation
  of survival curves when data subjects are segmented into distinct time
- intervals when dealing with an extensive number of subjects or a broad
+ intervals, when dealing with an extensive number of subjects or a broad
  population scope.
  On the other hand, the Nelson-Aalen method is used for the estimation of
  hazard functions
@@ -6068,7 +6068,7 @@ noprefix "false"
 \end_inset
 
 ).
- There are a couple of variants of the basic Cox model: the penalized Cox
+ There are many variants of the basic Cox model, such as the penalized Cox
  model, which will be used in the practical part of this work, the CoxBoost
  algorithm, and the Time-Dependent Cox model
 \begin_inset CommandInset citation
@@ -6092,7 +6092,7 @@ Parametric methods
  whereas the Cox model can make this task somewhat cumbersome or unfeasible.
  In the domain of parametric models, linear regression is central.
  However, the Tobit model, Buckley-James regression, and penalized regression
- are the most favored.
+ are the most favored. // to bych nerekl
  Beyond this, other parametric models like the Accelerated Failure Time
  (AFT) have gained traction.
  The AFT model represents survival time as a function of covariates
@@ -6108,6 +6108,9 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+
+// tohle patri az nakonec az ty jednotlive metody popises
+
 To conclude, statistical methods in survival analysis can be broadly categorized
  into non-parametric, semi-parametric, and parametric techniques, each with
  its unique strengths and applications.
