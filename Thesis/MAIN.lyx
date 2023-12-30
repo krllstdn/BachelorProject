@@ -6247,7 +6247,7 @@ noprefix "false"
 
 \end_inset
 
- shows the survival curve created with the KM method.
+ shows the survival curve created with the KM method. // na jakych datech?
 
 \end_layout
 
@@ -6313,6 +6313,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+
+// moc neni co sumarizovat. Nerikas co to znamena ta censoring independence. Porovnavani log-rank test take velice strucne jenom. A urcite by stalo za to zminit se i o Nelson Aalen estimatoru a Life Table estimatoru, kdyz uz o nich hovoris.
 To summarize, the Kaplan-Meier method provides a robust non-parametric approach
  for estimating survival functions, emphasizing its independence from covariates.
  While the log-rank test offers a mechanism to compare the survival curves
