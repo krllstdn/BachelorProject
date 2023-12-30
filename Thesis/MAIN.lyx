@@ -37,7 +37,7 @@
 %\addtocontents{lof}{\protect\thispagestyle{empty}}
 %\addtocontents{lot}{\protect\thispagestyle{empty}}
 
-%% Shifts the top line of the TOC (not the title) 1cm upwards 
+%% Shifts the top line of the TOC (not the title) 1cm upwards
 %% so that the whole TOC fits on 1 page. Additional page size
 %% adjustment is performed at the point where the TOC
 %% is inserted.
@@ -354,7 +354,7 @@ status collapsed
 \series bold
 \size huge
 Estimating patient's life expectancy after a successful kidney transplant
- using machine learning methods 
+ using machine learning methods
 \end_layout
 
 \begin_layout Standard
@@ -431,7 +431,7 @@ ends the centered part (the required new paragraph before "}" is inserted
 \begin_layout Labeling
 \paragraph_spacing single
 \labelwidthstring MMMMMMMMM
-Author: 
+Author:
 \series bold
 Kyrylo Stadniuk
 \end_layout
@@ -439,7 +439,7 @@ Kyrylo Stadniuk
 \begin_layout Labeling
 \paragraph_spacing single
 \labelwidthstring MMMMMMMMM
-Supervisor: 
+Supervisor:
 \series bold
 Ing.
  Tomáš Kouřim
@@ -448,7 +448,7 @@ Ing.
 \begin_layout Labeling
 \paragraph_spacing single
 \labelwidthstring MMMMMMMMM
-Consultant: 
+Consultant:
 \series bold
 Ing.
  Pavel Strachota, Ph.D.
@@ -460,7 +460,7 @@ Language
 \begin_inset space ~
 \end_inset
 
-advisor: 
+advisor:
 \series bold
 PaedDr.
  Eliška Rafajová
@@ -544,7 +544,7 @@ I declare that this Bachelor's Degree Project is entirely my own work and
 
 \begin_layout Standard
 \noindent
-Prague, 
+Prague,
 \begin_inset ERT
 status open
 
@@ -698,7 +698,7 @@ Vedoucí práce:
 
 \emph on
 \lang czech
-Konzultant: 
+Konzultant:
 \emph default
 Ing.
  Pavel Strachota, Ph.D.
@@ -780,7 +780,7 @@ Abstrakt:
  na 10 řádků.
  Abstrakt max.
  na 10 řádků.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1000,7 +1000,7 @@ pagestyle{headings}
 The goal of this paper is to explore fields of kidney transplantation and
  machine learning, create and apply machine learning model in real-world
  application.
- 
+
 \end_layout
 
 \begin_layout Chapter
@@ -1033,16 +1033,16 @@ The kidneys are reddish-brown, bean-shaped organs located on both sides
  They serve several critical functions, such as filtering blood, regulating
  blood pressure, aiding red blood cell production, and maintaining the fluid
  balance.
- Structurally, a kidney consists of about 1 million 
+ Structurally, a kidney consists of about 1 million
 \emph on
 nephrons
 \emph default
-, each consisting of a small filter called a 
+, each consisting of a small filter called a
 \emph on
 glomerulus
 \emph default
 , attached to a tubule, responsible for filtering waste products from the
- blood and excreting them with small amounts of fluid as urine 
+ blood and excreting them with small amounts of fluid as urine
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-33"
@@ -1057,11 +1057,11 @@ literal "false"
 Each kidney performs 50% of the normal kidney function.
  However, if one kidney is lost, the remaining kidney can adapt, increasing
  its capacity to as much as 75% of normal function.
- Kidney function is measured with 
+ Kidney function is measured with
 \emph on
 glomerular filtration rate (GFR)
 \emph default
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-33"
@@ -1070,11 +1070,11 @@ literal "false"
 \end_inset
 
 .
- There are two types of GFR: 
+ There are two types of GFR:
 \emph on
 measured GFR (mGFR)
 \emph default
- and 
+ and
 \emph on
 estimated GFR (eGFR)
 \emph default
@@ -1083,7 +1083,7 @@ estimated GFR (eGFR)
 s usually use a formula to calculate eGFR.
  An eGFR of 90 and above is the normal range.
  An eGFR of 15-89 is a range for different stages of chronic kidney disease.
- Values below 15 might indicate renal failure 
+ Values below 15 might indicate renal failure
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-38"
@@ -1098,7 +1098,7 @@ literal "false"
 Impairment in kidney function can have serious health consequences.
  There are many reasons why kidneys may become dysfunctional, such as end-stage
  chronic kidney disease, heavy metal poisoning, polycystic kidney disease,
- an infection, nephrotoxic drugs, lupus, physical injury, etc 
+ an infection, nephrotoxic drugs, lupus, physical injury, etc
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36,key-37"
@@ -1109,7 +1109,7 @@ literal "false"
 .
  Among these conditions, chronic kidney disease is the most prevalent —
  about 10% of the population worldwide is affected by some form of chronic
- kidney disease 
+ kidney disease
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-35"
@@ -1118,12 +1118,12 @@ literal "false"
 \end_inset
 
 .
- 
+
 \emph on
 Chronic kidney disease (CKD)
 \emph default
  is an incurable condition characterized by a gradual reduction in kidney
- function over time 
+ function over time
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-34,key-35"
@@ -1134,7 +1134,7 @@ literal "false"
 .
  Diabetes and high blood pressure are responsible for the majority of cases
  of chronic kidney disease, with high blood sugar damaging the glomeruli
- and high blood pressure damaging the kidney blood vessels 
+ and high blood pressure damaging the kidney blood vessels
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-34,key-37"
@@ -1145,7 +1145,7 @@ literal "false"
 .
  The latter interaction is associated with a negative feedback loop, where
  it is unclear whether kidney damage causes high blood pressure or vice
- versa 
+ versa
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-35"
@@ -1157,25 +1157,25 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-CKD progresses in 5 stages, ultimately culminating in 
+CKD progresses in 5 stages, ultimately culminating in
 \emph on
 end-stage renal disease (ESRD)
 \emph default
 , where kidneys fail.
- Treatment options include 
+ Treatment options include
 \emph on
 dialysis
 \emph default
 , a mechanical process that substitutes kidney function but cannot fully
  replicate it.
  It leads to a reduced life expectancy of, on average, 5 to 10 years.
- Alternatively, 
+ Alternatively,
 \emph on
 kidney transplantation
 \emph default
  offers a more permanent solution but requires a compatible donor, waiting
  for which can take many months or years, and the use of immunosuppressants
- after the transplantation 
+ after the transplantation
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36"
@@ -1204,7 +1204,7 @@ In conclusion, the kidneys play an essential role in maintaining overall
 \end_layout
 
 \begin_layout Section
-Clinical Aspects of Kidney Transplantation 
+Clinical Aspects of Kidney Transplantation
 \end_layout
 
 \begin_layout Standard
@@ -1232,7 +1232,7 @@ Kidney transplantation stands as the most commonly performed organ transplant
  Kidneys can be obtained from both deceased and living donors - relatives
  or altruistic volunteers.
  Living donors can donate one kidney and continue to lead normal and healthy
- lives, significantly expanding the potential donor pool 
+ lives, significantly expanding the potential donor pool
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -1241,11 +1241,11 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
-ABO blood group and histocompatibility (defined in 
+ABO blood group and histocompatibility (defined in
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Immunology-of-kidney"
@@ -1260,7 +1260,7 @@ noprefix "false"
  transplant outcomes.
  Compared to organs such as the liver or bone marrow, kidneys do not present
  additional challenges such as graft versus host disease (GVHD), simplifying
- the transplantation process 
+ the transplantation process
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -1279,7 +1279,7 @@ However, kidney transplantation, despite its advances, faces significant
  decreasing the pool of available donors even further.
  In such cases, the immune system develops antibodies to the graft alloantigens,
  and any further transplantation of organs with similar antigens will result
- in hyperacute rejection (many of these termes are explained in 
+ in hyperacute rejection (many of these termes are explained in
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Immunology-of-kidney"
@@ -1291,7 +1291,7 @@ noprefix "false"
 
 ).
  This fact often leaves many patients unable to find a compatible donor
- after one or two rejection episodes 
+ after one or two rejection episodes
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -1300,14 +1300,14 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
 Recipients of kidney transplants typically require life-long immunosuppression.
  While immunosuppressants are essential to prevent organ rejection, they
  are associated with severe side effects, such as increased risk of cancer,
- hypertension, and metabolic bone disease 
+ hypertension, and metabolic bone disease
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -1323,7 +1323,7 @@ Given the high incidence of renal failure in diabetic patients - affecting
  roughly 30% of individuals with advanced diabetes - simultaneous kidney
  and pancreas transplants are sometimes performed.
  This approach addresses renal failure and underlying diabetes, offering
- a comprehensive solution for these patients 
+ a comprehensive solution for these patients
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -1349,7 +1349,7 @@ In summary, kidney transplantation has become a vital and frequent medical
 \end_layout
 
 \begin_layout Section
-The History of Kidney Transplantation 
+The History of Kidney Transplantation
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:history-of-kidney-transplantation"
@@ -1364,7 +1364,7 @@ name "sec:history-of-kidney-transplantation"
 status open
 
 \begin_layout Plain Layout
-Write intro 
+Write intro
 \end_layout
 
 \end_inset
@@ -1379,7 +1379,7 @@ Early Animal Experiments
 \begin_layout Standard
 Advancements in surgical methods at the beginning of the 20th century eventually
  led to experiments with organ transplantation.
- One of the first recorded transplantations was an 
+ One of the first recorded transplantations was an
 \emph on
 autograft
 \emph default
@@ -1393,7 +1393,7 @@ autograft
 
 \begin_layout Standard
 That year, other experiments followed.
- Alfred von Decastello performed a dog-to-dog kidney 
+ Alfred von Decastello performed a dog-to-dog kidney
 \emph on
 allograft
 \emph default
@@ -1401,7 +1401,7 @@ allograft
  of Experimental Pathology in Vienna.
  Although initially, the transplanted kidney produced urine, it eventually
  ceased.
- Later, Ullman performed a dog-to-goat kidney 
+ Later, Ullman performed a dog-to-goat kidney
 \emph on
 xenograft
 \emph default
@@ -1414,7 +1414,7 @@ At the same time, in Lyon, Alexis Carrel and his colleagues were working
  on vascular suturing methods.
  Carrel's technique, known as Carrel's seam, was a considerable improvement
  over existing methods, addressing the common issues of thrombosis, hemorrhage,
- stricture, and embolism 
+ stricture, and embolism
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -1427,7 +1427,7 @@ literal "false"
  in the United States led to further refinements of his method and the documenta
 tion of organ rejection.
  For his contributions, Carrel received the Nobel Prize in Medicine in 1912
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-2"
@@ -1456,7 +1456,7 @@ Early Human Transplantation
 \end_layout
 
 \begin_layout Standard
-Two first recorded human renal 
+Two first recorded human renal
 \emph on
 xenografts
 \emph default
@@ -1464,7 +1464,7 @@ xenografts
  It involved a pig and a goat as donor animals.
  One kidney was transplanted to the arm and the second to the thigh.
  Although each kidney functioned only for an hour, these efforts marked
- the beginning of human transplantation attempts 
+ the beginning of human transplantation attempts
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1,key-4"
@@ -1487,7 +1487,7 @@ on but also exposed the challenge of graft rejection.
  Alexis Carrel, in a 1914 lecture, mentioned J.
  B.
  Murphy's work on irradiation and benzol treatment, suggesting their potential
- to improve graft survival 
+ to improve graft survival
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -1498,7 +1498,7 @@ literal "false"
 .
  Inspired by these findings, Carrel conducted his own experiments with irradiati
 on, achieving prolonged graft survival.
- However, these findings were never formally published 
+ However, these findings were never formally published
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -1514,7 +1514,7 @@ The period of the 1930s and 1940s was stagnant compared to the beginning
  of the century.
  European surgical centers that studied transplantology before were in decline.
  Meanwhile, the Mayo Clinic in the US was conducting some cautious experiments
- without considering Carrol's works and attempts at immunosuppression 
+ without considering Carrol's works and attempts at immunosuppression
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -1541,7 +1541,7 @@ However, it was during that period that a significant milestone was achieved
  He viewed these transplants as temporary measures to bridge the gap until
  the recipient's own kidneys could recover.
  Out of the six transplants he performed, two patients experienced a complete
- recovery, regaining normal kidney function 
+ recovery, regaining normal kidney function
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-4"
@@ -1600,7 +1600,7 @@ tropic hormone (more known as cortisone), it was deemed clinically insignificant
  for transplant success - insights later validated with further research.
  On December 23, 1954, in Boston, Joseph Murray performed kidney allograft
  from one identical twin to another, bypassing the rejection barrier.
- From that time, many similar surgeries were performed in Boston 
+ From that time, many similar surgeries were performed in Boston
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1,key-3"
@@ -1617,7 +1617,7 @@ To conclude, the early successes during the 1950s marked a transformative
  Works of Hume, Murray, and others underlined the critical role of immune
  response in graft survival, starting the quest for effective immunosuppression,
  to which the subsequent section is dedicated.
- 
+
 \end_layout
 
 \begin_layout Subsection*
@@ -1634,7 +1634,7 @@ d cortisone, an adrenal cortical hormone with mild immunosuppressive properties,
  for transplantation purposes.
  It led researchers to revisit earlier experiments with irradiation.
  Experiments on mice by Joan Main and Richmond Prehn showed promising results,
- inspiring human trials in Boston and Paris 
+ inspiring human trials in Boston and Paris
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-3"
@@ -1650,7 +1650,7 @@ In 1958, Murray's team in Boston employed radiation in human transplantation,
  achieving a significant breakthrough with a kidney transplant between non-ident
 ical twins that lasted 20 years.
  Similarly, in Paris, Jean Hamburger's team accomplished a 26-year functioning
- transplant using radiation 
+ transplant using radiation
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-3"
@@ -1659,7 +1659,7 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1675,7 +1675,7 @@ The quest for safer immunosuppressive methods led to the anticancer drug
  The introduction of azathioprine in 1959, a derivative of 6-MP, by Gertrude
  Elion and George Hitchings, further improved results.
  Their groundbreaking work earned them the Nobel Prize, and by 1961, azathioprin
-e was available for human use 
+e was available for human use
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-3"
@@ -1684,7 +1684,7 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1695,7 +1695,7 @@ In 1963, a conference held by the National Research Council revealed a bleak
  leading to over one-year graft survival in 70% of cases.
  His results revolutionized the field, resulting in 50 new US transplantation
  programs and setting a 20-year standard in post-transplant immunosuppression
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-3"
@@ -1734,7 +1734,7 @@ From 1964 to 1980, kidney transplantation saw gradual progress.
  centers.
  Concerns about equitable distribution of organs led to the National Transplant
  Act in 1984, establishing the United Network of Organ Sharing (UNOS) for
- oversight 
+ oversight
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-3"
@@ -1743,7 +1743,7 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1760,7 +1760,7 @@ Tissue Typing
 \begin_layout Standard
 The concept of tissue typing, suggested by Alexis Carrel in the early 20th
  century, remained unproven until Jean Dausset discovered the first human
- leukocyte antigen (HLA) in 1958 (more on HLA in 
+ leukocyte antigen (HLA) in 1958 (more on HLA in
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Immunology-of-kidney"
@@ -1774,11 +1774,11 @@ noprefix "false"
  It wasn't until 1964, with Paul Terasaki's development of the microcytotoxicity
  assay, that testing for antibodies became reliable.
  The test involved mixing the donor's lymphocytes with the recipient's serum
- and swiftly became the standard, known as the 
+ and swiftly became the standard, known as the
 \emph on
 crossmatch test
 \emph default
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-3"
@@ -1803,7 +1803,7 @@ However, in 1970, Terasaki's review of his extensive database of cadaver
  It raised much agitation in the tissue typing community, and his grant
  was temporarily suspended until others didn't report the same.
  Since then, many crucial histocompatibility antigens have been discovered
- (Class II locus: D and DR, more on antigens in Section 
+ (Class II locus: D and DR, more on antigens in Section
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Immunology-of-kidney"
@@ -1815,7 +1815,7 @@ noprefix "false"
 
 ).
  Histocompatibility matching remains essential in bone marrow transplantation
- and in selecting family donors 
+ and in selecting family donors
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-3"
@@ -1850,7 +1850,7 @@ t milestone in the realm of transplantation.
  powerful immunosuppressive agent, was introduced.
  Tacrolimus proved to be effective in cases where the combination of cyclosporin
 e and prednisone was insufficient, effectively replacing cyclosporine as
- a usual baseline agent 
+ a usual baseline agent
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-3"
@@ -1914,7 +1914,7 @@ define MHC (major histocompatibility complex)
 \end_layout
 
 \begin_layout Standard
-The 
+The
 \emph on
 immune system
 \emph default
@@ -1923,7 +1923,7 @@ immune system
  It is a network of many cells and tissues that compose a complex system
  that detects, evaluates, and responds to the invader.
  It is essential to understand these mechanisms, as the immune response
- plays a crucial role in graft acceptance or rejection 
+ plays a crucial role in graft acceptance or rejection
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-6"
@@ -1937,13 +1937,13 @@ literal "false"
 \begin_layout Standard
 Innate and adaptive immunity are the two interconnected systems of immune
  response.
- 
+
 \emph on
 Innate immunity (
 \emph default
 also
 \emph on
- natural 
+ natural
 \emph default
 or
 \emph on
@@ -1951,15 +1951,15 @@ or
 \emph default
  includes primitive built-in cellular and molecular mechanisms that provide
  rapid, albeit non-specific responses to common pathogens.
- In contrast, 
+ In contrast,
 \emph on
-adaptive (specific 
+adaptive (specific
 \emph default
 or
 \emph on
  acquired) immunity
 \emph default
- is slower to respond but capable of providing more targeted responses 
+ is slower to respond but capable of providing more targeted responses
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-6"
@@ -1968,7 +1968,7 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1982,7 +1982,7 @@ Physical barriers, including epithelia and mucous membranes, constitute
  It also communicates to the adaptive immunity how to best respond to the
  invader.
  Furthermore, innate immunity plays an important role in the clearance of
- dead tissue and the initiation of repair after the tissue is damaged 
+ dead tissue and the initiation of repair after the tissue is damaged
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-6"
@@ -1991,29 +1991,29 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
-Adaptive immunity is broadly categorized into 
+Adaptive immunity is broadly categorized into
 \emph on
 humoral
 \emph default
- and 
+ and
 \emph on
 cell-mediated immunity
 \emph default
 .
- Central to both humoral and cell-mediated immune responses are 
+ Central to both humoral and cell-mediated immune responses are
 \emph on
 lymphocytes
 \emph default
-, also known as 
+, also known as
 \emph on
 white blood cells
 \emph default
 .
- 
+
 \emph on
 B lymphocytes
 \emph default
@@ -2023,12 +2023,12 @@ B cells)
 \emph default
  mediate humoral response by producing antigen-specific antibodies on encounter
  with the antigen.
- Produced antibodies then bind themselves to 
+ Produced antibodies then bind themselves to
 \emph on
 antigens
 \emph default
  — foreign molecular structures identified by common molecular patterns
- known as 
+ known as
 \emph on
 pathogen-associated molecular patterns
 \emph default
@@ -2037,7 +2037,7 @@ pathogen-associated molecular patterns
 PAMPs
 \emph default
 ) — to mark them for destruction.
- The immune system uses 
+ The immune system uses
 \emph on
 pathogen recognition receptors
 \emph default
@@ -2048,7 +2048,7 @@ PRRs
 ), found on the surface of T cells, in conjunction with antibodies to detect
  and categorize these
 \emph on
- 
+
 \emph default
 PAMPs, which can take the form of molecules on the surface of a pathogen
  or its by-products
@@ -2063,7 +2063,7 @@ not ideal sentence
 
 .
  PRRs bind to PAMPs and initiate a targeted cascade of events that culminate
- in the pathogen's elimination 
+ in the pathogen's elimination
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-6"
@@ -2084,7 +2084,7 @@ T lymphocytes, on the other hand, when encountering an antigen, start to
 \end_inset
 
 ), that help B cells to produce antibodies and help kill ingested microbes;
- 
+
 \emph on
 cytotoxic T cells
 \emph default
@@ -2092,16 +2092,16 @@ cytotoxic T cells
 \begin_inset Formula $CD8^{+}$
 \end_inset
 
-) that target and kill infected cells; 
+) that target and kill infected cells;
 \emph on
 regulatory T lymphocytes
 \emph default
- that prevent or limit immune responses; and 
+ that prevent or limit immune responses; and
 \emph on
 memory cells
 \emph default
 , that remain in the body long-term to provide faster and stronger immune
- response if the same antigen is encountered in the future 
+ response if the same antigen is encountered in the future
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-6"
@@ -2121,7 +2121,7 @@ s with diverse PRRs during the development in bone marrow.
  Cells that react to the host's own cells are eliminated, ensuring that
  only non-self-reactive cells are allowed in circulation.
  The principle of recognizing self vs.
- non-self is called tolerance 
+ non-self is called tolerance
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-6"
@@ -2153,7 +2153,7 @@ In conclusion, the immune system is a complex network of molecules, cells,
 \end_layout
 
 \begin_layout Section
-Immunology of Kidney Transplant 
+Immunology of Kidney Transplant
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Immunology-of-kidney"
@@ -2172,7 +2172,7 @@ The degree to which the immune system responds to a graft depends on the
 \begin_layout Itemize
 
 \series bold
-Autograft 
+Autograft
 \series default
 is body tissue transfer from one body site to the other in the same individual.
 \end_layout
@@ -2209,7 +2209,7 @@ Autografts and isografts are generally accepted because they are genetically
  Allografts, being genetically different, are typically identified as foreign
  by the immune system and as a result rejected.
  Xenografts, which have the most significant genetic differences, are the
- most vigorously rejected by the immune system 
+ most vigorously rejected by the immune system
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2218,7 +2218,7 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -2242,7 +2242,7 @@ The transplantation process inevitably includes termination of blood flow
  This interruption in blood supply inhibits the cell's ability to generate
  sufficient energy to maintain homeostasis, leading to cellular damage or
  death.
- If this happens, the kidney is said to experience 
+ If this happens, the kidney is said to experience
 \emph on
 ischemia-reperfusion injury (IRI)
 \emph default
@@ -2250,9 +2250,9 @@ ischemia-reperfusion injury (IRI)
  IRI is a significant factor in the success of kidney transplantation.
  When the blood flow to the ischemic kidney is restored, dead cells trigger
  an innate immune response.
- It is associated with the release of 
+ It is associated with the release of
 \emph on
-danger-associated molecular patterns (DAMP) 
+danger-associated molecular patterns (DAMP)
 \emph default
 from the compromised cells
 \emph on
@@ -2262,7 +2262,7 @@ from the compromised cells
  These DAMPs are recognized by both innate and adaptive immunity, although
  the former is predominately activated.
  Such an immune response might damage the graft even more and contribute
- to acute rejection 
+ to acute rejection
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2301,7 +2301,7 @@ e is to match organ recipients with ABO-identical organs to prevent potential
  inequities in organ allocation and access.
  In the case of living donors, the principle of ABO-identity is somewhat
  more flexible, where organs from ABO-compatible donors are considered acceptabl
-e for transplantation 
+e for transplantation
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2317,13 +2317,13 @@ Histocompatibility
 \end_layout
 
 \begin_layout Standard
-Genetically similar tissues, known as 
+Genetically similar tissues, known as
 \emph on
 histocompatible
 \emph default
 , are less likely to trigger an immune response post-transplant, as the
  immune system does not recognize the transplanted tissue as foreign.
- Conversely, 
+ Conversely,
 \emph on
 histoincompatible
 \emph default
@@ -2331,16 +2331,16 @@ histoincompatible
  response.
  Although more than 40 distinct loci encode the antigens responsible for
  histocompatibility, the most vigorous allograft-rejection responses are
- attributed to loci within the 
+ attributed to loci within the
 \emph on
 major histocompatibility complex (MHC)
 \emph default
 .
- The organization of MHC in humans is called 
+ The organization of MHC in humans is called
 \emph on
 human leukocyte antigen (HLA)
 \emph default
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2355,13 +2355,13 @@ literal "false"
 Histocompatibility antigens, genetically encoded antigens that cover cell
  surfaces, play a crucial role in recognizing self versus non-self.
  In all vertebrates, histocompatibility antigens are categorized into a
- single 
+ single
 \emph on
-major histocompatibility complex (MHC) 
+major histocompatibility complex (MHC)
 \emph default
 and
 \emph on
- 
+
 \emph default
 numerous
 \emph on
@@ -2373,7 +2373,7 @@ numerous
  Rejection in MHC-compatible donor-recipient pair is usually delayed, in
  some cases forever.
  However, the miH mismatch might be so drastic that it would be comparable
- to the MHC mismatch 
+ to the MHC mismatch
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2382,7 +2382,7 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2390,7 +2390,7 @@ The MHC itself is divided into class I and class II antigens.
  MHC class I antigens cover the surfaces of most cells and can activate
  cytotoxic CD8 cells.
  MHC class II antigens, found on specific immune cells, play an essential
- role in immune response coordination 
+ role in immune response coordination
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2400,7 +2400,7 @@ literal "false"
 
 .
  In humans, each MHC class is further divided into three subgroups, as illustrat
-ed in Table 
+ed in Table
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:MHC-class-division"
@@ -2544,7 +2544,7 @@ It is important to note that class I and II mismatches differ in their impact
  whereas a single mismatch in class II antigen is equivalent to a mismatch
  of 3 or 4 class I antigens.
  When there are mismatches in both class I and II antigens, the risk and
- severity of the rejection are notably increased 
+ severity of the rejection are notably increased
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2565,7 +2565,7 @@ In clinical practice, clinicians asses and try to match donors and recipients
  zero mismatches (0-0-0) to a maximum of 6 mismatches (2-2-2).
  Generally, more emphasis is placed on DR loci due to the capability of
  CD4 T cell activation, which might trigger both humoral and cellular adaptive
- immune responses 
+ immune responses
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2577,7 +2577,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-HLA typing of potential donors and recipient is conducted with a 
+HLA typing of potential donors and recipient is conducted with a
 \emph on
 microcytotoxicity test
 \emph default
@@ -2589,7 +2589,7 @@ microcytotoxicity test
  is assessed by the cells' absorption of various dyes.
  If a cell has an MHC allele for which a particular antibody is specific,
  then the cell will die upon the addition of a complement, and these dead
- cells will take up a dye 
+ cells will take up a dye
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2622,7 +2622,7 @@ ation.
  pairings.
  It is particularly critical in kidney and bone marrow transplants, where
  HLA matching is vital, whereas heart and liver transplantation can withstand
- higher levels of mismatching 
+ higher levels of mismatching
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2631,7 +2631,7 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Paragraph
@@ -2646,7 +2646,7 @@ Graft rejection is mainly due to cell-mediated immune response to alloantigens,
  of MHC and miH alloantigens by helper CD4 and killer CD8 cells, leading
  to their proliferation.
  The second stage, the effector stage, is where the actual destruction of
- the graft occurs 
+ the graft occurs
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2655,7 +2655,7 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2664,7 +2664,7 @@ A range of effector mechanisms are involved in graft rejection.
 itivity and cytotoxic T lymphocyte-mediated cytotoxicity.
  Less common mechanisms are antibody-plus-complement lysis (cell disintegration)
  and destruction by antibody-dependent cell-mediated cytotoxicity (ADCC)
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2673,7 +2673,7 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -2702,7 +2702,7 @@ es, can become sensitized to paternal alloantigens of the fetus; individuals
  with previous grafts may have antibodies against alloantigens of that graft;
  and naturally occurring antibodies to blood group antigens are always present,
  although pre-transplant blood group matching has made rejections of this
- nature rare 
+ nature rare
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2720,7 +2720,7 @@ Acute rejections
 \emph default
  typically happen within the first few weeks post-transplant.
  This type of rejection is primarily mediated by adaptive immunity via T
- cell responses 
+ cell responses
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2742,7 +2742,7 @@ Chronic rejections
  improve short-term survival, little progress has been made in terms of
  long-term survival.
  Chronic rejections are hard to manage with immunosuppressants and may necessita
-te another transplantation 
+te another transplantation
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2772,7 +2772,7 @@ Most of the available immunosuppression methods, while essential in preventing
  Moreover, long-term use of immunosuppressive agents puts patients at risk
  of cancer, hypertension, and metabolic bone disease.
  In this section, we will delve into commonly used immunosuppressive methods
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2784,28 +2784,28 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-A class of drugs known as 
+A class of drugs known as
 \emph on
 mitotic inhibitors
 \emph default
  is used to inhibit rapid cell division across all cells.
  These are administered just before and after the transplantation to stop
  T-cell proliferation.
- The most commonly used mitotic inhibitors include 
+ The most commonly used mitotic inhibitors include
 \emph on
 Azathioprine
 \emph default
-, 
+,
 \emph on
 Cyclophosphamide
 \emph default
-, and 
+, and
 \emph on
 Methotrexate
 \emph default
 .
  However, their broad action on cell division can lead to significant adverse
- effects 
+ effects
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2825,15 +2825,15 @@ Corticosteroids
  to prevent acute rejection.
  They have anti-inflammatory properties and act on different levels of immune
  response.
- Commonly used corticosteroids are 
+ Commonly used corticosteroids are
 \emph on
 prednisone
 \emph default
- and 
+ and
 \emph on
 dexamethasone
 \emph default
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2845,15 +2845,15 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Fungal metabolites, such as 
+Fungal metabolites, such as
 \emph on
 Cyclosporine A (CsA)
 \emph default
-, 
+,
 \emph on
 Tacrolimus
 \emph default
-, and 
+, and
 \emph on
 rapamycin
 \emph default
@@ -2862,7 +2862,7 @@ rapamycin
  A substantial drawback is their nephrotoxicity.
  While CsA has been widely used, Tacrolimus and rapamycin, being much more
  potent, might be administered at much lower doses, minimizing the side
- effects 
+ effects
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2878,7 +2878,7 @@ Radiation, known for its effectiveness in destroying lymphocytes, is another
  lymphocyte elimination method employed just before transplantation.
  In one such procedure, lymph nodes, spleen, and thymus are irradiated.
  Later, newer, more tolerant to the graft alloantigens lymphocytes will
- emerge, as the bone marrow was unaffected 
+ emerge, as the bone marrow was unaffected
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2906,7 +2906,7 @@ Taking into account the detrimental effect of long-term immunosuppression,
 c non-responsiveness (tolerance) to an allograft.
  There are several pathways of immune non-responsiveness generation described
  in the literature.
- However, it has not gone further than animal models yet 
+ However, it has not gone further than animal models yet
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2917,7 +2917,7 @@ literal "false"
 .
  Tolerance is usually induced by prior exposure to donor antigens in a way
  that causes immune tolerance rather than sensitization in the recipient
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2951,7 +2951,7 @@ Machine learning is a subfield of computer science that consists of building
  and performing actions such as predictions or generating new data.
  It is an intersection of many fields of science, such as statistics, theory
  of probability, linear algebra, calculus, and certainly, computer science.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2972,24 +2972,24 @@ literal "false"
 
 \begin_layout Standard
 Based on the problem and, therefore, on our approach to building a dataset
- and the model, machine learning can be divided into four subfields: 
+ and the model, machine learning can be divided into four subfields:
 \emph on
 supervised
 \emph default
-, 
+,
 \emph on
 semi-supervised
 \emph default
-, 
+,
 \emph on
 unsupervised
 \emph default
-, and 
+, and
 \emph on
 reinforcement learning
 \emph default
 .
- 
+
 \emph on
 Supervised learning
 \emph default
@@ -3006,16 +3006,16 @@ Supervised learning
 Semi-supervised
 \emph default
  learning deals with partially labeled data, and we need to label it fully
- either manually, or using techniques such as 
+ either manually, or using techniques such as
 \emph on
 clustering
 \emph default
 .
- 
+
 \end_layout
 
 \begin_layout Standard
-In 
+In
 \emph on
 reinforcement learning
 \emph default
@@ -3030,7 +3030,7 @@ Every field is affected by human errors, and medicine is no exception.
  1% fewer errors than humans make, this will be a substantial achievement.The
  human body is a complex system, where it is very difficult to comprehend
 \series bold
- 
+
 \series default
 all processes and and how they  relate to each other.
  In addition, machine learning can help us gain insight into them through
@@ -3040,7 +3040,7 @@ all processes and and how they  relate to each other.
 \begin_layout Standard
 In this chapter, we will cover all theoretical backgrounds that might prove
  useful for solving our problem, including classical machine learning, statistic
-al survival analysis, basic steps that are required to 
+al survival analysis, basic steps that are required to
 \series bold
 create machine learning system
 \series default
@@ -3064,11 +3064,11 @@ literal "false"
 \end_inset
 
 .
- 
+
 \emph on
 Classification
 \emph default
- and 
+ and
 \emph on
 regression
 \emph default
@@ -3079,19 +3079,19 @@ regression
 \end_layout
 
 \begin_layout Standard
-In supervised learning the 
+In supervised learning the
 \emph on
 dataset
 \emph default
- is the collection of labeled examples 
+ is the collection of labeled examples
 \begin_inset Formula $\{(\overline{x}_{i},y_{i})\}_{i=1}^{N}$
 \end_inset
 
-, where each individual 
+, where each individual
 \begin_inset Formula $\overline{x}_{i}$
 \end_inset
 
- is called a 
+ is called a
 \emph on
 feature vector
 \emph default
@@ -3106,29 +3106,29 @@ y
 \end_inset
 
 .
- A feature vector is a vector that in each its dimension 
+ A feature vector is a vector that in each its dimension
 \begin_inset Formula $j=1,...,D$
 \end_inset
 
  contains a value that describes an example in some way.
- This value is called a 
+ This value is called a
 \emph on
 feature
 \emph default
- and is denoted as 
+ and is denoted as
 \begin_inset Formula $x^{(j)}$
 \end_inset
 
 .
- The 
+ The
 \emph on
 label
 \emph default
- 
+
 \begin_inset Formula $y^{i}$
 \end_inset
 
- might be either a finite set of classes 
+ might be either a finite set of classes
 \begin_inset Formula $\{1,2,...,C\}$
 \end_inset
 
@@ -3144,19 +3144,19 @@ Classification is a problem of assigning a label to an unlabeled example.
  This problem is solved by a classification learning algorithm that takes
  a labeled set of examples as input and produces a model that takes an unlabeled
  example as input and outputs a label.
- If the set of labels has only two classes we talk about 
+ If the set of labels has only two classes we talk about
 \emph on
 binary classification
 \emph default
 .
- Consequently, if the set of labels has three or more classes, it is a 
+ Consequently, if the set of labels has three or more classes, it is a
 \emph on
 multiclass classification
 \emph default
 .
  Some algorithms are binary classifiers by definition while others are multiclas
 s classifiers.
- It is possible to create an 
+ It is possible to create an
 \emph on
 ensemble
 \emph default
@@ -3167,7 +3167,7 @@ n.
 \end_layout
 
 \begin_layout Standard
-Regression is a problem of predicting a 
+Regression is a problem of predicting a
 \emph on
 target value
 \emph default
@@ -3184,7 +3184,7 @@ given->from
  The problem is solved by a regression learning algorithm that takes a set
  of labeled examples as input, and produces a model that takes an unlabeled
  example as input and outputs a target value.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -3206,67 +3206,67 @@ Linear regression is a popular regression learning algorithm.
 \begin_layout Standard
 The problem formulation we are trying to solve is as follows:
 \series bold
- 
+
 \series default
 Given a collection of labeled examples
 \series bold
- 
+
 \series default
 
 \begin_inset Formula $\{(\overline{x}_{i},y_{i})\}_{i=1}^{N}$
 \end_inset
 
-, create a model 
-\begin_inset Formula 
+, create a model
+\begin_inset Formula
 \begin{equation}
 f_{\bar{w},b}(\overline{x})=\overline{w}\overline{x}+b,\label{eq:lin_reg}
 \end{equation}
 
 \end_inset
 
-where N is the size of the collection, 
+where N is the size of the collection,
 \begin_inset Formula $\overline{x}_{i}$
 \end_inset
 
- is a 
+ is a
 \emph on
-feature vector 
+feature vector
 \emph default
-of D dimensions of example 
+of D dimensions of example
 \begin_inset Formula $i=1,…,N$
 \end_inset
 
-, every feature 
+, every feature
 \begin_inset Formula $x_{i}^{(J)}\epsilon\mathbb{R},$
 \end_inset
 
- 
+
 \begin_inset Formula $y_{i}\epsilon\mathbb{R}$
 \end_inset
 
  is the target value.
- 
+
 \begin_inset Formula $\overline{w}$
 \end_inset
 
- is a D-dimensional vector of parameters and 
+ is a D-dimensional vector of parameters and
 \begin_inset Formula $b\epsilon\mathbb{R}$
 \end_inset
 
 .
- Notation 
+ Notation
 \begin_inset Formula $f_{\bar{w},b}(\overline{x})$
 \end_inset
 
- means that 
+ means that
 \begin_inset Formula $f$
 \end_inset
 
- is parametrized by 
+ is parametrized by
 \begin_inset Formula $\overline{w}$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $b$
 \end_inset
 
@@ -3274,15 +3274,15 @@ of D dimensions of example
 \end_layout
 
 \begin_layout Standard
-To train the linear regression means to find optimal values 
+To train the linear regression means to find optimal values
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
- of parameters 
+ of parameters
 \begin_inset Formula $\overline{w}$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $b$
 \end_inset
 
@@ -3299,7 +3299,7 @@ noprefix "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -3353,7 +3353,7 @@ To find optimal parameters we need to minimize the following expression:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 \frac{1}{N}\mathop{\underset{i=1...N}{\sum}(}f_{\bar{w},b}(\overline{x_{i}})-y_{i})^{2}.\label{eq:mse}
 \end{equation}
@@ -3364,17 +3364,17 @@ To find optimal parameters we need to minimize the following expression:
 \end_layout
 
 \begin_layout Standard
-It is called 
+It is called
 \emph on
-mean squared error (MSE), 
+mean squared error (MSE),
 \emph default
-the 
+the
 \emph on
-loss function 
+loss function
 \emph default
-that comprises of 
+that comprises of
 \emph on
-squared error loss 
+squared error loss
 \emph default
 
 \begin_inset Formula $(f_{\bar{w},b}(\overline{x_{i}})-y_{i})^{2}$
@@ -3382,35 +3382,35 @@ squared error loss
 
 , another loss function
 \emph on
- 
+
 \emph default
 that
 \emph on
- 
+
 \emph default
 evaluates individual predictions
 \emph on
 .
- 
+
 \emph default
 The loss function measures the model's overall performance (MSE) or evaluates
  each prediction (square error loss).
- 
+
 \end_layout
 
 \begin_layout Standard
-There is a 
+There is a
 \emph on
 closed-form solution
 \emph default
- for finding optimal values 
+ for finding optimal values
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
 .
  A closed-form solution is a simple algebraic expression that gives the
  result directly.
- In case of linear regression, it is the 
+ In case of linear regression, it is the
 \emph on
 normal equation
 \emph default
@@ -3418,7 +3418,7 @@ normal equation
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 \mathbf{\overline{\mathbf{w}}^{*}=(x^{T}x)x^{T}y}.\label{eq:norm_eq}
 \end{equation}
@@ -3429,11 +3429,11 @@ normal equation
 \end_layout
 
 \begin_layout Standard
-Where 
+Where
 \begin_inset Formula $x^{T}$
 \end_inset
 
-means transposed feature matrix 
+means transposed feature matrix
 \begin_inset Formula $x$
 \end_inset
 
@@ -3443,11 +3443,11 @@ means transposed feature matrix
 \begin_layout Standard
 We could select another loss function, but according to Andriy Burkov, it
  would be a different algorithm.
- For example, we could take the absolute difference between 
+ For example, we could take the absolute difference between
 \begin_inset Formula $f(x_{i})$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $y_{i}$
 \end_inset
 
@@ -3455,7 +3455,7 @@ We could select another loss function, but according to Andriy Burkov, it
  continuous.
  Therefore the function is not smooth, which might create unnecessary complicati
 ons during the optimization process.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -3475,7 +3475,7 @@ Logistic Regression
 \begin_layout Standard
 
 \emph on
-Logistic regression 
+Logistic regression
 \emph default
 is a binary classifier that estimates the probability of an example belonging
  to a particular class.
@@ -3488,20 +3488,20 @@ is a binary classifier that estimates the probability of an example belonging
  is similar to a regression, hence the name.
  Multiclass classification is available in softmax regression, a multiclass
  variant of logistic regression.
- 
+
 \end_layout
 
 \begin_layout Standard
-As with linear regression, in logistic regression, we want to model 
+As with linear regression, in logistic regression, we want to model
 \begin_inset Formula $y$
 \end_inset
 
- as a linear combination of 
+ as a linear combination of
 \begin_inset Formula $\overline{x}$
 \end_inset
 
 , but in this case, it is not that straightforward.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -3509,7 +3509,7 @@ The logistic regression model looks like the following:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 f_{\bar{w},b}(\overline{x})\stackrel{def}{=}\frac{1}{1+e^{-(wx+b)}}.\label{eq:log_reg}
 \end{equation}
@@ -3520,15 +3520,15 @@ f_{\bar{w},b}(\overline{x})\stackrel{def}{=}\frac{1}{1+e^{-(wx+b)}}.\label{eq:lo
 \end_layout
 
 \begin_layout Standard
-Similar to linear regression, our task is to find optimal values 
+Similar to linear regression, our task is to find optimal values
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
- for parameters 
+ for parameters
 \begin_inset Formula $\overline{w}$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $b$
 \end_inset
 
@@ -3536,11 +3536,11 @@ Similar to linear regression, our task is to find optimal values
 \end_layout
 
 \begin_layout Standard
-Once we found 
+Once we found
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
- for the 
+ for the
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:log_reg"
@@ -3550,7 +3550,7 @@ noprefix "false"
 
 \end_inset
 
-, in other words, we trained the model, we can apply the model 
+, in other words, we trained the model, we can apply the model
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:log_reg"
@@ -3560,39 +3560,39 @@ noprefix "false"
 
 \end_inset
 
- on features 
+ on features
 \begin_inset Formula $x_{i}$
 \end_inset
 
- from an example 
+ from an example
 \begin_inset Formula $(x_{i},y_{i})$
 \end_inset
 
 .
- The output value lies in the range 
+ The output value lies in the range
 \begin_inset Formula $0<p<1$
 \end_inset
 
  .
- If 
+ If
 \begin_inset Formula $y_{i}$
 \end_inset
 
- is the positive class, the likelihood of 
+ is the positive class, the likelihood of
 \begin_inset Formula $y_{i}$
 \end_inset
 
- being a positive class is given by 
+ being a positive class is given by
 \begin_inset Formula $p$
 \end_inset
 
 .
- Consequently, if 
+ Consequently, if
 \begin_inset Formula $y_{i}$
 \end_inset
 
  is the negative class, the likelihood for it being the negative class is
- given by 
+ given by
 \begin_inset Formula $1-p$
 \end_inset
 
@@ -3639,30 +3639,30 @@ Logistic function
 \end_layout
 
 \begin_layout Standard
-In the figure we can see that if the 
+In the figure we can see that if the
 \begin_inset Formula $y$
 \end_inset
 
- has a value lower than 
+ has a value lower than
 \begin_inset Formula $\frac{1}{2}$
 \end_inset
 
-, it has negative 
+, it has negative
 \begin_inset Formula $x$
 \end_inset
 
  values and will be marked as a negative class.
- If 
+ If
 \begin_inset Formula $y$
 \end_inset
 
- is greater than 
+ is greater than
 \begin_inset Formula $\frac{1}{2}$
 \end_inset
 
 , it is positive.
  Although, depending on the context, the threshold may be different.
- 
+
 \begin_inset Note Note
 status open
 
@@ -3677,31 +3677,31 @@ ocitovat cely odstavec.
 \end_layout
 
 \begin_layout Standard
-In logistic regression, instead of 
+In logistic regression, instead of
 \emph on
 minimizing
 \emph default
- MSE we are trying to 
+ MSE we are trying to
 \emph on
 maximize
 \emph default
- the 
+ the
 \emph on
 likelihood function
 \emph default
 .
  In statistics, the likelihood function tells how likely the example is
  according to our model.
- The objective function in logistic regression is called 
+ The objective function in logistic regression is called
 \emph on
 maximum likelihood
 \emph default
 .
- It looks like the following: 
+ It looks like the following:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 L_{\bar{w},b}\stackrel{def}{=}\underset{i=1...N}{\prod}f_{\bar{w},b}(\overline{x}_{i})^{y_{i}}(1-f_{\bar{w},b}(\overline{x}_{i}))^{(1-y_{i})}.\label{eq:max_likelihood}
 \end{equation}
@@ -3712,7 +3712,7 @@ L_{\bar{w},b}\stackrel{def}{=}\underset{i=1...N}{\prod}f_{\bar{w},b}(\overline{x
 \end_layout
 
 \begin_layout Standard
-On the other hand, due to the exponential function in equation 
+On the other hand, due to the exponential function in equation
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:max_likelihood"
@@ -3722,12 +3722,12 @@ noprefix "false"
 
 \end_inset
 
-, it is better to use the 
+, it is better to use the
 \emph on
 log-likelihood
 \emph default
  instead, to make calculations easier.
- As 
+ As
 \begin_inset Formula $Log$
 \end_inset
 
@@ -3735,11 +3735,11 @@ log-likelihood
  its argument.
  The solution to this optimization problem is the same as the solution to
  the original problem.
- The log-likelihood function looks like the following: 
+ The log-likelihood function looks like the following:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 LogL_{\bar{w},b}\stackrel{def}{=}ln(L_{\overline{w},b}(\overline{x}))\stackrel[i=1]{N}{\sum}y_{i}lnf_{\bar{w},b}(\overline{x})+(1-y_{i})ln(1-f_{\bar{w},b}(\overline{x})).\label{eq:log_likelihood}
 \end{equation}
@@ -3755,7 +3755,7 @@ Unfortunately, there is no closed-form solution for this optimization problem.
  optimization algorithm) pretty much guarantees the finding of the global
  minimum, provided that the learning rate is not too large and enough time
  is given.
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -3782,12 +3782,12 @@ Linear SVM
 In its classical formulation, the support vector machine is a binary classifier.
  Classes are called positive and negative and are labeled +1 and -1, respectivel
 y.
- 
+
 \end_layout
 
 \begin_layout Standard
-The model is described by the equation 
-\begin_inset Formula 
+The model is described by the equation
+\begin_inset Formula
 \[
 f(x)=sign(\overline{w}\overline{x}-b).
 \]
@@ -3798,25 +3798,25 @@ f(x)=sign(\overline{w}\overline{x}-b).
 \end_layout
 
 \begin_layout Standard
-The function 
+The function
 \begin_inset Formula $sign$
 \end_inset
 
  returns +1 if the input is positive, and -1 if it is negative.
- To train the SVM means to find optimal values 
+ To train the SVM means to find optimal values
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
- of parameters 
+ of parameters
 \begin_inset Formula $\overline{w}$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $b$
 \end_inset
 
  so that the model makes as accurate predictions as possible.
- The process of finding 
+ The process of finding
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
@@ -3824,7 +3824,7 @@ The function
 \end_layout
 
 \begin_layout Standard
-The concept behind support vector machines is demonstrated in Figure 
+The concept behind support vector machines is demonstrated in Figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:SVM-demonstration-for"
@@ -3836,23 +3836,23 @@ noprefix "false"
 
 .
  The image consists of two classes represented by red and blue dots, divided
- by a solid line termed the 
+ by a solid line termed the
 \emph on
 decision boundary
 \emph default
- 
+
 \begin_inset Formula $\overline{w}\overline{x}-b=0$
 \end_inset
 
-, with two dashed lines by its sides known as 
+, with two dashed lines by its sides known as
 \emph on
 support vectors
 \emph default
- 
+
 \begin_inset Formula $\overline{w}\overline{x}-b=1$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $\overline{w}\overline{x}-b=-1$
 \end_inset
 
@@ -3901,19 +3901,19 @@ name "fig:SVM-demonstration-for"
 \end_layout
 
 \begin_layout Standard
-The distance between the closest instances of two classes is called 
+The distance between the closest instances of two classes is called
 \emph on
-margin 
+margin
 \emph default
-and is equal to 
+and is equal to
 \begin_inset Formula $\frac{2}{||\overline{w}||}$
 \end_inset
 
-, where 
+, where
 \begin_inset Formula $||\overline{w}||$
 \end_inset
 
- is the Euclidean norm and 
+ is the Euclidean norm and
 \begin_inset Formula $\overline{w}$
 \end_inset
 
@@ -3921,26 +3921,26 @@ and is equal to
  Thus, the smaller the norm, the larger the margin.
  The larger the margin, the better the model's generalization.
  The primary objective of the model is to find the largest possible margin
- 
+
 \begin_inset Formula $\frac{2}{||\overline{w}||}$
 \end_inset
 
-, so, to do that we need to 
+, so, to do that we need to
 \emph on
-minimize 
+minimize
 \emph default
 the Euclidian norm defined by the expression
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 ||\overline{w}||=\sqrt{\stackrel[j=1]{D}{\sum}(w^{(j)})^{2}}.
 \]
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -3948,7 +3948,7 @@ The fundamental assumption of support vector machines is that classes are
  linearly separable, implying their instances can be separated by a hyperplane
  (decision boundary) with no examples of one class lying among the ones
  of the opposite class.
- It is illustrated in the figure 
+ It is illustrated in the figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Linearly-non-separable"
@@ -4015,7 +4015,7 @@ Every optimization problem requires constraints, and for the support vector
 \begin_inset Formula $\overline{w}\overline{x_{i}}-b\geqslant+1$
 \end_inset
 
- if 
+ if
 \begin_inset Formula $y_{i}=+1$
 \end_inset
 
@@ -4026,7 +4026,7 @@ Every optimization problem requires constraints, and for the support vector
 \begin_inset Formula $\overline{w}\overline{x_{i}}-b\leqslant-1$
 \end_inset
 
- if 
+ if
 \begin_inset Formula $y_{i}=-1$
 \end_inset
 
@@ -4034,7 +4034,7 @@ Every optimization problem requires constraints, and for the support vector
 \end_layout
 
 \begin_layout Standard
-These two equations can be reduced to one 
+These two equations can be reduced to one
 \begin_inset Formula $y_{i}(\overline{w}\overline{x}-b)\geqslant1$
 \end_inset
 
@@ -4042,26 +4042,26 @@ These two equations can be reduced to one
 \end_layout
 
 \begin_layout Standard
-The optimization problem we want to solve is the following: Minimize 
+The optimization problem we want to solve is the following: Minimize
 \begin_inset Formula $||\overline{w}||$
 \end_inset
 
- subject to constraint 
+ subject to constraint
 \begin_inset Formula $y_{i}(\overline{w}\overline{x_{i}}-b)\geqslant1$
 \end_inset
 
- for 
+ for
 \begin_inset Formula $i=1,...,N$
 \end_inset
 
 , where N is the number of features.
  This problem can be modified so that the quadratic programming techniques
  could be used in the optimization process.
- The modified formula is 
+ The modified formula is
 \begin_inset Formula $\frac{1}{2}||\overline{w}||^{2}$
 \end_inset
 
-, and minimization of it would also mean minimization of 
+, and minimization of it would also mean minimization of
 \begin_inset Formula $||\overline{w}||$
 \end_inset
 
@@ -4070,7 +4070,7 @@ The optimization problem we want to solve is the following: Minimize
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 min\frac{1}{2}||\overline{w}||^{2}\text{such that }y_{i}(\overline{w}\overline{x_{i}}-b)\geqslant1,i=1,...,N\label{eq:svm_optimisation}
 \end{equation}
@@ -4088,7 +4088,7 @@ Handling Noise
 
 \begin_layout Standard
 To introduce the ability of SVM to handle nonlinearly separable data (but
- not to the extreme), we define the hinge loss function: 
+ not to the extreme), we define the hinge loss function:
 \begin_inset Formula $max(0,1-y_{i}(\overline{w}\overline{x_{i}}-b)).$
 \end_inset
 
@@ -4100,7 +4100,7 @@ To introduce the ability of SVM to handle nonlinearly separable data (but
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 C||\overline{w}||^{2}+\frac{1}{N}\stackrel[j=1]{N}{\sum}max(0,1-y_{i}(\overline{w}\overline{x_{i}}-b)),\label{eq:svm_loss}
 \end{equation}
@@ -4112,7 +4112,7 @@ C||\overline{w}||^{2}+\frac{1}{N}\stackrel[j=1]{N}{\sum}max(0,1-y_{i}(\overline{
 
 \begin_layout Standard
 where C is the hyperparameter that determines the trade-off between increasing
- the size of the decision boundary and ensuring that each 
+ the size of the decision boundary and ensuring that each
 \begin_inset Formula $x_{i}$
 \end_inset
 
@@ -4131,21 +4131,21 @@ where C is the hyperparameter that determines the trade-off between increasing
 \end_layout
 
 \begin_layout Standard
-SVM with the hinge loss function is called 
+SVM with the hinge loss function is called
 \emph on
 soft-margin SVM
 \emph default
  while the original formulation that optimizes the Euclidian norm is referred
- to as 
+ to as
 \emph on
 hard-margin SVM
 \emph default
 .
- 
+
 \emph on
 Soft margin classification
 \emph default
- tries to mitigate the downsides of the 
+ tries to mitigate the downsides of the
 \emph on
 hard margin classification
 \emph default
@@ -4159,7 +4159,7 @@ hard margin classification
 \series bold
 Handling Non-linearity
 \series default
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -4168,15 +4168,15 @@ We can adapt SVM to work with nonlinearly separable datasets by applying
  The kernel trick means transforming the original space to a higher dimensional
  one during the cost function optimization with the hope that, in higher
  dimensional space, it will become linearly separable.
- In mathematical language: the kernel trick is mapping 
+ In mathematical language: the kernel trick is mapping
 \begin_inset Formula $\varphi:\overline{x}\rightarrow\varphi(\overline{x})$
 \end_inset
 
-, where 
+, where
 \begin_inset Formula $\varphi(\overline{x})$
 \end_inset
 
- is a vector of higher dimensionality than 
+ is a vector of higher dimensionality than
 \begin_inset Formula $\overline{x}.$
 \end_inset
 
@@ -4195,17 +4195,17 @@ Unsupervised Learning
 \begin_layout Standard
 
 \emph on
-Unsupervised learning 
+Unsupervised learning
 \emph default
 deals with a dataset that does not have labels.
  There are three main branches of unsupervised learning: clustering, dimensional
 ity reduction and anomaly detection.
- 
+
 \emph on
 Clustering
 \emph default
  is a method that identifies similar instances and groups them into sets.
- It has applications in data analysis, namely, 
+ It has applications in data analysis, namely,
 \emph on
 exploratory data analysis (EDA),
 \emph default
@@ -4215,7 +4215,7 @@ exploratory data analysis (EDA),
  class.
  The score might be the distance from the cluster centroid or an affinity
  (similarity score).
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -4228,7 +4228,7 @@ Dimensionality reduction
  of features.
  Many algorithms, such as linear models, SVMs, decision trees, might have
  their performances compromised due to high-dimensional data.
- So called 
+ So called
 \emph on
 curse of dimensionality
 \emph default
@@ -4252,17 +4252,17 @@ curse of dimensionality
 Anomaly (outlier) detection
 \emph default
  involves the detection of instances strongly deviating from the norm.
- These instances are called 
+ These instances are called
 \emph on
 outliers
 \emph default
- or anomalies while regular ones are referred to as 
+ or anomalies while regular ones are referred to as
 \emph on
 inliers
 \emph default
 .
  Anomaly detection has many applications.
- 
+
 \begin_inset Note Note
 status open
 
@@ -4277,7 +4277,7 @@ exploratory data analysis (EDA)
  For example, it can be used as a data preprocessing step to remove outliers
  from the dataset, which might improve the performance of the resulting
  model.
- In addition, it is used in the 
+ In addition, it is used in the
 \emph on
 fraud detection
 \emph default
@@ -4287,7 +4287,7 @@ fraud detection
 \begin_layout Standard
 
 \emph on
-Novelty detection 
+Novelty detection
 \emph default
 is closely related to anomaly detection.
  The only difference is that novelty detection assumes that the training
@@ -4315,26 +4315,26 @@ napsat uvod co to je a jak a k cemu to je
 \begin_layout Standard
 
 \emph on
-Principal components 
+Principal components
 \emph default
 are vectors that define a new coordinate system.
  The first vector goes in the direction of the highest variance.
  The second vector is orthogonal to the first one and goes in the direction
  of the second highest variance, and so on.
- If we were to reduce dimensionality to 
+ If we were to reduce dimensionality to
 \begin_inset Formula $D_{new}<D$
 \end_inset
 
-, we would pick 
+, we would pick
 \begin_inset Formula $D_{new}$
 \end_inset
 
- largest principal components and 
+ largest principal components and
 \emph on
 project
 \emph default
  instances onto them.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -4342,7 +4342,7 @@ project
 status open
 
 \begin_layout Plain Layout
-(Create images) 
+(Create images)
 \end_layout
 
 \end_inset
@@ -4358,11 +4358,11 @@ It is not advised to choose the number of dimensions arbitrarily.
  to two or three.
  There are different versions of PCA; kernel PCA, Incremental PCA (online
  or batch PCA), and Randomized PCA.
- 
+
 \end_layout
 
 \begin_layout Subsection
-Gaussian Mixtures 
+Gaussian Mixtures
 \begin_inset Note Note
 status open
 
@@ -4404,22 +4404,22 @@ Due to factors such as curse of dimensionality and inherent noise, we cannot
  Most often, the raw data has too many features and most of them have very
  little predictive power.
  We need to build a dataset first.
- 
+
 \emph on
 Feature engineering
 \emph default
  is responsible for transforming raw data into a dataset.
  It is a labor-demanding process that requires creativity and, most importantly,
  domain knowledge.
- 
+
 \end_layout
 
 \begin_layout Standard
-The objective of this stage is to create 
+The objective of this stage is to create
 \emph on
 informative
 \emph default
- features or features with 
+ features or features with
 \emph on
 high predictive power
 \emph default
@@ -4427,7 +4427,7 @@ high predictive power
  For example, in our task of predicting survival time, donor-recipient blood
  group compatibility or recipient's age is likely to have much higher predictive
  power than the donor's or recipient's citizenship.
- 
+
 \series bold
 
 \begin_inset Note Note
@@ -4447,14 +4447,14 @@ vic to rozvest.
 \begin_layout Standard
 Moreover, it is possible to create new features with higher predictive power
  out of those with low predictive power.
- For example, the calculation of 
+ For example, the calculation of
 \emph on
 estimated Glomerular Filtration Rate (eGFR)
 \emph default
 , the metric of kidney function estimated on a patient's age, gender, and
  serum creatinine level, could potentially give more information to the
  learning algorithm than all features separately.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -4472,7 +4472,7 @@ Handling Categorical Features
 The majority of machine learning algorithms primarily operate with numerical
  features.
  To handle categorical features (the ones with only a few possible values),
- such as the age group or a blood group, we can use 
+ such as the age group or a blood group, we can use
 \emph on
 one-hot encoding
 \emph default
@@ -4490,34 +4490,34 @@ status open
 
 
 \backslash
-begin{align*}   
+begin{align*}
 \end_layout
 
 \begin_layout Plain Layout
 
-A&=[1,0,0,0] 
+A&=[1,0,0,0]
 \backslash
 
 \backslash
-   
+
 \end_layout
 
 \begin_layout Plain Layout
 
-B&=[0,1,0,0] 
+B&=[0,1,0,0]
 \backslash
 
 \backslash
-   
+
 \end_layout
 
 \begin_layout Plain Layout
 
-AB&=[0,0,1,0] 
+AB&=[0,0,1,0]
 \backslash
 
 \backslash
-   
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -4542,7 +4542,7 @@ This technique will increase the dimensionality of the dataset but this
  is a trade-off we have to make because if we were to assign a number to
  each group (1 to A, 2 to B, etc.), that would imply gradation or ranking
  among these categories, while there is none.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -4550,12 +4550,12 @@ However, if the categorical feature does suggest some gradation, for example,
  university marks as ”fail”, ”average”, ”good”, or ”excellent”, an enumeration
  of each value will be appropriate.
  This practice of assigning a number to categories that have ranking is
- called 
+ called
 \emph on
 ordinal encoding
 \emph default
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -4563,16 +4563,16 @@ ordinal encoding
 \emph on
 Binning
 \emph default
- (or 
+ (or
 \emph on
 bucketing
 \emph default
 ) is the technique used for converting numerical values into multiple binary
- features called 
+ features called
 \emph on
 bins
 \emph default
- or 
+ or
 \emph on
 buckets
 \emph default
@@ -4593,15 +4593,15 @@ Feature Scaling
 Different ranges of feature values might pose a problem to some machine
  learning algorithms
 \series bold
- 
+
 \series default
 as they do not handle them very well.
  It might result in a slower training time or a poorer performance.
- This problem is solved by 
+ This problem is solved by
 \emph on
 normalization
 \emph default
- and 
+ and
 \emph on
 standardization
 \emph default
@@ -4613,16 +4613,16 @@ standardization
 \emph on
 Normalization
 \emph default
- (also known as 
+ (also known as
 \emph on
 min-max scaling
 \emph default
 ) is a technique of converting an actual range of numerical feature values
- into a standard range of values: 
+ into a standard range of values:
 \begin_inset Formula $[-1,1]$
 \end_inset
 
- 
+
 \series bold
 
 \begin_inset Note Note
@@ -4638,16 +4638,16 @@ pridat vzorec pro '-1
 
 
 \series default
- or 
+ or
 \begin_inset Formula $[0,1]$
 \end_inset
 
  without losing any information.
- The normalization formula for value 
+ The normalization formula for value
 \begin_inset Formula $x^{(j)}$
 \end_inset
 
- for feature 
+ for feature
 \begin_inset Formula $j$
 \end_inset
 
@@ -4655,22 +4655,22 @@ pridat vzorec pro '-1
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 \bar{x}^{(j)}=\frac{x^{(j)}-min(j)}{max(j)-min(j)},
 \]
 
 \end_inset
 
-where 
+where
 \begin_inset Formula $min(j)$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $max(j)$
 \end_inset
 
- are minimal and maximal values of feature 
+ are minimal and maximal values of feature
 \begin_inset Formula $j$
 \end_inset
 
@@ -4683,21 +4683,21 @@ where
 Standardization
 \emph default
  is a scaling technique that scales numerical data in such a way that after
- scaling, it has properties of the 
+ scaling, it has properties of the
 \emph on
 standard normal distribution
 \emph default
  with the mean µ=0 (average value) and the standard deviation from the mean
- 
+
 \begin_inset Formula $\sigma=1$
 \end_inset
 
 .
- The standardization formula for value 
+ The standardization formula for value
 \begin_inset Formula $x^{(j)}$
 \end_inset
 
- for feature 
+ for feature
 \begin_inset Formula $j$
 \end_inset
 
@@ -4705,7 +4705,7 @@ standard normal distribution
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 \hat{x}^{(j)}=\frac{x^{(j)}-\mu^{(j)}}{\sigma^{(j)}}.
 \]
@@ -4857,7 +4857,7 @@ A typical workflow involves training the model on the training set, validation
 \end_layout
 
 \begin_layout Standard
-An alternative to the three-set technique is 
+An alternative to the three-set technique is
 \emph on
 k-fold cross-validation
 \emph default
@@ -4874,7 +4874,7 @@ k-fold cross-validation
 \end_layout
 
 \begin_layout Standard
-A 
+A
 \emph on
 hyperparameter
 \emph default
@@ -4924,11 +4924,11 @@ Survival Analysis
 \begin_layout Standard
 
 \emph on
-Survival analysis, 
+Survival analysis,
 \emph default
 often referred to as
 \emph on
- time-to-event analysis, 
+ time-to-event analysis,
 \emph default
 is a statistical technique employed to analyze and predict the time until
  an event of interest occurs.
@@ -4942,17 +4942,17 @@ is a statistical technique employed to analyze and predict the time until
 \end_layout
 
 \begin_layout Standard
-In the context of survival analysis, 
+In the context of survival analysis,
 \emph on
 time
 \emph default
- (also 
+ (also
 \emph on
 survival time
 \emph default
 ) refers to the duration from the start of an individual's follow-up to
  the occurrence of an event.
- It is measured in days, weeks, months, or years 
+ It is measured in days, weeks, months, or years
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -4961,22 +4961,22 @@ literal "false"
 \end_inset
 
 .
- The term 
+ The term
 \emph on
 event
 \emph default
- (also referred to as 
+ (also referred to as
 \emph on
 deat
 \emph default
-h or 
+h or
 \emph on
 failure
 \emph default
 ) encompasses any occurrence that permanently changes the state of the subject.
  It can be death, the onset of a disease, a relapse from remission, a recovery,
  or any other specified experience of interest that an individual might
- encounter 
+ encounter
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13,key-30"
@@ -4986,15 +4986,15 @@ literal "false"
 
 .
  Usually, only one event of interest is considered.
- When evaluating multiple events, the problem is categorized as 
+ When evaluating multiple events, the problem is categorized as
 \emph on
 competing risks
 \emph default
- or 
+ or
 \emph on
 recurrent events
 \emph default
- problem 
+ problem
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -5022,7 +5022,7 @@ Basic Terminology
 In this subsection, we are going to cover the basic terminology required
  for survival analysis such as censoring, censoring assumptions, survival,
  and hazard functions.
- 
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -5032,7 +5032,7 @@ Censoring
 \begin_layout Standard
 The most distinct feature of survival analysis methods is the ability to
  handle censored data.
- 
+
 \emph on
 Censoring
 \emph default
@@ -5042,13 +5042,13 @@ Censoring
  instances out of 500,000 performed transplantations.
  These patients were either still alive at the last date of observation
  or were lost to follow-up.
- This lack of complete information indicates 
+ This lack of complete information indicates
 \emph on
 censoring
 \emph default
  in survival analysis.
  Censoring makes the application of standard statistical and machine learning
- approaches to survival data impractical 
+ approaches to survival data impractical
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-38"
@@ -5101,7 +5101,7 @@ name "fig:Censoring-illustration"
 \end_layout
 
 \begin_layout Standard
-Look at the Figure 
+Look at the Figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Censoring-illustration"
@@ -5119,20 +5119,20 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-There are three types of censoring: 
+There are three types of censoring:
 \emph on
 left
 \emph default
-, 
+,
 \emph on
 right
 \emph default
-, and 
+, and
 \emph on
 interval
 \emph default
  censoring.
- 
+
 \emph on
 Right censoring
 \emph default
@@ -5140,7 +5140,7 @@ Right censoring
  by a specific time and we don't know when it will happen.
  The situation arises when the patient drops out of a study, or the study
  ends when they are still alive, as illustrated with patients B, E, and
- F in Figure 
+ F in Figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Censoring-illustration"
@@ -5151,7 +5151,7 @@ noprefix "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -5192,15 +5192,15 @@ Censoring Assumptions
 \end_layout
 
 \begin_layout Standard
-There are three types of censoring assumptions: 
+There are three types of censoring assumptions:
 \emph on
 random
 \emph default
-, 
+,
 \emph on
 independent
 \emph default
-, and 
+, and
 \emph on
 non-informative
 \emph default
@@ -5215,7 +5215,7 @@ non-informative
 \series bold
 Random Censoring
 \series default
-: Subjects censored at time 
+: Subjects censored at time
 \emph on
 t
 \emph default
@@ -5248,15 +5248,15 @@ Non-Informative Censoring
 \end_layout
 
 \begin_layout Standard
-Generally, it is safe to assume 
+Generally, it is safe to assume
 \emph on
 non-informative
 \emph default
- censoring when censoring is 
+ censoring when censoring is
 \emph on
 independent
 \emph default
- and/or 
+ and/or
 \emph on
 random
 \emph default
@@ -5331,7 +5331,7 @@ To best illustrate what non-informative censoring is, let us demonstrate
  be random and independent censoring.
  Here, the censoring mechanism is directly related to the event occurrence,
  so the censoring is informative.
- 
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -5339,15 +5339,15 @@ Survival Function
 \end_layout
 
 \begin_layout Standard
-The 
+The
 \emph on
 survival function
 \emph default
-, also known as the 
+, also known as the
 \emph on
 survivor function
 \emph default
-, denoted by 
+, denoted by
 \begin_inset Formula $S(t)$
 \end_inset
 
@@ -5362,7 +5362,7 @@ a
 
 \end_inset
 
- given time 
+ given time
 \begin_inset Formula $t$
 \end_inset
 
@@ -5371,7 +5371,7 @@ a
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 S(t)=P(T>t),\label{eq:f_surv}
 \end{equation}
@@ -5382,34 +5382,34 @@ S(t)=P(T>t),\label{eq:f_surv}
 \end_layout
 
 \begin_layout Standard
-where 
+where
 \begin_inset Formula $P$
 \end_inset
 
- represents the probability, 
+ represents the probability,
 \begin_inset Formula $t$
 \end_inset
 
- is any specific time of interest, and 
+ is any specific time of interest, and
 \begin_inset Formula $T$
 \end_inset
 
  is the random variable for the subject's survival time.
  For instance, if we want to know the likelihood that a patient is going
- to live for more than five years after a kidney transplant, we set 
+ to live for more than five years after a kidney transplant, we set
 \begin_inset Formula $t$
 \end_inset
 
- equal to 5, and we evaluate 
+ equal to 5, and we evaluate
 \begin_inset Formula $S(t)$
 \end_inset
 
- to determine the probability that 
+ to determine the probability that
 \begin_inset Formula $T$
 \end_inset
 
 , actual survival time, is greater than 5 years.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -5437,7 +5437,7 @@ Although the graph of the survival function is smooth by definition, in
  reality it is a step function.
  This stepwise representation is due to the nature of real-world data, where
  events are recorded at specific, discrete time points rather than continuously
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -5480,7 +5480,7 @@ Survival function
 \end_layout
 
 \begin_layout Standard
-Survival function 
+Survival function
 \begin_inset Formula $S(t)$
 \end_inset
 
@@ -5510,7 +5510,7 @@ Hazard Function
 \begin_layout Standard
 The survival function provides the probability of an individual surviving
  at each given point in time.
- This function is often preferred over the 
+ This function is often preferred over the
 \emph on
 hazard function
 \emph default
@@ -5518,29 +5518,29 @@ hazard function
  survival.
  However, there are scenarios where knowing the risk at each point in time
  is necessary, entailing the use of the hazard function.
- 
+
 \end_layout
 
 \begin_layout Standard
-The 
+The
 \emph on
 hazard function
 \emph default
-, denoted as 
+, denoted as
 \begin_inset Formula $h(t)$
 \end_inset
 
 , represents the instantaneous potential per unit of time for the event
- to occur, provided the subject's survival up to time 
+ to occur, provided the subject's survival up to time
 \begin_inset Formula $t$
 \end_inset
 
 .
- It is expressed by the following equation: 
+ It is expressed by the following equation:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 h(t)=\underset{\Delta t\rightarrow0}{lim}\frac{P(t\leq T<t+\Delta t|T\geq t)}{\Delta t}.\label{eq:f_hazard}
 \end{equation}
@@ -5551,38 +5551,38 @@ h(t)=\underset{\Delta t\rightarrow0}{lim}\frac{P(t\leq T<t+\Delta t|T\geq t)}{\D
 \end_layout
 
 \begin_layout Standard
-Here, 
+Here,
 \begin_inset Formula $\Delta t$
 \end_inset
 
  represents an infinitesimally small increment of time.
- The function 
+ The function
 \begin_inset Formula $h(t)$
 \end_inset
 
- is equal to the limit, as 
+ is equal to the limit, as
 \begin_inset Formula $\Delta t$
 \end_inset
 
- approaches zero, of a conditional probability, divided by 
+ approaches zero, of a conditional probability, divided by
 \begin_inset Formula $\Delta t$
 \end_inset
 
 .
  The conditional probability statement gives the probability that a person’s
- survival time 
+ survival time
 \begin_inset Formula $T$
 \end_inset
 
- will lie in the time interval between 
+ will lie in the time interval between
 \begin_inset Formula $t$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $t+\Delta t$
 \end_inset
 
-, given that the survival time is greater than or equal to 
+, given that the survival time is greater than or equal to
 \begin_inset Formula $t$
 \end_inset
 
@@ -5591,29 +5591,29 @@ Here,
 
 \begin_layout Standard
 Occasionally, due to its structure, the hazard function is referred to as
- a 
+ a
 \emph on
 conditional failure rate
 \emph default
 .
  It is a rate because it represents a conditional probability per unit of
- time 
+ time
 \begin_inset Formula $\Delta t$
 \end_inset
 
-, and it is conditional on the subject surviving until time 
+, and it is conditional on the subject surviving until time
 \begin_inset Formula $t$
 \end_inset
 
 .
  Unlike probability, this rate has a scale from 0 to infinity — depending
  on the measure of time in days, weeks, or years.
- Essentially, by considering the limit as the 
+ Essentially, by considering the limit as the
 \begin_inset Formula $\Delta t$
 \end_inset
 
  approaches zero we basically get the instantaneous potential of failing
- at time 
+ at time
 \begin_inset Formula $t$
 \end_inset
 
@@ -5629,7 +5629,7 @@ To best illustrate the concept of instantaneous potential, let us refer
  However, it doesn't predict how much the car will travel in reality.
  The same works with the instantaneous potential: it might be high at one
  point but low at another, reflecting that both are measurements at an instant
- in time rather than an interval 
+ in time rather than an interval
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -5643,7 +5643,7 @@ literal "false"
 \begin_layout Standard
 
 \emph on
-The cumulative hazard function 
+The cumulative hazard function
 \emph default
 further extends our understanding by quantifying the accumulated risk over
  time.
@@ -5653,14 +5653,14 @@ further extends our understanding by quantifying the accumulated risk over
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 H(t)\overset{def}{=}\int_{0}^{t}h(u)du,\text{ where }t>0.\label{eq:cumulative-hazard-function}
 \end{equation}
 
 \end_inset
 
-Where 
+Where
 \begin_inset Formula $h(u)$
 \end_inset
 
@@ -5733,15 +5733,15 @@ Some models, such as Cox Proportional Hazards, are written in terms of the
  accessible to a larger audience.
  Fortunately, there are ways to convert one into the other and vice versa.
  In this subsection, we are going to describe techniques for these conversions.
- 
+
 \end_layout
 
 \begin_layout Standard
-Let us start by considering how to obtain the survival function 
+Let us start by considering how to obtain the survival function
 \begin_inset Formula $S(t)$
 \end_inset
 
- from the hazard function 
+ from the hazard function
 \begin_inset Formula $h(t)$
 \end_inset
 
@@ -5750,14 +5750,14 @@ Let us start by considering how to obtain the survival function
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 S(t)=exp\left[-\intop_{0}^{t}h(u)du\right].\label{eq:haz_to_surv}
 \end{equation}
 
 \end_inset
 
-Equation 
+Equation
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:haz_to_surv"
@@ -5767,21 +5767,21 @@ noprefix "false"
 
 \end_inset
 
- illustrates that the survival function 
+ illustrates that the survival function
 \begin_inset Formula $S(t)$
 \end_inset
 
  is equal to the exponential of the negative cumulative hazard function
- from zero to 
+ from zero to
 \begin_inset Formula $t$
 \end_inset
 
 .
- As we can see, the integral in the equation is the 
+ As we can see, the integral in the equation is the
 \begin_inset Formula $H(t)$
 \end_inset
 
- from the 
+ from the
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:cumulative-hazard-function"
@@ -5796,7 +5796,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 S(t)=e^{-H(t)}
 \]
@@ -5808,11 +5808,11 @@ S(t)=e^{-H(t)}
 
 \begin_layout Standard
 On the other hand, to obtain the hazard function from the survival function,
- we can utilize the following relationship: 
+ we can utilize the following relationship:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 h(t)=-\left[\frac{dS(t)/dt}{S(t)}\right].\label{eq:surv_to_haz}
 \end{equation}
@@ -5823,7 +5823,7 @@ h(t)=-\left[\frac{dS(t)/dt}{S(t)}\right].\label{eq:surv_to_haz}
 \end_layout
 
 \begin_layout Standard
-Here, Equation 
+Here, Equation
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:surv_to_haz"
@@ -5833,19 +5833,19 @@ noprefix "false"
 
 \end_inset
 
- denotes that the hazard function 
+ denotes that the hazard function
 \begin_inset Formula $h(t)$
 \end_inset
 
- is the negative derivative of the survival function 
+ is the negative derivative of the survival function
 \begin_inset Formula $S(t)$
 \end_inset
 
- with respect to time 
+ with respect to time
 \begin_inset Formula $t$
 \end_inset
 
- divided by 
+ divided by
 \begin_inset Formula $S(t)$
 \end_inset
 
@@ -5854,17 +5854,17 @@ noprefix "false"
 
 \begin_layout Standard
 Considering the fact that the survival function describes the probability
- of a patient surviving up to time 
+ of a patient surviving up to time
 \begin_inset Formula $t$
 \end_inset
 
 , and the hazard function shows the instantaneous risk of a person dying
- at a specific instant 
+ at a specific instant
 \begin_inset Formula $t$
 \end_inset
 
 , we can say that they provide complementary information about survival
- and risk over time 
+ and risk over time
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -5877,11 +5877,11 @@ literal "false"
  as it is more intuitive.
  In the practical part, we will estimate the survival function as well.
  Fortunately, we will not convert them manually.
- The 
+ The
 \emph on
 scikit-survival
 \emph default
- library (more on it in the Section 
+ library (more on it in the Section
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Overview-of-Machine"
@@ -5892,7 +5892,7 @@ noprefix "false"
 \end_inset
 
 ) will do that for us.
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -5900,17 +5900,17 @@ Taxonomy of Survival Analysis Methods
 \end_layout
 
 \begin_layout Standard
-Survival analysis methods can be broadly categorized into 
+Survival analysis methods can be broadly categorized into
 \emph on
 statistical
 \emph default
- and 
+ and
 \emph on
 machine learning based
 \emph default
  methods.
  Both aim to estimate the survival time and the survival probability at
- the estimated survival time 
+ the estimated survival time
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36"
@@ -5922,7 +5922,7 @@ literal "false"
  Statistical methods primarily characterize distributions of the event times
  and the statistical properties of the parameter estimation by estimating
  the survival curves.
- Typically, statistical methods are employed for low-dimensional data 
+ Typically, statistical methods are employed for low-dimensional data
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36"
@@ -5938,7 +5938,7 @@ On the other hand, machine learning methods focus on the prediction of the
  event occurrence at a given time.
  They harness the strengths of traditional survival analysis while integrating
  different machine learning techniques, leading to more potent algorithms.
- Machine learning methods are mostly used with high-dimensional data 
+ Machine learning methods are mostly used with high-dimensional data
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36"
@@ -5957,7 +5957,7 @@ Statistical methods can be further subdivided based on their assumptions
  (random survival forests), neural networks, and support vector machines
  form a distinct category.
  Advanced machine learning techniques, such as active learning, transfer
- learning, and multitask learning are included as well 
+ learning, and multitask learning are included as well
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36"
@@ -5972,7 +5972,7 @@ literal "false"
 In this section, we will cover selected statistical methods and one machine
  learning technique.
  Machine learning techniques related to neural networks will be covered
- in Section 
+ in Section
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Deep-Learning"
@@ -5983,7 +5983,7 @@ noprefix "false"
 \end_inset
 
 , dedicated to these advanced survival analysis techniques.
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -5994,15 +5994,15 @@ Statistical Methods
 This section provides a concise overview of statistical techniques, given
  our primary emphasis on machine learning methods.
  Here, we introduce three different types of statistical methods that are
- commonly used to estimate the survival and hazard functions: 
+ commonly used to estimate the survival and hazard functions:
 \emph on
 non-parametric
 \emph default
-, 
+,
 \emph on
 semi-parametric
 \emph default
-, and 
+, and
 \emph on
 parametric methods
 \emph default
@@ -6016,7 +6016,7 @@ Non-parametric methods
 \emph default
  are preferred in situations where the event time does not adhere to any
  known distribution or when the proportional hazards assumption is not met
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36"
@@ -6033,7 +6033,7 @@ literal "false"
  intervals when dealing with an extensive number of subjects or a broad
  population scope.
  On the other hand, the Nelson-Aalen method is used for the estimation of
- hazard functions 
+ hazard functions
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36"
@@ -6057,7 +6057,7 @@ Semi-parametric models
  It is semi-parametric as the distribution of the outcome is unknown.
  Unlike other approaches, this method is based on the proportional hazards
  assumption and uses partial likelihood for parameter estimation (more on
- that in 
+ that in
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Cox-Proportional-Hazards"
@@ -6070,7 +6070,7 @@ noprefix "false"
 ).
  There are a couple of variants of the basic Cox model: the penalized Cox
  model, which will be used in the practical part of this work, the CoxBoost
- algorithm, and the Time-Dependent Cox model 
+ algorithm, and the Time-Dependent Cox model
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36"
@@ -6095,7 +6095,7 @@ Parametric methods
  are the most favored.
  Beyond this, other parametric models like the Accelerated Failure Time
  (AFT) have gained traction.
- The AFT model represents survival time as a function of covariates 
+ The AFT model represents survival time as a function of covariates
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36"
@@ -6104,7 +6104,7 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -6129,7 +6129,7 @@ Kaplan-Meier Survival Curves
 Kaplan-Meier
 \emph default
  is a non-parametric method of survival function creation.
- It is 
+ It is
 \emph on
 non-parametric
 \emph default
@@ -6137,11 +6137,11 @@ non-parametric
  requires only the survival time and the censoring indicator.
  It works under an independent censoring assumption.
  The general Kaplan-Meier formula for plotting the survival function is
- the following: 
+ the following:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 \hat{S}(t_{(f)})=\hat{S}(t_{(f-1)})\times\hat{P}(T>t_{(f)}|T\geq f_{(f)}).\label{eq:KM}
 \end{equation}
@@ -6152,23 +6152,23 @@ non-parametric
 \end_layout
 
 \begin_layout Standard
-That can be read as the survival function 
+That can be read as the survival function
 \begin_inset Formula $\hat{S}$
 \end_inset
 
- of time 
+ of time
 \begin_inset Formula $t_{(f)}$
 \end_inset
 
- is equal to the probability of surviving past the previous time point 
+ is equal to the probability of surviving past the previous time point
 \begin_inset Formula $t_{(f-1)}$
 \end_inset
 
- times the conditional probability of surviving past the time 
+ times the conditional probability of surviving past the time
 \begin_inset Formula $t_{(f)}$
 \end_inset
 
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -6181,7 +6181,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 \hat{S}(t_{(f)})=\prod_{i=1}^{f-1}\hat{P}(T>t_{(i)}|T\geq f_{(i)}).
 \]
@@ -6192,7 +6192,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In the Equation 
+In the Equation
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:KM"
@@ -6202,16 +6202,16 @@ noprefix "false"
 
 \end_inset
 
-, we replaced 
+, we replaced
 \begin_inset Formula $\hat{S}(t_{(f-1)})$
 \end_inset
 
  with the product of all fractions estimating the conditional probabilities
- for failure times 
+ for failure times
 \begin_inset Formula $t_{f-1}$
 \end_inset
 
- and those preceding it 
+ and those preceding it
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -6221,9 +6221,9 @@ literal "false"
 
 .
  Because of that the Kaplan-Meier estimator is sometimes referred to as
- the 
+ the
 \emph on
-product-limit method 
+product-limit method
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36"
@@ -6234,7 +6234,7 @@ literal "false"
 .
 
 \emph default
- Figure 
+ Figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Survival-curve-estimated"
@@ -6245,7 +6245,7 @@ noprefix "false"
 \end_inset
 
  shows the survival curve created with the KM method.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -6269,7 +6269,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Survival curve estimated with KM 
+Survival curve estimated with KM
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Survival-curve-estimated"
@@ -6291,14 +6291,14 @@ name "fig:Survival-curve-estimated"
 
 \begin_layout Standard
 These survival curves are often compared using the log-rank test.
- The 
+ The
 \emph on
 log-rank test
 \emph default
  is a way to compare two survival functions, that is often used in studies,
  where there is a target group and a placebo (control) group to assess the
  efficacy of the treatment or intervention in the study by comparing the
- survival curves of the two groups 
+ survival curves of the two groups
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -6320,7 +6320,7 @@ To summarize, the Kaplan-Meier method provides a robust non-parametric approach
 \end_layout
 
 \begin_layout Subsubsection
-Cox Proportional Hazards Method 
+Cox Proportional Hazards Method
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Cox-Proportional-Hazards"
@@ -6331,7 +6331,7 @@ name "subsec:Cox-Proportional-Hazards"
 \end_layout
 
 \begin_layout Standard
-The 
+The
 \emph on
 Cox proportional hazards
 \emph default
@@ -6339,16 +6339,16 @@ Cox proportional hazards
  model.
  This section explores its formulation, key properties, and reasons for
  its widespread use in research.
- 
+
 \end_layout
 
 \begin_layout Standard
 The Cox proportional hazards model is defined in terms of a hazard at time
- 
+
 \begin_inset Formula $t$
 \end_inset
 
- for a subject with a given vector of explanatory variables 
+ for a subject with a given vector of explanatory variables
 \begin_inset Formula $\mathbf{X}$
 \end_inset
 
@@ -6356,7 +6356,7 @@ The Cox proportional hazards model is defined in terms of a hazard at time
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 h(t,\mathbf{X})=h_{0}(t)\times exp\left[\sum_{i=1}^{p}\beta_{i}X_{i}\right],\label{eq:cox_ph}
 \end{equation}
@@ -6367,7 +6367,7 @@ h(t,\mathbf{X})=h_{0}(t)\times exp\left[\sum_{i=1}^{p}\beta_{i}X_{i}\right],\lab
 \end_layout
 
 \begin_layout Standard
-where 
+where
 \series bold
 
 \begin_inset Formula $h_{o}(t)$
@@ -6375,25 +6375,25 @@ where
 
 
 \series default
- stands for the 
+ stands for the
 \emph on
 baseline hazard function
 \emph default
 .
- Coefficients 
+ Coefficients
 \begin_inset Formula $\beta$
 \end_inset
 
  are the parameters of interest in the model.
- Since the exponential function has no 
+ Since the exponential function has no
 \begin_inset Formula $t$
 \end_inset
 
-, 
+,
 \begin_inset Formula $\mathbf{X}$
 \end_inset
 
- is called 
+ is called
 \emph on
 time-independent.
 
@@ -6411,7 +6411,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Even though Equation 
+Even though Equation
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:cox_ph"
@@ -6424,11 +6424,11 @@ noprefix "false"
  contains the baseline hazard function, the function is not specified.
  Fortunately, we can calculate the hazard ratio, a measure of effect, without
  having to estimate the baseline hazard function.
- Similarly, the hazard function 
+ Similarly, the hazard function
 \begin_inset Formula $h(t,\mathbf{X})$
 \end_inset
 
- and the survival function 
+ and the survival function
 \begin_inset Formula $S(t,\mathbf{X})$
 \end_inset
 
@@ -6438,7 +6438,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-The 
+The
 \emph on
 hazard ratio
 \emph default
@@ -6448,7 +6448,7 @@ hazard ratio
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 \hat{HR}=\frac{h(t,X^{*}\mathbf{)}}{h(t,X)}=exp\left[\sum_{i=1}^{p}\hat{\beta_{i}}(X^{*}-X)\right]\label{eq:cox_ph_hazard_ratio}
 \end{equation}
@@ -6459,11 +6459,11 @@ hazard ratio
 \end_layout
 
 \begin_layout Standard
-As can be seen, the equation does not contain 
+As can be seen, the equation does not contain
 \begin_inset Formula $t$
 \end_inset
 
- and the basic hazard function, as they are canceled out, making it a 
+ and the basic hazard function, as they are canceled out, making it a
 \emph on
 proportional hazard assumption
 \emph default
@@ -6471,11 +6471,11 @@ proportional hazard assumption
 \end_layout
 
 \begin_layout Standard
-Like logistic regression, the CoxPH uses the 
+Like logistic regression, the CoxPH uses the
 \emph on
-maximum likelihood 
+maximum likelihood
 \emph default
-function 
+function
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:max_likelihood"
@@ -6491,17 +6491,17 @@ noprefix "false"
 
 ).
  However, since the maximal likelihood considers only a part of patients,
- namely those who experienced an event, the formula is called 
+ namely those who experienced an event, the formula is called
 \series bold
 \emph on
 partial
 \series default
 \emph default
- 
+
 \emph on
 likelihood
 \emph default
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -6514,62 +6514,62 @@ literal "false"
 .
 
 \emph default
- 
+
 \end_layout
 
 \begin_layout Standard
 Let us define the partial likelihood.
- The subject's survival can be defined by 
+ The subject's survival can be defined by
 \begin_inset Formula $h(t,X)dt$
 \end_inset
 
- with 
+ with
 \begin_inset Formula $dt→0$
 \end_inset
 
 .
- Consider 
+ Consider
 \begin_inset Formula $J$
 \end_inset
 
- (where 
+ (where
 \begin_inset Formula $J\leq N$
 \end_inset
 
-) as the total number of events of interest observed for 
+) as the total number of events of interest observed for
 \begin_inset Formula $N$
 \end_inset
 
  instances.
- 
+
 \begin_inset Formula $T_{1}<T_{2}<\cdots<T_{J}$
 \end_inset
 
  represents the unique and sequentially ordered times to the event of interest.
- Let 
+ Let
 \begin_inset Formula $X_{j}$
 \end_inset
 
  be the vector of covariates for a subject who experiences the event at
- time 
+ time
 \begin_inset Formula $T_{j}$
 \end_inset
 
 .
- 
+
 \begin_inset Formula $R_{j}$
 \end_inset
 
- is the set of risk subjects at 
+ is the set of risk subjects at
 \begin_inset Formula $T_{j}$
 \end_inset
 
 .
- Given that the event happens at time 
+ Given that the event happens at time
 \begin_inset Formula $T_{j}$
 \end_inset
 
-, the individual probability associated with 
+, the individual probability associated with
 \begin_inset Formula $X_{j}$
 \end_inset
 
@@ -6577,7 +6577,7 @@ Let us define the partial likelihood.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 \frac{h(T_{j},X_{j})dt}{\sum_{i\epsilon R_{j}}h(T_{j},X_{i})dt}.
 \]
@@ -6595,7 +6595,7 @@ By taking the product across all subject's probabilities we get the partial
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 PL(\beta)=\prod_{j=1}^{N}\left[\frac{exp(X_{j}\beta)}{\sum_{i\epsilon R_{j}}exp(X_{i}\beta)}\right]^{\delta_{J}}.\label{eq:partial-likelihood}
 \end{equation}
@@ -6611,18 +6611,18 @@ PL(\beta)=\prod_{j=1}^{N}\left[\frac{exp(X_{j}\beta)}{\sum_{i\epsilon R_{j}}exp(
 
  is the indicator of censoring of a given instance (1 for event occurrence,
  0 for censoring).
- Therefore, if the subject is censored, 
+ Therefore, if the subject is censored,
 \begin_inset Formula $\delta=0$
 \end_inset
 
 , the individual probability is equal to 1 and the subject does not affect
  the result.
- The vector of coefficients 
+ The vector of coefficients
 \begin_inset Formula $\hat{\beta}$
 \end_inset
 
  is estimated by either maximizing partial likelihood, defined above, or
- maximizing the negative 
+ maximizing the negative
 \emph on
 log-partial likelihood
 \emph default
@@ -6630,7 +6630,7 @@ log-partial likelihood
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 LL(\beta)=-\sum_{j=1}^{N}\delta_{j}\{X_{j}\beta-log[\sum_{i\epsilon R_{j}}exp(X_{i}\beta)]\}.
 \]
@@ -6654,7 +6654,7 @@ Being a semi-parametric, this model is a safe choice because it consistently
  The risk of choosing the wrong model as often happens with parametric models,
  is practically non-existent.
  However, if one is sure that a parametric model suits the problem, one
- should use the parametric model 
+ should use the parametric model
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -6663,7 +6663,7 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -6678,15 +6678,15 @@ The Cox proportional hazards model is often chosen, since its coefficients
  features.
  Feature (column) correlations make a matrix singular, i.e.
  impossible to revert.
- In this section, we aim to explore the 
+ In this section, we aim to explore the
 \emph on
 Ridge regression
 \emph default
-, 
+,
 \emph on
 LASSO
 \emph default
-, and 
+, and
 \emph on
 Elastic Net
 \emph default
@@ -6700,17 +6700,17 @@ Ridge
 \end_layout
 
 \begin_layout Standard
-By incorporating an 
+By incorporating an
 \begin_inset Formula $l_{2}$
 \end_inset
 
  penalty term on the coefficients, shrinking them to zero, we can avoid
  the problem of the inability to revert singular matrix.
- Consequently, our objective has the following form: 
+ Consequently, our objective has the following form:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 arg\max_{\beta}\log PL(\beta)-\frac{\alpha}{2}\sum_{j=1}^{p}\beta_{j}^{2}.
 \]
@@ -6721,7 +6721,7 @@ arg\max_{\beta}\log PL(\beta)-\frac{\alpha}{2}\sum_{j=1}^{p}\beta_{j}^{2}.
 \end_layout
 
 \begin_layout Standard
-In the equation, 
+In the equation,
 \begin_inset Formula $PL(\beta)$
 \end_inset
 
@@ -6735,29 +6735,29 @@ noprefix "false"
 
 \end_inset
 
-), terms 
+), terms
 \begin_inset Formula $\beta_{1},\ldots,\beta_{p}$
 \end_inset
 
-represent the coefficients corresponding to 
+represent the coefficients corresponding to
 \begin_inset Formula $p$
 \end_inset
 
- features, 
+ features,
 \begin_inset Formula $\alpha\geq0$
 \end_inset
 
  is a hyper-parameter that controls the amount shrinkage.
- The resulting objective is referred to as 
+ The resulting objective is referred to as
 \emph on
 ridge regression.
 
 \emph default
- If 
+ If
 \begin_inset Formula $\alpha$
 \end_inset
 
- is set to zero, we get the regular Cox model 
+ is set to zero, we get the regular Cox model
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-37"
@@ -6773,7 +6773,7 @@ LASSO
 \end_layout
 
 \begin_layout Standard
-While the 
+While the
 \begin_inset Formula $l_{2}$
 \end_inset
 
@@ -6782,7 +6782,7 @@ While the
  there are.
  Preferably, we would like to select a small subset of the most predictive
  features and ignore the rest, as too many features might result in overfitting.
- 
+
 \emph on
 LASSO
 \emph default
@@ -6791,19 +6791,19 @@ LASSO
  selection as a part of the optimization process, where a subset of coefficients
  is set to zero and is, therefore, excluded, reducing the number of features
  we would need for prediction.
- Mathematically, we would replace the 
+ Mathematically, we would replace the
 \begin_inset Formula $l_{2}$
 \end_inset
 
- penalty with the 
+ penalty with the
 \begin_inset Formula $l_{1}$
 \end_inset
 
- penalty, leading to the following optimization problem: 
+ penalty, leading to the following optimization problem:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 arg\max_{\beta}\log PL(\beta)-\alpha\sum_{j=1}^{p}|\beta_{j}|.
 \]
@@ -6816,41 +6816,41 @@ arg\max_{\beta}\log PL(\beta)-\alpha\sum_{j=1}^{p}|\beta_{j}|.
 \begin_layout Standard
 The main drawback is that we cannot directly control the number of features
  selected.
- However, the value of 
+ However, the value of
 \begin_inset Formula $\alpha$
 \end_inset
 
  essentially determines the number of features selected.
  To achieve a refined model that requires fewer features, we need a data-driven
- way to determine the appropriate 
+ way to determine the appropriate
 \begin_inset Formula $\alpha$
 \end_inset
 
 .
- This can be accomplished by first determining the 
+ This can be accomplished by first determining the
 \begin_inset Formula $\alpha$
 \end_inset
 
  that would ignore all features (coefficients are set to zero) and then
  gradually decreasing its value, possibly down to 1% of its starting value.
- Fortunately, it is implemented in scikit-survival's 
+ Fortunately, it is implemented in scikit-survival's
 \emph on
 sksurv.linear_model.CoxnetSurvivalAnalysis.
- 
+
 \emph default
-We would need to set 
+We would need to set
 \emph on
 l1_ratio=1.0
 \emph default
- and 
+ and
 \emph on
 alpha_min_ratio=0.01
 \emph default
- to search for 100 
+ to search for 100
 \begin_inset Formula $\alpha$
 \end_inset
 
- values up to 1% of the estimated maximum 
+ values up to 1% of the estimated maximum
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-37"
@@ -6872,15 +6872,15 @@ The LASSO method is effective for selecting a subset of discriminative features.
  instances in the training data set.
  The second is its tendency to randomly select only one feature out of a
  set of highly correlated ones.
- The 
+ The
 \emph on
 Elastic Net
 \emph default
- alleviates these issues by incorporating the 
+ alleviates these issues by incorporating the
 \begin_inset Formula $l_{1}$
 \end_inset
 
-and 
+and
 \begin_inset Formula $l_{2}$
 \end_inset
 
@@ -6889,7 +6889,7 @@ and
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 arg\max_{\beta}\log PL(\beta)-\alpha\left(r\sum_{j=1}^{p}|\beta_{j}|+\frac{1-r}{2}\sum_{j=1}^{p}\beta_{j}^{2}\right),
 \]
@@ -6900,15 +6900,15 @@ arg\max_{\beta}\log PL(\beta)-\alpha\left(r\sum_{j=1}^{p}|\beta_{j}|+\frac{1-r}{
 \end_layout
 
 \begin_layout Standard
-where 
+where
 \begin_inset Formula $r\epsilon[0;1]$
 \end_inset
 
- is the relative weight of the 
+ is the relative weight of the
 \begin_inset Formula $l_{1}$
 \end_inset
 
-and 
+and
 \begin_inset Formula $l_{2}$
 \end_inset
 
@@ -6916,7 +6916,7 @@ and
 \begin_inset Formula $r=1$
 \end_inset
 
- is a LASSO penalty, 
+ is a LASSO penalty,
 \begin_inset Formula $r=0$
 \end_inset
 
@@ -6926,12 +6926,12 @@ and
  As a result, it is more stable than LASSO, and in a situation of highly
  correlated features, it would select them all, while LASSO would randomly
  select only one.
- Usually, it is sufficient to give the 
+ Usually, it is sufficient to give the
 \begin_inset Formula $l_{2}$
 \end_inset
 
  penalty only a small weight to improve the stability of the LASSO, for
- example, 
+ example,
 \begin_inset Formula $r=0.9$
 \end_inset
 
@@ -6939,12 +6939,12 @@ and
 \end_layout
 
 \begin_layout Standard
-Similar to LASSO, the weight 
+Similar to LASSO, the weight
 \begin_inset Formula $\alpha$
 \end_inset
 
  inherently dictates the size of the chosen subset.
- Its optimal value is typically estimated in a data-driven way 
+ Its optimal value is typically estimated in a data-driven way
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-37"
@@ -6953,7 +6953,7 @@ literal "false"
 \end_inset
 
 .
- More on that in the practical part, where we will choose the best 
+ More on that in the practical part, where we will choose the best
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -6991,7 +6991,7 @@ To conclude, Ridge, LASSO, and Elastic Net offer powerful extensions of
 \end_layout
 
 \begin_layout Subsection
-Random Survival Forest 
+Random Survival Forest
 \end_layout
 
 \begin_layout Standard
@@ -7000,7 +7000,7 @@ Random Survival Forest
 Random Survival Forest
 \emph default
  (RSF) is an ensemble machine learning method tailored for survival analysis.
- It is derived from the original Random Forest method developed by 
+ It is derived from the original Random Forest method developed by
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-28"
@@ -7016,11 +7016,11 @@ literal "false"
 s allows for more accurate predictions than any single tree can provide.
  Similar to Random Forest, Random Survival Forest leverages the power of
  multiple survival trees making its predictions more robust.
- 
+
 \end_layout
 
 \begin_layout Standard
-Random Survival Forest is comprised of 
+Random Survival Forest is comprised of
 \emph on
 Survival Trees
 \emph default
@@ -7031,7 +7031,7 @@ Survival Trees
  An optimal node split is the one maximizing the survival difference between
  the children nodes.
  It is done by iterating through all features and finding such a value for
- a given feature that maximizes the survival difference 
+ a given feature that maximizes the survival difference
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-39"
@@ -7040,7 +7040,7 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -7048,16 +7048,16 @@ Random Survival Forest training is comprised of the following steps:
 \end_layout
 
 \begin_layout Enumerate
-Randomly draw 
+Randomly draw
 \begin_inset Formula $L$
 \end_inset
 
- bootstrap samples of size 
+ bootstrap samples of size
 \begin_inset Formula $n$
 \end_inset
 
  with replacement from the training dataset.
- 
+
 \begin_inset Formula $n$
 \end_inset
 
@@ -7069,11 +7069,11 @@ ons and are not included in the bootstrap sample.
 \begin_layout Enumerate
 For each sample, develop a full-grown survival tree based on the selected
  splitting criterion.
- At each node, randomly select 
+ At each node, randomly select
 \begin_inset Formula $\sqrt{p}$
 \end_inset
 
- (or other number) covariates, where 
+ (or other number) covariates, where
 \begin_inset Formula $p$
 \end_inset
 
@@ -7081,7 +7081,7 @@ For each sample, develop a full-grown survival tree based on the selected
  Stop developing when a certain condition is met (for example, when the
  terminal node has fewer observations than a predetermined threshold or
  the node reaches purity).
- 
+
 \end_layout
 
 \begin_layout Enumerate
@@ -7091,7 +7091,7 @@ For each tree, calculate the cumulative hazard function with the Nelson-Aalen
 \end_layout
 
 \begin_layout Enumerate
-Use OOB data to determine the prediction error of the ensemble 
+Use OOB data to determine the prediction error of the ensemble
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-38"
@@ -7132,7 +7132,7 @@ Survival prediction models play a vital role in healthcare.
 \begin_layout Enumerate
 
 \series bold
-Overall performance, 
+Overall performance,
 \series default
 which is the distance between the predicted and observed survival time.
 \end_layout
@@ -7145,7 +7145,7 @@ Discrimination,
  or the model's ability to distinguish between high- and low-risk patients.
 
 \series bold
- 
+
 \end_layout
 
 \begin_layout Enumerate
@@ -7153,7 +7153,7 @@ Discrimination,
 \series bold
 Calibration
 \series default
- is the agreement between the observed and predicted survival times 
+ is the agreement between the observed and predicted survival times
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-34"
@@ -7168,7 +7168,7 @@ literal "false"
 The absence of bias in a situation when the validation set contains censored
  instances is a sign of a good performance measure.
  Otherwise, in the presence of high levels of censoring, the evaluation
- would be unreasonably optimistic 
+ would be unreasonably optimistic
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-34"
@@ -7189,17 +7189,17 @@ Harrel's and Uno's Concordance Indices
 \end_layout
 
 \begin_layout Standard
-One way to measure discrimination is through 
+One way to measure discrimination is through
 \emph on
 concordance
 \emph default
 .
- A pair of patients is 
+ A pair of patients is
 \emph on
 concordant
 \emph default
  if the subject who experiences an event earlier has a greater estimated
- risk 
+ risk
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-30"
@@ -7208,7 +7208,7 @@ literal "false"
 \end_inset
 
 .
- 
+
 \emph on
 Measures of concordance
 \emph default
@@ -7216,7 +7216,7 @@ Measures of concordance
  survival times.
  Typically, their values range between 0.5 and 1.
  A value of 0.5 indicates no discrimination, while 1 corresponds to the ideal
- discrimination 
+ discrimination
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-34"
@@ -7225,15 +7225,15 @@ literal "false"
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
-The 
+The
 \emph on
 concordance index
 \emph default
-, or 
+, or
 \emph on
 C-index
 \emph default
@@ -7244,19 +7244,19 @@ C-index
  concordance probability
 \emph default
  is the probability that from the arbitrarily selected pair of patients
- 
+
 \begin_inset Formula $(i,j)$
 \end_inset
 
-, the one with a shorter survival time 
+, the one with a shorter survival time
 \begin_inset Formula $T$
 \end_inset
 
-, has the higher predicted risk 
+, has the higher predicted risk
 \begin_inset Formula $M$
 \end_inset
 
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-34"
@@ -7269,7 +7269,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 C=P(M_{i}>M_{j}|T_{i}<T_{j}).
 \]
@@ -7285,13 +7285,13 @@ C=P(M_{i}>M_{j}|T_{i}<T_{j}).
 Harrell's concordance index
 \emph default
  is the most widely used implementation of concordance index.
- To compute Harrel's concordance index 
+ To compute Harrel's concordance index
 \begin_inset Formula $C_{H}$
 \end_inset
 
 , we consider every comparable pair of patients where the one with the shorter
  time failed.
- Pair is 
+ Pair is
 \begin_inset Quotes sld
 \end_inset
 
@@ -7299,7 +7299,7 @@ comparable
 \begin_inset Quotes srd
 \end_inset
 
- if we can determine which of them experienced the event first 
+ if we can determine which of them experienced the event first
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-30"
@@ -7308,21 +7308,21 @@ literal "false"
 \end_inset
 
 .
- 
+
 \begin_inset Formula $C_{H}$
 \end_inset
 
  is estimated as the proportion of these pairs in which the subject with
  the shorter survival time has a higher estimated risk.
- A modified version of this estimator, 
+ A modified version of this estimator,
 \begin_inset Formula $C_{H}(\tau)$
 \end_inset
 
-, only considers patients with 
+, only considers patients with
 \begin_inset Formula $T_{i}<\tau$
 \end_inset
 
- and may provide more stable estimates 
+ and may provide more stable estimates
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-34"
@@ -7339,7 +7339,7 @@ Mathematically, Harrell's C-index is defined as a ratio between the number
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 \hat{C}=\frac{\sum_{i=1}^{N}\Delta_{i}\sum_{j=i+1}^{N}\left[I(T_{i}^{obs}<T_{j}^{obs})+(1-\Delta_{j})I(T_{i}^{obs}=T_{j}^{obs})\right]\left[I(M_{i}>M_{j})+\frac{1}{2}I(M_{i}=M_{j})\right]}{\sum_{i=1}^{N}\Delta_{i}\sum_{j=i+1}^{N}\left[I(T_{i}^{obs}<T_{j}^{obs})+(1-\Delta_{j})I(T_{i}^{obs}=T_{j}^{obs})\right]}.\label{eq:c-index}
 \end{equation}
@@ -7350,30 +7350,30 @@ Mathematically, Harrell's C-index is defined as a ratio between the number
 \end_layout
 
 \begin_layout Standard
-where 
+where
 \begin_inset Formula $I(\cdot)$
 \end_inset
 
  is the indicator function.
  It is equal to 1 if its argument is true, and 0 if it is not.
- 
+
 \begin_inset Formula $T^{obs}$
 \end_inset
 
  is the observation time.
- 
+
 \begin_inset Formula $\Delta_{i}$
 \end_inset
 
- is a binary variable and 
+ is a binary variable and
 \begin_inset Formula $\Delta_{i}=1$
 \end_inset
 
- if the subject 
+ if the subject
 \begin_inset Formula $i$
 \end_inset
 
- experienced an event during the time of observation and 
+ experienced an event during the time of observation and
 \begin_inset Formula $\Delta_{i}=0$
 \end_inset
 
@@ -7381,7 +7381,7 @@ where
 \end_layout
 
 \begin_layout Standard
-According to the Scikit-survival's documentation 
+According to the Scikit-survival's documentation
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-35"
@@ -7391,7 +7391,7 @@ literal "false"
 
  and Rahman et.
  al.
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-34"
@@ -7403,7 +7403,7 @@ literal "false"
  The bias increases with the level of censoring.
  Uno et.
  al.
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-31"
@@ -7411,17 +7411,17 @@ literal "false"
 
 \end_inset
 
- introduced a modified concordance index, 
+ introduced a modified concordance index,
 \begin_inset Formula $C_{U}(\tau)$
 \end_inset
 
 , which incorporates weights based on the probability of being censored.
- While their estimator proved robust to the choice of 
+ While their estimator proved robust to the choice of
 \begin_inset Formula $\tau$
 \end_inset
 
 , they noted that the error of the estimate might be quite large if there
- are too few instances beyond this time point 
+ are too few instances beyond this time point
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-21,key-22"
@@ -7459,13 +7459,13 @@ Time-dependent Area under the ROC
 \end_layout
 
 \begin_layout Standard
-The 
+The
 \emph on
 area under the receiver operating characteristic curve
 \emph default
  (ROC AUC) is a popular performance measure for binary classification tasks.
  In survival analysis, it is used to determine how well estimated risk scores
- can distinguish diseased patients from healthy ones 
+ can distinguish diseased patients from healthy ones
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-35"
@@ -7481,33 +7481,33 @@ In binary classification, the
 \emph on
  receiver operating characteristic (ROC)
 \emph default
- is a curve that plots the 
+ is a curve that plots the
 \emph on
 true positive rate (TPR or sensitivity)
 \emph default
- against the 
+ against the
 \emph on
 false positive rate (FPR)
 \emph default
 .
  The FPR is the ratio of negative instances that are falsely classified
  as positive.
- It is equal to 
+ It is equal to
 \begin_inset Formula $1-$
 \end_inset
 
- the 
+ the
 \emph on
 true negative rate
 \emph default
  (the ratio of negative instances that are correctly classified, often referred
- to as 
+ to as
 \emph on
 specificity
 \emph default
 ).
  TPR, or sensitivity, represents the ratio of positive instances classified
- as positive 
+ as positive
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-9"
@@ -7525,61 +7525,61 @@ In survival analysis, we extend the ROC to continuous outcomes, where a
  Specificity and sensitivity, therefore, become time-dependent measures.
  It is specifically important, as model accuracy tends to be different at
  different points in time.
- Here we consider 
+ Here we consider
 \emph on
 cumulative cases
 \emph default
- and 
+ and
 \emph on
 dynamic controls
 \emph default
- at any given point in time 
+ at any given point in time
 \begin_inset Formula $t$
 \end_inset
 
 .
- 
+
 \emph on
 Cumulative cases
 \emph default
- are all subjects who experienced an event prior to or at time 
+ are all subjects who experienced an event prior to or at time
 \begin_inset Formula $t$
 \end_inset
 
-, while 
+, while
 \emph on
 dynamic controls
 \emph default
- are those who are yet to experience the event after time 
+ are those who are yet to experience the event after time
 \begin_inset Formula $t$
 \end_inset
 
 .
- By calculating the ROC AUC for any given time point 
+ By calculating the ROC AUC for any given time point
 \begin_inset Formula $t$
 \end_inset
 
 , we assess the model's ability to differentiate between patients.
  Specifically, how well the model can distinguish patients who fail by a
- given time 
+ given time
 \begin_inset Formula $t_{i}<t$
 \end_inset
 
- from subjects who fail after this time 
+ from subjects who fail after this time
 \begin_inset Formula $t_{i}>t$
 \end_inset
 
 .
  The time-dependent ROC AUC is especially useful when we want to predict
- an event happening in a period up to time 
+ an event happening in a period up to time
 \begin_inset Formula $t$
 \end_inset
 
-, rather than at a specific time-point 
+, rather than at a specific time-point
 \begin_inset Formula $t$
 \end_inset
 
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-35"
@@ -7599,14 +7599,14 @@ While the time-dependent ROC AUC provides a valuable measure of a model's
 \end_layout
 
 \begin_layout Subsubsection
-Time-dependent Brier Score 
+Time-dependent Brier Score
 \end_layout
 
 \begin_layout Standard
 Time-dependent ROC AUC and concordance index are great for assessing the
  overall discrimination among all time points (mean AUC and c-index) and
  the discrimination at any individual time point (the ROC graph), but they
- tell us nothing about the accuracy of individual predictions 
+ tell us nothing about the accuracy of individual predictions
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-35"
@@ -7618,7 +7618,7 @@ literal "false"
  A metric analogous to regression performance measures used in machine learning
  would be ideal.
  Fortunately, such a metric exists.
- 
+
 \emph on
 Time-dependent Brier score
 \emph default
@@ -7629,7 +7629,7 @@ Time-dependent Brier score
 \begin_layout Standard
 While the concordance index and time-dependent ROC AUC measure only discriminati
 on, the time-dependent Brier score measures both discrimination and calibration,
- making it a metric of 
+ making it a metric of
 \begin_inset Quotes sld
 \end_inset
 
@@ -7642,7 +7642,7 @@ overall performance
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 BS^{c}(t)=\frac{1}{n}\sum_{i=1}^{n}I(y_{i}\leq t\wedge\delta_{i}=1)\frac{(0-\hat{\pi}(t|\mathbf{x}_{i}))^{2}}{\hat{G}(y_{i})}+I(y_{i}>t)\frac{(1-\hat{\pi}(t|\mathbf{x}_{i}))^{2}}{\hat{G}(t)}
 \]
@@ -7653,7 +7653,7 @@ BS^{c}(t)=\frac{1}{n}\sum_{i=1}^{n}I(y_{i}\leq t\wedge\delta_{i}=1)\frac{(0-\hat
 \end_layout
 
 \begin_layout Standard
-where 
+where
 \series bold
 
 \begin_inset Formula $\hat{\pi(t|\mathbf{x})}$
@@ -7662,19 +7662,19 @@ where
 
 \series default
 is a model’s predicted probability of remaining event-free up to the time
- point 
+ point
 \begin_inset Formula $t$
 \end_inset
 
- for feature vector 
+ for feature vector
 \series bold
 x
 \series default
-, and 
+, and
 \begin_inset Formula $\frac{1}{\hat{G}(t)}$
 \end_inset
 
- is the inverse probability of censoring weight 
+ is the inverse probability of censoring weight
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-35"
@@ -7683,16 +7683,16 @@ literal "false"
 \end_inset
 
 .
- 
+
 \begin_inset Formula $I(\cdot)$
 \end_inset
 
  is the indicator function.
- 
+
 \begin_inset Formula $y_{i}$
 \end_inset
 
- is the subject's survival time, 
+ is the subject's survival time,
 \begin_inset Formula $\delta_{i}$
 \end_inset
 
@@ -7702,7 +7702,7 @@ literal "false"
 \begin_layout Standard
 The limitation of the time-dependent Brier Score is its applicability exclusivel
 y to the models that are capable of estimating the survival function.
- 
+
 \emph on
 Integrated Brier Score
 \emph default
@@ -7729,7 +7729,7 @@ Survival analysis provides a suite of techniques for the prediction of a
 \end_layout
 
 \begin_layout Section
-Deep Learning 
+Deep Learning
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Deep-Learning"
@@ -7864,7 +7864,7 @@ I am going to use survival FFNN, likely DeepSurv
 \end_layout
 
 \begin_layout Section
-Overview of Machine Learning Libraries and Tools 
+Overview of Machine Learning Libraries and Tools
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Overview-of-Machine"
@@ -7888,7 +7888,7 @@ python.
 \end_layout
 
 \begin_layout Plain Layout
-numpy 
+numpy
 \end_layout
 
 \begin_layout Plain Layout
@@ -8005,7 +8005,7 @@ the code for the image generation can be found in the github + give a link
 In this chapter we age going to look into the UNOS dataset.
  Make sense of the dataset.
  Explore important features and their relationship with each other.
- Look into survival time for 
+ Look into survival time for
 \end_layout
 
 \begin_layout Standard
@@ -8029,7 +8029,7 @@ The data reported here have been supplied by the United Network for Organ
 The dataset is not for the open use.
  If you are interested in testing the results achieved in this paper, you
  need to acquire the data first.
- The requirements for the data acquirement are written here 
+ The requirements for the data acquirement are written here
 \begin_inset Note Note
 status open
 
@@ -8396,7 +8396,7 @@ The data were provided in a form of a MongoDB database dump.
 status open
 
 \begin_layout Plain Layout
-+ 
++
 \series bold
 explain what is container
 \end_layout
@@ -8431,7 +8431,7 @@ Data preprocessing pipeline
 \begin_layout Standard
 In this section I will describe the data pipeline that I use to create the
  dataset out of the raw data.
- The pipeline can be found in github repository of this paper: 
+ The pipeline can be found in github repository of this paper:
 \begin_inset CommandInset href
 LatexCommand href
 name "survival_pipeline.py"
@@ -8445,7 +8445,7 @@ literal "false"
 
 \begin_layout Standard
 The work with the pipeline is pretty straightforward: we initialize the
- class and call the 
+ class and call the
 \emph on
 load()
 \emph default
@@ -8484,28 +8484,28 @@ X, y = loader.load()
 \end_layout
 
 \begin_layout Standard
-Two main constants of the class are 
+Two main constants of the class are
 \emph on
-categorical_values 
+categorical_values
 \emph default
-and 
+and
 \emph on
 numerical_values.
- 
+
 \emph default
 Categorical and numerical features must be specified there.
  It is important for following preprocessing steps.
 \end_layout
 
 \begin_layout Standard
-The main method of the class 
+The main method of the class
 \emph on
-ScikitSurvivalDataLoader 
+ScikitSurvivalDataLoader
 \emph default
-is 
+is
 \emph on
 load().
- 
+
 \emph default
 This method loads the data into the pandas DataFrame, applies exclusion
  criteria (more on that later), handles NaN values and returns X and y,
@@ -8515,38 +8515,38 @@ This method loads the data into the pandas DataFrame, applies exclusion
  - otherwise), PTIME is the number of days survived.
  This format is required by the Scikit-survival Library to build survival
  estimators.
- 
+
 \end_layout
 
 \begin_layout Standard
 The first step is to load the data into pandas DataFrame from the parquet
  file.
  Fortunately, pandas has support for this kind of files.
- It is performed by the Pandas method 
+ It is performed by the Pandas method
 \emph on
 read_parquet(path, engine, columns).
- 
+
 \emph default
-In 
+In
 \emph on
 path
 \emph default
- we need to specify the path to the parquet file, 
+ we need to specify the path to the parquet file,
 \emph on
 engine
 \emph default
- specifies what parquet library should be used, I use 'auto', it tries 
+ specifies what parquet library should be used, I use 'auto', it tries
 \emph on
 pyarrow
 \emph default
- if it doesn't work it uses 
+ if it doesn't work it uses
 \emph on
 fastparquet.
 
 \emph default
- In 
+ In
 \emph on
-columns 
+columns
 \emph default
 we need to specify the columns we want to load.
  (explain more what is pyarrow and parquet)
@@ -8557,7 +8557,7 @@ we need to specify the columns we want to load.
 \series bold
 Description of feature engineering step
 \series default
-: 
+:
 \end_layout
 
 \begin_layout Standard
@@ -8565,16 +8565,16 @@ The next step is to divide the dataset into training, validation and test
  sets, the reasons behind that, were explained in the datapreprocessing
  section of the previous chapter.
  These sets are then assigned as class variables to the class and are sent
- to preprocessing method 
+ to preprocessing method
 \emph on
-_handle_nan(), 
+_handle_nan(),
 \emph default
 where the NaN values are filled with median, specific value, or examples
- with such values are deleted with the pandas DataFrame method 
+ with such values are deleted with the pandas DataFrame method
 \emph on
-drop_na(), 
+drop_na(),
 \emph default
-depending on the 
+depending on the
 \emph on
 fill_na_with_median
 \emph default
@@ -8582,62 +8582,62 @@ fill_na_with_median
 \end_layout
 
 \begin_layout Standard
-After the NaN handling step, the training set is send to the method 
+After the NaN handling step, the training set is send to the method
 \emph on
 _get_X_y()
 \emph default
  where the numerical values are standartized
 \series bold
- 
+
 \series default
 and categorical are encoded with the OneHot encoding with the Scikit-Survival
- methods 
+ methods
 \emph on
 standardize()
 \emph default
- and 
+ and
 \emph on
 encode_categorical().
- 
+
 \emph default
-Numerical and categorical values then comprise the 
+Numerical and categorical values then comprise the
 \emph on
 X
 \emph default
  set, directly used in the training.
 
 \emph on
- 
+
 \emph default
-The target value set is constructed with 
+The target value set is constructed with
 \emph on
 Surv.from_arrays()
 \emph default
- utility that accepts event and survival time and builds the 
+ utility that accepts event and survival time and builds the
 \emph on
 y
 \emph default
  value acceptable to scikit-survival algorithms.
- The class variable 
+ The class variable
 \emph on
-df 
+df
 \emph default
 is then set to None with the goal of memory optimisation.
  X and y are then returned.
 \end_layout
 
 \begin_layout Standard
-When we need the validation and the test sets, we just call methods 
+When we need the validation and the test sets, we just call methods
 \emph on
-get_validate_X_y() 
+get_validate_X_y()
 \emph default
-and 
+and
 \emph on
 get_test_X_y()
 \emph default
  which will provide us with the sets for the hyperparameter tuning step
  with the validation set and the final evaluation step with the test set.
- 
+
 \begin_inset Note Note
 status open
 
@@ -8695,19 +8695,19 @@ Survival Data
 \end_layout
 
 \begin_layout Standard
-In this subsection we are going to explore the 
+In this subsection we are going to explore the
 \emph on
 y
 \emph default
  axis that is going to be used for the training of the survival estimators.
- The 
+ The
 \emph on
 y
 \emph default
  value consists of censoring status, which is a boolean value, and time
  to event, which is a numerical value representing the survival time or
  the time at which it was censored.
- The y value is called the 
+ The y value is called the
 \emph on
 survival data
 \emph default
@@ -8743,16 +8743,16 @@ s are below it.
  edge, in case of horizontal box plot), the third quartile forms the right
  edge (or top edge) of the box and the median is drawed inside of the box.
  The box itself represents interquartile range (IQR), that is calculated
- as 
+ as
 \begin_inset Formula $IQR=Q_{3}-Q_{1}$
 \end_inset
 
 .
- The lines that lie beyond the box are called 
+ The lines that lie beyond the box are called
 \emph on
 whiskers
 \emph default
- and indicate a range for 
+ and indicate a range for
 \begin_inset Quotes sld
 \end_inset
 
@@ -8764,7 +8764,7 @@ a bulk of the data
  The whiskers extend to the furthest points outside of the box, except they
  cannot be longer than 1,5 times the IQR.
  The values lying outside of the whiskers are considered outliers.
- 
+
 \begin_inset Note Note
 status open
 
@@ -8819,7 +8819,7 @@ name "box_surv_time"
 \end_layout
 
 \begin_layout Standard
-Look at the Figure 
+Look at the Figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "box_surv_time"
@@ -8830,12 +8830,12 @@ noprefix "false"
 \end_inset
 
 , there you can see the box plot of patient survival time (PTIME column).
- The 
+ The
 \begin_inset Formula $Q_{1}$
 \end_inset
 
 is equal to 867 days (2.4 years), the median is 2136 days (5.85 years) and
- the third quantile 
+ the third quantile
 \begin_inset Formula $Q_{3}$
 \end_inset
 
@@ -8844,14 +8844,14 @@ is equal to 3828 days (10.5 years).
  This makes up the box.
  The left whisker extends from 0 day up to the first quartile of 867 days.
  The right whisker is much longer, and extends from the third quartile up
- to the 
+ to the
 \begin_inset Formula $Q_{3}+1.5*IQR$
 \end_inset
 
 , which in our case is equal to 8269,5 days.
  The values above 8269,5 can be considered outliers.
  As can be seen from the figure (almost straight black line, consisting
- of individual dots) there are a lot of them.There are less than 
+ of individual dots) there are a lot of them.There are less than
 \series bold
 10 000
 \series default
@@ -8912,7 +8912,7 @@ name "fig:bar_pstatus"
 \end_layout
 
 \begin_layout Standard
-Look at the figure 
+Look at the figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:bar_pstatus"
@@ -8979,7 +8979,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Box plot for the recipient age versus donor age.
- 
+
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:box_age_vs_age_don"
@@ -9004,7 +9004,7 @@ name "fig:box_age_vs_age_don"
 \end_layout
 
 \begin_layout Standard
-As can be seen on the box plot in the Figure 
+As can be seen on the box plot in the Figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:box_age_vs_age_don"
@@ -9091,7 +9091,7 @@ name "fig:hb_age_ptime"
 \end_layout
 
 \begin_layout Standard
-In the Figure 
+In the Figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:hb_age_ptime"
@@ -9110,7 +9110,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-The figure 
+The figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:hb_age_ptime"
@@ -9120,7 +9120,7 @@ noprefix "false"
 
 \end_inset
 
- more or less corresponds to box plots 
+ more or less corresponds to box plots
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "box_surv_time"
@@ -9130,7 +9130,7 @@ noprefix "false"
 
 \end_inset
 
- and 
+ and
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:box_age_vs_age_don"
@@ -9174,7 +9174,7 @@ literal "false"
 
 \end_inset
 
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-30"
@@ -9196,7 +9196,7 @@ Add citation from some meta analysis
 \end_layout
 
 \begin_layout Standard
-Let's look at the Figure 
+Let's look at the Figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_donor_types"
@@ -9273,7 +9273,7 @@ In this subsection we are going to explore the gender distribution in our
 
 \begin_layout Standard
 Let's explore the distribution of gender in our dataset.
- Take a look at the figure 
+ Take a look at the figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:bar_gender"
@@ -9319,7 +9319,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Bar chart for gender 
+Bar chart for gender
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:bar_gender"
@@ -9345,7 +9345,7 @@ name "fig:bar_gender"
 
 \begin_layout Standard
 Let's take a look at gender's influence on survival.
- In the Figure 
+ In the Figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_sex"
@@ -9359,7 +9359,7 @@ noprefix "false"
  dataset.
  As can be seen from the graph, females generally have less risk than their
  male counterparts.
- Women usually live longer 
+ Women usually live longer
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-14"
@@ -9440,7 +9440,7 @@ OFC find paper, altough it literature it was referred to as common knowledge
 \begin_layout Standard
 In this subsection we are going to explore the influence of dialysis on
  survival.
- In the figure 
+ In the figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_dialysis"
@@ -9456,7 +9456,7 @@ noprefix "false"
  As can be seen in the Figure, the patients who were on dialysis before
  the transplantation have a greater risk, while those who were not.
  This agrees with .....
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-33"
@@ -9469,7 +9469,7 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
-add some meta analysis or link to a textbook 
+add some meta analysis or link to a textbook
 \end_layout
 
 \end_inset
@@ -9526,7 +9526,7 @@ Race
 \begin_layout Standard
 In this subsection we are going to explore the survival curves for different
  ethnic groups.
- In the Figure 
+ In the Figure
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-31"
@@ -9549,7 +9549,7 @@ literal "false"
 \end_inset
 
 ) examining graft survival.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -9686,11 +9686,11 @@ Problem Formulation
 Predicting the survival time after a successful kidney transplant can be
  approached in three ways: as a regression problem, classification problem,
  or through survival analysis.
- 
+
 \end_layout
 
 \begin_layout Standard
-A 
+A
 \emph on
 regression
 \emph default
@@ -9701,7 +9701,7 @@ regression
 
 \begin_layout Standard
 1.
- 
+
 \series bold
 The censored dataset
 \series default
@@ -9713,16 +9713,16 @@ The censored dataset
  to the model, making it highly inaccurate.
  It is impossible to predict the number of days survived with regression
  methods based on a dataset comprised of both living and deceased patients.
- 
+
 \end_layout
 
 \begin_layout Standard
 2.
- 
+
 \series bold
 Censoring removal would produce bias
 \series default
- 
+
 \series bold
 and signifficantly reduce the dataset
 \series default
@@ -9733,23 +9733,23 @@ and signifficantly reduce the dataset
  only deceased patients, and most of them passed away before the introduction
  of modern techniques for treating the rejection.
  As a result, the model created from such a dataset would be highly inaccurate.
- 
+
 \end_layout
 
 \begin_layout Standard
 3.
- 
+
 \series bold
 Regression predicts only one single number.
 
 \series default
  It poses a problem, especially over extended time frames, as there are
  too many factors that we can’t account for, leading to incorrect predictions.
- 
+
 \end_layout
 
 \begin_layout Standard
-Another way of formulating the problem is 
+Another way of formulating the problem is
 \emph on
 classification
 \emph default
@@ -9760,11 +9760,11 @@ r based on them, as it was done by ....
  et al..
  And again, we would face problems of censoring and bias mentioned above.
  So the classification is not the best option as well.
- 
+
 \end_layout
 
 \begin_layout Standard
-A more appropriate way of problem formulation is in terms of 
+A more appropriate way of problem formulation is in terms of
 \emph on
 survival analysis
 \emph default
@@ -9800,7 +9800,7 @@ The algorithms provided by the scikit-survival do not handle large datasets
 
 \begin_layout Standard
 The way I approach the model selection model automation with the class SurvivalE
-stimators defined in 
+stimators defined in
 \begin_inset CommandInset href
 LatexCommand href
 name "estimator_automation.py"
@@ -10091,7 +10091,7 @@ name "tab:Coxnet-performance"
 \end_layout
 
 \begin_layout Standard
-As can be seen in the table 
+As can be seen in the table
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Coxnet-performance"
@@ -10125,7 +10125,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-AUC curve for coxnet 
+AUC curve for coxnet
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:AUC_coxnet"
@@ -10154,7 +10154,7 @@ name "fig:AUC_coxnet"
 \series bold
 Discussion of the AUC figure
 \series default
-: 
+:
 \begin_inset Note Note
 status open
 
@@ -10169,7 +10169,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-As was covered in 
+As was covered in
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Model-Training-and-Hyperparameter-tuning"
@@ -10264,7 +10264,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-- 
+-
 \end_layout
 
 \end_inset
@@ -10471,11 +10471,11 @@ name "tab:cox-finetuning"
 The coxnet has only two hyperparameters: L1 ratio and alpha, the latter
  is calculated by fitting the model and we then need to choose the best
  of them.
- L1 ratio defines the relative weight of the 
+ L1 ratio defines the relative weight of the
 \begin_inset Formula $l_{1}$
 \end_inset
 
-and 
+and
 \begin_inset Formula $l_{2}$
 \end_inset
 
@@ -10483,7 +10483,7 @@ and
 \end_layout
 
 \begin_layout Standard
-On the table 
+On the table
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Coxnet-Feature-Importance"
@@ -10849,9 +10849,9 @@ Random survival forest is a powerful ensemble machine learning algorithm,
 RSF subsection
 \series default
 ).
- The living and deceased subsets had 34951 and 
+ The living and deceased subsets had 34951 and
 \series bold
-70 000 
+70 000
 \series default
 instances respectively.
 \end_layout
@@ -11038,7 +11038,7 @@ name "tab:RSF_performance"
 
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -11052,7 +11052,7 @@ name "tab:RSF_performance"
 \end_layout
 
 \begin_layout Standard
-As can be seen from the table 
+As can be seen from the table
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:RSF_performance"
@@ -11065,7 +11065,7 @@ noprefix "false"
 , the survival forest performed the best for the living group, the worst
  for the deceased, and somewhere in between for the both living and deceased,
  just as it was in case with the Coxnet.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -11123,7 +11123,7 @@ name "fig:AUC_RSF"
 \series bold
 discussion of AUC image
 \series default
-: 
+:
 \begin_inset Note Note
 status open
 
@@ -11207,7 +11207,7 @@ name "fig:Brier_rsf"
 \series bold
 discussion of the Brier imag
 \series default
-e: On the Figure 
+e: On the Figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Brier_rsf"
@@ -11428,7 +11428,7 @@ name "tab:RSF-finetuning"
 \end_layout
 
 \begin_layout Standard
-On the table 
+On the table
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:RSF-finetuning"
@@ -11440,11 +11440,11 @@ noprefix "false"
 
  we can see the performance of regular RSF with the standard hyperparameters
  compared to the performance of RSF with fine-tuned hyperparams.
- 
+
 \end_layout
 
 \begin_layout Standard
-Feature importance can be seen on the table 
+Feature importance can be seen on the table
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Feature-Importance-for-RSF"
@@ -11455,7 +11455,7 @@ noprefix "false"
 \end_inset
 
 .
- 
+
 \begin_inset Note Note
 status open
 
@@ -12049,7 +12049,7 @@ name "tab:Coxnet_vs_RSF"
 \end_layout
 
 \begin_layout Standard
-As can be seen on the table 
+As can be seen on the table
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Coxnet_vs_RSF"
@@ -12107,7 +12107,7 @@ status open
 
 \begin_layout Plain Layout
 AUC: Coxnet vs.
- RSF, Living 
+ RSF, Living
 \begin_inset Note Note
 status open
 
@@ -12117,7 +12117,7 @@ Add a deceased curve
 
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -12153,7 +12153,7 @@ the trends are the same, but hte rsf is higher
 Brier Coxnet vs.
  RSF
 \series default
-: 
+:
 \end_layout
 
 \begin_layout Standard
@@ -12292,7 +12292,7 @@ Txmatching
 \end_layout
 
 \begin_layout Standard
-Txmatching is 
+Txmatching is
 \end_layout
 
 \begin_layout Section
@@ -12300,7 +12300,7 @@ KidneyLife
 \end_layout
 
 \begin_layout Subsection
-Frontend 
+Frontend
 \end_layout
 
 \begin_layout Subsection
@@ -12377,7 +12377,7 @@ literal "false"
 Nobel prize in physiology or medicine (2022) Our Scientists.
  Available at: https://www.rockefeller.edu/our-scientists/alexis-carrel/2565-nobel
 -prize/ (Accessed: February 6, 2023).
- 
+
 \end_layout
 
 \begin_layout Bibliography
@@ -12455,7 +12455,7 @@ literal "false"
 NCI Dictionary of Cancer terms (no date) National Cancer Institute.
  Available at: https://www.cancer.gov/publications/dictionaries/cancer-terms/def/a
 bo-blood-group-system (Accessed: March 6, 2023).
- 
+
 \end_layout
 
 \begin_layout Bibliography
@@ -12738,7 +12738,7 @@ Definitions:, 1.
  (n.d.).
  Survival distributions, hazard functions, cumulative hazards.
  Stanford.edu.
- Retrieved October 23, 2023, from 
+ Retrieved October 23, 2023, from
 \begin_inset Flex URL
 status open
 
@@ -12763,7 +12763,7 @@ literal "false"
 Penalized Cox Models — scikit-survival 0.22.1.
  (2015).
  Readthedocs.io.
- 
+
 \begin_inset Flex URL
 status open
 
