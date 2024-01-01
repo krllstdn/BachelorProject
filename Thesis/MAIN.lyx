@@ -6932,7 +6932,7 @@ and
  correlated features, it would select them all, while LASSO would randomly
  select only one.
  Usually, it is sufficient to give the
-\begin_inset Formula $l_{2}$
+\begin_inset Formula $l_{2}$  // podle me je beznejsi psat velke L1, L2
 \end_inset
 
  penalty only a small weight to improve the stability of the LASSO, for
@@ -6979,6 +6979,8 @@ don't forget to add a reference to the practical part
 \end_layout
 
 \begin_layout Standard
+
+// to by mohlo byt nejak vizualne oddeleno, to uz nepatri do Elastic Netu
 To conclude, Ridge, LASSO, and Elastic Net offer powerful extensions of
  the Cox PH model, especially when dealing with high-dimensional datasets
  and highly correlated features.
