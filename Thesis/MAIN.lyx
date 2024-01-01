@@ -6341,7 +6341,7 @@ The
 Cox proportional hazards
 \emph default
  (also Cox PH) model is widely used in survival analysis semi-parametric
- model.
+ model. //grammar
  This section explores its formulation, key properties, and reasons for
  its widespread use in research.
 
@@ -6524,7 +6524,7 @@ literal "false"
 
 \begin_layout Standard
 Let us define the partial likelihood.
- The subject's survival can be defined by
+ The subject's survival can be defined by // survival co?
 \begin_inset Formula $h(t,X)dt$
 \end_inset
 
@@ -6578,7 +6578,7 @@ Let us define the partial likelihood.
 \begin_inset Formula $X_{j}$
 \end_inset
 
- can be described as follows:
+ can be described as follows: // jsi si jisty timhle vzoreckem?
 \end_layout
 
 \begin_layout Standard
