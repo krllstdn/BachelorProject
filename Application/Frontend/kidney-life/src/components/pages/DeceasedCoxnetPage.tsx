@@ -6,6 +6,8 @@ import ModalContainer from "../wrappers/ModalContainer";
 import Button from "../buttons/Button";
 import SurvivalCurvesImage from "../../assets/survival_curves.png";
 
+import Plot from "react-plotly.js";
+
 type Feature = {
   name: string;
   type: string;
@@ -33,7 +35,8 @@ function DeceasedCoxnetPage() {
       {}
     )
   );
-  const [showImage, setShowImage] = useState<boolean>(false);
+  const [xValues, setXValues] = useState([]);
+  const [yValues, setYValues] = useState([]);
 
   const sendRequest = async () => {
     try {
@@ -53,17 +56,18 @@ function DeceasedCoxnetPage() {
       }
 
       const data = await response.json();
-      console.log(data);
-      setShowImage(true);
+
+      setXValues(data.x_values);
+      setYValues(data.y_values);
     } catch (error) {
       console.error(error);
     }
   };
 
   return (
-    <div className="flex justify-evenly">
+    <div className="flex justify-evenly flex-grow h-full">
       {/* <div className="flex items-center justify-center min-h-screen"> */}
-      <ModalContainer className="w-2/5 h-full pr-5 pl-5 pt-6 pb-8 ml-7 mt-3">
+      <ModalContainer className="w-1/3 h-full pr-5 pl-5 pt-6 pb-8 ml-7 mt-3">
         <h1 className="text-3xl text-center pb-5">Coxnet Deceased</h1>
         {features.features.map((feature) =>
           feature.type === "categorical" ? (
@@ -111,10 +115,30 @@ function DeceasedCoxnetPage() {
           // onClick={() => console.log(featureStates)}
         />
       </ModalContainer>
-      <div className="w-1/2 ">
-        {showImage && (
-          <img className="w-full h-50" src={SurvivalCurvesImage} alt="" />
-        )}
+      <div className="survivalCurve w-7/12 h-5/6 mt-24 rounded-md">
+        <Plot
+          style={{ width: "100%", height: 600 }}
+          data={[
+            {
+              x: xValues,
+              y: yValues,
+              type: "scatter",
+              mode: "lines",
+              line: { color: "031d44" },
+            },
+          ]}
+          layout={{
+            // width: 820,
+            // height: 540,
+            autosize: true,
+            title: "Survival Function",
+            plot_bgcolor: "rgba(187, 227, 241, 0.01)",
+            paper_bgcolor: "rgba(187, 227, 241, 0.1)",
+            xaxis: { title: "Time (Days)" },
+            yaxis: { title: "Survival Probability" },
+          }}
+          config={{ responsive: true }}
+        />
       </div>
     </div>
   );
