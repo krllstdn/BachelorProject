@@ -4,6 +4,7 @@ import { SelectFieldCox } from "../forms/SelectField";
 import features from "../../models/coxnet_deceased_desc.json";
 import ModalContainer from "../wrappers/ModalContainer";
 import Button from "../buttons/Button";
+import SurvivalCurvesImage from "../../assets/survival_curves.png";
 
 type Feature = {
   name: string;
@@ -32,16 +33,20 @@ function DeceasedCoxnetPage() {
       {}
     )
   );
+  const [showImage, setShowImage] = useState<boolean>(false);
 
   const sendRequest = async () => {
     try {
-      const response = await fetch("http://your-api-url", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(featureStates),
-      });
+      const response = await fetch(
+        "http://127.0.0.1:8000/prediction/predict/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(featureStates),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Request failed");
@@ -49,13 +54,14 @@ function DeceasedCoxnetPage() {
 
       const data = await response.json();
       console.log(data);
+      setShowImage(true);
     } catch (error) {
       console.error(error);
     }
   };
 
   return (
-    <div>
+    <div className="flex justify-evenly">
       {/* <div className="flex items-center justify-center min-h-screen"> */}
       <ModalContainer className="w-2/5 h-full pr-5 pl-5 pt-6 pb-8 ml-7 mt-3">
         <h1 className="text-3xl text-center pb-5">Coxnet Deceased</h1>
@@ -101,10 +107,15 @@ function DeceasedCoxnetPage() {
         <Button
           additionalStyles="mt-3"
           name="Submit"
-          onClick={() => console.log(featureStates)}
+          onClick={sendRequest}
+          // onClick={() => console.log(featureStates)}
         />
       </ModalContainer>
-      {/* </div> */}
+      <div className="w-1/2 ">
+        {showImage && (
+          <img className="w-full h-50" src={SurvivalCurvesImage} alt="" />
+        )}
+      </div>
     </div>
   );
 }

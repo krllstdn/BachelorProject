@@ -1,5 +1,6 @@
 {
   "model_pickle_path": "Application/Backend/models/models/COXNET_DECEASED_MODEL.pickle",
+  "model_file_name": "COXNET_DECEASED_MODEL.pickle",
   "features": [
     {
         "name": "ON_DIALYSIS",
@@ -63,9 +64,12 @@
         "short_description": "Recipient diabetes",
         "description": "Whether or not the recipient has diabetes",
         "possible_values": {
-            "Y": "Yes",
-            "N": "No",
-            "U": "Unknown"
+            "1": "No",
+            "2": "Type I",
+            "3": "Type II",
+            "4": "Type other",
+            "5": "Type unknown",
+            "998": "Unknown"
         }
     },
     {
@@ -101,8 +105,14 @@
     {
         "name": "CREAT_TRR",
         "type": "numerical",
-        "short_description": "Recipient creatinine",
+        "short_description": "Recipient creatinine (mg/dL)",
         "description": "Recipient creatinine at transplant"
+    },
+    {
+        "name": "CREAT_DON",
+        "type": "numerical",
+        "short_description": "Donor creatinine (mg/dL)",
+        "description": "Donor creatinine at transplant"
     },
     {
         "name": "NPKID",
