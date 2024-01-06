@@ -72,6 +72,12 @@ class PredictAPIView(APIView):
 
             plot_name = plot_survival_curves(prediction)
 
-            return Response({"image_name": plot_name, "risk": risk[0]})
+            return Response(
+                {
+                    "x_values": prediction[0].x,
+                    "y_values": prediction[0].y,
+                    "risk": risk[0],
+                }
+            )
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

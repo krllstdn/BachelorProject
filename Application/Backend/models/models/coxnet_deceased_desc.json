@@ -141,7 +141,7 @@
     {
         "name": "COLD_ISCH_KI",
         "type": "numerical",
-        "short_description": "Cold Ischemic Time",
+        "short_description": "Cold Ischemic Time (hours)",
         "description": "Cold Ischemic Time"
     }
 ]
