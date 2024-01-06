@@ -1,0 +1,24 @@
+# syntax=docker/dockerfile:1
+FROM continuumio/miniconda3
+
+# Install Python 3.11.5
+RUN conda install -y python=3.11.5
+
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /code
+
+# Copy conda requirements file
+COPY environment.yml .
+
+# Create a conda environment and install packages
+RUN conda env create -f environment.yml
+
+# Activate the environment
+RUN echo "source activate myenv" > ~/.bashrc
+ENV PATH /opt/conda/envs/myenv/bin:$PATH
+
+# Copy the rest of your project
+COPY . .
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

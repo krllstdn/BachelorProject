@@ -3,3 +3,13 @@
 .DS_Store
 .vscode/
 
+Code/data/
+Code/pickle/
+Code/surv_data_pipeline/__pycache__/
+
+Application/Backend/models/models/COXNET_DECEASED_MODEL.pickle
+Application/Backend/prediction/pickles/
+
+Application/Frontend/kidney-life/src/assets/survival_curves.png
+
+Application/Backend/models/models/COXNET_DECEASED_MODEL.pickle

@@ -11,13 +11,13 @@ type InputFieldProps = {
 
 function InputField(props: InputFieldProps) {
   return (
-    <div className="bg-quaternary rounded p-3 mb-3 text-sm flex justify-between">
-      <label className="text-primary font-semibold mr-3">
+    <div className="bg-quaternary rounded p-3 mb-3 text-sm flex flex-start">
+      <label className="text-primary font-semibold mr-3 whitespace-nowrap">
         {props.text + ":"}
       </label>
       <input
         name={props.name}
-        className="border-none outline-none bg-inherit border-primary w-7/12"
+        className="border-none outline-none bg-inherit border-primary w-full"
         type={props.type ? props.type : "text"}
         onChange={props.onChange}
         value={props.value}
