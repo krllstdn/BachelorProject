@@ -1,0 +1,269 @@
+{
+    "model_pickle_path": "Application/Backend/models/models/COXNET_LIVING_MODEL.pickle",
+    "model_file_name": "COXNET_LIVING_MODEL.pickle",
+    "features": [
+        {
+            "name": "PRE_TX_TXFUS",
+            "type": "categorical",
+            "short_description": "Blood Transfusions?",
+            "description": "Whether or not the recipient had pre-transplant blood transfusions",
+            "possible_values": {
+                "Y": "Yes",
+                "N": "No"
+            }
+        },
+        {
+            "name": "GENDER",
+            "type": "categorical",
+            "short_description": "Recipient gender",
+            "description": "Recipient gender",
+            "possible_values": {
+                "M": "Male",
+                "F": "Female"
+            }
+        },
+        {
+            "name": "ETHCAT",
+            "type": "categorical",
+            "short_description": "Recipient ethnicity",
+            "description": "Recipient ethnicity",
+            "possible_values": {
+                "1": "White, non-Hispanic",
+                "2": "Black, non-Hispanic",
+                "4": "Hispanic/Latino",
+                "5": "Asian, non-Hispanic",
+                "6": "American Indian/Alaska Native, non-Hispanic",
+                "7": "Native Hawaiian/Other Pacific Islander, non-Hispanic",
+                "9": "Multiracial, non-Hispanic"        
+            }
+        },
+        {
+            "name": "ABO_MAT",
+            "type": "categorical",
+            "short_description": "Donor recipient blood type match",
+            "description": "Donor recipient blood type match",
+            "possible_values": {
+                "1": "Identical",
+                "2": "Compatible",
+                "3": "Incompatible"
+            }
+        },
+        {
+            "name": "ETHCAT_DON",
+            "type": "categorical",
+            "short_description": "Donor ethnicity",
+            "description": "Donor ethnicity",
+            "possible_values": {
+                "1": "White, non-Hispanic",
+                "2": "Black, non-Hispanic",
+                "4": "Hispanic/Latino",
+                "5": "Asian, non-Hispanic",
+                "6": "American Indian/Alaska Native, non-Hispanic",
+                "7": "Native Hawaiian/Other Pacific Islander, non-Hispanic",
+                "9": "Multiracial, non-Hispanic"        
+            }
+        },
+        {
+            "name": "HBV_CORE",
+            "type": "categorical",
+            "short_description": "Recipient Hepatitis B-core antibody",
+            "description": "Whether or not the recipient has Hepatitis B. B core antibody positive",
+            "possible_values": {
+                "N": "Negative",
+                "P": "Positive",
+                "ND": "Not Done"
+            }
+        },
+        {
+            "name": "DIAB",
+            "type": "categorical",
+            "short_description": "Recipient diabetes",
+            "description": "Whether or not the recipient has diabetes",
+            "possible_values": {
+                "1": "No",
+                "2": "Type I",
+                "3": "Type II",
+                "4": "Type other",
+                "5": "Type unknown",
+                "998": "Unknown"
+            }
+        },
+        {
+            "name":"HBV_SUR_ANTIGEN",
+            "type":"categorical",
+            "short_description":"Recipient Hepatitis B surface antigen",
+            "description":"Whether or not the recipient has Hepatitis B. Surface antigen positive",
+            "possible_values":{
+                "N":"Negative",
+                "P":"Positive",
+                "ND":"Not Done"
+            }},
+        {
+            "name": "HCV_SEROSTATUS",
+            "type": "categorical",
+            "short_description": "Recipient Hepatitis C",
+            "description": "Whether or not the recipient has Hepatitis C",
+            "possible_values": {
+                "N": "Negative",
+                "P": "Positive",
+                "ND": "Not Done",
+                "U": "Unknown"
+            }
+        },
+        {
+            "name": "LIV_DON_TY",
+            "type": "categorical",
+            "short_description": "Donor type",
+            "description": "Donor type",
+            "possible_values": {
+                "1": "Biological, blood related Parent",
+                "2": "Biological, blood related Child",
+                "3": "Biological, blood related Identical Twin",
+                "4": "Biological, blood related Full Sibling",
+                "5": "Biological, blood related Half Sibling",
+                "6": "Biological, blood related Other Relative",
+                "7": "Non-Biological, Spouse",
+                "8": "Non-Biological, Life Partner",
+                "9": "Non-Biol,unrel: Paired Donation",
+                "10": "Non-Biol,unrel: Anonymous Donation",
+                "11": "Non-Biol,Living/Deceased Donor Donation",
+                "12": "Non-Biological, Unrelated: Domino",
+                "13": "Biological, blood related: Domino",
+                "14": "Biological, blood related: Non-Domino Therapeutic donor",
+                "15": "Non-Biological, Unrelated: Non-Domino Therapeutic donor",
+                "998": "Non-Biological, Other Unrelated Directed Donation"
+            }
+        },
+        {
+            "name": "KI_CREAT_PREOP",
+            "type": "numerical",
+            "short_description": "Pre-op creatinine",
+            "description": "Pre-op creatinine"
+        }, 
+        {
+            "name": "SERUM_CREAT",
+            "type": "numerical",
+            "short_description": "Recipient creatinine at discharge",
+            "description": "Recipient creatinine at discharge"
+        }, 
+        {
+            "name": "BMIS",
+            "type": "numerical",
+            "short_description": "B Locus MISMATCH LEVEL",
+            "description": "B Locus MISMATCH LEVEL"
+        }, 
+        {
+            "name": "NPKID",
+            "type": "numerical",
+            "short_description": "Prev. tx number",
+            "description": "Number of previous kidney transplants"
+        },
+        {
+            "name": "AGE",
+            "type": "numerical",
+            "short_description": "Recipient age",
+            "description": "Recipient age at transplant"
+        },
+        {
+            "name": "HGT_CM_CALC",
+            "type": "numerical",
+            "short_description": "Recipient height (CM)",
+            "description": "Recipient height in centimeters"
+        },
+        {
+            "name": "BMI_DON_CALC",
+            "type": "numerical",
+            "short_description": "Donor BMI",
+            "description": "Donor BMI"
+        },
+        {
+            "name": "AGE_DON",
+            "type": "numerical",
+            "short_description": "Donor age",
+            "description": "Donor age at transplant"
+        },
+        {
+            "name": "DR1",
+            "type": "numerical",
+            "short_description": "DR1",
+            "description": "DR1 Antigen"
+        },
+        {
+            "name": "BW6",
+            "type": "numerical",
+            "short_description": "BW6",
+            "description": "BW6 Antigen"
+        },
+        {
+            "name": "BW4",
+            "type": "numerical",
+            "short_description": "BW4",
+            "description": "BW4 Antigen"
+        },
+        {
+            "name": "RA1",
+            "type": "numerical",
+            "short_description": "RA1",
+            "description": "RA1 Antigen"
+        },
+        {
+            "name": "A2",
+            "type": "numerical",
+            "short_description": "A2",
+            "description": "A2 Antigen"
+        },
+        {
+            "name": "DR53",
+            "type": "numerical",
+            "short_description": "DR53",
+            "description": "DR53 Antigen"
+        },
+        {
+            "name": "C1",
+            "type": "numerical",
+            "short_description": "C1",
+            "description": "C1 Antigen"
+        },
+        {
+            "name": "C2",
+            "type": "numerical",
+            "short_description": "C2",
+            "description": "C2 Antigen"
+        },
+        {
+            "name": "A1",
+            "type": "numerical",
+            "short_description": "A1",
+            "description": "A1 Antigen"
+        },
+        {
+            "name": "RA2",
+            "type": "numerical",
+            "short_description": "RA2",
+            "description": "RA2 Antigen"
+        },
+        {
+            "name": "DR51",
+            "type": "numerical",
+            "short_description": "DR51",
+            "description": "DR51 Antigen"
+        },
+        {
+            "name": "DR52",
+            "type": "numerical",
+            "short_description": "DR52",
+            "description": "DR52 Antigen"
+        },
+        {
+            "name": "DQ2",
+            "type": "numerical",
+            "short_description": "DQ2",
+            "description": "DQ2 Antigen"
+        },
+        {
+            "name": "RDR1",
+            "type": "numerical",
+            "short_description": "RDR1",
+            "description": "RDR1 Antigen"
+        }
+    ]}
