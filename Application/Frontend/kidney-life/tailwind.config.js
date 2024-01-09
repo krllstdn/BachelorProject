@@ -9,8 +9,9 @@ module.exports = {
         '6': '6px',
       },
       colors: {
-        primary: '#031d44', // good
-        secondary: '#ddf1f8' , // good '#c7e8f3'
+        primary: '#031d44',
+        secondary: '#ddf1f8' ,
+        secondaryLight: 'rgba(221, 241, 248, 0.5)',
         tertiary: '#bbe3f1',
         quaternary: '#a9d9e9',
         quinary: '#063a89', // '07439d', 

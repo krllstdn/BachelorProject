@@ -1,42 +1,86 @@
 import { useState, useEffect } from "react";
 import InputField from "../forms/InputField";
 import { SelectFieldCox } from "../forms/SelectField";
-import features from "../../models/coxnet_deceased_desc.json";
 import ModalContainer from "../wrappers/ModalContainer";
 import Button from "../buttons/Button";
-import SurvivalCurvesImage from "../../assets/survival_curves.png";
+
+import coxnet_deceased_features from "../../models/coxnet_deceased_desc.json";
+import coxnet_living_features from "../../models/coxnet_living_desc.json";
 
 import Plot from "react-plotly.js";
 
-type Feature = {
+enum MODELS {
+  COXNET_DECEASED = "COXNET_DECEASED",
+  COXNET_LIVING = "COXNET_LIVING",
+}
+type ModelDescriptions = {
+  [key in keyof typeof MODELS]: ModelInfo;
+};
+
+const MODEL_DESCRIPTIONS: ModelDescriptions = {
+  COXNET_DECEASED: coxnet_deceased_features,
+  COXNET_LIVING: coxnet_living_features,
+};
+
+interface PossibleValues {
+  [key: string]: string | undefined;
+}
+
+interface Feature {
   name: string;
   type: string;
   short_description: string;
   description: string;
-  possible_values?: {
-    [key: string]: string;
-  };
-};
+  possible_values?: PossibleValues;
+}
 
-type FeaturesData = {
+interface ModelInfo {
+  model_pickle_path: string;
+  model_file_name: string;
   features: Feature[];
-};
+}
+
+interface FeatureStates {
+  [key: string]: string | number;
+}
 
 function DeceasedCoxnetPage() {
-  const [featureStates, setFeatureStates] = useState(
-    features.features.reduce(
-      (acc: { [key: string]: string | number }, feature) => {
-        acc[feature.name] =
-          feature.type === "categorical"
-            ? Object.keys(feature.possible_values || {})[0]
-            : 0; // initial state
-        return acc;
-      },
-      {}
-    )
+  // TODO: random values generator for the form
+  // TODO: rename the page
+  const updateFeatures = (model: MODELS) => {
+    const features = MODEL_DESCRIPTIONS[model];
+
+    if (Array.isArray(features.features)) {
+      return features.features.reduce<{ [key: string]: string | number }>(
+        (acc, feature) => {
+          acc[feature.name] =
+            feature.type === "categorical"
+              ? Object.keys(feature.possible_values || {})[0] || ""
+              : 0;
+          return acc;
+        },
+        {}
+      );
+    }
+    return {};
+  };
+
+  const [selectedModel, setSelectedModel] = useState<MODELS>(
+    MODELS.COXNET_DECEASED
+  );
+  const [featureStates, setFeatureStates] = useState<FeatureStates>(
+    updateFeatures(MODELS.COXNET_DECEASED)
   );
   const [xValues, setXValues] = useState([]);
   const [yValues, setYValues] = useState([]);
+
+  useEffect(() => {
+    if (selectedModel === MODELS.COXNET_DECEASED) {
+      updateFeatures(MODELS.COXNET_DECEASED);
+    } else {
+      updateFeatures(MODELS.COXNET_LIVING);
+    }
+  }, [selectedModel]);
 
   const sendRequest = async () => {
     try {
@@ -66,14 +110,24 @@ function DeceasedCoxnetPage() {
 
   return (
     <div className="flex justify-evenly flex-grow h-full">
-      {/* <div className="flex items-center justify-center min-h-screen"> */}
       <ModalContainer className="w-1/3 h-full pr-5 pl-5 pt-6 pb-8 ml-7 mt-3">
-        <h1 className="text-3xl text-center pb-5">Coxnet Deceased</h1>
-        {features.features.map((feature) =>
+        <div className="flex items-center justify-center mb-3">
+          <select
+            className="bg-secondary text-3xl"
+            value={selectedModel}
+            onChange={(event) => setSelectedModel(event.target.value as MODELS)}
+          >
+            <option value={MODELS.COXNET_DECEASED}>Coxnet Deceased</option>
+            <option value={MODELS.COXNET_LIVING}>Coxnet Living</option>
+            {/* <option value="2">GB Deceased</option> */}
+            {/* <option value="4">GB Living</option> */}
+          </select>
+        </div>
+        {MODEL_DESCRIPTIONS[selectedModel].features.map((feature) =>
           feature.type === "categorical" ? (
             <SelectFieldCox
               name={feature.name}
-              //   label={feature.description}
+              // label={feature.description}
               key={feature.name}
               text={feature.short_description}
               value={featureStates[feature.name]}
@@ -84,12 +138,12 @@ function DeceasedCoxnetPage() {
                   [feature.name]: e.target.value,
                 })
               }
-              options={Object.entries(feature.possible_values || {}).map(
-                ([key, value]) => ({
+              options={Object.entries(feature.possible_values || {})
+                .filter(([key, value]) => value !== undefined)
+                .map(([key, value]) => ({
                   value: key,
-                  label: value,
-                })
-              )}
+                  label: value || "",
+                }))}
             />
           ) : (
             <InputField
@@ -108,14 +162,9 @@ function DeceasedCoxnetPage() {
             />
           )
         )}
-        <Button
-          additionalStyles="mt-3"
-          name="Submit"
-          onClick={sendRequest}
-          // onClick={() => console.log(featureStates)}
-        />
+        <Button additionalStyles="mt-3" name="Submit" onClick={sendRequest} />
       </ModalContainer>
-      <div className="survivalCurve w-7/12 h-5/6 mt-24 rounded-md">
+      <div className="survivalCurve w-7/12 h-5/6 mt-24 rounded-md bg-secondaryLight">
         <Plot
           style={{ width: "100%", height: 600 }}
           data={[
@@ -128,12 +177,13 @@ function DeceasedCoxnetPage() {
             },
           ]}
           layout={{
-            // width: 820,
-            // height: 540,
             autosize: true,
+            hoverlabel: {
+              bgcolor: "rgba(3, 29, 68, .9)",
+            },
             title: "Survival Function",
-            plot_bgcolor: "rgba(187, 227, 241, 0.01)",
-            paper_bgcolor: "rgba(187, 227, 241, 0.1)",
+            plot_bgcolor: "rgba(255, 255, 255, 0.00)",
+            paper_bgcolor: "rgba(255, 255, 255, 0.0)",
             xaxis: { title: "Time (Days)" },
             yaxis: { title: "Survival Probability" },
           }}
