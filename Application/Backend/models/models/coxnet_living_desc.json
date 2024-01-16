@@ -1,6 +1,7 @@
 {
     "model_pickle_path": "Application/Backend/models/models/COXNET_LIVING_MODEL.pickle",
     "model_file_name": "COXNET_LIVING_MODEL.pickle",
+    "pipeline_file_name": "coxnet_living_pipeline.pkl",
     "features": [
         {
             "name": "PRE_TX_TXFUS",
@@ -23,6 +24,27 @@
             }
         },
         {
+            "name": "ON_DIALYSIS",
+            "type": "categorical",
+            "short_description": "On Dialysis?",
+            "description": "Whether or not the recipient was on dialysis prior to transplant",
+            "possible_values": {
+                "Y": "Yes",
+                "N": "No"
+            }
+        },
+        {
+            "name": "ABO_MAT",
+            "type": "categorical",
+            "short_description": "Donor recipient blood type match",
+            "description": "Donor recipient blood type match",
+            "possible_values": {
+                "1": "Identical",
+                "2": "Compatible",
+                "3": "Incompatible"
+            }
+        },
+        {
             "name": "ETHCAT",
             "type": "categorical",
             "short_description": "Recipient ethnicity",
@@ -35,17 +57,6 @@
                 "6": "American Indian/Alaska Native, non-Hispanic",
                 "7": "Native Hawaiian/Other Pacific Islander, non-Hispanic",
                 "9": "Multiracial, non-Hispanic"        
-            }
-        },
-        {
-            "name": "ABO_MAT",
-            "type": "categorical",
-            "short_description": "Donor recipient blood type match",
-            "description": "Donor recipient blood type match",
-            "possible_values": {
-                "1": "Identical",
-                "2": "Compatible",
-                "3": "Incompatible"
             }
         },
         {
@@ -137,20 +148,20 @@
         {
             "name": "KI_CREAT_PREOP",
             "type": "numerical",
-            "short_description": "Pre-op creatinine",
-            "description": "Pre-op creatinine"
+            "short_description": "Donor pre-op creatinine (mg/dL)",
+            "description": "Living donor preoperative serum creatinine (mg/dL)"
         }, 
         {
             "name": "SERUM_CREAT",
             "type": "numerical",
-            "short_description": "Recipient creatinine at discharge",
-            "description": "Recipient creatinine at discharge"
+            "short_description": "Recipient creatinine at discharge (mg/dL)",
+            "description": "Recipient creatinine at discharge (mg/dL)"
         }, 
         {
             "name": "BMIS",
             "type": "numerical",
-            "short_description": "B Locus MISMATCH LEVEL",
-            "description": "B Locus MISMATCH LEVEL"
+            "short_description": "B Locus mismatch level",
+            "description": "B Locus mismatch level"
         }, 
         {
             "name": "NPKID",
@@ -186,84 +197,84 @@
             "name": "DR1",
             "type": "numerical",
             "short_description": "DR1",
-            "description": "DR1 Antigen"
+            "description": "The number of DR1 Antigen mismatches"
         },
         {
             "name": "BW6",
             "type": "numerical",
             "short_description": "BW6",
-            "description": "BW6 Antigen"
+            "description": "The number of BW6 antigen mismatches "
         },
         {
             "name": "BW4",
             "type": "numerical",
             "short_description": "BW4",
-            "description": "BW4 Antigen"
+            "description": "The number of BW4 antigen mismatches"
         },
         {
             "name": "RA1",
             "type": "numerical",
             "short_description": "RA1",
-            "description": "RA1 Antigen"
+            "description": "The number of RA1 antigen mismatches"
         },
         {
             "name": "A2",
             "type": "numerical",
             "short_description": "A2",
-            "description": "A2 Antigen"
+            "description": "The number of A2 antigen mismatches"
         },
         {
             "name": "DR53",
             "type": "numerical",
             "short_description": "DR53",
-            "description": "DR53 Antigen"
+            "description": "The number of DR53 antigen mismatches"
         },
         {
             "name": "C1",
             "type": "numerical",
             "short_description": "C1",
-            "description": "C1 Antigen"
+            "description": "The number of C1 antigen mismatches"
         },
         {
             "name": "C2",
             "type": "numerical",
             "short_description": "C2",
-            "description": "C2 Antigen"
+            "description": "The number of C2 antigen mismatches"
         },
         {
             "name": "A1",
             "type": "numerical",
             "short_description": "A1",
-            "description": "A1 Antigen"
+            "description": "The number of A1 antigen mismatches"
         },
         {
             "name": "RA2",
             "type": "numerical",
             "short_description": "RA2",
-            "description": "RA2 Antigen"
+            "description": "The number of RA2 antigen mismatches"
         },
         {
             "name": "DR51",
             "type": "numerical",
             "short_description": "DR51",
-            "description": "DR51 Antigen"
+            "description": "The number of DR51 antigen mismatches"
         },
         {
             "name": "DR52",
             "type": "numerical",
             "short_description": "DR52",
-            "description": "DR52 Antigen"
+            "description": "The number of DR52 antigen mismatches"
         },
         {
             "name": "DQ2",
             "type": "numerical",
             "short_description": "DQ2",
-            "description": "DQ2 Antigen"
+            "description": "The number of DQ2 antigen mismatches"
         },
         {
             "name": "RDR1",
             "type": "numerical",
             "short_description": "RDR1",
-            "description": "RDR1 Antigen"
+            "description": "The number of RDR1 antigen mismatches"
         }
     ]}

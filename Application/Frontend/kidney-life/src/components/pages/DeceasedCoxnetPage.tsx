@@ -47,7 +47,10 @@ interface FeatureStates {
 function DeceasedCoxnetPage() {
   // TODO: random values generator for the form
   // TODO: rename the page
-  const updateFeatures = (model: MODELS) => {
+  // TODO: validator if data is in range
+  // TODO: add a button to generate random values
+  // TODO: add a question button to the graph to explain what survival curve is
+  const getUpdatedFeatures = (model: MODELS) => {
     const features = MODEL_DESCRIPTIONS[model];
 
     if (Array.isArray(features.features)) {
@@ -69,16 +72,16 @@ function DeceasedCoxnetPage() {
     MODELS.COXNET_DECEASED
   );
   const [featureStates, setFeatureStates] = useState<FeatureStates>(
-    updateFeatures(MODELS.COXNET_DECEASED)
+    getUpdatedFeatures(MODELS.COXNET_DECEASED)
   );
   const [xValues, setXValues] = useState([]);
   const [yValues, setYValues] = useState([]);
 
   useEffect(() => {
     if (selectedModel === MODELS.COXNET_DECEASED) {
-      updateFeatures(MODELS.COXNET_DECEASED);
+      setFeatureStates(getUpdatedFeatures(MODELS.COXNET_DECEASED));
     } else {
-      updateFeatures(MODELS.COXNET_LIVING);
+      setFeatureStates(getUpdatedFeatures(MODELS.COXNET_LIVING));
     }
   }, [selectedModel]);
 
@@ -91,10 +94,13 @@ function DeceasedCoxnetPage() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(featureStates),
+          body: JSON.stringify({
+            model_name: selectedModel,
+            features: featureStates,
+          }),
         }
       );
-
+      console.log(featureStates);
       if (!response.ok) {
         throw new Error("Request failed");
       }
