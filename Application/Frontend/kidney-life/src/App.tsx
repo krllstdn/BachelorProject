@@ -3,7 +3,7 @@ import DashboardPage from "./components/pages/DashboardPage";
 import PatientsPage from "./components/pages/PatientsPage";
 import LoginPage from "./components/pages/LoginPage";
 import RegisterPage from "./components/pages/RegisterPage";
-import DeceasedCoxnetPage from "./components/pages/DeceasedCoxnetPage";
+import PredictPage from "./components/pages/PredictPage";
 import {
   BrowserRouter as Router,
   Routes,
@@ -32,7 +32,8 @@ function App() {
           </Route>
           <Route path="/login" Component={LoginPage} />
           <Route path="/register" Component={RegisterPage} />
-          <Route path="/coxnet-deceased" Component={DeceasedCoxnetPage} />
+
+          <Route path="/predict" Component={PredictPage} />
         </Routes>
       </Router>
     </div>

@@ -62,7 +62,9 @@ class CoxnetDeceasedSerializer(serializers.Serializer):
             elif field_type == "numerical":
                 try:
                     # This checks if the value is a number or a numeric string.
-                    float(data.get(field_name, 0))
+                    float(
+                        data.get(field_name, 0)
+                    )  # sets value to 0 if it is not a number
                 except ValueError:
                     raise serializers.ValidationError(
                         {field_name: f"{field_name} must be a number."}
@@ -80,8 +82,13 @@ class CoxnetDeceasedSerializer(serializers.Serializer):
         df = pd.DataFrame(validated_data, index=[0])
 
         path = os.path.join(os.path.dirname(__file__), "pickles", self.pipeline_name)
-        with open(path, "rb") as file:
-            pipeline = pickle.load(file)
+        try:
+            with open(path, "rb") as file:
+                pipeline = pickle.load(file)
+        except FileNotFoundError:
+            raise serializers.ValidationError(
+                f"Pipeline pickle {self.pipeline_name} not found."
+            )
 
         dataset = df[self.numerical + self.categorical]
         X = pipeline.transform(dataset)
