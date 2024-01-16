@@ -17,9 +17,21 @@ class PredictionSerializer(serializers.ModelSerializer):
 
 
 class CoxnetDeceasedSerializer(serializers.Serializer):
-    def __init__(self, features, *args, **kwargs):
+    def __init__(self, features, pipeline_name, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.features = features
+        self.pipeline_name = pipeline_name
+
+        self.numerical = [
+            feature["name"]
+            for feature in self.features
+            if feature["type"] == "numerical"
+        ]
+        self.categorical = [
+            feature["name"]
+            for feature in self.features
+            if feature["type"] == "categorical"
+        ]
 
         for feature in features:
             field_name = feature["name"]
@@ -67,66 +79,11 @@ class CoxnetDeceasedSerializer(serializers.Serializer):
     def encode(self, validated_data):
         df = pd.DataFrame(validated_data, index=[0])
 
-        path = os.path.join(
-            os.path.dirname(__file__), "pickles", "trained_pipeline.pkl"
-        )
+        path = os.path.join(os.path.dirname(__file__), "pickles", self.pipeline_name)
         with open(path, "rb") as file:
             pipeline = pickle.load(file)
 
-        numerical = [
-            "AGE",
-            "BMI_CALC",
-            "AGE_DON",
-            "CREAT_TRR",
-            "NPKID",
-            "RDR2",
-            "DR53",
-            "DR2",
-            "COLD_ISCH_KI",
-            "CREAT_DON",
-        ]
-        categorical = [
-            "ON_DIALYSIS",
-            "PRE_TX_TXFUS",
-            "GENDER",
-            "ETHCAT",
-            "DIABETES_DON",
-            "DIAB",
-            "HCV_SEROSTATUS",
-        ]
-
-        dataset = df[numerical + categorical]
+        dataset = df[self.numerical + self.categorical]
         X = pipeline.transform(dataset)
 
         return X
-
-    def _encode_categorical(self, data):  # obsolete
-        columns = [
-            feature["name"]
-            for feature in self.features
-            if feature["type"] == "categorical"
-        ]
-        encoded_cols = {}
-        for column in columns:
-            possible_values = list(
-                [
-                    feature["possible_values"].keys()
-                    for feature in self.features
-                    if feature["name"] == column
-                ][0]
-            )
-
-            for val in possible_values:
-                end = f"{val}.0" if str(val).isdigit() else val
-
-                encoded_col = f"{column}={end}"
-                encoded_cols[encoded_col] = [1 if x == val else 0 for x in data[column]]
-
-            encoded_cols.pop(f"{column}={possible_values[0]}", None)
-
-        return pd.DataFrame(encoded_cols)
-        # get categorical features
-        # look how categories are encoded in the model. (what values to what numbers or columns)
-
-    def _standardize():
-        pass

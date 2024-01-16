@@ -22,55 +22,47 @@ class PredictionList(generics.ListCreateAPIView):
     serializer_class = PredictionSerializer
 
 
-def load_features_json():
-    file_path = os.path.join(
-        settings.BASE_DIR, "models", "models", "coxnet_deceased_desc.json"
-    )
+MODELS = {
+    "COXNET_DECEASED": "coxnet_deceased_desc.json",
+    "COXNET_LIVING": "coxnet_living_desc.json",
+}
+
+
+def load_features_json(model):
+    file_path = os.path.join(settings.BASE_DIR, "models", "models", MODELS[model])
     with open(file_path, "r") as f:
         data = json.load(f)
-        return data["features"], data["model_pickle_path"], data["model_file_name"]
-
-
-def plot_survival_curves(prediction):
-    filename = "survival_curves.png"
-    path_to_save = "../Frontend/kidney-life/src/assets/"
-
-    plt.figure(figsize=(10, 6))
-    plt.step(prediction[0].x, prediction[0].y)
-
-    plt.xlabel("Time")
-    plt.ylabel("Survival Probability")
-    plt.title("Survival Function")
-    plt.legend()
-    plt.savefig(path_to_save + filename)
-    # plt.show()
-
-    return filename
+        return (
+            data["features"],
+            data["model_file_name"],
+            data["pipeline_file_name"],
+        )
 
 
 class PredictAPIView(APIView):
     def post(self, request, *args, **kwargs):
-        # todo: add model name to request
-        features, model_pickle_path, model_file_name = load_features_json()
+        # todo: load correct features
+        model_name = request.data["model_name"]
+
+        features, model_file_name, pipeline_file_name = load_features_json(model_name)
         model_pickle_path = os.path.join(
             settings.BASE_DIR, "models", "models", model_file_name
         )
 
-        serializer = CoxnetDeceasedSerializer(features, data=request.data)
+        serializer = CoxnetDeceasedSerializer(
+            features=features,
+            data=request.data["features"],
+            pipeline_name=pipeline_file_name,
+        )
 
         if serializer.is_valid():
-            # Load ML model
             with open(model_pickle_path, "rb") as model_file:
                 model = pickle.load(model_file)
 
-            # get standardized data from request
             data = serializer.validated_data
 
-            # make prediction with data from request
             prediction = model.predict_survival_function(data)
             risk = model.predict(data)
-
-            plot_name = plot_survival_curves(prediction)
 
             return Response(
                 {

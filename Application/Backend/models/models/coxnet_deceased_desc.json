@@ -1,6 +1,7 @@
 {
   "model_pickle_path": "Application/Backend/models/models/COXNET_DECEASED_MODEL.pickle",
   "model_file_name": "COXNET_DECEASED_MODEL.pickle",
+  "pipeline_file_name": "coxnet_deceased_pipeline.pkl",
   "features": [
     {
         "name": "ON_DIALYSIS",
@@ -109,12 +110,6 @@
         "description": "Recipient creatinine at transplant"
     },
     {
-        "name": "CREAT_DON",
-        "type": "numerical",
-        "short_description": "Donor creatinine (mg/dL)",
-        "description": "Donor creatinine at transplant"
-    },
-    {
         "name": "NPKID",
         "type": "numerical",
         "short_description": "Prev. tx number",
@@ -143,6 +138,12 @@
         "type": "numerical",
         "short_description": "Cold Ischemic Time (hours)",
         "description": "Cold Ischemic Time"
+    },
+    {
+        "name": "CREAT_DON",
+        "type": "numerical",
+        "short_description": "Donor creatinine (mg/dL)",
+        "description": "Donor creatinine at transplant"
     }
 ]
 }
