@@ -100,7 +100,6 @@ function DeceasedCoxnetPage() {
           }),
         }
       );
-      console.log(featureStates);
       if (!response.ok) {
         throw new Error("Request failed");
       }
