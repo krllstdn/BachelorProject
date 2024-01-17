@@ -140,7 +140,7 @@ function DeceasedCoxnetPage() {
 
   return (
     <div className="flex justify-evenly flex-grow h-full">
-      <ModalContainer className="w-1/3 h-full pr-5 pl-5 pt-6 pb-3 mb-4 mt-3">
+      <ModalContainer className="w-1/3 h-[97vh] pr-5 pl-5 pt-6 pb-3 mb-4 mt-3 overflow-y-scroll">
         <div className="flex items-center justify-center mb-3">
           <select
             className="bg-secondary text-3xl"
