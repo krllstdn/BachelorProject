@@ -1,7 +1,7 @@
 import "./App.css";
 import DashboardPage from "./components/pages/DashboardPage";
 import PatientsPage from "./components/pages/PatientsPage";
-import LoginPage from "./components/pages/LoginPage";
+// import LoginPage from "./components/pages/LoginPage";
 import RegisterPage from "./components/pages/RegisterPage";
 import PredictPage from "./components/pages/PredictPage";
 import {
@@ -30,7 +30,7 @@ function App() {
             <Route path="/patients" Component={PatientsPage} />
             <Route path="/" Component={DashboardPage} />
           </Route>
-          <Route path="/login" Component={LoginPage} />
+          {/* <Route path="/login" Component={LoginPage} /> */}
           <Route path="/register" Component={RegisterPage} />
 
           <Route path="/predict" Component={PredictPage} />
