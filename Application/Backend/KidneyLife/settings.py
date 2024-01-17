@@ -41,11 +41,6 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "rest_framework",
     "corsheaders",
-    "user",
-    "donor",
-    "recipient",
-    "pair",
-    "models",
     "prediction",
 ]
 

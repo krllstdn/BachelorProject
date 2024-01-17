@@ -7,11 +7,6 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
     initial = True
 
-    dependencies = [
-        ("models", "0001_initial"),
-        ("pair", "0001_initial"),
-    ]
-
     operations = [
         migrations.CreateModel(
             name="Prediction",
@@ -27,18 +22,6 @@ class Migration(migrations.Migration):
                 ),
                 ("prediction_id", models.IntegerField()),
                 ("prediction_data", models.JSONField()),
-                (
-                    "model_id",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="models.model"
-                    ),
-                ),
-                (
-                    "pair_id",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="pair.pair"
-                    ),
-                ),
             ],
         ),
     ]
