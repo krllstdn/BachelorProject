@@ -11,7 +11,8 @@
             "possible_values": {
                 "Y": "Yes",
                 "N": "No"
-            }
+            },
+            "freq": {"N": 0.83, "Y": 0.17}
         },
         {
             "name": "GENDER",
@@ -21,7 +22,8 @@
             "possible_values": {
                 "M": "Male",
                 "F": "Female"
-            }
+            },
+            "freq": {"M": 0.61, "F": 0.39}
         },
         {
             "name": "ON_DIALYSIS",
@@ -31,7 +33,8 @@
             "possible_values": {
                 "Y": "Yes",
                 "N": "No"
-            }
+            },
+            "freq": {"Y": 0.55, "N": 0.45}
         },
         {
             "name": "ABO_MAT",
@@ -42,7 +45,8 @@
                 "1": "Identical",
                 "2": "Compatible",
                 "3": "Incompatible"
-            }
+            },
+            "freq": {"1": 0.75, "2": 0.23, "3": 0.02}
         },
         {
             "name": "ETHCAT",
@@ -57,7 +61,8 @@
                 "6": "American Indian/Alaska Native, non-Hispanic",
                 "7": "Native Hawaiian/Other Pacific Islander, non-Hispanic",
                 "9": "Multiracial, non-Hispanic"        
-            }
+            },
+            "freq": {"1": 0.65, "4": 0.15, "2": 0.14, "5": 0.05, "6": 0.01, "9": 0.0, "7": 0.0}
         },
         {
             "name": "ETHCAT_DON",
@@ -72,7 +77,8 @@
                 "6": "American Indian/Alaska Native, non-Hispanic",
                 "7": "Native Hawaiian/Other Pacific Islander, non-Hispanic",
                 "9": "Multiracial, non-Hispanic"        
-            }
+            },
+            "freq":{"1": 0.7, "4": 0.14, "2": 0.12, "5": 0.04, "9": 0.0, "6": 0.0, "7": 0.0}
         },
         {
             "name": "HBV_CORE",
@@ -83,7 +89,8 @@
                 "N": "Negative",
                 "P": "Positive",
                 "ND": "Not Done"
-            }
+            },
+            "freq": {"N": 0.82, "ND": 0.13, "P": 0.05}
         },
         {
             "name": "DIAB",
@@ -97,7 +104,8 @@
                 "4": "Type other",
                 "5": "Type unknown",
                 "998": "Unknown"
-            }
+            },
+            "freq": {"1": 0.72, "3": 0.19, "2": 0.06, "5": 0.02, "998": 0.01, "4": 0.0}
         },
         {
             "name":"HBV_SUR_ANTIGEN",
@@ -108,7 +116,9 @@
                 "N":"Negative",
                 "P":"Positive",
                 "ND":"Not Done"
-            }},
+            },
+            "freq": {"N": 0.97, "P": 0.02, "ND": 0.01}
+        },
         {
             "name": "HCV_SEROSTATUS",
             "type": "categorical",
@@ -119,7 +129,8 @@
                 "P": "Positive",
                 "ND": "Not Done",
                 "U": "Unknown"
-            }
+            },
+            "freq": {"N": 0.97, "P": 0.02, "ND": 0.01}
         },
         {
             "name": "LIV_DON_TY",
@@ -143,138 +154,197 @@
                 "14": "Biological, blood related: Non-Domino Therapeutic donor",
                 "15": "Non-Biological, Unrelated: Non-Domino Therapeutic donor",
                 "998": "Non-Biological, Other Unrelated Directed Donation"
-            }
+            },
+            "freq": {
+                "999": 0.22,
+                "4": 0.22,
+                "2": 0.17,
+                "7": 0.12,
+                "6": 0.07,
+                "9": 0.07,
+                "1": 0.06,
+                "10": 0.03,
+                "11": 0.02,
+                "5": 0.01,
+                "8": 0.01,
+                "3": 0.0,
+                "12": 0.0
+              }
         },
         {
             "name": "KI_CREAT_PREOP",
             "type": "numerical",
             "short_description": "Donor pre-op creatinine (mg/dL)",
-            "description": "Living donor preoperative serum creatinine (mg/dL)"
+            "description": "Living donor preoperative serum creatinine (mg/dL)",
+            "stats": {"IQR": 0.3, "median": 0.8},
+            "is_float": true
         }, 
         {
             "name": "SERUM_CREAT",
             "type": "numerical",
             "short_description": "Recipient creatinine at discharge (mg/dL)",
-            "description": "Recipient creatinine at discharge (mg/dL)"
+            "description": "Recipient creatinine at discharge (mg/dL)",
+            "stats": {"IQR": 0.82, "median": 1.4},
+            "is_float": true
         }, 
         {
             "name": "BMIS",
             "type": "numerical",
             "short_description": "B Locus mismatch level",
-            "description": "B Locus mismatch level"
+            "description": "B Locus mismatch level",
+            "stats": {"IQR": 1.0, "median": 1.0},
+            "is_float": false
         }, 
         {
             "name": "NPKID",
             "type": "numerical",
             "short_description": "Prev. tx number",
-            "description": "Number of previous kidney transplants"
+            "description": "Number of previous kidney transplants",
+            "stats": {"IQR": 0.0, "median": 0.0},
+            "is_float": false
         },
         {
             "name": "AGE",
             "type": "numerical",
             "short_description": "Recipient age",
-            "description": "Recipient age at transplant"
+            "description": "Recipient age at transplant",
+            "stats": {"IQR": 21.0, "median": 49.0},
+            "is_float": false
         },
         {
             "name": "HGT_CM_CALC",
             "type": "numerical",
             "short_description": "Recipient height (CM)",
-            "description": "Recipient height in centimeters"
+            "description": "Recipient height in centimeters",
+            "stats": {"IQR": 15.4, "median": 171.0},
+            "is_float": false
         },
         {
             "name": "BMI_DON_CALC",
             "type": "numerical",
             "short_description": "Donor BMI",
-            "description": "Donor BMI"
+            "description": "Donor BMI",
+            "stats": {"IQR": 5.97, "median": 26.63},
+            "is_float": true
         },
         {
             "name": "AGE_DON",
             "type": "numerical",
             "short_description": "Donor age",
-            "description": "Donor age at transplant"
+            "description": "Donor age at transplant",
+            "stats": {"IQR": 19.0, "median": 42.0},
+            "is_float": false
         },
         {
             "name": "DR1",
             "type": "numerical",
             "short_description": "DR1",
-            "description": "The number of DR1 Antigen mismatches"
+            "description": "The number of DR1 Antigen mismatches",
+            "stats": {"IQR": 9.0, "median": 7.0},
+            "is_float": false
         },
         {
             "name": "BW6",
             "type": "numerical",
             "short_description": "BW6",
-            "description": "The number of BW6 antigen mismatches "
+            "description": "The number of BW6 antigen mismatches ",
+            "stats": {"IQR": 0.0, "median": 95.0},
+            "is_float": false
         },
         {
             "name": "BW4",
             "type": "numerical",
             "short_description": "BW4",
-            "description": "The number of BW4 antigen mismatches"
+            "description": "The number of BW4 antigen mismatches",
+            "stats": {"IQR": 1.0, "median": 95.0},
+            "is_float": false
         },
         {
             "name": "RA1",
             "type": "numerical",
             "short_description": "RA1",
-            "description": "The number of RA1 antigen mismatches"
+            "description": "The number of RA1 antigen mismatches",
+            "stats": {"IQR": 9.0, "median": 2.0},
+            "is_float": false
         },
         {
             "name": "A2",
             "type": "numerical",
             "short_description": "A2",
-            "description": "The number of A2 antigen mismatches"
+            "description": "The number of A2 antigen mismatches",
+            "stats": {"IQR": 28.0, "median": 24.0},
+            "is_float": false
         },
         {
             "name": "DR53",
             "type": "numerical",
             "short_description": "DR53",
-            "description": "The number of DR53 antigen mismatches"
+            "description": "The number of DR53 antigen mismatches",
+            "stats": {"IQR": 96.0, "median": 95.0},
+            "is_float": false
         },
         {
             "name": "C1",
             "type": "numerical",
             "short_description": "C1",
-            "description": "The number of C1 antigen mismatches"
+            "description": "The number of C1 antigen mismatches",
+            "stats": {"IQR": 6.0, "median": 2.0},
+            "is_float": false
         },
         {
             "name": "C2",
             "type": "numerical",
             "short_description": "C2",
-            "description": "The number of C2 antigen mismatches"
+            "description": "The number of C2 antigen mismatches",
+            "stats": {"IQR": 7.0, "median": 0.0},
+            "is_float": false
         },
         {
             "name": "A1",
             "type": "numerical",
             "short_description": "A1",
-            "description": "The number of A1 antigen mismatches"
+            "description": "The number of A1 antigen mismatches",
+            "stats": {"IQR": 9.0, "median": 2.0},
+            "is_float": false
         },
         {
             "name": "RA2",
             "type": "numerical",
             "short_description": "RA2",
-            "description": "The number of RA2 antigen mismatches"
+            "description": "The number of RA2 antigen mismatches",
+            "stats": {"IQR": 43.0, "median": 29.0},
+            "is_float": false
         },
         {
             "name": "DR51",
             "type": "numerical",
             "short_description": "DR51",
-            "description": "The number of DR51 antigen mismatches"
+            "description": "The number of DR51 antigen mismatches",
+            "stats": {"IQR": 96.0, "median": 95.0},
+            "is_float": false
         },
         {
             "name": "DR52",
             "type": "numerical",
             "short_description": "DR52",
-            "description": "The number of DR52 antigen mismatches"
+            "description": "The number of DR52 antigen mismatches",
+            "stats": {"IQR": 95.0, "median": 95.0},
+            "is_float": false
         },
         {
             "name": "DQ2",
             "type": "numerical",
             "short_description": "DQ2",
-            "description": "The number of DQ2 antigen mismatches"
+            "description": "The number of DQ2 antigen mismatches",
+            "stats": {"IQR": 7.0, "median": 4.0},
+            "is_float": false
         },
         {
             "name": "RDR1",
             "type": "numerical",
             "short_description": "RDR1",
-            "description": "The number of RDR1 antigen mismatches"
+            "description": "The number of RDR1 antigen mismatches",
+            "stats": {"IQR": 9.0, "median": 7.0},
+            "is_float": false
         }
     ]}
