@@ -84,3 +84,25 @@ class TestPrediction(TestCase):
 
         response = self.client.post(self.url, data, format="json")
         self.assertEqual(response.status_code, 200)
+
+
+class TestRandomDataGeneration(TestCase):
+    def setUp(self):
+        self.client = APIClient()
+        self.url = reverse("synthetic")
+
+    def test_random_coxnet_deceased(self):
+        data = {"model_name": "COXNET_DECEASED"}
+
+        response = self.client.post(self.url, data, format="json")
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response.data)
+        self.assertEqual(len(response.data), 17)
+
+    def test_random_coxnet_living(self):
+        data = {"model_name": "COXNET_LIVING"}
+
+        response = self.client.post(self.url, data, format="json")
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response.data)
+        self.assertEqual(len(response.data), 33)

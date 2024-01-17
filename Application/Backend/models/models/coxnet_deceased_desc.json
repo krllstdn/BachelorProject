@@ -11,7 +11,8 @@
         "possible_values": {
             "Y": "Yes",
             "N": "No"
-        }
+        },
+        "freq": {"Y": 0.78, "N": 0.22}
     },
     {
         "name": "PRE_TX_TXFUS",
@@ -21,7 +22,8 @@
         "possible_values": {
             "Y": "Yes",
             "N": "No"
-        }
+        },
+        "freq": {"N": 0.75, "Y": 0.25}
     },
     {
         "name": "GENDER",
@@ -31,7 +33,8 @@
         "possible_values": {
             "M": "Male",
             "F": "Female"
-        }
+        },
+        "freq": {"M": 0.6, "F": 0.4}
     },
     {
         "name": "ETHCAT",
@@ -46,7 +49,8 @@
             "6": "American Indian/Alaska Native, non-Hispanic",
             "7": "Native Hawaiian/Other Pacific Islander, non-Hispanic",
             "9": "Multiracial, non-Hispanic"        
-        }
+        },
+        "freq": {"1": 0.47, "2": 0.31, "4": 0.15, "5": 0.06, "6": 0.01, "7": 0.0}
     },
     {
         "name": "DIABETES_DON",
@@ -57,7 +61,8 @@
             "Y": "Yes",
             "N": "No",
             "U": "Unknown"
-        }
+        },
+        "freq": {"N": 0.93, "Y": 0.07}
     },
     {
         "name": "DIAB",
@@ -71,7 +76,8 @@
             "4": "Type other",
             "5": "Type unknown",
             "998": "Unknown"
-        }
+        },
+        "freq": {"1": 0.66, "3": 0.19, "5": 0.11, "2": 0.03, "998": 0.01, "4": 0.0}
     },
     {
         "name": "HCV_SEROSTATUS",
@@ -83,67 +89,88 @@
             "P": "Positive",
             "ND": "Not Done",
             "U": "Unknown"
-        }
+        },
+        "freq": {"N": 0.9, "P": 0.06, "ND": 0.04}
     },
     {
         "name": "AGE",
         "type": "numerical",
         "short_description": "Recipient age",
-        "description": "Recipient age at transplant"
+        "description": "Recipient age at transplant",
+        "stats": {"IQR": 19.0, "median": 53.0},
+        "is_float": false
     },
     {
         "name": "BMI_CALC",
         "type": "numerical",
         "short_description": "Recipient BMI",
-        "description": "Recipient BMI at transplant"
+        "description": "Recipient BMI at transplant",
+        "stats": {"IQR": 7.5, "median": 27.3},
+        "is_float": true
     },
     {
         "name": "AGE_DON",
         "type": "numerical",
         "short_description": "Donor age",
-        "description": "Donor age at transplant"
+        "description": "Donor age at transplant",
+        "stats": {"IQR": 27.0, "median": 40.0},
+        "is_float": false
     },
     {
         "name": "CREAT_TRR",
         "type": "numerical",
         "short_description": "Recipient creatinine (mg/dL)",
-        "description": "Recipient creatinine at transplant"
+        "description": "Recipient creatinine at transplant",
+        "stats": {"IQR": 4.6, "median": 7.82},
+        "is_float": true
     },
     {
         "name": "NPKID",
         "type": "numerical",
         "short_description": "Prev. tx number",
-        "description": "Number of previous kidney transplants"
+        "description": "Number of previous kidney transplants",
+        "stats": {"IQR": 0.0, "median": 0.0},
+        "is_float": false
     },
     {
         "name": "RDR2",
         "type": "numerical",
         "short_description": "RDR2",
-        "description": "RDR2 Antigen"
+        "description": "RDR2 Antigen",
+        "stats": {"IQR": 5.0, "median": 13.0},
+        "is_float": false
     },
     {
         "name": "DR53",
         "type": "numerical",
         "short_description": "DR53",
-        "description": "DR53 Antigen"
+        "description": "DR53 Antigen",
+        "stats": {"IQR": 96.0, "median": 0.0},
+        "is_float": false
     },
     {
         "name": "DR2",
         "type": "numerical",
         "short_description": "DR2",
-        "description": "DR2 Antigen"
+        "description": "DR2 Antigen",
+        "stats": {"IQR": 8.0, "median": 13.0},
+        "is_float": false
     },
     {
         "name": "COLD_ISCH_KI",
         "type": "numerical",
         "short_description": "Cold Ischemic Time (hours)",
-        "description": "Cold Ischemic Time"
+        "description": "Cold Ischemic Time",
+        "stats": {"IQR": 11.13, "median": 17.0},
+        "is_float": false
     },
     {
         "name": "CREAT_DON",
         "type": "numerical",
         "short_description": "Donor creatinine (mg/dL)",
-        "description": "Donor creatinine at transplant"
+        "description": "Donor creatinine at transplant",
+        "stats": {"IQR": 0.6, "median": 0.96},
+        "is_float": true
     }
 ]
 }

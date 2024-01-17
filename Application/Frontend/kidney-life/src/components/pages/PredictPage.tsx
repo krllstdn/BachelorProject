@@ -113,9 +113,34 @@ function DeceasedCoxnetPage() {
     }
   };
 
+  const getSyntheticData = async () => {
+    try {
+      const response = await fetch(
+        "http://127.0.0.1:8000/prediction/synthetic/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model_name: selectedModel,
+          }),
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
+      const data = await response.json();
+      setFeatureStates(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="flex justify-evenly flex-grow h-full">
-      <ModalContainer className="w-1/3 h-full pr-5 pl-5 pt-6 pb-8 ml-7 mt-3">
+      <ModalContainer className="w-1/3 h-full pr-5 pl-5 pt-6 pb-3 mb-4 mt-3">
         <div className="flex items-center justify-center mb-3">
           <select
             className="bg-secondary text-3xl"
@@ -156,6 +181,7 @@ function DeceasedCoxnetPage() {
               //   label={feature.description}
               type={feature.type}
               key={feature.name}
+              value={featureStates[feature.name] as string}
               text={feature.short_description}
               description={feature.description}
               onChange={(e) =>
@@ -167,7 +193,17 @@ function DeceasedCoxnetPage() {
             />
           )
         )}
-        <Button additionalStyles="mt-3" name="Submit" onClick={sendRequest} />
+        <Button
+          additionalStyles="mt-3 mb-2"
+          name="Submit"
+          onClick={sendRequest}
+        />
+        <span
+          className="cursor-pointer text-sm hover:underline"
+          onClick={getSyntheticData}
+        >
+          Generate synthetic data
+        </span>
       </ModalContainer>
       <div className="survivalCurve w-7/12 h-5/6 mt-24 rounded-md bg-secondaryLight">
         <Plot

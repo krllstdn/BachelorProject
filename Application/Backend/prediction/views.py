@@ -77,3 +77,43 @@ class PredictAPIView(APIView):
             )
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class RandomDataAPIView(APIView):
+    def post(self, request, *args, **kwargs):
+        model_name = request.data["model_name"]
+
+        features, _, _ = load_features_json(model_name)
+
+        synthetic_data = {}
+        for feature in features:
+            if feature["type"] == "categorical":
+                synthetic_data[feature["name"]] = generate_synthetic_categorical_data(
+                    feature
+                )
+            elif feature["type"] == "numerical":
+                synthetic_data[feature["name"]] = generate_synthetic_numerical_data(
+                    feature
+                )
+
+        return Response(synthetic_data)
+
+
+def generate_synthetic_categorical_data(feature):
+    freq_dict = feature["freq"]
+    categories = list(freq_dict.keys())
+    probabilities = list(freq_dict.values())
+
+    synthetic_data = np.random.choice(categories, size=1, p=probabilities)[0]
+
+    return synthetic_data
+
+
+def generate_synthetic_numerical_data(feature):
+    synthetic_data = np.random.normal(
+        loc=feature["stats"]["median"], scale=feature["stats"]["IQR"], size=1
+    )[0]
+    synthetic_data = np.clip(synthetic_data, 0, None)
+    synthetic_data = np.round(synthetic_data)
+
+    return synthetic_data
