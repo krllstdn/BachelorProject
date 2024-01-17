@@ -21,7 +21,7 @@ def load_model_description(model):
     Returns:
         tuple: Features, model pickle path, pipeline pickle path.
     """
-    file_path = os.path.join(settings.BASE_DIR, "models", "models", MODELS[model])
+    file_path = os.path.join(settings.BASE_DIR, "prediction", "models", MODELS[model])
     try:
         with open(file_path, "r") as f:
             data = json.load(f)
@@ -35,7 +35,7 @@ def load_model_description(model):
 
 
 def _get_model_path(model_file_name):
-    return os.path.join(settings.BASE_DIR, "models", "models", model_file_name)
+    return os.path.join(settings.BASE_DIR, "prediction", "models", model_file_name)
 
 
 def load_model(model_path):

@@ -7,7 +7,7 @@ Code/data/
 Code/pickle/
 Code/surv_data_pipeline/__pycache__/
 
-Application/Backend/models/models/*.pickle
+Application/Backend/prediction/models/*.pickle
 Application/Backend/prediction/pickles/
 
 Application/Frontend/kidney-life/src/assets/survival_curves.png

@@ -16,19 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from user import views
-
-
-router = routers.DefaultRouter()
-router.register("users", views.UserList)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("__debug__/", include("debug_toolbar.urls")),
-    path("user/", include("user.urls")),
-    path("donor/", include("donor.urls")),
-    path("recipient/", include("recipient.urls")),
-    path("pair/", include("pair.urls")),
-    path("models/", include("models.urls")),
     path("prediction/", include("prediction.urls")),
 ]
