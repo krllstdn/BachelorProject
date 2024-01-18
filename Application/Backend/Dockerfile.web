@@ -4,6 +4,11 @@ FROM continuumio/miniconda3
 # Install Python 3.11.5
 RUN conda install -y python=3.11.5
 
+RUN apt-get update
+RUN apt-get install build-essential -y
+RUN apt-get install cmake -y
+
+
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /code
@@ -15,10 +20,12 @@ COPY environment.yml .
 RUN conda env create -f environment.yml
 
 # Activate the environment
-RUN echo "source activate myenv" > ~/.bashrc
+RUN echo "source activate kidney-life" > ~/.bashrc
 ENV PATH /opt/conda/envs/myenv/bin:$PATH
 
 # Copy the rest of your project
 COPY . .
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["conda", "run", "--no-capture-output", "-n", "kidney-life", "python", "manage.py", "runserver", "0.0.0.0:8000"]
+
