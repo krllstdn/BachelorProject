@@ -31,7 +31,7 @@ def load_model_description(model):
                 data["pipeline_file_name"],
             )
     except FileNotFoundError:
-        raise ValueError(f"Model description file {model} not found")
+        raise ValueError(f"Model description file {MODELS[model]} not found")
 
 
 def _get_model_path(model_file_name):

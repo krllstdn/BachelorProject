@@ -9,6 +9,8 @@ import coxnet_living_features from "../../models/coxnet_living_desc.json";
 
 import Plot from "react-plotly.js";
 
+const url = " http://localhost:7000/";
+
 enum MODELS {
   COXNET_DECEASED = "COXNET_DECEASED",
   COXNET_LIVING = "COXNET_LIVING",
@@ -87,19 +89,16 @@ function DeceasedCoxnetPage() {
 
   const sendRequest = async () => {
     try {
-      const response = await fetch(
-        "http://127.0.0.1:8000/prediction/predict/",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            model_name: selectedModel,
-            features: featureStates,
-          }),
-        }
-      );
+      const response = await fetch(url + "/prediction/predict/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model_name: selectedModel,
+          features: featureStates,
+        }),
+      });
       if (!response.ok) {
         throw new Error("Request failed");
       }
@@ -115,18 +114,15 @@ function DeceasedCoxnetPage() {
 
   const getSyntheticData = async () => {
     try {
-      const response = await fetch(
-        "http://127.0.0.1:8000/prediction/synthetic/",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            model_name: selectedModel,
-          }),
-        }
-      );
+      const response = await fetch(url + "/prediction/synthetic/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model_name: selectedModel,
+        }),
+      });
       if (!response.ok) {
         throw new Error("Request failed");
       }

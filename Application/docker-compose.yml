@@ -4,7 +4,7 @@ services:
   db:
     image: postgres
     volumes:
-      - ./data/db:/var/lib/postgresql/data
+      - ./Backend/data/db:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=kidneylife_db
       - POSTGRES_USER=user_md
@@ -13,12 +13,18 @@ services:
       - "5432:5432"
 
   web:
+    mem_limit: 1g
     build:
       context: .
       dockerfile: Dockerfile.web
     ports:
       - "8000:8000"
-    volumes:
-      - .:/code
     depends_on:
       - db
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.front
+    ports:
+      - "3000:3000"

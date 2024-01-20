@@ -96,6 +96,7 @@ DATABASES = {
         "USER": "user_md",  # os.environ.get("user"),
         "PASSWORD": "password",  # os.environ.get("password"),
         "HOST": "db",  # "localhost",  # in docker you should use the service name
+        # "HOST": "localhost",  # in docker you should use the service name
         "PORT": 5432,
     }
 }
