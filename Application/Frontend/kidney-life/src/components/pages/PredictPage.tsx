@@ -9,7 +9,7 @@ import coxnet_living_features from "../../models/coxnet_living_desc.json";
 
 import Plot from "react-plotly.js";
 
-const url = " http://localhost:7000/";
+const url = " http://localhost:8000/";
 
 enum MODELS {
   COXNET_DECEASED = "COXNET_DECEASED",
@@ -89,7 +89,7 @@ function DeceasedCoxnetPage() {
 
   const sendRequest = async () => {
     try {
-      const response = await fetch(url + "/prediction/predict/", {
+      const response = await fetch(url + "prediction/predict/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -114,7 +114,7 @@ function DeceasedCoxnetPage() {
 
   const getSyntheticData = async () => {
     try {
-      const response = await fetch(url + "/prediction/synthetic/", {
+      const response = await fetch(url + "prediction/synthetic/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
