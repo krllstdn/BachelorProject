@@ -13,6 +13,28 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 
+from dotenv import load_dotenv
+
+
+# Use 'development' settings by default
+DJANGO_ENV = os.environ.get("DJANGO_ENV", "development")
+
+if DJANGO_ENV == "production":
+    load_dotenv(".prod.env")
+else:
+    load_dotenv(".dev.env")
+
+DEBUG = os.environ.get("DEBUG", default=False)
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
+# DB constants
+DB_NAME = os.environ.get("POSTGRES_DB")
+DB_USER = os.environ.get("POSTGRES_USER")
+DB_PASSWORD = os.environ.get("POSTGRES_PASSWORD")
+DB_HOST = os.environ.get("POSTGRES_HOST")
+DB_PORT = int(os.environ.get("DB_PORT"))
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,10 +43,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-#vska1kj6vi&4^wf9!1vfxw0*=u)65f-v65(18d=ot6)woks=c"
+# SECRET_KEY = "django-insecure-#vska1kj6vi&4^wf9!1vfxw0*=u)65f-v65(18d=ot6)woks=c"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "0.0.0.0"]
 
@@ -63,6 +85,7 @@ INTERNAL_IPS = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "http://0.0.0.0:3000",
 ]
 
 
@@ -92,12 +115,11 @@ WSGI_APPLICATION = "KidneyLife.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "kidneylife_db",  # os.environ.get("kidneylife_db"),
-        "USER": "user_md",  # os.environ.get("user"),
-        "PASSWORD": "password",  # os.environ.get("password"),
-        "HOST": "db",  # "localhost",  # in docker you should use the service name
-        # "HOST": "localhost",  # in docker you should use the service name
-        "PORT": 5432,
+        "NAME": DB_NAME,
+        "USER": DB_USER,
+        "PASSWORD": DB_PASSWORD,
+        "HOST": DB_HOST,
+        "PORT": DB_PORT,
     }
 }
 

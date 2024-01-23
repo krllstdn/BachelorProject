@@ -21,3 +21,4 @@ dependencies:
     - joblib
     - osqp
     - scikit-survival==0.22.1
+    - python-dotenv

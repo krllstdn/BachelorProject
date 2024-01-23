@@ -12,3 +12,5 @@ Application/Backend/prediction/pickles/
 
 Application/Frontend/kidney-life/src/assets/survival_curves.png
 Application.zip
+Application/.dev.env
+Application/.prod.env
