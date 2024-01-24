@@ -8,3 +8,13 @@ prod-run:
 
 run-fe:
 	cd Frontend && npm start
+
+# Docker
+dc-up:
+	docker-compose up --build
+
+dc-dev-up:
+	docker-compose -f docker-compose-dev.yml up --build
+
+dc-prod-up:
+	docker-compose -f docker-compose-prod.yml up --build
