@@ -1,0 +1,67 @@
+version: "3.9"
+name: kidney-life-prod
+
+services:
+  db:
+    container_name: postgres-db-prod
+    image: postgres
+    restart: always
+    volumes:
+      - ./Backend/data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    ports: 
+      - "${DB_PORT}:${DB_PORT}"
+    networks:
+      - shared_network
+    env_file:
+      - .prod.env
+
+  backend:
+    container_name: backend-prod
+    mem_limit: 1g
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    ports:
+      - "${BE_PORT}:${BE_PORT}"
+    depends_on:
+      - db
+    networks:
+      - shared_network
+    env_file:
+      - .prod.env
+
+  frontend:
+    container_name: frontend-prod
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile.front
+    ports:
+      - "${FE_PORT}:${FE_PORT}"
+    networks:
+      - shared_network
+    depends_on:
+      - backend
+    env_file:
+      - .prod.env
+  
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - shared_network
+
+networks:
+  shared_network:
+    driver: bridge 

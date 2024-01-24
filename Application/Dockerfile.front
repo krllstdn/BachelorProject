@@ -1,15 +1,18 @@
 FROM node:14-alpine
 
+ARG FE_PORT=3000
+# get the port from the environment variable
+ENV FE_PORT=$FE_PORT 
+
 WORKDIR /usr/src/app
 
 COPY /Frontend/kidney-life .
-COPY /models/coxnet_deceased_desc.json ./src/models/
-COPY /models/coxnet_living_desc.json ./src/models/
+COPY /models/*.json ./src/models/
 
 RUN npm install
 
 RUN npm run build
 
-EXPOSE 3000
+EXPOSE $FE_PORT
 
 CMD ["npm", "start"]
