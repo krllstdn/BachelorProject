@@ -9,7 +9,8 @@ import coxnet_living_features from "../../models/coxnet_living_desc.json";
 
 import Plot from "react-plotly.js";
 
-const url = " http://localhost:8000/";
+const be_port = process.env.REACT_APP_BE_PORT;
+const url = "http://localhost:" + be_port + "/";
 
 enum MODELS {
   COXNET_DECEASED = "COXNET_DECEASED",
@@ -47,10 +48,7 @@ interface FeatureStates {
 }
 
 function DeceasedCoxnetPage() {
-  // TODO: random values generator for the form
-  // TODO: rename the page
   // TODO: validator if data is in range
-  // TODO: add a button to generate random values
   // TODO: add a question button to the graph to explain what survival curve is
   const getUpdatedFeatures = (model: MODELS) => {
     const features = MODEL_DESCRIPTIONS[model];

@@ -5,3 +5,6 @@ run:
 prod-run:
 	export DJANGO_ENV=production \
 	&& python Backend/manage.py runserver
+
+run-fe:
+	cd Frontend && npm start

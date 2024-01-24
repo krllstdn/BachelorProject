@@ -32,8 +32,9 @@ DB_NAME = os.environ.get("POSTGRES_DB")
 DB_USER = os.environ.get("POSTGRES_USER")
 DB_PASSWORD = os.environ.get("POSTGRES_PASSWORD")
 DB_HOST = os.environ.get("POSTGRES_HOST")
-DB_PORT = int(os.environ.get("DB_PORT"))
+DB_PORT = os.environ.get("DB_PORT")
 
+FE_PORT = os.environ.get("FE_PORT")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -83,9 +84,9 @@ INTERNAL_IPS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://0.0.0.0:3000",
+    f"http://localhost:{FE_PORT}",
+    f"http://127.0.0.1:{FE_PORT}",
+    f"http://0.0.0.0:{FE_PORT}",
 ]
 
 
