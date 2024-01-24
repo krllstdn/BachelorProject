@@ -15,3 +15,4 @@ Application/.dev.env
 Application/.prod.env
 Application/Frontend/kidney-life/src/models/
 Application/Frontend/kidney-life/.env
+Application/.env
