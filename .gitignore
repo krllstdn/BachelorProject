@@ -10,9 +10,10 @@ Code/surv_data_pipeline/__pycache__/
 Application/models/*.pickle
 Application/Backend/prediction/pickles/
 
-Application.zip
+Application/Application.zip
 Application/.dev.env
 Application/.prod.env
 Application/Frontend/kidney-life/src/models/
 Application/Frontend/kidney-life/.env
 Application/.env
+Application/deploy-config.sh
