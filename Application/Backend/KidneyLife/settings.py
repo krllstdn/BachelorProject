@@ -15,6 +15,9 @@ import os
 
 from dotenv import load_dotenv
 
+USE_X_FORWARDED_HOST = True
+USE_X_FORWARDED_PORT = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Use 'development' settings by default
 DJANGO_ENV = os.environ.get("DJANGO_ENV", "development")
@@ -83,10 +86,13 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
+FORCE_SCRIPT_NAME = "/api"
+
 CORS_ALLOWED_ORIGINS = [
     f"http://localhost:{FE_PORT}",
     f"http://127.0.0.1:{FE_PORT}",
     f"http://0.0.0.0:{FE_PORT}",
+    " http://frontend:3000",
 ]
 
 
