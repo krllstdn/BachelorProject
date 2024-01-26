@@ -10,7 +10,8 @@ else
     exit 1  # Exit the script if SSH connection fails
 fi
 
-# NOTE: it was tested only on macos, on linux it might be different
+# NOTE: it was tested only on macos, on linux it might not work
+# Zip the application without node_modules
 zip -r Application.zip ../Application -x */Frontend/kidney-life/node_modules/**
 
 scp -i $KEY_PATH ./Application.zip $USER_NAME@$IP:/home/$USER_NAME
@@ -29,7 +30,7 @@ EOF
 rm Application.zip
 
 
-# Installation of the latest version of docker-compose for the linux machine
+# Installation of the latest version (at the time) of docker-compose for the linux machine
 # sudo curl -L https://github.com/docker/compose/releases/download/v2.24.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
 # sudo chmod +x /usr/local/bin/docker-compose
 # sudo mv /usr/local/bin/docker-compose /usr/bin/docker-compose
