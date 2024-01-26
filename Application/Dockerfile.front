@@ -1,18 +1,23 @@
-FROM node:14-alpine
-
-ARG FE_PORT=3000
-# get the port from the environment variable
-ENV FE_PORT=$FE_PORT 
+FROM node:14-alpine as build
 
 WORKDIR /usr/src/app
+
+COPY /Frontend/kidney-life/package*.json ./
+RUN npm install
 
 COPY /Frontend/kidney-life .
 COPY /models/*.json ./src/models/
 
-RUN npm install
-
 RUN npm run build
 
-EXPOSE $FE_PORT
+FROM nginx:alpine as production-stage
 
-CMD ["npm", "start"]
+COPY Frontend/kidney-life/nginx.conf /etc/nginx/nginx.conf
+# Copy the built React app to Nginx's web server directory
+COPY --from=build /usr/src/app/build /usr/share/nginx/html
+
+# Expose port 80 for the Nginx server
+EXPOSE 80
+
+# Start Nginx when the container runs
+CMD ["nginx", "-g", "daemon off;"]
