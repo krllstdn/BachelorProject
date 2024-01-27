@@ -43,6 +43,8 @@ services:
       dockerfile: Dockerfile.front
     ports:
       - "${FE_PORT}:80"
+    volumes:
+      - ./Frontend/kidney-life/default.conf.template:/etc/nginx/templates/default.conf.template
     networks:
       - shared_network
     depends_on:
@@ -56,12 +58,14 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ReverseProxy/default.conf.template:/etc/nginx/templates/default.conf.template
     depends_on:
       - backend
       - frontend
     networks:
       - shared_network
+    env_file:
+      - .prod.env
 
 networks:
   shared_network:
