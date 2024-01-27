@@ -23,7 +23,7 @@ ssh -i $KEY_PATH $USER_NAME@$IP <<EOF
     sudo unzip Application.zip
     rm Application.zip
     cd Application
-    sudo make dc-prod-up
+    sudo make dc-prod-up-build
 EOF
 
 # remove zip file
