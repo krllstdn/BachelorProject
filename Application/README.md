@@ -1,4 +1,6 @@
 
+# App architecture
+![App architecture diagram](AppDiagram.png)
 
 
 ### .env
