@@ -1,12 +1,9 @@
-import pickle, json, os
-
 from django.shortcuts import render
 from django.conf import settings
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
-from sksurv.linear_model import CoxnetSurvivalAnalysis
 import numpy as np
 
 from .models import Prediction
@@ -14,6 +11,7 @@ from .serializers import PredictionSerializer, CoxnetDeceasedSerializer
 from .utils import load_model_description, load_model, MODELS, generate_synthetic_data
 
 
+# todo: consider removing it
 class PredictionList(generics.ListCreateAPIView):
     queryset = Prediction.objects.all()
     serializer_class = PredictionSerializer
