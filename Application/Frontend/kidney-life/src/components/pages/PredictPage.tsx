@@ -9,9 +9,8 @@ import coxnet_living_features from "../../models/coxnet_living_desc.json";
 
 import Plot from "react-plotly.js";
 
-// const be_port = process.env.REACT_APP_BE_PORT;
-// const url = "http://localhost:" + be_port + "/";
-const url = "http://localhost/api/";
+const be_host = process.env.REACT_APP_BE_HOST;
+const url = "http://" + be_host + "/api/";
 
 enum MODELS {
   COXNET_DECEASED = "COXNET_DECEASED",

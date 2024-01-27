@@ -38,6 +38,7 @@ DB_HOST = os.environ.get("POSTGRES_HOST")
 DB_PORT = os.environ.get("DB_PORT")
 
 FE_PORT = os.environ.get("FE_PORT")
+HOST = os.environ.get("SERVER_IP")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -52,7 +53,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "0.0.0.0"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "0.0.0.0", HOST]
 
 
 # Application definition
@@ -93,6 +94,7 @@ CORS_ALLOWED_ORIGINS = [
     f"http://127.0.0.1:{FE_PORT}",
     f"http://0.0.0.0:{FE_PORT}",
     " http://frontend:3000",
+    f"http://{HOST}:80",
 ]
 
 
