@@ -17,6 +17,7 @@ from dotenv import load_dotenv
 
 USE_X_FORWARDED_HOST = True
 USE_X_FORWARDED_PORT = True
+# could be redundant. todo: try deleting the line and test if the app works
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Use 'development' settings by default
