@@ -8,4 +8,6 @@ Create `.prod.env` and `.dev.env` files from the provided examples depending on 
  
 
  ### Deploy
+Create and register pair of keys and register public one at the cloud provider.
 Set up `deploy-config.sh` from the provided example.
+To deploy run `bash deploy.sh`
