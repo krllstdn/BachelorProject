@@ -1,16 +1,13 @@
-import { useState } from "react";
 type AdditionalInfoIconProps = {
   text: string;
 };
 function AdditionalInfoIcon(props: AdditionalInfoIconProps) {
-  const [showTooltip, setShowTooltip] = useState(false);
-
   return (
     <div className="additional-info-icon w-5 relative">
       <div
+        data-tooltip-id="tooltip"
+        data-tooltip-content={props.text}
         className="text-primary text-xs"
-        onMouseEnter={() => setShowTooltip(true)}
-        onMouseLeave={() => setShowTooltip(false)}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -24,11 +21,6 @@ function AdditionalInfoIcon(props: AdditionalInfoIconProps) {
             clipRule="evenodd"
           />
         </svg>
-        {showTooltip && (
-          <div className="absolute left-full bg-gray-200 p-2 rounded text-center w-44 whitespace-normal">
-            {props.text}
-          </div>
-        )}
       </div>
     </div>
   );

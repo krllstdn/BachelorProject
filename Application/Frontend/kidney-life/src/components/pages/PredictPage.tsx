@@ -8,6 +8,7 @@ import coxnet_deceased_features from "../../models/coxnet_deceased_desc.json";
 import coxnet_living_features from "../../models/coxnet_living_desc.json";
 
 import Plot from "react-plotly.js";
+import { Tooltip } from "react-tooltip";
 
 const be_host = process.env.REACT_APP_BE_HOST;
 const url = "http://" + be_host + "/api/";
@@ -225,6 +226,7 @@ function DeceasedCoxnetPage() {
           config={{ responsive: true }}
         />
       </div>
+      <Tooltip id="tooltip" place="right" />
     </div>
   );
 }
