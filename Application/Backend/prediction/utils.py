@@ -3,7 +3,8 @@ import pickle, os, json
 import numpy as np
 
 from django.conf import settings
-
+from rest_framework.response import Response
+from rest_framework import status
 
 MODELS = {
     "COXNET_DECEASED": "coxnet_deceased_desc.json",
@@ -113,6 +114,10 @@ def generate_synthetic_numerical_data(feature):
         loc=feature["stats"]["median"], scale=feature["stats"]["IQR"], size=1
     )[0]
     synthetic_data = np.clip(synthetic_data, 0, None)
-    synthetic_data = np.round(synthetic_data)
+
+    if feature["type"] == "float":
+        synthetic_data = np.round(synthetic_data, 2)
+    else:
+        synthetic_data = np.round(synthetic_data)
 
     return synthetic_data
