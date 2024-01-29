@@ -9,6 +9,7 @@ import coxnet_living_features from "../../models/coxnet_living_desc.json";
 
 import Plot from "react-plotly.js";
 import { Tooltip } from "react-tooltip";
+import AdditionalInfoIcon from "../miscellaneous/AdditionalInfoIcon";
 
 const be_host = process.env.REACT_APP_BE_HOST;
 const url = "http://" + be_host + "/api/";
@@ -189,16 +190,23 @@ function DeceasedCoxnetPage() {
           )
         )}
         <Button
-          additionalStyles="mt-3 mb-2"
+          additionalStyles="mt-2 mb-2"
           name="Submit"
           onClick={sendRequest}
         />
-        <span
-          className="cursor-pointer text-sm hover:underline"
-          onClick={getSyntheticData}
-        >
-          Generate synthetic data
-        </span>
+        <div className="float-left w-full flex mt-1">
+          <p
+            className="cursor-pointer text-sm hover:underline inline-block mr-3"
+            onClick={getSyntheticData}
+          >
+            Generate synthetic data
+          </p>
+          <AdditionalInfoIcon
+            text="Generates data based on the individual feature distribution; 
+                  not reflective of actual data; intended solely 
+                  for testing purposes."
+          />
+        </div>
       </ModalContainer>
       <div className="survivalCurve w-7/12 h-5/6 mt-24 rounded-md bg-secondaryLight">
         <Plot
@@ -226,7 +234,15 @@ function DeceasedCoxnetPage() {
           config={{ responsive: true }}
         />
       </div>
-      <Tooltip id="tooltip" place="right" />
+      <Tooltip
+        id="tooltip"
+        place="right"
+        style={{
+          backgroundColor: "rgba(3, 29, 68, .9)",
+          color: "white",
+          maxWidth: "400px",
+        }}
+      />
     </div>
   );
 }
