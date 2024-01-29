@@ -58,7 +58,7 @@ export function SelectFieldCox(props: SelectFieldCoxProps) {
       </label>
       <select
         name={props.name}
-        key={props.key}
+        key={props.key} // "key is not a prop."
         className="flex-grow border-0 bg-inherit outline-none border-primary w-full"
         onChange={props.onChange}
         value={props.value}

@@ -1,4 +1,5 @@
 import AdditionalInfoIcon from "../miscellaneous/AdditionalInfoIcon";
+
 type InputFieldProps = {
   name: string;
   text: string;
