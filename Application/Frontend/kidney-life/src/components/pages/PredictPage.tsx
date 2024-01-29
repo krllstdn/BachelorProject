@@ -61,7 +61,7 @@ function DeceasedCoxnetPage() {
           acc[feature.name] =
             feature.type === "categorical"
               ? Object.keys(feature.possible_values || {})[0] || ""
-              : 0;
+              : "";
           return acc;
         },
         {}
@@ -87,7 +87,7 @@ function DeceasedCoxnetPage() {
     }
   }, [selectedModel]);
 
-  const sendRequest = async () => {
+  const sendPredictRequest = async () => {
     try {
       const response = await fetch(url + "prediction/predict/", {
         method: "POST",
@@ -154,7 +154,7 @@ function DeceasedCoxnetPage() {
             <SelectFieldCox
               name={feature.name}
               // label={feature.description}
-              key={feature.name}
+              // key={feature.name}
               text={feature.short_description}
               value={featureStates[feature.name]}
               description={feature.description}
@@ -172,27 +172,36 @@ function DeceasedCoxnetPage() {
                 }))}
             />
           ) : (
-            <InputField
-              name={feature.name}
-              //   label={feature.description}
-              type={feature.type}
-              key={feature.name}
-              value={featureStates[feature.name] as string}
-              text={feature.short_description}
-              description={feature.description}
-              onChange={(e) =>
-                setFeatureStates({
-                  ...featureStates,
-                  [feature.name]: e.target.value,
-                })
-              }
-            />
+            <div>
+              <InputField
+                name={feature.name}
+                //   label={feature.description}
+                type="number"
+                key={feature.name}
+                value={featureStates[feature.name] as string}
+                text={feature.short_description}
+                description={feature.description}
+                onChange={(e) =>
+                  setFeatureStates({
+                    ...featureStates,
+                    [feature.name]: e.target.value,
+                  })
+                }
+              />
+              <p className="text-red-700 text-sm ml-2">
+                {feature.short_description} should be a number
+              </p>
+              <p className="text-yellow-600 text-sm ml-2 mt-1 leading-4">
+                {feature.description} should be in range from ... to ... If are
+                sure it is correct, please ignore this warning.
+              </p>
+            </div>
           )
         )}
         <Button
           additionalStyles="mt-2 mb-2"
           name="Submit"
-          onClick={sendRequest}
+          onClick={sendPredictRequest}
         />
         <div className="float-left w-full flex mt-1">
           <p
