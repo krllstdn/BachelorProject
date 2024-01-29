@@ -6,8 +6,8 @@
     {
         "name": "ON_DIALYSIS",
         "type": "categorical",
-        "short_description": "On Dialysis?",
-        "description": "Whether or not the recipient was on dialysis prior to transplant",
+        "short_description": "On Dialysis",
+        "description": "The recipient's pre-transplant dialysis status.",
         "possible_values": {
             "Y": "Yes",
             "N": "No"
@@ -18,7 +18,7 @@
         "name": "PRE_TX_TXFUS",
         "type": "categorical",
         "short_description": "Blood Transfusions?",
-        "description": "Whether or not the recipient had pre-transplant blood transfusions",
+        "description": "The recipient's history of pre-transplant blood transfusions.",
         "possible_values": {
             "Y": "Yes",
             "N": "No"
@@ -56,7 +56,7 @@
         "name": "DIABETES_DON",
         "type": "categorical",
         "short_description": "Donor diabetes",
-        "description": "Whether or not the donor has diabetes",
+        "description": "The presence or absence of diabetes in the donor.",
         "possible_values": {
             "Y": "Yes",
             "N": "No",
@@ -68,7 +68,7 @@
         "name": "DIAB",
         "type": "categorical",
         "short_description": "Recipient diabetes",
-        "description": "Whether or not the recipient has diabetes",
+        "description": "The presence or absence of diabetes in the recipient.",
         "possible_values": {
             "1": "No",
             "2": "Type I",
@@ -83,7 +83,7 @@
         "name": "HCV_SEROSTATUS",
         "type": "categorical",
         "short_description": "Recipient Hepatitis C",
-        "description": "Whether or not the recipient has Hepatitis C",
+        "description": "The presence or absence of Hepatitis C in the recipient",
         "possible_values": {
             "N": "Negative",
             "P": "Positive",
@@ -128,7 +128,7 @@
         "name": "NPKID",
         "type": "numerical",
         "short_description": "Prev. tx number",
-        "description": "Number of previous kidney transplants",
+        "description": "Number of previous transplants",
         "stats": {"IQR": 0.0, "median": 0.0},
         "is_float": false
     },
@@ -136,7 +136,7 @@
         "name": "RDR2",
         "type": "numerical",
         "short_description": "RDR2",
-        "description": "RDR2 Antigen",
+        "description": "The number of RDR2 Antigen mismatches",
         "stats": {"IQR": 5.0, "median": 13.0},
         "is_float": false
     },
@@ -144,7 +144,7 @@
         "name": "DR53",
         "type": "numerical",
         "short_description": "DR53",
-        "description": "DR53 Antigen",
+        "description": "The number of DR53 Antigen mismatches",
         "stats": {"IQR": 96.0, "median": 0.0},
         "is_float": false
     },
@@ -152,7 +152,7 @@
         "name": "DR2",
         "type": "numerical",
         "short_description": "DR2",
-        "description": "DR2 Antigen",
+        "description": "The number of DR2 Antigen mismatches",
         "stats": {"IQR": 8.0, "median": 13.0},
         "is_float": false
     },
@@ -160,7 +160,7 @@
         "name": "COLD_ISCH_KI",
         "type": "numerical",
         "short_description": "Cold Ischemic Time (hours)",
-        "description": "Cold Ischemic Time",
+        "description": "The duration kidneys are preserved at low temperatures post-removal.",
         "stats": {"IQR": 11.13, "median": 17.0},
         "is_float": false
     },
@@ -168,7 +168,7 @@
         "name": "CREAT_DON",
         "type": "numerical",
         "short_description": "Donor creatinine (mg/dL)",
-        "description": "Donor creatinine at transplant",
+        "description": "Donor serum creatinine at transplant",
         "stats": {"IQR": 0.6, "median": 0.96},
         "is_float": true
     }

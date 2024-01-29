@@ -7,7 +7,7 @@
             "name": "PRE_TX_TXFUS",
             "type": "categorical",
             "short_description": "Blood Transfusions?",
-            "description": "Whether or not the recipient had pre-transplant blood transfusions",
+            "description": "The recipient's history of pre-transplant blood transfusions.",
             "possible_values": {
                 "Y": "Yes",
                 "N": "No"
@@ -29,7 +29,7 @@
             "name": "ON_DIALYSIS",
             "type": "categorical",
             "short_description": "On Dialysis?",
-            "description": "Whether or not the recipient was on dialysis prior to transplant",
+            "description": "The recipient's pre-transplant dialysis status.",
             "possible_values": {
                 "Y": "Yes",
                 "N": "No"
@@ -199,7 +199,7 @@
             "name": "NPKID",
             "type": "numerical",
             "short_description": "Prev. tx number",
-            "description": "Number of previous kidney transplants",
+            "description": "Number of previous transplants",
             "stats": {"IQR": 0.0, "median": 0.0},
             "is_float": false
         },
