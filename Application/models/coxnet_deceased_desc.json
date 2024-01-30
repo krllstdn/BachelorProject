@@ -133,44 +133,12 @@
         "is_float": false
     },
     {
-        "name": "RDR2",
-        "type": "numerical",
-        "short_description": "RDR2",
-        "description": "The number of RDR2 Antigen mismatches",
-        "stats": {"IQR": 5.0, "median": 13.0},
-        "is_float": false
-    },
-    {
-        "name": "DR53",
-        "type": "numerical",
-        "short_description": "DR53",
-        "description": "The number of DR53 Antigen mismatches",
-        "stats": {"IQR": 96.0, "median": 0.0},
-        "is_float": false
-    },
-    {
-        "name": "DR2",
-        "type": "numerical",
-        "short_description": "DR2",
-        "description": "The number of DR2 Antigen mismatches",
-        "stats": {"IQR": 8.0, "median": 13.0},
-        "is_float": false
-    },
-    {
         "name": "COLD_ISCH_KI",
         "type": "numerical",
         "short_description": "Cold Ischemic Time (hours)",
         "description": "The duration kidneys are preserved at low temperatures post-removal.",
         "stats": {"IQR": 11.13, "median": 17.0},
         "is_float": false
-    },
-    {
-        "name": "CREAT_DON",
-        "type": "numerical",
-        "short_description": "Donor creatinine (mg/dL)",
-        "description": "Donor serum creatinine at transplant",
-        "stats": {"IQR": 0.6, "median": 0.96},
-        "is_float": true
     }
 ]
 }

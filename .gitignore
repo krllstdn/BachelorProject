@@ -9,6 +9,8 @@ Code/surv_data_pipeline/__pycache__/
 
 Application/models/*.pickle
 Application/Backend/prediction/pickles/
+Application/Backend/prediction/models/
+Application/Backend/.env
 
 Application/Application.zip
 Application/.dev.env
