@@ -95,7 +95,12 @@ def generate_synthetic_categorical_data(feature):
     categories = list(freq_dict.keys())
     probabilities = list(freq_dict.values())
 
-    synthetic_data = np.random.choice(categories, size=1, p=probabilities)[0]
+    try:
+        synthetic_data = np.random.choice(categories, size=1, p=probabilities)[0]
+    except ValueError:
+        raise ValueError(
+            f"Probabilities do not sum to 1 for feature {feature['name']}. Probabilities: {probabilities}"
+        )
 
     return synthetic_data
 
