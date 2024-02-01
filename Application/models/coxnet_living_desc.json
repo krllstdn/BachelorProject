@@ -42,11 +42,11 @@
             "short_description": "Donor recipient blood type match",
             "description": "Donor recipient blood type match",
             "possible_values": {
-                "1": "Identical",
-                "2": "Compatible",
-                "3": "Incompatible"
+                "1.0": "Identical",
+                "2.0": "Compatible",
+                "3.0": "Incompatible"
             },
-            "freq": {"1": 0.75, "2": 0.23, "3": 0.02}
+            "freq": {"1.0": 0.75, "2.0": 0.23, "3.0": 0.02}
         },
         {
             "name": "ETHCAT",
@@ -70,15 +70,15 @@
             "short_description": "Donor ethnicity",
             "description": "Donor ethnicity",
             "possible_values": {
-                "1": "White, non-Hispanic",
-                "2": "Black, non-Hispanic",
-                "4": "Hispanic/Latino",
-                "5": "Asian, non-Hispanic",
-                "6": "American Indian/Alaska Native, non-Hispanic",
-                "7": "Native Hawaiian/Other Pacific Islander, non-Hispanic",
-                "9": "Multiracial, non-Hispanic"        
+                "1.0": "White, non-Hispanic",
+                "2.0": "Black, non-Hispanic",
+                "4.0": "Hispanic/Latino",
+                "5.0": "Asian, non-Hispanic",
+                "6.0": "American Indian/Alaska Native, non-Hispanic",
+                "7.0": "Native Hawaiian/Other Pacific Islander, non-Hispanic",
+                "9.0": "Multiracial, non-Hispanic"        
             },
-            "freq":{"1": 0.7, "4": 0.14, "2": 0.12, "5": 0.04, "9": 0.0, "6": 0.0, "7": 0.0}
+            "freq":{"1.0": 0.7, "4.0": 0.14, "2.0": 0.12, "5.0": 0.04, "9.0": 0.0, "6.0": 0.0, "7.0": 0.0}
         },
         {
             "name": "HBV_CORE",
@@ -98,14 +98,14 @@
             "short_description": "Recipient diabetes",
             "description": "Whether or not the recipient has diabetes",
             "possible_values": {
-                "1": "No",
-                "2": "Type I",
-                "3": "Type II",
-                "4": "Type other",
-                "5": "Type unknown",
-                "998": "Unknown"
+                "1.0": "No",
+                "2.0": "Type I",
+                "3.0": "Type II",
+                "4.0": "Type other",
+                "5.0": "Type unknown",
+                "998.0": "Unknown"
             },
-            "freq": {"1": 0.72, "3": 0.19, "2": 0.06, "5": 0.02, "998": 0.01, "4": 0.0}
+            "freq": {"1.0": 0.72, "3.0": 0.19, "2.0": 0.06, "5.0": 0.02, "998.0": 0.01, "4.0": 0.0}
         },
         {
             "name":"HBV_SUR_ANTIGEN",
@@ -138,37 +138,40 @@
             "short_description": "Donor type",
             "description": "Donor type",
             "possible_values": {
-                "1": "Biological, blood related Parent",
-                "2": "Biological, blood related Child",
-                "3": "Biological, blood related Identical Twin",
-                "4": "Biological, blood related Full Sibling",
-                "5": "Biological, blood related Half Sibling",
-                "6": "Biological, blood related Other Relative",
-                "7": "Non-Biological, Spouse",
-                "8": "Non-Biological, Life Partner",
-                "9": "Non-Biol,unrel: Paired Donation",
-                "10": "Non-Biol,unrel: Anonymous Donation",
-                "11": "Non-Biol,Living/Deceased Donor Donation",
-                "12": "Non-Biological, Unrelated: Domino",
-                "13": "Biological, blood related: Domino",
-                "14": "Biological, blood related: Non-Domino Therapeutic donor",
-                "15": "Non-Biological, Unrelated: Non-Domino Therapeutic donor",
-                "998": "Non-Biological, Other Unrelated Directed Donation"
+                "1.0": "Biological, blood related Parent",
+                "2.0": "Biological, blood related Child",
+                "3.0": "Biological, blood related Identical Twin",
+                "4.0": "Biological, blood related Full Sibling",
+                "5.0": "Biological, blood related Half Sibling",
+                "6.0": "Biological, blood related Other Relative",
+                "7.0": "Non-Biological, Spouse",
+                "8.0": "Non-Biological, Life Partner",
+                "9.0": "Non-Biol,unrel: Paired Donation",
+                "10.0": "Non-Biol,unrel: Anonymous Donation",
+                "11.0": "Non-Biol,Living/Deceased Donor Donation",
+                "12.0": "Non-Biological, Unrelated: Domino",
+                "13.0": "Biological, blood related: Domino",
+                "14.0": "Biological, blood related: Non-Domino Therapeutic donor",
+                "15.0": "Non-Biological, Unrelated: Non-Domino Therapeutic donor",
+                "998.0": "Non-Biological, Other Unrelated Directed Donation"
             },
             "freq": {
-                "999": 0.22,
-                "4": 0.22,
-                "2": 0.17,
-                "7": 0.12,
-                "6": 0.07,
-                "9": 0.07,
-                "1": 0.06,
-                "10": 0.03,
-                "11": 0.02,
-                "5": 0.01,
-                "8": 0.01,
-                "3": 0.0,
-                "12": 0.0
+                "998.0": 0.22,
+                "4.0": 0.22,
+                "2.0": 0.17,
+                "7.0": 0.12,
+                "6.0": 0.07,
+                "9.0": 0.07,
+                "1.0": 0.06,
+                "10.0": 0.03,
+                "11.0": 0.02,
+                "5.0": 0.01,
+                "8.0": 0.01,
+                "3.0": 0.0,
+                "12.0": 0.0,
+                "13.0": 0.0,
+                "14.0": 0.0,
+                "15.0": 0.0
               }
         },
         {
@@ -176,7 +179,7 @@
             "type": "numerical",
             "short_description": "Donor pre-op creatinine (mg/dL)",
             "description": "Living donor preoperative serum creatinine (mg/dL)",
-            "stats": {"IQR": 0.3, "median": 0.8},
+            "stats": {"IQR": 0.3, "median": 0.8, "min": 0.1, "max": 9.7},
             "is_float": true
         }, 
         {
@@ -184,7 +187,7 @@
             "type": "numerical",
             "short_description": "Recipient creatinine at discharge (mg/dL)",
             "description": "Recipient creatinine at discharge (mg/dL)",
-            "stats": {"IQR": 0.82, "median": 1.4},
+            "stats": {"IQR": 0.82, "median": 1.4, "min": 0.1, "max": 9.95},
             "is_float": true
         }, 
         {
@@ -192,7 +195,7 @@
             "type": "numerical",
             "short_description": "B Locus mismatch level",
             "description": "B Locus mismatch level",
-            "stats": {"IQR": 1.0, "median": 1.0},
+            "stats": {"IQR": 1.0, "median": 1.0, "max": 2, "min": 0},
             "is_float": false
         }, 
         {
@@ -200,7 +203,7 @@
             "type": "numerical",
             "short_description": "Prev. tx number",
             "description": "Number of previous transplants",
-            "stats": {"IQR": 0.0, "median": 0.0},
+            "stats": {"IQR": 0.0, "median": 0.0, "min": 0, "max": 4},
             "is_float": false
         },
         {
@@ -208,7 +211,7 @@
             "type": "numerical",
             "short_description": "Recipient age",
             "description": "Recipient age at transplant",
-            "stats": {"IQR": 21.0, "median": 49.0},
+            "stats": {"IQR": 21.0, "median": 49.0, "min": 18, "max": 85},
             "is_float": false
         },
         {
@@ -216,7 +219,7 @@
             "type": "numerical",
             "short_description": "Recipient height (CM)",
             "description": "Recipient height in centimeters",
-            "stats": {"IQR": 15.4, "median": 171.0},
+            "stats": {"IQR": 15.4, "median": 171.0, "min": 112, "max": 213},
             "is_float": false
         },
         {
@@ -224,7 +227,7 @@
             "type": "numerical",
             "short_description": "Donor BMI",
             "description": "Donor BMI",
-            "stats": {"IQR": 5.97, "median": 26.63},
+            "stats": {"IQR": 5.97, "median": 26.63, "min": 15, "max": 70},
             "is_float": true
         },
         {
@@ -232,7 +235,7 @@
             "type": "numerical",
             "short_description": "Donor age",
             "description": "Donor age at transplant",
-            "stats": {"IQR": 19.0, "median": 42.0},
+            "stats": {"IQR": 19.0, "median": 42.0, "min":17, "max":76 },
             "is_float": false
         }
     ]}
