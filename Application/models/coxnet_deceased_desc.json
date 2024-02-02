@@ -97,7 +97,7 @@
         "type": "numerical",
         "short_description": "Recipient age",
         "description": "Recipient age at transplant",
-        "stats": {"IQR": 19.0, "median": 53.0},
+        "stats": {"IQR": 19.0, "median": 53.0, "q10": 33, "q90": 68},
         "is_float": false
     },
     {
@@ -105,7 +105,7 @@
         "type": "numerical",
         "short_description": "Recipient BMI",
         "description": "Recipient BMI at transplant",
-        "stats": {"IQR": 7.5, "median": 27.3},
+        "stats": {"IQR": 7.5, "median": 27.3, "q10": 21.1, "q90": 35.2},
         "is_float": true
     },
     {
@@ -113,7 +113,7 @@
         "type": "numerical",
         "short_description": "Donor age",
         "description": "Donor age at transplant",
-        "stats": {"IQR": 27.0, "median": 40.0},
+        "stats": {"IQR": 27.0, "median": 40.0, "q10": 17, "q90": 59},
         "is_float": false
     },
     {
@@ -121,7 +121,7 @@
         "type": "numerical",
         "short_description": "Recipient creatinine (mg/dL)",
         "description": "Recipient creatinine at transplant",
-        "stats": {"IQR": 4.6, "median": 7.82},
+        "stats": {"IQR": 4.6, "median": 7.82, "q10": 4.2, "q90": 12.8},
         "is_float": true
     },
     {
@@ -129,7 +129,7 @@
         "type": "numerical",
         "short_description": "Prev. tx number",
         "description": "Number of previous transplants",
-        "stats": {"IQR": 0.0, "median": 0.0},
+        "stats": {"IQR": 0.0, "median": 0.0, "q10": 0, "q90": 1},
         "is_float": false
     },
     {
@@ -137,7 +137,7 @@
         "type": "numerical",
         "short_description": "Cold Ischemic Time (hours)",
         "description": "The duration kidneys are preserved at low temperatures post-removal.",
-        "stats": {"IQR": 11.13, "median": 17.0},
+        "stats": {"IQR": 11.13, "median": 17.0, "q10": 8, "q90": 29},
         "is_float": false
     }
 ]

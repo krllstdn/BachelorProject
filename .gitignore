@@ -12,10 +12,11 @@ Application/Backend/prediction/pickles/
 Application/Backend/prediction/models/
 Application/Backend/.env
 
+Application/Frontend/kidney-life/src/models/
+Application/Frontend/kidney-life/.env
+
 Application/Application.zip
 Application/.dev.env
 Application/.prod.env
-Application/Frontend/kidney-life/src/models/
-Application/Frontend/kidney-life/.env
 Application/.env
 Application/deploy-config.sh
