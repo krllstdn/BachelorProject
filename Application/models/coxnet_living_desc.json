@@ -130,7 +130,7 @@
                 "ND": "Not Done",
                 "U": "Unknown"
             },
-            "freq": {"N": 0.97, "P": 0.02, "ND": 0.01}
+            "freq": {"N": 0.97, "P": 0.02, "ND": 0.01, "U": 0.0}
         },
         {
             "name": "LIV_DON_TY",
@@ -179,7 +179,7 @@
             "type": "numerical",
             "short_description": "Donor pre-op creatinine (mg/dL)",
             "description": "Living donor preoperative serum creatinine (mg/dL)",
-            "stats": {"IQR": 0.3, "median": 0.8, "min": 0.1, "max": 9.7},
+            "stats": {"IQR": 0.3, "median": 0.8, "q10": 0.6, "q90": 1.1},
             "is_float": true
         }, 
         {
@@ -187,7 +187,7 @@
             "type": "numerical",
             "short_description": "Recipient creatinine at discharge (mg/dL)",
             "description": "Recipient creatinine at discharge (mg/dL)",
-            "stats": {"IQR": 0.82, "median": 1.4, "min": 0.1, "max": 9.95},
+            "stats": {"IQR": 0.82, "median": 1.4, "q10": 0.83, "q90": 2.8},
             "is_float": true
         }, 
         {
@@ -195,7 +195,7 @@
             "type": "numerical",
             "short_description": "B Locus mismatch level",
             "description": "B Locus mismatch level",
-            "stats": {"IQR": 1.0, "median": 1.0, "max": 2, "min": 0},
+            "stats": {"IQR": 1.0, "median": 1.0, "q10": 0.0, "q90": 2.0},
             "is_float": false
         }, 
         {
@@ -203,7 +203,7 @@
             "type": "numerical",
             "short_description": "Prev. tx number",
             "description": "Number of previous transplants",
-            "stats": {"IQR": 0.0, "median": 0.0, "min": 0, "max": 4},
+            "stats": {"IQR": 0.0, "median": 0.0, "q10": 0.0, "q90": 0.0},
             "is_float": false
         },
         {
@@ -211,7 +211,7 @@
             "type": "numerical",
             "short_description": "Recipient age",
             "description": "Recipient age at transplant",
-            "stats": {"IQR": 21.0, "median": 49.0, "min": 18, "max": 85},
+            "stats": {"IQR": 21.0, "median": 49.0, "q10": 28.0, "q90": 66.0},
             "is_float": false
         },
         {
@@ -219,7 +219,7 @@
             "type": "numerical",
             "short_description": "Recipient height (CM)",
             "description": "Recipient height in centimeters",
-            "stats": {"IQR": 15.4, "median": 171.0, "min": 112, "max": 213},
+            "stats": {"IQR": 15.4, "median": 171.0, "q10": 157.5, "q90": 185.4},
             "is_float": false
         },
         {
@@ -227,7 +227,7 @@
             "type": "numerical",
             "short_description": "Donor BMI",
             "description": "Donor BMI",
-            "stats": {"IQR": 5.97, "median": 26.63, "min": 15, "max": 70},
+            "stats": {"IQR": 5.97, "median": 26.63, "q10": 21.6, "q90": 32.5},
             "is_float": true
         },
         {
@@ -235,7 +235,7 @@
             "type": "numerical",
             "short_description": "Donor age",
             "description": "Donor age at transplant",
-            "stats": {"IQR": 19.0, "median": 42.0, "min":17, "max":76 },
+            "stats": {"IQR": 19.0, "median": 42.0, "q10": 26.0, "q90": 57.0},
             "is_float": false
         }
     ]}
