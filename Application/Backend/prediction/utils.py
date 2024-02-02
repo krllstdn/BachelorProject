@@ -115,12 +115,16 @@ def generate_synthetic_numerical_data(feature):
     Returns:
         float: Synthetic numerical data.
     """
-    synthetic_data = np.random.normal(
-        loc=feature["stats"]["median"], scale=feature["stats"]["IQR"], size=1
-    )[0]
-    synthetic_data = np.clip(synthetic_data, 0, None)
+    median = feature["stats"]["median"]
+    iqr = feature["stats"]["IQR"]
+    std = iqr / (2 * 0.6745)
 
-    if feature["type"] == "float":
+    synthetic_data = np.random.normal(loc=median, scale=std, size=1)[0]
+
+    synthetic_data = np.clip(
+        synthetic_data, feature["stats"]["q10"], feature["stats"]["q90"]
+    )
+    if feature["is_float"] == True:
         synthetic_data = np.round(synthetic_data, 2)
     else:
         synthetic_data = np.round(synthetic_data)
