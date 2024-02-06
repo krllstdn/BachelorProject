@@ -37,6 +37,11 @@ interface Feature {
   short_description: string;
   description: string;
   possible_values?: PossibleValues;
+  is_float?: boolean;
+  stats?: {
+    q10: number;
+    q90: number;
+  };
 }
 
 interface ModelInfo {
@@ -49,6 +54,31 @@ interface FeatureStates {
   [key: string]: string | number;
 }
 
+const Errors = {
+  NOT_NUMBER: "This field should be a number",
+  NOT_IN_RANGE: "This field should be in range",
+  NOT_INT: "This field should be integer",
+  NOT_FLOAT: "This field should be float",
+  NOT_SELECTED: "This field should be selected",
+  WRONG_SELECT: "This field should be selected from the list",
+};
+
+enum ErrorTypes {
+  NOT_NUMBER = "NOT_NUMBER", // onChange
+  NOT_IN_RANGE = "NOT_IN_RANGE", // onChange
+  NOT_INT = "NOT_INT", // onChange
+  NOT_FLOAT = "NOT_FLOAT",
+  NEGATIVE = "NEGATIVE",
+  NOT_SELECTED = "NOT_SELECTED", // onSubmit
+  WRONG_SELECT = "WRONG_SELECT", // onSubmit
+  VALID = "VALID",
+  NONE = "NONE",
+}
+
+interface FeatureValidity {
+  [key: string]: ErrorTypes;
+}
+
 function DeceasedCoxnetPage() {
   // TODO: validator if data is in range
   // TODO: add a question button to the graph to explain what survival curve is
@@ -58,10 +88,22 @@ function DeceasedCoxnetPage() {
     if (Array.isArray(features.features)) {
       return features.features.reduce<{ [key: string]: string | number }>(
         (acc, feature) => {
-          acc[feature.name] =
-            feature.type === "categorical"
-              ? Object.keys(feature.possible_values || {})[0] || ""
-              : "";
+          acc[feature.name] = "";
+          return acc;
+        },
+        {}
+      );
+    }
+    return {};
+  };
+
+  const getFeaturesStateValidity = (model: MODELS) => {
+    const features = MODEL_DESCRIPTIONS[model];
+
+    if (Array.isArray(features.features)) {
+      return features.features.reduce<{ [key: string]: ErrorTypes }>(
+        (acc, feature) => {
+          acc[feature.name] = ErrorTypes.NONE;
           return acc;
         },
         {}
@@ -76,16 +118,51 @@ function DeceasedCoxnetPage() {
   const [featureStates, setFeatureStates] = useState<FeatureStates>(
     getUpdatedFeatures(MODELS.COXNET_DECEASED)
   );
+  const [featureValidity, setFeatureValidity] = useState<FeatureValidity>(
+    getFeaturesStateValidity(MODELS.COXNET_DECEASED)
+  );
+  console.log(featureValidity);
   const [xValues, setXValues] = useState([]);
   const [yValues, setYValues] = useState([]);
 
   useEffect(() => {
     if (selectedModel === MODELS.COXNET_DECEASED) {
       setFeatureStates(getUpdatedFeatures(MODELS.COXNET_DECEASED));
+      setFeatureValidity(getFeaturesStateValidity(MODELS.COXNET_DECEASED));
     } else {
       setFeatureStates(getUpdatedFeatures(MODELS.COXNET_LIVING));
+      setFeatureValidity(getFeaturesStateValidity(MODELS.COXNET_LIVING));
     }
   }, [selectedModel]);
+
+  const validateFeature = (feature: Feature, value: string) => {
+    // console.log(feature.type);
+    if (feature.type === "categorical" && feature.possible_values) {
+      if (feature.possible_values[value as string] === undefined) {
+        // TODO: check its validity
+        return ErrorTypes.WRONG_SELECT;
+      }
+    } else {
+      // console.log("first");
+      if (!/^\d*\.?\d+$/.test(value)) {
+        return ErrorTypes.NOT_NUMBER;
+      }
+      console.log("sadasd");
+      const num = Number(value);
+      if (feature.is_float && Number.isInteger(num)) {
+        return ErrorTypes.NOT_FLOAT;
+      } else if (!feature.is_float && !Number.isInteger(num)) {
+        return ErrorTypes.NOT_INT;
+      } else if (
+        feature.stats &&
+        (num < feature.stats.q10 || num > feature.stats.q90)
+      ) {
+        return ErrorTypes.NOT_IN_RANGE;
+      }
+    }
+    console.log("second");
+    return ErrorTypes.VALID;
+  };
 
   const sendPredictRequest = async () => {
     try {
@@ -161,7 +238,7 @@ function DeceasedCoxnetPage() {
               onChange={(e) =>
                 setFeatureStates({
                   ...featureStates,
-                  [feature.name]: e.target.value,
+                  [feature.name]: e.target.value, // TODO: add validation
                 })
               }
               options={Object.entries(feature.possible_values || {})
@@ -176,25 +253,46 @@ function DeceasedCoxnetPage() {
               <InputField
                 name={feature.name}
                 //   label={feature.description}
-                type="number"
+                type="text"
                 key={feature.name}
                 value={featureStates[feature.name] as string}
                 text={feature.short_description}
                 description={feature.description}
-                onChange={(e) =>
-                  setFeatureStates({
-                    ...featureStates,
-                    [feature.name]: e.target.value,
-                  })
+                onChange={
+                  (e) => {
+                    setFeatureStates({
+                      ...featureStates,
+                      [feature.name]: e.target.value, // TODO: add validation for not a number
+                    });
+                    // console.log("first");
+                    setFeatureValidity({
+                      ...featureValidity,
+                      [feature.name]: validateFeature(feature, e.target.value),
+                    });
+                  } // onBlur
                 }
               />
-              <p className="text-red-700 text-sm ml-2">
-                {feature.short_description} should be a number
-              </p>
-              <p className="text-yellow-600 text-sm ml-2 mt-1 leading-4">
-                {feature.description} should be in range from ... to ... If are
-                sure it is correct, please ignore this warning.
-              </p>
+              {featureValidity[feature.name] === ErrorTypes.NOT_NUMBER && (
+                <p className="text-red-700 text-sm ml-2">
+                  {feature.short_description} should be a number
+                </p>
+              )}
+              {featureValidity[feature.name] === ErrorTypes.NOT_IN_RANGE && (
+                <p className="text-yellow-600 text-sm ml-2 mt-1 leading-4">
+                  {feature.description} should be in range from ... to ... If
+                  are sure it is correct, please ignore this warning.
+                </p>
+              )}
+              {featureValidity[feature.name] === ErrorTypes.NOT_INT && (
+                <p className="text-red-700 text-sm ml-2">
+                  {feature.short_description} should be an integer
+                </p>
+              )}
+              {featureValidity[feature.name] === ErrorTypes.NOT_FLOAT && (
+                <p className="text-red-700 text-sm ml-2">
+                  {feature.short_description} should be a float
+                </p>
+              )}
             </div>
           )
         )}
