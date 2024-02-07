@@ -3,121 +3,29 @@ import InputField from "../forms/InputField";
 import { SelectFieldCox } from "../forms/SelectField";
 import ModalContainer from "../wrappers/ModalContainer";
 import Button from "../buttons/Button";
+import PlotComponent from "../layout/Plot";
+import {
+  url,
+  MODELS,
+  MODEL_DESCRIPTIONS,
+  Feature,
+  FeatureStates,
+  ErrorTypes,
+  formValidityTypes,
+  FeatureValidity,
+} from "../types";
+import { sendPredictRequest, getSyntheticData } from "../utils/apiService";
+import { validateFeature, validatePreSubmit } from "../utils/formValidation";
+import {
+  getUpdatedFeatures,
+  getFeaturesStateValidity,
+} from "../utils/featuresUtils";
 
-import coxnet_deceased_features from "../../models/coxnet_deceased_desc.json";
-import coxnet_living_features from "../../models/coxnet_living_desc.json";
-
-import Plot from "react-plotly.js";
 import { Tooltip } from "react-tooltip";
 import AdditionalInfoIcon from "../miscellaneous/AdditionalInfoIcon";
 
-const be_host = process.env.REACT_APP_BE_HOST;
-const url = "http://" + be_host + "/api/";
-
-enum MODELS {
-  COXNET_DECEASED = "COXNET_DECEASED",
-  COXNET_LIVING = "COXNET_LIVING",
-}
-type ModelDescriptions = {
-  [key in keyof typeof MODELS]: ModelInfo;
-};
-
-const MODEL_DESCRIPTIONS: ModelDescriptions = {
-  COXNET_DECEASED: coxnet_deceased_features,
-  COXNET_LIVING: coxnet_living_features,
-};
-
-interface PossibleValues {
-  [key: string]: string | undefined;
-}
-
-interface Feature {
-  name: string;
-  type: string;
-  short_description: string;
-  description: string;
-  possible_values?: PossibleValues;
-  is_float?: boolean;
-  stats?: {
-    q10: number;
-    q90: number;
-  };
-}
-
-interface ModelInfo {
-  model_pickle_path: string;
-  model_file_name: string;
-  features: Feature[];
-}
-
-interface FeatureStates {
-  [key: string]: string | number;
-}
-
-const Errors = {
-  NOT_NUMBER: "This field should be a number",
-  NOT_IN_RANGE: "This field should be in range",
-  NOT_INT: "This field should be integer",
-  NOT_FLOAT: "This field should be float",
-  NOT_SELECTED: "This field should be selected",
-  WRONG_SELECT: "This field should be selected from the list",
-};
-
-enum ErrorTypes {
-  NOT_NUMBER = "NOT_NUMBER", // onChange
-  NOT_IN_RANGE = "NOT_IN_RANGE", // onChange
-  NOT_INT = "NOT_INT", // onChange
-  NOT_FLOAT = "NOT_FLOAT",
-  NEGATIVE = "NEGATIVE",
-  EMPTY = "EMPTY", // onSubmit
-  NOT_SELECTED = "NOT_SELECTED", // onSubmit
-  WRONG_SELECT = "WRONG_SELECT", // onSubmit
-  VALID = "VALID",
-  NONE = "NONE",
-}
-
-enum formValidityTypes {
-  VALID = "VALID",
-  INVALID = "INVALID",
-  NONE = "NONE",
-}
-
-interface FeatureValidity {
-  [key: string]: ErrorTypes;
-}
-
 function DeceasedCoxnetPage() {
-  // TODO: validator if data is in range
   // TODO: add a question button to the graph to explain what survival curve is
-  const getUpdatedFeatures = (model: MODELS) => {
-    const features = MODEL_DESCRIPTIONS[model];
-
-    if (Array.isArray(features.features)) {
-      return features.features.reduce<{ [key: string]: string | number }>(
-        (acc, feature) => {
-          acc[feature.name] = "";
-          return acc;
-        },
-        {}
-      );
-    }
-    return {};
-  };
-
-  const getFeaturesStateValidity = (model: MODELS) => {
-    const features = MODEL_DESCRIPTIONS[model];
-
-    if (Array.isArray(features.features)) {
-      return features.features.reduce<{ [key: string]: ErrorTypes }>(
-        (acc, feature) => {
-          acc[feature.name] = ErrorTypes.NONE;
-          return acc;
-        },
-        {}
-      );
-    }
-    return {};
-  };
 
   const [selectedModel, setSelectedModel] = useState<MODELS>(
     MODELS.COXNET_DECEASED
@@ -131,8 +39,8 @@ function DeceasedCoxnetPage() {
   const [formValidity, setFormValidity] = useState<formValidityTypes>(
     formValidityTypes.NONE
   );
-  const [xValues, setXValues] = useState([]);
-  const [yValues, setYValues] = useState([]);
+  const [xValues, setXValues] = useState<number[]>([]);
+  const [yValues, setYValues] = useState<number[]>([]);
 
   useEffect(() => {
     if (selectedModel === MODELS.COXNET_DECEASED) {
@@ -143,109 +51,6 @@ function DeceasedCoxnetPage() {
       setFeatureValidity(getFeaturesStateValidity(MODELS.COXNET_LIVING));
     }
   }, [selectedModel]);
-
-  const validateFeature = (feature: Feature, value: string) => {
-    if (feature.type === "categorical" && feature.possible_values) {
-      if (feature.possible_values[value as string] === undefined) {
-        // TODO: check its validity
-        return ErrorTypes.WRONG_SELECT;
-      }
-    } else {
-      if (!/^-?\d*\.?\d+$/.test(value)) {
-        return ErrorTypes.NOT_NUMBER;
-      }
-
-      const isFloat = value.includes(".");
-      const num = isFloat ? parseFloat(value) : parseInt(value, 10);
-      if (feature.is_float && !isFloat) {
-        return ErrorTypes.NOT_FLOAT;
-      } else if (!feature.is_float && isFloat) {
-        return ErrorTypes.NOT_INT;
-      } else if (num < 0) {
-        return ErrorTypes.NEGATIVE;
-      } else if (
-        feature.stats &&
-        (num < feature.stats.q10 || num > feature.stats.q90)
-      ) {
-        return ErrorTypes.NOT_IN_RANGE;
-      }
-    }
-    console.log("second");
-    return ErrorTypes.VALID;
-  };
-
-  const validatePreSubmit = () => {
-    const featureDescriptions: Feature[] =
-      MODEL_DESCRIPTIONS[selectedModel].features;
-    let formValidity = formValidityTypes.VALID;
-    const updatedFeatureValidity: FeatureValidity = {};
-    console.log(featureValidity);
-
-    for (const feature in featureValidity) {
-      if (featureValidity[feature] === ErrorTypes.NONE) {
-        const featureDesc = featureDescriptions.find((f) => f.name === feature);
-        console.log("inside loop");
-        if (featureDesc?.type === "categorical") {
-          updatedFeatureValidity[feature] = ErrorTypes.NOT_SELECTED;
-          formValidity = formValidityTypes.INVALID;
-        } else {
-          updatedFeatureValidity[feature] = ErrorTypes.EMPTY;
-          formValidity = formValidityTypes.INVALID;
-        }
-      } else if (featureValidity[feature] !== ErrorTypes.VALID) {
-        formValidity = formValidityTypes.INVALID;
-      }
-    }
-    setFeatureValidity({ ...featureValidity, ...updatedFeatureValidity });
-    setFormValidity(formValidity);
-  };
-
-  const sendPredictRequest = async () => {
-    try {
-      const response = await fetch(url + "prediction/predict/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model_name: selectedModel,
-          features: featureStates,
-        }),
-      });
-      if (!response.ok) {
-        throw new Error("Request failed");
-      }
-
-      const data = await response.json();
-
-      setXValues(data.x_values);
-      setYValues(data.y_values);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const getSyntheticData = async () => {
-    try {
-      const response = await fetch(url + "prediction/synthetic/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model_name: selectedModel,
-        }),
-      });
-      if (!response.ok) {
-        throw new Error("Request failed");
-      }
-
-      const data = await response.json();
-      setFeatureStates(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
   return (
     <div className="flex justify-evenly flex-grow h-full">
@@ -362,21 +167,31 @@ function DeceasedCoxnetPage() {
           additionalStyles="mt-2 mb-2"
           name="Submit"
           onClick={() => {
-            validatePreSubmit();
+            validatePreSubmit(
+              selectedModel,
+              featureValidity,
+              setFeatureValidity,
+              setFormValidity
+            );
             if (formValidity === formValidityTypes.VALID) {
-              sendPredictRequest();
+              sendPredictRequest(
+                selectedModel,
+                featureStates,
+                setXValues,
+                setYValues
+              );
             }
           }}
         />
         {formValidity === formValidityTypes.INVALID && (
-          <p className="text-red-700 text-sm ml-2">
+          <p className="text-red-700 text-md ml-2">
             Please fill all fields correctly
           </p>
         )}
         <div className="float-left w-full flex mt-1">
           <p
             className="cursor-pointer text-sm hover:underline inline-block mr-3"
-            onClick={getSyntheticData}
+            onClick={() => getSyntheticData(selectedModel, setFeatureStates)}
           >
             Generate synthetic data
           </p>
@@ -387,32 +202,7 @@ function DeceasedCoxnetPage() {
           />
         </div>
       </ModalContainer>
-      <div className="survivalCurve w-7/12 h-5/6 mt-24 rounded-md bg-secondaryLight">
-        <Plot
-          style={{ width: "100%", height: 600 }}
-          data={[
-            {
-              x: xValues,
-              y: yValues,
-              type: "scatter",
-              mode: "lines",
-              line: { color: "031d44" },
-            },
-          ]}
-          layout={{
-            autosize: true,
-            hoverlabel: {
-              bgcolor: "rgba(3, 29, 68, .9)",
-            },
-            title: "Survival Function",
-            plot_bgcolor: "rgba(255, 255, 255, 0.00)",
-            paper_bgcolor: "rgba(255, 255, 255, 0.0)",
-            xaxis: { title: "Time (Days)" },
-            yaxis: { title: "Survival Probability" },
-          }}
-          config={{ responsive: true }}
-        />
-      </div>
+      <PlotComponent xValues={xValues} yValues={yValues} />
       <Tooltip
         id="tooltip"
         place="right"
