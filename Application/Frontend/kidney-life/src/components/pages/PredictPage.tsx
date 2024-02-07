@@ -69,6 +69,7 @@ enum ErrorTypes {
   NOT_INT = "NOT_INT", // onChange
   NOT_FLOAT = "NOT_FLOAT",
   NEGATIVE = "NEGATIVE",
+  EMPTY = "EMPTY", // onSubmit
   NOT_SELECTED = "NOT_SELECTED", // onSubmit
   WRONG_SELECT = "WRONG_SELECT", // onSubmit
   VALID = "VALID",
@@ -136,23 +137,24 @@ function DeceasedCoxnetPage() {
   }, [selectedModel]);
 
   const validateFeature = (feature: Feature, value: string) => {
-    // console.log(feature.type);
     if (feature.type === "categorical" && feature.possible_values) {
       if (feature.possible_values[value as string] === undefined) {
         // TODO: check its validity
         return ErrorTypes.WRONG_SELECT;
       }
     } else {
-      // console.log("first");
-      if (!/^\d*\.?\d+$/.test(value)) {
+      if (!/^-?\d*\.?\d+$/.test(value)) {
         return ErrorTypes.NOT_NUMBER;
       }
-      console.log("sadasd");
-      const num = Number(value);
-      if (feature.is_float && Number.isInteger(num)) {
+
+      const isFloat = value.includes(".");
+      const num = isFloat ? parseFloat(value) : parseInt(value, 10);
+      if (feature.is_float && !isFloat) {
         return ErrorTypes.NOT_FLOAT;
-      } else if (!feature.is_float && !Number.isInteger(num)) {
+      } else if (!feature.is_float && isFloat) {
         return ErrorTypes.NOT_INT;
+      } else if (num < 0) {
+        return ErrorTypes.NEGATIVE;
       } else if (
         feature.stats &&
         (num < feature.stats.q10 || num > feature.stats.q90)
@@ -281,6 +283,16 @@ function DeceasedCoxnetPage() {
                 <p className="text-yellow-600 text-sm ml-2 mt-1 leading-4">
                   {feature.description} should be in range from ... to ... If
                   are sure it is correct, please ignore this warning.
+                </p>
+              )}
+              {featureValidity[feature.name] === ErrorTypes.NEGATIVE && (
+                <p className="text-red-700 text-sm ml-2">
+                  {feature.short_description} should be non-negative
+                </p>
+              )}
+              {featureValidity[feature.name] === ErrorTypes.EMPTY && (
+                <p className="text-red-700 text-sm ml-2">
+                  {feature.short_description} should not be empty
                 </p>
               )}
               {featureValidity[feature.name] === ErrorTypes.NOT_INT && (
