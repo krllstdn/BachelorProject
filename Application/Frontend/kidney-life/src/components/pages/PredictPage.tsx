@@ -76,6 +76,12 @@ enum ErrorTypes {
   NONE = "NONE",
 }
 
+enum formValidityTypes {
+  VALID = "VALID",
+  INVALID = "INVALID",
+  NONE = "NONE",
+}
+
 interface FeatureValidity {
   [key: string]: ErrorTypes;
 }
@@ -122,7 +128,9 @@ function DeceasedCoxnetPage() {
   const [featureValidity, setFeatureValidity] = useState<FeatureValidity>(
     getFeaturesStateValidity(MODELS.COXNET_DECEASED)
   );
-  console.log(featureValidity);
+  const [formValidity, setFormValidity] = useState<formValidityTypes>(
+    formValidityTypes.NONE
+  );
   const [xValues, setXValues] = useState([]);
   const [yValues, setYValues] = useState([]);
 
@@ -164,6 +172,32 @@ function DeceasedCoxnetPage() {
     }
     console.log("second");
     return ErrorTypes.VALID;
+  };
+
+  const validatePreSubmit = () => {
+    const featureDescriptions: Feature[] =
+      MODEL_DESCRIPTIONS[selectedModel].features;
+    let formValidity = formValidityTypes.VALID;
+    const updatedFeatureValidity: FeatureValidity = {};
+    console.log(featureValidity);
+
+    for (const feature in featureValidity) {
+      if (featureValidity[feature] === ErrorTypes.NONE) {
+        const featureDesc = featureDescriptions.find((f) => f.name === feature);
+        console.log("inside loop");
+        if (featureDesc?.type === "categorical") {
+          updatedFeatureValidity[feature] = ErrorTypes.NOT_SELECTED;
+          formValidity = formValidityTypes.INVALID;
+        } else {
+          updatedFeatureValidity[feature] = ErrorTypes.EMPTY;
+          formValidity = formValidityTypes.INVALID;
+        }
+      } else if (featureValidity[feature] !== ErrorTypes.VALID) {
+        formValidity = formValidityTypes.INVALID;
+      }
+    }
+    setFeatureValidity({ ...featureValidity, ...updatedFeatureValidity });
+    setFormValidity(formValidity);
   };
 
   const sendPredictRequest = async () => {
@@ -230,26 +264,42 @@ function DeceasedCoxnetPage() {
         </div>
         {MODEL_DESCRIPTIONS[selectedModel].features.map((feature) =>
           feature.type === "categorical" ? (
-            <SelectFieldCox
-              name={feature.name}
-              // label={feature.description}
-              // key={feature.name}
-              text={feature.short_description}
-              value={featureStates[feature.name]}
-              description={feature.description}
-              onChange={(e) =>
-                setFeatureStates({
-                  ...featureStates,
-                  [feature.name]: e.target.value, // TODO: add validation
-                })
-              }
-              options={Object.entries(feature.possible_values || {})
-                .filter(([key, value]) => value !== undefined)
-                .map(([key, value]) => ({
-                  value: key,
-                  label: value || "",
-                }))}
-            />
+            <div>
+              <SelectFieldCox
+                name={feature.name}
+                // label={feature.description}
+                // key={feature.name}
+                text={feature.short_description}
+                value={featureStates[feature.name]}
+                description={feature.description}
+                onChange={(e) => {
+                  setFeatureStates({
+                    ...featureStates,
+                    [feature.name]: e.target.value, // TODO: add validation
+                  });
+                  setFeatureValidity({
+                    ...featureValidity,
+                    [feature.name]: validateFeature(feature, e.target.value),
+                  });
+                }}
+                options={Object.entries(feature.possible_values || {})
+                  .filter(([key, value]) => value !== undefined)
+                  .map(([key, value]) => ({
+                    value: key,
+                    label: value || "",
+                  }))}
+              />
+              {featureValidity[feature.name] === ErrorTypes.NOT_SELECTED && (
+                <p className="text-red-700 text-sm ml-2">
+                  {feature.short_description} should be selected
+                </p>
+              )}
+              {featureValidity[feature.name] === ErrorTypes.WRONG_SELECT && (
+                <p className="text-red-700 text-sm ml-2">
+                  {feature.short_description} should be selected from the list
+                </p>
+              )}
+            </div>
           ) : (
             <div>
               <InputField
@@ -264,7 +314,7 @@ function DeceasedCoxnetPage() {
                   (e) => {
                     setFeatureStates({
                       ...featureStates,
-                      [feature.name]: e.target.value, // TODO: add validation for not a number
+                      [feature.name]: e.target.value,
                     });
                     // console.log("first");
                     setFeatureValidity({
@@ -311,8 +361,18 @@ function DeceasedCoxnetPage() {
         <Button
           additionalStyles="mt-2 mb-2"
           name="Submit"
-          onClick={sendPredictRequest}
+          onClick={() => {
+            validatePreSubmit();
+            if (formValidity === formValidityTypes.VALID) {
+              sendPredictRequest();
+            }
+          }}
         />
+        {formValidity === formValidityTypes.INVALID && (
+          <p className="text-red-700 text-sm ml-2">
+            Please fill all fields correctly
+          </p>
+        )}
         <div className="float-left w-full flex mt-1">
           <p
             className="cursor-pointer text-sm hover:underline inline-block mr-3"
