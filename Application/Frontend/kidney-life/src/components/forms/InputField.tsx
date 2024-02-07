@@ -12,19 +12,20 @@ type InputFieldProps = {
 
 function InputField(props: InputFieldProps) {
   return (
-    <div className="bg-quaternary rounded p-3 mb-1 mt-2 text-sm flex flex-start">
+    <div className="bg-quaternary rounded p-3 mb-1 mt-3 text-sm flex flex-start">
       <label className="text-primary font-semibold mr-3 whitespace-nowrap">
         {props.text + ":"}
       </label>
       <input
         name={props.name}
-        className="border-none outline-none bg-inherit border-primary w-full remove-arrow"
+        className="border-none appearance-none outline-none bg-transparent border-primary w-full remove-arrow"
         type={props.type ? props.type : "text"}
         onChange={props.onChange}
         value={props.value}
         required={true}
         inputMode="numeric"
         pattern="[0-9]*"
+        autoComplete="off"
       />
       {props.description && <AdditionalInfoIcon text={props.description} />}
     </div>

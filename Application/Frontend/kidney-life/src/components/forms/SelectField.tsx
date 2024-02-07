@@ -49,7 +49,7 @@ type SelectFieldCoxProps = {
 
 export function SelectFieldCox(props: SelectFieldCoxProps) {
   return (
-    <div className="bg-quaternary rounded p-3 text-left flex flex-start mb-3 text-sm">
+    <div className="bg-quaternary rounded p-3 text-left flex flex-start mb-1 mt-3 text-sm">
       <label
         htmlFor={props.name}
         className="text-primary  font-semibold mr-3 whitespace-nowrap"
