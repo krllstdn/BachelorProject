@@ -63,6 +63,9 @@ export function SelectFieldCox(props: SelectFieldCoxProps) {
         onChange={props.onChange}
         value={props.value}
       >
+        <option value="" disabled>
+          Select an option
+        </option>
         {props.options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
