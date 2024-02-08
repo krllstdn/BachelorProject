@@ -2,6 +2,7 @@
     "model_pickle_path": "Application/Backend/models/models/COXNET_LIVING_MODEL.pickle",
     "model_file_name": "COXNET_LIVING_MODEL.pickle",
     "pipeline_file_name": "coxnet_living_pipeline.pkl",
+    "c_index": 0.729,
     "features": [
         {
             "name": "PRE_TX_TXFUS",
