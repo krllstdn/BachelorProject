@@ -5,6 +5,7 @@ import {
   FeatureValidity,
   MODEL_DESCRIPTIONS,
   MODELS,
+  FeatureStates,
 } from "../types";
 
 export const validateFeature = (feature: Feature, value: string) => {
@@ -39,6 +40,7 @@ export const validateFeature = (feature: Feature, value: string) => {
 export const validatePreSubmit = (
   selectedModel: MODELS,
   featureValidity: FeatureValidity,
+  featureStates: FeatureStates,
   setFeatureValidity: React.Dispatch<React.SetStateAction<FeatureValidity>>,
   setFormValidity: React.Dispatch<React.SetStateAction<formValidityTypes>>
 ) => {
@@ -50,13 +52,16 @@ export const validatePreSubmit = (
   for (const feature in featureValidity) {
     if (featureValidity[feature] === ErrorTypes.NONE) {
       const featureDesc = featureDescriptions.find((f) => f.name === feature);
-      console.log("inside loop");
       if (featureDesc?.type === "categorical") {
-        updatedFeatureValidity[feature] = ErrorTypes.NOT_SELECTED;
-        formValidity = formValidityTypes.INVALID;
+        if (featureStates[feature] === "") {
+          updatedFeatureValidity[feature] = ErrorTypes.NOT_SELECTED;
+          formValidity = formValidityTypes.INVALID;
+        }
       } else {
-        updatedFeatureValidity[feature] = ErrorTypes.EMPTY;
-        formValidity = formValidityTypes.INVALID;
+        if (featureStates[feature] === "") {
+          updatedFeatureValidity[feature] = ErrorTypes.EMPTY;
+          formValidity = formValidityTypes.INVALID;
+        }
       }
     } else if (featureValidity[feature] !== ErrorTypes.VALID) {
       formValidity = formValidityTypes.INVALID;
