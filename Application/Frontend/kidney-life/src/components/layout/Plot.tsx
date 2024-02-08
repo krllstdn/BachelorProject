@@ -11,10 +11,11 @@ interface PlotProps {
 const PlotComponent: React.FC<PlotProps> = ({ xValues, yValues }) => {
   return (
     <div
-      className="survivalCurve w-7/12 h-5/6 mt-5 md:mt-4 rounded-md bg-secondaryLight 
-                    md:justify-center md:flex-grow md:mr-4 md:ml-4 lg:mr-5 lg:ml-5
-                    xl:mt-6
-                    "
+      className="survivalCurve w-7/12 h-5/6 mt-5 md:mt-4 rounded-md 
+               bg-secondaryLight md:justify-center md:flex-grow 
+                md:mr-4 md:ml-4 lg:mr-5 lg:ml-5 xl:mt-6 2xl:ml-9 
+                2xl:mr-9 2xl:mt-7 3xl:ml-20 3xl:mr-20 4xl:ml-20 
+                4xl:mr-20 5xl:ml-52 5xl:mr-52"
     >
       <div className="relative h-0" style={{ paddingBottom: "75%" }}>
         <Plot

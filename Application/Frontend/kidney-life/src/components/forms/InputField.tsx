@@ -12,7 +12,7 @@ type InputFieldProps = {
 
 function InputField(props: InputFieldProps) {
   return (
-    <div className="bg-quaternary rounded p-3 mb-1 mt-3 text-sm flex flex-start">
+    <div className="bg-quaternary rounded p-3 md:p-2.75 mb-1 mt-3 text-sm flex flex-start 3xl:mt-3.5">
       <label className="text-primary font-medium mr-3 whitespace-nowrap">
         {props.text + ":"}
       </label>
