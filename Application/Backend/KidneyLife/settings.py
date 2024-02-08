@@ -83,6 +83,7 @@ FORCE_SCRIPT_NAME = "/api"
 
 CORS_ALLOWED_ORIGINS = [
     f"http://localhost:{FE_PORT}",
+    # f"http://localhost:3000",
     f"http://127.0.0.1:{FE_PORT}",
     f"http://0.0.0.0:{FE_PORT}",
     " http://frontend:3000",

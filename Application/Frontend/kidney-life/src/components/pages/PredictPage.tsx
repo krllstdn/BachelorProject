@@ -50,6 +50,13 @@ function DeceasedCoxnetPage() {
     }
   }, [selectedModel]);
 
+  useEffect(() => {
+    if (formValidity === formValidityTypes.VALID) {
+      sendPredictRequest(selectedModel, featureStates, setXValues, setYValues);
+    }
+    setFormValidity(formValidityTypes.NONE);
+  }, [formValidity]);
+
   return (
     <div className="flex justify-between md:justify-between 2xl:justify-between h-full">
       <ModalContainer
@@ -168,17 +175,10 @@ function DeceasedCoxnetPage() {
             validatePreSubmit(
               selectedModel,
               featureValidity,
+              featureStates,
               setFeatureValidity,
               setFormValidity
             );
-            if (formValidity === formValidityTypes.VALID) {
-              sendPredictRequest(
-                selectedModel,
-                featureStates,
-                setXValues,
-                setYValues
-              );
-            }
           }}
         />
         {formValidity === formValidityTypes.INVALID && (

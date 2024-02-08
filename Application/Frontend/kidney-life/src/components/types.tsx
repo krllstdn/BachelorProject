@@ -73,4 +73,4 @@ export interface FeatureValidity {
 }
 
 const be_host = process.env.REACT_APP_BE_HOST;
-export const url = "http://" + be_host + "/api/";
+export const url = "http://" + be_host + "/api/"; // "http://localhost:8000/";
