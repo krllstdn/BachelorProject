@@ -115,13 +115,15 @@ function DeceasedCoxnetPage() {
                 text={feature.short_description}
                 description={feature.description}
                 onChange={(e) => {
+                  const inputValue = e.target.value;
+                  const filteredValue = inputValue.replace(/[^0-9.]/g, "");
                   setFeatureStates({
                     ...featureStates,
-                    [feature.name]: e.target.value,
+                    [feature.name]: filteredValue,
                   });
                   setFeatureValidity({
                     ...featureValidity,
-                    [feature.name]: validateFeature(feature, e.target.value),
+                    [feature.name]: validateFeature(feature, filteredValue),
                   });
                 }}
               />
