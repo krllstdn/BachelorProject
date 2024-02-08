@@ -27,9 +27,16 @@ export interface Feature {
   possible_values?: PossibleValues;
   is_float?: boolean;
   stats?: {
+    IQR: number;
+    median: number;
     q10: number;
     q90: number;
+    min: number;
+    max: number;
   };
+  // freq?: {
+  //   [key: string | number]: number | undefined;
+  // };
 }
 
 export interface ModelInfo {

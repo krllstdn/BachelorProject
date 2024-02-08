@@ -28,7 +28,7 @@ export const validateFeature = (feature: Feature, value: string) => {
       return ErrorTypes.NEGATIVE;
     } else if (
       feature.stats &&
-      (num < feature.stats.q10 || num > feature.stats.q90)
+      (num < feature.stats.min || num > feature.stats.max)
     ) {
       return ErrorTypes.NOT_IN_RANGE;
     }
