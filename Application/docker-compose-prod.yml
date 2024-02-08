@@ -2,22 +2,22 @@ version: "3.9"
 name: kidney-life-prod
 
 services:
-  db:
-    container_name: postgres-db-prod
-    image: postgres
-    restart: always
-    volumes:
-      - ./Backend/data/db:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=${POSTGRES_DB}
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-    ports: 
-      - "${DB_PORT}:${DB_PORT}"
-    networks:
-      - shared_network
-    env_file:
-      - .prod.env
+  # db:
+  #   container_name: postgres-db-prod
+  #   image: postgres
+  #   restart: always
+  #   volumes:
+  #     - ./Backend/data/db:/var/lib/postgresql/data
+  #   environment:
+  #     - POSTGRES_DB=${POSTGRES_DB}
+  #     - POSTGRES_USER=${POSTGRES_USER}
+  #     - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+  #   ports: 
+  #     - "${DB_PORT}:${DB_PORT}"
+  #   networks:
+  #     - shared_network
+  #   env_file:
+  #     - .prod.env
 
   backend:
     container_name: backend-prod
@@ -28,8 +28,8 @@ services:
       dockerfile: Dockerfile.web
     ports:
       - "${BE_PORT}:${BE_PORT}"
-    depends_on:
-      - db
+    # depends_on:
+    #   - db
     networks:
       - shared_network
     env_file:
