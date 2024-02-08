@@ -58,14 +58,17 @@ function DeceasedCoxnetPage() {
   }, [formValidity]);
 
   return (
-    <div className="flex justify-between md:justify-between 2xl:justify-between h-full">
+    <div className="flex justify-between md:justify-between 2xl:justify-between h-auto">
       <ModalContainer
-        className="w-1/3 md:w-1/3 md:mt-3 md:ml-3 md:pl-3 md:pr-3 max-h-[97vh] pr-5 pl-5 pt-6 pb-3 mb-4 mt-4 overflow-y-scroll
-      2xl:w-1/4 2xl:mt-5 2xl:ml-5 lg:mt-4 lg:ml-4 lg:w-4/12 xl:mt-6 xl:ml-5 xl:max-h-[95vh]"
+        className="w-1/3 md:w-1/3 md:mt-3 md:ml-3 md:pl-3 md:pr-3 max-h-[97vh]
+                  pt-6 pb-3 mb-4 mt-4 overflow-y-scroll 2xl:w-1/4 lg:mt-4 
+                  lg:ml-4 lg:w-4/12 xl:mt-6 xl:ml-5 xl:max-h-[95vh] xl:w-3/12 
+                  xl:pl-4 xl:pr-4 2xl:mt-7 2xl:ml-7 3xl:pl-5 3xl:pr-5 pr-5 pl-5
+                  3xl:max-h-[94vh] 4xl:max-h-[94vh] 5xl:max-h-[85vh] 5xl:w-1/5"
       >
-        <div className="flex items-center justify-center mb-3">
+        <div className="flex items-center justify-center mb-3 xl:mb-4">
           <select
-            className="bg-secondary text-3xl md:text-2xl"
+            className="bg-secondary text-3xl md:text-2xl lg:text-3xl"
             value={selectedModel}
             onChange={(event) => setSelectedModel(event.target.value as MODELS)}
           >
@@ -169,7 +172,7 @@ function DeceasedCoxnetPage() {
           )
         )}
         <Button
-          additionalStyles="mt-2 mb-2"
+          additionalStyles="mt-2 mb-2 3xl:mt-4 3xl:mb-3"
           name="Submit"
           onClick={() => {
             validatePreSubmit(
