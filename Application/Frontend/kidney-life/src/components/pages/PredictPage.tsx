@@ -131,8 +131,9 @@ function DeceasedCoxnetPage() {
                 </p>
               )}
               {featureValidity[feature.name] === ErrorTypes.NOT_IN_RANGE && (
-                <p className="text-yellow-600 text-sm ml-2 mt-1 leading-4">
-                  {feature.description} should be in range from ... to ...
+                <p className="text-red-700 text-sm ml-2 mt-1 leading-4">
+                  {feature.description} should be in range from{" "}
+                  {feature.stats?.min} to {feature.stats?.max}
                 </p>
               )}
               {featureValidity[feature.name] === ErrorTypes.NEGATIVE && (
