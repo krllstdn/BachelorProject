@@ -5,10 +5,8 @@ import ModalContainer from "../wrappers/ModalContainer";
 import Button from "../buttons/Button";
 import PlotComponent from "../layout/Plot";
 import {
-  url,
   MODELS,
   MODEL_DESCRIPTIONS,
-  Feature,
   FeatureStates,
   ErrorTypes,
   formValidityTypes,
@@ -53,18 +51,19 @@ function DeceasedCoxnetPage() {
   }, [selectedModel]);
 
   return (
-    <div className="flex justify-evenly flex-grow h-full">
-      <ModalContainer className="w-1/3 h-[97vh] pr-5 pl-5 pt-6 pb-3 mb-4 mt-3 overflow-y-scroll">
+    <div className="flex justify-between md:justify-between 2xl:justify-between h-full">
+      <ModalContainer
+        className="w-1/3 md:w-1/3 md:mt-3 md:ml-3 md:pl-3 md:pr-3 max-h-[97vh] pr-5 pl-5 pt-6 pb-3 mb-4 mt-4 overflow-y-scroll
+      2xl:w-1/4 2xl:mt-5 2xl:ml-5 lg:mt-4 lg:ml-4 lg:w-4/12 xl:mt-6 xl:ml-5 xl:max-h-[95vh]"
+      >
         <div className="flex items-center justify-center mb-3">
           <select
-            className="bg-secondary text-3xl"
+            className="bg-secondary text-3xl md:text-2xl"
             value={selectedModel}
             onChange={(event) => setSelectedModel(event.target.value as MODELS)}
           >
             <option value={MODELS.COXNET_DECEASED}>Coxnet Deceased</option>
             <option value={MODELS.COXNET_LIVING}>Coxnet Living</option>
-            {/* <option value="2">GB Deceased</option> */}
-            {/* <option value="4">GB Living</option> */}
           </select>
         </div>
         {MODEL_DESCRIPTIONS[selectedModel].features.map((feature) =>
@@ -80,7 +79,7 @@ function DeceasedCoxnetPage() {
                 onChange={(e) => {
                   setFeatureStates({
                     ...featureStates,
-                    [feature.name]: e.target.value, // TODO: add validation
+                    [feature.name]: e.target.value,
                   });
                   setFeatureValidity({
                     ...featureValidity,
@@ -115,19 +114,16 @@ function DeceasedCoxnetPage() {
                 value={featureStates[feature.name] as string}
                 text={feature.short_description}
                 description={feature.description}
-                onChange={
-                  (e) => {
-                    setFeatureStates({
-                      ...featureStates,
-                      [feature.name]: e.target.value,
-                    });
-                    // console.log("first");
-                    setFeatureValidity({
-                      ...featureValidity,
-                      [feature.name]: validateFeature(feature, e.target.value),
-                    });
-                  } // onBlur
-                }
+                onChange={(e) => {
+                  setFeatureStates({
+                    ...featureStates,
+                    [feature.name]: e.target.value,
+                  });
+                  setFeatureValidity({
+                    ...featureValidity,
+                    [feature.name]: validateFeature(feature, e.target.value),
+                  });
+                }}
               />
               {featureValidity[feature.name] === ErrorTypes.NOT_NUMBER && (
                 <p className="text-red-700 text-sm ml-2">
@@ -136,8 +132,7 @@ function DeceasedCoxnetPage() {
               )}
               {featureValidity[feature.name] === ErrorTypes.NOT_IN_RANGE && (
                 <p className="text-yellow-600 text-sm ml-2 mt-1 leading-4">
-                  {feature.description} should be in range from ... to ... If
-                  are sure it is correct, please ignore this warning.
+                  {feature.description} should be in range from ... to ...
                 </p>
               )}
               {featureValidity[feature.name] === ErrorTypes.NEGATIVE && (
