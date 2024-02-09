@@ -2,6 +2,7 @@
     "model_pickle_path": "Application/Backend/models/models/COXNET_LIVING_MODEL.pickle",
     "model_file_name": "COXNET_LIVING_MODEL.pickle",
     "pipeline_file_name": "coxnet_living_pipeline.pkl",
+    "c_index": 0.729,
     "features": [
         {
             "name": "PRE_TX_TXFUS",
@@ -167,7 +168,7 @@
             "type": "numerical",
             "short_description": "Donor pre-op creatinine (mg/dL)",
             "description": "Living donor preoperative serum creatinine (mg/dL)",
-            "stats": {"IQR": 0.3, "median": 0.8, "q10": 0.6, "q90": 1.1},
+            "stats": {"IQR": 0.3, "median": 0.8, "q10": 0.6, "q90": 1.1, "min": 0.5, "max": 1.4},
             "is_float": true
         }, 
         {
@@ -175,7 +176,7 @@
             "type": "numerical",
             "short_description": "Recipient creatinine at discharge (mg/dL)",
             "description": "Recipient creatinine at discharge (mg/dL)",
-            "stats": {"IQR": 0.82, "median": 1.4, "q10": 0.83, "q90": 2.8},
+            "stats": {"IQR": 0.82, "median": 1.4, "q10": 0.83, "q90": 2.8, "min": 0.6, "max": 8.3},
             "is_float": true
         }, 
         {
@@ -183,7 +184,7 @@
             "type": "numerical",
             "short_description": "Prev. tx number",
             "description": "Number of previous transplants",
-            "stats": {"IQR": 0.0, "median": 0.0, "q10": 0.0, "q90": 0.0},
+            "stats": {"IQR": 0.0, "median": 0.0, "q10": 0.0, "q90": 0.0, "min": 0.0, "max": 1.0},
             "is_float": false
         },
         {
@@ -191,7 +192,7 @@
             "type": "numerical",
             "short_description": "Recipient age",
             "description": "Recipient age at transplant",
-            "stats": {"IQR": 21.0, "median": 49.0, "q10": 28.0, "q90": 66.0},
+            "stats": {"IQR": 21.0, "median": 49.0, "q10": 28.0, "q90": 66.0, "min": 18.0, "max": 75.0},
             "is_float": false
         },
         {
@@ -199,7 +200,7 @@
             "type": "numerical",
             "short_description": "Recipient height (CM)",
             "description": "Recipient height in centimeters",
-            "stats": {"IQR": 15.4, "median": 171.0, "q10": 157.5, "q90": 185.4},
+            "stats": {"IQR": 15.4, "median": 171.0, "q10": 157.5, "q90": 185.4, "min": 147.0, "max": 198.0},
             "is_float": false
         },
         {
@@ -207,7 +208,7 @@
             "type": "numerical",
             "short_description": "Donor BMI",
             "description": "Donor BMI",
-            "stats": {"IQR": 5.97, "median": 26.63, "q10": 21.6, "q90": 32.5},
+            "stats": {"IQR": 5.97, "median": 26.63, "q10": 21.6, "q90": 32.5, "min": 18.5, "max": 38.2},
             "is_float": true
         },
         {
@@ -215,7 +216,7 @@
             "type": "numerical",
             "short_description": "Donor age",
             "description": "Donor age at transplant",
-            "stats": {"IQR": 19.0, "median": 42.0, "q10": 26.0, "q90": 57.0},
+            "stats": {"IQR": 19.0, "median": 42.0, "q10": 26.0, "q90": 57.0, "min": 18.0, "max": 66.0},
             "is_float": false
         }
     ]}

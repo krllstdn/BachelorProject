@@ -49,10 +49,10 @@ type SelectFieldCoxProps = {
 
 export function SelectFieldCox(props: SelectFieldCoxProps) {
   return (
-    <div className="bg-quaternary rounded p-3 text-left flex flex-start mb-3 text-sm">
+    <div className="bg-quaternary rounded p-3 md:p-2.75 md:pl-2 md:pr-2 text-left flex flex-start mb-1 mt-3 text-sm 3xl:mt-3.5">
       <label
         htmlFor={props.name}
-        className="text-primary  font-semibold mr-3 whitespace-nowrap"
+        className="text-primary  font-medium mr-3 whitespace-nowrap"
       >
         {props.text + ":"}
       </label>
@@ -63,6 +63,9 @@ export function SelectFieldCox(props: SelectFieldCoxProps) {
         onChange={props.onChange}
         value={props.value}
       >
+        <option value="" disabled>
+          Select an option
+        </option>
         {props.options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
