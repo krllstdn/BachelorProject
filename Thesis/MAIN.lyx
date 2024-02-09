@@ -1024,7 +1024,187 @@ pagestyle{headings}
 \end_layout
 
 \begin_layout Section
-Why kidneys fail
+Kidney — An Overview
+\end_layout
+
+\begin_layout Standard
+The kidneys are reddish-brown, bean-shaped organs located on both sides
+ of the spine beneath the lower ribs.
+ They serve several critical functions, such as filtering blood, regulating
+ blood pressure, aiding red blood cell production, and maintaining the fluid
+ balance.
+ Structurally, a kidney consists of about 1 million 
+\emph on
+nephrons
+\emph default
+, each consisting of a small filter called a 
+\emph on
+glomerulus
+\emph default
+, attached to a tubule, responsible for filtering waste products from the
+ blood and excreting them with small amounts of fluid as urine 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-33"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Each kidney performs 50% of the normal kidney function.
+ However, if one kidney is lost, the remaining kidney can adapt, increasing
+ its capacity to as much as 75% of normal function.
+ Kidney function is measured with 
+\emph on
+glomerular filtration rate (GFR)
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-33"
+literal "false"
+
+\end_inset
+
+.
+ There are two types of GFR: 
+\emph on
+measured GFR (mGFR)
+\emph default
+ and 
+\emph on
+estimated GFR (eGFR)
+\emph default
+.
+ Measuring mGFR is a problematic and lengthy process, so healthcare practitioner
+s usually use a formula to calculate eGFR.
+ An eGFR of 90 and above is the normal range.
+ An eGFR of 15-89 is a range for different stages of chronic kidney disease.
+ Values below 15 might indicate renal failure 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-38"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Impairment in kidney function can have serious health consequences.
+ There are many reasons why kidneys may become dysfunctional, such as end-stage
+ chronic kidney disease, heavy metal poisoning, polycystic kidney disease,
+ an infection, nephrotoxic drugs, lupus, physical injury, etc 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-36,key-37"
+literal "false"
+
+\end_inset
+
+.
+ Among these conditions, chronic kidney disease is the most prevalent —
+ about 10% of the population worldwide is affected by some form of chronic
+ kidney disease 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-35"
+literal "false"
+
+\end_inset
+
+.
+ 
+\emph on
+Chronic kidney disease (CKD)
+\emph default
+ is an incurable condition characterized by a gradual reduction in kidney
+ function over time 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-34,key-35"
+literal "false"
+
+\end_inset
+
+.
+ Diabetes and high blood pressure are responsible for the majority of cases
+ of chronic kidney disease, with high blood sugar damaging the glomeruli
+ and high blood pressure damaging the kidney blood vessels 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-34,key-37"
+literal "false"
+
+\end_inset
+
+.
+ The latter interaction is associated with a negative feedback loop, where
+ it is unclear whether kidney damage causes high blood pressure or vice
+ versa 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-35"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+CKD progresses in 5 stages, ultimately culminating in 
+\emph on
+end-stage renal disease (ESRD)
+\emph default
+, where kidneys fail.
+ Treatment options include 
+\emph on
+dialysis
+\emph default
+, a mechanical process that substitutes kidney function but cannot fully
+ replicate it.
+ It leads to a reduced life expectancy of, on average, 5 to 10 years.
+ Alternatively, 
+\emph on
+kidney transplantation
+\emph default
+ offers a more permanent solution but requires a compatible donor, waiting
+ for which can take many months or years, and the use of immunosuppressants
+ after the transplantation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-36"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In conclusion, the kidneys play an essential role in maintaining overall
+ health with their ability to filter waste, regulate blood pressure, and
+ balance fluids.
+ Kidney failure has serious health implications and there are multiple reasons
+ for it.
+ Chronic kidney disease, resulting from various causes such as diabetes
+ and hypertension, progressively impairs kidney function, leading to end-stage
+ renal disease.
+ While dialysis offers temporary relief, it cannot fully substitute for
+ a healthy kidney, which brings us to the crucial role of kidney transplantation.
+ Kidney transplantation offers a more conclusive and sustainable solution
+ for patients with ESRD, albeit accompanied by challenges related to donor
+ compatibility and life-long immunosuppression.
+ Both of which will be discussed in the subsequent section.
+\end_layout
+
+\begin_layout Section
+Clinical Aspects of Kidney Transplantation 
 \end_layout
 
 \begin_layout Standard
@@ -1032,15 +1212,8 @@ Why kidneys fail
 status open
 
 \begin_layout Plain Layout
-Diabetes
-\end_layout
-
-\begin_layout Plain Layout
-Pollutants
-\end_layout
-
-\begin_layout Plain Layout
-Cronic Kidney disease
+The citation at the end of a paragraph indicates that the whole paragraph
+ has been taken from the source.
 \end_layout
 
 \end_inset
@@ -1048,48 +1221,216 @@ Cronic Kidney disease
 
 \end_layout
 
-\begin_layout Section
-The history of kidney transplantation.
+\begin_layout Standard
+Kidney transplantation stands as the most commonly performed organ transplant
+ worldwide.
+ This prevalence is partly due to the high incidence of diseases such as
+ diabetes and chronic kidney disease, which often lead to chronic renal
+ failure.
+ Unlike organs such as the liver and heart, kidney transplantation is relatively
+ straightforward, contributing to its frequency of transplantation.
+ Kidneys can be obtained from both deceased and living donors - relatives
+ or altruistic volunteers.
+ Living donors can donate one kidney and continue to lead normal and healthy
+ lives, significantly expanding the potential donor pool 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+ABO blood group and histocompatibility (defined in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Immunology-of-kidney"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) matchings for kidney transplantation are of utmost importance.
+ Proper matching substantially reduces the risk of rejection and improves
+ transplant outcomes.
+ Compared to organs such as the liver or bone marrow, kidneys do not present
+ additional challenges such as graft versus host disease (GVHD), simplifying
+ the transplantation process 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+However, kidney transplantation, despite its advances, faces significant
+ challenges.
+ Two critical issues confront potential recipients: the scarcity of available
+ organs and the risk of sensitization following a failed first transplant,
+ decreasing the pool of available donors even further.
+ In such cases, the immune system develops antibodies to the graft alloantigens,
+ and any further transplantation of organs with similar antigens will result
+ in hyperacute rejection (many of these termes are explained in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Immunology-of-kidney"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ This fact often leaves many patients unable to find a compatible donor
+ after one or two rejection episodes 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Recipients of kidney transplants typically require life-long immunosuppression.
+ While immunosuppressants are essential to prevent organ rejection, they
+ are associated with severe side effects, such as increased risk of cancer,
+ hypertension, and metabolic bone disease 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Given the high incidence of renal failure in diabetic patients - affecting
+ roughly 30% of individuals with advanced diabetes - simultaneous kidney
+ and pancreas transplants are sometimes performed.
+ This approach addresses renal failure and underlying diabetes, offering
+ a comprehensive solution for these patients 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In summary, kidney transplantation has become a vital and frequent medical
+ procedure, offering improved quality of life to many suffering from kidney
+ failure.
+ The procedure, while simpler than other organ transplants, has its own
+ set of challenges.
+ The following section will delve into the history of kidney transplantation,
+ showing its path from the initial experiments to the most frequently performed
+ organ transplantation today.
+ The historical perspective will provide insights into the advancements
+ in surgical techniques, immunosuppressive therapy, and donor-recipient
+ matching that have shaped the current state of kidney transplantation.
+\end_layout
+
+\begin_layout Section
+The History of Kidney Transplantation 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:history-of-kidney-transplantation"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Write intro 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
 Early Animal Experiments
 \end_layout
 
 \begin_layout Standard
-Advancements in surgical methods and techniques at the beginning of the
- 20th century eventually led to experiments with organ transplantation.
- On March 1st, 1902, Emerich Ullman, a physician at the Vienna Medical School,
- performed the first recorded organ transplantation.
- He performed an autograft, meaning the transplantation where the donor
- and the recipient are the same individual.
- Ullmann utilized the method of vascular suturing developed by Ervin Payr,
- to connect the dog's kidney to the vessels of its neck.
- The transplant was successful - the kidney produced urine.
- The dog was presented the same day to Vienna medical society eliciting
- significant interest and discussion.
+Advancements in surgical methods at the beginning of the 20th century eventually
+ led to experiments with organ transplantation.
+ One of the first recorded transplantations was an 
+\emph on
+autograft
+\emph default
+, where the donor and recipient are the same individual, performed by Emerich
+ Ullmann on March 1, 1902, at the Vienna Medical School.
+ Ullmann successfully connected the dog's kidney to the vessels of its neck,
+ which resulted in the urine production.
+ The success of this experiment was notable enough to be presented to the
+ Vienna Medical Society, sparking considerable interest.
 \end_layout
 
 \begin_layout Standard
-The same year other similar transplantations were made.
- Another physician, Alfred von Decastello, performed a dog-to-dog kidney
- allograft at the Institute of Experimental Pathology in Vienna.
- The kidney produced urine for a while but then stopped working.
- Later Ullman performed a dog-to-goat kidney xenograft (cross-species transplant
-), and to his surprise kidney produced some urine, but later stopped.
+That year, other experiments followed.
+ Alfred von Decastello performed a dog-to-dog kidney 
+\emph on
+allograft
+\emph default
+, a transplant between two individuals of the same species, at the Institute
+ of Experimental Pathology in Vienna.
+ Although initially, the transplanted kidney produced urine, it eventually
+ ceased.
+ Later, Ullman performed a dog-to-goat kidney 
+\emph on
+xenograft
+\emph default
+, a transplantation between individuals of different species, which resulted
+ in brief function time as well.
 \end_layout
 
 \begin_layout Standard
-In Lyon in the department headed by Mathieu Jabourday, his assistants Carrel,
- Briau and Villard were working on new methods of vascular suturing.
- In 1902, Alex Carrel published the method of vessel anastomosis now referred
- to as Carrel's seam.
- This technique represented a significant improvement over existing methods
- and effectively addressed the common issues of thrombosis, hemorrhage,
- stricture, and embolism
+At the same time, in Lyon, Alexis Carrel and his colleagues were working
+ on vascular suturing methods.
+ Carrel's technique, known as Carrel's seam, was a considerable improvement
+ over existing methods, addressing the common issues of thrombosis, hemorrhage,
+ stricture, and embolism 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-1"
+literal "false"
+
+\end_inset
+
+.
+ His consecutive move to The Rockefeller Institute for Medical Research
+ in the United States led to further refinements of his method and the documenta
+tion of organ rejection.
+ For his contributions, Carrel received the Nobel Prize in Medicine in 1912
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-2"
 literal "false"
 
 \end_inset
@@ -1098,36 +1439,32 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Later Carrel moved to the United States where he continued his research
- on vessel suturing and organ transplantations at The Rockefeller Institute
- for Medical Research.
- There he perfected his method and while performing autografts and allografts
- documented what later would be recognized as ”rejection”.
- For his works in 1912, he got the Nobel Prize in Medicine.
- By this time, his method of suturing had been widely adopted in human surgeries
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-19"
-literal "false"
-
-\end_inset
-
-.
+These early experiments, although varied in their outcomes, were defining
+ in shaping the future of the organ transplantation.
+ They not only illustrated the possibility of organ transplantation, but
+ also highlighted the challenges, such as rejection, that would direct the
+ course of future research.
+ The insights gained in animal experiments laid the groundwork for the next
+ big milestone in transplantation medicine: the advent of human organ transplant
+ation.
+ This transition from animals to humans marked the beginning of a new era
+ in medical history.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Early Human Transplantation
 \end_layout
 
 \begin_layout Standard
-The first recorded human renal xenograft
-\begin_inset Formula $ $
-\end_inset
-
- was performed by Mathieu Jaboulay in 1906.
- He chose a pig and a goat as donor animals and performed two xenografts.
- One kidney was transported to the arm and the second to the thigh.
- Each kidney functioned for one hour
+Two first recorded human renal 
+\emph on
+xenografts
+\emph default
+ are credited to Mathieu Jaboulay in 1906.
+ It involved a pig and a goat as donor animals.
+ One kidney was transplanted to the arm and the second to the thigh.
+ Although each kidney functioned only for an hour, these efforts marked
+ the beginning of human transplantation attempts 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1,key-4"
@@ -1136,38 +1473,35 @@ literal "false"
 \end_inset
 
 .
+ Ernst Unger's xenografts in 1909 gained more attention.
+ His first attempt, involving the transplantation of a kidney from a stillborn
+ baby to a baboon, resulted in a lack of kidney function despite a successful
+ connection of vessels.
+ Inspired by a successful surgery, Unger attempted a monkey-to-human xenograft,
+ which also resulted in failure.
 \end_layout
 
 \begin_layout Standard
-The second and third human transplants performed by Ernst Unger were far
- more known.
- On December 10, 1909, he performed a kidney transplant from a stillborn
- baby to a baboon.
- Even though the kidney produced no urine, the postmortem showed that vascular
- anastomosis (connection of vessels) was performed successfully.
- This inspired Unger to perform another transplantation that same month,
- but this time monkey-to-human xenograft.
- The kidney was transplanted from an ape to dying from renal failure young
- woman.
- The kidney never worked.
- 
-\end_layout
-
-\begin_layout Standard
-These early experiments demonstrated that technically kidney transplantation
- was possible, but the mechanism of rejection was not yet fully understood.
- Carrel in his famous lecture about the future of transplantation (1914)
- to the International Surgical Society mentioned that the works of his colleague
- at the Rockefeller center J.B.
- Murphy might seriously impact the development of the field.
- Murphy found that irradiation and benzol treatment increased the graft
- survival of cancer in mice.
- This observation inspired Carrel to conduct his own experiments, wherein
- he irradiated recipients and found prolonged graft survival, but these
- experiments were never formally published
+These experiments demonstrated the technical feasibility of kidney transplantati
+on but also exposed the challenge of graft rejection.
+ Alexis Carrel, in a 1914 lecture, mentioned J.
+ B.
+ Murphy's work on irradiation and benzol treatment, suggesting their potential
+ to improve graft survival 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-11"
+key "key-1"
+literal "false"
+
+\end_inset
+
+.
+ Inspired by these findings, Carrel conducted his own experiments with irradiati
+on, achieving prolonged graft survival.
+ However, these findings were never formally published 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
 literal "false"
 
 \end_inset
@@ -1176,50 +1510,14 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The period of the 1930s and 1940s was rather stagnant compared to the beginning
+The period of the 1930s and 1940s was stagnant compared to the beginning
  of the century.
  European surgical centers that studied transplantology before were in decline.
- Moyo Clinic in the US was conducting some cautious experiments without
- considering Carrol's works and attempts at immunosuppression.
+ Meanwhile, the Mayo Clinic in the US was conducting some cautious experiments
+ without considering Carrol's works and attempts at immunosuppression 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
-literal "false"
-
-\end_inset
-
- However, there was a notable event during this period - the first human-to-huma
-n transplantation.
- It was performed by Yurii Voronyi (in literature for some reason he is
- referred to as Voronoy) on March 3, 1933, in Kherson, Ukraine.
- The recipient was a 26-year-old woman admitted to the hospital on March
- 3, 1933, with mercury chloride poisoning induced by a suicide attempt the
- previous day that resulted in acute renal failure.
- Transplantation seemed the only viable option.
- It was known from previous experiments by other scientists that no xenograft
- ever was successful so human-to-human transplantation was the only feasible
- choice.
- The option of injuring a living person by organ removal was not even considered.
- It was known from the physiology that kidneys save their function a couple
- of hours after the reperfusion with ringer-solution and that organs keep
- some sterility a couple of hours after the host's death.
- So temporary cadaver transplantation until the woman's own kidneys would
- regenerate seemed to be a reasonable option.
- The transplantation was performed to the thigh's artery and vein using
- Carrel's seam with some modifications.
- After some time the kidney started to produce urine for a while but then
- eventually the allograft failed and 48 hours after the surgery the patient
- dies.
- The reason for graft failure was blood group mismatch and too long warm
- ischemia time - 6 hours, so the kidney began to degrade, resulting in an
- immune reaction to dead kidney cells and kidney blood cells.
- Voronyi performed another 5 such transplantations, which he considered
- as a bridge therapy until the recipient's own kidneys would recover.
- Kidneys produced urine for different durations from 1 to 7 days with 2
- patients eventually recovering and living normally thereafter
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-12"
+key "key-1"
 literal "false"
 
 \end_inset
@@ -1227,70 +1525,85 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+However, it was during that period that a significant milestone was achieved
+ by Yurii Voronyi.
+ On March 3, 1933, in Kherson, Ukraine, Voronyi performed the first human
+ kidney allograft on a woman suffering from acute renal failure due to mercury
+ chloride poisoning.
+ Given the ethical concerns surrounding living donors and previous failures
+ of xenografts, Voronyi considered a cadaveric transplant the only viable
+ option.
+ Although there was initial urine production, the transplant failed 48 hours
+ post-surgery due to blood group incompatibility and prolonged warm ischemia,
+ triggering an immune reaction.
+ Despite this setback, Voronyi continued to perform similar transplantations.
+ He viewed these transplants as temporary measures to bridge the gap until
+ the recipient's own kidneys could recover.
+ Out of the six transplants he performed, two patients experienced a complete
+ recovery, regaining normal kidney function 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-4"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The pioneering work of Jaboulay, Unger, and Voronyi not only demonstrated
+ the technical feasibility of human organ transplantation but also highlighted
+ its main challenge of graft rejection.
+ Despite the progress, the field has yet to witness success, largely due
+ to the lack of effective immunosuppression.
+ In the next section, we will explore important moments of 1950s that transforme
+d human renal transplantation from a daring experiment to feasible medical
+ procedure.
+\end_layout
+
+\begin_layout Subsection*
 First Successes
 \end_layout
 
 \begin_layout Standard
 In 1946, at the Peter Bent Brigham Hospital in Boston, a group of surgeons:
- Hufnagel, Hume, and Landsteinerhuman performed kidney transplantation under
+ Hufnagel, Hume, and Landsteiner, performed kidney transplantation under
  local anesthetic on the arm vessels.
- The short period of kidney functioning may have helped the patient to recover
- from acute renal failure.
- It ignited the hospital's interest in renal transplantation.
- 
+ The short period of kidney functioning may have helped the patient recover
+ from acute renal failure, igniting the hospital's interest in renal transplanta
+tion.
 \end_layout
 
 \begin_layout Standard
-Simonsen in Denmark, Dempster in London, and Küss in Paris concluded that
- it is preferable to place the kidney in the pelvis.
- Further, both Simonsen and Dempster deduced that the immune response was
- responsible for graft failure and both hypothesized that the humoral mechanism
+Meanwhile, European surgeons were making significant advancements.
+ Notably, Simonsen in Denmark, Dempster in London, and Küss in Paris concluded
+ that it is preferable to place the kidney in the pelvis.
+ Furthermore, both Simonsen and Dempster deduced that the immune response
+ was responsible for graft failure and hypothesized that the humoral mechanism
  of rejection was probable.
- 
 \end_layout
 
 \begin_layout Standard
-In the early 1950s, two groups of surgeons based in Paris and Chicago performed
- pelvic kidney transplants without immunosuppression.
+The early 1950s marked a period of active experimentation.
  In Paris, Jean Hamburger reported the first live-related kidney transplant
- between a mother and her child.
- he transplanted kidney began to function immediately.
- It functioned for 22 days until it was rejected.
-\end_layout
-
-\begin_layout Standard
-A series of nine transplantations with the thigh position of the allograft
- was closely studied in Boston and the first usage of hemodialysis for the
- preparation was recorded in Boston by David Hume in 1953.
- In some of these cases, mild successes were achieved using the adrenocorticotro
-pic hormone (more known as cortisone).
- It was hypothesized that the endogenous immunosuppression of uremia was
- responsible for the results rather than the drug regimen.
- Hume's findings were substantial as he concluded that prior blood transfusions,
- blood group matching between the donor and recipient, and host bilateral
- nephrectomy could be beneficial for the success of the transplant.
- These conclusions were later confirmed by subsequent studies.
- 
-\end_layout
-
-\begin_layout Standard
-These attempts in the early 1950s taught technical aspects of kidney transplanta
-tion and with increased confidence on December 23, 1954 in Boston Joseph
- Murray performed kidney allograft from one identical twin to another, bypassing
- the rejection barrier.
- From that time many similar surgeries were performed in Boston.
- This caused a lot of talks and predictions but all of them were negated
- when one of such recipients got pregnant and gave birth to a completely
- normal infant.
- However, in retrospective, it didn't bring anything new scientifically,
- because the technical possibilty of kidney transplantation was evident
- and the cases of successful skin allografts between identical twins were
- known for decades, but nonetheless it was an important milestone that aroused
- the interest in further experiments 
+ between a mother and her child, achieving the immediate function of the
+ transplanted kidney for 22 days until it was rejected.
+ Meanwhile, in Boston, a series of nine transplantations with the thigh
+ position of the allograft was closely studied.
+ Moreover, in 1953, David Hume introduced the pre-transplant use of hemodialysis.
+ Although some success was achieved with the administration of the adrenocortico
+tropic hormone (more known as cortisone), it was deemed clinically insignificant.
+ Hume's further research suggested the potential benefits of prior blood
+ transfusions, blood group compatibility, and removal of host's both kidneys
+ for transplant success - insights later validated with further research.
+ On December 23, 1954, in Boston, Joseph Murray performed kidney allograft
+ from one identical twin to another, bypassing the rejection barrier.
+ From that time, many similar surgeries were performed in Boston 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1,key-4"
+key "key-1,key-3"
 literal "false"
 
 \end_inset
@@ -1298,328 +1611,531 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+To conclude, the early successes during the 1950s marked a transformative
+ period in the history of kidney transplantation.
+ Works of Hume, Murray, and others underlined the critical role of immune
+ response in graft survival, starting the quest for effective immunosuppression,
+ to which the subsequent section is dedicated.
+ 
+\end_layout
+
+\begin_layout Subsection*
 Attempts in Immunosuppression
 \end_layout
 
 \begin_layout Standard
-In 1948 at Mayo Clinic patients handicapped by rheumatoid arthrytis were
- given already mentioned cortisone, adrenal cortical hormone with mild immunosup
-pressive properties, that relieved their condition.
- This popularized the research on adrenal cortical hormones, but later it
- was concluded that the steroid effect was clinically insignifficant for
- transplantation.
- After that, the experiments with irradiation, abandoned by Carrel and Murphy,
- were revitalized.
- Joan Main and Richmond Prehn showed that weakening of the immune system
- of adult mice by radiation and consequent skin and bone marrow transplantation
- from the same donor resulted in skin transplant acceptance.
- This encouraged teams in Boston and Paris to pursue the similar approach
- in humans.
-\end_layout
+The exploration of immunosuppression in transplantation began as early as
+ the late 1940s.
+ At the Mayo Clinic in 1948, patients with rheumatoid arthritis were administere
+d cortisone, an adrenal cortical hormone with mild immunosuppressive properties,
+ which provided temporary relief.
+ Although initially praised, its effects were deemed clinically insignificant
+ for transplantation purposes.
+ It led researchers to revisit earlier experiments with irradiation.
+ Experiments on mice by Joan Main and Richmond Prehn showed promising results,
+ inspiring human trials in Boston and Paris 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
 
-\begin_layout Standard
-In 1958, Murray’s team transplantation on humans utilizing the Main-Prehn
- method conducted lethal total body irradiation (TBI) on two patients with
- additional bone marrow transplant.
- Ten more recipients were irradiated with sub-lethal TBI, but without donor
- bone marrow transplant.
- As a result 11 patients passed away within a month, the only survivor had
- sub-lethal TBI without transplanted bone marrow and he got kidney from
- his non-identical twin brother.
- This was rather revolutionary - for the first time kidney was not rejected
- from non-identical twin.
- The kidney functioned for 20 years.
- Jean Hamburger and his team performed another fraternal twin transplant
- utilizing the same irradiation technique.
- The transplant functioned for 26 years finishing with the recipient's death
- for rejection-unrelated reason.
-\end_layout
-
-\begin_layout Standard
-Between 1960 and 1962 Kuss and Hamburger performed four successful transplantati
-ons between non-twin patients with following TBI.
- This gave promise that the transplantations could be done in non-twins
- and potentially between anybody.
- The research continued.
-\end_layout
-
-\begin_layout Standard
-It was obvious that TBI is not the best choice and that it is necessary
- to find a substitution.
- In 1959, Schwarz and Damesehek from Tufts University published paper that
- described how an anticancer drug 6-mercaptopurine (6-MP) lowered immune
- response to foreign proteins in rabbits.
- Roy Calne, a training surgeon at Royal Free Hospital, London, dissapointed
- with TBI in prolongation of kidney allograft survival in dogs, noticed
- Schwarz and Dameshek's paper and performed his own experiment in dogs and
- found that it signifficantly prolonged dog's survival.
- Charles Zukoski and David Hume found the same outcomes.
- 
-\end_layout
-
-\begin_layout Standard
-6-MP was used in three tranplantations at Royal Free Hospital, but without
- success, However Kuss and assosiates reported one prolonged graft survival
- from a nonrelated donor.
- The TBI was main agent and intermittent usage of azathioprine and prednisone
- was used as an additional therapy.
-\end_layout
-
-\begin_layout Standard
-Gertrude Elion and George Hitchings provided Roy Calne with the 6-MP derivative
- - azathioprine.
- Calne showed even longer graft survival with azathioprine.
- Both Elion and Hitchings were awarded with the Nobel Prize for the development
- of 6-MP and azathioprine.
- In 1961 Azathioprine became available for human use.
-\end_layout
-
-\begin_layout Subsection
-Gloom Then Revolution
-\end_layout
-
-\begin_layout Standard
-In 1963 National Research Council organized a small conference constisting
- of 25 transplant clinitians and scientists to review the status of kidney
- transplantation at the moment.`the discussion was quite depresive.
- Clinitians presented their results, that were rather discouraging: less
- that 10% of hundreds performed transplantations survived for more than
- three months, from patients with TBI only six got to the one year mark.
- Murray reported that from his first ten patients on 6-MP one survived for
- a year, others passed away within 6 months, so it was concluded that drugs
- were not more effective than radiation.
-\end_layout
-
-\begin_layout Standard
-The gloom continued untill Tom Starzl, until then unknown, did his presentation
- where he described his protocol that allowed graft survival for more than
- one year in 70% of cases.
- He was not believed at first, but then he showed medical records of his
- patients and he was eventually believed.
- The only thing that differed from other protocols with 6-MP was that addition
- of prednison.
- This was a sensation.
- In the first year after the presentation, 50 new tranplantation programs
- were founded in US alone.
- And his protocol became medical world standard for the next 20 years.
-\end_layout
-
-\begin_layout Subsection
-Plateau
-\end_layout
-
-\begin_layout Standard
-During the period from 1964 to 1980 nothing groundbreaking had happened,
- although the steady development was seen.
- Dialysis become available and thanks to the acumulated exprerience the
- dosages became more precise.
- The brain death was accepted and the body was supported for a while to
- save organs for transplantation.
-\end_layout
-
-\begin_layout Standard
-Hemodialysis for renal failure was created by Willem Kolff from Holland
- during WWII.
- But it couldn't be used for chronic renal failure untill 1960 when was
- invented Teflon arteriovenous conduits for long-term vascular access.
-\end_layout
-
-\begin_layout Standard
-Acceptance of brain death as a real death.
- Before the mid 60s the kadaver transplantation was limited by the ischemic
- damage.
- Now the additional organs were available from 
-\begin_inset Quotes sld
-\end_inset
-
-heartbeating kadavers
-\begin_inset Quotes srd
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-Cold for organ preservation.
- This was suggested in 1905 by Carrel's colleague Charles Guthrerie.
- Initially, Starzl used total body hypothermia to protect donor organs,
- but by 1960 switched to infusing cold solution into the portal vein to
- protect donor livers.
- In 1963 the infusion of cold solution intravenous in the transplanted kidney
- has become a standard.
-\end_layout
+In 1958, Murray's team in Boston employed radiation in human transplantation,
+ achieving a significant breakthrough with a kidney transplant between non-ident
+ical twins that lasted 20 years.
+ Similarly, in Paris, Jean Hamburger's team accomplished a 26-year functioning
+ transplant using radiation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
 
-\begin_layout Standard
-As the organ preservation for more than 6 hours was achieved in mid 60s
- the exchange of organs between centers has became practical.
- Initially sharing was local and informal, that roused the worry that the
- organs could be distributed unequally and that they could be transported
- outside of the US.
- This led to Congress passing the National Transplant Act in 1984.
- The Southeastern Organ Procurement Foundation (SEOPF), founded in 1969
- and eventually composed of 12 hospitals in several cities, served as the
- template for the United Network of Organ Sharing (UNOS) that controls organ
- allocation and placement, monitors performance of transplant centers and
- organ procurement organizations, collects data, and controls quality.
- They kindly provided us with data for this paper.
-\end_layout
+\end_inset
 
-\begin_layout Subsection
-Tissue Typing
-\end_layout
-
-\begin_layout Standard
-Although tissue typing was suggested by Alexis Carrel in the beginning of
- 20th century it could not be proven and used until 1958 when Jean Dausset
- discovered the first human leukocyte antigen (HLA).
- Testing for antibodies was not reliable until 1964 when Paul Terasaki invented
- a microxytotoxicity assay.
- Test included mixing donor's lymphocytes and recipient's serum and quickly
- has became the standard and was name crossmatch.
- For a couple of years Terasaki performed typing for most of U.S.
- transplant centers and found a couple of observations: 1) Positive cross-match
- test predicts hyperacute rejection.
- 2) matching can reliably identify optimal donor within a family.
- It was assumed that the same would work for non-related recipients.
+.
  
 \end_layout
 
 \begin_layout Standard
-However, when in 1970 Terasaki reviewed his large database of cadaver renal
- allografts he found no correlation with the typing.
- This raised a lot of agitation in tissue typing community and his grant
- even was temporalily suspended until others didn't report the same.
- Now it is conclded that the 
-\end_layout
+The quest for safer immunosuppressive methods led to the anticancer drug
+ 6-mercaptopurine (6-MP).
+ In 1959, Schwarz and Damesehek published a paper that described how 6-MP
+ lowered immune response to foreign proteins in rabbits.
+ Inspired by their work, Roy Calne performed his own dog experiments, showing
+ promising results backed by Charles Zukoski and David Hume.
+ Despite initial setbacks, Küss and others reported prolonged graft survival
+ from non-related donors using total body irradiation (TBI) complemented
+ by 6-MP.
+ The introduction of azathioprine in 1959, a derivative of 6-MP, by Gertrude
+ Elion and George Hitchings, further improved results.
+ Their groundbreaking work earned them the Nobel Prize, and by 1961, azathioprin
+e was available for human use 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
 
-\begin_layout Subsection
-Antilymphocyte Serum
-\end_layout
+\end_inset
 
-\begin_layout Standard
-Next mark was cyclosporine, a fungal derivative with immunosuppressive propertie
-s discovered in 1976 by Jean-François Borel.
- It revolutionized the renal and extrarenal transplants, proving to be much
- better than the previous drug azathioprine.
- However it also had to be combined with prednisone to gain those results.
- It was used until 1989 when even more potent drug was discovered - Tacrolimus.
- It helps even when the cyclosporine with prednisone has no effect.
-\end_layout
-
-\begin_layout Standard
-Tom Starzl discovered that donor leukocyte chimerism was present in patients
- who had maintained successful kidney or liver grafts for up to three decades.
-\end_layout
-
-\begin_layout Standard
-chimerism is an important cause (not the consequence) of successful transplantat
-ion,
+.
+ 
 \end_layout
 
 \begin_layout Standard
-successful engraftment is the result of the responses of coexisting donor
- and recipient cells each to the other causing reciprocal clonal exhaustion
- followed by peripheral clonal deletion
-\end_layout
+In 1963, a conference held by the National Research Council revealed a bleak
+ outlook for kidney transplantation, with less than 10% survival beyond
+ three months.
+ It changed when Tom Starzl presented a protocol combining 6-MP with prednisone,
+ leading to over one-year graft survival in 70% of cases.
+ His results revolutionized the field, resulting in 50 new US transplantation
+ programs and setting a 20-year standard in post-transplant immunosuppression
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
 
-\begin_layout Subsection
-Conclusion and challenges of the field
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-The ultimate goal is immunosuppression without drugs because drugs are often
- toxic and the proper dosing might be tricky.
+In summary, the late 1940s to the early 1960s was a period of discoveries
+ and experimentation.
+ The use of cortisone in 1948, the administration of 6-MP for immunosuppression,
+ and the invention of azathioprine in 1959 led to better immunosuppression,
+ culminating in Tom Starzl's protocol, which became the standard for the
+ next two decades.
+ The next section is dedicated to a phase of steady developments, in literature
+ referred to as plateau, that would solidify the practice of kidney transplantat
+ion.
+\end_layout
+
+\begin_layout Subsection*
+Plateau
+\end_layout
+
+\begin_layout Standard
+From 1964 to 1980, kidney transplantation saw gradual progress.
+ Dialysis, developed during WWII, finally became available for chronic renal
+ failure as a result of the invention of Teflon arteriovenous conduits in
+ the 1960s.
+ Acceptance of brain death expanded donor pools.
+ Organ preservation techniques also advanced: total body hypothermia was
+ replaced by targeted cold solutions infusions that preserved organs better.
+ By the mid-60s, longer preservation times allowed organ exchanges between
+ centers.
+ Concerns about equitable distribution of organs led to the National Transplant
+ Act in 1984, establishing the United Network of Organ Sharing (UNOS) for
+ oversight 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+As techniques were improving and donor pools expanding in the period from
+ 1964 to 1980, so was the understanding of the nuances of immune compatibility.
+ The following section describes the developments in tissue typing that
+ would further expand the field of kidney transplantation.
+\end_layout
+
+\begin_layout Subsection*
+Tissue Typing
+\end_layout
+
+\begin_layout Standard
+The concept of tissue typing, suggested by Alexis Carrel in the early 20th
+ century, remained unproven until Jean Dausset discovered the first human
+ leukocyte antigen (HLA) in 1958 (more on HLA in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Immunology-of-kidney"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) .
+ It wasn't until 1964, with Paul Terasaki's development of the microcytotoxicity
+ assay, that testing for antibodies became reliable.
+ The test involved mixing the donor's lymphocytes with the recipient's serum
+ and swiftly became the standard, known as the 
+\emph on
+crossmatch test
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For several years, Terasaki performed typing for most U.S.
+ transplant centers and found a couple of observations: 1) Positive crossmatch
+ test predicts hyperacute rejection.
+ 2) matching can reliably identify optimal donors within a family, and it
+ was assumed that the same principle would apply to non-related recipients.
+\end_layout
+
+\begin_layout Standard
+However, in 1970, Terasaki's review of his extensive database of cadaver
+ renal allografts revealed no correlation with the typing.
+ It raised much agitation in the tissue typing community, and his grant
+ was temporarily suspended until others didn't report the same.
+ Since then, many crucial histocompatibility antigens have been discovered
+ (Class II locus: D and DR, more on antigens in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Immunology-of-kidney"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Histocompatibility matching remains essential in bone marrow transplantation
+ and in selecting family donors 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+While tissue typing and matching have played a crucial role in improving
+ transplantation outcomes, the evolution of immunosuppressive drugs has
+ been equally, if not more, important.
+ The subsequent section tells more about new developments in immunosuppressive
+ drugs in upcoming years.
+\end_layout
+
+\begin_layout Subsection*
+Advancements in Immunosuppression
+\end_layout
+
+\begin_layout Standard
+The discovery of cyclosporine in 1976 by Jean-François Borel marked a significan
+t milestone in the realm of transplantation.
+ As a fungal derivative with potent immunosuppressive properties, cyclosporine
+ drastically improved the outcomes of both renal and extra-renal transplants,
+ surpassing the efficacy of the previously used drug, azathioprine.
+ Similar to 6-MP, to achieve the best results, it had to be combined with
+ prednisone.
+ This protocol remained standard until 1989, when Tacrolimus, an even more
+ powerful immunosuppressive agent, was introduced.
+ Tacrolimus proved to be effective in cases where the combination of cyclosporin
+e and prednisone was insufficient, effectively replacing cyclosporine as
+ a usual baseline agent 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In conclusion, the history of renal transplantation has been marked by groundbre
+aking discoveries and persistent challenges.
+ From the pioneering attempts of xenografts in the early 20th century to
+ the technical advancements and immunological breakthroughs of the mid-century
+ — each milestone has been essential in shaping the current landscape of
+ organ transplantation As we explored the history of kidney transplantation,
+ a deeper understanding of the immune system has become crucial.
+ This sets the stage for the next section, which examines the fundamentals
+ of immunology, laying the foundation for understanding the interplay between
+ the immune system and the transplanted organ.
+ .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+don't like the paragraph
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Immunology
+The Introduction to Immunology
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Intro-to-Immunology"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The immune system is a sophisticated defense mechanism that evolved to protect
- multicellular organisms from pathogens such as bacteria, fungi, viruses,
- and parasites.
- It consists of many cells and tissues that compose a complex system that
- detects, evaluates, and responds to the invader.
- The immune system is divided into humoral and cell-mediated immunity.
- Humoral is mediated by soluble immunoglobulin proteins referred to as antibodie
-s, while cell-mediated involves pathogen-specific T Lymphocytes that either
- destroy the invader or assist other cells in doing so.
- Both are essential for a complete immune response.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add that cells are generated in thymus and in bone marrow
+\end_layout
+
+\begin_layout Itemize
+define MHC (major histocompatibility complex)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Lymphocyte is a type of white blood cell that is responsible for both humoral
- and cell-mediated immune responses.
- There are two types of lymphocytes: T lymphocytes (T cells) and B lymphocytes
- (B cells).
- B cells mediate humoral response by producing antigen-specific antibodies.
- An antigen is any molecular structure that binds to an antibody or specific
- surface T cell receptor, triggering an immune response.
- Once B-cell encountered an antigen it starts to produce antibodies specific
- to it, antibodies then bind to it, marking the invader for destruction.
- T cells when encountering an antigen start to proliferate forming an army
- of T cells that will eliminate the invader and will form long-term memory
- about the pathogen.
+The 
+\emph on
+immune system
+\emph default
+ is a sophisticated defense mechanism that evolved to protect multicellular
+ organisms from pathogens such as bacteria, fungi, viruses, and parasites.
+ It is a network of many cells and tissues that compose a complex system
+ that detects, evaluates, and responds to the invader.
+ It is essential to understand these mechanisms, as the immune response
+ plays a crucial role in graft acceptance or rejection 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Physical barriers: epithelia and mucous membranes constitute the first line
- of defense.
- To activate the immune system the pathogen must first breach physical barriers.
- The immune system categorizes pathogens by common characteristics and designs
- its response accordingly.
- Pathogen detection and categorization rely on the interaction between pathogen
- and T-cell receptors, as well as soluble antibodies.
- Binders for T cell receptors and antibodies can be the whole pathogen’s
- body, its part, or molecules excreted by it.
+Innate and adaptive immunity are the two interconnected systems of immune
+ response.
+ 
+\emph on
+Innate immunity (
+\emph default
+also
+\emph on
+ natural 
+\emph default
+or
+\emph on
+ native)
+\emph default
+ includes primitive built-in cellular and molecular mechanisms that provide
+ rapid, albeit non-specific responses to common pathogens.
+ In contrast, 
+\emph on
+adaptive (specific 
+\emph default
+or
+\emph on
+ acquired) immunity
+\emph default
+ is slower to respond but capable of providing more targeted responses 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
-Pathogens are recognized and categorized by molecular patterns that are
- associated with a particular pathogen and are referred to as pathogen-associate
-d molecular patterns (PAMPs).
- Pathogen recognition receptors (PRRs), which are excreted by white blood
- cells, bind to PAMPs initiating the cascade of events that will mark a
- pathogen for destruction.
+Physical barriers, including epithelia and mucous membranes, constitute
+ the host's first line of defense and are a part of innate immunity.
+ This branch of the immune system not only prevents invaders from infiltrating
+ the host but also quickly destroys many microbes that succeed in breaching
+ these barriers.
+ Innate immunity provides the necessary protection until adaptive immunity
+ is activated.
+ It also communicates to the adaptive immunity how to best respond to the
+ invader.
+ Furthermore, innate immunity plays an important role in the clearance of
+ dead tissue and the initiation of repair after the tissue is damaged 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Adaptive immunity is broadly categorized into 
+\emph on
+humoral
+\emph default
+ and 
+\emph on
+cell-mediated immunity
+\emph default
+.
+ Central to both humoral and cell-mediated immune responses are 
+\emph on
+lymphocytes
+\emph default
+, also known as 
+\emph on
+white blood cells
+\emph default
+.
+ 
+\emph on
+B lymphocytes
+\emph default
+ (
+\emph on
+B cells)
+\emph default
+ mediate humoral response by producing antigen-specific antibodies on encounter
+ with the antigen.
+ Produced antibodies then bind themselves to 
+\emph on
+antigens
+\emph default
+ — foreign molecular structures identified by common molecular patterns
+ known as 
+\emph on
+pathogen-associated molecular patterns
+\emph default
+ (
+\emph on
+PAMPs
+\emph default
+) — to mark them for destruction.
+ The immune system uses 
+\emph on
+pathogen recognition receptors
+\emph default
+ (
+\emph on
+PRRs
+\emph default
+), found on the surface of T cells, in conjunction with antibodies to detect
+ and categorize these
+\emph on
+ 
+\emph default
+PAMPs, which can take the form of molecules on the surface of a pathogen
+ or its by-products
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+not ideal sentence
+\end_layout
+
+\end_inset
+
+.
+ PRRs bind to PAMPs and initiate a targeted cascade of events that culminate
+ in the pathogen's elimination 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+T lymphocytes, on the other hand, when encountering an antigen, start to
+ proliferate, forming an army of T cells that will eliminate the invader
+ and will form long-term memory about the pathogen.
+ Activated T cells are divided into the following categories: helper T cells
+ (
+\begin_inset Formula $CD4^{+}$
+\end_inset
+
+), that help B cells to produce antibodies and help kill ingested microbes;
+ 
+\emph on
+cytotoxic T cells
+\emph default
+ (
+\begin_inset Formula $CD8^{+}$
+\end_inset
+
+) that target and kill infected cells; 
+\emph on
+regulatory T lymphocytes
+\emph default
+ that prevent or limit immune responses; and 
+\emph on
+memory cells
+\emph default
+, that remain in the body long-term to provide faster and stronger immune
+ response if the same antigen is encountered in the future 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 Pathogen-host interaction is a continuous arms race, as pathogens usually
  have a short life cycle and can modify their DNA to elude the host's recognitio
 n systems.
- The generation of diversity in developing cells is designed to combat this.
- When lymphocytes are developing in bone marrow random PRRs are generated,
- then cells are tested on non-reactivity to host cells.
- If the test is passed the cell is released into circulation.
+ The immune system counters this with the generation of host-tolerant lymphocyte
+s with diverse PRRs during the development in bone marrow.
+ Cells that react to the host's own cells are eliminated, ensuring that
+ only non-self-reactive cells are allowed in circulation.
  The principle of recognizing self vs.
- non-self is called tolerance.
-\end_layout
-
-\begin_layout Standard
-There are two interconnected systems of response: innate and adaptive.
- Innate includes primitive built-in cellular and molecular mechanisms aimed
- at preventing infections and quickly demolishing common pathogens.
- It consists of physical and molecular barriers as well as PRRs that are
- encoded in DNA and therefore are inherited.
- Innate immunity provides a fast and effective response which however is
- not very specific and cannot differentiate small differences.
- Adaptive immunity is constituted by both humoral, where antibodies neutralize
- and eradicate extracellular microbes and toxins, and cell-mediated immunity,
- where T lymphocytes exterminate intracellular invaders.
-\end_layout
-
-\begin_layout Standard
-Adaptive immunity is much slower but more able to recognize small differences.
- It typically starts to act within 5 to 6 days after initial exposure.
- Because it takes time to create an army of cells with specific receptors.
- After pathogen extermination, some of the lymphocytes with the specific
- receptor become memory cells, making it easier to fight this type of pathogen.
+ non-self is called tolerance 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-6"
 literal "false"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+MHC can be explained here
+\end_layout
 
 \end_inset
 
@@ -1637,222 +2153,284 @@ In conclusion, the immune system is a complex network of molecules, cells,
 \end_layout
 
 \begin_layout Section
-Immunology of kidney transplant
+Immunology of Kidney Transplant 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Immunology-of-kidney"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The process of transplantation inevitably includes termination of blood
- flow, and, as a result, oxygenation.
- Therefore cell is unable to generate sufficient amount of energy to maintain
- homeostasis, leading to damage or death.
- Damage or death is associated with DAMP release that might be detected
- by both innate and adaptive immunity.
+The degree to which the immune system responds to a graft depends on the
+ type of graft.
+ There are four types of grafts:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Autograft 
+\series default
+is body tissue transfer from one body site to the other in the same individual.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Isograft
+\series default
+ is a tissue transplanted between two genetically identical individuals.
+ In humans, it is usually homozygotic (identical) twins.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Allograft
+\series default
+ is a tissue transplanted between two genetically non-identical individuals
+ of the same species.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Xenograft
+\series default
+ is a tissue transplanted between individuals of different species.
+\end_layout
+
+\begin_layout Standard
+Autografts and isografts are generally accepted because they are genetically
+ identical.
+ Allografts, being genetically different, are typically identified as foreign
+ by the immune system and as a result rejected.
+ Xenografts, which have the most significant genetic differences, are the
+ most vigorously rejected by the immune system 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Subsection
-Immune system activation Peritransplant
+Immune response to the graft
 \end_layout
 
 \begin_layout Standard
-The process of transplantation inevitably includes termination of blood
- flow, and, as a result, oxygenation.
- Therefore cell is unable to generate sufficient amount of energy to maintain
- homeostasis, leading to damage or death.
- Damage or death is associated with DAMP release that might be detected
- by both innate and adaptive immunity.
- Mostly it is the ancient innate immunity that is activated with its soluble
- arm - complement system.
-\end_layout
-
-\begin_layout Paragraph*
-Damage Signals
-\end_layout
-
-\begin_layout Standard
-Many DAMPS are recognized by the same PRRs that mediate response to PAMPs.
- These DAMPS include molecules that are normally hidden from the immune
- system and are produced during ischemia, such as extrecellular ATP, heat
- shock proteins (HSPs), uric acid, etc.
- Likewise, oxidative stress and decline in intracellular potassium may act
- as intracellular damage signals.
- 
+There are three reasons why the immune system may react to the allograft:
+ damage due to ischemia, reaction to the incompatible blood group antigens,
+ and reaction to major histocompatibility complex (MHC) and minor histocompatibi
+lity (miH) antigens.
 \end_layout
 
 \begin_layout Paragraph
-Complement
+Ischemia Reperfusion Injury
 \end_layout
 
 \begin_layout Standard
-Complement system is comprised of series of proteine kinases that are sequential
-ly activated resulting in membrane attack complex (MAC) formation.
- MAC include complement components C5 to C9, which are inserted into pathogen
- cell membrane resulting in compromising cell integrity leading to cell
+The transplantation process inevitably includes termination of blood flow
+ and, as a result, oxygenation.
+ This interruption in blood supply inhibits the cell's ability to generate
+ sufficient energy to maintain homeostasis, leading to cellular damage or
  death.
-\end_layout
-
-\begin_layout Standard
-There are three pathways of complement system activation: the classical
- pathway, the alternative pathway, and the mannose-binding lectin (MBL)
- pathway.
- The classical pathway is activated by IgM and IgG antibodies and participates
- in antibody-mediated rejection, that will be discussed further.
- Alternative complement is always active and therefore must be controlled
- by a regulatory proteins, to prevent inadequate responses.
- The MBL pathway is activated by damaged endothelium, a cell tissue that
- covers organs and vessels, and carbohydrates present on pathogens.
- Either pathway results in C3 convertase that cleaves C3.
- This cleavage leads to a cascade of reactions that culminate in MAC formation.
-\end_layout
-
-\begin_layout Standard
-Long ischemia time results in endothelial cell damage that is acossiated
- with ischemia-reperfusion injury (IRI).
- IRI activates MBL and alternative complement pathways.
-\end_layout
-
-\begin_layout Standard
-Gene silencing using small interfering RNA (siRNA) might be a promising
- instrument in organ transplantation, because it can be appliend to an allograft
- during cold reperfusion and it has been shown to mitigate IRI in animal
- models.
- Other strategies of supressing local complement activation would also be
- useful.
-\end_layout
-
-\begin_layout Subsection
-Stimulation of Adaptive Alloimmunity
-\end_layout
-
-\begin_layout Standard
-Immune response to a graft occurs in two main stages: afferent and efferent
- arms.
- In afferent stage, recipient lymphocytes are stimulated by donor antigens
- and start to proliterate and send signals to other cells.
- In efferent arm, leukocytes migrate to the transplanted organ and donor
- specific antibodies are produced.
- 
-\end_layout
-
-\begin_layout Standard
-For the immune system to be activated graft must express antigens that will
- be considered by the host's immune system as foreign.
- These include ABO antigens, human leukocyte antigens (HLA), and polymorphic
- non-HLA 
-\begin_inset Quotes sld
-\end_inset
-
-auto-antigens
-\begin_inset Quotes srd
-\end_inset
-
+ If this happens, the kidney is said to experience 
+\emph on
+ischemia-reperfusion injury (IRI)
+\emph default
 .
- 
-\end_layout
-
-\begin_layout Subsubsection*
-ABO Blood Group Antigens
-\end_layout
-
-\begin_layout Standard
-ABO system is used to group blood into groups, based on presence or absense
- of antigens on a blood cell surface.
- There are four major blood groups: A, B, O and AB.
+ IRI is a significant factor in the success of kidney transplantation.
+ When the blood flow to the ischemic kidney is restored, dead cells trigger
+ an innate immune response.
+ It is associated with the release of 
+\emph on
+danger-associated molecular patterns (DAMP) 
+\emph default
+from the compromised cells
+\emph on
+,
+\emph default
+ serving as a critical alert mechanism.
+ These DAMPs are recognized by both innate and adaptive immunity, although
+ the former is predominately activated.
+ Such an immune response might damage the graft even more and contribute
+ to acute rejection 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-20"
+key "key-1"
 literal "false"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-When allocating an organ to transplant the first thing that is considered
- is ABO blood group antigens compatibility.
- ABO antigens are expressed almost by any cell in the allograft, and if
- the transplantation to be carried out in ABO-incompatible donor and recipient
- it would result in a hyperacute antibody-mediated rejection.
-\end_layout
-
-\begin_layout Standard
-Donors with blood group O are so called 
-\begin_inset Quotes sld
-\end_inset
-
-universal donors
-\begin_inset Quotes srd
-\end_inset
-
 .
- Organs from them can be safely transplanted to recipients with any ABO
+ Because of that, the duration of ischemia is crucial in predicting the
+ graft (and patient) survival.
+\end_layout
+
+\begin_layout Paragraph
+Blood Group Compatibility
+\end_layout
+
+\begin_layout Standard
+ABO blood group antigens, expressed by most cell types, play a crucial role
+ in the compatibility of organ transplants.
+ If the transplantation between incompatible pairs were performed, it would
+ result in a severe and often immediate reaction known as hyperacute antibody-me
+diated rejection (AMR or ABMR).
+ The rejection risk is so high that the ABO blood group compatibility is
+ the first thing checked before performing the transplant.
+\end_layout
+
+\begin_layout Standard
+There are four primary blood groups: A, B, O, and AB.
+ Within this system, individuals with blood group O are so-called ”universal
+ donors” – organs from them can be transplanted to recipients with any ABO
  blood group.
- Whereas, recipient with AB group can safely receive organ from recipient
- with any ABO blood group and is called a 
-\begin_inset Quotes sld
-\end_inset
-
-universal recipient
-\begin_inset Quotes srd
-\end_inset
-
-.
+ Whereas recipients in the AB group can safely receive organs from recipients
+ with any ABO blood group and are called ”universal recipients”.
+ In clinical practice, however, particularly with deceased donors, the preferenc
+e is to match organ recipients with ABO-identical organs to prevent potential
+ inequities in organ allocation and access.
+ In the case of living donors, the principle of ABO-identity is somewhat
+ more flexible, where organs from ABO-compatible donors are considered acceptabl
+e for transplantation 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-9"
+key "key-1"
 literal "false"
 
 \end_inset
 
-
+.
 \end_layout
 
-\begin_layout Subsubsection*
-HLA
+\begin_layout Paragraph
+Histocompatibility
 \end_layout
 
 \begin_layout Standard
-Histocompatibility antigens are genetically encoded antigens that cover
- cell surfaces.
- They differ between individuals of the same species and therefore trigger
- an immune response in case of allograft.
- In all vertebraes histocompatibility antigens are divided into single major
- histocompatibility complex (MHC) and numerous minor histocompatibility
- (miH) systems.
- In case of either MHC or miH incompatibility the result is an immune response
- to the graft, more severe in case of MHC than miH.
+Genetically similar tissues, known as 
+\emph on
+histocompatible
+\emph default
+, are less likely to trigger an immune response post-transplant, as the
+ immune system does not recognize the transplanted tissue as foreign.
+ Conversely, 
+\emph on
+histoincompatible
+\emph default
+ tissues, characterized by genetic differences, typically trigger an immune
+ response.
+ Although more than 40 distinct loci encode the antigens responsible for
+ histocompatibility, the most vigorous allograft-rejection responses are
+ attributed to loci within the 
+\emph on
+major histocompatibility complex (MHC)
+\emph default
+.
+ The organization of MHC in humans is called 
+\emph on
+human leukocyte antigen (HLA)
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Histocompatibility antigens, genetically encoded antigens that cover cell
+ surfaces, play a crucial role in recognizing self versus non-self.
+ In all vertebrates, histocompatibility antigens are categorized into a
+ single 
+\emph on
+major histocompatibility complex (MHC) 
+\emph default
+and
+\emph on
+ 
+\emph default
+numerous
+\emph on
+ minor histocompatibility (miH)
+\emph default
+ systems.
+ Mismatches in either MHC or miH result in an immune reaction, most severe
+ in the case of MHC.
  Rejection in MHC-compatible donor-recipient pair is usually delayed, in
  some cases forever.
- Although, sometimes miH mismatch might be so severe that it would be comparable
- to full MHC mismatch.
+ However, the miH mismatch might be so drastic that it would be comparable
+ to the MHC mismatch 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
+
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Standard
-MHC antigens are proteins that cover cell surfaces to help the immune system
- to recognize self vs.
- non-self.
- Major histocompatibility comples is divided into MHC class I and MHC class
- II.
- MHC class I cover surfaces of most cells and are liable for activation
- of cytotoxic CD8 cells, that help to find and destroy infected cells.
- MHC class II are found on certain immune cells and play crucial role in
- immune response coordination.
- In humans MHC class 1 are divided into three subgroups each, as can be
- seen on table 
+The MHC itself is divided into class I and class II antigens.
+ MHC class I antigens cover the surfaces of most cells and can activate
+ cytotoxic CD8 cells.
+ MHC class II antigens, found on specific immune cells, play an essential
+ role in immune response coordination 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
+
+\end_inset
+
+.
+ In humans, each MHC class is further divided into three subgroups, as illustrat
+ed in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:MHC-class-division"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 MHC class division
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:MHC-class-division"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1960,60 +2538,362 @@ HLA-DQ
 \end_layout
 
 \begin_layout Standard
-In clinical practice, clinicians asses and try to match donors and recipient
+It is important to note that class I and II mismatches differ in their impact
+ on graft survival.
+ A mismatch of one or two class I antigens has little effect on graft survival,
+ whereas a single mismatch in class II antigen is equivalent to a mismatch
+ of 3 or 4 class I antigens.
+ When there are mismatches in both class I and II antigens, the risk and
+ severity of the rejection are notably increased 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+HLA Typing and Matching
+\end_layout
+
+\begin_layout Standard
+In clinical practice, clinicians asses and try to match donors and recipients
  according to the number of HLA-A, -B, and -DR mismatches, ranging from
  zero mismatches (0-0-0) to a maximum of 6 mismatches (2-2-2).
- Generally more emphasis is placed on DR loci due to capability of CD4 T
- cell activation, which might trigger both humoral and cellular adaptive
- immune responses.
+ Generally, more emphasis is placed on DR loci due to the capability of
+ CD4 T cell activation, which might trigger both humoral and cellular adaptive
+ immune responses 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Minor histocompatibility proteins can act as antigens, although weaker than
- MHC.
- However if prior sensitisation exists it could result in severe immune
- response that might result in graft loss.
+HLA typing of potential donors and recipient is conducted with a 
+\emph on
+microcytotoxicity test
+\emph default
+.
+ The subject's white blood cells are distributed into various wells on a
+ microtiter plate, after which specific antibodies for various class I and
+ class II MHC alleles are added to different wells.
+ Following incubation, complement is introduced to the wells, and cytotoxicity
+ is assessed by the cells' absorption of various dyes.
+ If a cell has an MHC allele for which a particular antibody is specific,
+ then the cell will die upon the addition of a complement, and these dead
+ cells will take up a dye 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Even when a fully HLA-compatible donor is not available, the transplantation
+ still can be successful.
+ In this situation, a one-way mixed-lymphocyte reaction (MLR) test can be
+ used to assess the degree of class II MHC compatibility.
+ The irradiated (or treated with mitomycin C) potential donor's lymphocytes
+ play the role of stimulator, and the unaltered recipient's lymphocytes
+ take a responder role.
+ Then, the proliferation of recipient cells is measured.
+ The intense recipient leukocyte proliferation indicates a poor prognosis
+ for graft survival.
+ The MLR gives a better understanding of the degree of CD4 cell activation.
+ However, it takes several days to run the assay, often making it less suitable
+ in the case of cadaver transplantation compared to a quicker microcytotoxicity
+ test, which takes only a couple of hours.
+ Notably, even perfect HLA matching does not guarantee rejection-free transplant
+ation.
+ Minor histocompatibility loci mismatches can still lead to graft rejection,
+ necessitating at least some level of immunosuppression even in HLA-identical
+ pairings.
+ It is particularly critical in kidney and bone marrow transplants, where
+ HLA matching is vital, whereas heart and liver transplantation can withstand
+ higher levels of mismatching 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Mechanisms of Graft Rejection
+\end_layout
+
+\begin_layout Standard
+Graft rejection is mainly due to cell-mediated immune response to alloantigens,
+ predominantly MHC antigens, present on the graft cells.
+ The process of cell-mediated graft rejection is divided into two phases.
+ The first is known as the sensitization phase, which involves the recognition
+ of MHC and miH alloantigens by helper CD4 and killer CD8 cells, leading
+ to their proliferation.
+ The second stage, the effector stage, is where the actual destruction of
+ the graft occurs 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+A range of effector mechanisms are involved in graft rejection.
+ The most prevalent are cell-mediated reactions involving delayed-type hypersens
+itivity and cytotoxic T lymphocyte-mediated cytotoxicity.
+ Less common mechanisms are antibody-plus-complement lysis (cell disintegration)
+ and destruction by antibody-dependent cell-mediated cytotoxicity (ADCC)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Subsection
-T Cell-mediated rejection
+Clinical Manifestations of Graft Rejection
 \end_layout
 
 \begin_layout Standard
-T cell-mediated rejection or TCMR is the most common type of allograft rejection
-, as it still happens in 20% of transplantations mostly within first 6 months
- posttrasplant.
- Immune system cells migrate through vessels to the graft, become activated
- and start to attack the organ.
- Complement may also play role in it.
+The onset and severity of graft rejection varies depending on the organ
+ transplanted and the underlying immune response mechanisms involved.
+ Rejection can be categorized into three types: hyperacute, acute, and chronic
+ rejections.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Hyperacute rejections
+\emph default
+ occur within the first 24 hours post-transplant.
+ This type of rejection occurs due to the prior sensitization to graft antigens,
+ with specific antibodies already present in the bloodstream.
+ It may happen due to several reasons: recipients of repeated blood transfusions
+ sometimes develop significant amounts of antibodies to MHC antigens present
+ on white blood cells of the transfused blood; women, through repeated pregnanci
+es, can become sensitized to paternal alloantigens of the fetus; individuals
+ with previous grafts may have antibodies against alloantigens of that graft;
+ and naturally occurring antibodies to blood group antigens are always present,
+ although pre-transplant blood group matching has made rejections of this
+ nature rare 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Acute rejections
+\emph default
+ typically happen within the first few weeks post-transplant.
+ This type of rejection is primarily mediated by adaptive immunity via T
+ cell responses 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Chronic rejections
+\emph default
+, on the other hand, happen from months to years after the transplantation
+ and are mediated by both humoral and cell-mediated mechanisms.
+ While the advancements in immunosuppression and tissue typing significantly
+ improve short-term survival, little progress has been made in terms of
+ long-term survival.
+ Chronic rejections are hard to manage with immunosuppressants and may necessita
+te another transplantation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
-B Cell-mediated rejection
+Immunosuppression
 \end_layout
 
 \begin_layout Standard
-B cells are immune system cells that produce antibodies.
- Alloantibodies are antibodies that react to donor-specific HLA antigens
- and might cause hyperacute rejection, acute antibody-mediated rejection
- (ABMR), and chronic ABMR.
- About 30% of patients have sensitivities and have certain HLA antibodies.
- It might cease transplantation or require antibody suppression strategy.
- Even low amount of antibodies below crossmatch cutoff doubles the risk
- of ABMR and increases the risk of graft failure by 76%.
- Additionally, donor specific antibodies might develop posttransplant and
- cause an actue ABMR.
+Most of the available immunosuppression methods, while essential in preventing
+ graft rejections, have the disadvantage of being non-specific, meaning
+ they suppress immune reactions to all antigens, not only ones of the graft,
+ placing the recipient at the risk of infection and, in some cases, more
+ severe complications.
+ For instance, some drugs target the speed of proliferation of activated
+ lymphocytes.
+ In doing so, they slow down the proliferation of all cells in the body.
+ It can be particularly problematic for rapidly dividing cells, such as
+ those of gut epithelia or bone marrow hematopoietic stem cells, placing
+ patients at risk of severe or even life-threatening complications.
+ Moreover, long-term use of immunosuppressive agents puts patients at risk
+ of cancer, hypertension, and metabolic bone disease.
+ In this section, we will delve into commonly used immunosuppressive methods
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Acute AMBR is rarely seen in patients withour prior sensitization and is
- highly difficult to treat.
- AMBR is characterized by decline in allograft function, presense of DSA
- and signs of acute vascular injury.
- A progressive reduction in graft function over time is observed almost
- universally.
+A class of drugs known as 
+\emph on
+mitotic inhibitors
+\emph default
+ is used to inhibit rapid cell division across all cells.
+ These are administered just before and after the transplantation to stop
+ T-cell proliferation.
+ The most commonly used mitotic inhibitors include 
+\emph on
+Azathioprine
+\emph default
+, 
+\emph on
+Cyclophosphamide
+\emph default
+, and 
+\emph on
+Methotrexate
+\emph default
+.
+ However, their broad action on cell division can lead to significant adverse
+ effects 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Corticosteroids
+\emph default
+, another class of drugs, are often used in conjunction with mitotic inhibitors
+ to prevent acute rejection.
+ They have anti-inflammatory properties and act on different levels of immune
+ response.
+ Commonly used corticosteroids are 
+\emph on
+prednisone
+\emph default
+ and 
+\emph on
+dexamethasone
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Fungal metabolites, such as 
+\emph on
+Cyclosporine A (CsA)
+\emph default
+, 
+\emph on
+Tacrolimus
+\emph default
+, and 
+\emph on
+rapamycin
+\emph default
+ are also widely used due to their potent immunosuppressive properties in
+ heart, liver, kidney, and bone marrow transplants.
+ A substantial drawback is their nephrotoxicity.
+ While CsA has been widely used, Tacrolimus and rapamycin, being much more
+ potent, might be administered at much lower doses, minimizing the side
+ effects 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Radiation, known for its effectiveness in destroying lymphocytes, is another
+ lymphocyte elimination method employed just before transplantation.
+ In one such procedure, lymph nodes, spleen, and thymus are irradiated.
+ Later, newer, more tolerant to the graft alloantigens lymphocytes will
+ emerge, as the bone marrow was unaffected 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ideal immunosuppression would be antigen-specific, targeting only alloantigens
+ of the graft, preserving the recipient's ability to respond to infections.
+ Such specific immunosuppression has not been achieved in humans yet, but
+ animal models suggest its feasibility.
 \end_layout
 
 \begin_layout Subsection
@@ -2021,26 +2901,44 @@ Transplant Tolerance
 \end_layout
 
 \begin_layout Standard
-Taking into account the detrimental effect of long-term immunosuppression
+Taking into account the detrimental effect of long-term immunosuppression,
  one of the primary objectives in transplantation is the induction of immunologi
 c non-responsiveness (tolerance) to an allograft.
- The are a couple a pathways of immune non-responsivenes generation described
- in literature, however it haven't gone further animal models yet.
-\end_layout
+ There are several pathways of immune non-responsiveness generation described
+ in the literature.
+ However, it has not gone further than animal models yet 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
 
-\begin_layout Subsection
-Factors Influencing Rejection Beyond the Graft - Microbiome
+\end_inset
+
+.
+ Tolerance is usually induced by prior exposure to donor antigens in a way
+ that causes immune tolerance rather than sensitization in the recipient
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Human body is very complex system where every subsystem influences other
- subsystems and the whole system in general.
- It is clear that gut microbiome has a profound influence on immune system.
- It is possible microflora on the allograft might cause rejection.
- Immunosupression, profilactory antibbiotics, diet changes and other restriction
-s asossiated with organ transplantation result in decrease in gut microbiome
- diversity that result in systematic inflammation, that might contribute
- to alloimunnity, as well as autoimunnity.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+write some conclusion to the chapter
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -2134,7 +3032,7 @@ Every field is affected by human errors, and medicine is no exception.
 \series bold
  
 \series default
-all processesand and how they  relate to each other.
+all processes and and how they  relate to each other.
  In addition, machine learning can help us gain insight into them through
  accumulated data and discover new relations between them.
 \end_layout
@@ -2408,7 +3306,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4034,13 +4932,13 @@ often referred to as
 \emph default
 is a statistical technique employed to analyze and predict the time until
  an event of interest occurs.
- Its name originates from clinical and biological research, where these
- methods are used to analyze survival time, hence the name.
- These methods, however, found their uses in areas far beyond clinical settings:
+ Its name originates from clinical and biological research where these methods
+ are used to analyze survival time.
+ These methods, however, found their use in areas far beyond clinical settings:
  in business to predict the time until the customer ”churns” from a subscription
-, in engineering, to estimate the product longevity or the longevity of
- their parts, in social sciences, estimate the longevity of a marriage or
- a student dropout rate in an academic setting.
+; in engineering to estimate the product longevity or the longevity of its
+ parts; in social sciences to estimate the longevity of a marriage; or to
+ estimate a student dropout rate in an academic setting.
 \end_layout
 
 \begin_layout Standard
@@ -4053,7 +4951,8 @@ time
 survival time
 \emph default
 ) refers to the duration from the start of an individual's follow-up to
- the occurrence of an event, measured in days, weeks, months, or years 
+ the occurrence of an event.
+ It is measured in days, weeks, months, or years 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -4075,7 +4974,7 @@ h or
 failure
 \emph default
 ) encompasses any occurrence that permanently changes the state of the subject.
- It can be death, the onset of a disease, a relapse from remission, recovery,
+ It can be death, the onset of a disease, a relapse from remission, a recovery,
  or any other specified experience of interest that an individual might
  encounter 
 \begin_inset CommandInset citation
@@ -4120,9 +5019,9 @@ Basic Terminology
 \end_layout
 
 \begin_layout Standard
-In this subsection, we are going to cover basic terminology required for
- survival analysis such as censoring, censoring assumptions, survival, and
- hazard functions.
+In this subsection, we are going to cover the basic terminology required
+ for survival analysis such as censoring, censoring assumptions, survival,
+ and hazard functions.
  
 \end_layout
 
@@ -4152,7 +5051,7 @@ censoring
  approaches to survival data impractical 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-27"
+key "key-38"
 literal "false"
 
 \end_inset
@@ -4285,7 +5184,7 @@ Understanding right, left, and interval censoring is essential in survival
  We will next turn our attention to the assumptions associated with these
  censoring types.
  These assumptions are inherent to many survival analysis methods and are
- critical in selecting the appropriate technique.
+ critical in selecting an appropriate technique.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4306,8 +5205,8 @@ independent
 non-informative
 \emph default
 .
- Each shares certain similarities but also possesses unique distinctions,
- which we'll explore in detail.
+ Each shares certain similarities but also possesses unique distinctions
+ which we will explore in detail.
  Censoring assumptions is the way censoring is managed.
 \end_layout
 
@@ -4332,7 +5231,7 @@ t
 Independent Censoring
 \series default
 : Independent censoring occurs when the censoring is random within certain
- subgroups, defined by certain covariates.
+ subgroups, defined by specific covariates.
  If no covariates are present, it defaults to random censoring.
  This distinction might not be apparent when examining a single subgroup.
 \end_layout
@@ -4344,8 +5243,8 @@ Non-Informative Censoring
 \series default
 : Non-informative censoring occurs when censored instances do not provide
  any information on their survival prospects.
- In other words, whether or not the patient is censored has no influence
- on experiencing the event of interest.
+ In other words, whether or not the patient is censored, has no influence
+ on experiencing the event.
 \end_layout
 
 \begin_layout Standard
@@ -4363,11 +5262,12 @@ random
 \emph default
 .
  However, these assumptions are not equivalent.
- To better understand these concepts, let's look into examples.
+ To better understand these concepts, let us look into some examples.
 \end_layout
 
 \begin_layout Standard
-Consider a three-year disease occurrence study with 100 subjects at risk.
+Consider a three-year disease occurrence study with 100 subjects at risk
+ (group A).
  By the end of the study, 20 of them contracted the disease, giving a 20%
  three-year disease risk.
  Suppose we want to extend the study for another two years on the remaining
@@ -4380,14 +5280,13 @@ Consider a three-year disease occurrence study with 100 subjects at risk.
  it.
  Consequently, the five-year risk is 30% and the five-year survival is 70%
  under random and independent censoring assumptions.
- In this case, random and independent censoring is the same, as no predictor
+ In this case, random and independent censoring are the same, as no predictor
  variables are considered.
 \end_layout
 
 \begin_layout Standard
 To illustrate the difference between random and independent censoring, let
- us introduce another group to the study: group B (the group before is A)
- with 100 individuals.
+ us introduce another group to the study: group B with 100 individuals.
  In the first three years, 40 contracted the disease, and 10 left the study.
  So, the calculated three-year risk for group B is 40%.
  In the next two years, 10 out of 50 get the disease, yielding 20% risk
@@ -4404,10 +5303,21 @@ As we can see, the five-year risk in the two groups differs significantly
  (50% against 17%).
  Hence, the overall censoring is not random.
  However, it is random within each group, so the censoring is independent.
- If, instead, in group B, 30 subjects out of 60 were censored at the three-year
- mark, the censoring proportion would be the same in both groups, and the
- overall censoring would be random, as those censored would be the representativ
-es of those who remained at risk.
+ On other hand, if in group B, 30 subjects out of 60 were censored at the
+ three-year mark, the censoring proportion would be the same in both groups,
+ and the overall censoring would be random as those censored would be the
+ representatives of those who remained at risk.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+50 vs.
+ 17???
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4419,7 +5329,7 @@ To best illustrate what non-informative censoring is, let us demonstrate
  A's relative).
  If the censored subjects are representative of subjects at risk it would
  be random and independent censoring.
- Here, the censoring mechanism is directly related to event occurrence,
+ Here, the censoring mechanism is directly related to the event occurrence,
  so the censoring is informative.
  
 \end_layout
@@ -4442,7 +5352,17 @@ survivor function
 \end_inset
 
 , represents the probability that the patient survives, in other words,
- does not experience the event of interest beyond a given time 
+ does not experience the event of interest beyond the
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+
+ given time 
 \begin_inset Formula $t$
 \end_inset
 
@@ -4453,7 +5373,7 @@ survivor function
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-S(t)=P(T>t).\label{eq:f_surv}
+S(t)=P(T>t),\label{eq:f_surv}
 \end{equation}
 
 \end_inset
@@ -4462,7 +5382,7 @@ S(t)=P(T>t).\label{eq:f_surv}
 \end_layout
 
 \begin_layout Standard
-Where 
+where 
 \begin_inset Formula $P$
 \end_inset
 
@@ -4507,14 +5427,14 @@ It continually decreases or maintains its value over time, theoretically
 
 \begin_layout Enumerate
 As it represents a probability, the function value ranges from 0 to 1.
- It starts at 1, at the beginning of the observation period, indicating
- 100% survival probability, and declines over time, potentially reaching
- 0, as the probability of survival decreases.
+ At the beginning of the observation period it starts at 1, indicating 100%
+ survival probability, and declines over time, potentially reaching 0 as
+ the probability of survival decreases.
 \end_layout
 
 \begin_layout Enumerate
-Although, by definition, the graph of the survival function is smooth, in
- reality, it is a step function.
+Although the graph of the survival function is smooth by definition, in
+ reality it is a step function.
  This stepwise representation is due to the nature of real-world data, where
  events are recorded at specific, discrete time points rather than continuously
  
@@ -4569,8 +5489,18 @@ Survival function
  It presents a declining or constant trend starting at 1 and potentially
  declining to 0.
  While understanding the probability of not failing at every time point
- is important, knowing the instantaneous risk of failing is useful in some
- cases, leading us to the next tool: the hazard function.
+ is important, knowing the instantaneous risk might also be useful, leading
+ us to the next tool: the hazard function.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+kouknut na tuhle vetu a prepsat
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4640,11 +5570,11 @@ Here,
 
 .
  The conditional probability statement gives the probability that a person’s
- survival time, 
+ survival time 
 \begin_inset Formula $T$
 \end_inset
 
-, will lie in the time interval between 
+ will lie in the time interval between 
 \begin_inset Formula $t$
 \end_inset
 
@@ -4698,8 +5628,8 @@ To best illustrate the concept of instantaneous potential, let us refer
  speed for an hour would result in traveling 80 kilometers.
  However, it doesn't predict how much the car will travel in reality.
  The same works with the instantaneous potential: it might be high at one
- point, but low at another, reflecting that both are measurements at an
- instant in time rather than an interval 
+ point but low at another, reflecting that both are measurements at an instant
+ in time rather than an interval 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13"
@@ -4717,7 +5647,7 @@ The cumulative hazard function
 \emph default
 further extends our understanding by quantifying the accumulated risk over
  time.
- It is an area under the hazard function that allows us to say which group
+ It is the area under the hazard function that allows us to say which group
  has a greater risk.
  It is defined by the following function:
 \end_layout
@@ -4738,6 +5668,21 @@ Where
  This integral measure enables a comprehensive comparison of risk between
  groups, showing which has a greater risk from the perspective of accumulated
  potential for the event to occur over time.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Does not tell that CHF is specific to each point in ttime (accumulated hazard)
+ somewhere in text I may have referred to it as a scalar value.
+ Check that!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4763,6 +5708,17 @@ status collapsed
 \begin_layout Plain Layout
 The example of a hazard function.
  Note that it may signifficantly differ.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+divna veta.
+ vyhodit
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4782,7 +5738,7 @@ The example of a hazard function.
 \begin_layout Subsubsection*
 
 \series bold
-The relationsip between the survival and hazard functions
+The Relationship Between the Survival and Hazard Functions
 \end_layout
 
 \begin_layout Standard
@@ -4791,12 +5747,12 @@ Some models, such as Cox Proportional Hazards, are written in terms of the
  function out of the hazard function to make the model more flexible and
  accessible to a larger audience.
  Fortunately, there are ways to convert one into the other and vice versa.
- In this subsection, we are going to cover ways to do that.
+ In this subsection, we are going to describe techniques for these conversions.
  
 \end_layout
 
 \begin_layout Standard
-Let us start by considering how to get the survival function 
+Let us start by considering how to obtain the survival function 
 \begin_inset Formula $S(t)$
 \end_inset
 
@@ -4816,7 +5772,7 @@ S(t)=exp\left[-\intop_{0}^{t}h(u)du\right].\label{eq:haz_to_surv}
 
 \end_inset
 
-This equation 
+Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:haz_to_surv"
@@ -4882,7 +5838,7 @@ h(t)=-\left[\frac{dS(t)/dt}{S(t)}\right].\label{eq:surv_to_haz}
 \end_layout
 
 \begin_layout Standard
-Here, the Equation 
+Here, Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:surv_to_haz"
@@ -4908,7 +5864,7 @@ noprefix "false"
 \begin_inset Formula $S(t)$
 \end_inset
 
- itself.
+.
 \end_layout
 
 \begin_layout Standard
@@ -4917,7 +5873,7 @@ Considering the fact that the survival function describes the probability
 \begin_inset Formula $t$
 \end_inset
 
- and the hazard function shows us the instantaneous risk of a person dying
+, and the hazard function shows the instantaneous risk of a person dying
  at a specific instant 
 \begin_inset Formula $t$
 \end_inset
@@ -4933,14 +5889,14 @@ literal "false"
 
 .
  Of the two discussed functions, the survival function is used more often
- as it is more intuitive, and in the practical part, we will estimate the
- survival function as well.
+ as it is more intuitive.
+ In the practical part, we will estimate the survival function as well.
  Fortunately, we will not convert them manually.
  The 
 \emph on
 scikit-survival
 \emph default
- library (more on it in the section 
+ library (more on it in the Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Overview-of-Machine"
@@ -4972,7 +5928,7 @@ machine learning based
  the estimated survival time 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -4984,7 +5940,7 @@ literal "false"
  Typically, statistical methods are employed for low-dimensional data 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5000,7 +5956,7 @@ On the other hand, machine learning methods focus on the prediction of the
  Machine learning methods are mostly used with high-dimensional data 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5019,7 +5975,7 @@ Statistical methods can be further subdivided based on their assumptions
  learning, and multitask learning are included as well 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5078,7 +6034,7 @@ Non-parametric methods
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5095,7 +6051,7 @@ literal "false"
  hazard functions 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5132,7 +6088,7 @@ noprefix "false"
  algorithm, and the Time-Dependent Cox model 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5157,7 +6113,7 @@ Parametric methods
  The AFT model represents survival time as a function of covariates 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5285,7 +6241,7 @@ literal "false"
 product-limit method 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5699,7 +6655,7 @@ LL(\beta)=-\sum_{j=1}^{N}\delta_{j}\{X_{j}\beta-log[\sum_{i\epsilon R_{j}}exp(X_
 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-36"
 literal "false"
 
 \end_inset
@@ -5819,7 +6775,7 @@ ridge regression.
  is set to zero, we get the regular Cox model 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-37"
 literal "false"
 
 \end_inset
@@ -5912,7 +6868,7 @@ alpha_min_ratio=0.01
  values up to 1% of the estimated maximum 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-37"
 literal "false"
 
 \end_inset
@@ -6006,7 +6962,7 @@ Similar to LASSO, the weight
  Its optimal value is typically estimated in a data-driven way 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-37"
 literal "false"
 
 \end_inset
@@ -6041,7 +6997,7 @@ To conclude, Ridge, LASSO, and Elastic Net offer powerful extensions of
  model.
  Nevertheless, it is important to acknowledge their limitations.
  As linear models, they inherently capture only linear relationships, and
- non-linear relationships are enigma to them.
+ non-linear relationships remain uncaptured.
  That leads us to the next section dedicated to the Random Survival Forests,
  a machine learning approach.
  Machine learning techniques are known for their ability to catch complex
@@ -6093,7 +7049,7 @@ Survival Trees
  a given feature that maximizes the survival difference 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-26"
+key "key-39"
 literal "false"
 
 \end_inset
@@ -6153,7 +7109,7 @@ For each tree, calculate the cumulative hazard function with the Nelson-Aalen
 Use OOB data to determine the prediction error of the ensemble 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-27"
+key "key-38"
 literal "false"
 
 \end_inset
@@ -6215,7 +7171,7 @@ Calibration
  is the agreement between the observed and predicted survival times 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-34"
 literal "false"
 
 \end_inset
@@ -6230,7 +7186,7 @@ The absence of bias in a situation when the validation set contains censored
  would be unreasonably optimistic 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-34"
 literal "false"
 
 \end_inset
@@ -6278,7 +7234,7 @@ Measures of concordance
  discrimination 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-34"
 literal "false"
 
 \end_inset
@@ -6318,7 +7274,7 @@ C-index
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-34"
 literal "false"
 
 \end_inset
@@ -6384,7 +7340,7 @@ literal "false"
  and may provide more stable estimates 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-34"
 literal "false"
 
 \end_inset
@@ -6443,7 +7399,7 @@ where
 According to the Scikit-survival's documentation 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-35"
 literal "false"
 
 \end_inset
@@ -6453,7 +7409,7 @@ literal "false"
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-34"
 literal "false"
 
 \end_inset
@@ -6527,7 +7483,7 @@ area under the receiver operating characteristic curve
  can distinguish diseased patients from healthy ones 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-35"
 literal "false"
 
 \end_inset
@@ -6641,7 +7597,7 @@ dynamic controls
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-35"
 literal "false"
 
 \end_inset
@@ -6668,7 +7624,7 @@ Time-dependent ROC AUC and concordance index are great for assessing the
  tell us nothing about the accuracy of individual predictions 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-35"
 literal "false"
 
 \end_inset
@@ -6736,7 +7692,7 @@ x
  is the inverse probability of censoring weight 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-35"
 literal "false"
 
 \end_inset
@@ -6803,7 +7759,73 @@ name "sec:Deep-Learning"
 status open
 
 \begin_layout Plain Layout
+universal approximation theorem
+\end_layout
+
+\begin_layout Plain Layout
+architecture
+\end_layout
+
+\begin_layout Plain Layout
+weights/parametersr
+\end_layout
+
+\begin_layout Plain Layout
+independent variable
+\end_layout
+
+\begin_layout Plain Layout
+loss
+\end_layout
+
+\begin_layout Plain Layout
+poistive feedback loop -> bias
+\end_layout
+
+\begin_layout Plain Layout
+architecture is not that important - don't spend much time on thinking about
+ it.
+\end_layout
+
+\begin_layout Plain Layout
+metric for humans, loss for algos
+\end_layout
+
+\begin_layout Plain Layout
+it is better to always use pretrained models
+\end_layout
+
+\begin_layout Plain Layout
+head of the nn - last layer
+\end_layout
+
+\begin_layout Plain Layout
+transfer learning, pretrained models
+\end_layout
+
+\begin_layout Plain Layout
+fine-tuning the model (in transfer learning)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 What is neuron
+\end_layout
+
+\begin_layout Plain Layout
+epoch
+\end_layout
+
+\begin_layout Plain Layout
+fitting the model
 \end_layout
 
 \begin_layout Plain Layout
@@ -7003,7 +8025,7 @@ In this chapter we age going to look into the UNOS dataset.
 
 \begin_layout Standard
 The dataset provided by the IKEM (Institute of Clinical and Experimental
- Medicine in Prague) that I had from the beginning was not suitable for
+ Medicine in Prague) that we had from the beginning was not suitable for
  any meaningful analysis.
  That is why it was decided to look for the dataset elsewhere.
 \end_layout
@@ -7037,7 +8059,7 @@ give a link to the UNOS website
 
 \begin_layout Standard
 The dataset consists of 993 806 of records for both transplanted patients
- and ones from teh waiting list, and 450 features comprised of waiting list
+ and ones from the waiting list, and 450 features comprised of waiting list
  data and already transplanted patients for kidney and pancreas transplant
  from October 1, 1987 to the present.
  Kidney transplants have 490 172 records.
@@ -7384,10 +8406,18 @@ The data were provided in a form of a MongoDB database dump.
  So it was necessary to run the database first and import the database dump
  there.
  We set up the database in a Docker container (Docker is container management
- system + 
+ system
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
++ 
 \series bold
 explain what is container
-\series default
+\end_layout
+
+\end_inset
+
 ) locally on my Mac, as the university cluster unfortunatelly does not have
  Docker.
  The data from the database and table kidpan were then exported to CSV,
@@ -8275,7 +9305,7 @@ noprefix "false"
  common in men
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-19"
+key "key-32"
 literal "false"
 
 \end_inset
@@ -8444,7 +9474,7 @@ noprefix "false"
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-20"
+key "key-33"
 literal "false"
 
 \end_inset
@@ -8744,7 +9774,7 @@ classification
 r based on them, as it was done by ....
  et al..
  And again, we would face problems of censoring and bias mentioned above.
- So the classification is also not the best option.
+ So the classification is not the best option as well.
  
 \end_layout
 
@@ -9173,11 +10203,21 @@ noprefix "false"
  designed to imitate the GridSearchCV but without the k-fold cross-validation.
  The script optimizes for the Integrated Brier Score (IBS) that directly
  tells the accuracy of predictions.
- The script can be found: here (
+ The script can be found: here
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(
 \series bold
 add link
 \series default
-).
+)
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -11274,6 +12314,20 @@ Txmatching is
 KidneyLife
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+scikit-survival was clearly not developed for deployment (their chaotic
+ encoding functions) (they may have fixed that by version 0.21 though) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Frontend 
 \end_layout
@@ -11854,7 +12908,137 @@ literal "false"
  PMID: 21484848; PMCID: PMC3079915.
 \end_layout
 
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-32"
+literal "false"
+
+\end_inset
+
+ Kindt TJ Goldsby RA Osborne BA Kuby J.
+ Kuby Immunology.
+ 6th ed.
+ New York: W.H.
+ Freeman; 2007.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-33"
+literal "false"
+
+\end_inset
+
+Health.
+ (2022).
+ Kidneys.
+ Vic.gov.au.
+ https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/kidneys
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-34"
+literal "false"
+
+\end_inset
+
+‌Facts About Chronic Kidney Disease.
+ (2020, May 15).
+ National Kidney Foundation; https://www.kidney.org/atoz/content/about-chronic-kid
+ney-disease
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-35"
+literal "false"
+
+\end_inset
+
+‌Kamyar Kalantar-Zadeh, Jafar, T.
+ H., Nitsch, D., Neuen, B.
+ L., & Perkovic, V.
+ (2021).
+ Chronic kidney disease.
+ The Lancet, 398(10302), 786–802.
+ https://doi.org/10.1016/s0140-6736(21)00519-5
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-36"
+literal "false"
+
+\end_inset
+
+‌Holland, K.
+ (2019, May 23).
+ Everything You Need to Know About Kidney Failure.
+ Healthline; Healthline Media.
+ https://www.healthline.com/health/kidney-failure#outlook
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-37"
+literal "false"
+
+\end_inset
+
+‌Causes of chronic kidney disease.
+ (2022, August 29).
+ National Institute of Diabetes and Digestive and Kidney Diseases; NIDDK
+ - National Institute of Diabetes and Digestive and Kidney Diseases.
+ https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease
+-ckd/causes
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-38"
+literal "false"
+
+\end_inset
+
+Estimated Glomerular Filtration Rate (eGFR).
+ (2015, December 24).
+ National Kidney Foundation; https://www.kidney.org/atoz/content/gfr
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-39"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+the following bad citation: 30
+\end_layout
+
+\begin_layout Plain Layout
+The bug probably ruined some citations and will continue to ruin new ones
+ on the addition
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
