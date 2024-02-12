@@ -12231,8 +12231,12 @@ Reverse proxy
 It is not possible, however, to indentify or specify the URL of each user,
  nor is it secure to allow calling the request from all sources.
  To solve this problem we use the reverse proxy.
- A reverse proxy is an intermediary server that directs the client request
- to the appropriate backend server 
+ A 
+\emph on
+reverse proxy
+\emph default
+ is an intermediary server that directs the client request to the appropriate
+ backend server 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-41-reverse-proxy"
@@ -12306,33 +12310,82 @@ Deployment
 \end_layout
 
 \begin_layout Standard
+First of all, to be able to deploy the app we need a place to deploy it
+ to.
+ We rent 
+\emph on
+virtual private server
+\emph default
+ (VPS), or a virtual machine on the cloud.
+ Initially we used Google Cloud on the free trial, but it turned out to
+ be too expensive so we later migrated to another VPS hosting provider.
+\end_layout
+
+\begin_layout Standard
+After we secured the VPS, we bought the domain name 
+\begin_inset Quotes sld
+\end_inset
+
+kidneylife.site
+\begin_inset Quotes srd
+\end_inset
+
+ from the domain registrar Namecheap.
+ Then we registered the domain in the 
+\emph on
+domain name system
+\emph default
+ (DNS), associating the VPS' IP address with the acquired domain.
+\end_layout
+
+\begin_layout Standard
+Then the application was deployed to the internet using a Shell script.
+ It goes through the following steps:
+\end_layout
+
+\begin_layout Enumerate
+Check if the connection to the VPS can be made
+\end_layout
+
+\begin_layout Enumerate
+Zip the application folder
+\end_layout
+
+\begin_layout Enumerate
+Send the zip to the VPS
+\end_layout
+
+\begin_layout Enumerate
+Unzip the folder
+\end_layout
+
+\begin_layout Enumerate
+Build and run the docker compose stack with the production environment variables.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Build the front end
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Functionality and UX
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-How and where the application was deployed.
- 
-\end_layout
-
-\begin_layout Plain Layout
-How: bash script
-\end_layout
-
-\begin_layout Plain Layout
-VPS hosting
-\end_layout
-
-\begin_layout Plain Layout
-Where: GCP then Hostinger (idk if the individual hosting names are necessary)
+Discuss the user experience design principles applied in the application.
+ Describe any usability testing or user feedback incorporated into the applicati
+on's design.
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Functionality and UX
 \end_layout
 
 \begin_layout Subsection
