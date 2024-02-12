@@ -1417,7 +1417,7 @@ At the same time, in Lyon, Alexis Carrel and his colleagues were working
  stricture, and embolism 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1"
+key "key-41-reverse-proxy"
 literal "false"
 
 \end_inset
@@ -1430,7 +1430,7 @@ tion of organ rejection.
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-2"
+key "key-41-reverse-proxy"
 literal "false"
 
 \end_inset
@@ -1490,7 +1490,7 @@ on but also exposed the challenge of graft rejection.
  to improve graft survival 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1"
+key "key-41-reverse-proxy"
 literal "false"
 
 \end_inset
@@ -1501,7 +1501,7 @@ on, achieving prolonged graft survival.
  However, these findings were never formally published 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1"
+key "key-41-reverse-proxy"
 literal "false"
 
 \end_inset
@@ -1517,7 +1517,7 @@ The period of the 1930s and 1940s was stagnant compared to the beginning
  without considering Carrol's works and attempts at immunosuppression 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1"
+key "key-41-reverse-proxy"
 literal "false"
 
 \end_inset
@@ -1544,7 +1544,7 @@ However, it was during that period that a significant milestone was achieved
  recovery, regaining normal kidney function 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-4"
+key "key-41-reverse-proxy"
 literal "false"
 
 \end_inset
@@ -1637,7 +1637,7 @@ d cortisone, an adrenal cortical hormone with mild immunosuppressive properties,
  inspiring human trials in Boston and Paris 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-3"
+key "key-42"
 literal "false"
 
 \end_inset
@@ -1653,7 +1653,7 @@ ical twins that lasted 20 years.
  transplant using radiation 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-3"
+key "key-42"
 literal "false"
 
 \end_inset
@@ -1678,7 +1678,7 @@ The quest for safer immunosuppressive methods led to the anticancer drug
 e was available for human use 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-3"
+key "key-42"
 literal "false"
 
 \end_inset
@@ -1698,7 +1698,7 @@ In 1963, a conference held by the National Research Council revealed a bleak
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-3"
+key "key-42"
 literal "false"
 
 \end_inset
@@ -1737,7 +1737,7 @@ From 1964 to 1980, kidney transplantation saw gradual progress.
  oversight 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-3"
+key "key-42"
 literal "false"
 
 \end_inset
@@ -1781,7 +1781,7 @@ crossmatch test
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-3"
+key "key-42"
 literal "false"
 
 \end_inset
@@ -1818,7 +1818,7 @@ noprefix "false"
  and in selecting family donors 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-3"
+key "key-42"
 literal "false"
 
 \end_inset
@@ -1853,7 +1853,7 @@ e and prednisone was insufficient, effectively replacing cyclosporine as
  a usual baseline agent 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-3"
+key "key-42"
 literal "false"
 
 \end_inset
@@ -2265,7 +2265,7 @@ from the compromised cells
  to acute rejection 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1"
+key "key-41-reverse-proxy"
 literal "false"
 
 \end_inset
@@ -2304,7 +2304,7 @@ e is to match organ recipients with ABO-identical organs to prevent potential
 e for transplantation 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1"
+key "key-41-reverse-proxy"
 literal "false"
 
 \end_inset
@@ -2376,7 +2376,7 @@ numerous
  to the MHC mismatch 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1"
+key "key-41-reverse-proxy"
 literal "false"
 
 \end_inset
@@ -2393,7 +2393,7 @@ The MHC itself is divided into class I and class II antigens.
  role in immune response coordination 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1"
+key "key-41-reverse-proxy"
 literal "false"
 
 \end_inset
@@ -2568,7 +2568,7 @@ In clinical practice, clinicians asses and try to match donors and recipients
  immune responses 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1"
+key "key-41-reverse-proxy"
 literal "false"
 
 \end_inset
@@ -2909,7 +2909,7 @@ c non-responsiveness (tolerance) to an allograft.
  However, it has not gone further than animal models yet 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1"
+key "key-41-reverse-proxy"
 literal "false"
 
 \end_inset
@@ -5984,8 +5984,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In this section, we will cover selected statistical methods and one machine
- learning technique.
+In the following sections, we will cover selected statistical methods and
+ one machine learning technique.
  Machine learning techniques related to neural networks will be covered
  in Section 
 \begin_inset CommandInset ref
@@ -6006,8 +6006,7 @@ Statistical Methods
 \end_layout
 
 \begin_layout Standard
-This section provides a concise overview of statistical techniques, given
- our primary emphasis on machine learning methods.
+This section provides a concise overview of statistical techniques.
  Here, we introduce three different types of statistical methods that are
  commonly used to estimate the survival and hazard functions: 
 \emph on
@@ -6259,7 +6258,8 @@ noprefix "false"
 
 \end_inset
 
- shows the survival curve created with the KM method.
+ shows the survival curve created with the KM method on the dataset used
+ in this work.
  
 \end_layout
 
@@ -8065,337 +8065,6 @@ The dataset consists of 993 806 of records for both transplanted patients
  Kidney transplants have 490 172 records.
 \end_layout
 
-\begin_layout Standard
-The following features will be considered.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="10" columns="3">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Feature description
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Type
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Abbreviation
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Donor Age
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Recipient Age
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Donor Type
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Donor gender
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Recipient gender
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Donor blood group
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Recipient blood group
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Recipient on dyalisis
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Recipient creatinine at the time of tx
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Features
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Data Loading
 \end_layout
@@ -8435,7 +8104,7 @@ The pandas DataFrame method read_csv() loaded data for too long to work
  of databases, so the loading time of the whole dataset was decreased to
  38 seconds.
  Additionally, it allows for specifying what columns to load, reducing the
- data loading time to 21 seconds.
+ data loading time to mere 21 seconds.
  Thus using this technology has signifficantly improved the workflow.
 \end_layout
 
@@ -8444,8 +8113,8 @@ Data preprocessing pipeline
 \end_layout
 
 \begin_layout Standard
-In this section I will describe the data pipeline that I use to create the
- dataset out of the raw data.
+In this section I will describe the data pipeline that is used to create
+ the dataset out of the raw data.
  The pipeline can be found in github repository of this paper: 
 \begin_inset CommandInset href
 LatexCommand href
@@ -8671,7 +8340,7 @@ Exploratory Data Analysis
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Goals of this section:
@@ -8703,6 +8372,28 @@ In this section we are going to cover all the most signifficant features.
  The data were not adjusted to limit the influence of other factors, so
  the correlations I am trying to make here might not be fully correct, however
  some are confirmed in literature.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Transition from the subsub sections to unnumbered ones.
+ remove 
+\begin_inset Quotes sld
+\end_inset
+
+in this section...
+\begin_inset Quotes srd
+\end_inset
+
+ Make it shorter
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -8784,7 +8475,10 @@ a bulk of the data
 status open
 
 \begin_layout Plain Layout
-Think if it makes sense to include explanation of boxplot
+Think if it makes sense to include explanation of boxplot.
+ Probably not.
+ It is a common knowledge I think.
+ So remove the explanation.
 \end_layout
 
 \end_inset
@@ -9501,7 +9195,7 @@ Why exactly this is the case, unfortunately, I was not able to find.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -9578,7 +9272,7 @@ The least survival probability had multiracial group.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -9624,7 +9318,7 @@ Dataset building, Exclusion criteria and noice reduction
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Exclude
@@ -9658,6 +9352,21 @@ list features used for living and deceased
 
 \begin_layout Chapter
 Machine Learning Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Combine this chapter with the data load and processing.
+ As it makes more sense to include all practical things from data science
+ into one chapter.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -9834,6 +9543,23 @@ Run the following class and short list the most promising models.
 
 \begin_layout Section
 Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+it is not correct to compare deceased model performance with the living
+ model performance.
+ better to compare living models with living models and deceased models
+ with deceased.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -12105,7 +11831,7 @@ AUC RSF vs.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -12175,7 +11901,7 @@ Brier Coxnet vs.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -12293,11 +12019,6 @@ deep survival neural network
 Applications
 \end_layout
 
-\begin_layout Standard
-txmatching is something totally different, so it was decided to create separate
- application for accesing the model.
-\end_layout
-
 \begin_layout Section
 Existing Solutions
 \end_layout
@@ -12307,7 +12028,9 @@ Txmatching
 \end_layout
 
 \begin_layout Standard
-Txmatching is 
+Txmatching is a software that allows kidney pair donation centre to find
+ the best possible match from a pool of patients.
+ 
 \end_layout
 
 \begin_layout Section
@@ -12315,12 +12038,36 @@ KidneyLife
 \end_layout
 
 \begin_layout Standard
+Initially, what has now become Kidney Life, was supposed to be a module
+ for Txmatching, a kidney pair matching software.
+ Due to different philosophy and different kind of data that Txmatching
+ uses, it was decided to create a whole separate application.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-scikit-survival was clearly not developed for deployment (their chaotic
- encoding functions) (they may have fixed that by version 0.21 though) 
+Introduce the application and its purpose 
+\end_layout
+
+\begin_layout Plain Layout
+Explain the problem application aims to solve and the target audience or
+ users it's designed for.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I don't want it to be too long.
 \end_layout
 
 \end_inset
@@ -12329,18 +12076,267 @@ scikit-survival was clearly not developed for deployment (their chaotic
 \end_layout
 
 \begin_layout Subsection
-Frontend 
-\end_layout
-
-\begin_layout Subsection
-Backend
+Overview
 \end_layout
 
 \begin_layout Standard
-For backend was used flask.
- Flask is popular python web framework.
- The model was saved as a binary in pickle format and the back end provides
- an api to access the model from the web page.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+- High Level Overview of application features and functionality
+\end_layout
+
+\begin_layout Plain Layout
+- 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Architecture
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Cover: the architecture, reverse proxy, frontend, backend.
+ Why the reverse proxy was necessary - CORS.
+ Docker compose.
+\end_layout
+
+\begin_layout Plain Layout
+Reverse proxy architecture
+\end_layout
+
+\begin_layout Plain Layout
+Machine learning integration
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Architecture
+\series default
+: The application was built with docker compose.
+ The docker compose stack consists of backend, frontend and reverse proxy
+ services.
+\end_layout
+
+\begin_layout Standard
+Docker is a software platform that allows developers to package their applicatio
+ns in containers, a standard unit of software that bundles code and its
+ dependencies to ensure fast and reliable execution across various computing
+ environments 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-39"
+literal "false"
+
+\end_inset
+
+.
+ Docker compose is a utitlity for building and destributing multi-container
+ applications.
+ Each individual container within the docker compose application stack is
+ called service.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Frontend
+\series default
+: The front end service contains a front end application developed with
+ React, the most popular Java Script front end framework developed in Facebook
+ at 2013.
+ Front end stands for the software that makes up a user interface.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Backend
+\series default
+: For backend was used Django Rest Framework, a popular Python web framework
+ for building RESTful APIs.
+ An 
+\emph on
+application program interface
+\emph default
+ (API) is a set of guidelines that dictate the procedures for connectivity
+ and data exchange between applications or devices, while a REST API specificall
+y adheres to the principles of the 
+\emph on
+representational state transfer
+\emph default
+ (REST) architectural style.
+ Essentially, API serves as a mechanism of accessing resourse in one application
+ or service from another application or service.
+ Application or service that is accessesing the resource is called 
+\emph on
+client
+\emph default
+, application or service providing the resource is reffered to as server.
+ The resources we are accessing here are the machine learning models trained
+ previously.
+ They were serialized or 
+\begin_inset Quotes sld
+\end_inset
+
+pickled
+\begin_inset Quotes srd
+\end_inset
+
+ with Python package 
+\emph on
+pickle
+\emph default
+ and are deserialized when we need to make a prediction.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Reverse proxy
+\series default
+: Even though the front end code is located in the container on the server,
+ it is still executed in user's browser.
+ Cross Origin Resource Sharing (CORS) is a mechanism that allows an application
+ on one URL to request data from another URL.
+ Browser implements Same-origin policy as a part of its security measures.
+ It allows request data from its own URL and blocks requests from other
+ URLs unless certain conditions are met.
+ When browser sends request to the server it has Origin property in its
+ header.
+ The server adds header Access-Control-Allow-Origin to its response.
+ If Origin and Access-Control-Allow-Origin are not the same, the browser
+ will prevent the server from sharing the contents of the response with
+ the client.
+ 
+\end_layout
+
+\begin_layout Standard
+It is not possible, however, to indentify or specify the URL of each user,
+ nor is it secure to allow calling the request from all sources.
+ To solve this problem we use the reverse proxy.
+ A reverse proxy is an intermediary server that directs the client request
+ to the appropriate backend server 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-41-reverse-proxy"
+literal "false"
+
+\end_inset
+
+.
+ When we access the applications's URL we get redirected to the front end.
+ When we want to make a prediction, we make a request to the proxy and it
+ redirects the request to the back end, we get our prediction and render
+ it on the front end.
+ This schema is illustrated on the Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Application-architecture"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In addition to the handling of the CORS, reverse proxy increases security,
+ as it serves as a barier between the internet and the backend.
+ It also increases application's scalability, as we can create multiple
+ backends on different servers and balance the load between them.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/AppDiagram.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Application-architecture"
+
+\end_inset
+
+Application architecture.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Deployment
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+How and where the application was deployed.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+How: bash script
+\end_layout
+
+\begin_layout Plain Layout
+VPS hosting
+\end_layout
+
+\begin_layout Plain Layout
+Where: GCP then Hostinger (idk if the individual hosting names are necessary)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Functionality and UX
+\end_layout
+
+\begin_layout Subsection
+Future Work
 \end_layout
 
 \begin_layout Chapter*
@@ -13017,6 +13013,48 @@ Estimated Glomerular Filtration Rate (eGFR).
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-39"
+literal "false"
+
+\end_inset
+
+What is a Container? | Docker.
+ (2023, October 26).
+ Docker.
+ https://www.docker.com/resources/what-container/
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-40"
+literal "false"
+
+\end_inset
+
+‌Use Docker Compose.
+ (2024).
+ Docker Documentation.
+ https://docs.docker.com/get-started/08_using_compose/
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-41-reverse-proxy"
+literal "false"
+
+\end_inset
+
+What is a Reverse Proxy Server? | NGINX.
+ (2023, June).
+ NGINX.
+ https://www.nginx.com/resources/glossary/reverse-proxy-server/
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-42"
 literal "false"
 
 \end_inset
