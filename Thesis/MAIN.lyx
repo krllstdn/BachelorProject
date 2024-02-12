@@ -11901,15 +11901,12 @@ Brier Coxnet vs.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/brier_rsf_vs_coxnet.png
+	scale 60
 
 \end_inset
 
@@ -12019,6 +12016,19 @@ deep survival neural network
 Applications
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+what good is a model if once cannot use it
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Existing Solutions
 \end_layout
@@ -12083,7 +12093,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-- 
+- look at this app as on MVP
 \end_layout
 
 \end_inset
@@ -12456,27 +12466,69 @@ Future Work
 \end_layout
 
 \begin_layout Standard
+Moving forward, there are several avenues for enhancing the application's
+ functionality and user experience.
+ Firstly, the integration of additional machine learning models stands as
+ a promising avenue for enriching the predictive capabilities of the application.
+ By incorporating a diverse range of models the application can provide
+ more comprehensive and accurate predictions, thus offering greater value
+ to users.
+\end_layout
+
+\begin_layout Standard
+Secondly, implementing a robust login system is essential to ensure secure
+ access to the application's features and confidential data.
+ It is particularly important if we are to follow through with the features
+ outlined in the subsequent paragraphs.
+ By introducing user authentication mechanisms, such as username-password
+ authentication or OAuth, the application can restrict access to unauthorized
+ individuals, thereby safeguarding sensitive data associated with subsequent
+ features.
+\end_layout
+
+\begin_layout Standard
+Moreover, the introduction of patient (recipient and donor) and pair management
+ systems can improve user experience, as it will allow to save the predictions
+ for the provided pair of patients and model in the database, and the user
+ will be able to look at the predicted survival curve later only with a
+ couple of clicks instead of entering the data manually every time.
+\end_layout
+
+\begin_layout Standard
+Furthermore, the integration of FHIR HL7 standard would present an opportunity
+ to enhance interoperability and data exchange between the application and
+ hospital's ecosystem.
+ FHIR, which stands for 
+\emph on
+Fast Healthcare Interoperability Resources
+\emph default
+ (FHIR) is a 
+\emph on
+Health Level Seven 
+\emph default
+(HL7) standard for the electronic exchange of health care data.
+ It is important to note that while only a few hospital systems support
+ FHIR HL7, its adoption is seen as the future of healthcare data exchange.
+\end_layout
+
+\begin_layout Standard
+If any of these changes are to take place, to prevent vulnerabilities in
+ software delivery we need to add continuous integration (CI) and continuous
+ delivery (CD).
+ While the the deployment has already been automated the testing has not.
+ With Git Hub Actions we can test the application automatically on the server
+ every time the changes are pushed to Git Hub and prevent the Pull Request
+ from merging into Main if the tests have failed.
+ The tests for the backend already exist.
+ So the task would be only to automate it with Git Hub Actions.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-- BE CI/CD if the goal is to make the app something more.
- CI/CD is the first thing on the list to develop.
- The backend already has tests that test the prediction endpoints so it
- would be great to forbit to merge PR if the tests are failing.
- 
-\end_layout
-
-\begin_layout Plain Layout
-- More models
-\end_layout
-
-\begin_layout Plain Layout
-- login system so that not everyone can use the model.
-\end_layout
-
-\begin_layout Plain Layout
-- FHIR HL7 integration.
+add a link to the figma to illustrate how it can look like.
 \end_layout
 
 \end_inset
