@@ -9195,7 +9195,7 @@ Why exactly this is the case, unfortunately, I was not able to find.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -9272,7 +9272,7 @@ The least survival probability had multiracial group.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -9850,7 +9850,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -9950,7 +9950,7 @@ add link
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -10017,7 +10017,7 @@ status open
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12062,19 +12062,6 @@ Explain the problem application aims to solve and the target audience or
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-I don't want it to be too long.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Overview
 \end_layout
@@ -12085,6 +12072,14 @@ status open
 
 \begin_layout Plain Layout
 - High Level Overview of application features and functionality
+\end_layout
+
+\begin_layout Plain Layout
+- inference application
+\end_layout
+
+\begin_layout Plain Layout
+- gives user-friendly access to machine learning model
 \end_layout
 
 \begin_layout Plain Layout
@@ -12152,24 +12147,28 @@ literal "false"
  called service.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 
 \series bold
 Frontend
-\series default
-: The front end service contains a front end application developed with
- React, the most popular Java Script front end framework developed in Facebook
+\end_layout
+
+\begin_layout Standard
+The front end service contains a front end application developed with React,
+ the most popular Java Script front end framework developed in Facebook
  at 2013.
  Front end stands for the software that makes up a user interface.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 
 \series bold
 Backend
-\series default
-: For backend was used Django Rest Framework, a popular Python web framework
+\end_layout
+
+\begin_layout Standard
+For backend was used Django Rest Framework, a popular Python web framework
  for building RESTful APIs.
  An 
 \emph on
@@ -12206,12 +12205,14 @@ pickle
  and are deserialized when we need to make a prediction.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph*
 
 \series bold
 Reverse proxy
-\series default
-: Even though the front end code is located in the container on the server,
+\end_layout
+
+\begin_layout Standard
+Even though the front end code is located in the container on the server,
  it is still executed in user's browser.
  Cross Origin Resource Sharing (CORS) is a mechanism that allows an application
  on one URL to request data from another URL.
@@ -12276,9 +12277,10 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/AppDiagram.png
-	scale 60
+	scale 30
 
 \end_inset
 
@@ -12374,13 +12376,49 @@ Functionality and UX
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+Kidney life is a standard machine learning 
+\emph on
+inference
+\emph default
+ application which stands for an application whose solely purpose is the
+ user-friendly access to the machine learning model.
+ As such, it is an one-page application that has select input with two models,
+ the inputs are rendered based on the selected model.
+ And the interactive graph made with Plotly.js.
+ It also features a button 
+\begin_inset Quotes sld
+\end_inset
+
+generate synthetic data
+\begin_inset Quotes srd
+\end_inset
+
+ made for testing and illustration purposes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
-Discuss the user experience design principles applied in the application.
- Describe any usability testing or user feedback incorporated into the applicati
-on's design.
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/KidneyLife.png
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Kidney Life UI
 \end_layout
 
 \end_inset
@@ -12388,8 +12426,62 @@ on's design.
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The design of the application was crafted with consideration of the following
+ design principles.
+ Shades of blue were chosen because of its calming effects and its assosiation
+ with reliability.
+ Moreover blue is generally a safe color as it appeals to larger audience.
+ Simplicity, which is one of the main principles of the modern web design,
+ was naturally prioritized as inference applications inherently have little
+ complexity.
+ Furthermore, the larger margins and paddings were employed to provide breathing
+ room within the interface, preventing it from feeling overcrowded.
+ Lastly, the design exhibits rensponsiveness, accomodating a wide range
+ of devices, from tablets to large 2k monitors, delivering consistent and
+ comfortable user experience across different screen sizes.
+\end_layout
+
 \begin_layout Subsection
 Future Work
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+- BE CI/CD if the goal is to make the app something more.
+ CI/CD is the first thing on the list to develop.
+ The backend already has tests that test the prediction endpoints so it
+ would be great to forbit to merge PR if the tests are failing.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+- More models
+\end_layout
+
+\begin_layout Plain Layout
+- login system so that not everyone can use the model.
+\end_layout
+
+\begin_layout Plain Layout
+- FHIR HL7 integration.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter*
@@ -13112,7 +13204,11 @@ literal "false"
 
 \end_inset
 
-
+Kendra Cherry, Mse.
+ (2022, November 22).
+ How the color blue impacts moods, feelings, and behaviors.
+ Verywell Mind.
+ https://www.verywellmind.com/the-color-psychology-of-blue-2795815 
 \end_layout
 
 \begin_layout Standard
