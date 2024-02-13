@@ -12106,29 +12106,6 @@ Architecture
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Cover: the architecture, reverse proxy, frontend, backend.
- Why the reverse proxy was necessary - CORS.
- Docker compose.
-\end_layout
-
-\begin_layout Plain Layout
-Reverse proxy architecture
-\end_layout
-
-\begin_layout Plain Layout
-Machine learning integration
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 Architecture
@@ -12169,6 +12146,76 @@ The front end service contains a front end application developed with React,
  at 2013.
  Front end stands for the software that makes up a user interface.
  
+\end_layout
+
+\begin_layout Standard
+The architecture of the front end application is rather simple, as it consists
+ only from a few components.
+ Component is an independent and reusable bit of code that takes form of
+ JS function that returns HTML.
+ The application consists of main page compontent that contains all other
+ components and all logic related to the storing data and sending requests.
+ Input component renders the input type text.
+ Any characters except for numbers and a dot are replaced with an empty
+ string.
+ It was made so, as the input type number provided inconsistent behaviour:
+ it worked as expected in browsers based on Chromium, such as Brave and
+ Chrome, but allowed other characters in other browsers, such as Firefox
+ and Safari.
+ Moreover, input type number allows character 
+\begin_inset Quotes sld
+\end_inset
+
+e
+\begin_inset Quotes srd
+\end_inset
+
+, as it is a part of scientific notation.
+ In addition to that, it contained unaesthetic arrows for increasing and
+ decreasing the number, that was not possible to style.
+\end_layout
+
+\begin_layout Standard
+Select component renders the input type select, that allows to select value
+ from provided values which is especially useful for categorical values.
+ Then there is the ModalContainer which is a wrapper and a background for
+ the form.
+ And the final major component is the PlotComponent, which naturally renders
+ the interactive plot from Plotly.js package.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Rename the components to normal names and put them here
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We implemented the front end validation.
+ Naturally, first of all it checks if the value was indeed provided.
+ It has the min/max value validation, that is the value must fall into a
+ specific range.
+ There is float/integer validation, depending which data type the field
+ needs.
+ Finally it has a check if the selected categorical value is indeed from
+ the provided values, to prevent user from adding his own category using
+ the browser build-in developer tools and sending the request to the server.
+ 
+\end_layout
+
+\begin_layout Standard
+The styling was made with Tailwind a CSS library that signifficantly easies
+ the process of transforming the design into code.
+ Because with vanilla CSS the process is cumbersome and timeconsuming.
+\end_layout
+
+\begin_layout Standard
+A part of the front end service build is build of React code to production
+ ready optimized code that is later served with the nginx server.
 \end_layout
 
 \begin_layout Paragraph
@@ -12213,6 +12260,45 @@ pickled
 pickle
 \emph default
  and are deserialized when we need to make a prediction.
+\end_layout
+
+\begin_layout Standard
+The back end REST API has two endpoints: one for prediction and the second
+ is for the synthetic data generation.
+ The prediction endpoint expects the request body with two parameters: the
+ model name and the data dictionary.
+ It then validates if the data is valid and then loads the model, passes
+ data through the data pipeline, that makes data usable by the model, loads
+ the model, makes prediction and then sends the results to the front end
+ as a response.
+\end_layout
+
+\begin_layout Standard
+The synthetic data generation endpoint has only one parameter - the model
+ name.
+ When the request is sent if loads the proper model description JSON document
+ looks at its statistical data, particularly 10th and 90th quantiles for
+ numerical data and the frequencies for categorical data.
+ Then under an assumption of normal distribution we generate data for each
+ numerical feature and under given value frequencies the values for catgeorical
+ features.
+ We use these quantiles to avoid peculiar situations when minimal values
+ were generated along with the maximal (e.g.
+ it could generate 6 year old donor and 90 year old recipient).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+mention that we have two endpoints.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph*
@@ -12461,6 +12547,19 @@ The design of the application was crafted with consideration of the following
  comfortable user experience across different screen sizes.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+figma
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Future Work
 \end_layout
@@ -12470,6 +12569,13 @@ Moving forward, there are several avenues for enhancing the application's
  functionality and user experience.
  Firstly, the integration of additional machine learning models stands as
  a promising avenue for enriching the predictive capabilities of the application.
+ In this work only models from Sci-Kit survival were used.
+ However it is not the only package for survival analysis in Python, there
+ is also 
+\emph on
+lifelines
+\emph default
+.
  By incorporating a diverse range of models the application can provide
  more comprehensive and accurate predictions, thus offering greater value
  to users.
@@ -12521,6 +12627,11 @@ If any of these changes are to take place, to prevent vulnerabilities in
  from merging into Main if the tests have failed.
  The tests for the backend already exist.
  So the task would be only to automate it with Git Hub Actions.
+\end_layout
+
+\begin_layout Standard
+If you are interested how would it look like, you can visit the project's
+ Figma page to see the early stages of the design.
 \end_layout
 
 \begin_layout Standard
