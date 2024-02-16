@@ -1003,6 +1003,24 @@ The goal of this paper is to explore fields of kidney transplantation and
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+During kidney transplantation, the donor-recipient kompatibility is maximized
+ in hopes of better outcomes.
+ However there is little to no instruments to estimate the outcomes.
+ In this work we will try to address that.
+ With trained machine learning models we created an instrument to estimate
+ recipient's survival in form of survival function.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Medical Background
 \end_layout
@@ -7759,6 +7777,19 @@ name "sec:Deep-Learning"
 status open
 
 \begin_layout Plain Layout
+No deep learning, the paper is already too long.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 universal approximation theorem
 \end_layout
 
@@ -12043,12 +12074,16 @@ Txmatching
 
 \begin_layout Standard
 Txmatching is a software that allows kidney pair donation centre to find
- the best possible match from a pool of patients.
+ the best possible matches from a pool of patients.
  It is not always possible to find a suitable donor in the social circle
  of the patient.
  In this case it is possible to register the patient and a person who is
  willing to donate their kidney, but can't do so due to the incompatibility,
- into Kidney Exchange Program (KEP).
+ into Kidney Exchange Program (KEP), or 
+\emph on
+kidney paired donation
+\emph default
+ (KPD).
  KEP is an approach to living donor transplantation where pairs with incompatibl
 e donors exchange their kidneys and get a compatible one.
  There can be multiple pairs, but the higher the number of pairs, the more
@@ -12089,20 +12124,17 @@ KidneyLife
 \end_layout
 
 \begin_layout Standard
-Initially, what has now become Kidney Life, was supposed to be a module
- for Txmatching.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-it was suggested by supervisor/superiors
+It was not a part of the task to create any kind of software, however, we
+ think it is only right to make something that will allow anyone to use
+ our models, as entering data into the jupyter notebook just to make a predictio
+n
 \end_layout
 
-\end_inset
-
- Due to different philosophy and different kind of data that Txmatching
- uses, it was decided to create a whole separate application.
+\begin_layout Standard
+Our supervizors originally suggested to create a module for Txmatching using
+ the developed models.
+ However, ue to different project philosophy and different kind of data
+ that Txmatching uses, it was decided to create a whole separate application.
  In the following section we will present the application, its architecture,
  how does it work, the process of its development and what can be done further.
 \end_layout
