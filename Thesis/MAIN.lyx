@@ -12191,7 +12191,17 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In some cases, altruistic donor is availble.
+In some cases, altruistic donor is available.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+they are also called NDD
+\end_layout
+
+\end_inset
+
  These donors are willing to donate kidney to anyone compatible and they
  are not bound to a specific recipient.
  In such instances, a special sequence of transplantations called 
@@ -12258,6 +12268,19 @@ literal "false"
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+not only refusal but also illness
 \end_layout
 
 \end_inset
@@ -12359,8 +12382,31 @@ add section
 .
  Txmatching is used mainly by Czech Institute of Clinical and Experimental
  Medicine.
- Attempts to expand to other transplantation center were made, but unfortunately
- they were unsuccessful.
+ Attempts to expand to other transplantation centers were made, but unfortunatel
+y they were unsuccessful.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+virtual crossmatch 
+\series default
+is performed
+\end_layout
+
+\begin_layout Plain Layout
+even though the crossmatch test was performed virtually, its results must
+ be confirmed in reality, as sometimes happens that virtual crossmatch was
+ negative and rejection or positive real crossmatch test followed.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -12406,28 +12452,57 @@ KPDGUI
 \end_layout
 
 \begin_layout Standard
-(Kidney Paired Donation Graphical User Interface)
+KPDGUI (Kidney Paired Donation Graphical User Interface) is a an interactive
+ open source software for optimization and visualization of KPD programs.
+ It addresses aforementioned problem of donor widthdrawing from KPD by arranging
+ fallback options in case someone indeed left KPD and the exchange cannot
+ proceed.
+ What distingueshes it from the rest is that the application provides interactiv
+e visualization of the pool of incompatible pairs, non directed donors and
+ the suggested loops and chains 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-44"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
-they take a graphical approach: visualize the directed graphs of pairs
+\begin_inset Graphics
+	filename Images/kpdgui.jpeg
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+KPDGUI interface 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-44"
+literal "false"
+
+\end_inset
+
+.
+ On the image you can see a chain.
+ 
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6538268/
 \end_layout
 
 \end_inset
@@ -12440,41 +12515,8 @@ KidneyLife
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-we realize that it is not a part of the task, but what good is a model if
- one cannot use it.
- We highly doublt that anyone would be comfortable with entering data in
- the jupyter notebook and making predictions there.
- So it was decided to create an application for it.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-It was not a part of the task to create any kind of standalone software,
- however, we think it is only right to make something that will allow anyone
- to use our models, as entering data into the jupyter notebook just to make
- a prediction
-\end_layout
-
-\begin_layout Standard
 Our supervizors originally suggested to create a module for Txmatching using
- the developed models.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-as it is reflected in the task of the BP
-\end_layout
-
-\end_inset
-
+ the developed models, as it is reflected in the bachelor project task.
  However, due to different project philosophy and different kind of data
  that Txmatching uses, it was decided to create a whole separate application.
  In the following section we will present the application, its architecture,
@@ -14060,6 +14102,27 @@ maybe images should be referenced in some other way.
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-44"
+literal "false"
+
+\end_inset
+
+‌Bray, M., Wang, W., Rees, M.
+ A., Peter X-K.
+ Song, Leichtman, A.
+ B., Ashby, V.
+ B., & Kalbfleisch, J.
+ D.
+ (2019).
+ KPDGUI: An interactive application for optimization and management of a
+ virtual kidney paired donation program.
+ Computers in Biology and Medicine, 108, 345–353.
+ https://doi.org/10.1016/j.compbiomed.2019.03.013
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-45"
 literal "false"
 
 \end_inset
