@@ -12145,7 +12145,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12270,26 +12270,14 @@ Txmatching
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-We will review txmatching in more detail, as we participated in its development
- and naturally know a lot about it.
- 
-\end_layout
-
-\end_inset
-
-Txmatching is a software that allows kidney pair donation centre to find
- the best possible matches from a pool of patients.
- 
-\end_layout
-
-\begin_layout Standard
-What Txmatching does is it iterates through the database of such donor-recipient
- pairs and altruistic donors and tries to find the best possible loops and
- chains with an optimisation algorithm.
+Txmatching is an open source software that allows KPD centres to find the
+ best possible matches from a pool of incompatible donor-recipient pairs
+ and altruistic donors.
+ It utilizes intricate optimisation algorithms to find the best possible
+ loops and chains.
+ It has two algorithms (solvers): integer linear programming (ILP) solver
+ and All Solution Solver which iterates through all possible solutions and
+ finds the best ones.
 \end_layout
 
 \begin_layout Standard
@@ -12318,45 +12306,33 @@ Txmatching
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-solvers - it supports a couple of algorithms
-\end_layout
-
-\begin_layout Plain Layout
-multi-national support
-\end_layout
-
-\begin_layout Plain Layout
-txm events
-\end_layout
-
-\begin_layout Plain Layout
-rounds
-\end_layout
-
-\begin_layout Plain Layout
-describe score (also think where to put my 
+One of its core features is a multi-national support that allowed for the
+ collaboration in the organ exchange between Czech Republic, Austria and
+ Israel.
+ Additionally it offers a customizable pool of patients, referred to as
+ 
 \begin_inset Quotes sld
 \end_inset
 
-scoring innovation
+TXM event
 \begin_inset Quotes srd
 \end_inset
 
- :D)
+, allowing for the segregation of patients based on many factors, one of
+ them is logistic feasibility.
+ It would be a shame to find a perfect matching only to find out that logistical
+ly it is not possible.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+tohle jsem si vymyslel, oveř to pls, případně navrhni opravy
 \end_layout
 
 \end_inset
@@ -12365,16 +12341,26 @@ scoring innovation
 \end_layout
 
 \begin_layout Standard
+Furthermore, Txmatching has a wide range of configurable settings, allowing
+ users to adjust parameters to their needs and requirements, enhancing the
+ relevance of solved matchings.
+ Matching scoring mechanism includes evaluation of blood groupd and HLA
+ compatibility.
+ Our version of scoring can be seen in Section ...
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-put here screenshot of UI
+add section
 \end_layout
 
 \end_inset
 
-
+.
+ Txmatching is used mainly by Czech Institute of Clinical and Experimental
+ Medicine.
+ Attempts to expand to other transplantation center were made, but unfortunately
+ they were unsuccessful.
 \end_layout
 
 \begin_layout Subsection
