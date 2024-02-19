@@ -12078,6 +12078,42 @@ Draft!
 
 \end_layout
 
+\begin_layout Standard
+In this chapter we will explore existing solutions for k
+\emph on
+idney pair donation
+\emph default
+ (KPD), explain its intricacies and necessary terminology.
+ Then we will introduce KidneyLife - a survival estimation application that
+ can be used in addition to a KPD application to aid medical professionals
+ in decision making.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+In this chapter we will
+\end_layout
+
+\begin_layout Plain Layout
+- describe three existing solutions for kpd
+\end_layout
+
+\begin_layout Plain Layout
+- explain some necessary KPD info
+\end_layout
+
+\begin_layout Plain Layout
+- introduce KidneyLife - a survival estimation software
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Existing Solutions
 \end_layout
@@ -12113,7 +12149,8 @@ kidney paired donation
  While, theoretically, a very large number of pairs can participate in the
  exchange, it is important to note that the higher the number of patients
  in the sequence of transplantations, the higher the risk of someone refusing
- to donate their kidney, which could compromise the entire sequence.
+ to donate their kidney or being unable to due to a medical condition, which
+ could compromise the entire sequence.
  So that the number of pairs in one sequence is usually restricted to some
  number that makes sense for the center.
 \end_layout
@@ -12191,17 +12228,11 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In some cases, altruistic donor is available.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-they are also called NDD
-\end_layout
-
-\end_inset
-
+In some cases, altruistic or 
+\emph on
+non-directe
+\emph default
+d donors (NDD) are available.
  These donors are willing to donate kidney to anyone compatible and they
  are not bound to a specific recipient.
  In such instances, a special sequence of transplantations called 
@@ -12276,16 +12307,22 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-not only refusal but also illness
-\end_layout
-
+What such software does is it performs so-called virtual crossmatch, it
+ is a digital variation of a test that predicts hyperacute rejection.
+ 
+\begin_inset Quotes sld
 \end_inset
 
+Real
+\begin_inset Quotes srd
+\end_inset
 
+ cross match test is performed by mixing recipient's serum with donor's
+ blood cells, if there is a reaction to blood cells, the test is considered
+ positive and the transplantation cannot be performed.
+ However, virtual cross match test is not a substitution for a regular one.
+ The results of a virtual cross match are always checked in reality, as
+ it sometimes happens that they are not the same.
 \end_layout
 
 \begin_layout Subsection
@@ -12386,29 +12423,6 @@ add section
 y they were unsuccessful.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-virtual crossmatch 
-\series default
-is performed
-\end_layout
-
-\begin_layout Plain Layout
-even though the crossmatch test was performed virtually, its results must
- be confirmed in reality, as sometimes happens that virtual crossmatch was
- negative and rejection or positive real crossmatch test followed.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 KidneyMatch
 \end_layout
@@ -12431,20 +12445,15 @@ KidneyMatch is the software developed and used by The Alliance for Pair
 They also emphasize that they collect more than 80 datapoints about each
  donor and more than 90 data points about each recipient, ensuring the best
  possible matches and the development of the matching methods.
- They also support additional medical data such as scans and charts.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-https://paireddonation.org/4-key-features-of-the-apkd-software-program/
-\end_layout
+ They also support additional medical data such as scans and charts 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-45"
+literal "false"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Subsection
@@ -12477,6 +12486,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/kpdgui.jpeg
 	scale 70
@@ -12515,7 +12525,7 @@ KidneyLife
 \end_layout
 
 \begin_layout Standard
-Our supervizors originally suggested to create a module for Txmatching using
+Our supervisors originally suggested to create a module for Txmatching using
  the developed models, as it is reflected in the bachelor project task.
  However, due to different project philosophy and different kind of data
  that Txmatching uses, it was decided to create a whole separate application.
@@ -12533,6 +12543,7 @@ We present KidneyLife.
  to the user-friedly use of machine learning models.
  It is designed to assist doctors in decision making by estimaing recipient's
  lifespan after kidney transplantation.
+ The application can be used in addition to KPD software described previously.
  On the Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -14127,7 +14138,22 @@ literal "false"
 
 \end_inset
 
-‌
+‌4 Key Features of the APKD Software Program | Alliance for Paired Kidney
+ Donation.
+ (2022, December 9).
+ Alliance for Paired Kidney Donation |.
+ https://paireddonation.org/4-key-features-of-the-apkd-software-program/
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-46"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
