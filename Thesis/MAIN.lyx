@@ -8097,6 +8097,27 @@ The dataset consists of 993 806 of records for both transplanted patients
 \end_layout
 
 \begin_layout Section
+Data Acquisition
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+- UNOS
+\end_layout
+
+\begin_layout Plain Layout
+- 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Data Loading
 \end_layout
 
@@ -9671,7 +9692,7 @@ Coxnet, or an elastic net, is a linear model, so it is fast even with large
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -10632,7 +10653,7 @@ instances respectively.
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -10844,7 +10865,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -10897,7 +10918,7 @@ discussion of AUC image
 \series default
 : 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 a bit volatile, but generally increases over time -> model's discriminative
@@ -10924,7 +10945,7 @@ interestingly, it starts to grow faster after the 75th percentile (3800
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -11008,7 +11029,7 @@ The fine-tuning was performed with a custom script, described in the previous
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -11229,7 +11250,7 @@ noprefix "false"
 .
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Write some discussion.
@@ -11248,7 +11269,7 @@ Write some discussion.
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -11587,7 +11608,7 @@ Comparison
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -11839,7 +11860,7 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 plot the survival functions of multiple predictions and draw a red line
@@ -11925,14 +11946,14 @@ the trends are the same, but hte rsf is higher
 Brier Coxnet vs.
  RSF
 \series default
-: 
+: 11
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -11965,7 +11986,7 @@ Brier: Coxnet vs.
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 - the flatter, the better
@@ -12044,7 +12065,392 @@ deep survival neural network
 \end_layout
 
 \begin_layout Chapter
-Applications
+Applications 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Draft!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Existing Solutions
+\end_layout
+
+\begin_layout Standard
+To the best of our knowledge there is no survival estimation software as
+ of yet.
+ So let us review other adjacent solutions: kidney pair matching software.
+ We will review three options: Txmatching, KidneyMatch, KPDGUI.
+ It is worth noting that there is limited information available online about
+ alternative solutions.
+ This shortage may be attributed to the fact that such software is developed
+ for each transplantation program individually, or preference of some developers
+ to market their solutions directly rather than on the Internet.
+ Nevertheless, some hospitals still rely on more traditional and manual
+ way of matching with no aid from the specialized software.
+\end_layout
+
+\begin_layout Standard
+In cases when finding a compatible donor within recipient's social circle
+ is not feasible, the patient has option to register in the 
+\emph on
+kidney exchange program
+\emph default
+ (KEP), also known as 
+\emph on
+kidney paired donation
+\emph default
+ (KPD).
+ KEP is an approach to living donor transplantation, where exchanges between
+ pairs with incompatible donors are arranged in a way that will allow each
+ recipient to obtain a compatible kidney.
+ While, theoretically, a very large number of pairs can participate in the
+ exchange, it is important to note that the higher the number of patients
+ in the sequence of transplantations, the higher the risk of someone refusing
+ to donate their kidney, which could compromise the entire sequence.
+ So that the number of pairs in one sequence is usually restricted to some
+ number that makes sense for the center.
+\end_layout
+
+\begin_layout Standard
+The example of how KEP works is as follows: Suppose A, B, C are donor recipient
+ pairs with incompatible donors.
+ Donor A donates their kidney to recipient B, donor B donates theirs to
+ recipient C, donor C donates theirs to recipient A.
+ Such sequence of transplantations is called 
+\emph on
+loop.
+
+\emph default
+ An illustration of that can be seen on Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:KPD-loop"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/kpd_loop.png
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:KPD-loop"
+
+\end_inset
+
+KPD loop 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-43"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In some cases, altruistic donor is availble.
+ These donors are willing to donate kidney to anyone compatible and they
+ are not bound to a specific recipient.
+ In such instances, a special sequence of transplantations called 
+\emph on
+chain 
+\emph default
+is formed, progressing forward from one recipient to the next, culminating
+ in the recipient from a regular waiting list.
+ It can be seen on Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Domino-Chain"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/kpd_chain.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Domino-Chain"
+
+\end_inset
+
+Domino Chain 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-43"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Txmatching
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We will review txmatching in more detail, as we participated in its development
+ and naturally know a lot about it.
+ 
+\end_layout
+
+\end_inset
+
+Txmatching is a software that allows kidney pair donation centre to find
+ the best possible matches from a pool of patients.
+ 
+\end_layout
+
+\begin_layout Standard
+What Txmatching does is it iterates through the database of such donor-recipient
+ pairs and altruistic donors and tries to find the best possible loops and
+ chains with an optimisation algorithm.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/txmatching.png
+	scale 25
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Txmatching
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+solvers - it supports a couple of algorithms
+\end_layout
+
+\begin_layout Plain Layout
+multi-national support
+\end_layout
+
+\begin_layout Plain Layout
+txm events
+\end_layout
+
+\begin_layout Plain Layout
+rounds
+\end_layout
+
+\begin_layout Plain Layout
+describe score (also think where to put my 
+\begin_inset Quotes sld
+\end_inset
+
+scoring innovation
+\begin_inset Quotes srd
+\end_inset
+
+ :D)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+put here screenshot of UI
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+KidneyMatch
+\end_layout
+
+\begin_layout Standard
+KidneyMatch is the software developed and used by The Alliance for Pair
+ Kidney Donation (APKD).
+ They highly emphasize the security of their app: multifactor authentification,
+ role-based authorization, audit trails on every action in the software.
+ KidneyMatch allows to specify the level of the match run: internal, regional
+ or national.
+ The matches can be specified even further with various matching criteria,
+ blood group, HLA and discretionary exclusion criteria (DEC).
+ They also allow to specify the expected solution: from single match to
+ chains and loops of different size on each level: internally, regionally,
+ nationally.
+\end_layout
+
+\begin_layout Standard
+They also emphasize that they collect more than 80 datapoints about each
+ donor and more than 90 data points about each recipient, ensuring the best
+ possible matches and the development of the matching methods.
+ They also support additional medical data such as scans and charts.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+https://paireddonation.org/4-key-features-of-the-apkd-software-program/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+KPDGUI
+\end_layout
+
+\begin_layout Standard
+(Kidney Paired Donation Graphical User Interface)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+they take a graphical approach: visualize the directed graphs of pairs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6538268/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+KidneyLife
 \end_layout
 
 \begin_layout Standard
@@ -12064,76 +12470,26 @@ we realize that it is not a part of the task, but what good is a model if
 
 \end_layout
 
-\begin_layout Section
-Existing Solutions
-\end_layout
-
-\begin_layout Subsection
-Txmatching
-\end_layout
-
 \begin_layout Standard
-Txmatching is a software that allows kidney pair donation centre to find
- the best possible matches from a pool of patients.
- It is not always possible to find a suitable donor in the social circle
- of the patient.
- In this case it is possible to register the patient and a person who is
- willing to donate their kidney, but can't do so due to the incompatibility,
- into Kidney Exchange Program (KEP), or 
-\emph on
-kidney paired donation
-\emph default
- (KPD).
- KEP is an approach to living donor transplantation where pairs with incompatibl
-e donors exchange their kidneys and get a compatible one.
- There can be multiple pairs, but the higher the number of pairs, the more
- risk that someone will refuse to donate their kidney and the whole sequence
- of donations would be compromised.
- The example of how it works is the follows: A, B, C are donor recipient
- pairs.
- Donor A gives their kidney to recipient B, donor B gives theirs kidney
- to recipient C, donor C gives their kidney to recipient A.
- This sequence of transplantations is called 
-\emph on
-loop.
-
-\emph default
- 
-\end_layout
-
-\begin_layout Standard
-There are cases when an altruistic donor is availble, that is they are willing
- to donate kidney to any compatible donor and they are not bound to any
- recipient.
- With such donors there is a special sequence of transplantations called
- 
-\emph on
-chain, 
-\emph default
-and it goes only forward.
-\end_layout
-
-\begin_layout Standard
-What Txmatching does is iterates through the database of such donor-recipient
- pairs and altruistic donors and tries to find the best possible loops and
- chains with an optimisation algorithm.
-\end_layout
-
-\begin_layout Section
-KidneyLife
-\end_layout
-
-\begin_layout Standard
-It was not a part of the task to create any kind of software, however, we
- think it is only right to make something that will allow anyone to use
- our models, as entering data into the jupyter notebook just to make a predictio
-n
+It was not a part of the task to create any kind of standalone software,
+ however, we think it is only right to make something that will allow anyone
+ to use our models, as entering data into the jupyter notebook just to make
+ a prediction
 \end_layout
 
 \begin_layout Standard
 Our supervizors originally suggested to create a module for Txmatching using
  the developed models.
- However, ue to different project philosophy and different kind of data
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+as it is reflected in the task of the BP
+\end_layout
+
+\end_inset
+
+ However, due to different project philosophy and different kind of data
  that Txmatching uses, it was decided to create a whole separate application.
  In the following section we will present the application, its architecture,
  how does it work, the process of its development and what can be done further.
@@ -12880,6 +13236,14 @@ If you are interested how would it look like, you can visit the project's
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+Cross-browser
+\series default
+: safari
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -12991,7 +13355,8 @@ Text of the conclusion\SpecialChar ldots
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-1"
+key "key-1-kidney-transplantation-book"
+literal "false"
 
 \end_inset
 
@@ -13007,7 +13372,7 @@ Knechtle, S.
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-2"
+key "key-2-nobel-prize-medicine"
 literal "false"
 
 \end_inset
@@ -13677,6 +14042,43 @@ Kendra Cherry, Mse.
  How the color blue impacts moods, feelings, and behaviors.
  Verywell Mind.
  https://www.verywellmind.com/the-color-psychology-of-blue-2795815 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-43"
+literal "false"
+
+\end_inset
+
+Kidney Paired Donation (KPD) Program.
+ (2024, January 3).
+ Professional Education.
+ https://professionaleducation.blood.ca/en/organs-and-tissues/programs/kidney-pair
+ed-donation-kpd-program 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+maybe images should be referenced in some other way.
+ check it!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-44"
+literal "false"
+
+\end_inset
+
+‌
 \end_layout
 
 \begin_layout Standard
