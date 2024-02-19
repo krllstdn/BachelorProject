@@ -1772,7 +1772,14 @@ As techniques were improving and donor pools expanding in the period from
 \end_layout
 
 \begin_layout Subsection*
-Tissue Typing
+Tissue Typing 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Tissue-Typing"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1811,6 +1818,9 @@ literal "false"
 For several years, Terasaki performed typing for most U.S.
  transplant centers and found a couple of observations: 1) Positive crossmatch
  test predicts hyperacute rejection.
+ The test is performed by mixing recipient's serum with donor's blood cells,
+ if there is a reaction, the test is considered to be positive and the transplan
+tation cannot be performed.
  2) matching can reliably identify optimal donors within a family, and it
  was assumed that the same principle would apply to non-related recipients.
 \end_layout
@@ -12097,8 +12107,8 @@ Existing Solutions
 \end_layout
 
 \begin_layout Standard
-To the best of our knowledge there is no survival estimation software as
- of yet.
+To the best of our knowledge, there is no survival estimation software for
+ kidney transplantation as of yet.
  So let us review other adjacent solutions: kidney pair matching software.
  We will review three options: Txmatching, KidneyMatch, KPDGUI.
  It is worth noting that there is limited information available online about
@@ -12287,20 +12297,31 @@ literal "false"
 \begin_layout Standard
 What such software does is it performs so-called virtual crossmatch, it
  is a digital variation of a test that predicts hyperacute rejection.
+ (Briefly explained in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Tissue-Typing"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) However, virtual cross match test is not a substitution for a regular
+ one.
+ The results of a virtual cross match are always complemented by a physical
+ test, as occasional disparities may occur between the two.
  
-\begin_inset Quotes sld
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+improve paragraph, i don't like it
+\end_layout
+
 \end_inset
 
-Real
-\begin_inset Quotes srd
-\end_inset
 
- cross match test is performed by mixing recipient's serum with donor's
- blood cells, if there is a reaction to blood cells, the test is considered
- positive and the transplantation cannot be performed.
- However, virtual cross match test is not a substitution for a regular one.
- The results of a virtual cross match are always checked in reality, as
- it sometimes happens that they are not the same.
 \end_layout
 
 \begin_layout Subsection
