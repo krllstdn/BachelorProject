@@ -12079,39 +12079,17 @@ Draft!
 \end_layout
 
 \begin_layout Standard
-In this chapter we will explore existing solutions for k
+In this chapter we will focus on software used in the realm of kidney transplant
+ation.
+ We will start by exploring k
 \emph on
 idney pair donation
 \emph default
- (KPD), explain its intricacies and necessary terminology.
- Then we will introduce KidneyLife - a survival estimation application that
- can be used in addition to a KPD application to aid medical professionals
- in decision making.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-In this chapter we will
-\end_layout
-
-\begin_layout Plain Layout
-- describe three existing solutions for kpd
-\end_layout
-
-\begin_layout Plain Layout
-- explain some necessary KPD info
-\end_layout
-
-\begin_layout Plain Layout
-- introduce KidneyLife - a survival estimation software
-\end_layout
-
-\end_inset
-
-
+ (KPD), a critical part of the living donor transplantation.
+ We will explain its intricacies and necessary terminology.
+ Then we will examine three solutions for KPD.
+ Finally, we will introduce KidneyLife - a survival estimation application
+ to complement KPD software to aid medical professionals in decision making.
 \end_layout
 
 \begin_layout Section
@@ -13267,11 +13245,6 @@ tell what the CI/CD is
  from merging into Main if the tests have failed.
  The tests for the backend already exist.
  So the task would be only to automate it with Git Hub Actions.
-\end_layout
-
-\begin_layout Standard
-If you are interested how would it look like, you can visit the project's
- Figma page to see the early stages of the design.
 \end_layout
 
 \begin_layout Standard
