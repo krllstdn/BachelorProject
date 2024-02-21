@@ -4763,6 +4763,13 @@ premyslet nad carkou
 
 \series bold
 Handling Missing Feature Values
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Handling-Missing-Feature"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8116,6 +8123,19 @@ Fortunately, United Network for Organ Sharing (UNOS) agreed to provide their
  Kidney transplants account for 490 172 records.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+United states!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Data Loading
 \end_layout
@@ -8162,11 +8182,21 @@ The process of loading the data using the read_csv() method of the Pandas
 \end_layout
 
 \begin_layout Section
-Data preprocessing pipeline
+Data Preprocessing Pipeline 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Return here during 5th Chapter
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-In this section I will describe the data pipeline that is used to create
+In this section we will describe the data pipeline that is used to create
  the dataset out of the raw data.
  The pipeline can be found in github repository of this paper: 
 \begin_inset CommandInset href
@@ -8178,6 +8208,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Update the link or the file)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8221,75 +8261,76 @@ X, y = loader.load()
 \end_layout
 
 \begin_layout Standard
-Two main constants of the class are 
+Two main class constants are categorical_values and numerical_values, whose
+ names speak for themselves.
+ The primary class method is 
 \emph on
-categorical_values 
+load()
 \emph default
-and 
+.
+ This method loads the data into the pandas DataFrame, processes them, and
+ returns 
 \emph on
-numerical_values.
+X
+\emph default
+ and 
+\emph on
+y
+\emph default
+.
  
+\emph on
+X
 \emph default
-Categorical and numerical features must be specified there.
- It is important for following preprocessing steps.
+ represents data transformed into numbers, while 
+\emph on
+y
+\emph default
+ is a tuple consisting of two elements: PSTATUS and PTIME.
+ PSTATUS is the boolean censoring indicator (True - the event happened,
+ False - otherwise), PTIME is the number of days survived.
+ This format of target value is required by all Scikit-survival estimators.
 \end_layout
 
 \begin_layout Standard
-The main method of the class 
-\emph on
-ScikitSurvivalDataLoader 
-\emph default
-is 
-\emph on
-load().
- 
-\emph default
-This method loads the data into the pandas DataFrame, applies exclusion
- criteria (more on that later), handles NaN values and returns X and y,
- X being numerical (categorical values were handled with OneHot encoding
- and numerical values were scaled) and y having format of (PSTATUS, PTIME),
- first one is the boolean censoring indicator (True - event happened, False
- - otherwise), PTIME is the number of days survived.
- This format is required by the Scikit-survival Library to build survival
- estimators.
- 
-\end_layout
-
-\begin_layout Standard
-The first step is to load the data into pandas DataFrame from the parquet
+The first step is to load the data into Pandas DataFrame from the parquet
  file.
- Fortunately, pandas has support for this kind of files.
- It is performed by the Pandas method 
+ It is done by the Pandas method 
 \emph on
-read_parquet(path, engine, columns).
- 
+read_parquet(path, engine, columns)
 \emph default
-In 
+.
+ In the 
 \emph on
 path
 \emph default
- we need to specify the path to the parquet file, 
+ property, we need to specify the path to the parquet file; the 
 \emph on
 engine
 \emph default
- specifies what parquet library should be used, I use 'auto', it tries 
+ parameter specifies the data loading scheme.
+ We use 
 \emph on
-pyarrow
+'auto'
 \emph default
- if it doesn't work it uses 
-\emph on
-fastparquet.
-
-\emph default
+, which tries PyArrow first; if that does not work, it uses FastParquet.
+ PyArrow and FastParquet are just interfaces for reading data from Parquet
+ files.
  In 
 \emph on
-columns 
+columns
 \emph default
-we need to specify the columns we want to load.
- (explain more what is pyarrow and parquet)
+, we need to specify the columns we want to load.
+ 
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 
 \series bold
 Description of feature engineering step
@@ -8297,94 +8338,89 @@ Description of feature engineering step
 : 
 \end_layout
 
-\begin_layout Standard
-The next step is to divide the dataset into training, validation and test
- sets, the reasons behind that, were explained in the datapreprocessing
- section of the previous chapter.
- These sets are then assigned as class variables to the class and are sent
- to preprocessing method 
-\emph on
-_handle_nan(), 
-\emph default
-where the NaN values are filled with median, specific value, or examples
- with such values are deleted with the pandas DataFrame method 
-\emph on
-drop_na(), 
-\emph default
-depending on the 
-\emph on
-fill_na_with_median
-\emph default
- boolean parameter.
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-After the NaN handling step, the training set is send to the method 
-\emph on
-_get_X_y()
-\emph default
- where the numerical values are standartized
-\series bold
- 
-\series default
-and categorical are encoded with the OneHot encoding with the Scikit-Survival
- methods 
-\emph on
-standardize()
-\emph default
- and 
-\emph on
-encode_categorical().
- 
-\emph default
-Numerical and categorical values then comprise the 
-\emph on
-X
-\emph default
- set, directly used in the training.
-
-\emph on
- 
-\emph default
-The target value set is constructed with 
-\emph on
-Surv.from_arrays()
-\emph default
- utility that accepts event and survival time and builds the 
-\emph on
-y
-\emph default
- value acceptable to scikit-survival algorithms.
- The class variable 
-\emph on
-df 
-\emph default
-is then set to None with the goal of memory optimisation.
- X and y are then returned.
-\end_layout
-
-\begin_layout Standard
-When we need the validation and the test sets, we just call methods 
-\emph on
-get_validate_X_y() 
-\emph default
-and 
-\emph on
-get_test_X_y()
-\emph default
- which will provide us with the sets for the hyperparameter tuning step
- with the validation set and the final evaluation step with the test set.
- 
+Now, we need to filter out all records that might add noise to the data.
+ Firstly, we remove patients who died of unrelated causes 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Reexamine it, as some things were already changed.
+better would be to censor them
 \end_layout
 
 \end_inset
 
+, such as accidents.
+ Next, we filter out all recipients from the pediatric group, as the transplanta
+tion at that age differs significantly from that of adults.
+ Then, we delete rows with all ”Unknown” categories.
+ Finally, we will include only living or deceased patients, depending on
+ the donor type we are training a model for.
+\end_layout
 
+\begin_layout Standard
+The next step is to handle missing (NaN) values.
+ It is done with _handle_nan() method.
+ We tried using mean and median imputation techniques from 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Handling-Missing-Feature"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, but that only led to data leakage and suboptimal performance, so we just
+ dropped all rows with empty columns.
+ Fortunately, the size of the dataset allowed us to do that.
+\end_layout
+
+\begin_layout Standard
+At this point, data were pickled and downloaded, and the next step was carried
+ out locally, as we faced issues while trying to install the latest versions
+ of packages on the cluster.
+ The latest versions are needed to ensure a seamless run of models and transform
+er pipelines in a production environment.
+\end_layout
+
+\begin_layout Standard
+After the NaN handling step, the training set is sent to the method 
+\emph on
+_get_X_y()
+\emph default
+ (or the same steps are done locally) where the numerical columns are scaled
+ (with 
+\emph on
+StandardScaler()
+\emph default
+) and categorical is one-hot encoded (with 
+\emph on
+OneHotEncoder()
+\emph default
+) in the Scikit-learn transformer pipeline.
+ The pipeline is pickled for later use in the application to transform the
+ user input into data digestible by the model.
+ Numerical and categorical values then comprise the 
+\emph on
+X
+\emph default
+ set.
+ The target value set is constructed with the 
+\emph on
+Surv.from_arrays()
+\emph default
+ utility that accepts event and survival time and builds the y value acceptable
+ to scikit-survival algorithms.
+\end_layout
+
+\begin_layout Standard
+And now we have the dataset to work with.
 \end_layout
 
 \begin_layout Section
@@ -9024,6 +9060,19 @@ name "km_donor_types"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add bar chart for donor types
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Gender
 \end_layout
@@ -9065,10 +9114,6 @@ literal "false"
 wide false
 sideways false
 status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Graphics
