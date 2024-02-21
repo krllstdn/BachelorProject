@@ -8058,44 +8058,9 @@ the code for the image generation can be found in the github + give a link
 \end_layout
 
 \begin_layout Standard
-In this chapter we age going to look into the UNOS dataset.
- Make sense of the dataset.
- Explore important features and their relationship with each other.
- Look into survival time for 
-\end_layout
-
-\begin_layout Standard
-The dataset provided by the IKEM (Institute of Clinical and Experimental
- Medicine in Prague) that we had from the beginning was not suitable for
- any meaningful analysis.
- That is why it was decided to look for the dataset elsewhere.
-\end_layout
-
-\begin_layout Standard
-The data reported here have been supplied by the United Network for Organ
- Sharing as the contractor for the Organ Procurement and Transplantation
- Network.
- The interpretation and reporting of these data are the responsibility of
- the author(s) and in no way should be seen as an official policy of or
- interpretation by the OPTN or the U.S.
- Government.
-\end_layout
-
-\begin_layout Standard
-The dataset is not for the open use.
- If you are interested in testing the results achieved in this paper, you
- need to acquire the data first.
- The requirements for the data acquirement are written here 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-give a link to the UNOS website
-\end_layout
-
-\end_inset
-
-
+In this chapter we are going to look into the dataset used in the study.
+ Explore the most important features and their relationship with each other.
+ Look into survival time...
 \end_layout
 
 \begin_layout Standard
@@ -8103,7 +8068,7 @@ The dataset consists of 993 806 of records for both transplanted patients
  and ones from the waiting list, and 450 features comprised of waiting list
  data and already transplanted patients for kidney and pancreas transplant
  from October 1, 1987 to the present.
- Kidney transplants have 490 172 records.
+ Kidney transplants account for 490 172 records.
 \end_layout
 
 \begin_layout Section
@@ -8111,20 +8076,44 @@ Data Acquisition
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- UNOS
+The dataset provided by the IKEM (Institute of Clinical and Experimental
+ Medicine in Prague) that we initially had was not suitable for any meaningful
+ analysis.
+ It had very few records, an insufficient amount of features, a lot of missing
+ values, and quite outdated follow-ups.
+ That is why it was decided to look for data elsewhere.
 \end_layout
 
-\begin_layout Plain Layout
-- 
+\begin_layout Standard
+A number of institutions were contacted, including the Scientific Registry
+ of Transplant Recipients (SRTR), the Australia and New Zealand Dialysis
+ and Transplant Registry (ANZDATA), the National Health Service (NHS), the
+ Center for Research in Transplantation and Translational Immunology (CR2TI),
+ and other organizations from Spain, Germany and Canada.
+ However, we faced the following obstacles:
 \end_layout
 
-\end_inset
+\begin_layout Itemize
+High cost of acquiring the data
+\end_layout
 
+\begin_layout Itemize
+The need for association with local research group
+\end_layout
 
+\begin_layout Itemize
+The need for local citizenship.
+\end_layout
+
+\begin_layout Standard
+Fortunately, United Network for Organ Sharing (UNOS) agreed to provide their
+ data for free upon the signing the data use agreement.
+ The database consists of 1,108,884 records for all kinds of transplants.
+ The table that contained data crucial for our analysis encompassed both
+ kidney and pancreas transplants, had 993 806 records and 457 columns for
+ both transplanted patients and ones from the waiting list.
+ Data span from October 1, 1987 to the September, 2022.
+ Kidney transplants account for 490 172 records.
 \end_layout
 
 \begin_layout Section
@@ -8736,7 +8725,7 @@ In this subsection we are going to explore both the donor and recipint ages
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
