@@ -12076,16 +12076,6 @@ deep survival neural network
 
 \begin_layout Chapter
 Applications 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Draft!
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -12109,7 +12099,7 @@ Existing Solutions
 To the best of our knowledge, there is no survival estimation software for
  kidney transplantation as of yet.
  So let us review other adjacent solutions: kidney pair matching software.
- We will review three options: Txmatching, KidneyMatch, and KPDGUI.
+ We will review three options: TX Matching, KidneyMatch, and KPDGUI.
  It is worth noting that there is limited information available online about
  alternatives.
  This shortage may stem from the fact that such software is developed for
@@ -12309,7 +12299,7 @@ TX Matching
 \end_layout
 
 \begin_layout Standard
-Txmatching is open-source software that allows KPD centers to find optimal
+TX Matching is open-source software that allows KPD centers to find optimal
  matches from a pool of incompatible donor-recipient pairs and altruistic
  donors.
  It utilizes one of two algorithms (solvers): integer linear programming
@@ -12369,12 +12359,12 @@ tohle jsem si vymyslel, oveř to pls, případně navrhni opravy
 \end_layout
 
 \begin_layout Standard
-Furthermore, Txmatching has a wide range of configurable settings, allowing
+Furthermore, TX Matching has a wide range of configurable settings, allowing
  users to adjust parameters to their needs and requirements, enhancing the
  relevance of solved matchings.
  Matching scoring mechanism includes evaluation of blood group and HLA compatibi
 lity.
- Although, Txmatching is used primarily by the Czech Institute of Clinical
+ Although, TX Matching is used primarily by the Czech Institute of Clinical
  and Experimental Medicine, efforts have been made to expand to other transplant
 ation centers, but unfortunately, they were unsuccessful.
 \end_layout
