@@ -8121,42 +8121,44 @@ Data Loading
 \end_layout
 
 \begin_layout Standard
-The data were provided in a form of a MongoDB database dump.
- It is impossible to perform data analysis with the database dump.
- So it was necessary to run the database first and import the database dump
- there.
- We set up the database in a Docker container (Docker is container management
- system
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-+ 
-\series bold
-explain what is container
-\end_layout
+The data were provided as a MongoDB database dump.
+ Unfortunately, the database dump alone was insufficient for data analysis.
+ It was necessary to run the database, import the database dump, and export
+ data in the appropriate format.
+ We set up the MongoDB database in a Docker container (Docker explained
+ in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Architecture"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-) locally on my Mac, as the university cluster unfortunatelly does not have
- Docker.
- The data from the database and table kidpan were then exported to CSV,
- compressed into zip and uploaded to the cluster.
+) running locally on our Mac, as we weren't allowed to install Docker in
+ our university cluster.
+ The corresponding table was then exported to CSV, compressed into a zip
+ archive, and uploaded to the cluster.
+ 
 \end_layout
 
 \begin_layout Standard
-The pandas DataFrame method read_csv() loaded data for too long to work
- comfortably (5 minutes), as the CSV file had the size of 80GB, so it was
- decided to use parquet file instead.
- It was done by dumping the pandas DataFrame into Parquet database file
- using DataFrame.to_parquet() method.
- Parquet is used for efficient cloud computing.
- It provides more efficient way of loading data, as it works on the principles
- of databases, so the loading time of the whole dataset was decreased to
+The process of loading the data using the read_csv() method of the Pandas
+ DataFrame was taking too long (about 5 minutes) due to the large size of
+ the CSV file (80GB).
+ The nature of data science is quite iterative, so we had to optimize this
+ inefficiency.
+ As a result, it was decided to store data in a Parquet file.
+ The DataFrame.to_parquet() method was used to dump the pandas DataFrame
+ into the Parquet database file.
+ Parquet is an efficient cloud computing format that works on the principles
+ of databases, making it possible to load data more efficiently.
+ This significantly reduced the loading time of the entire dataset to just
  38 seconds.
- Additionally, it allows for specifying what columns to load, reducing the
- data loading time to mere 21 seconds.
- Thus using this technology has signifficantly improved the workflow.
+ Moreover, it allows for specifying the columns to load, which further reduces
+ the data loading time to a mere 21 seconds.
+ Therefore, using this technology has significantly improved the workflow.
 \end_layout
 
 \begin_layout Section
