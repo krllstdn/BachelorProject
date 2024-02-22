@@ -8514,6 +8514,29 @@ in this section...
 \end_layout
 
 \begin_layout Subsection
+General Data
+\end_layout
+
+\begin_layout Standard
+Here we will cover data for the whole DS with no division on living and
+ deceased.
+ We will see how these factors influence survival.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The following features are used in this work (generate a table with pandas)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Survival Data
 \end_layout
 
@@ -8751,240 +8774,7 @@ noprefix "false"
  The percentage of censoring is 63%, which is quite high.
 \end_layout
 
-\begin_layout Subsection
-Age\SpecialChar endofsentence
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Goals of this subsection:
-\end_layout
-
-\begin_layout Plain Layout
-- look at the age distribution for both donors and recipients
-\end_layout
-
-\begin_layout Plain Layout
-- explore how donor age and recipient age influence survival
-\end_layout
-
-\begin_layout Plain Layout
-- look into the literature: what does it say
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In this subsection we are going to explore both the donor and recipint ages
- in the dataset, and will see what the literature tells about their importance
- to long-term survival.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/EDA/box_age_vs_age_don.png
-	scale 50
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Box plot for the recipient age versus donor age.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:box_age_vs_age_don"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-As can be seen on the box plot in the Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:box_age_vs_age_don"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, in this dataset donors are usually younger than the recipients by median
- 11 years.
- Median recipient age in the dataset is 50, median donor age is 39.
- The vast majority, 75% of the recipients aged lie between 38 and 60 years
- old, making IQR of 22, while 75% of the donor age lie between 26 and 50
- years old, making IQR of 24.
- Interestingly, there are not many outliers, as the whiskers cover ages
- from about 5 to 93, covering the most of human life range.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/EDA/hex_bin_age_vs_surv_time.png
-	scale 60
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Hexagonal binning for the recipient age versus survival time.
- The brighter the color of the hexagon is, the more instances lie in it.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:hb_age_ptime"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In the Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:hb_age_ptime"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- you can see the hexagonal binning for the recipient age vs.
- the survival time.
- The hexagonal binning is a substitute for a scatter plot for large datasets,
- as scatter plots do not handle large data sets very well.
- The hexagonal binning plot consists of colored hexagons, and the darker
- the color is, the more instances lie in it.
-\end_layout
-
-\begin_layout Standard
-The figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:hb_age_ptime"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- more or less corresponds to box plots 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "box_surv_time"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:box_age_vs_age_don"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, as the majority of colored hexons lie in box ranges for age and the survival
- time.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-mozna hexagonal binning plot je k nicemu - neukazuje relaci mezi vekem a
- dobou preziti, to je proste mnozstvi instanci
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
+\begin_layout Subsubsection
 Donor Type
 \end_layout
 
@@ -9093,7 +8883,7 @@ name "km_donor_types"
 status open
 
 \begin_layout Plain Layout
-add bar chart for donor types
+add pie chart for donor types
 \end_layout
 
 \end_inset
@@ -9101,7 +8891,7 @@ add bar chart for donor types
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Gender
 \end_layout
 
@@ -9135,13 +8925,23 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+make it pie
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -9255,7 +9055,7 @@ name "km_sex"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 The Use of Dialysis
 \end_layout
 
@@ -9354,8 +9154,8 @@ name "km_dialysis"
 
 \end_layout
 
-\begin_layout Subsection
-Race
+\begin_layout Subsubsection
+Ethnicity
 \end_layout
 
 \begin_layout Standard
@@ -9438,8 +9238,47 @@ name "km_race"
 
 \end_layout
 
-\begin_layout Section
-Dataset building, Exclusion criteria and noice reduction
+\begin_layout Subsection
+Deceased Group
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Write it after the 5th chapter is ready
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The particular features might be later added, as there will be other models,
+ rather than coxnet.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+a table for categorical frequencies at deceased YNU
+\end_layout
+
+\begin_layout Itemize
+ETHNCAT deceased table
+\end_layout
+
+\begin_layout Itemize
+pie deceased: gender, hcv, diab - done
 \end_layout
 
 \begin_layout Standard
@@ -9525,6 +9364,53 @@ end{table}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Living Group
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Write it after the 5th chapter is ready
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The particular features might be later added, as there will be other models,
+ rather than coxnet.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+ETHNCAT living table
+\end_layout
+
+\begin_layout Itemize
+a table for categorical frequencies at living YNU
+\end_layout
+
+\begin_layout Itemize
+N/P/ND table
+\end_layout
+
+\begin_layout Itemize
+Pie living: Diab, gender, liv_don_type, abo_mat
 \end_layout
 
 \begin_layout Standard
@@ -9623,44 +9509,20 @@ end{table}
 
 \end_layout
 
+\begin_layout Section
+Dataset building, Exclusion criteria and noice reduction
+\end_layout
+
 \begin_layout Itemize
-a table for all used features
+a
 \end_layout
 
 \begin_layout Standard
 .
 \end_layout
 
-\begin_layout Itemize
-a table for categorical frequencies at deceased YNU
-\end_layout
-
-\begin_layout Itemize
-ETHNCAT deceased table
-\end_layout
-
-\begin_layout Itemize
-pie deceased: gender, hcv, diab - done
-\end_layout
-
 \begin_layout Standard
 sd
-\end_layout
-
-\begin_layout Itemize
-ETHNCAT living table
-\end_layout
-
-\begin_layout Itemize
-a table for categorical frequencies at living YNU
-\end_layout
-
-\begin_layout Itemize
-N/P/ND table
-\end_layout
-
-\begin_layout Itemize
-Pie living: Diab, gender, liv_don_type, abo_mat
 \end_layout
 
 \begin_layout Standard
