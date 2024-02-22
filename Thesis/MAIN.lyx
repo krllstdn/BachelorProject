@@ -13,6 +13,7 @@
 %% Please make sure that the 'esint' package is turned off in the
 %% 'Math options' page.
 \usepackage[varg]{txfonts}
+\usepackage{booktabs}
 
 %% Use Utopia text with Fourier-GUTenberg math
 %\usepackage{fourier}
@@ -8459,8 +8460,35 @@ Goals of this section:
 \begin_layout Standard
 In this section we are going to cover all the most signifficant features.
  The data were not adjusted to limit the influence of other factors, so
- the correlations I am trying to make here might not be fully correct, however
- some are confirmed in literature.
+ the correlations we are trying to make here might not be fully correct,
+ however some are confirmed in literature.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+EDA was performed before exclusion criteria (or after?!)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Feature distributions do on the training sets, survival curves on the whole
+ dataset
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8495,23 +8523,26 @@ In this subsection we are going to explore the
 y
 \emph default
  axis that is going to be used for the training of the survival estimators.
+ As was mentioned earlier, the 
+\emph on
+y
+\emph default
+ value consists of boolean censoring status (PSTATUS), and time (PTIME),
+ which is a numerical value representing the survival time or the time at
+ which it was censored.
  The 
 \emph on
 y
 \emph default
- value consists of censoring status, which is a boolean value, and time
- to event, which is a numerical value representing the survival time or
- the time at which it was censored.
- The y value is called the 
+ value is called the 
 \emph on
 survival data
 \emph default
 .
- The column PSTATUS is a censoring status, while the PTIME column represents
- the time-to-event variable.
-\end_layout
+\begin_inset Note Note
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 To best visualize the time-to-event variable we are going to use a box plot.
  A box plot is a simple, yet powerful statistical graph based on quartiles,
  that allows to quickly make sense of the data distribution.
@@ -8560,14 +8591,6 @@ a bulk of the data
  cannot be longer than 1,5 times the IQR.
  The values lying outside of the whiskers are considered outliers.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Think if it makes sense to include explanation of boxplot.
- Probably not.
- It is a common knowledge I think.
- So remove the explanation.
 \end_layout
 
 \end_inset
@@ -8729,7 +8752,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsection
-Age
+Age\SpecialChar endofsentence
+
 \end_layout
 
 \begin_layout Standard
@@ -8738,6 +8762,10 @@ status open
 
 \begin_layout Plain Layout
 Goals of this subsection:
+\end_layout
+
+\begin_layout Plain Layout
+- look at the age distribution for both donors and recipients
 \end_layout
 
 \begin_layout Plain Layout
@@ -9415,8 +9443,229 @@ Dataset building, Exclusion criteria and noice reduction
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table} 
+\backslash
+centering 
+\backslash
+caption{Descriptive Statistics for Numerical Features for Deceased Donors}
+ 
+\backslash
+label{tab:desc_deceased} 
+\backslash
+begin{tabular}{lrrrrrrrr} 
+\backslash
+toprule {} &     count &       mean &        std &   min &    25
+\backslash
+% &    50
+\backslash
+% &   75
+\backslash
+% &   max 
+\backslash
+
+\backslash
+ 
+\backslash
+midrule AGE          &  117568.0 &  51.883259 &  13.112097 &  18.0 &  43.00 &
+  53.00 &  62.0 &  90.0 
+\backslash
+
+\backslash
+ BMI
+\backslash
+_CALC     &  117568.0 &  27.770096 &   5.419293 &  15.0 &  23.80 &  27.30 &  31.3
+ &  72.2 
+\backslash
+
+\backslash
+ AGE
+\backslash
+_DON      &  117568.0 &  38.101618 &  16.595043 &   0.0 &  24.00 &  40.00 &  51.0
+ &  88.0 
+\backslash
+
+\backslash
+ CREAT
+\backslash
+_TRR    &  117568.0 &   8.251785 &   3.508183 &   0.1 &   5.70 &   7.82 &  10.3
+ &  28.2 
+\backslash
+
+\backslash
+ NPKID        &  117568.0 &   0.122083 &   0.361227 &   0.0 &   0.00 &   0.00
+ &   0.0 &   5.0 
+\backslash
+
+\backslash
+ COLD
+\backslash
+_ISCH
+\backslash
+_KI &  117568.0 &  18.016163 &   8.981343 &   0.0 &  11.87 &  17.00 &  23.0 & 
+ 99.0 
+\backslash
+
+\backslash
+ 
+\backslash
+bottomrule 
+\backslash
+end{tabular} 
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table} 
+\backslash
+centering 
+\backslash
+caption{Descriptive Statistics for Numerical Variables in Living Donor Group}
+ 
+\backslash
+label{tab:desc_living} 
+\backslash
+begin{tabular}{lrrrrrrrr} 
+\backslash
+toprule {} &    count &    mean &    std &     min &     25
+\backslash
+% &    50
+\backslash
+% &     75
+\backslash
+% &    max 
+\backslash
+
+\backslash
+ 
+\backslash
+midrule KI
+\backslash
+_CREAT
+\backslash
+_PREOP &  52420.0 &    0.87 &   0.38 &    0.10 &    0.70 &    0.8 &    1.00 & 
+  25.0 
+\backslash
+
+\backslash
+ SERUM
+\backslash
+_CREAT    &  52420.0 &    1.78 &   1.42 &    0.10 &    1.10 &    1.4 &    1.90
+ &   21.0 
+\backslash
+
+\backslash
+ NPKID          &  52420.0 &    0.10 &   0.33 &    0.00 &    0.00 &    0.0 & 
+   0.00 &    4.0 
+\backslash
+
+\backslash
+ AGE            &  52420.0 &   47.46 &  13.78 &   18.00 &   37.00 &   48.0 & 
+  58.00 &   85.0 
+\backslash
+
+\backslash
+ HGT
+\backslash
+_CM
+\backslash
+_CALC    &  52420.0 &  171.11 &  10.67 &  109.00 &  162.60 &  170.2 &  178.00 &
+  213.4 
+\backslash
+
+\backslash
+ BMI
+\backslash
+_DON
+\backslash
+_CALC   &  52420.0 &   26.90 &   4.37 &   15.01 &   23.71 &   26.6 &   29.71 &
+   71.9 
+\backslash
+
+\backslash
+ AGE
+\backslash
+_DON        &  52420.0 &   41.34 &  11.55 &   15.00 &   32.00 &   41.0 &   50.00
+ &   77.0 
+\backslash
+
+\backslash
+ 
+\backslash
+bottomrule 
+\backslash
+end{tabular} 
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+a table for all used features
+\end_layout
+
+\begin_layout Standard
+.
+\end_layout
+
+\begin_layout Itemize
+a table for categorical frequencies at deceased YNU
+\end_layout
+
+\begin_layout Itemize
+ETHNCAT deceased table
+\end_layout
+
+\begin_layout Itemize
+pie deceased: gender, hcv, diab - done
+\end_layout
+
+\begin_layout Standard
+sd
+\end_layout
+
+\begin_layout Itemize
+ETHNCAT living table
+\end_layout
+
+\begin_layout Itemize
+a table for categorical frequencies at living YNU
+\end_layout
+
+\begin_layout Itemize
+N/P/ND table
+\end_layout
+
+\begin_layout Itemize
+Pie living: Diab, gender, liv_don_type, abo_mat
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Exclude
