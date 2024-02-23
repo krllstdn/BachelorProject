@@ -8362,6 +8362,25 @@ tion at that age differs significantly from that of adults.
  Then, we delete rows with all ”Unknown” categories.
  Finally, we will include only living or deceased patients, depending on
  the donor type we are training a model for.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We don't delete 
+\begin_inset Quotes sld
+\end_inset
+
+unknowns
+\begin_inset Quotes srd
+\end_inset
+
+ as they may be inputted in the application
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8506,6 +8525,29 @@ status open
 
 \begin_layout Plain Layout
 increase the width of the table
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+General Data
+\end_layout
+
+\begin_layout Standard
+Here we will cover data for the whole DS with no division on living and
+ deceased.
+ We will see how these factors influence survival.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The following features are used in this work (generate a table with pandas)
 \end_layout
 
 \end_inset
@@ -8760,29 +8802,6 @@ bottomrule
 end{tabular} 
 \backslash
 end{table}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-General Data
-\end_layout
-
-\begin_layout Standard
-Here we will cover data for the whole DS with no division on living and
- deceased.
- We will see how these factors influence survival.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-The following features are used in this work (generate a table with pandas)
 \end_layout
 
 \end_inset
@@ -9620,6 +9639,129 @@ end{table}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table} 
+\backslash
+centering 
+\backslash
+caption{Frequency of Yes/No Variables in Deceased Donor Group} 
+\backslash
+label{tab:yn_deceased} 
+\backslash
+begin{tabular}{llrrr} 
+\backslash
+toprule {} & Value &  ON
+\backslash
+_DIALYSIS &  PRE
+\backslash
+_TX
+\backslash
+_TXFUS &  DIABETES
+\backslash
+_DON 
+\backslash
+
+\backslash
+ 
+\backslash
+midrule N &   Yes &        25881 &         88215 &        109920 
+\backslash
+
+\backslash
+ Y &    No &        91687 &         29353 &          7648 
+\backslash
+
+\backslash
+ 
+\backslash
+bottomrule 
+\backslash
+end{tabular} 
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/ETHCAT_DECEASED.png
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ETHCAT deceased pie chart
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/pie-deceased.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Feature Frequencies In ...
+ in Deceased Sub group
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Living Group
 \end_layout
@@ -9769,6 +9911,274 @@ bottomrule
 end{tabular} 
 \backslash
 end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table} 
+\backslash
+centering 
+\backslash
+caption{Frequency table for ETHCAT in Deceased Donor Group} 
+\backslash
+label{tab:ethcat_deceased} 
+\backslash
+begin{tabular}{lrr} 
+\backslash
+toprule                                           Category &  ETHCAT & 
+ ETHCAT
+\backslash
+_DON 
+\backslash
+
+\backslash
+ 
+\backslash
+midrule                                White, non-Hispanic &   34127 & 
+      35778 
+\backslash
+
+\backslash
+                                Black, non-Hispanic &    7664 &        7386
+ 
+\backslash
+
+\backslash
+                                    Hispanic/Latino &    7565 &        6639
+ 
+\backslash
+
+\backslash
+                                Asian, non-Hispanic &    2340 &        1958
+ 
+\backslash
+
+\backslash
+        American Indian/Alaska Native, non-Hispanic &     365 &        
+ 291 
+\backslash
+
+\backslash
+  Native Hawaiian/Other Pacific Islander, non-Hi...
+ &     185 &         216 
+\backslash
+
+\backslash
+                          Multiracial, non-Hispanic &     174 &        
+ 152 
+\backslash
+
+\backslash
+ 
+\backslash
+bottomrule 
+\backslash
+end{tabular} 
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+instead of numbers better use %
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table} 
+\backslash
+centering 
+\backslash
+caption{Frequency of Yes/No/Unknown Variables in Living Donor Group} 
+\backslash
+label{tab:yn_living} 
+\backslash
+begin{tabular}{llrr} 
+\backslash
+toprule {} & Value &  ON
+\backslash
+_DIALYSIS &  PRE
+\backslash
+_TX
+\backslash
+_TXFUS 
+\backslash
+
+\backslash
+ 
+\backslash
+midrule N &   Yes &        22488 &         42388 
+\backslash
+
+\backslash
+ Y &    No &        29932 &         10032 
+\backslash
+
+\backslash
+ 
+\backslash
+bottomrule 
+\backslash
+end{tabular} 
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table} 
+\backslash
+centering 
+\backslash
+caption{Frequency of N/P/ND Variables in Living Donor Group} 
+\backslash
+label{tab:np_living} 
+\backslash
+begin{tabular}{llrr} 
+\backslash
+toprule {} & Value &  HCV
+\backslash
+_SEROSTATUS &  HBV
+\backslash
+_CORE 
+\backslash
+
+\backslash
+ 
+\backslash
+midrule N  &     N &           50237 &     43276 
+\backslash
+
+\backslash
+ ND &     P &             801 &      6429 
+\backslash
+
+\backslash
+ P  &    ND &            1382 &      2715 
+\backslash
+
+\backslash
+ 
+\backslash
+bottomrule 
+\backslash
+end{tabular} 
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/pie-living.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pie Chart for Gender, Diab and ABO match in living subgroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/LIV_DON_TY.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pie Chart for living donor type
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
