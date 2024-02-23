@@ -8539,20 +8539,24 @@ General Data
 \begin_layout Standard
 Here we will cover data for the whole DS with no division on living and
  deceased.
- We will see how these factors influence survival.
+ We will see how some of these factors influence survival.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+In the Table 
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-The following features are used in this work (generate a table with pandas)
+
+
+\backslash
+ref{tab:feature_table}
 \end_layout
 
 \end_inset
 
-
+ you can see all features are used in this work
 \end_layout
 
 \begin_layout Standard
@@ -8561,12 +8565,6 @@ status open
 
 \begin_layout Plain Layout
 
- living:  (52420, 56) deceased:  (117568, 19) count	mean	std	min	25%	50%	75%	max
- AGE	117568.0	51.883259	13.112097	18.0	43.00	53.00	62.0	90.0 BMI_CALC	117568.0	27.770096	5.
-419293	15.0	23.80	27.30	31.3	72.2 AGE_DON	117568.0	38.101618	16.595043	0.0	24.00	40.00	51.0	
-88.0 CREAT_TRR	117568.0	8.251785	3.508183	0.1	5.70	7.82	10.3	28.2 NPKID	117568.0	0.122083	0.
-361227	0.0	0.00	0.00	0.0	5.0 COLD_ISCH_KI	117568.0	18.016163	8.981343	0.0	11.87	17.00	23.0	9
-9.0
 \end_layout
 
 \begin_layout Plain Layout
@@ -8809,23 +8807,19 @@ end{table}
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 Survival Data
 \end_layout
 
 \begin_layout Standard
-In this subsection we are going to explore the 
+In this subsection, we will explore the y-axis that will be used for the
+ survival estimator training.
+ As mentioned earlier, the 
 \emph on
 y
 \emph default
- axis that is going to be used for the training of the survival estimators.
- As was mentioned earlier, the 
-\emph on
-y
-\emph default
- value consists of boolean censoring status (PSTATUS), and time (PTIME),
- which is a numerical value representing the survival time or the time at
- which it was censored.
+ value consists of boolean censoring status (PSTATUS) and time (PTIME),
+ a numerical value representing the survival time or the time of censoring.
  The 
 \emph on
 y
@@ -8835,63 +8829,6 @@ y
 survival data
 \emph default
 .
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-To best visualize the time-to-event variable we are going to use a box plot.
- A box plot is a simple, yet powerful statistical graph based on quartiles,
- that allows to quickly make sense of the data distribution.
- (odkaz na statistics for data scientists) It is based on three quartiles:
- the first(
-\begin_inset Formula $Q_{1}$
-\end_inset
-
-), the second(
-\begin_inset Formula $Q_{2}$
-\end_inset
-
-) and the third (
-\begin_inset Formula $Q_{3}).$
-\end_inset
-
- First quartile corresponds to 25 percentile and means that 25% of the datapoint
-s are below it.
- The second quartile corresponds to 50% percentile, or median, and it means
- that below and above that point lies an equal amount of data points.
- The third quartile corresponds to 75 percentile and it means that below
- it lies 75% of data points.
- The quartiles form the box: the first quartile forms the left edge(or bottom
- edge, in case of horizontal box plot), the third quartile forms the right
- edge (or top edge) of the box and the median is drawed inside of the box.
- The box itself represents interquartile range (IQR), that is calculated
- as 
-\begin_inset Formula $IQR=Q_{3}-Q_{1}$
-\end_inset
-
-.
- The lines that lie beyond the box are called 
-\emph on
-whiskers
-\emph default
- and indicate a range for 
-\begin_inset Quotes sld
-\end_inset
-
-a bulk of the data
-\begin_inset Quotes srd
-\end_inset
-
-.
- The whiskers extend to the furthest points outside of the box, except they
- cannot be longer than 1,5 times the IQR.
- The values lying outside of the whiskers are considered outliers.
- 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -8936,7 +8873,7 @@ name "box_surv_time"
 \end_layout
 
 \begin_layout Standard
-Look at the Figure 
+Please look at Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "box_surv_time"
@@ -8946,43 +8883,30 @@ noprefix "false"
 
 \end_inset
 
-, there you can see the box plot of patient survival time (PTIME column).
- The 
+, which shows the survival time box plot (PTIME column).
+ The first quantile (
 \begin_inset Formula $Q_{1}$
 \end_inset
 
-is equal to 867 days (2.4 years), the median is 2136 days (5.85 years) and
- the third quantile 
+) is equal to 867 days (2.4 years), the median is 2136 days (5.85 years),
+ and the third quantile (
 \begin_inset Formula $Q_{3}$
 \end_inset
 
-is equal to 3828 days (10.5 years).
- The interquartile range (IQR) is equal to 2961 days.
- This makes up the box.
- The left whisker extends from 0 day up to the first quartile of 867 days.
- The right whisker is much longer, and extends from the third quartile up
- to the 
+) is equal to 3828 days (10.5 years).
+ The interquartile range (
+\emph on
+IQR
+\emph default
+) is 2961 days, which forms the box.
+ The left whisker extends from 0 days to the first quartile of 867 days.
+ The right whisker is longer and extends from the third quartile to the
+ 
 \begin_inset Formula $Q_{3}+1.5*IQR$
 \end_inset
 
-, which in our case is equal to 8269,5 days.
- The values above 8269,5 can be considered outliers.
- As can be seen from the figure (almost straight black line, consisting
- of individual dots) there are a lot of them.There are less than 
-\series bold
-10 000
-\series default
- (
-\series bold
-get the actual value
-\series default
-) outliers, which is not that much compared to the 490 000 of total kidney
- transplantations.
- It is not the wisest choice to simply remove the outliers, as they still
- might have useful information to the model.
- However it has to be estimated experimentally.
- The handling of outliers will be described in the section dedicated to
- the dataset building.
+, which in our case is 8269,5 days.
+ Any value above 8269,5 can be considered an outlier.
 \end_layout
 
 \begin_layout Standard
@@ -8993,7 +8917,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Images/EDA/bar_PSTATUS.png
+	filename Images/EDA/pie_PSTATUS.png
 	scale 80
 
 \end_inset
@@ -9002,9 +8926,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Bar chart of PSTATUS colum that provides information on censoring.
- 0 corresponds to censored instance, 1 corresponds to event happening.
- There are 308823 censored instances, and 181349 times event happened.
+Pie chart of censored/non-censored values.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:bar_pstatus"
@@ -9039,23 +8961,20 @@ noprefix "false"
 
 \end_inset
 
-, where there is plotted the distribution of the PSTATUS column values.
- 0 corresponds to censored instances, 1 corresponds to event happening.
- As can be seen, the distribution is quite uneven, and there is much larger
- amount of censored instances than ones with the event happening, as there
- are 308 823 censored instances and only 181 349 non-censored ones.
- The percentage of censoring is 63%, which is quite high.
+, where you can see the pie chart of the distribution of the PSTATUS column
+ values.
+ As can be seen, the percentage of censoring is 63%, which is pretty high.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 Donor Type
 \end_layout
 
 \begin_layout Standard
-In this subsection we are going to explore the influence of donor type (living
- or diseased) on the survival.
- Recipients with kidneys from living donors live longer, this is a well
- established fact
+In this subsection, we will explore the influence of donor type (living
+ or diseased) on survival.
+ It is a well-established fact that recipients who receive kidneys from
+ living donors have higher life expectancy
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-29"
@@ -9072,20 +8991,11 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Add citation from some meta analysis
-\end_layout
-
-\end_inset
-
-
+ Let us confirm that on the data.
 \end_layout
 
 \begin_layout Standard
-Let's look at the Figure 
+Let us look at the Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_donor_types"
@@ -9096,18 +9006,10 @@ noprefix "false"
 \end_inset
 
 , where are plotted two Kaplan-Meier survival curves for all patients from
- the dataset, without taking into account other covatiates.
- On the graph we can see that the survival probability of living donor transplan
-t is indeed significantly higher than the survival probability of deceased.
-\end_layout
-
-\begin_layout Standard
-This is the case because often there is no time to make full HLA screening,
- that may allow for HLA mismatches.
- Additionally, deceased transplants may suffer from mild kidney damage due
- to the delay in transplantation.
- While living donor transplants are often performed between siblings that
- have similar HLA, that creates better compativility.
+ the dataset.
+ On the graph, we can see that the survival probability of the living donor
+ transplant is indeed significantly higher than the survival probability
+ of the deceased.
 \end_layout
 
 \begin_layout Standard
@@ -9142,6 +9044,51 @@ name "km_donor_types"
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is the case because often there is no time to make full, in-depth HLA
+ screening, allowing for some HLA mismatches.
+ Additionally, deceased transplants may suffer from mild kidney damage due
+ to the delay in transplantation.
+ Living donor transplants are most often performed between blood relatives
+ who share similar HLA, resulting in better compatibility.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/EDA/pie_don_ty.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pie Chart of Donor Type Destribution
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pie-Don-Ty"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Plain Layout
 
 \end_layout
@@ -9152,33 +9099,10 @@ name "km_donor_types"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add pie chart for donor types
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Gender
-\end_layout
-
-\begin_layout Standard
-In this subsection we are going to explore the gender distribution in our
- dataset, and its influence on survival.
-\end_layout
-
-\begin_layout Standard
-Let's explore the distribution of gender in our dataset.
- Take a look at the figure 
+Please, take a look at Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:bar_gender"
+reference "fig:Pie-Don-Ty"
 plural "false"
 caps "false"
 noprefix "false"
@@ -9186,10 +9110,83 @@ noprefix "false"
 \end_inset
 
 .
- There are 297279 men and 192882 women - the 35% difference.
- Despite the fact that the chronic kidney disease is more common in women,
- the end stage kidney failure and therefore kidney transplantation is more
- common in men
+ There you can see the distribution of donor types.
+ As can be seen, the deceased donor transplantation is much more prevalent.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/EDA/donor_ty_by_year.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Histogram-of-Deceased/Living"
+
+\end_inset
+
+Histogram of Deceased/Living Transplantations by Year
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Histogram-of-Deceased/Living"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ you can see the number of deceased/living transplantations by year.
+ Even though the number of living transplantations grows each year, deceased
+ transplantations still prevail.
+\end_layout
+
+\begin_layout Subsubsection*
+Gender
+\end_layout
+
+\begin_layout Standard
+In this subsection, we will explore the gender distribution in our dataset
+ and its influence on survival.
+ Let us explore the distribution of gender in our dataset.
+ Please look at Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pie_gender"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ As you can see, there are more males than females.
+ Even though chronic kidney disease is more common in women, end-stage kidney
+ failure and, therefore, kidney transplantation is more common in men
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -9198,27 +9195,17 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-make it pie
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Images/EDA/bar_gender.png
+	filename Images/EDA/pie_gender.png
 	scale 80
 
 \end_inset
@@ -9227,10 +9214,10 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Bar chart for gender 
+Pie chart for gender 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:bar_gender"
+name "fig:pie_gender"
 
 \end_inset
 
@@ -9252,8 +9239,8 @@ name "fig:bar_gender"
 \end_layout
 
 \begin_layout Standard
-Let's take a look at gender's influence on survival.
- In the Figure 
+Let us take a look at gender's influence on survival.
+ In Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_sex"
@@ -9263,10 +9250,10 @@ noprefix "false"
 
 \end_inset
 
- we can see the Kaplan-Meier survival curves for men and women on the whole
+, we can see the Kaplan-Meier survival curves for men and women on the whole
  dataset.
- As can be seen from the graph, females generally have less risk than their
- male counterparts.
+ As can be seen from the graph, females generally have a lower risk than
+ their male counterparts.
  Women usually live longer 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -9276,9 +9263,9 @@ literal "false"
 \end_inset
 
 .
- Quite signifficant factor is the difference between male and female immune
- responses - males ususally have greater risk to get an infection, than
- females, and the intesity of the infection is higher
+ Quite a significant factor is the difference between male and female immune
+ responses - males have a greater risk of getting an infection than females,
+ and the intensity of the infection is higher 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-15"
@@ -9287,7 +9274,7 @@ literal "false"
 \end_inset
 
 .
- Furthermore, the influence of immunosuppresants make the problem of infection
+ Furthermore, the influence of immunosuppressants makes the problem of infection
  even worse.
 \end_layout
 
@@ -9328,27 +9315,13 @@ name "km_sex"
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 The Use of Dialysis
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-OFC find paper, altough it literature it was referred to as common knowledge
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In this subsection we are going to explore the influence of dialysis on
- survival.
- In the figure 
+In this subsection, we will explore the influence of dialysis on survival.
+ In the Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_dialysis"
@@ -9358,13 +9331,11 @@ noprefix "false"
 
 \end_inset
 
- we can see two survival curves for the patients who were on dialysis, and
- for those who were not.
- The whole dataset was used.
- As can be seen in the Figure, the patients who were on dialysis before
- the transplantation have a greater risk, while those who were not.
- This agrees with .....
- 
+ we can see two survival curves for the patients who were on dialysis and
+ who were not.
+ As can be seen, the patients who were on dialysis before the transplantation
+ have a greater risk than those who were not.
+ It agrees with 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-33"
@@ -9373,21 +9344,6 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add some meta analysis or link to a textbook 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Why exactly this is the case, unfortunately, I was not able to find.
- The literatures just states it as fact.
 \end_layout
 
 \begin_layout Standard
@@ -9427,14 +9383,51 @@ name "km_dialysis"
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Maybe add some more discussion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Aufhauser, D.
+ D., Peng, A.
+ W., Murken, D.
+ R., Concors, S.
+ J., Abt, P.
+ L., Sawinski, D., Bloom, R.
+ D., Reese, P.
+ P., & Levine, M.
+ H.
+ (2018).
+ Impact of prolonged dialysis prior to renal transplantation.
+ Clinical Transplantation, 32(6).
+ https://doi.org/10.1111/ctr.13260
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
 Ethnicity
 \end_layout
 
 \begin_layout Standard
-In this subsection we are going to explore the survival curves for different
- ethnic groups.
- In the Figure 
+This subsection explores the survival curves of different ethnic groups.
+ In Figure 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-31"
@@ -9442,13 +9435,12 @@ literal "false"
 
 \end_inset
 
- are plotted 7 survival curves for different ethnicities.
- As can be seen on the image, 5 ethnicities share about the same survival
- probability during the cource of 8000 days, while two of them differ substantia
-lly from the other.
- White americans had higher survival probability than other ethnical groups,
+ are plotted seven survival curves for various ethnicities.
+ As can be seen in the image, five ethnicities share about the same survival
+ probability, while two groups differ substantially from each other.
+ White Americans had a higher survival probability than other ethnical groups,
  later converging to the others.
- This corresponds to (
+ It corresponds to (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-31"
@@ -9458,13 +9450,24 @@ literal "false"
 
 ) examining graft survival.
  
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+the distributions of ethnicity will be covered in the following sections
+ for each subset, as there are differences.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The least survival probability had multiracial group.
- Their number, however, was the lowest - only 1849 instances, so it is not
- enough to make any conclusions.They might be later removed, as the definition
- is too vague and there are not many instances.
+The lowest survival probability was in the multiracial group.
+ Their number, however, was also the lowest - only 1849 instances, so it
+ is not enough to make any conclusions.
+ This group might be removed as there are very little instances.
 \end_layout
 
 \begin_layout Standard
@@ -14838,6 +14841,40 @@ literal "false"
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-46"
+literal "false"
+
+\end_inset
+
+Aufhauser, D.
+ D., Peng, A.
+ W., Murken, D.
+ R., Concors, S.
+ J., Abt, P.
+ L., Sawinski, D., Bloom, R.
+ D., Reese, P.
+ P., & Levine, M.
+ H.
+ (2018).
+ Impact of prolonged dialysis prior to renal transplantation.
+ Clinical Transplantation, 32(6).
+ https://doi.org/10.1111/ctr.13260
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-47"
+literal "false"
+
+\end_inset
+
+‌
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-48"
 literal "false"
 
 \end_inset
