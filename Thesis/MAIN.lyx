@@ -10444,6 +10444,20 @@ Results
 status open
 
 \begin_layout Plain Layout
+some were trained on a cluster, some locally.
+ feature selection was performed locally, as it is faster.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 the algos in scikit survival do not handle large datasets well neither on
  unviversity cluster, nor locally.
  So that the division on living deceased makes more sense.
@@ -11518,6 +11532,11 @@ best parameters: max_depth=12, min_samples_split=16, max_features=None,
 living features:
 \end_layout
 
+\begin_layout Plain Layout
+n_estimators=50, n_jobs=-1, max_depth=12, min_samples_split=16, max_features=Non
+e, random_state=42 - 85 min on 1000 instances: 0.69
+\end_layout
+
 \end_inset
 
 
@@ -11923,7 +11942,7 @@ The fine-tuning was performed with a custom script, described in the previous
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -11977,7 +11996,7 @@ Mean AUC
 \begin_inset Text
 
 \begin_layout Plain Layout
-Random Survival Forest (standard hyperparams, living)
+Random Survival Forest (living)
 \end_layout
 
 \end_inset
@@ -11986,7 +12005,7 @@ Random Survival Forest (standard hyperparams, living)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.708
+0.723
 \end_layout
 
 \end_inset
@@ -11995,7 +12014,7 @@ Random Survival Forest (standard hyperparams, living)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.160
+0.139
 \end_layout
 
 \end_inset
@@ -12015,7 +12034,7 @@ Random Survival Forest (standard hyperparams, living)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Random Survival Forest (the best hyperparams, living)
+Random Survival Forest (deceased)
 \end_layout
 
 \end_inset
@@ -12024,7 +12043,7 @@ Random Survival Forest (the best hyperparams, living)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.723
+0.69
 \end_layout
 
 \end_inset
@@ -12033,7 +12052,7 @@ Random Survival Forest (the best hyperparams, living)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.129
+
 \end_layout
 
 \end_inset
@@ -12042,7 +12061,7 @@ Random Survival Forest (the best hyperparams, living)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.743
+
 \end_layout
 
 \end_inset
@@ -12094,7 +12113,7 @@ Kaplan-Meier (for IBS reference)
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-RSF before and after fine tuning.
+RSF.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:RSF-finetuning"
@@ -12499,6 +12518,201 @@ Gradient Boosting Survival Analysis
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Uno c-index
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IBS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mean AUC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Survival Gradient Boosting (living)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.722
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.135
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.743
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Survival Gradient Boosting (deceased)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.689
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.164
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.722
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kaplan-Meier (for IBS reference)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.247
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SGBA.
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:SGBA-res"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -12528,6 +12742,10 @@ slow but predictable, in contrast to RSF.
 \end_layout
 
 \begin_layout Plain Layout
+possible to train locally, as does not require that much resources.
+\end_layout
+
+\begin_layout Plain Layout
 What we have done here is used a large number of estimators and regularized
  the model with small learning rate to avoid overfitting.
  The early stopping strategy was also employed (it looks at average change
@@ -12540,7 +12758,15 @@ What we have done here is used a large number of estimators and regularized
 \end_layout
 
 \begin_layout Plain Layout
-lr =0.2 max_depth = 4 : 0.72
+lr =0.2 max_depth = 4 : 0.72 - the best result
+\end_layout
+
+\begin_layout Plain Layout
+lr=1 max_depth=1: 0.711
+\end_layout
+
+\begin_layout Plain Layout
+learning_rate=0.15, subsample=0.5, max_depth=2, 0.712 fitted learners 237
 \end_layout
 
 \begin_layout Plain Layout
@@ -12550,8 +12776,22 @@ living features: It is rather minimalistic in its feature importance, as
 only
 \emph default
  5 features (ON_DIALYSIS, DIAB, AGE, HGT_CM_CALC and DIALYSIS_TIME).
- All other features (from RSF, as we thought that the feature importance
+ All other features (taken from RSF, as we thought that the feature importance
  will be the same) had zero feature importance.
+\end_layout
+
+\begin_layout Plain Layout
+number of columns has little to no influence on training time, while the
+ number of instances influences the training time substantially
+\end_layout
+
+\begin_layout Plain Layout
+Fitted base learners: 85 Performance on test set 0.687
+\end_layout
+
+\begin_layout Plain Layout
+(preprocessing with scikit-learn's transformers gives slower training (maybe)
+ and maybe poorer results)
 \end_layout
 
 \end_inset
