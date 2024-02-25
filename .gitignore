@@ -20,3 +20,4 @@ Application/.dev.env
 Application/.prod.env
 Application/.env
 Application/deploy-config.sh
+Code/TrainedModels/
