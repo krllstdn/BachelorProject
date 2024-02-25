@@ -10248,21 +10248,6 @@ Machine Learning Model
 status open
 
 \begin_layout Plain Layout
-Combine this chapter with the data load and processing.
- As it makes more sense to include all practical things from data science
- into one chapter.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 In this chapter I will:
 \end_layout
 
@@ -10404,16 +10389,25 @@ Model selection
 \begin_layout Standard
 The algorithms provided by the scikit-survival do not handle large datasets
  very well (never ending training process and worse results probably due
- to the noise) that is why I chose to train different models for different
+ to the noise) that is why we chose to train different models for different
  demographics, as one specific model for one specific demographic will perform
  better that one model trained for all demographics.
- In addition, the living donor transplantation differs a bit from the diseased
- transplantation, that might introduce some noice into the model.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+not so definitive
+\end_layout
+
+\end_inset
+
+ In addition, the living donor transplantation a bit differs from the diseased
+ donor transplantation, that might introduce some noice into the model.
 \end_layout
 
 \begin_layout Standard
-The way I approach the model selection model automation with the class SurvivalE
-stimators defined in 
+The way we approach the model selection model automation with the class
+ SurvivalEstimators defined in 
 \begin_inset CommandInset href
 LatexCommand href
 name "estimator_automation.py"
@@ -10423,11 +10417,22 @@ literal "false"
 \end_inset
 
 .
+ We ran the following class and short listed the most promising models.
+ In this case it is survival gradient boosting and random survival forests.
 \end_layout
 
 \begin_layout Standard
-Run the following class and short list the most promising models.
- In this case it is survival gradient boosting and random survival forests.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+svm is good for small datasets, but in our case the training takes too long
+ so we will not spend time trying to optimize it
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -10439,11 +10444,9 @@ Results
 status open
 
 \begin_layout Plain Layout
-it is not correct to compare deceased model performance with the living
- model performance.
- better to compare living models with living models and deceased models
- with deceased.
- 
+the algos in scikit survival do not handle large datasets well neither on
+ unviversity cluster, nor locally.
+ So that the division on living deceased makes more sense.
 \end_layout
 
 \end_inset
@@ -10453,22 +10456,14 @@ it is not correct to compare deceased model performance with the living
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-Goals of this section:
-\end_layout
-
-\begin_layout Plain Layout
-- explore Coxnet and RSF for living and deceased subsets
-\end_layout
-
-\begin_layout Plain Layout
-- evaluate them: AUC, brier and Uno's c_index
-\end_layout
-
-\begin_layout Plain Layout
-- compare them
+it is not correct to compare deceased model performance with the living
+ model performance.
+ better to compare living models with living models and deceased models
+ with deceased.
+ 
 \end_layout
 
 \end_inset
@@ -10492,6 +10487,21 @@ In this section we are going to discuss two models, Coxnet and Random Survival
 \begin_layout Standard
 \begin_inset Note Note
 status open
+
+\begin_layout Plain Layout
+give here the table with the results of different models and then tell that
+ we are going to discuss the models in detail in the corresponding subsection.
+ one table for deceased, one for living.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Plain Layout
 Explain why do I use three performance measures.
@@ -10529,7 +10539,7 @@ Coxnet, or an elastic net, is a linear model, so it is fast even with large
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -11464,6 +11474,53 @@ name "tab:Coxnet-Feature-Importance"
 
 \begin_layout Subsection
 Random Survival Forest
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+work with RSF is frustrating.
+ time-consuming.
+ too long training time
+\end_layout
+
+\begin_layout Plain Layout
+RSF is able to learn to generalize pretty well on small amount of data (living:
+ trained on 1000 samples during the fine-tuning and tested on the whole
+ test set (during grid-search it was assessed only on a smal fraction of
+ test set) result 0.723 on living) on 50 estimators there is no real reason
+ to train a model on the whole ds - the result is virtually the same IBS:
+ 0.1390655175499429(1000instances) vs.
+ 0.13900993221935395 (full ds), with c_index the situation is the same.
+ 1000 instances training time 5 minutes vs 66 minutes on full ds (61545)
+ 
+\end_layout
+
+\begin_layout Plain Layout
+upping estimators to 80 did not give any performance improvements, but the
+ training time almost doubled to 101 minutes.
+\end_layout
+
+\begin_layout Plain Layout
+too memory hungry - not the best solution for deployment
+\end_layout
+
+\begin_layout Plain Layout
+best parameters: max_depth=12, min_samples_split=16, max_features=None,
+ n_estimators - the more, the better, but we weren't able to train more
+ than 50(change to actual number) due to the limitations in available memory.
+ the following values were checked for each parameter: (add table)
+\end_layout
+
+\begin_layout Plain Layout
+living features:
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -12430,6 +12487,71 @@ name "tab:Feature-Importance-for-RSF"
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Gradient Boosting Survival Analysis
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+0.718 c-index
+\end_layout
+
+\begin_layout Plain Layout
+0.136 -IBS
+\end_layout
+
+\begin_layout Plain Layout
+396 minute training
+\end_layout
+
+\begin_layout Plain Layout
+n_estimators=1000, learning_rate=0.05, subsample=0.5, max_depth=1,
+\end_layout
+
+\begin_layout Plain Layout
+slow but predictable, in contrast to RSF.
+ GB algorithms are known to be slow, so this is expected.
+ Plus it shows the estimated amount of time it will take to train the specified
+ number of estimators and we can watch the model training in real time:
+ it shows train loss, out-of-bag improve and the remaining time.
+ first for each estimator, then for each 10, then for each 100.
+\end_layout
+
+\begin_layout Plain Layout
+What we have done here is used a large number of estimators and regularized
+ the model with small learning rate to avoid overfitting.
+ The early stopping strategy was also employed (it looks at average change
+ for the last 25 iterations and should've stopped when last 50 iterations
+ gave negative result), but it never came to it, as the model never was
+ too long in negative improvements.
+ This approach is common and the code was taken from the scikit-survival
+ documentation (give a link).
+ All that in living.ipynb
+\end_layout
+
+\begin_layout Plain Layout
+lr =0.2 max_depth = 4 : 0.72
+\end_layout
+
+\begin_layout Plain Layout
+living features: It is rather minimalistic in its feature importance, as
+ it requires 
+\emph on
+only
+\emph default
+ 5 features (ON_DIALYSIS, DIAB, AGE, HGT_CM_CALC and DIALYSIS_TIME).
+ All other features (from RSF, as we thought that the feature importance
+ will be the same) had zero feature importance.
 \end_layout
 
 \end_inset
