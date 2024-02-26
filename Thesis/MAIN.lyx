@@ -10387,6 +10387,23 @@ Model selection
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+# Ideas
+\end_layout
+
+\begin_layout Plain Layout
+- train coxnet on the whole dataset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 The algorithms provided by the scikit-survival do not handle large datasets
  very well (never ending training process and worse results probably due
  to the noise) that is why we chose to train different models for different
@@ -10440,90 +10457,88 @@ Results
 \end_layout
 
 \begin_layout Standard
+Three models from scikit-survival were chosen: CoxnetSurvivalAnalysis(CoxElastic
+Net, later referred to as coxnet), RandomSurvivalForest (RSF) and GradientBooste
+dSurvivalAnalysis (GBSA).
+ Two of them were trained locally
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-some were trained on a cluster, some locally.
- feature selection mostly was performed locally, as it is faster.
+(+feature selection)
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
+ (Coxnet and GBSA) and one (RSF) was trained on a cluster
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-the algos in scikit survival do not handle large datasets well neither on
- unviversity cluster, nor locally.
- So that the division on living deceased makes more sense.
+(+feature selection)
 \end_layout
 
 \end_inset
 
-
+.
+ Our personal favourite is coxnet, as it only takes anywhere from 30 seconds
+ to 3 minutes to train it and the performance is on par with models that
+ take a couple of hours to train.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
+The dataset was divided in two subsets: with living and deceased donors.
+ These algorithms did not handle large dataset well with complex models
+ (RSF and SGBA) neither on university cluster, nor locally.
+ Jupyter Notebook kernel crashes due insufficient memory during training
+ (we had 384GB RAM!) and prolonged training time were a common thing.
+ Moreover, some features are available only for one subset (KDPI for deceased
+ and LIV_DON_TY for living).
+ Sizes of the resulting datasets are as follows: 53,082 instances in living
+ (42,465 in training), and 117,536 instances in deceased (94,028 training).
+\end_layout
 
-\begin_layout Plain Layout
-it is not correct to compare deceased model performance with the living
- model performance.
- better to compare living models with living models and deceased models
- with deceased.
+\begin_layout Standard
+Unfortunately, the older version of scikit-survival was used on the cluster
+ - 0.14.0, due to the limitation in python version on cluster where these
+ models were trained (3..6.8).
+ Locally was used latest at the time 0.22.1.
+\end_layout
+
+\begin_layout Standard
+On the Tables 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:living-comparison"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:deceased-comparison"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ you can see the performance of trained models for living and deceased datasets.
+ As can be seen, they have more or less the same performance for the same
+ dataset, meaning that models were trained well and they capture data well.
+ The only potential way, therefore, to improve the performance is to expand
+ the dataset with further feature engineering.
+ More detail on the training of each model you can find in the corresponding
+ section further.
  
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
-In this section we are going to discuss two models, Coxnet and Random Survival
- Forest.
- These models were chosen because they both are able to generate survival
- functions in the scikit-survival library, unlike others that only estimate
- the risk score.
- Unfortunately, the older version of scikit-survival was used - 0.14.0, due
- to the limitation in python version on cluster where these models were
- trained.
- The survival function will later be used in the application KidneyLife
- to visually illustrate the probability of survival in each moment in time.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-give here the table with the results of different models and then tell that
- we are going to discuss the models in detail in the corresponding subsection.
- one table for deceased, one for living.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Explain why do I use three performance measures.
-\end_layout
-
-\end_inset
-
-
+Another appartent thing is that the deceased models perform slightly worse
+ than living ones.
 \end_layout
 
 \begin_layout Standard
@@ -10992,8 +11007,214 @@ name "tab:deceased-comparison"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+models have more or less the same performance, which means that they all
+ were trained well and the only limitation is the data used.
+ So probably some advanced feature engineering might improve the results
+ further.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/AUC_living.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+AUC living
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:AUC-living"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/BS_living.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BS living
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BS-living"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/AUC_deceased.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+AUC deceased
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:AUC-deceased"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/BS_deceased.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BS deceased
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Coxnet
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+- the process of training
+\end_layout
+
+\begin_layout Plain Layout
+- it was trained locally
+\end_layout
+
+\begin_layout Plain Layout
+- hyperparameters
+\end_layout
+
+\begin_layout Plain Layout
+- feature importance and selection: the importance of over 60 features was
+ examined, only a fraction of them had any importance.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -11011,15 +11232,15 @@ mention that the timeframe is not random - 10th to 90th percentile
 
 \begin_layout Standard
 Coxnet, or an elastic net, is a linear model, so it is fast even with large
- datasets, a bit worse results, compared to the Random survival forest.
- It makes prediction both in a form of the risk score or a survival function.
+ datasets, It makes prediction both in a form of the risk score or a survival
+ function.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -11082,7 +11303,7 @@ Living
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.723
 \end_layout
 
 \end_inset
@@ -11091,7 +11312,7 @@ Living
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.136
 \end_layout
 
 \end_inset
@@ -11100,7 +11321,7 @@ Living
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.743
 \end_layout
 
 \end_inset
@@ -11120,7 +11341,7 @@ Deceased
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.695
 \end_layout
 
 \end_inset
@@ -11129,7 +11350,7 @@ Deceased
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.163
 \end_layout
 
 \end_inset
@@ -11138,7 +11359,7 @@ Deceased
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.729
 \end_layout
 
 \end_inset
@@ -11226,69 +11447,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/coxnet_auc.png
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-AUC curve for coxnet 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:AUC_coxnet"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Discussion of the AUC figure
-\series default
-: 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- living model is a bit more precise, although in some timeframes it performs
- a bit worse
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 As was covered in 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -11323,268 +11481,6 @@ add link
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/coxnet_brier.png
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Time-dependent Brier score for the Coxnet
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Brier-coxnet"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Discussion of the Brier Figure:
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-- coxnet is much more precise with the living as the lower the area , the
- better
-\end_layout
-
-\begin_layout Plain Layout
-- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Model
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Uno c-index
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-IBS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Mean AUC
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Coxnet (standard hyperparams, living)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.668
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Coxnet (the best hyperparams, living)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.705
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.135
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.704
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Kaplan-Meier (for IBS reference)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.247
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Cox before and after fine tuning.
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:cox-finetuning"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -12021,385 +11917,12 @@ Random survival forest is a powerful ensemble machine learning algorithm,
 RSF subsection
 \series default
 ).
- The living and deceased subsets had 34951 and 
-\series bold
-70 000 
-\series default
-instances respectively.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Dataset
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Uno c-index
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-IBS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Mean AUC
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Living
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.727
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.129
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.743
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Deceased
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.678
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Kaplan-Meier (for IBS reference)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.247
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Random Survival Forest performance on the test set
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:RSF_performance"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-As can be seen from the table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:RSF_performance"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, the survival forest performed the best for the living group, the worst
- for the deceased, and somewhere in between for the both living and deceased,
- just as it was in case with the Coxnet.
  
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/rsf_auc.png
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-AUC for RSF
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Add a deceased curve
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:AUC_RSF"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-discussion of AUC image
-\series default
-: 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-a bit volatile, but generally increases over time -> model's discriminative
- ability increases over time, but does not tell much about model's performance
-\end_layout
-
-\begin_layout Plain Layout
-interestingly, it starts to grow faster after the 75th percentile (3800
- days)
-\end_layout
-
-\begin_layout Plain Layout
-- the probability that the test will correctly classify a randomly chosen
- positive instance (an event has occurred) as more likely than a randomly
- chosen negative one (an event has not occurred).
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/brier_rsf.png
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Time-dependent Brier score for the Random Survival Forest
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Add a deceased curve
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Brier_rsf"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-discussion of the Brier imag
-\series default
-e: On the Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Brier_rsf"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- is plotted the time dependent Brier score for the Random Survival Forest.
- As we can see, it increases over time, meaning that predictions get worse
- over time.
- This totally makes sense, as the more time passes after the transplant,
- the less pretransplant information, that was used for training, has influence
- on the survival.
-\end_layout
-
-\begin_layout Standard
-The fine-tuning was performed with a custom script, described in the previous
- subsection dedicated to the coxnet.
+The fine-tuning was performed with a custom script, similar to the one described
+ in the previous subsection dedicated to the coxnet.
  The hyperparameters that were fine-tuned are the following: n_estimators,
  max_depth, min_sample_split and max_features.
 \end_layout
@@ -12610,38 +12133,7 @@ noprefix "false"
 
 \end_inset
 
- we can see the performance of regular RSF with the standard hyperparameters
- compared to the performance of RSF with fine-tuned hyperparams.
- 
-\end_layout
-
-\begin_layout Standard
-Feature importance can be seen on the table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Feature-Importance-for-RSF"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Write some discussion.
-\end_layout
-
-\begin_layout Plain Layout
-- plot feature importance as a graph
-\end_layout
-
-\end_inset
-
-
+ we can see the performance of RSF
 \end_layout
 
 \begin_layout Standard
@@ -13258,407 +12750,6 @@ Fitted base learners: 85 Performance on test set 0.687
 \begin_layout Plain Layout
 (preprocessing with scikit-learn's transformers gives slower training (maybe)
  and maybe poorer results)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Comparison
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Model
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Uno c-index
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-IBS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Mean AUC
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Random Survival Forest (living)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.723
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.129
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.742
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Coxnet (living)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.705
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.135
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.704
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Random Survival Forest (deceased)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Coxnet (deceased)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.681
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.165
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.714
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Model comparison on the test set
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Coxnet_vs_RSF"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-*image with the two BS and AUC graphs for each model*
-\end_layout
-
-\begin_layout Standard
-As can be seen on the table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Coxnet_vs_RSF"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and on the image ..., the Random survival forest performed better than the
- elastic net.
- However, there are some differences in timeframes, where at certain points
- in time the coxnet performed better than the RSF.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-plot the survival functions of multiple predictions and draw a red line
- of actual survival.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-AUC RSF vs.
- Coxnet:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/auc_rsf_vs_coxnet.png
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-AUC: Coxnet vs.
- RSF, Living 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Add a deceased curve
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-the trends are the same, but hte rsf is higher
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Brier Coxnet vs.
- RSF
-\series default
-: 11
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/brier_rsf_vs_coxnet.png
-	scale 60
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Brier: Coxnet vs.
- RSF, Living
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-- the flatter, the better
-\end_layout
-
-\begin_layout Plain Layout
-- the lower, the better
 \end_layout
 
 \end_inset
