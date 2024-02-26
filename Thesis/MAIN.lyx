@@ -10445,7 +10445,7 @@ status open
 
 \begin_layout Plain Layout
 some were trained on a cluster, some locally.
- feature selection was performed locally, as it is faster.
+ feature selection mostly was performed locally, as it is faster.
 \end_layout
 
 \end_inset
@@ -10526,6 +10526,472 @@ Explain why do I use three performance measures.
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dataset
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Uno c-index
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IBS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mean AUC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Coxnet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.723
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.136
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.743
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gradient Boosting
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.722
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.136
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.742
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Random Survival Forest
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.723
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.139
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.744
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kaplan-Meier (for IBS reference)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.247
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Model comparison for living dataset
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:living-comparison"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dataset
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Uno c-index
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IBS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mean AUC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Coxnet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.695
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.163
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.729
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gradient Boosting
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.699
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.162
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.734
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Random Survival Forest
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.691
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.164
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.724
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kaplan-Meier (for IBS reference)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.247
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Model comparison for deceased dataset
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:deceased-comparison"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Coxnet
 \end_layout
@@ -10553,7 +11019,7 @@ Coxnet, or an elastic net, is a linear model, so it is fast even with large
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -10616,7 +11082,7 @@ Living
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.705
+
 \end_layout
 
 \end_inset
@@ -10625,7 +11091,7 @@ Living
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.135
+
 \end_layout
 
 \end_inset
@@ -10634,7 +11100,7 @@ Living
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.704
+
 \end_layout
 
 \end_inset
@@ -10654,7 +11120,7 @@ Deceased
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.681
+
 \end_layout
 
 \end_inset
@@ -10663,7 +11129,7 @@ Deceased
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.165
+
 \end_layout
 
 \end_inset
@@ -10672,7 +11138,7 @@ Deceased
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.714
+
 \end_layout
 
 \end_inset
@@ -11958,7 +12424,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Model
+Dataset
 \end_layout
 
 \end_inset
@@ -11996,7 +12462,7 @@ Mean AUC
 \begin_inset Text
 
 \begin_layout Plain Layout
-Random Survival Forest (living)
+Living
 \end_layout
 
 \end_inset
@@ -12023,7 +12489,7 @@ Random Survival Forest (living)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.744
 \end_layout
 
 \end_inset
@@ -12034,7 +12500,7 @@ Random Survival Forest (living)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Random Survival Forest (deceased)
+Deceased
 \end_layout
 
 \end_inset
@@ -12043,7 +12509,7 @@ Random Survival Forest (deceased)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.69
+0.691
 \end_layout
 
 \end_inset
@@ -12052,7 +12518,7 @@ Random Survival Forest (deceased)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.164
 \end_layout
 
 \end_inset
@@ -12061,7 +12527,7 @@ Random Survival Forest (deceased)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.724
 \end_layout
 
 \end_inset
@@ -12116,7 +12582,7 @@ Kaplan-Meier (for IBS reference)
 RSF.
 \begin_inset CommandInset label
 LatexCommand label
-name "tab:RSF-finetuning"
+name "tab:RSF-result"
 
 \end_inset
 
@@ -12137,7 +12603,7 @@ name "tab:RSF-finetuning"
 On the table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:RSF-finetuning"
+reference "tab:RSF-result"
 plural "false"
 caps "false"
 noprefix "false"
@@ -12537,7 +13003,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Model
+Dataset
 \end_layout
 
 \end_inset
@@ -12575,7 +13041,7 @@ Mean AUC
 \begin_inset Text
 
 \begin_layout Plain Layout
-Survival Gradient Boosting (living)
+Living
 \end_layout
 
 \end_inset
@@ -12613,7 +13079,7 @@ Survival Gradient Boosting (living)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Survival Gradient Boosting (deceased)
+Deceased
 \end_layout
 
 \end_inset
@@ -12622,7 +13088,7 @@ Survival Gradient Boosting (deceased)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.689
+0.699
 \end_layout
 
 \end_inset
@@ -12631,7 +13097,7 @@ Survival Gradient Boosting (deceased)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.164
+0.162
 \end_layout
 
 \end_inset
@@ -12640,7 +13106,7 @@ Survival Gradient Boosting (deceased)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.722
+0.734
 \end_layout
 
 \end_inset
@@ -12695,7 +13161,7 @@ Kaplan-Meier (for IBS reference)
 SGBA.
 \begin_inset CommandInset label
 LatexCommand label
-name "tab:SGBA-res"
+name "tab:SGBA-result"
 
 \end_inset
 
