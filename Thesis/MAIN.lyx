@@ -10506,6 +10506,11 @@ Unfortunately, the older version of scikit-survival was used on the cluster
 \end_layout
 
 \begin_layout Standard
+As numerical performance measures, Uno concordance index (c-index), integrated
+ Brier Score (IBS), and mean cumularive/dynamic area under curve (AUC).
+\end_layout
+
+\begin_layout Standard
 On the Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -11008,19 +11013,7 @@ name "tab:deceased-comparison"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-models have more or less the same performance, which means that they all
- were trained well and the only limitation is the data used.
- So probably some advanced feature engineering might improve the results
- further.
-\end_layout
-
-\end_inset
-
-
+kjl
 \end_layout
 
 \begin_layout Standard
@@ -11055,6 +11048,27 @@ name "fig:AUC-living"
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+despite the fact that the mean aucs are almost identical, the acuracy over
+ time varies.
+ From day 1000 to 2800 RSF performs better, then from day 2900 to day 4000
+ coxnet and GBSA overperform RSF.
+ From day 4000 to 5000 all models perform similarly, except for small rise
+ of coxnet and gbsa, which later converge back with RSF.
+ Day 5000 to 6000 RSF outperforms the two models again.
+ RSF outperforms coxnet and GBSA on 3/5 of the timeline, underperforms on
+ 1/5 and is mostly similar on 1/5.
 \end_layout
 
 \end_inset
@@ -11107,14 +11121,27 @@ name "fig:BS-living"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+coxnet and GBSA here are identical, we had to adjust settings for the other
+ to be seen.
+ RSF curve is slightly higher than the two, meaning that overall prediction
+ is slightly worse, despite mostly superior descrimination on the previous
+ graph.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -11141,8 +11168,20 @@ name "fig:AUC-deceased"
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+On this plot we can see that GBSA shows superior descriminative ability
+ to RSF and coxnet.
+ Coxnet is in the middle and RSF shows the worst performance.
+ While all rise over time.
 \end_layout
 
 \end_inset
@@ -11157,16 +11196,15 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/BS_deceased.png
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -11178,8 +11216,43 @@ BS deceased
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Just as with living the performance of coxnet and GBSA is identical, but
+ RSF is slightly worse, although by a small margin.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Conclusion: For living: RSF shows slightly superior discrimination (AUC)
+ in living, but the overall prediction accuracy (BS) is inferior to coxnet
+ and GBSA.
+ For deceased, GBSA shows superior discrimination to coxnet and RSF, but
+ the prediction accuracy is the same for GBSA and coxnet and worse for RSF.
+ Overall, we would choose coxnet for both living and deceased due to the
+ low training time, but if the training time was not a concern we would
+ choose GBSA for deceased.
+\end_layout
+
+\begin_layout Plain Layout
+However deceased RSF might be slightly undertrained.
 \end_layout
 
 \end_inset
