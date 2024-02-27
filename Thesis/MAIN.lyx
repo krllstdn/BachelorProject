@@ -10461,6 +10461,19 @@ Results
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We trained and fine tuned 6 models.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Three models from scikit-survival were chosen: CoxnetSurvivalAnalysis(CoxElastic
 Net, later referred to as coxnet), RandomSurvivalForest (RSF) and GradientBooste
 dSurvivalAnalysis (GBSA).
@@ -11017,7 +11030,7 @@ name "tab:deceased-comparison"
 \end_layout
 
 \begin_layout Standard
-kjl
+For deceased, the winner is GBSA: it slightly outperforms other models
 \end_layout
 
 \begin_layout Standard
@@ -11279,6 +11292,55 @@ status open
 \begin_layout Plain Layout
 the way of scaling (pipeline or standrd sksurv function) is not important
  in terms of performance
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Overview
+\series default
++experience:
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Finetuning
+\series default
+:
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+training
+\series default
+:
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+feature selection
+\series default
+:
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+feature importance
+\series default
+:
 \end_layout
 
 \end_inset
@@ -11811,6 +11873,55 @@ e, random_state=42 - 85 min on 1000 instances: 0.69
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Overview
+\series default
++experience:
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Finetuning
+\series default
+:
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+training
+\series default
+:
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+feature selection
+\series default
+:
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+feature importance
+\series default
+:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Random survival forest is a powerful ensemble machine learning algorithm,
  that is comprised of multiple submodels, and therefore it takes a lot of
  time to train, making it a bit difficult to work with, especially during
@@ -11839,6 +11950,17 @@ ation from the training dataset for that and RSF fitted them pretty well.
  0.139001 (full ds)).
  1000 instances training time 5 minutes vs 66 minutes on full ds (61545)
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+that is not correct.
+ even for 1000 instances it takes a long time to train (check how much)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -12049,11 +12171,13 @@ noprefix "false"
 
  we can see the performance of RSF.
  Similarly to Coxnet it performs worse in deceased than for living.
+ The performance itself is very similar to coxnet and GBSA.
 \end_layout
 
 \begin_layout Standard
-The fine-tuning was performed with a custom script, similar to the one described
- in the previous subsection dedicated to the coxnet.
+The fine-tuning was performed with a custom script designed to imitate GridSearc
+hCV but without cross-validation, similar to the one described in the previous
+ subsection dedicated to the coxnet.
  The hyperparameters that were fine-tuned, values tried, and values chosen
  in the end can be seen on Table 
 \begin_inset CommandInset ref
@@ -12362,8 +12486,8 @@ FeatureSelection/rsf_living.ipynb
 deceased.ipynb
 \emph default
 ).
- For the living, the most important ones are as before recipient age, diabetes
- status, dialysis status and dialysis time, etc.
+ For the living, the most important ones are, as before, recipient age,
+ diabetes status, dialysis status and dialysis time, etc.
  For the deceased, situation is similar, but the recipient serum creatinine
  before transplant is a bit higher in the rating.
 \end_layout
@@ -12384,9 +12508,9 @@ change to real
  Upping the estimators is a potential avenue to improvement, but one would
  need to be careful not to overfit the model.
  And that would take a lot of time: 200 estimators would require 4 hours
- of training and we might just overfit the model, which can be avoided with
- regularization, but we highly doubt that we would surpass the performance
- of coxnet survival.
+ of training and we might just overfit the model, or run out of RAM.
+ Overfitting can be avoided with regularization, but we highly doubt that
+ we would surpass the performance of coxnet survival.
 \begin_inset Note Note
 status open
 
@@ -12402,6 +12526,103 @@ better check that, not just complain.
 
 \begin_layout Subsection
 Gradient Boosting Survival Analysis
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+0.718 c-index
+\end_layout
+
+\begin_layout Plain Layout
+0.136 -IBS
+\end_layout
+
+\begin_layout Plain Layout
+396 minute training
+\end_layout
+
+\begin_layout Plain Layout
+n_estimators=1000, learning_rate=0.05, subsample=0.5, max_depth=1,
+\end_layout
+
+\begin_layout Plain Layout
+—–
+\end_layout
+
+\begin_layout Plain Layout
+lr =0.2 max_depth = 4 : 0.72 - the best result
+\end_layout
+
+\begin_layout Plain Layout
+lr=1 max_depth=1: 0.711
+\end_layout
+
+\begin_layout Plain Layout
+learning_rate=0.15, subsample=0.5, max_depth=2, 0.712 fitted learners 237
+\end_layout
+
+\begin_layout Plain Layout
+Fitted base learners: 85 Performance on test set 0.687
+\end_layout
+
+\begin_layout Plain Layout
+(preprocessing with scikit-learn's transformers gives slower training (maybe)
+ and maybe poorer results)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Overview
+\series default
++experience: CoxnetSurvivalAnalysis is a gradient-boosted Cox proportional
+ hazard loss with regression trees as base learner.
+ It is a relatively slow algorithm as it can only run on one CPU core and
+ trains only one estimator at a time.
+ So the training time might be quite large, as we cannot take advantage
+ of cluster computing power.
+ However that can be an advantage, as we can train the model on PC locally.
+ Another advantage is that the training time is predictable and the algorithm
+ tells us during training how much time is left.
+ Which is not perfectly precise, but it gives a good approximation.
+\end_layout
+
+\begin_layout Standard
+Two other bits of information that the algorithm shares during training
+ are loss and out-of-bag improvement (prediction accuracy improvement).
+ The information is logged for the first ten estimators for each estimator,
+ then for each decade, then for each hundred.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Describe table
+\series default
+: On Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:SGBA-result"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we can see the performance of two GBSA models for living and deceased
+ subsets.
+ As with two previous models, living model shows better performance than
+ the deceased.
+ For the deceased it also happens to be the best of them all with c_index
+ 0.699 and IBS 0.162.
 \end_layout
 
 \begin_layout Standard
@@ -12579,7 +12800,7 @@ Kaplan-Meier (for IBS reference)
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-SGBA.
+SGBA results.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:SGBA-result"
@@ -12600,85 +12821,361 @@ name "tab:SGBA-result"
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+Finetuning
+\series default
+: We used three main hyperparameters: number of estimators, learning rate
+ and max_depth.
+ Max depth we estimated with grid search, and it is 
+\emph on
+6, 
+\emph default
+but experimentally 4 produced better results.
+ Learning rate we selected experimentally: and 
+\emph on
+0.2
+\emph default
+ produced the best results.
+ (with lower values (0.05, 0.1, 0.15) the model was undertrained) Number of
+ estimators was estimated with early stopping monitor.
+ It is a common approach for GB algorithms, and the code was borrowed from
+ the scikit-survival documentation 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-0.718 c-index
+(give a link)
+\end_layout
+
+\end_inset
+
+ (it looks at the average improvement of the last 25 iterations and if it
+ was negative for the last 50, it aborts training)(the monitor was borrowed
+ from scikit-survival's documentation), and it is 110 for deceased (trained
+ 160) and 94 for living (trained 144).
+ On Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Living-GBSA-training"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Deceased-GBSA-training"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ you can see the plot of improvement per learner.
+ Red dashed line is a cutoff, after which the performance starts to decline.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+training
+\series default
+: Models were trained locally.
+ The training took 44 minutes for living and 60 for deceased.
+ With lower learning rate it was much longer (396 minutes for living on
+ 0.05 learning rate).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/gbsa_early_stopping_living.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Living GBSA training process with early stopping
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Living-GBSA-training"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+don't forget to remake the image
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-0.136 -IBS
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/gbsa_early_stopping_deceased.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-396 minute training
+
+\series bold
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Deceased GBSA training process with early stopping
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Deceased-GBSA-training"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+don't forget to remake the image
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-n_estimators=1000, learning_rate=0.05, subsample=0.5, max_depth=1,
+
 \end_layout
 
-\begin_layout Plain Layout
-slow but predictable, in contrast to RSF.
- GB algorithms are known to be slow, so this is expected.
- Plus it shows the estimated amount of time it will take to train the specified
- number of estimators and we can watch the model training in real time:
- it shows train loss, out-of-bag improve and the remaining time.
- first for each estimator, then for each 10, then for each 100.
+\end_inset
+
+
 \end_layout
 
-\begin_layout Plain Layout
-possible to train locally, as does not require that much resources.
-\end_layout
+\begin_layout Standard
+
+\series bold
+feature selection
+\series default
+: GBSA is rather minimalistic in its choice of features.
+ It chose 3 features for living and 5 for deceased and ignored the rest.
+ 
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
-What we have done here is used a large number of estimators and regularized
- the model with small learning rate to avoid overfitting.
- The early stopping strategy was also employed (it looks at average change
- for the last 25 iterations and should've stopped when last 50 iterations
- gave negative result), but it never came to it, as the model never was
- too long in negative improvements.
- This approach is common and the code was taken from the scikit-survival
- documentation (give a link).
- All that in living.ipynb
+Check that on trained model
 \end_layout
 
-\begin_layout Plain Layout
-lr =0.2 max_depth = 4 : 0.72 - the best result
+\end_inset
+
+
 \end_layout
 
-\begin_layout Plain Layout
-lr=1 max_depth=1: 0.711
-\end_layout
-
-\begin_layout Plain Layout
-learning_rate=0.15, subsample=0.5, max_depth=2, 0.712 fitted learners 237
-\end_layout
-
-\begin_layout Plain Layout
-living features: It is rather minimalistic in its feature importance, as
- it requires 
-\emph on
-only
-\emph default
- 5 features (ON_DIALYSIS, DIAB, AGE, HGT_CM_CALC and DIALYSIS_TIME).
- All other features (taken from RSF, as we thought that the feature importance
- will be the same) had zero feature importance.
-\end_layout
-
-\begin_layout Plain Layout
+\begin_layout Standard
 number of columns has little to no influence on training time, while the
  number of instances influences the training time substantially
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
 \begin_layout Plain Layout
-Fitted base learners: 85 Performance on test set 0.687
+
 \end_layout
 
 \begin_layout Plain Layout
-(preprocessing with scikit-learn's transformers gives slower training (maybe)
- and maybe poorer results)
+
+
+\backslash
+begin{table}[htbp]     
+\backslash
+centering     
+\backslash
+caption{Feature Importance for GBSA Deceased (only non-zero)}     
+\backslash
+begin{tabular}{lc}     
+\backslash
+toprule     Variable & Value 
+\backslash
+
+\backslash
+     
+\backslash
+midrule     AGE                  & 0.122209 
+\backslash
+
+\backslash
+     DIAB=5.0             & 0.016040 
+\backslash
+
+\backslash
+     DIAB=3.0             & 0.013290 
+\backslash
+
+\backslash
+     ON
+\backslash
+_DIALYSIS=Y       & 0.004566 
+\backslash
+
+\backslash
+     KDPI                 & 0.002467 
+\backslash
+
+\backslash
+     DIAB=2.0             & 0.001984 
+\backslash
+
+\backslash
+     HCV
+\backslash
+_SEROSTATUS=P    & 0.001732 
+\backslash
+
+\backslash
+     AGE
+\backslash
+_DON             & 0.000826 
+\backslash
+
+\backslash
+     DIALYSIS
+\backslash
+_TIME       & 0.000144 
+\backslash
+
+\backslash
+     
+\backslash
+bottomrule     
+\backslash
+end{tabular} 
+\backslash
+end{table}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table}[htbp]     
+\backslash
+centering     
+\backslash
+caption{Feature Importance for GBSA Living (only non-zero)}     
+\backslash
+label{tab:variable_importance}     
+\backslash
+begin{tabular}{lc}     
+\backslash
+toprule     Variable & Importance 
+\backslash
+
+\backslash
+     
+\backslash
+midrule     AGE                  & 0.141453 
+\backslash
+
+\backslash
+     DIAB=3.0             & 0.022880 
+\backslash
+
+\backslash
+     DIALYSIS
+\backslash
+_TIME       & 0.020244 
+\backslash
+
+\backslash
+     DIAB=2.0             & 0.008310 
+\backslash
+
+\backslash
+     
+\backslash
+bottomrule     
+\backslash
+end{tabular} 
+\backslash
+end{table}
+\end_layout
+
+\begin_layout Plain Layout
+
+Table 
+\backslash
+ref{tab:variable_importance} presents the importance of different variables.
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -13893,6 +14390,19 @@ During the later stages of development, it was discovered that a nonprofit
  organization with the name KidneyLife already exists.
  If someone is interested in the application, we would need to rename and
  rebrand it to prevent any confusion and potential legal issues.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Add a cumulative hazards option!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter*
