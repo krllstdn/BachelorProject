@@ -10193,6 +10193,10 @@ Pie Chart for living donor type
 Dataset building, Exclusion criteria and noice reduction
 \end_layout
 
+\begin_layout Section
+Feature Engineering
+\end_layout
+
 \begin_layout Itemize
 a
 \end_layout
@@ -11248,11 +11252,15 @@ Conclusion: For living: RSF shows slightly superior discrimination (AUC)
  the prediction accuracy is the same for GBSA and coxnet and worse for RSF.
  Overall, we would choose coxnet for both living and deceased due to the
  low training time, but if the training time was not a concern we would
- choose GBSA for deceased.
+ choose GBSA for deceased due to slightly higher discrimination ability.
+ (for living still coxnet)
 \end_layout
 
 \begin_layout Plain Layout
 However deceased RSF might be slightly undertrained.
+ But we don't see the point of training it on the whole dataset as before
+ there was no difference whether training on the whole dataset, or training
+ on the 1000 instances.
 \end_layout
 
 \end_inset
@@ -11269,20 +11277,8 @@ Coxnet
 status open
 
 \begin_layout Plain Layout
-- the process of training
-\end_layout
-
-\begin_layout Plain Layout
-- it was trained locally
-\end_layout
-
-\begin_layout Plain Layout
-- hyperparameters
-\end_layout
-
-\begin_layout Plain Layout
-- feature importance and selection: the importance of over 60 features was
- examined, only a fraction of them had any importance.
+the way of scaling (pipeline or standrd sksurv function) is not important
+ in terms of performance
 \end_layout
 
 \end_inset
@@ -11291,22 +11287,12 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-mention that the timeframe is not random - 10th to 90th percentile
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Coxnet, or an elastic net, is a linear model, so it is fast even with large
- datasets, It makes prediction both in a form of the risk score or a survival
- function.
+Coxnet, also known as an elastic net, is a linear model, so it is fast even
+ with large datasets.
+ It is extremely pleasant to work with, as it is extremely fast even with
+ large datasets even on PCs.
+ The performance is impressive as well.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -11516,11 +11502,42 @@ noprefix "false"
 \end_inset
 
 , the Coxnet performed the best for the living group, the worst for the
- deceased, and somewhere in between for the both living and deceased.
+ deceased.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Speculations why
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-As was covered in 
+The coxnet has only two hyperparameters: L1 ratio and alpha.
+ L1 ratio defines the relative weight of the 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+ penalty.
+ We did not found any difference in c_index, IBS or mean_auc in choosing
+ the l1 ratio.
+ At both high (0.9) and low (<0.1) values of L1 ration those values were about
+ the same.
+ But we left l1=0.9, as according to the scikit-learn's documentation it
+ will make the net more stable.
+\end_layout
+
+\begin_layout Standard
+The alpha is calculated by fitting the model and choosing the best of them.
+ As was covered in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Model-Training-and-Hyperparameter-tuning"
@@ -11532,379 +11549,86 @@ noprefix "false"
 
 , the hyperparameter tuning is usually performed with either GridSearch
  or RandomizedSearch.
- Unfortunately, the older Python version on the cluster did not allow to
- install the newest version of scikit-survival, where the GridSearch was
- implemented.
- So, the hyperparamer tuning was performed with a custom script that is
- designed to imitate the GridSearchCV but without the k-fold cross-validation.
- The script optimizes for the Integrated Brier Score (IBS) that directly
- tells the accuracy of predictions.
- The script can be found: here
+ Initially, we trained coxnet on the cluster and with that version of scikit-sur
+vival it was not possible to use GridSearchCV, so we coded our own but without
+ cross-validation.
+ However, as we learned that we can train the coxnet model locally, we migrated
+ to the GridSearchCV version defined in scikit-survival's documentation.
+ 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-(
-\series bold
-add link
-\series default
-)
+rewrite a bit so that we understand that the code from documentation was
+ used
 \end_layout
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
-The coxnet has only two hyperparameters: L1 ratio and alpha, the latter
- is calculated by fitting the model and we then need to choose the best
- of them.
- L1 ratio defines the relative weight of the 
-\begin_inset Formula $l_{1}$
-\end_inset
-
-and 
-\begin_inset Formula $l_{2}$
-\end_inset
-
- penalty.
-\end_layout
-
-\begin_layout Standard
-On the table 
+The importance of over 60 features was examined, only a fraction of them
+ had any importance.
+ Those with negative and zero importance were removed, increasing model
+ performance.
+ HLA interestingly had no influence on long-term survival.
+ Just like Terasaki noted in 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Coxnet-Feature-Importance"
+reference "subsec:Tissue-Typing"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- we can see the importances of features for the prediction.
- Features with zero influence were omitted.
+.
+ On the Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:FI-forCoxnet-Living"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:FI-for-Coxnet-Deceased"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we can see the feature importances for living and deceased subsets.
+ 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float table
+\begin_inset Float figure
 wide false
 sideways false
 status collapsed
 
 \begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="10" columns="3">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Feature description
-\end_layout
+\begin_inset Graphics
+	filename Images/coxnet_living_feature_importance.png
 
 \end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
 
-\begin_layout Plain Layout
-Importance
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Abbreviation
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Donor Age
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Recipient Age
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Donor Type
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Donor gender
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Recipient gender
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Donor blood group
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Recipient blood group
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Recipient on dyalisis
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Recipient creatinine at the time of tx
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Coxnet Feature Importance
+Feature Importance for Coxnet Living
 \begin_inset CommandInset label
 LatexCommand label
-name "tab:Coxnet-Feature-Importance"
+name "fig:FI-forCoxnet-Living"
 
 \end_inset
 
@@ -11916,9 +11640,125 @@ name "tab:Coxnet-Feature-Importance"
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/coxnet_deceased_feature_importance.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Feature Importance for Coxnet Deceased
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:FI-for-Coxnet-Deceased"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As we can see, the most predictive features are patient's diabetes status,
+ age, ethinicity, hepatitis C status, and dialysis.
+\end_layout
+
+\begin_layout Standard
+We attempted to do feature engineering with donor-recipient height, weight,
+ bmi and age differences inspired by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-47-naqvi"
+literal "false"
+
+\end_inset
+
+.
+ The introduction of these features actually worsened the performance, so
+ they were excluded.
+ The engineered feature that actually improved the performance is the number
+ of days patient was on dialysis (DIALYSIS_TIME), inspired by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-48-aufhauser"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Maybe move this paragraph to chapter 4 to feature engineering section
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The two ways of data preprocessing are employed depending on a context:
+ one with scikit-learn pipeline transformers, the other with scikit-survival
+ functions.
+ The former is used for KidneyLife production, while the latter is used
+ for training and analysing the feature importances.
+ 
+\end_layout
+
+\begin_layout Standard
+Scikit-learn transformers produce numpy array instead of pandas dataframe,
+ meaning the column names are not preserved.
+ Moreover, the number of columns in outputs are different, so we could not
+ just copy the column names from one to the other, making the analysis of
+ feature importances virtually impossible.
+\end_layout
+
+\begin_layout Standard
+The reason we need scikit-learn pipeline transformers is because we needed
+ a pipeline that produces consistent results for production environment
+ and we did not want to develop one from the ground up.
+ What we do is we pickle the pipeline used during model training and then
+ use it in production.
+ Implying that we need to retrain model with scikit-learn pipeline, if we
+ want to use it in production.
+ The way of preprocessing does not influence performance.
 \end_layout
 
 \begin_layout Subsection
@@ -14855,23 +14695,36 @@ Aufhauser, D.
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-47"
+key "key-47-naqvi"
 literal "false"
 
 \end_inset
 
-‌
+‌Naqvi SAA, Tennankore K, Vinson A, Roy PC, Abidi SSR.
+ Predicting Kidney Graft Survival Using Machine Learning Methods: Prediction
+ Model Development and Feature Significance Analysis Study.
+ J Med Internet Res.
+ 2021 Aug 27;23(8):e26843.
+ doi: 10.2196/26843.
+ PMID: 34448704; PMCID: PMC8433864.
 \end_layout
 
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-48"
+key "key-48-aufhauser"
 literal "false"
 
 \end_inset
 
-
+Aufhauser DD Jr, Peng AW, Murken DR, Concors SJ, Abt PL, Sawinski D, Bloom
+ RD, Reese PP, Levine MH.
+ Impact of prolonged dialysis prior to renal transplantation.
+ Clin Transplant.
+ 2018 Jun;32(6):e13260.
+ doi: 10.1111/ctr.13260.
+ Epub 2018 Jun 25.
+ PMID: 29656398; PMCID: PMC6023748.
 \end_layout
 
 \begin_layout Standard
