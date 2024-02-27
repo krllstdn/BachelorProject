@@ -11569,11 +11569,12 @@ rewrite a bit so that we understand that the code from documentation was
 \end_layout
 
 \begin_layout Standard
-The importance of over 60 features was examined, only a fraction of them
- had any importance.
+The importance of over 60 features was examined with permutation importance,
+ only a fraction of them had any importance.
  Those with negative and zero importance were removed, increasing model
  performance.
- HLA interestingly had no influence on long-term survival.
+ HLA interestingly had no influence on long-term survival (they were removed
+ and the performance improved).
  Just like Terasaki noted in 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -11605,7 +11606,10 @@ noprefix "false"
 
 \end_inset
 
- we can see the feature importances for living and deceased subsets.
+ we can see the feature importances for living and deceased subsets in form
+ of visualized coeficient from the trained models.
+ Although it a bit differs from permutation importance, the overall idea
+ is the same.
  
 \end_layout
 
@@ -11770,12 +11774,6 @@ Random Survival Forest
 status open
 
 \begin_layout Plain Layout
-work with RSF is frustrating.
- time-consuming.
- too long training time
-\end_layout
-
-\begin_layout Plain Layout
 RSF is able to learn to generalize pretty well on small amount of data (living:
  trained on 1000 samples during the fine-tuning and tested on the whole
  test set (during grid-search it was assessed only on a smal fraction of
@@ -11783,17 +11781,12 @@ RSF is able to learn to generalize pretty well on small amount of data (living:
  to train a model on the whole ds - the result is virtually the same IBS:
  0.1390655175499429(1000instances) vs.
  0.13900993221935395 (full ds), with c_index the situation is the same.
- 1000 instances training time 5 minutes vs 66 minutes on full ds (61545)
  
 \end_layout
 
 \begin_layout Plain Layout
 upping estimators to 80 did not give any performance improvements, but the
  training time almost doubled to 101 minutes.
-\end_layout
-
-\begin_layout Plain Layout
-too memory hungry - not the best solution for deployment
 \end_layout
 
 \begin_layout Plain Layout
@@ -11820,31 +11813,39 @@ e, random_state=42 - 85 min on 1000 instances: 0.69
 \begin_layout Standard
 Random survival forest is a powerful ensemble machine learning algorithm,
  that is comprised of multiple submodels, and therefore it takes a lot of
- time to train, a lot of time to make a prediction, depending on the selection
- of hyperparameters, making it a bit difficult to work with, especially
- during the hyperparameter tuning.
- Extremely memory hungry.
- The prediction is a survival function or a hazard score.
- It was covered in detail in (
-\series bold
-RSF subsection
-\series default
-).
- 
+ time to train, making it a bit difficult to work with, especially during
+ the hyperparameter tuning.
+ It is extremely memory hungry during training and when making a prediction,
+ making it unsuitable for deployment.
+ Random Survival Forest is the main reason we divided train data into subsets
+ of living and deceased donors, as the training on the whole dataset often
+ lead to jupyter notebook kernel crashes due insuficient memory after many
+ hours of training, despite the fact that the university cluster had 384
+ GB of RAM.
 \end_layout
 
 \begin_layout Standard
-The fine-tuning was performed with a custom script, similar to the one described
- in the previous subsection dedicated to the coxnet.
- The hyperparameters that were fine-tuned are the following: n_estimators,
- max_depth, min_sample_split and max_features.
+From the positive side, RSF is able to learn a lot from smaller amounts
+ of data.
+ While coxnet performs well on large datasets, it does worse than RSF on
+ smaller ones.
+ We noticed it during hyperparameter tuning: we used a subset of 1000 transplant
+ation from the training dataset for that and RSF fitted them pretty well.
+ We evaluated the predictions from the whole test set.
+ So much so, that when we trained it on the whole training dataset there
+ was very little difference in performance (C-index and IBS in both cases
+ were almost identical, but tiny bit better (IBS the lower the better) with
+ full dataset: 0.13906552(1000instances) vs.
+ 0.139001 (full ds)).
+ 1000 instances training time 5 minutes vs 66 minutes on full ds (61545)
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12046,19 +12047,41 @@ noprefix "false"
 
 \end_inset
 
- we can see the performance of RSF
+ we can see the performance of RSF.
+ Similarly to Coxnet it performs worse in deceased than for living.
+\end_layout
+
+\begin_layout Standard
+The fine-tuning was performed with a custom script, similar to the one described
+ in the previous subsection dedicated to the coxnet.
+ The hyperparameters that were fine-tuned, values tried, and values chosen
+ in the end can be seen on Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:RSF-hyperparameters"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Number of estimators was chosen as 50, as with higher values (80) we did
+ not see any improvement, but the training time increased substantially
+ (101 minutes).
+ However, usually the higher the number of estimators, the better.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="10" columns="3">
+<lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -12068,7 +12091,7 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-Feature description
+Hyperparameter
 \end_layout
 
 \end_inset
@@ -12077,7 +12100,7 @@ Feature description
 \begin_inset Text
 
 \begin_layout Plain Layout
-Importance
+Values Tried
 \end_layout
 
 \end_inset
@@ -12086,7 +12109,7 @@ Importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-Abbreviation
+Chosen Value
 \end_layout
 
 \end_inset
@@ -12097,7 +12120,7 @@ Abbreviation
 \begin_inset Text
 
 \begin_layout Plain Layout
-Donor Age
+Number of Estimators
 \end_layout
 
 \end_inset
@@ -12106,7 +12129,7 @@ Donor Age
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1, 5, 10, 30, 50, 70, 80
 \end_layout
 
 \end_inset
@@ -12115,7 +12138,7 @@ Donor Age
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+50
 \end_layout
 
 \end_inset
@@ -12126,7 +12149,7 @@ Donor Age
 \begin_inset Text
 
 \begin_layout Plain Layout
-Recipient Age
+Max Depth
 \end_layout
 
 \end_inset
@@ -12135,7 +12158,7 @@ Recipient Age
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2,4, 6, 8, 10, 12, 14
 \end_layout
 
 \end_inset
@@ -12144,181 +12167,7 @@ Recipient Age
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Donor Type
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Donor gender
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Recipient gender
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Donor blood group
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Recipient blood group
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Recipient on dyalisis
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+12
 \end_layout
 
 \end_inset
@@ -12329,7 +12178,7 @@ Recipient on dyalisis
 \begin_inset Text
 
 \begin_layout Plain Layout
-Recipient creatinine at the time of tx
+Min Samples Split
 \end_layout
 
 \end_inset
@@ -12338,7 +12187,7 @@ Recipient creatinine at the time of tx
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2, 4, 6, 8 10, 12, 14, 16, 18
 \end_layout
 
 \end_inset
@@ -12347,7 +12196,7 @@ Recipient creatinine at the time of tx
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+16
 \end_layout
 
 \end_inset
@@ -12364,10 +12213,10 @@ Recipient creatinine at the time of tx
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Feature Importance for RSF
+RSF hyperparameters
 \begin_inset CommandInset label
 LatexCommand label
-name "tab:Feature-Importance-for-RSF"
+name "tab:RSF-hyperparameters"
 
 \end_inset
 
@@ -12377,6 +12226,173 @@ name "tab:Feature-Importance-for-RSF"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/RSF_FI_living.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Feature Importance for RSF living
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Feature-Importance-for-RSF-living"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/RSF_FI_deceased.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+RSF feature importance deceased
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:RSF-feature-importance-deceased"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+You can see the feature importances on Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Feature-Importance-for-RSF-living"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:RSF-feature-importance-deceased"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The process of feature selection can be found at 
+\begin_inset Quotes sld
+\end_inset
+
+FeatureSelection/rsf_living.ipynb
+\begin_inset Quotes srd
+\end_inset
+
+ and 
+\begin_inset Quotes sld
+\end_inset
+
+FeatureSelection/rsf_living.ipynb
+\begin_inset Quotes srd
+\end_inset
+
+ (plot, but calculated in cluster file 
+\emph on
+deceased.ipynb
+\emph default
+).
+ For the living, the most important ones are as before recipient age, diabetes
+ status, dialysis status and dialysis time, etc.
+ For the deceased, situation is similar, but the recipient serum creatinine
+ before transplant is a bit higher in the rating.
+\end_layout
+
+\begin_layout Standard
+Living trained 65 minutes, deceased about 80 minutes 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+change to real
+\end_layout
+
+\end_inset
+
+.
+ Both on the 50 estimators.
+ Upping the estimators is a potential avenue to improvement, but one would
+ need to be careful not to overfit the model.
+ And that would take a lot of time: 200 estimators would require 4 hours
+ of training and we might just overfit the model, which can be avoided with
+ regularization, but we highly doubt that we would surpass the performance
+ of coxnet survival.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+better check that, not just complain.
+ you have time.
 \end_layout
 
 \end_inset
