@@ -8913,12 +8913,13 @@ IQR
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/EDA/pie_PSTATUS.png
-	scale 80
+	scale 60
 
 \end_inset
 
@@ -8938,10 +8939,6 @@ name "fig:bar_pstatus"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -9016,12 +9013,30 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/EDA/Kaplan-Meier/Donor_type.png
-	scale 50
+	scale 30
 
 \end_inset
 
@@ -9049,24 +9064,22 @@ name "km_donor_types"
 
 \end_layout
 
-\begin_layout Standard
-This is the case because often there is no time to make full, in-depth HLA
- screening, allowing for some HLA mismatches.
- Additionally, deceased transplants may suffer from mild kidney damage due
- to the delay in transplantation.
- Living donor transplants are most often performed between blood relatives
- who share similar HLA, resulting in better compatibility.
-\end_layout
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename Images/EDA/pie_don_ty.png
+	filename Images/EDA/Kaplan-Meier/Gender.png
+	scale 30
 
 \end_inset
 
@@ -9074,15 +9087,30 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Pie Chart of Donor Type Destribution
+Kaplan-Meir survival curve for genders
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Pie-Don-Ty"
+name "km_sex"
 
 \end_inset
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
 
 \end_inset
 
@@ -9090,12 +9118,30 @@ name "fig:Pie-Don-Ty"
 \end_layout
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Survival curves for dialysis and gender 
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+This is the case because often there is no time to make full, in-depth HLA
+ screening, allowing for some HLA mismatches.
+ Additionally, deceased transplants may suffer from mild kidney damage due
+ to the delay in transplantation.
+ Living donor transplants are most often performed between blood relatives
+ who share similar HLA, resulting in better compatibility.
 \end_layout
 
 \begin_layout Standard
@@ -9121,8 +9167,10 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/EDA/donor_ty_by_year.png
+	scale 60
 
 \end_inset
 
@@ -9201,12 +9249,73 @@ literal "false"
 \begin_inset Float figure
 wide false
 sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/EDA/pie_don_ty.png
+	scale 55
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pie Chart of Donor Type Destribution
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pie-Don-Ty"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/EDA/pie_gender.png
-	scale 80
+	scale 55
 
 \end_inset
 
@@ -9229,7 +9338,27 @@ name "fig:pie_gender"
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
 \begin_layout Plain Layout
+Pie charts for donor type and gender
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -9278,43 +9407,6 @@ literal "false"
  even worse.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/EDA/Kaplan-Meier/Gender.png
-	scale 55
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Kaplan-Meir survival curve for genders
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "km_sex"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsubsection*
 The Use of Dialysis
 \end_layout
@@ -9344,43 +9436,6 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/EDA/Kaplan-Meier/Dialysis.png
-	scale 55
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Kaplan-Meir survival curve for using dialysis or not
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "km_dialysis"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -9474,12 +9529,76 @@ The lowest survival probability was in the multiracial group.
 \begin_inset Float figure
 wide false
 sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/EDA/Kaplan-Meier/Dialysis.png
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Kaplan-Meir survival curve for using dialysis or not
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "km_dialysis"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
 status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/EDA/Kaplan-Meier/Race.png
-	scale 55
+	scale 30
 
 \end_inset
 
@@ -9487,6 +9606,7 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -9499,6 +9619,30 @@ Kaplan-Meir survival curve for ethnicities
 \begin_inset CommandInset label
 LatexCommand label
 name "km_race"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Survival Curves for dialysis and ethnicities
+\end_layout
 
 \end_inset
 
@@ -9707,9 +9851,10 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/ETHCAT_DECEASED.png
-	scale 80
+	scale 70
 
 \end_inset
 
@@ -9737,6 +9882,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/pie-deceased.png
 	scale 50
@@ -11040,19 +11186,34 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align left
 \begin_inset Graphics
 	filename Images/AUC_living.png
+	scale 50
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-AUC living
+AUC for all living models
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:AUC-living"
@@ -11072,40 +11233,22 @@ name "fig:AUC-living"
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
 
 \begin_layout Plain Layout
-despite the fact that the mean aucs are almost identical, the acuracy over
- time varies.
- From day 1000 to 2800 RSF performs better, then from day 2900 to day 4000
- coxnet and GBSA overperform RSF.
- From day 4000 to 5000 all models perform similarly, except for small rise
- of coxnet and gbsa, which later converge back with RSF.
- Day 5000 to 6000 RSF outperforms the two models again.
- RSF outperforms coxnet and GBSA on 3/5 of the timeline, underperforms on
- 1/5 and is mostly similar on 1/5.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
+\align right
 \begin_inset Graphics
 	filename Images/BS_living.png
+	scale 50
 
 \end_inset
 
@@ -11113,7 +11256,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-BS living
+Time-dependent Brier Score for all living models
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:BS-living"
@@ -11128,30 +11271,63 @@ name "fig:BS-living"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Time dependent Brier and AUC scores for all living models
+\end_layout
+
+\end_inset
+
+
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-coxnet and GBSA here are identical, we had to adjust settings for the other
- to be seen.
- RSF curve is slightly higher than the two, meaning that overall prediction
- is slightly worse, despite mostly superior descrimination on the previous
- graph.
+maybe two figures in a row not the best for such graphics.
+ Try using that in data analysis section.
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+Please, look at Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AUC-living"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, where we can see the plot of AUC over time for all living models.
+ Despite the fact that the mean AUCs are almost identical, the acuracy over
+ time varies.
+ From day 1000 to 2800 RSF performs better, then from day 2900 to day 4000
+ coxnet and GBSA overperform RSF.
+ From day 4000 to 5000 all models perform similarly, except for small rise
+ of coxnet and gbsa, which later converge back with RSF.
+ Day 5000 to 6000 RSF outperforms the two models again.
+ RSF outperforms coxnet and GBSA on 3/5 of the timeline, underperforms on
+ 1/5 and is mostly similar on 1/5.
 \end_layout
 
 \begin_layout Standard
@@ -11161,8 +11337,29 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/AUC_deceased.png
+	scale 50
 
 \end_inset
 
@@ -11190,31 +11387,21 @@ name "fig:AUC-deceased"
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
 
 \begin_layout Plain Layout
-On this plot we can see that GBSA shows superior descriminative ability
- to RSF and coxnet.
- Coxnet is in the middle and RSF shows the worst performance.
- While all rise over time.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/BS_deceased.png
+	scale 50
 
 \end_inset
 
@@ -11226,10 +11413,45 @@ status open
 
 \begin_layout Plain Layout
 BS deceased
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BS-deceased"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Time dependent Brier and AUC scores for all deceased models
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -11239,35 +11461,82 @@ BS deceased
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+At Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BS-living"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_layout Plain Layout
-Just as with living the performance of coxnet and GBSA is identical, but
+\end_inset
+
+ we can see time-dependent Brier scores for all living models.
+ Coxnet and GBSA here are identical, despite different learners.
+ We had to adjust visualization settings for the other to be seen.
+ RSF curve is slightly higher than the two, meaning that overall performance
+ is slightly worse, despite mostly superior descrimination on the previous
+ graph.
+\end_layout
+
+\begin_layout Standard
+On the Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AUC-deceased"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we can see that GBSA shows superior descriminative ability to RSF and Coxnet.
+ Coxnet is in the middle and RSF shows the worst performance.
+ While all rise over time in similar fashion.
+\end_layout
+
+\begin_layout Standard
+Please, look at the Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BS-deceased"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Just as with living the performance of coxnet and GBSA is identical, but
  RSF is slightly worse, although by a small margin.
  
 \end_layout
 
+\begin_layout Standard
+Conclusion: For living, RSF shows slightly superior discrimination (AUC),
+ but the overall prediction accuracy (BS) is inferior to coxnet and GBSA.
+ For deceased, GBSA shows superior discrimination to coxnet and RSF, but
+ the prediction accuracy (BS) is the same for GBSA and coxnet, and worse
+ for RSF.
+ Overall, we would choose coxnet for both living and deceased due to the
+ low training time
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+, high prediction speed
+\end_layout
+
 \end_inset
 
-
+, but if the training time was not a concern we would choose GBSA for deceased
+ due to slightly higher discrimination ability.
+ (for living still coxnet)
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
 status open
-
-\begin_layout Plain Layout
-Conclusion: For living: RSF shows slightly superior discrimination (AUC)
- in living, but the overall prediction accuracy (BS) is inferior to coxnet
- and GBSA.
- For deceased, GBSA shows superior discrimination to coxnet and RSF, but
- the prediction accuracy is the same for GBSA and coxnet and worse for RSF.
- Overall, we would choose coxnet for both living and deceased due to the
- low training time, but if the training time was not a concern we would
- choose GBSA for deceased due to slightly higher discrimination ability.
- (for living still coxnet)
-\end_layout
 
 \begin_layout Plain Layout
 However deceased RSF might be slightly undertrained.
@@ -11679,11 +11948,13 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/coxnet_living_feature_importance.png
+	scale 80
 
 \end_inset
 
@@ -11719,15 +11990,13 @@ name "fig:FI-forCoxnet-Living"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/coxnet_deceased_feature_importance.png
+	scale 55
 
 \end_inset
 
@@ -12370,6 +12639,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/RSF_FI_living.png
+	scale 70
 
 \end_inset
 
@@ -12377,6 +12647,7 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -12413,6 +12684,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/RSF_FI_deceased.png
+	scale 50
 
 \end_inset
 
@@ -12420,6 +12692,7 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -12893,11 +13166,28 @@ training
 \begin_inset Float figure
 wide false
 sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
 status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/gbsa_early_stopping_living.png
+	scale 50
 
 \end_inset
 
@@ -12912,7 +13202,7 @@ name "fig:Living-GBSA-training"
 
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -12930,16 +13220,17 @@ don't forget to remake the image
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \series bold
 \begin_inset Float figure
@@ -12950,6 +13241,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/gbsa_early_stopping_deceased.png
+	scale 50
 
 \end_inset
 
@@ -12987,6 +13279,33 @@ don't forget to remake the image
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GBSA training process with early stopping
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Plain Layout
 
 \end_layout
@@ -13001,14 +13320,50 @@ don't forget to remake the image
 \series bold
 feature selection
 \series default
-: GBSA is rather minimalistic in its choice of features.
- It chose 3 features for living and 5 for deceased and ignored the rest.
- 
+: Initially we performed feature selection on models with small amount of
+ learners, and it produced an intresting result: only a small selection
+ of features was deemed to have any importance.
+ It seemed too good to be true.
+ As we already had several models trained on many more learners, we decided
+ to assess feature importance on them.
+ We discovered that many features that initially were deemed irrelevant,
+ actually were relevant.
+ Meaning that this approach to feature selection does not work for GBSA
+ and feature importance must be assessed on fully trained model.
+ (On RSF it does not matter, as feature importance is the same no matter
+ how fully the model is traied)
+\end_layout
+
+\begin_layout Standard
+On Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GBSA-living-feature"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GBSA-deceased-feature"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ you can see feature importances for living and deceased GBSA.
+ For living, there are a couple of features with negative importance (PRE_TX_TXF
+US, KI_KREAT_PREOP, HCV_SEROSTATUS and GENDER), but when removed, the performanc
+e drops from 0.722 to 0.72.
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Check that on trained model
+mb retrain with some of them.
 \end_layout
 
 \end_inset
@@ -13017,93 +13372,42 @@ Check that on trained model
 \end_layout
 
 \begin_layout Standard
-number of columns has little to no influence on training time, while the
- number of instances influences the training time substantially
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/GBSA_FI_living.png
+	scale 70
 
-\end_layout
-
-\begin_layout Plain Layout
+\end_inset
 
 
-\backslash
-begin{table}[htbp]     
-\backslash
-centering     
-\backslash
-caption{Feature Importance for GBSA Deceased (only non-zero)}     
-\backslash
-begin{tabular}{lc}     
-\backslash
-toprule     Variable & Value 
-\backslash
-
-\backslash
-     
-\backslash
-midrule     AGE                  & 0.122209 
-\backslash
-
-\backslash
-     DIAB=5.0             & 0.016040 
-\backslash
-
-\backslash
-     DIAB=3.0             & 0.013290 
-\backslash
-
-\backslash
-     ON
-\backslash
-_DIALYSIS=Y       & 0.004566 
-\backslash
-
-\backslash
-     KDPI                 & 0.002467 
-\backslash
-
-\backslash
-     DIAB=2.0             & 0.001984 
-\backslash
-
-\backslash
-     HCV
-\backslash
-_SEROSTATUS=P    & 0.001732 
-\backslash
-
-\backslash
-     AGE
-\backslash
-_DON             & 0.000826 
-\backslash
-
-\backslash
-     DIALYSIS
-\backslash
-_TIME       & 0.000144 
-\backslash
-
-\backslash
-     
-\backslash
-bottomrule     
-\backslash
-end{tabular} 
-\backslash
-end{table}
 \end_layout
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GBSA living feature importance
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GBSA-living-feature"
+
+\end_inset
 
 
-\backslash
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -13113,74 +13417,48 @@ end{table}
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/GBSA_FI_Deceased.png
+	scale 60
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Plain Layout
-
-
-\backslash
-begin{table}[htbp]     
-\backslash
-centering     
-\backslash
-caption{Feature Importance for GBSA Living (only non-zero)}     
-\backslash
-label{tab:variable_importance}     
-\backslash
-begin{tabular}{lc}     
-\backslash
-toprule     Variable & Importance 
-\backslash
-
-\backslash
-     
-\backslash
-midrule     AGE                  & 0.141453 
-\backslash
-
-\backslash
-     DIAB=3.0             & 0.022880 
-\backslash
-
-\backslash
-     DIALYSIS
-\backslash
-_TIME       & 0.020244 
-\backslash
-
-\backslash
-     DIAB=2.0             & 0.008310 
-\backslash
-
-\backslash
-     
-\backslash
-bottomrule     
-\backslash
-end{tabular} 
-\backslash
-end{table}
-\end_layout
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
+GBSA deceased feature importance
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GBSA-deceased-feature"
 
-Table 
-\backslash
-ref{tab:variable_importance} presents the importance of different variables.
-\end_layout
+\end_inset
 
-\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The number of columns has little to no influence on training time, while
+ the number of instances influences the training time substantially.
 \end_layout
 
 \begin_layout Section
@@ -13329,13 +13607,29 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
 status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/kpd_loop.png
-	scale 80
+	scale 50
 
 \end_inset
 
@@ -13357,6 +13651,86 @@ literal "false"
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/kpd_chain.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Domino-Chain"
+
+\end_inset
+
+Domino Chain 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-43"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -13391,58 +13765,6 @@ noprefix "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Images/kpd_chain.png
-	scale 80
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Domino-Chain"
-
-\end_inset
-
-Domino Chain 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-43"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -13679,7 +14001,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename Images/KidneyLife.png
-	scale 30
+	scale 25
 
 \end_inset
 
@@ -14269,7 +14591,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/KL_Patient_MS.png
-	scale 40
+	scale 35
 
 \end_inset
 
@@ -14354,7 +14676,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/KidneyLifeDraft.png
-	scale 40
+	scale 35
 
 \end_inset
 
