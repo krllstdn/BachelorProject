@@ -10454,7 +10454,18 @@ regression
 The censored dataset
 \series default
 .
- The dataset has a high level of censoring – 76%.
+ The dataset has a high level of censoring – 76%
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+not true anymore.
+ on training set it is less
+\end_layout
+
+\end_inset
+
+.
  The dataset contains the number of days survived, along with the survival
  status.
  Including both living and deceased patients would introduce too much noise
@@ -10607,52 +10618,35 @@ Results
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-We trained and fine tuned 6 models.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Three models from scikit-survival were chosen: CoxnetSurvivalAnalysis(CoxElastic
-Net, later referred to as coxnet), RandomSurvivalForest (RSF) and GradientBooste
-dSurvivalAnalysis (GBSA).
- Two of them were trained locally
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(+feature selection)
-\end_layout
-
-\end_inset
-
- (Coxnet and GBSA) and one (RSF) was trained on a cluster
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(+feature selection)
-\end_layout
-
-\end_inset
-
-.
+In total, six models were finetuned and trained, three for each demographic.
+ The following models from 
+\emph on
+scikit-surviva
+\emph default
+l were chosen: CoxnetSurvivalAnalysis (Cox Elastic Net, later referred to
+ as coxnet), RandomSurvivalForest (RSF) and GradientBoostedSurvivalAnalysis
+ (GBSA).
+ Two of them were trained locally (Coxnet and GBSA) and one (RSF) was trained
+ on a cluster.
  Our personal favourite is coxnet, as it only takes anywhere from 30 seconds
  to 3 minutes to train it and the performance is on par with models that
  take a couple of hours to train.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+maybe there should not be personal favourites?)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 The dataset was divided in two subsets: with living and deceased donors.
- These algorithms did not handle large dataset well with complex models
- (RSF and SGBA) neither on university cluster, nor locally.
+ RSF and SGBA did not handle large dataset well neither locally, nor on
+ university cluster.
  Jupyter Notebook kernel crashes due insufficient memory during training
  (we had 384GB RAM!) and prolonged training time were a common thing.
  Moreover, some features are available only for one subset (KDPI for deceased
@@ -10664,17 +10658,16 @@ The dataset was divided in two subsets: with living and deceased donors.
 \begin_layout Standard
 Unfortunately, the older version of scikit-survival was used on the cluster
  - 0.14.0, due to the limitation in python version on cluster where these
- models were trained (3..6.8).
+ models were trained (3.6.8).
  Locally was used latest at the time 0.22.1.
+ This fact will later have some implications.
 \end_layout
 
 \begin_layout Standard
 As numerical performance measures, Uno concordance index (c-index), integrated
- Brier Score (IBS), and mean cumularive/dynamic area under curve (AUC).
-\end_layout
-
-\begin_layout Standard
-On the Tables 
+ Brier Score (IBS), and mean cumularive/dynamic area under curve (AUC) were
+ chosen.
+ On Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:living-comparison"
@@ -10694,19 +10687,17 @@ noprefix "false"
 
 \end_inset
 
- you can see the performance of trained models for living and deceased datasets.
- As can be seen, they have more or less the same performance for the same
- dataset, meaning that models were trained well and they capture data well.
+ you can see the performance of trained models for living and deceased datasets
+ respectively.
+ As can be seen, the deceased models perform slightly worse than living
+ ones.
+ Moreover, models have more or less the same performance for the same dataset,
+ meaning that models were trained well and they capture data well.
  The only potential way, therefore, to improve the performance is to expand
  the dataset with further feature engineering.
  More detail on the training of each model you can find in the corresponding
  section further.
  
-\end_layout
-
-\begin_layout Standard
-Another appartent thing is that the deceased models perform slightly worse
- than living ones.
 \end_layout
 
 \begin_layout Standard
@@ -10729,7 +10720,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Dataset
+Model
 \end_layout
 
 \end_inset
@@ -10962,7 +10953,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Dataset
+Model
 \end_layout
 
 \end_inset
@@ -11176,7 +11167,10 @@ name "tab:deceased-comparison"
 \end_layout
 
 \begin_layout Standard
-For deceased, the winner is GBSA: it slightly outperforms other models
+In living the winner is coxnet, although it has the same discrimination
+ ability as RSF, the overall performance (IBS) is better.
+ For deceased, the winner is GBSA: it slightly outperforms other models
+ across all metrics.
 \end_layout
 
 \begin_layout Standard
@@ -11308,7 +11302,8 @@ maybe two figures in a row not the best for such graphics.
 
 \end_inset
 
-Please, look at Figure 
+As time-dependent metrics, ROC AUC and Brier Score we chosen.
+ Please, look at the Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:AUC-living"
@@ -11324,7 +11319,7 @@ noprefix "false"
  From day 1000 to 2800 RSF performs better, then from day 2900 to day 4000
  coxnet and GBSA overperform RSF.
  From day 4000 to 5000 all models perform similarly, except for small rise
- of coxnet and gbsa, which later converge back with RSF.
+ of coxnet and gbsa, which later converges back with RSF.
  Day 5000 to 6000 RSF outperforms the two models again.
  RSF outperforms coxnet and GBSA on 3/5 of the timeline, underperforms on
  1/5 and is mostly similar on 1/5.
@@ -12852,17 +12847,14 @@ Fitted base learners: 85 Performance on test set 0.687
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Overview
-\series default
-+experience: CoxnetSurvivalAnalysis is a gradient-boosted Cox proportional
- hazard loss with regression trees as base learner.
+CoxnetSurvivalAnalysis is a gradient-boosted Cox proportional hazard loss
+ with regression trees as base learner.
  It is a relatively slow algorithm as it can only run on one CPU core and
  trains only one estimator at a time.
  So the training time might be quite large, as we cannot take advantage
  of cluster computing power.
- However that can be an advantage, as we can train the model on PC locally.
+ However that can also be an advantage, as we can train the model on PC
+ locally.
  Another advantage is that the training time is predictable and the algorithm
  tells us during training how much time is left.
  Which is not perfectly precise, but it gives a good approximation.
@@ -12876,11 +12868,7 @@ Two other bits of information that the algorithm shares during training
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Describe table
-\series default
-: On Table 
+On Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:SGBA-result"
@@ -13094,24 +13082,18 @@ name "tab:SGBA-result"
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Finetuning
-\series default
-: We used three main hyperparameters: number of estimators, learning rate
+We used three main hyperparameters: number of estimators, learning rate
  and max_depth.
- Max depth we estimated with grid search, and it is 
-\emph on
-6, 
-\emph default
-but experimentally 4 produced better results.
+ Grid search estimated the best max_depth to be 6, however experimentally
+ we found that 4 gives better results.
  Learning rate we selected experimentally: and 
 \emph on
 0.2
 \emph default
  produced the best results.
- (with lower values (0.05, 0.1, 0.15) the model was undertrained) Number of
- estimators was estimated with early stopping monitor.
+ With lower values (0.05, 0.1, 0.15) the model was underfit, with higher (0.5,
+ 1) overfit.
+ Number of estimators was estimated with early stopping monitor.
  It is a common approach for GB algorithms, and the code was borrowed from
  the scikit-survival documentation 
 \begin_inset Note Note
@@ -13123,10 +13105,10 @@ status open
 
 \end_inset
 
- (it looks at the average improvement of the last 25 iterations and if it
- was negative for the last 50, it aborts training)(the monitor was borrowed
- from scikit-survival's documentation), and it is 110 for deceased (trained
- 160) and 94 for living (trained 144).
+ The monitor looks at the average improvement of the last 25 iterations
+ and if it was negative for the last 50, it aborts training.
+ For deceased the best number of estimators was 110 (trained 160) and 94
+ for living (trained 144).
  On Figures 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -13147,17 +13129,13 @@ noprefix "false"
 
 \end_inset
 
- you can see the plot of improvement per learner.
+ you can see the plot of OOB improvement per learner.
  Red dashed line is a cutoff, after which the performance starts to decline.
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-training
-\series default
-: Models were trained locally.
- The training took 44 minutes for living and 60 for deceased.
+Models were trained locally.
+ The training took 75 minutes for living and 60 for deceased.
  With lower learning rate it was much longer (396 minutes for living on
  0.05 learning rate).
 \end_layout
@@ -13316,22 +13294,18 @@ GBSA training process with early stopping
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-feature selection
-\series default
-: Initially we performed feature selection on models with small amount of
+Initially we performed feature selection on models with small amount of
  learners, and it produced an intresting result: only a small selection
  of features was deemed to have any importance.
- It seemed too good to be true.
+ It did not seem right.
  As we already had several models trained on many more learners, we decided
  to assess feature importance on them.
  We discovered that many features that initially were deemed irrelevant,
  actually were relevant.
  Meaning that this approach to feature selection does not work for GBSA
  and feature importance must be assessed on fully trained model.
- (On RSF it does not matter, as feature importance is the same no matter
- how fully the model is traied)
+ For example, with RSF it does not matter, as feature importance is the
+ same for underfit and overfit model.
 \end_layout
 
 \begin_layout Standard
@@ -13355,10 +13329,11 @@ noprefix "false"
 
 \end_inset
 
- you can see feature importances for living and deceased GBSA.
+ you can see feature importances estimated with permutation importance for
+ living and deceased GBSA.
  For living, there are a couple of features with negative importance (PRE_TX_TXF
 US, KI_KREAT_PREOP, HCV_SEROSTATUS and GENDER), but when removed, the performanc
-e drops from 0.722 to 0.72.
+e drops from 0.722 to 0.720.
 \begin_inset Note Note
 status open
 
@@ -13454,11 +13429,6 @@ name "fig:GBSA-deceased-feature"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-The number of columns has little to no influence on training time, while
- the number of instances influences the training time substantially.
 \end_layout
 
 \begin_layout Section
