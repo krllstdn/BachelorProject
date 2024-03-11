@@ -1009,9 +1009,10 @@ The goal of this paper is to explore fields of kidney transplantation and
 status open
 
 \begin_layout Plain Layout
-During kidney transplantation, the donor-recipient kompatibility is maximized
+During kidney transplantation, the donor-recipient compatibility is maximized
  in hopes of better outcomes.
- However there is little to no instruments to estimate the outcomes.
+ However there is little to no (few, are not many) instruments to estimate
+ the outcomes.
  In this work we will try to address that.
  With trained machine learning models we created an instrument to estimate
  recipient's survival in form of survival function.
@@ -10566,10 +10567,20 @@ status open
 
 \begin_layout Standard
 The algorithms provided by the scikit-survival do not handle large datasets
- very well (never ending training process and worse results probably due
- to the noise) that is why we chose to train different models for different
- demographics, as one specific model for one specific demographic will perform
- better that one model trained for all demographics.
+ very well (never-ending 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+write it better, as never-ending is not very formal
+\end_layout
+
+\end_inset
+
+ training process and worse results probably due to the noise) that is why
+ we chose to train different models for different demographics, as one specific
+ model for one specific demographic will perform better that one model trained
+ for all demographics.
 \begin_inset Note Note
 status open
 
