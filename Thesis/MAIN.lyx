@@ -12038,131 +12038,38 @@ Random Survival Forest
 status open
 
 \begin_layout Plain Layout
-RSF is able to learn to generalize pretty well on small amount of data (living:
- trained on 1000 samples during the fine-tuning and tested on the whole
- test set (during grid-search it was assessed only on a smal fraction of
- test set) result 0.723 on living) on 50 estimators there is no real reason
- to train a model on the whole ds - the result is virtually the same IBS:
- 0.1390655175499429(1000instances) vs.
- 0.13900993221935395 (full ds), with c_index the situation is the same.
+
+\series bold
+grid search probably works on the cluster, but without specification of
+ the uno C-index.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The random survival forest is a powerful ensemble machine learning algorithm.
+ However, its training time is longer than the other methods, and it can
+ be challenging to work with, especially during hyperparameter tuning.
+ Moreover, RSF is known to be extremely memory-hungry during training and
+ prediction, making it unsuitable for deployment.
  
 \end_layout
 
-\begin_layout Plain Layout
-upping estimators to 80 did not give any performance improvements, but the
- training time almost doubled to 101 minutes.
-\end_layout
-
-\begin_layout Plain Layout
-best parameters: max_depth=12, min_samples_split=16, max_features=None,
- n_estimators - the more, the better, but we weren't able to train more
- than 50(change to actual number) due to the limitations in available memory.
- the following values were checked for each parameter: (add table)
-\end_layout
-
-\begin_layout Plain Layout
-living features:
-\end_layout
-
-\begin_layout Plain Layout
-n_estimators=50, n_jobs=-1, max_depth=12, min_samples_split=16, max_features=Non
-e, random_state=42 - 85 min on 1000 instances: 0.69
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-Overview
-\series default
-+experience:
-\end_layout
-
-\begin_layout Plain Layout
-
-\series bold
-Finetuning
-\series default
-:
-\end_layout
-
-\begin_layout Plain Layout
-
-\series bold
-training
-\series default
-:
-\end_layout
-
-\begin_layout Plain Layout
-
-\series bold
-feature selection
-\series default
-:
-\end_layout
-
-\begin_layout Plain Layout
-
-\series bold
-feature importance
-\series default
-:
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Random survival forest is a powerful ensemble machine learning algorithm,
- that is comprised of multiple submodels, and therefore it takes a lot of
- time to train, making it a bit difficult to work with, especially during
- the hyperparameter tuning.
- It is extremely memory hungry during training and when making a prediction,
- making it unsuitable for deployment.
- Random Survival Forest is the main reason we divided train data into subsets
- of living and deceased donors, as the training on the whole dataset often
- lead to jupyter notebook kernel crashes due insuficient memory after many
- hours of training, despite the fact that the university cluster had 384
- GB of RAM.
-\end_layout
-
-\begin_layout Standard
-From the positive side, RSF is able to learn a lot from smaller amounts
- of data.
- While coxnet performs well on large datasets, it does worse than RSF on
- smaller ones.
- We noticed it during hyperparameter tuning: we used a subset of 1000 transplant
-ation from the training dataset for that and RSF fitted them pretty well.
- We evaluated the predictions from the whole test set.
- So much so, that when we trained it on the whole training dataset there
- was very little difference in performance (C-index and IBS in both cases
- were almost identical, but tiny bit better (IBS the lower the better) with
- full dataset: 0.13906552(1000instances) vs.
- 0.139001 (full ds)).
- 1000 instances training time 5 minutes vs 66 minutes on full ds (61545)
+On the positive side, RSF can learn well from smaller datasets.
+ Although Coxnet performs well on large datasets, it does worse than RSF
+ on smaller ones.
+ It was observed during hyperparameter tuning, where we used a subset of
+ 1000 transplantations from the training dataset.
+ RSF fitted them pretty well, and when evaluated on the whole test set,
+ the performance was comparable to that of the full dataset.
+ In fact, the difference in performance between the subset and the full
+ dataset was minimal, as evidenced by the integrated Brier score (IBS) of
+ 0.13906552 (1000 instances) compared to 0.139001 (full dataset).
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-that is not correct.
- even for 1000 instances it takes a long time to train (check how much)
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -12361,7 +12268,7 @@ name "tab:RSF-result"
 \end_layout
 
 \begin_layout Standard
-On the table 
+Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:RSF-result"
@@ -12371,17 +12278,23 @@ noprefix "false"
 
 \end_inset
 
- we can see the performance of RSF.
- Similarly to Coxnet it performs worse in deceased than for living.
- The performance itself is very similar to coxnet and GBSA.
+ presents the performance of RSF.
+ Similarly to Coxnet and GBSA, it performs worse for the deceased than for
+ the living.
+ However, overall, the performance is quite similar between RSF and the
+ other two methods.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Hyperparameters
 \end_layout
 
 \begin_layout Standard
-The fine-tuning was performed with a custom script designed to imitate GridSearc
-hCV but without cross-validation, similar to the one described in the previous
- subsection dedicated to the coxnet.
- The hyperparameters that were fine-tuned, values tried, and values chosen
- in the end can be seen on Table 
+Since the RSF was to be trained on a cluster with an outdated version of
+ Python, we used a customized script that mimicked GridSearchCV without
+ cross-validation for fine-tuning.
+ The table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:RSF-hyperparameters"
@@ -12392,10 +12305,14 @@ noprefix "false"
 \end_inset
 
 .
- Number of estimators was chosen as 50, as with higher values (80) we did
- not see any improvement, but the training time increased substantially
- (101 minutes).
- However, usually the higher the number of estimators, the better.
+ shows the fine-tuned hyperparameters, as well as the values that were tested
+ and ultimately selected.
+ After experimenting with higher values (80), we chose to keep the number
+ of estimators at 50 since we did not observe any noticeable improvement
+ beyond that point, and the training time increased significantly from 60
+ to 101 minutes.
+ Nonetheless, it is generally accepted that the greater the number of estimators
+, the better the results.
 \end_layout
 
 \begin_layout Standard
@@ -12563,6 +12480,40 @@ name "tab:RSF-hyperparameters"
 
 \end_layout
 
+\begin_layout Paragraph
+Feature Importance
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Feature-Importance-for-RSF-living"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:RSF-feature-importance-deceased"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ illustrate the feature importances.
+ The feature selection process can be found at ”FeatureSelection/rsf_living.ipynb
+” and ”FeatureSelection/rsf_living.ipynb” (calculated in cluster file deceased.
+ ipynb).
+ For the living, the most important ones are, as before, recipient age,
+ diabetes status, dialysis status, dialysis time, etc.
+ For the deceased, the situation is similar, but the recipient's serum creatinin
+e before transplant is a bit higher in the rating.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 wide false
@@ -12596,10 +12547,6 @@ name "fig:Feature-Importance-for-RSF-living"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -12644,89 +12591,36 @@ name "fig:RSF-feature-importance-deceased"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-You can see the feature importances on Figures 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Feature-Importance-for-RSF-living"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:RSF-feature-importance-deceased"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- The process of feature selection can be found at 
-\begin_inset Quotes sld
-\end_inset
-
-FeatureSelection/rsf_living.ipynb
-\begin_inset Quotes srd
-\end_inset
-
- and 
-\begin_inset Quotes sld
-\end_inset
-
-FeatureSelection/rsf_living.ipynb
-\begin_inset Quotes srd
-\end_inset
-
- (plot, but calculated in cluster file 
-\emph on
-deceased.ipynb
-\emph default
-).
- For the living, the most important ones are, as before, recipient age,
- diabetes status, dialysis status and dialysis time, etc.
- For the deceased, situation is similar, but the recipient serum creatinine
- before transplant is a bit higher in the rating.
-\end_layout
-
-\begin_layout Standard
-Living trained 65 minutes, deceased about 80 minutes 
+The living trained for 65 minutes, and the deceased for about 80 minutes.
+ Both are on the 50 estimators.
+ Upping the estimators is a potential avenue for improvement, but one would
+ need to be careful not to overfit the model.
+ And that would take a long time: 200 estimators would require 4 hours of
+ training and we might overfit the model, or run out of RAM.
+ Overfitting can be avoided with regularization, but it is unlikely that
+ it would surpass the performance of Coxnet survival by a large margin.
 \begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-change to real
-\end_layout
-
-\end_inset
-
-.
- Both on the 50 estimators.
- Upping the estimators is a potential avenue to improvement, but one would
- need to be careful to not overfit the model.
- And that would take a lot of time: 200 estimators would require 4 hours
- of training and we might just overfit the model, or run out of RAM.
- Overfitting can be avoided with regularization, but we highly doubt that
- we would surpass the performance of coxnet survival.
-\begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 better check that, not just complain.
  you have time.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+prob move to the future work.
 \end_layout
 
 \end_inset
