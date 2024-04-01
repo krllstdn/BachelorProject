@@ -998,29 +998,90 @@ pagestyle{headings}
 \end_layout
 
 \begin_layout Standard
-The goal of this paper is to explore fields of kidney transplantation and
- machine learning, create and apply machine learning model in real-world
- application.
- 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-During kidney transplantation, the donor-recipient compatibility is maximized
- in hopes of better outcomes.
- However there is little to no (few, are not many) instruments to estimate
- the outcomes.
- In this work we will try to address that.
- With trained machine learning models we created an instrument to estimate
- recipient's survival in form of survival function.
+this must be the most polished section of the thesis
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Kidney transplantation (KT) is the gold standard treatment for kidney failure
+ that provides an increased quality of life and a longer life expectancy
+ compared to dialysis.
+ Prior to transplantation, donor-recipient compatibility is maximized in
+ hopes of better outcomes.
+ However, there is a scarcity of tools capable of accurately forecasting
+ long-term post-transplant outcomes.
+ This thesis attempts to bridge this gap.
+ In this thesis, we will train several machine learning models to predict
+ the post-transplant outcomes in terms of survival function.
+ Leveraging trained machine learning models, we aim to develop an application
+ to aid clinicians in decision-making.
+ 
+\end_layout
+
+\begin_layout Standard
+In Chapter 2, we dive into the medical aspects of transplantation to better
+ understand the domain.
+ Specifically, we will review the characteristics of the kidney, common
+ causes of kidney failure, clinical aspects of kidney transplantation, history
+ of kidney transplantation, and immunology of kidney transplantation.
+ We aim to provide a comprehensive description of the relevant medical concepts
+ and principles related to kidney transplantation.
+\end_layout
+
+\begin_layout Standard
+In Chapter 3, we explore the fields of machine learning and survival analysis.
+ We review the main branches of ML, including but not limited to supervised
+ and unsupervised learning, and touch upon the most prevalent algorithms
+ used in each.
+ Additionally, we discuss approaches to data preparation, model training,
+ and hyperparameter tuning in machine learning.
+ Lastly, we provide a comprehensive overview of survival analysis, classic
+ survival analysis methods, and machine-learning-based survival analysis
+ techniques.
+ 
+\end_layout
+
+\begin_layout Standard
+Chapter 4 is devoted to data.
+ In this chapter, we intend to perform a comprehensive data analysis, including
+ examining value distributions and the influence of various features on
+ survival.
+ In addition to that, we describe the data acquisition process, data loading,
+ and preprocessing pipeline, along with the feature engineering process.
+ 
+\end_layout
+
+\begin_layout Standard
+In Chapter 5, we present the results of our study.
+ It includes the models we trained for the deceased and living donor subgroups
+ and their thorough evaluation.
+ As part of this, we examine their performance metrics and analyze how they
+ evolve over time.
+ Moreover, we analyze the feature importance to gain a better understanding
+ of the factors that drive the models' predictions.
+ Furthermore, we compare the models based on their training experience and
+ practicality.
+ 
+\end_layout
+
+\begin_layout Standard
+In Chapter 6, we present KidneyLife, an inference application designed to
+ facilitate the user-friendly use of machine learning models for survival
+ analysis.
+ The application aims to aid physicians in the decision-making process by
+ providing a comprehensive estimate of a kidney transplant recipient's life
+ expectancy.
+ We will explain its architecture and design considerations, and discuss
+ existing software for KT.
+ 
 \end_layout
 
 \begin_layout Chapter
@@ -7781,154 +7842,6 @@ Survival analysis provides a suite of techniques for the prediction of a
 \end_layout
 
 \begin_layout Section
-Deep Learning 
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Deep-Learning"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-No deep learning, the paper is already too long.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-universal approximation theorem
-\end_layout
-
-\begin_layout Plain Layout
-architecture
-\end_layout
-
-\begin_layout Plain Layout
-weights/parametersr
-\end_layout
-
-\begin_layout Plain Layout
-independent variable
-\end_layout
-
-\begin_layout Plain Layout
-loss
-\end_layout
-
-\begin_layout Plain Layout
-poistive feedback loop -> bias
-\end_layout
-
-\begin_layout Plain Layout
-architecture is not that important - don't spend much time on thinking about
- it.
-\end_layout
-
-\begin_layout Plain Layout
-metric for humans, loss for algos
-\end_layout
-
-\begin_layout Plain Layout
-it is better to always use pretrained models
-\end_layout
-
-\begin_layout Plain Layout
-head of the nn - last layer
-\end_layout
-
-\begin_layout Plain Layout
-transfer learning, pretrained models
-\end_layout
-
-\begin_layout Plain Layout
-fine-tuning the model (in transfer learning)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-What is neuron
-\end_layout
-
-\begin_layout Plain Layout
-epoch
-\end_layout
-
-\begin_layout Plain Layout
-fitting the model
-\end_layout
-
-\begin_layout Plain Layout
-Activation Function
-\end_layout
-
-\begin_layout Plain Layout
-Optimisation Process
-\end_layout
-
-\begin_layout Plain Layout
-Backpropagation
-\end_layout
-
-\begin_layout Plain Layout
-Gradient Descent
-\end_layout
-
-\begin_layout Plain Layout
-Stochastic Gradient Descent
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Feed Forward Neural Networks
-\end_layout
-
-\begin_layout Standard
-Recurrent Neural Networks
-\end_layout
-
-\begin_layout Standard
-Generative Models for Survival Analysis
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-I am going to use survival FFNN, likely DeepSurv
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
 Overview of Machine Learning Libraries and Tools 
 \begin_inset CommandInset label
 LatexCommand label
@@ -7937,10 +7850,6 @@ name "sec:Overview-of-Machine"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-for the survival analysis the python library scikit-survival was used
 \end_layout
 
 \begin_layout Standard
@@ -8019,14 +7928,6 @@ it is more research driven
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Comparison
-\end_layout
-
-\begin_layout Section
-Conclusion
 \end_layout
 
 \begin_layout Chapter
@@ -8914,7 +8815,7 @@ IQR
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9845,7 +9746,7 @@ end{table}
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -9880,7 +9781,7 @@ ETHCAT deceased pie chart
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -10267,7 +10168,7 @@ end{table}
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -10301,7 +10202,7 @@ Pie Chart for Gender, Diab and ABO match in living subgroup
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -10345,7 +10246,11 @@ Feature Engineering
 \end_layout
 
 \begin_layout Itemize
-a
+dialysis time - good
+\end_layout
+
+\begin_layout Itemize
+differences in height, weight, bmi, and age provided only negative importance.
 \end_layout
 
 \begin_layout Standard
@@ -10615,8 +10520,9 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
-svm is good for small datasets, but in our case the training takes too long
- so we will not spend time trying to optimize it
+svm is good for small datasets, but in our case the training took too long
+ even in dataset with 1000 of instances, so we did not not spend time trying
+ to optimize it.
 \end_layout
 
 \end_inset
@@ -10629,29 +10535,40 @@ Results
 \end_layout
 
 \begin_layout Standard
-In total, six models were finetuned and trained, three for each demographic.
- The following models from 
-\emph on
-scikit-surviva
-\emph default
-l were chosen: CoxnetSurvivalAnalysis (Cox Elastic Net, later referred to
- as coxnet), RandomSurvivalForest (RSF) and GradientBoostedSurvivalAnalysis
- (GBSA).
- Two of them were trained locally (Coxnet and GBSA) and one (RSF) was trained
- on a cluster.
- Our personal favourite is coxnet, as it only takes anywhere from 30 seconds
- to 3 minutes to train it and the performance is on par with models that
- take a couple of hours to train.
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-maybe there should not be personal favourites?)
+elaborate on the process of training if it wasn't done before.
+ the process and the approach was taken from the book.
+ (the one with the dropping features with negative importance.
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+In this study, six models were fine-tuned and trained, three for each demographi
+c.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+reader doesn't know about living/deceasd
+\end_layout
+
+\end_inset
+
+ We utilized the CoxnetSurvivalAnalysis (Cox Elastic Net, later referred
+ to as coxnet), Random Survival Forest (RSF), and GradientBoostedSurvivalAnalysi
+s (GBSA) models from the scikit-survival library.
+ Two models were trained locally (Coxnet and GBSA), and one was trained
+ on a cluster (RSF).
+ Our preferred model is Coxnet due to its impressive performance and relatively
+ short training time of 30 to 180 seconds, compared to other models that
+ can take several hours to train.
 \end_layout
 
 \begin_layout Standard
@@ -10715,7 +10632,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -10948,7 +10865,7 @@ name "tab:living-comparison"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -11188,7 +11105,7 @@ In living the winner is coxnet, although it has the same discrimination
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -11313,7 +11230,7 @@ maybe two figures in a row not the best for such graphics.
 
 \end_inset
 
-As time-dependent metrics, ROC AUC and Brier Score we chosen.
+As time-dependent metrics, ROC AUC and Brier Score were chosen.
  Please, look at the Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -11330,7 +11247,7 @@ noprefix "false"
  From day 1000 to 2800 RSF performs better, then from day 2900 to day 4000
  coxnet and GBSA overperform RSF.
  From day 4000 to 5000 all models perform similarly, except for small rise
- of coxnet and gbsa, which later converges back with RSF.
+ of coxnet and GBSA, which later converges back with RSF.
  Day 5000 to 6000 RSF outperforms the two models again.
  RSF outperforms coxnet and GBSA on 3/5 of the timeline, underperforms on
  1/5 and is mostly similar on 1/5.
@@ -11340,7 +11257,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -11478,7 +11395,7 @@ noprefix "false"
 \end_inset
 
  we can see time-dependent Brier scores for all living models.
- Coxnet and GBSA here are identical, despite different learners.
+ Coxnet and GBSA here are identical, despite being different learners.
  We had to adjust visualization settings for the other to be seen.
  RSF curve is slightly higher than the two, meaning that overall performance
  is slightly worse, despite mostly superior descrimination on the previous
@@ -11513,8 +11430,8 @@ noprefix "false"
 \end_inset
 
 .
- Just as with living the performance of coxnet and GBSA is identical, but
- RSF is slightly worse, although by a small margin.
+ Just as with the living the performance of coxnet and GBSA is identical,
+ but RSF is slightly worse, although by a small margin.
  
 \end_layout
 
@@ -11549,6 +11466,19 @@ However deceased RSF might be slightly undertrained.
  But we don't see the point of training it on the whole dataset as before
  there was no difference whether training on the whole dataset, or training
  on the 1000 instances.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+let us look at each of those models individually
 \end_layout
 
 \end_inset
@@ -11624,8 +11554,8 @@ feature importance
 \end_layout
 
 \begin_layout Standard
-Coxnet, also known as an elastic net, is a linear model, so it is fast even
- with large datasets.
+Coxnet, also known as a cox elastic net, is a linear model, so it is fast
+ even with large datasets.
  It is extremely pleasant to work with, as it is extremely fast even with
  large datasets even on PCs.
  The performance is impressive as well.
@@ -11869,7 +11799,7 @@ and
  At both high (0.9) and low (<0.1) values of L1 ration those values were about
  the same.
  But we left l1=0.9, as according to the scikit-learn's documentation it
- will make the net more stable.
+ should make the net more stable.
 \end_layout
 
 \begin_layout Standard
@@ -11906,12 +11836,13 @@ rewrite a bit so that we understand that the code from documentation was
 \end_layout
 
 \begin_layout Standard
-The importance of over 60 features was examined with permutation importance,
- only a fraction of them had any importance.
+The importance of over 60 features was examined with the permutation importance
+ method.
+ Only a fraction of them had any importance.
  Those with negative and zero importance were removed, increasing model
  performance.
  HLA interestingly had no influence on long-term survival (they were removed
- and the performance improved).
+ and the model performance improved).
  Just like Terasaki noted in 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -11948,13 +11879,25 @@ noprefix "false"
  Although it a bit differs from permutation importance, the overall idea
  is the same.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+the hell is with that.
+ Why do we use different feature importance measurements and why do you
+ call coeficient importance 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -11968,7 +11911,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Feature Importance for Coxnet Living
+Feature Coeficient Importance for Coxnet Living
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:FI-forCoxnet-Living"
@@ -11996,7 +11939,7 @@ name "fig:FI-forCoxnet-Living"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12010,7 +11953,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Feature Importance for Coxnet Deceased
+Feature Coefficient Importance for Coxnet Deceased
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:FI-for-Coxnet-Deceased"
@@ -12097,8 +12040,8 @@ The reason we need scikit-learn pipeline transformers is because we needed
  and we did not want to develop one from the ground up.
  What we do is we pickle the pipeline used during model training and then
  use it in production.
- Implying that we need to retrain model with scikit-learn pipeline, if we
- want to use it in production.
+ This implies that we need to retrain model with scikit-learn pipeline,
+ if we want to use it in production.
  The way of preprocessing does not influence performance.
 \end_layout
 
@@ -12475,7 +12418,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12723,6 +12666,10 @@ name "fig:RSF-feature-importance-deceased"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 You can see the feature importances on Figures 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12785,7 +12732,7 @@ change to real
 .
  Both on the 50 estimators.
  Upping the estimators is a potential avenue to improvement, but one would
- need to be careful not to overfit the model.
+ need to be careful to not overfit the model.
  And that would take a lot of time: 200 estimators would require 4 hours
  of training and we might just overfit the model, or run out of RAM.
  Overfitting can be avoided with regularization, but we highly doubt that
@@ -13442,6 +13389,19 @@ name "fig:GBSA-deceased-feature"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add training curve
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Scoring algorithm
 \end_layout
@@ -13479,13 +13439,22 @@ Limitations
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 these models probably aren't suitable for KEP (check results), bc they're
  slow, but are good for prediction estimated survival and when it is best
  to intervene.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 the RSF deceased could be better fine-tuned
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -13493,16 +13462,50 @@ Further work
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 more thorough hyperparameter tuning, especially with the RSF on the deceased
  dataset.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 another model for follow up data
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 deep survival neural network
+\end_layout
+
+\begin_layout Plain Layout
+Feed Forward Neural Networks
+\end_layout
+
+\begin_layout Plain Layout
+Recurrent Neural Networks
+\end_layout
+
+\begin_layout Plain Layout
+Generative Models for Survival Analysis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I am going to use survival FFNN, likely DeepSurv
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -13588,7 +13591,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
