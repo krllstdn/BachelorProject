@@ -5000,14 +5000,14 @@ Grid search
  combination of hyperparameters.
  The performance of each individual model is assessed using k-fold cross-validat
 ion and the best combination of hyperparameters is selected.
- This approach is used in sci-kit-learn's implementation - GridSearchCV.
+ This approach is used in scikit-learn's implementation - GridSearchCV.
 \end_layout
 
 \begin_layout Standard
 Grid search proves to be effective when dealing with relatively few hyperparamet
 er combinations.
  However, with larger number of hyperparameter combinations, it is advisable
- to use RandomizedSearch (RandomizedSearchCV in sci-kit-learn).
+ to use RandomizedSearch (RandomizedSearchCV in scikit-learn).
  This method is very similar to grid search but instead of trying every
  possible combination of provided values, it tests only a specified number
  of randomly selected hyperparameter combinations.
@@ -7870,7 +7870,7 @@ pandas
 \end_layout
 
 \begin_layout Subsection
-Sci-kit learn
+scikit learn
 \end_layout
 
 \begin_layout Plain Layout
@@ -10255,6 +10255,47 @@ differences in height, weight, bmi, and age provided only negative importance.
 
 \begin_layout Standard
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We attempted to do feature engineering with donor-recipient height, weight,
+ bmi and age differences inspired by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-47-naqvi"
+literal "false"
+
+\end_inset
+
+.
+ The introduction of these features actually worsened the performance, so
+ they were excluded.
+ The engineered feature that actually improved the performance is the number
+ of days patient was on dialysis (DIALYSIS_TIME), inspired by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-48-aufhauser"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Maybe move this paragraph to chapter 4 to feature engineering section
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10379,6 +10420,16 @@ not true anymore.
  It is impossible to predict the number of days survived with regression
  methods based on a dataset comprised of both living and deceased patients.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+change the last sentence
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10394,6 +10445,15 @@ and signifficantly reduce the dataset
 .
  We could remove all censored instances, but that would reduce the dataset
  from 500 000 to roughly 120 000 examples.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+omit the actual numbers
+\end_layout
+
+\end_inset
+
  It would also introduce significant bias, as the dataset would contain
  only deceased patients, and most of them passed away before the introduction
  of modern techniques for treating the rejection.
@@ -10450,84 +10510,79 @@ vic to rozvest
 \end_layout
 
 \begin_layout Section
-Model selection
+Model Selection and Training Approach
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-# Ideas
-\end_layout
-
-\begin_layout Plain Layout
-- train coxnet on the whole dataset
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The algorithms provided by the scikit-survival do not handle large datasets
- very well (never-ending 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-write it better, as never-ending is not very formal
-\end_layout
-
-\end_inset
-
- training process and worse results probably due to the noise) that is why
- we chose to train different models for different demographics, as one specific
- model for one specific demographic will perform better that one model trained
- for all demographics.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-not so definitive
-\end_layout
-
-\end_inset
-
- In addition, the living donor transplantation a bit differs from the diseased
- donor transplantation, that might introduce some noice into the model.
+In our study, we utilized the algorithms from the scikit-survival library
+ to train our models.
+ When choosing the models that we would fully train and fine-tune in the
+ end, we tried the majority of the models that scikit survival offers on
+ a small subset of the dataset and chose the ones that perform best while
+ taking adequate amounts of time.
+ Despite SVM-based models demonstrating superior performance on the small
+ subset of data, we decided against using them due to their inherent inability
+ to handle large datasets, which results in extended training times and
+ frequent crashes when attempting to train on the slightly larger subset,
+ not even mentioning the entire training set.
+ 
 \end_layout
 
 \begin_layout Standard
-The way we approach the model selection model automation with the class
- SurvivalEstimators defined in 
-\begin_inset CommandInset href
-LatexCommand href
-name "estimator_automation.py"
-target "https://github.com/krllstdn/BachelorProject/blob/main/Code/surv_data_pipeline/estimator_automation.py"
+After rigorous experimentation, we ultimately selected Random Survival Forest
+ (RSF) and Gradient Boosted Survival Analysis (GBSA) as our preferred models.
+ These are ensemble models that have been widely recognized for their high
+ accuracy and robustness despite prolonged training time.
+ We also explored CoxnetSurvivalAnalysis (Cox Elastic Net, later referred
+ to as coxnet), which demonstrated a notably low training time, which gave
+ us the freedom to experiment with less time invested compared to the other
+ models.
+ Further research led us to discover an approach to training the Coxnet
+ in the scikit survival documentation
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-25"
 literal "false"
 
 \end_inset
 
-.
- We ran the following class and short listed the most promising models.
- In this case it is survival gradient boosting and random survival forests.
-\end_layout
-
-\begin_layout Standard
+, which offered comparable performance to other models, requiring only a
+ small fraction of the training time and computational resources.
+ This showed that the Cox Elastic Net is more than a viable alternative
+ to powerful and robust ensemble models, especially when time and computational
+ resources are limited.
+ 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-svm is good for small datasets, but in our case the training took too long
- even in dataset with 1000 of instances, so we did not not spend time trying
- to optimize it.
+add a link to the documentation
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+However, we encountered some challenges due to the relatively large dataset,
+ even after all exclusion criteria and the removal of NaN values.
+ RSF and GBSA demonstrated a long training time and high computational demands.
+ The latter resulted in frequent kernel crashes in our Jupyter notebooks
+ after long hours of training.
+ To mitigate these issues, we decided to divide our dataset based on living
+ and deceased donors and to reduce the amount of used features.
+ The models were trained for each subset separately.
+ To reduce the number of features, we trained models on smaller subsets
+ of data and removed ones that showed negative or zero feature importance.
+ This approach allowed us to account for features unique to a particular
+ subset (KDPI for deceased and LIV_DON_TY for living) and to tailor our
+ models to a specific type of transplantation.
+ Sizes of the resulting datasets are as follows: 53,082 instances in living
+ (42,465 in training), and 117,536 instances in deceased (94,028 training).
+ By training separate models for each subset, we were able to develop potentiall
+y more accurate and effective models.
+ 
 \end_layout
 
 \begin_layout Section
@@ -10539,9 +10594,7 @@ Results
 status open
 
 \begin_layout Plain Layout
-elaborate on the process of training if it wasn't done before.
- the process and the approach was taken from the book.
- (the one with the dropping features with negative importance.
+cox elastic net is Regularized cox models
 \end_layout
 
 \end_inset
@@ -10550,52 +10603,32 @@ elaborate on the process of training if it wasn't done before.
 \end_layout
 
 \begin_layout Standard
-In this study, six models were fine-tuned and trained, three for each demographi
-c.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-reader doesn't know about living/deceasd
-\end_layout
-
-\end_inset
-
- We utilized the CoxnetSurvivalAnalysis (Cox Elastic Net, later referred
- to as coxnet), Random Survival Forest (RSF), and GradientBoostedSurvivalAnalysi
-s (GBSA) models from the scikit-survival library.
+In this study, six models were fine-tuned and trained, three for each subset.
+ We utilized the Cox Elastic Net, Random Survival Forest, and GradientBoostedSur
+vivalAnalysis models from the scikit-survival library.
  Two models were trained locally (Coxnet and GBSA), and one was trained
- on a cluster (RSF).
- Our preferred model is Coxnet due to its impressive performance and relatively
- short training time of 30 to 180 seconds, compared to other models that
- can take several hours to train.
+ in a cluster (RSF).
+ The preferred model identified in this study was Coxnet, due to its impressive
+ performance and relatively short training time of 30 to 180 seconds, compared
+ to other models that can take several hours to train.
+ 
 \end_layout
 
 \begin_layout Standard
-The dataset was divided in two subsets: with living and deceased donors.
- RSF and SGBA did not handle large dataset well neither locally, nor on
- university cluster.
- Jupyter Notebook kernel crashes due insufficient memory during training
- (we had 384GB RAM!) and prolonged training time were a common thing.
- Moreover, some features are available only for one subset (KDPI for deceased
- and LIV_DON_TY for living).
- Sizes of the resulting datasets are as follows: 53,082 instances in living
- (42,465 in training), and 117,536 instances in deceased (94,028 training).
-\end_layout
-
-\begin_layout Standard
-Unfortunately, the older version of scikit-survival was used on the cluster
- - 0.14.0, due to the limitation in python version on cluster where these
- models were trained (3.6.8).
- Locally was used latest at the time 0.22.1.
+It is important to note that the older version of scikit-survival was used
+ on the cluster - 0.14.0, due to the limitation in the Python version on the
+ cluster where these models were trained (3.6.8).
+ Locally, the latest version at time 0.22.1 was used.
  This fact will later have some implications.
+ 
 \end_layout
 
 \begin_layout Standard
-As numerical performance measures, Uno concordance index (c-index), integrated
- Brier Score (IBS), and mean cumularive/dynamic area under curve (AUC) were
- chosen.
- On Tables 
+As numerical performance measures, the Uno concordance index (c-index),
+ integrated Brier score (IBS), and the mean cumulative/dynamic area under
+ curve (AUC) were chosen.
+ The performance of trained models for living and deceased datasets can
+ be observed in Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:living-comparison"
@@ -10615,16 +10648,14 @@ noprefix "false"
 
 \end_inset
 
- you can see the performance of trained models for living and deceased datasets
- respectively.
- As can be seen, the deceased models perform slightly worse than living
- ones.
+ As can be seen, the deceased models perform worse than the living ones.
  Moreover, models have more or less the same performance for the same dataset,
- meaning that models were trained well and they capture data well.
- The only potential way, therefore, to improve the performance is to expand
+ which might mean that models capture data well and the only bottleneck
+ is the dataset.
+ Consequently, the only potential way to improve the performance is to expand
  the dataset with further feature engineering.
- More detail on the training of each model you can find in the corresponding
- section further.
+ For more detailed information on the training of each model, please refer
+ to the corresponding section from the following sections.
  
 \end_layout
 
@@ -10632,7 +10663,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -10865,7 +10896,7 @@ name "tab:living-comparison"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -11095,8 +11126,9 @@ name "tab:deceased-comparison"
 \end_layout
 
 \begin_layout Standard
-In living the winner is coxnet, although it has the same discrimination
- ability as RSF, the overall performance (IBS) is better.
+In living, the winner is coxnet, because despite the fact that it has the
+ same discrimination ability (c-index and mean AUC) as RSF, the overall
+ performance (IBS) is better.
  For deceased, the winner is GBSA: it slightly outperforms other models
  across all metrics.
 \end_layout
@@ -11121,7 +11153,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align left
@@ -11230,8 +11262,12 @@ maybe two figures in a row not the best for such graphics.
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 As time-dependent metrics, ROC AUC and Brier Score were chosen.
- Please, look at the Figure 
+ Please, look at Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:AUC-living"
@@ -11242,15 +11278,14 @@ noprefix "false"
 \end_inset
 
 , where we can see the plot of AUC over time for all living models.
- Despite the fact that the mean AUCs are almost identical, the acuracy over
- time varies.
+ Even though the mean AUCs are almost identical, values vary over time.
  From day 1000 to 2800 RSF performs better, then from day 2900 to day 4000
  coxnet and GBSA overperform RSF.
- From day 4000 to 5000 all models perform similarly, except for small rise
- of coxnet and GBSA, which later converges back with RSF.
+ From day 4000 to 5000 all models perform similarly, except for a small
+ rise of coxnet and GBSA, which later converges back with RSF.
  Day 5000 to 6000 RSF outperforms the two models again.
- RSF outperforms coxnet and GBSA on 3/5 of the timeline, underperforms on
- 1/5 and is mostly similar on 1/5.
+ RSF outperforms Coxnet and GBSA on 3/5 of the timeline, underperforms on
+ 1/5, and is mostly similar on 1/5.
 \end_layout
 
 \begin_layout Standard
@@ -11384,7 +11419,7 @@ Time dependent Brier and AUC scores for all deceased models
 \end_layout
 
 \begin_layout Standard
-At Figure 
+In Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:BS-living"
@@ -11395,15 +11430,16 @@ noprefix "false"
 \end_inset
 
  we can see time-dependent Brier scores for all living models.
- Coxnet and GBSA here are identical, despite being different learners.
- We had to adjust visualization settings for the other to be seen.
- RSF curve is slightly higher than the two, meaning that overall performance
- is slightly worse, despite mostly superior descrimination on the previous
+ Coxnet and GBSA here are identical, despite having different learners.
+ We had to adjust the visualization settings for the other to be seen.
+ The RSF curve is slightly higher than the two, meaning that overall performance
+ is slightly worse, despite mostly superior discrimination in the previous
  graph.
+ 
 \end_layout
 
 \begin_layout Standard
-On the Figure 
+In the Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:AUC-deceased"
@@ -11413,9 +11449,11 @@ noprefix "false"
 
 \end_inset
 
- we can see that GBSA shows superior descriminative ability to RSF and Coxnet.
- Coxnet is in the middle and RSF shows the worst performance.
- While all rise over time in similar fashion.
+ we can see the AUC graph for the deceased models.
+ GBSA shows superior discriminative ability, Coxnet is in the middle, and
+ RSF shows the worst performance.
+ Although all similarly rise over time.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -11429,48 +11467,24 @@ noprefix "false"
 
 \end_inset
 
-.
- Just as with the living the performance of coxnet and GBSA is identical,
- but RSF is slightly worse, although by a small margin.
+, where the Brier Score is plotted for the deceased models.
+ Similarly to living, the performance of Coxnet and GBSA is identical, but
+ RSF is slightly worse, although by a small margin.
  
 \end_layout
 
 \begin_layout Standard
-Conclusion: For living, RSF shows slightly superior discrimination (AUC),
- but the overall prediction accuracy (BS) is inferior to coxnet and GBSA.
- For deceased, GBSA shows superior discrimination to coxnet and RSF, but
- the prediction accuracy (BS) is the same for GBSA and coxnet, and worse
+In conclusion, for the living, RSF shows slightly superior discrimination
+ (AUC), but the overall prediction accuracy (BS) is inferior to Coxnet and
+ GBSA.
+ For the deceased, GBSA shows superior discrimination to Coxnet and RSF,
+ but the prediction accuracy (BS) is the same for GBSA and Coxnet, and worse
  for RSF.
- Overall, we would choose coxnet for both living and deceased due to the
- low training time
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-, high prediction speed
-\end_layout
-
-\end_inset
-
-, but if the training time was not a concern we would choose GBSA for deceased
- due to slightly higher discrimination ability.
- (for living still coxnet)
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-However deceased RSF might be slightly undertrained.
- But we don't see the point of training it on the whole dataset as before
- there was no difference whether training on the whole dataset, or training
- on the 1000 instances.
-\end_layout
-
-\end_inset
-
-
+ Overall, Coxnet is preferred for both living and deceased due to its low
+ training time.
+ However, if training time is not a concern, GBSA may be preferred for the
+ deceased cohort due to its slightly higher discriminative ability.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -11505,59 +11519,8 @@ the way of scaling (pipeline or standrd sksurv function) is not important
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-Overview
-\series default
-+experience:
-\end_layout
-
-\begin_layout Plain Layout
-
-\series bold
-Finetuning
-\series default
-:
-\end_layout
-
-\begin_layout Plain Layout
-
-\series bold
-training
-\series default
-:
-\end_layout
-
-\begin_layout Plain Layout
-
-\series bold
-feature selection
-\series default
-:
-\end_layout
-
-\begin_layout Plain Layout
-
-\series bold
-feature importance
-\series default
-:
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Coxnet, also known as a cox elastic net, is a linear model, so it is fast
- even with large datasets.
- It is extremely pleasant to work with, as it is extremely fast even with
- large datasets even on PCs.
+Coxnet, also known as a Cox elastic net, or Cox regularized regression,
+ is a linear model known for its ability to handle large datasets efficiently.
  The performance is impressive as well.
  
 \end_layout
@@ -11758,7 +11721,7 @@ name "tab:Coxnet-performance"
 \end_layout
 
 \begin_layout Standard
-As can be seen in the table 
+As can be seen in the Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Coxnet-performance"
@@ -11771,21 +11734,27 @@ noprefix "false"
 , the Coxnet performed the best for the living group, the worst for the
  deceased.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Speculations why
 \end_layout
 
-\end_inset
-
-
+\begin_layout Paragraph
+Hyperparameters
 \end_layout
 
 \begin_layout Standard
-The coxnet has only two hyperparameters: L1 ratio and alpha.
- L1 ratio defines the relative weight of the 
+The coxnet has only two hyperparameters: 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ ratio and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ ratio defines the relative weight of the 
 \begin_inset Formula $l_{1}$
 \end_inset
 
@@ -11794,16 +11763,53 @@ and
 \end_inset
 
  penalty.
- We did not found any difference in c_index, IBS or mean_auc in choosing
- the l1 ratio.
- At both high (0.9) and low (<0.1) values of L1 ration those values were about
+ We have found that the choice of 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ ratio did not significantly impact the c-index, IBS, or mean AUC values.
+ At both high (0.9) and low (<0.1) values of L1 ratio those values were about
  the same.
- But we left l1=0.9, as according to the scikit-learn's documentation it
- should make the net more stable.
+ However, a higher value of 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ ratio (0.9) was selected for stability purposes, as suggested by the documentati
+on of the scikit survival library
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-25"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
-The alpha is calculated by fitting the model and choosing the best of them.
+To find the best 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ we used the approach from the documentation
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-25"
+literal "false"
+
+\end_inset
+
+.
+ In short, it is calculated by fitting the model and choosing 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ that generalizes best from the resulting list 
+\emph on
+CoxnetSurvivalAnalysis._alphas
+\emph default
+.
  As was covered in 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -11816,34 +11822,24 @@ noprefix "false"
 
 , the hyperparameter tuning is usually performed with either GridSearch
  or RandomizedSearch.
- Initially, we trained coxnet on the cluster and with that version of scikit-sur
-vival it was not possible to use GridSearchCV, so we coded our own but without
- cross-validation.
- However, as we learned that we can train the coxnet model locally, we migrated
- to the GridSearchCV version defined in scikit-survival's documentation.
+ As there are not many alphas, we used GridSearchCV from scikit learn to
+ find the best one.
  
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-rewrite a bit so that we understand that the code from documentation was
- used
 \end_layout
 
-\end_inset
-
-
+\begin_layout Paragraph
+Feature importance
 \end_layout
 
 \begin_layout Standard
-The importance of over 60 features was examined with the permutation importance
- method.
+The importance of more than 60 features was examined with the permutation
+ importance method.
  Only a fraction of them had any importance.
- Those with negative and zero importance were removed, increasing model
- performance.
- HLA interestingly had no influence on long-term survival (they were removed
- and the model performance improved).
- Just like Terasaki noted in 
+ Those of negative and zero importance were removed, increasing model performanc
+e.
+ Interestingly, HLA had little influence on long-term survival, so they
+ were removed and the model performance improved.
+ This is similar to what was noted by Terasaki in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Tissue-Typing"
@@ -11854,7 +11850,8 @@ noprefix "false"
 \end_inset
 
 .
- On the Figures 
+ The coefficients from the trained models, which represent feature importance,
+ are visualized in Figures 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:FI-forCoxnet-Living"
@@ -11874,23 +11871,7 @@ noprefix "false"
 
 \end_inset
 
- we can see the feature importances for living and deceased subsets in form
- of visualized coeficient from the trained models.
- Although it a bit differs from permutation importance, the overall idea
- is the same.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-the hell is with that.
- Why do we use different feature importance measurements and why do you
- call coeficient importance 
-\end_layout
-
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -11978,8 +11959,12 @@ name "fig:FI-for-Coxnet-Deceased"
 \end_layout
 
 \begin_layout Standard
-As we can see, the most predictive features are patient's diabetes status,
- age, ethinicity, hepatitis C status, and dialysis.
+As we can see, the most predictive features are the patient's diabetes status,
+ age, ethnicity, hepatitis C status, and dialysis.
+\end_layout
+
+\begin_layout Paragraph
+Feature Engineering
 \end_layout
 
 \begin_layout Standard
@@ -12005,44 +11990,43 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Maybe move this paragraph to chapter 4 to feature engineering section
 \end_layout
 
-\end_inset
-
-
+\begin_layout Paragraph
+Data Pipelines
 \end_layout
 
 \begin_layout Standard
-The two ways of data preprocessing are employed depending on a context:
- one with scikit-learn pipeline transformers, the other with scikit-survival
- functions.
+Data preprocessing is a critical step in machine learning, particularly
+ for improving the accuracy and reliability of models.
+ The two ways of data preprocessing are employed depending on the context:
+ scikit-learn pipeline transformers, and the scikit-survival functions.
  The former is used for KidneyLife production, while the latter is used
- for training and analysing the feature importances.
+ for training and analyzing the feature importances.
  
 \end_layout
 
 \begin_layout Standard
-Scikit-learn transformers produce numpy array instead of pandas dataframe,
- meaning the column names are not preserved.
- Moreover, the number of columns in outputs are different, so we could not
- just copy the column names from one to the other, making the analysis of
- feature importances virtually impossible.
+Scikit-learn transformers produce a numpy array, while scikit-survival functions
+ output pandas data frame, which means that the column names are not preserved
+ with the former.
+ Moreover, the way of processing and the number of columns in outputs are
+ different, so we could not just copy the column names from one to the other.
+ As a result, the analysis of feature importances with transformers is virtually
+ impossible.
+ 
 \end_layout
 
 \begin_layout Standard
-The reason we need scikit-learn pipeline transformers is because we needed
- a pipeline that produces consistent results for production environment
- and we did not want to develop one from the ground up.
- What we do is we pickle the pipeline used during model training and then
- use it in production.
- This implies that we need to retrain model with scikit-learn pipeline,
- if we want to use it in production.
- The way of preprocessing does not influence performance.
+The reason for employing scikit-learn pipeline transformers is because we
+ needed a pipeline that produces consistent results in the production environmen
+t.
+ Rather than developing a pipeline from scratch, the transformer pipeline
+ used during model training is pickled and then used in production.
+ However, this also means that if the model is to be used in production,
+ it needs to be retrained using scikit-learn pipeline transformers.
+ It is worth noting that the approach to preprocessing does not affect model
+ performance.
 \end_layout
 
 \begin_layout Subsection
@@ -14530,7 +14514,7 @@ There are several avenues for enhancing the application's functionality
  and user experience.
  First, integrating additional machine learning models is a promising avenue
  for providing more comprehensive and accurate predictions.
- While models mostly from Sci-Kit survival were used in this work, other
+ While models mostly from scikit survival were used in this work, other
  packages, such as lifelines, can offer a wider range of survival analysis
  models.
 \end_layout
