@@ -10867,61 +10867,61 @@ name "fig:Pie-Living-donor"
 \end_layout
 
 \begin_layout Section
-Dataset building, Exclusion criteria and noice reduction
+Dataset building, Exclusion Criteria and Noice Reduction
+\end_layout
+
+\begin_layout Paragraph
+Exclusion Criteria
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Exclude
+Children and people who died from unrelated reasons were removed from the
+ datasets.
+ Although it would probably we wiser to censor them.
+ 
 \end_layout
 
-\begin_layout Itemize
-children
-\end_layout
-
-\begin_layout Itemize
-people who died from unrelated reasons (suicide, trauma, etc.)
-\end_layout
-
-\begin_layout Plain Layout
-Divide the dataset into two parts: deceased and living
-\end_layout
-
-\begin_layout Plain Layout
-handling missing values: rows with missing values are just removed, as there's
- a lot of data.
-\end_layout
-
-\begin_layout Plain Layout
-list features used for living and deceased
-\end_layout
-
+\begin_layout Standard
+Records with some categorical values were removed.
+ Particularly, categories of type 
+\begin_inset Quotes sld
 \end_inset
 
+Unknown
+\begin_inset Quotes srd
+\end_inset
 
+, 
+\begin_inset Quotes sld
+\end_inset
+
+Not Done
+\begin_inset Quotes srd
+\end_inset
+
+ and others that imply the unknown condition of the feature.
+ Records with such values introduced noice to the models, and as a result
+ the performance was hindered.
+ We only used records with these values for training of the deployment models,
+ as such options may be useful in the application.
+\end_layout
+
+\begin_layout Paragraph
+Handling of missing values
+\end_layout
+
+\begin_layout Standard
+Rows with missing values were removed.
+ Mean imputation introduced a signifficant bias to the model.
+ Due to a relative abundance of data it was decided to remove rows with
+ missing values.
 \end_layout
 
 \begin_layout Section
 Feature Engineering
 \end_layout
 
-\begin_layout Itemize
-dialysis time - good
-\end_layout
-
-\begin_layout Itemize
-differences in height, weight, bmi, and age provided only negative importance.
-\end_layout
-
 \begin_layout Standard
-.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 We attempted to do feature engineering with donor-recipient height, weight,
  bmi and age differences inspired by 
 \begin_inset CommandInset citation
@@ -10932,7 +10932,7 @@ literal "false"
 \end_inset
 
 .
- The introduction of these features actually worsened the performance, so
+ The introduction of these features actually impaired the performance, so
  they were excluded.
  The engineered feature that actually improved the performance is the number
  of days patient was on dialysis (DIALYSIS_TIME), inspired by 
@@ -10944,25 +10944,6 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Maybe move this paragraph to chapter 4 to feature engineering section
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-sd
 \end_layout
 
 \begin_layout Chapter
