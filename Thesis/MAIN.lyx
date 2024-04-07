@@ -3078,6 +3078,23 @@ write some conclusion to the chapter
 
 \end_layout
 
+\begin_layout Section
+Future of Kidney Transplantation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+lab grown organs, ghost organs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Machine Learning Background
 \end_layout
@@ -8102,6 +8119,16 @@ Data Loading
 \begin_layout Standard
 The data were provided as a MongoDB database dump.
  Unfortunately, the database dump alone was insufficient for data analysis.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I don't like the sentence.
+ Remove it or connect with another.
+\end_layout
+
+\end_inset
+
  It was necessary to run the database, import the database dump, and export
  data in the appropriate format.
  We set up the MongoDB database in a Docker container (Docker explained
@@ -9632,7 +9659,7 @@ Deceased Group
 \end_layout
 
 \begin_layout Standard
-In the Table 
+In Table 
 \begin_inset ERT
 status open
 
@@ -9645,8 +9672,8 @@ ref{tab:desc_deceased}
 
 \end_inset
 
- you can see the statistics for the numerical values for the deceased subset.
- The deceased subset consists of 117568 records.
+ you will find the numerical value statistics for the deceased subset, which
+ includes a total of 117568 records.
  
 \end_layout
 
@@ -9810,7 +9837,7 @@ end{table}
 \end_layout
 
 \begin_layout Standard
-Table 
+Moving on to Table 
 \begin_inset ERT
 status open
 
@@ -9823,13 +9850,14 @@ ref{tab:yn_deceased}
 
 \end_inset
 
- shows the distribution for the categorical features of Yes/No type.
- As we can see, the majority of recepients of kidneys from deceased donors
- were on dialysis, did not receive blood transfusions and did not have diabetes.
+, we see the distribution of categorical Yes / No features.
+ As we can see, the majority of kidney recipients from deceased donors were
+ on dialysis, did not receive blood transfusions, and did not have diabetes.
  The fact that the majority of recipients from the deceased donor subset
- were on dyalisis can be attributed to the fact that probably the appropriate
- living donor was not found in time and the deceased donor kidney was received
+ were on dialysis may be attributed to the fact that the suitable living
+ donor was not found in time and the deceased donor's kidney was received
  more or less as a last resort.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -9960,14 +9988,16 @@ noprefix "false"
  shows the ethnicity distribution of individuals who received a kidney from
  a deceased donor.
  It is worth noting that Black recipients make up 31.1% of the total, despite
- representing only 12% of the US population.
- White recipients comprise 46.7% of the total, despite making up 60% of the
- US population.
- Hispanic/Latino recipients represent 14.8% of the total, despite being 18.5%
- of the overall US population.
- The only group with similar percentages are Asians/non-hispanic, who account
- for 5.9% of total deceased donor kidney recipients, which is nearly equivalent
+ constituting only 12% of the US population.
+ White recipients account for 46.7% of the total, despite representing 60%
+ of the US population.
+ Hispanic/Latino recipients represent 14.8% of the total, while 18.5% of the
+ overall US population.
+ The only group with similar percentages are Asians/non-Hispanic, who make
+ up 5.9% of total deceased donor kidney recipients, which is almost equivalent
  to their representation in the population at 5.6%.
+ The remaining ethnicities constitute only 1.5%.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10009,10 +10039,41 @@ name "fig:ETHCAT-deceased-pie"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pie-deceased-features"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows distributions for donor gender, donor diabetes, and hepatitis C status.
+ The gender distribution is similar to the full dataset.
+ 65.8% of the recipients do not have diabetes.
+ 33.5% have different forms of diabetes.
+ The diabetes status of the remaining 0.8% is unknown.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -10026,8 +10087,14 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Feature Frequencies In ...
- in Deceased Sub group
+Feature Frequencies in Deceased Sub group
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pie-deceased-features"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -10049,7 +10116,7 @@ Living Group
 \end_layout
 
 \begin_layout Standard
-In the Table 
+In Table 
 \begin_inset ERT
 status open
 
@@ -10063,8 +10130,8 @@ ref{tab:desc_living}
 \end_inset
 
  you can see the basic statistics for the numerical values for the living
- subset.
- The living subset contains 52420 records.
+ subset that contains 52420 records.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10255,7 +10322,7 @@ end{table}
 \end_layout
 
 \begin_layout Standard
-Table 
+Moving on, Table 
 \begin_inset ERT
 status open
 
@@ -10268,16 +10335,17 @@ ref{tab:ethcat_deceased}
 
 \end_inset
 
- depicts the ethnicity distributions of donors and recipients in the living
- donors group.
- Notably Whites constitute 65-68% of donors and recipients, more than in
- the deceased donor group and more than in the US population.
- (probably due to the fact that the pool of potential donors is way larger
- and it may be easier to find a match) Blacks are close to their percentage
+ presents the ethnicity distributions of donors and recipients in the living
+ donor group.
+ Notably, Whites constitute 65-68% of donors and recipients.
+ It is higher than the corresponding percentage in the deceased donor group
+ and in the US population, which may be attributed to the larger pool of
+ potential donors and the resulting relative ease of finding a match.
+ On the other hand, Blacks are close to their percentage in the population,
+ while the percentage of Hispanics/Latinos is lower than their percentage
  in the population.
- The percentage of Hispanic/Latino again is lower than their percentage
- of the population.
- Other ethicities constitute less than 2%.
+ Other ethnicities constitute less than 2%.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10451,30 +10519,17 @@ ref{tab:yn_living}
 
 \end_inset
 
- shows the amount of two Yes/No categories in the living donor subset.
- The distibution of ON_DYALISIS feature differs from the deceased donor
+ provides information on the distribution of two Yes/No categories in the
+ living donor subset, namely ON_DYALISIS and PRE_TX_TXFUS.
+ The distribution of the ON_DYALISIS feature differs from the deceased donor
  subset.
- Here, 
-\begin_inset Quotes sld
-\end_inset
-
-Yes
-\begin_inset Quotes srd
-\end_inset
-
- and 
-\begin_inset Quotes sld
-\end_inset
-
-No
-\begin_inset Quotes srd
-\end_inset
-
- are much closer to each other.
- This can be attributed to the fact that the chronic kidney disease was
- caught in time and the appropriate living donor was found before the use
- dialysis was needed.
- And again the receivers of the blood transfusions are in the minority.
+ Here, ”Yes” and ”No” are much closer to each other.
+ This can be attributed to the fact that chronic kidney disease was caught
+ in time and the appropriate living donor was found before the use of dialysis
+ was needed.
+ Furthermore, the data indicate that the receivers of blood transfusions
+ (PRE_TX_FUS) are in the minority.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10603,33 +10658,11 @@ ref{tab:np_living}
 
 \end_inset
 
- illustrates the distibution of recipient hepatitides.
+ illustrates the distribution of recipient hepatitides.
  Recipients tested negative for hepatitis C and B are in the majority.
- Categories 
-\begin_inset Quotes sld
-\end_inset
-
-Not Done
-\begin_inset Quotes srd
-\end_inset
-
- and 
-\begin_inset Quotes sld
-\end_inset
-
-Positive
-\begin_inset Quotes srd
-\end_inset
-
- are in the minority, hoverver, the amount of 
-\begin_inset Quotes sld
-\end_inset
-
-Not Done
-\begin_inset Quotes srd
-\end_inset
-
- for hepatitis B is rather signifficant.
+ Categories ”Not Done” and ”Positive” are in the minority; however, the
+ amount of ”Not Done” for hepatitis B is rather significant.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10762,14 +10795,15 @@ noprefix "false"
 
 \end_inset
 
- illustrates the distributions of GENDER, DIAB, ABO_MAT in the living donor
- subset.
- Gender distribution is the same as in the full dataset.
- 71.8% of recipients do not have diabetes, the remaining patients have some
- form of it.
- 3/4 of all transplants are of identical blood groups.
- 24% of living donor transplants are of compatible blood group.
- 1.4% are of incompatible blood groups
+ illustrates the distributions of GENDER, DIAB, and ABO_MAT in the living
+ donor subset.
+ The gender distribution is the same as in the full dataset.
+ Furthermore, 71.8% of recipients do not have diabetes; the remaining patients
+ have some form of it.
+ Additionally, three-quarters of all transplants are of identical blood
+ groups, while 24% of living donor transplants are of compatible blood groups,
+ and 1.4% are of incompatible blood groups.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10810,7 +10844,7 @@ name "fig:Pie-GENDER-DIAB-ABO"
 \end_layout
 
 \begin_layout Standard
-Figure 
+Finally, Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pie-Living-donor"
@@ -10822,6 +10856,7 @@ noprefix "false"
 
  shows the distribution of the living donor type feature that describes
  the biological/social relationship of a recipient to a donor.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10875,35 +10910,14 @@ Exclusion Criteria
 \end_layout
 
 \begin_layout Standard
-Children and people who died from unrelated reasons were removed from the
- datasets.
- Although it would probably we wiser to censor them.
- 
-\end_layout
-
-\begin_layout Standard
-Records with some categorical values were removed.
- Particularly, categories of type 
-\begin_inset Quotes sld
-\end_inset
-
-Unknown
-\begin_inset Quotes srd
-\end_inset
-
-, 
-\begin_inset Quotes sld
-\end_inset
-
-Not Done
-\begin_inset Quotes srd
-\end_inset
-
- and others that imply the unknown condition of the feature.
- Records with such values introduced noice to the models, and as a result
- the performance was hindered.
- We only used records with these values for training of the deployment models,
- as such options may be useful in the application.
+To ensure accuracy, certain exclusion criteria were applied to the datasets.
+ Individuals who were under the age of 18 or those who were deceased from
+ unrelated causes were removed.
+ While censoring may have been an option, this was deemed unnecessary.
+ Additionally, records with categorical values such as "Unknown" or "Not
+ Done" were removed as they added noise to the models and hindered performance.
+ However, these values were still used for training deployment models, as
+ they might be useful in the application.
 \end_layout
 
 \begin_layout Paragraph
@@ -10911,10 +10925,10 @@ Handling of missing values
 \end_layout
 
 \begin_layout Standard
-Rows with missing values were removed.
- Mean imputation introduced a signifficant bias to the model.
- Due to a relative abundance of data it was decided to remove rows with
- missing values.
+When handling missing values, it was decided to remove entire rows rather
+ than use mean imputation, which introduced bias to the model.
+ Fortunately, due to the abundance of avalable data, this approach did not
+ negatively impact the results.
 \end_layout
 
 \begin_layout Section
@@ -10923,7 +10937,7 @@ Feature Engineering
 
 \begin_layout Standard
 We attempted to do feature engineering with donor-recipient height, weight,
- bmi and age differences inspired by 
+ BMI, and age differences, as was done here 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-47-naqvi"
@@ -10932,10 +10946,11 @@ literal "false"
 \end_inset
 
 .
- The introduction of these features actually impaired the performance, so
- they were excluded.
+ However, these features had an adverse effect on performance, leading us
+ to exclude them.
  The engineered feature that actually improved the performance is the number
- of days patient was on dialysis (DIALYSIS_TIME), inspired by 
+ of days the patient was on dialysis (DIALYSIS_TIME).
+ The inspiration was drawn from 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-48-aufhauser"
