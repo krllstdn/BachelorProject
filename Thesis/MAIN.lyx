@@ -910,6 +910,37 @@ Abstract:
  10 lines of English abstract text.
  Max.
  10 lines of English abstract text.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+It is organized in a similar way as the paper, i.e.
+ it includes the following parts: - paper objective and background (based
+ on facts from the Introduction), - method and approach (based on facts
+ from the Materials and Methods section), - results (based on facts from
+ the Results section), - conclusion(s) (based on concluding remarks from
+ the Conclusion).
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Useful hints for writing the abstract: - Do not exceed the word limit.
+ - Do not include references, figures, equations, and details.
+ - Avoid overusing “we” constructions if possible.
+ Prefer passive, i.e.
+ impersonal, constructions, because the agent of processes and events is
+ usually not known or is not important.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -925,7 +956,17 @@ Abstract:
 \emph on
 Key words:
 \emph default
- keywords in alphabetical order separated by commas
+ keywords in alphabetical order separated by commas 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3-7
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1040,6 +1081,19 @@ maybe make it shorter
 
 \begin_layout Plain Layout
 maybe add more background info
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add references to the Chapters
 \end_layout
 
 \end_inset
@@ -3087,7 +3141,20 @@ Future of Kidney Transplantation
 status open
 
 \begin_layout Plain Layout
-lab grown organs, ghost organs
+lab grown organs, ghost organs, pig-grown organs
+\end_layout
+
+\begin_layout Plain Layout
+- https://www.tmc.edu/news/2019/06/in-the-lab-with-scientist-doris-taylor-and-ghos
+t-hearts/
+\end_layout
+
+\begin_layout Plain Layout
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8889329/
+\end_layout
+
+\begin_layout Plain Layout
+- https://www.sciencedirect.com/science/article/pii/S0093691X16300954
 \end_layout
 
 \end_inset
@@ -10965,39 +11032,6 @@ literal "false"
 Machine Learning Model
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-In this chapter I will:
-\end_layout
-
-\begin_layout Itemize
-Explain how do I approach the problem of estimating the survival time
-\end_layout
-
-\begin_layout Itemize
-Explain how do I approach the model selection
-\end_layout
-
-\begin_layout Itemize
-Explain the way of fine-tuning the selected model
-\end_layout
-
-\begin_layout Itemize
-Speculate why some models perform better than the others.
-\end_layout
-
-\begin_layout Itemize
-Explain my choice for the demographics in the dataset
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Problem Formulation
 \end_layout
@@ -13261,47 +13295,11 @@ Gradient Boosting Survival Analysis
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
-0.718 c-index
-\end_layout
-
-\begin_layout Plain Layout
-0.136 -IBS
-\end_layout
-
-\begin_layout Plain Layout
-396 minute training
-\end_layout
-
-\begin_layout Plain Layout
-n_estimators=1000, learning_rate=0.05, subsample=0.5, max_depth=1,
-\end_layout
-
-\begin_layout Plain Layout
-—–
-\end_layout
-
-\begin_layout Plain Layout
-lr =0.2 max_depth = 4 : 0.72 - the best result
-\end_layout
-
-\begin_layout Plain Layout
-lr=1 max_depth=1: 0.711
-\end_layout
-
-\begin_layout Plain Layout
-learning_rate=0.15, subsample=0.5, max_depth=2, 0.712 fitted learners 237
-\end_layout
-
-\begin_layout Plain Layout
-Fitted base learners: 85 Performance on test set 0.687
-\end_layout
-
-\begin_layout Plain Layout
-(preprocessing with scikit-learn's transformers gives slower training (maybe)
- and maybe poorer results)
+the model is not negatively influenced by unnrelated features or features
+ with negative importance.
 \end_layout
 
 \end_inset
@@ -13556,6 +13554,15 @@ We used three primary hyperparameters: the number of estimators, learning
  which is a widely used approach for GB algorithms.
  The monitor analyzes the average improvement of the last 25 iterations
  and, if negative for the last 50, stops training.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+mb odkazat na documentaci
+\end_layout
+
+\end_inset
+
  For the deceased, the optimal number of estimators was 110 (trained 160),
  and for the living, it was 94 (trained 144).
  Figures 
@@ -13935,9 +13942,7 @@ Limitations
 status open
 
 \begin_layout Plain Layout
-these models probably aren't suitable for KEP (check results), bc they're
- slow, but are good for prediction estimated survival and when it is best
- to intervene.
+these models assume that the donor recipient pair was already properly matched.
 \end_layout
 
 \begin_layout Plain Layout
@@ -13950,7 +13955,132 @@ the RSF deceased could be better fine-tuned
 \end_layout
 
 \begin_layout Section
+Discussion (comparison to other research)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+speculate why deceased donor transplantation has worse results.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The Discussion section 
+\end_layout
+
+\begin_layout Plain Layout
+- discusses the main objectives and compares them with the results, 
+\end_layout
+
+\begin_layout Plain Layout
+- explains how the results differ from those expected or those obtained
+ by other researchers, 
+\end_layout
+
+\begin_layout Plain Layout
+- shows how and if the results agree or contrast with the previous knowledge,
+ and explains the author ́s contribution to existing knowledge,
+\end_layout
+
+\begin_layout Plain Layout
+- states the logical implications of the results and suggests further study
+ or applications
+\end_layout
+
+\begin_layout Plain Layout
+Notes: - Contrary to the Results section, which presents the results in
+ an objective way, the Discussion section should contain the author ́s personal
+ interpretation of the results.
+ - Negative results should be explained, too.
+ The Results section and the Discussion section are presented either as
+ two separate sections or, quite often, as one combined.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+compare to other research:
+\end_layout
+
+\begin_layout Itemize
+Mark E, Goldsman D, Gurbaxani B, Keskinocak P, Sokol J.
+ Using machine learning and an ensemble of methods to predict kidney transplant
+ survival.
+ PLoS One 2019; 14.
+ (UNOS c-index 0.724)
+\end_layout
+
+\begin_layout Itemize
+Paquette FX, Ghassemi A, Bukhtiyarova O, Cisse M, Gagnon N, Della Vecchia
+ Aet al..
+ Machine learning support for decision-making in kidney transplantation:
+ step-by-step development of a technological solution.
+ JMIR Med Inform 2022;10:e34554
+\end_layout
+
+\begin_layout Itemize
+.
+ Senanayake S, Kularatna S, Healy H, Graves N, Baboolal K, Sypek MPet al..
+ Development and validation of a risk index to predict kidney graft survival:
+ the kidney transplant risk index.
+ BMC Med Res Methodol 2021;21:1–11.
+ (0.60-0.63)
+\end_layout
+
+\begin_layout Plain Layout
+taken from this good meta analysis:
+\end_layout
+
+\begin_layout Plain Layout
+Ravindhran B, Chandak P, Schafer N, Kundalia K, Hwang W, Antoniadis S, Haroon
+ U, Zakri RH.
+ Machine learning models in predicting graft survival in kidney transplantation:
+ meta-analysis.
+ BJS Open.
+ 2023 Mar 7;7(2):zrad011.
+ doi: 10.1093/bjsopen/zrad011.
+ PMID: 36987687; PMCID: PMC10050937.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Further work
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The dataset is not complex, so we decided not to use NN.
+ However one could try to do it.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -14022,6 +14152,48 @@ status open
 
 \begin_layout Plain Layout
 from rsf results.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Future work
+\end_layout
+
+\begin_layout Plain Layout
+- further feature engineering, esp with deceased as the performance is worse
+ than in the living.
+\end_layout
+
+\begin_layout Plain Layout
+- try using NNs.
+ Although, the dataset is simple and NNs are not required IMHO.
+ time investment is not worth it.
+ cox net fits data well.
+ works of others confirm that (add some refences)
+\end_layout
+
+\begin_layout Plain Layout
+- considering the number of features the use of NN is probably redundant
+\end_layout
+
+\begin_layout Plain Layout
+- development of model for follow ups to indicate patients at risk of rejection
+\end_layout
+
+\begin_layout Plain Layout
+- training on data from multiple sources would be good
+\end_layout
+
+\begin_layout Plain Layout
+- evaluating models on data from other sources would be good.
 \end_layout
 
 \end_inset
@@ -14493,7 +14665,17 @@ We present KidneyLife, an inference application dedicated to the user-friendly
  The application aims to aid physicians in their decision-making process
  by providing a comprehensive estimate of a kidney transplant recipient's
  lifespan.
- It can be used in conjunction with the previously described KPD software.
+ It can 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+should
+\end_layout
+
+\end_inset
+
+ be used in conjunction with the previously described KPD software.
 \end_layout
 
 \begin_layout Standard
@@ -15232,6 +15414,25 @@ Add a cumulative hazards option!
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+- reach out to the medical professionals in institutions and ask if they
+ need the application
+\end_layout
+
+\begin_layout Plain Layout
+- further development of the application according to needs of the interested
+ institution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter*
 Conclusion
 \end_layout
@@ -15264,8 +15465,599 @@ addcontentsline{toc}{chapter}{Conclusion}
 \end_layout
 
 \begin_layout Standard
-Text of the conclusion\SpecialChar ldots
+The study involved training six models to predict the survival outcome of
+ kidney transplantation, three for each type of transplantation - living
+ donor transplantation (LDT) and deceased donor transplantation (DDT).
+ The study used regularised Cox (Coxnet), gradient boosted survival analysis
+ (GBSA), and random survival forest (RSF) algorithms from the scikit-survival
+ package.
+ 
+\begin_inset Note Note
+status open
 
+\begin_layout Plain Layout
+add references to the documentation after each model to avoid redundant
+ text
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The performance of the models was evaluated using the Uno concordance index
+ (Uno c-index), Integrated Brier Score (IBS), and the mean cumulative/dynamic
+ area under the curve (mean AUC) as numerical performance metrics.
+ The Brier score and the cumulative/dynamic area under curve (AUC) were
+ used as time-dependent measures.
+ 
+\end_layout
+
+\begin_layout Standard
+The DDT models achieved a c-index of 0.691 - 0.699 Uno c-index, while the
+ LDT models achieved a 0.722-0.723.
+ To the best of our knowledge, no other paper trained separate SA models
+ for living donor and deceased donor transplantation.
+ However, the results are comparable to other papers that trained models
+ without any separation.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Living
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Uno C-index
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IBS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mean AUC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Coxnet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.723
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.136
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.743
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GBSA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.722
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.136
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.742
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RSF
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.723
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.139
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.744
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Deceased
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Coxnet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.695
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.163
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.729
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+GBSA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.699
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.162
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.734
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RSF
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.691
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.164
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.724
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hyperparameter tuning was performed with GridSearchCV and some manual tweaking.
+ Parameters from Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:The-best-hyperparameters"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ were found to be the best, however, some further tweaking might be needed,
+ especially with the number of estimators in the random survival forest.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hyperparamer Set
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RSF
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+{num_estimators=50, max_depth=12, min_samples_split=16}
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GBSA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+{learning_rate=0.2, num_estimators=94(living), 110(deceased), max_depth=6
+ }
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Coxnet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+{l1_ratio=0.9, alpha=*calculated*}
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The best hyperparameters for trained models
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:The-best-hyperparameters"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The feature selection was performed by evaluating the importance of the
+ feature with the importance of permutation and the iterative exclusion
+ of features with negative and zero importance.
+ More than 70 features were considered and engineered, only for most of
+ them to be excluded.
+ The following features showed the highest importance across models: DIAB,
+ AGE, ETHNCAT, HCV_SEROSTATUS, ON_DIALYSIS, and GENDER.
+ Table 6.1 provides a description and type for each of these features.
+ 
+\end_layout
+
+\begin_layout Standard
+An application named KidneyLife has been developed to assist physicians
+ in their decision-making process by offering a comprehensive estimate of
+ the expected lifespan of a recipient of a kidney transplant.
+ The application employs Coxnet models for LDT and DDT.
+ Users can enter values for the selected features, click ”Submit,” and obtain
+ a prediction in the form of a survival function.
+ Synthetic data generation for testing purposes is also available.
+ The application is considered a minimum viable product (MVP), and its functiona
+lity may be significantly expanded according to the needs of interested
+ institutions.
+ For further details, please refer to the 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Future-Work"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It is worth noting that the data have the assumption of well-matched pairs.
+ Consequently, models and the application should be used only in conjunction
+ with KPD software and prior negative crossmatch results, otherwise, the
+ results might be inaccurate.
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -16078,6 +16870,16 @@ Aufhauser DD Jr, Peng AW, Murken DR, Concors SJ, Abt PL, Sawinski D, Bloom
  doi: 10.1111/ctr.13260.
  Epub 2018 Jun 25.
  PMID: 29656398; PMCID: PMC6023748.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2nd time this reference
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
