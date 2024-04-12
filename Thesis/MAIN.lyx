@@ -1212,7 +1212,7 @@ Kidney — An Overview
 The kidneys are reddish-brown, bean-shaped organs located on both sides
  of the spine beneath the lower ribs.
  They serve several critical functions, such as filtering blood, regulating
- blood pressure, aiding red blood cell production, and maintaining the fluid
+ blood pressure, aiding red blood cell production, and maintaining fluid
  balance.
  Structurally, a kidney consists of about 1 million 
 \emph on
@@ -1279,7 +1279,7 @@ literal "false"
 Impairment in kidney function can have serious health consequences.
  There are many reasons why kidneys may become dysfunctional, such as end-stage
  chronic kidney disease, heavy metal poisoning, polycystic kidney disease,
- an infection, nephrotoxic drugs, lupus, physical injury, etc 
+ infection, nephrotoxic drugs, lupus, physical injury, etc 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36,key-37"
@@ -1289,8 +1289,8 @@ literal "false"
 
 .
  Among these conditions, chronic kidney disease is the most prevalent —
- about 10% of the population worldwide is affected by some form of chronic
- kidney disease 
+ approximately 10% of the population worldwide is affected by some form
+ of chronic kidney disease 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-35"
@@ -1500,9 +1500,18 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Given the high incidence of renal failure in diabetic patients - affecting
- roughly 30% of individuals with advanced diabetes - simultaneous kidney
- and pancreas transplants are sometimes performed.
+Given the high incidence of renal failure in diabetic patients - 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+which occurs in 30%
+\end_layout
+
+\end_inset
+
+affecting roughly 30% of individuals with advanced diabetes - simultaneous
+ kidney and pancreas transplants are sometimes performed.
  This approach addresses renal failure and underlying diabetes, offering
  a comprehensive solution for these patients 
 \begin_inset CommandInset citation
@@ -1637,7 +1646,20 @@ Early Human Transplantation
 \end_layout
 
 \begin_layout Standard
-Two first recorded human renal 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+consequent instead of consequtive
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The two first recorded human renal 
 \emph on
 xenografts
 \emph default
@@ -1735,7 +1757,7 @@ literal "false"
 
 \begin_layout Standard
 The pioneering work of Jaboulay, Unger, and Voronyi not only demonstrated
- the technical feasibility of human organ transplantation but also highlighted
+ the technical feasibility of human organ transplantation, but also highlighted
  its main challenge of graft rejection.
  Despite the progress, the field has yet to witness success, largely due
  to the lack of effective immunosuppression.
@@ -1750,6 +1772,16 @@ First Successes
 
 \begin_layout Standard
 In 1946, at the Peter Bent Brigham Hospital in Boston, a group of surgeons:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+patton doesnt like semicolon.
+ he would rewrite the sentence
+\end_layout
+
+\end_inset
+
  Hufnagel, Hume, and Landsteiner, performed kidney transplantation under
  local anesthetic on the arm vessels.
  The short period of kidney functioning may have helped the patient recover
@@ -1958,7 +1990,7 @@ noprefix "false"
 
 \end_inset
 
-) .
+).
  It wasn't until 1964, with Paul Terasaki's development of the microcytotoxicity
  assay, that testing for antibodies became reliable.
  The test involved mixing the donor's lymphocytes with the recipient's serum
@@ -1982,9 +2014,18 @@ For several years, Terasaki performed typing for most U.S.
  transplant centers and found a couple of observations: 1) Positive crossmatch
  test predicts hyperacute rejection.
  The test is performed by mixing recipient's serum with donor's blood cells,
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+; or :
+\end_layout
+
+\end_inset
+
  if there is a reaction, the test is considered to be positive and the transplan
 tation cannot be performed.
- 2) matching can reliably identify optimal donors within a family, and it
+ 2) Matching can reliably identify optimal donors within a family, and it
  was assumed that the same principle would apply to non-related recipients.
 \end_layout
 
@@ -2021,8 +2062,18 @@ literal "false"
 While tissue typing and matching have played a crucial role in improving
  transplantation outcomes, the evolution of immunosuppressive drugs has
  been equally, if not more, important.
- The subsequent section tells more about new developments in immunosuppressive
- drugs in upcoming years.
+ The subsequent section tells more
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+informal.
+ expand more.
+\end_layout
+
+\end_inset
+
+ about new developments in immunosuppressive drugs in upcoming years.
 \end_layout
 
 \begin_layout Subsection*
@@ -2269,12 +2320,22 @@ literal "false"
 T lymphocytes, on the other hand, when encountering an antigen, start to
  proliferate, forming an army of T cells that will eliminate the invader
  and will form long-term memory about the pathogen.
- Activated T cells are divided into the following categories: helper T cells
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+prob rewrite the sentence
+\end_layout
+
+\end_inset
+
+Activated T cells are divided into the following categories: helper T cells
  (
 \begin_inset Formula $CD4^{+}$
 \end_inset
 
-), that help B cells to produce antibodies and help kill ingested microbes;
+), which help B cells to produce antibodies and help kill ingested microbes;
  
 \emph on
 cytotoxic T cells
@@ -2283,15 +2344,15 @@ cytotoxic T cells
 \begin_inset Formula $CD8^{+}$
 \end_inset
 
-) that target and kill infected cells; 
+), which target and kill infected cells; 
 \emph on
 regulatory T lymphocytes
 \emph default
- that prevent or limit immune responses; and 
+, which prevent or limit immune responses; and 
 \emph on
 memory cells
 \emph default
-, that remain in the body long-term to provide faster and stronger immune
+, which remain in the body long-term to provide faster and stronger immune
  response if the same antigen is encountered in the future 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2483,8 +2544,19 @@ diated rejection (AMR or ABMR).
 \begin_layout Standard
 There are four primary blood groups: A, B, O, and AB.
  Within this system, individuals with blood group O are so-called ”universal
- donors” – organs from them can be transplanted to recipients with any ABO
- blood group.
+ donors” – 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+patton doesnt like it.
+ prob 2 separate sentences.
+ 
+\end_layout
+
+\end_inset
+
+their organs can be transplanted to recipients with any ABO blood group.
  Whereas recipients in the AB group can safely receive organs from recipients
  with any ABO blood group and are called ”universal recipients”.
  In clinical practice, however, particularly with deceased donors, the preferenc
@@ -2751,7 +2823,7 @@ HLA Typing and Matching
 \end_layout
 
 \begin_layout Standard
-In clinical practice, clinicians asses and try to match donors and recipients
+In clinical practice, clinicians assess and try to match donors and recipients
  according to the number of HLA-A, -B, and -DR mismatches, ranging from
  zero mismatches (0-0-0) to a maximum of 6 mismatches (2-2-2).
  Generally, more emphasis is placed on DR loci due to the capability of
@@ -4588,7 +4660,7 @@ Gaussian Mixtures
 status open
 
 \begin_layout Plain Layout
-premyslet nad smazanim nebo predelat
+smazat nebo predelat
 \end_layout
 
 \end_inset
@@ -8291,7 +8363,7 @@ status open
 
 \begin_layout Plain Layout
 
-from surv_data_pipeline.survival_pipline import ScikitSurvivalDataLoader
+from surv_data_pipeline.survival_pipeline import ScikitSurvivalDataLoader
 \end_layout
 
 \begin_layout Plain Layout
@@ -9516,7 +9588,7 @@ Maybe add some more discussion
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Aufhauser, D.
@@ -10097,19 +10169,6 @@ name "fig:ETHCAT-deceased-pie"
 
 \end_inset
 
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -11026,6 +11085,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+and EPTS score formula
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -13156,6 +13225,7 @@ Feature Importance
 \end_layout
 
 \begin_layout Standard
+Figures 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Feature-Importance-for-RSF-living"
@@ -13906,7 +13976,36 @@ Scoring algorithm
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+EPTS score: https://optn.transplant.hrsa.gov/media/1511/guide_to_calculating_interp
+reting_epts.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 the cumulative hazard suits the place of transplantation score very well
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+predict on some large num of instances.
+ then sort two lists by 1) the hazard and 2) by the amount of days lived.
+ (mb plot)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -13934,7 +14033,7 @@ status open
 \end_layout
 
 \begin_layout Section
-Limitations
+Discussion 
 \end_layout
 
 \begin_layout Standard
@@ -13942,28 +14041,8 @@ Limitations
 status open
 
 \begin_layout Plain Layout
-these models assume that the donor recipient pair was already properly matched.
-\end_layout
-
-\begin_layout Plain Layout
-the RSF deceased could be better fine-tuned
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Discussion (comparison to other research)
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-speculate why deceased donor transplantation has worse results.
+add a paragraph discussing the scoring.
+ after it's done.
 \end_layout
 
 \end_inset
@@ -13976,35 +14055,7 @@ speculate why deceased donor transplantation has worse results.
 status open
 
 \begin_layout Plain Layout
-The Discussion section 
-\end_layout
-
-\begin_layout Plain Layout
-- discusses the main objectives and compares them with the results, 
-\end_layout
-
-\begin_layout Plain Layout
-- explains how the results differ from those expected or those obtained
- by other researchers, 
-\end_layout
-
-\begin_layout Plain Layout
-- shows how and if the results agree or contrast with the previous knowledge,
- and explains the author ́s contribution to existing knowledge,
-\end_layout
-
-\begin_layout Plain Layout
-- states the logical implications of the results and suggests further study
- or applications
-\end_layout
-
-\begin_layout Plain Layout
-Notes: - Contrary to the Results section, which presents the results in
- an objective way, the Discussion section should contain the author ́s personal
- interpretation of the results.
- - Negative results should be explained, too.
- The Results section and the Discussion section are presented either as
- two separate sections or, quite often, as one combined.
+older transplants might influence the performance in the negative way.
 \end_layout
 
 \end_inset
@@ -14013,145 +14064,138 @@ Notes: - Contrary to the Results section, which presents the results in
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-compare to other research:
-\end_layout
-
-\begin_layout Itemize
-Mark E, Goldsman D, Gurbaxani B, Keskinocak P, Sokol J.
- Using machine learning and an ensemble of methods to predict kidney transplant
- survival.
- PLoS One 2019; 14.
- (UNOS c-index 0.724)
-\end_layout
-
-\begin_layout Itemize
-Paquette FX, Ghassemi A, Bukhtiyarova O, Cisse M, Gagnon N, Della Vecchia
- Aet al..
- Machine learning support for decision-making in kidney transplantation:
- step-by-step development of a technological solution.
- JMIR Med Inform 2022;10:e34554
-\end_layout
-
-\begin_layout Itemize
-.
- Senanayake S, Kularatna S, Healy H, Graves N, Baboolal K, Sypek MPet al..
- Development and validation of a risk index to predict kidney graft survival:
- the kidney transplant risk index.
- BMC Med Res Methodol 2021;21:1–11.
- (0.60-0.63)
-\end_layout
-
-\begin_layout Plain Layout
-taken from this good meta analysis:
-\end_layout
-
-\begin_layout Plain Layout
-Ravindhran B, Chandak P, Schafer N, Kundalia K, Hwang W, Antoniadis S, Haroon
- U, Zakri RH.
- Machine learning models in predicting graft survival in kidney transplantation:
- meta-analysis.
- BJS Open.
- 2023 Mar 7;7(2):zrad011.
- doi: 10.1093/bjsopen/zrad011.
- PMID: 36987687; PMCID: PMC10050937.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Further work
+Our goal was to create a model that could estimate the life expectancy of
+ transplant recipients.
+ We developed six models in total, three for living donor transplantation
+ (LDT) and three for deceased donor transplantation (DDT).
+ Our models' performance was comparable to other research, with the highest
+ c-index of 0.699 achieved for DDT using GBSA and 0.723 for LDT using Coxnet
+ over a 15-year period.
+ However, we found that DDT model performance was inferior to LDT, likely
+ because the donor-recipient compatibility is rarely perfect due to the
+ inability to perform in-depth compatibility analysis in the time the organ
+ is available.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-The dataset is not complex, so we decided not to use NN.
- However one could try to do it.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-more thorough hyperparameter tuning, especially with the RSF on the deceased
- dataset.
-\end_layout
-
-\begin_layout Plain Layout
-another model for follow up data
-\end_layout
-
-\begin_layout Plain Layout
-deep survival neural network
-\end_layout
-
-\begin_layout Plain Layout
-Feed Forward Neural Networks
-\end_layout
-
-\begin_layout Plain Layout
-Recurrent Neural Networks
-\end_layout
-
-\begin_layout Plain Layout
-Generative Models for Survival Analysis
-\end_layout
+Mark et.
+ al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-49"
+literal "false"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-I am going to use survival FFNN, likely DeepSurv
-\end_layout
+ achieved 0.724 Harrel's c index over a 5-year period with RSF and CoxPH
+ on the UNOS dataset.
+ Paquette et.
+ al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50"
+literal "false"
 
 \end_inset
 
+ achieved c index of 0.65, 0.661, and 0.659, for the neural network–based models
+ (DeepSurv, DeepHit, and RNN respectively) on the SRTR dataset.
+ Senanayake et.
+ al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-51"
+literal "false"
 
+\end_inset
+
+ achieved a concordance index of 0.67 with a random survival forest on the
+ ANZDATA dataset.
+ Other SA studies from the Ravindhran et.
+ al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-52"
+literal "false"
+
+\end_inset
+
+ meta-analysis showed similar results of sub-0.70 c-index.
+ Only one other study 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-53"
+literal "false"
+
+\end_inset
+
+ surpassed it and achieved a 0.80 concordance index with survival trees,
+ but with post-transplant 3-month serum creatinine and on a smaller dataset
+ (3,117 instances).
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Upping the estimators is a potential avenue for improvement, but one would
- need to be careful not to overfit the model.
- And that would take a long time: 200 estimators would require 4 hours of
- training and we might overfit the model, or run out of RAM.
- Overfitting can be avoided with regularization, but it is unlikely that
- it would surpass the performance of Coxnet survival by a large margin.
+While the individual feature importance varied between models, some features
+ were consistently deemed more important than others.
+ Across all models, recipient diabetes, age, and dialysis status or time
+ were consistently among the most important features.
+ Surprisingly, HLA features only hindered the performance or were unimportant
+ enough.
+ But features deemed important differed for each model.
+ In Coxnet, for example, HCV_SEROSTATUS was particularly important, while
+ in other models, it was less significant.
  
 \end_layout
 
+\begin_layout Paragraph
+Limitations and Further Work
+\end_layout
+
+\begin_layout Standard
+The inherent models' assumption is the compatibility of donor and recipient.
+ Consequently, models should be used after the donor-recipient compatibility
+ is confirmed.
+ Otherwise, the predictions will be inaccurate.
+\end_layout
+
+\begin_layout Standard
+We achieved good performance for the pre-transplant prediction, possibly
+ close to the best possible.
+ However, it might not be enough.
+ Therefore, we suggest training additional models for post-transplant observatio
+n and follow-up to predict the lifespan of the transplant recipient with
+ higher accuracy.
+ Similar to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-53"
+literal "false"
+
 \end_inset
 
+, which trained model with the post-transplant 3-month serum creatinine,
+ but with more features.
+\end_layout
 
+\begin_layout Standard
+All of our models achieved performance very close to each other for each
+ transplantation type, which means that models fitted data fairly well and
+ the performance is limited only by the data.
+ We have observed minor improvements after introducing the engineered feature
+ DIALYSIS_TIME, so one could try to engineer better features.
+ For example, calculate eGFR from age, serum creatinine, and gender for
+ both recipient and donor and see how it influences performance.
+ This feature can be more informative than all those features combined and
+ can have less noise.
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-from rsf results.
+try to do it
 \end_layout
 
 \end_inset
@@ -14160,45 +14204,33 @@ from rsf results.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Future work
+Training and testing were performed on data from the same UNOS dataset.
+ We do not know how models will perform on other datasets, so it would be
+ beneficial to evaluate the model performance on another dataset.
+ Ideally, even to train a model on data from multiple datasets.
 \end_layout
 
-\begin_layout Plain Layout
-- further feature engineering, esp with deceased as the performance is worse
- than in the living.
+\begin_layout Standard
+Upping the estimators in random survival forest is a potential avenue for
+ improvement, but one would need to be careful not to overfit the model.
+ And that would take a long time: 200 estimators would require 4 hours of
+ training and we might overfit the model, or run out of RAM.
+ Overfitting can be avoided with regularization, but it is unlikely to surpass
+ the achieved performance by a large margin.
 \end_layout
 
-\begin_layout Plain Layout
-- try using NNs.
- Although, the dataset is simple and NNs are not required IMHO.
- time investment is not worth it.
- cox net fits data well.
- works of others confirm that (add some refences)
-\end_layout
-
-\begin_layout Plain Layout
-- considering the number of features the use of NN is probably redundant
-\end_layout
-
-\begin_layout Plain Layout
-- development of model for follow ups to indicate patients at risk of rejection
-\end_layout
-
-\begin_layout Plain Layout
-- training on data from multiple sources would be good
-\end_layout
-
-\begin_layout Plain Layout
-- evaluating models on data from other sources would be good.
-\end_layout
-
-\end_inset
-
-
+\begin_layout Standard
+Initially, we considered training a survival neural network.
+ However, after reviewing the literature, we found that the models we had
+ already used had provided similar or better performance than neural networks.
+ Furthermore, neural networks perform best with a large amount of highly
+ complex data, such as images or text.
+ Our dataset is relatively simple, consisting of tabular data with no more
+ than 40 features after one-hot preprocessing.
+ Therefore, we believe that other algorithms should be equally effective.
+ However, we acknowledge that training a neural network may still be a viable
+ option for those willing to invest the time necessary to achieve better
+ performance.
 \end_layout
 
 \begin_layout Chapter
@@ -15465,6 +15497,26 @@ addcontentsline{toc}{chapter}{Conclusion}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Estimated Post Transplant Survival (EPTS) score [1, 2].
+ Other kidney transplant survival models such as the Recipient Risk Score
+ (RSS) [3] and Life Years from Transplant (LYFT) [4], have also been proposed
+ by researchers
+\end_layout
+
+\begin_layout Plain Layout
+- 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 The study involved training six models to predict the survival outcome of
  kidney transplantation, three for each type of transplantation - living
  donor transplantation (LDT) and deceased donor transplantation (DDT).
@@ -15499,7 +15551,17 @@ The DDT models achieved a c-index of 0.691 - 0.699 Uno c-index, while the
  LDT models achieved a 0.722-0.723.
  To the best of our knowledge, no other paper trained separate SA models
  for living donor and deceased donor transplantation.
- However, the results are comparable to other papers that trained models
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+That is not true
+\end_layout
+
+\end_inset
+
+However, the results are comparable to other papers that trained models
  without any separation.
  
 \end_layout
@@ -15508,9 +15570,10 @@ The DDT models achieved a c-index of 0.691 - 0.699 Uno c-index, while the
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="4">
 <features tabularvalignment="middle">
@@ -15853,7 +15916,7 @@ RSF
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-results
+Model performance for DDT and LDT
 \end_layout
 
 \end_inset
@@ -15882,7 +15945,7 @@ noprefix "false"
 
 \end_inset
 
- were found to be the best, however, some further tweaking might be needed,
+ were found to be the best, however, some further fine-tuning might be needed,
  especially with the number of estimators in the random survival forest.
  
 \end_layout
@@ -16053,7 +16116,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-It is worth noting that the data have the assumption of well-matched pairs.
+It is worth noting that the data have the assumption of well-matched pairs,
+ despite the fact that HLA features were excluded in the end.
  Consequently, models and the application should be used only in conjunction
  with KPD software and prior negative crossmatch results, otherwise, the
  results might be inaccurate.
@@ -16880,6 +16944,84 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-49"
+literal "false"
+
+\end_inset
+
+Mark E, Goldsman D, Gurbaxani B, Keskinocak P, Sokol J.
+ Using machine learning and an ensemble of methods to predict kidney transplant
+ survival.
+ PLoS One 2019; 14.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-50"
+literal "false"
+
+\end_inset
+
+Paquette FX, Ghassemi A, Bukhtiyarova O, Cisse M, Gagnon N, Della Vecchia
+ Aet al..
+ Machine learning support for decision-making in kidney transplantation:
+ step-by-step development of a technological solution.
+ JMIR Med Inform 2022;10:e34554
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-51"
+literal "false"
+
+\end_inset
+
+Senanayake S, Kularatna S, Healy H, Graves N, Baboolal K, Sypek MPet al..
+ Development and validation of a risk index to predict kidney graft survival:
+ the kidney transplant risk index.
+ BMC Med Res Methodol 2021;21:1–11.
+ (0.60-0.63)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-52"
+literal "false"
+
+\end_inset
+
+Ravindhran B, Chandak P, Schafer N, Kundalia K, Hwang W, Antoniadis S, Haroon
+ U, Zakri RH.
+ Machine learning models in predicting graft survival in kidney transplantation:
+ meta-analysis.
+ BJS Open.
+ 2023 Mar 7;7(2):zrad011.
+ doi: 10.1093/bjsopen/zrad011.
+ PMID: 36987687; PMCID: PMC10050937.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-53"
+literal "false"
+
+\end_inset
+
+Yoo, K.D., Noh, J., Lee, H.
+ et al.
+ A Machine Learning Approach Using Survival Statistics to Predict Graft
+ Survival in Kidney Transplant Recipients: A Multicenter Cohort Study.
+ Sci Rep 7, 8904 (2017).
+ https://doi.org/10.1038/s41598-017-08008-8
 \end_layout
 
 \begin_layout Standard
