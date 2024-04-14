@@ -845,6 +845,17 @@ Estimating patient's life expectancy after a successful kidney transplant
 Author:
 \emph default
  Kyrylo Stadniuk
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Kidney failure is a serious medical condition that affects millions of people
+ worldwide.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1232,6 +1243,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Disfunctional Reference
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1251,7 +1272,17 @@ literal "false"
 \end_inset
 
 .
- There are two types of GFR: 
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+There are two types of GFR: 
 \emph on
 measured GFR (mGFR)
 \emph default
@@ -1273,6 +1304,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1288,9 +1329,19 @@ literal "false"
 \end_inset
 
 .
- Among these conditions, chronic kidney disease is the most prevalent —
- approximately 10% of the population worldwide is affected by some form
- of chronic kidney disease 
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+Among these conditions, chronic kidney disease is the most prevalent — approxima
+tely 10% of the population worldwide is affected by some form of chronic
+ kidney disease 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-35"
@@ -1299,6 +1350,15 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
  
 \emph on
 Chronic kidney disease (CKD)
@@ -1313,6 +1373,15 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
  Diabetes and high blood pressure are responsible for the majority of cases
  of chronic kidney disease, with high blood sugar damaging the glomeruli
  and high blood pressure damaging the kidney blood vessels 
@@ -1324,6 +1393,15 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
  The latter interaction is associated with a negative feedback loop, where
  it is unclear whether kidney damage causes high blood pressure or vice
  versa 
@@ -1335,6 +1413,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1365,6 +1453,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1423,6 +1521,16 @@ literal "false"
 
 .
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1450,6 +1558,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1482,6 +1600,16 @@ literal "false"
 
 .
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1497,6 +1625,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1522,6 +1660,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1613,9 +1761,18 @@ literal "false"
 \end_inset
 
 .
- His consecutive move to The Rockefeller Institute for Medical Research
- in the United States led to further refinements of his method and the documenta
-tion of organ rejection.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+ His consequent move to The Rockefeller Institute for Medical Research in
+ the United States led to further refinements of his method and the documentatio
+n of organ rejection.
  For his contributions, Carrel received the Nobel Prize in Medicine in 1912
  
 \begin_inset CommandInset citation
@@ -1626,6 +1783,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1646,19 +1813,6 @@ Early Human Transplantation
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-consequent instead of consequtive
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 The two first recorded human renal 
 \emph on
 xenografts
@@ -1672,6 +1826,16 @@ xenografts
 LatexCommand cite
 key "key-1,key-4"
 literal "false"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
 
 \end_inset
 
@@ -1699,6 +1863,15 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
  Inspired by these findings, Carrel conducted his own experiments with irradiati
 on, achieving prolonged graft survival.
  However, these findings were never formally published 
@@ -1710,6 +1883,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1726,6 +1909,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1753,6 +1946,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1771,19 +1974,8 @@ First Successes
 \end_layout
 
 \begin_layout Standard
-In 1946, at the Peter Bent Brigham Hospital in Boston, a group of surgeons:
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-patton doesnt like semicolon.
- he would rewrite the sentence
-\end_layout
-
-\end_inset
-
- Hufnagel, Hume, and Landsteiner, performed kidney transplantation under
- local anesthetic on the arm vessels.
+In 1946, at the Peter Bent Brigham Hospital in Boston, a group of surgeons
+ performed kidney transplantation under local anesthetic on the arm vessels.
  The short period of kidney functioning may have helped the patient recover
  from acute renal failure, igniting the hospital's interest in renal transplanta
 tion.
@@ -1822,6 +2014,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1856,6 +2058,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1873,6 +2085,16 @@ literal "false"
 
 .
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1898,6 +2120,16 @@ literal "false"
 
 .
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1917,6 +2149,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1957,6 +2199,16 @@ literal "false"
 
 .
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2007,22 +2259,23 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 For several years, Terasaki performed typing for most U.S.
  transplant centers and found a couple of observations: 1) Positive crossmatch
  test predicts hyperacute rejection.
- The test is performed by mixing recipient's serum with donor's blood cells,
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-; or :
-\end_layout
-
-\end_inset
-
+ The test is performed by mixing recipient's serum with donor's blood cells;
  if there is a reaction, the test is considered to be positive and the transplan
 tation cannot be performed.
  2) Matching can reliably identify optimal donors within a family, and it
@@ -2056,24 +2309,24 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 While tissue typing and matching have played a crucial role in improving
  transplantation outcomes, the evolution of immunosuppressive drugs has
  been equally, if not more, important.
- The subsequent section tells more
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-informal.
- expand more.
-\end_layout
-
-\end_inset
-
- about new developments in immunosuppressive drugs in upcoming years.
+ The subsequent section elaborates on new developments in immunosuppressive
+ drugs in upcoming years.
 \end_layout
 
 \begin_layout Subsection*
@@ -2101,6 +2354,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2168,12 +2431,22 @@ immune system
  plays a crucial role in graft acceptance or rejection 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-6"
+key "key-54"
 literal "false"
 
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2204,13 +2477,23 @@ or
  is slower to respond but capable of providing more targeted responses 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-6"
+key "key-54"
 literal "false"
 
 \end_inset
 
 .
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2227,13 +2510,23 @@ Physical barriers, including epithelia and mucous membranes, constitute
  dead tissue and the initiation of repair after the tissue is damaged 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-6"
+key "key-54"
 literal "false"
 
 \end_inset
 
 .
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2308,29 +2601,30 @@ not ideal sentence
  in the pathogen's elimination 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-6"
+key "key-54"
 literal "false"
 
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-T lymphocytes, on the other hand, when encountering an antigen, start to
- proliferate, forming an army of T cells that will eliminate the invader
- and will form long-term memory about the pathogen.
- 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-prob rewrite the sentence
+DR
 \end_layout
 
 \end_inset
 
-Activated T cells are divided into the following categories: helper T cells
+
+\end_layout
+
+\begin_layout Standard
+On the other hand, T lymphocytes start to proliferate when encountering
+ an antigen, forming an army of T cells.
+ The created 'army' will eliminate the invader and will form long-term memory
+ about the pathogen.
+ Activated T cells are divided into the following categories: helper T cells
  (
 \begin_inset Formula $CD4^{+}$
 \end_inset
@@ -2356,12 +2650,22 @@ memory cells
  response if the same antigen is encountered in the future 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-6"
+key "key-54"
 literal "false"
 
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2376,12 +2680,22 @@ s with diverse PRRs during the development in bone marrow.
  non-self is called tolerance 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-6"
+key "key-54"
 literal "false"
 
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \begin_inset Note Note
 status open
 
@@ -2523,8 +2837,18 @@ literal "false"
 \end_inset
 
 .
- Because of that, the duration of ischemia is crucial in predicting the
- graft (and patient) survival.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+Because of that, the duration of ischemia is crucial in predicting the graft
+ (and patient) survival.
 \end_layout
 
 \begin_layout Paragraph
@@ -2573,6 +2897,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -2646,6 +2980,16 @@ literal "false"
 
 .
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2662,6 +3006,15 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
  In humans, each MHC class is further divided into three subgroups, as illustrat
 ed in Table 
 \begin_inset CommandInset ref
@@ -2837,6 +3190,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3178,6 +3541,15 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
  Tolerance is usually induced by prior exposure to donor antigens in a way
  that causes immune tolerance rather than sensitization in the recipient
  
@@ -3191,47 +3563,118 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-write some conclusion to the chapter
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Future of Kidney Transplantation
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-lab grown organs, ghost organs, pig-grown organs
+Despite significant advances in recent years, the current approach to treating
+ kidney failure with kidney transplantation has severe disadvantages.
+ While it does save lives, its limitations make it an unsatisfactory long-term
+ solution.
+ Primary limitations are the limited lifespan of transplanted organs and
+ a lifetime dependence on immunosuppressive drugs.
+ These drugs come with their own set of problems, including an increased
+ risk of infections and cancer.
+ 
 \end_layout
 
-\begin_layout Plain Layout
-- https://www.tmc.edu/news/2019/06/in-the-lab-with-scientist-doris-taylor-and-ghos
-t-hearts/
+\begin_layout Standard
+To address the limitations of kidney transplantation, several solutions
+ have been proposed over the years.
+ The most promising solutions are 3D printed organs, "ghost" organs, and
+ pig-grown organs.
+ 
 \end_layout
 
-\begin_layout Plain Layout
-- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8889329/
+\begin_layout Paragraph
+3D-printed Organs
 \end_layout
 
-\begin_layout Plain Layout
-- https://www.sciencedirect.com/science/article/pii/S0093691X16300954
-\end_layout
+\begin_layout Standard
+3D printing is a manufacturing technology that has gained popularity in
+ recent years.
+ It has also found its way into the medical field, where it holds significant
+ promise for solving the shortage of organs for transplantation.
+ However, it faces the following challenges: 1) High cost in terms of time
+ and money.
+ 3D printers, materials, and software remain very expensive.
+ 2) The limited ability of the material to mimic soft tissue.
+ 3) Poor production precision.
+ It is caused by limited imaging and 3D printing resolution.
+ The limited space in 3D printers and the resulting need to divide large
+ models into a couple of smaller ones and the subsequent assembling also
+ contribute to poor precision 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-59"
+literal "false"
 
 \end_inset
 
+.
+\end_layout
 
+\begin_layout Paragraph
+Lab-grown Organs
+\end_layout
+
+\begin_layout Standard
+(Ott et al., 2008)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-57"
+literal "false"
+
+\end_inset
+
+ and (Sánchez et al., 2015)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-58"
+literal "false"
+
+\end_inset
+
+ removed cells from a human heart, leaving only an extracellular matrix
+ (ECM), and then repopulated it with cells from another human.
+ ECM is a structure that consists of connective tissue and gives the organ
+ its form.
+ The ECM does not have HLA or any other PAMPs, so it does not trigger an
+ immune response.
+ This approach will allow the use of organs that would otherwise be unusable
+ due to incompatibilities and will reduce waiting times from years to weeks
+ or months.
+ Also the organ will be seen by the body as its own, so the immunosuppressants
+ would not be needed.Theoretically, even non-human organ ECM can be utilized
+ for transplantation to humans.
+ Combined with recent advancements in stem cell production, this approach
+ looks very promising.
+\end_layout
+
+\begin_layout Paragraph
+Pig-grown organs
+\end_layout
+
+\begin_layout Standard
+Finally, pig-grown organs have also been researched as a potential solution
+ to the organ shortage problem.
+ Given the anatomical and physiological similarities between pigs and humans,
+ xenotransplantation has emerged as a viable approach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-60"
+literal "false"
+
+\end_inset
+
+.
+ For instance, (Nagashima & Hitomi Matsunari, 2016) injected pancreatic
+ progenitor cells into a pig fetus with an apancreatic trait and observed
+ successful fetal development and pancreatic function.
+ Although the approach appears promising, it is unknown how it would work
+ with human organs.
+ 
 \end_layout
 
 \begin_layout Chapter
@@ -3252,7 +3695,7 @@ Machine learning excels in problems that are either overly complex or have
  no known algorithm.
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-9"
+key "key-57"
 literal "false"
 
 \end_inset
@@ -3351,7 +3794,7 @@ Supervised learning is the process of training a model on data where the
  known
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-12"
+key "key-60"
 literal "false"
 
 \end_inset
@@ -5265,7 +5708,7 @@ survival time
  It is measured in days, weeks, months, or years 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-13-SA"
 literal "false"
 
 \end_inset
@@ -5307,7 +5750,7 @@ recurrent events
  problem 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-13-SA"
 literal "false"
 
 \end_inset
@@ -5750,7 +6193,7 @@ Although the graph of the survival function is smooth by definition, in
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-13-SA"
 literal "false"
 
 \end_inset
@@ -5942,7 +6385,7 @@ To best illustrate the concept of instantaneous potential, let us refer
  in time rather than an interval 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-13-SA"
 literal "false"
 
 \end_inset
@@ -6192,7 +6635,7 @@ Considering the fact that the survival function describes the probability
  and risk over time 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-13-SA"
 literal "false"
 
 \end_inset
@@ -6495,7 +6938,7 @@ That can be read as the survival function
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-13-SA"
 literal "false"
 
 \end_inset
@@ -6538,7 +6981,7 @@ noprefix "false"
  and those preceding it 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-13-SA"
 literal "false"
 
 \end_inset
@@ -6626,7 +7069,7 @@ log-rank test
  survival curves of the two groups 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-13-SA"
 literal "false"
 
 \end_inset
@@ -6727,7 +7170,7 @@ time-independent.
  the definition of the hazard function
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-13-SA"
 literal "false"
 
 \end_inset
@@ -6829,7 +7272,7 @@ likelihood
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-13-SA"
 literal "false"
 
 \end_inset
@@ -6982,7 +7425,7 @@ Being a semi-parametric, this model is a safe choice because it consistently
  should use the parametric model 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13"
+key "key-13-SA"
 literal "false"
 
 \end_inset
@@ -7835,7 +8278,7 @@ specificity
  as positive 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-9"
+key "key-57"
 literal "false"
 
 \end_inset
@@ -13337,44 +13780,24 @@ name "fig:RSF-feature-importance-deceased"
 
 \end_layout
 
+\begin_layout Paragraph
+Training Time
+\end_layout
+
 \begin_layout Standard
 The living trained for 65 minutes, and the deceased for about 80 minutes.
  Both are on the 50 estimators.
  Upping the estimators is a potential avenue for improvement, but one would
  need to be careful not to overfit the model.
- And that would take a long time: 200 estimators would require 4 hours of
- training and we might overfit the model, or run out of RAM.
+ And the training would take a long time: 200 estimators would require 4
+ hours of training and we might overfit the model, or run out of RAM.
  Overfitting can be avoided with regularization, but it is unlikely that
  it would surpass the performance of Coxnet survival by a large margin.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-prob move to the future work.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
 Gradient Boosting Survival Analysis
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-the model is not negatively influenced by unnrelated features or features
- with negative importance.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -13628,7 +14051,7 @@ We used three primary hyperparameters: the number of estimators, learning
 status open
 
 \begin_layout Plain Layout
-mb odkazat na documentaci
+mb odkazat na documentace
 \end_layout
 
 \end_inset
@@ -13842,6 +14265,13 @@ Initially, we performed feature selection on models with a small number
  more or less consistent for both trained and under-trained models.
 \end_layout
 
+\begin_layout Standard
+Another thing worth noting that this model, contrary to the others, had
+ no features with negative feature importances, meaning the model is not
+ affected by wrongly chosen features.
+ So the feature selection proces in case with this model can be more liberal.
+\end_layout
+
 \begin_layout Paragraph
 Feature Importance 
 \end_layout
@@ -13873,17 +14303,6 @@ noprefix "false"
 P, HCV_SEROSTATUS, and GENDER have negative importance.
  However, their removal only results in a minor performance decrease from
  0.722 to 0.720.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-compare the most important features to the other models.
- likely they are the same.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -13980,6 +14399,26 @@ Scoring algorithm
 status open
 
 \begin_layout Plain Layout
+Estimated Post Transplant Survival (EPTS) score [1, 2].
+ Other kidney transplant survival models such as the Recipient Risk Score
+ (RSS) [3] and Life Years from Transplant (LYFT) [4], have also been proposed
+ by researchers
+\end_layout
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 EPTS score: https://optn.transplant.hrsa.gov/media/1511/guide_to_calculating_interp
 reting_epts.pdf
 \end_layout
@@ -14051,19 +14490,6 @@ add a paragraph discussing the scoring.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-older transplants might influence the performance in the negative way.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Our goal was to create a model that could estimate the life expectancy of
  transplant recipients.
  We developed six models in total, three for living donor transplantation
@@ -14075,6 +14501,10 @@ Our goal was to create a model that could estimate the life expectancy of
  because the donor-recipient compatibility is rarely perfect due to the
  inability to perform in-depth compatibility analysis in the time the organ
  is available.
+ Another reason might be related to the data itself.
+ The DDT dataset might have more of older records when the techniques of
+ transplantation and immunosuppression were not that refined, which might
+ influence the prediction in a negative way.
 \end_layout
 
 \begin_layout Standard
@@ -14229,8 +14659,8 @@ Initially, we considered training a survival neural network.
  than 40 features after one-hot preprocessing.
  Therefore, we believe that other algorithms should be equally effective.
  However, we acknowledge that training a neural network may still be a viable
- option for those willing to invest the time necessary to achieve better
- performance.
+ option for those willing to invest the time necessary to potentially achieve
+ better performance.
 \end_layout
 
 \begin_layout Chapter
@@ -14697,17 +15127,9 @@ We present KidneyLife, an inference application dedicated to the user-friendly
  The application aims to aid physicians in their decision-making process
  by providing a comprehensive estimate of a kidney transplant recipient's
  lifespan.
- It can 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-should
-\end_layout
-
-\end_inset
-
- be used in conjunction with the previously described KPD software.
+ Due to models' assumption of donor-recipient compatibility, it should be
+ used in conjunction with the previously described KPD software or other
+ compatibility matching software.
 \end_layout
 
 \begin_layout Standard
@@ -15226,7 +15648,7 @@ literal "false"
 
 \end_inset
 
-, which is particularly advantageous for doctors, as they will benefit from
+, which is particularly advantageous for doctors, as they can benefit from
  anything making their lives calmer.
  Moreover, blue is generally a safe color, as it appeals to a larger audience.
  Simplicity, being one of the main principles of modern web design, was
@@ -15237,16 +15659,6 @@ literal "false"
  Lastly, the design exhibits responsiveness, accommodating a wide range
  of devices, from tablets to large 2k monitors, delivering a consistent
  and comfortable user experience across different screen sizes.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-maybe move responsiveness to the FE?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -15277,8 +15689,8 @@ Secondly, implementing a robust login system is essential to ensure secure
  in the subsequent paragraphs, as they imply the storage of sensitive informatio
 n.
  User authentication mechanisms, such as username-password authentication
- or OAuth, can restrict access to unauthorized individuals, safeguarding
- sensitive data associated with subsequent features.
+ or OAuth, can restrict access to unauthorized individuals, protecting sensitive
+ data associated with subsequent features.
 \end_layout
 
 \begin_layout Standard
@@ -15343,6 +15755,17 @@ Patient and pair management system concept
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Another feature worth implementing is an option of estimating the cumulative
+ hazards.
+ It is relatively easy to implement, as it will only include minor changes
+ to the front end and creating a new endpoint, which will access the method
+ of already trained model and return the results.
+ This might be useful if a user wants to see the graph of cumulative risk
+ in time, rather than the probability of survival.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -15427,42 +15850,19 @@ Kidney Life Dashboard page concept
 \end_layout
 
 \begin_layout Standard
+Before implementing any of the mentioned points, we need to reach out to
+ institutions to see if this application is what actually transplant centers
+ need.
+ In case if it is, the further development of the application can take place,
+ making sure that it aligns with the needs of any given institution.
+\end_layout
+
+\begin_layout Standard
 During the later stages of development, it was discovered that a nonprofit
  organization with the name KidneyLife already exists.
  If someone is interested in the application, we would need to rename and
  rebrand it to prevent any confusion and potential legal issues.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Add a cumulative hazards option!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- reach out to the medical professionals in institutions and ask if they
- need the application
-\end_layout
-
-\begin_layout Plain Layout
-- further development of the application according to needs of the interested
- institution
-\end_layout
-
-\end_inset
-
-
+ 
 \end_layout
 
 \begin_layout Chapter*
@@ -15497,44 +15897,35 @@ addcontentsline{toc}{chapter}{Conclusion}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Estimated Post Transplant Survival (EPTS) score [1, 2].
- Other kidney transplant survival models such as the Recipient Risk Score
- (RSS) [3] and Life Years from Transplant (LYFT) [4], have also been proposed
- by researchers
-\end_layout
-
-\begin_layout Plain Layout
-- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 The study involved training six models to predict the survival outcome of
  kidney transplantation, three for each type of transplantation - living
  donor transplantation (LDT) and deceased donor transplantation (DDT).
- The study used regularised Cox (Coxnet), gradient boosted survival analysis
- (GBSA), and random survival forest (RSF) algorithms from the scikit-survival
- package.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add references to the documentation after each model to avoid redundant
- text
-\end_layout
+ The study used regularised Cox (Coxnet)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-54"
+literal "false"
 
 \end_inset
 
+, gradient boosted survival analysis (GBSA) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-56"
+literal "false"
 
+\end_inset
+
+, and random survival forest (RSF)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-55"
+literal "false"
+
+\end_inset
+
+ algorithms from the scikit-survival package.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -15556,7 +15947,8 @@ The DDT models achieved a c-index of 0.691 - 0.699 Uno c-index, while the
 status open
 
 \begin_layout Plain Layout
-That is not true
+That is not true.
+ Why not?
 \end_layout
 
 \end_inset
@@ -15916,7 +16308,8 @@ RSF
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Model performance for DDT and LDT
+Model performance for DDT and LDT.
+ The best model is highlighted.
 \end_layout
 
 \end_inset
@@ -16310,7 +16703,7 @@ Bruce, P., Bruce, A., & Gedeck, P.
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-13"
+key "key-13-SA"
 literal "false"
 
 \end_inset
@@ -17022,6 +17415,138 @@ Yoo, K.D., Noh, J., Lee, H.
  Survival in Kidney Transplant Recipients: A Multicenter Cohort Study.
  Sci Rep 7, 8904 (2017).
  https://doi.org/10.1038/s41598-017-08008-8
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-54"
+literal "false"
+
+\end_inset
+
+sksurv.linear_model.CoxnetSurvivalAnalysis — scikit-survival 0.22.2.
+ (2015).
+ Readthedocs.io.
+ https://scikit-survival.readthedocs.io/en/stable/api/generated/sksurv.linear_model.
+CoxnetSurvivalAnalysis.html#sksurv.linear_model.CoxnetSurvivalAnalysis
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-55"
+literal "false"
+
+\end_inset
+
+‌sksurv.ensemble.RandomSurvivalForest — scikit-survival 0.22.2.
+ (2015).
+ Readthedocs.io.
+ https://scikit-survival.readthedocs.io/en/stable/api/generated/sksurv.ensemble.Rand
+omSurvivalForest.html
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-56"
+literal "false"
+
+\end_inset
+
+‌sksurv.ensemble.GradientBoostingSurvivalAnalysis — scikit-survival 0.22.2.
+ (2015).
+ Readthedocs.io.
+ https://scikit-survival.readthedocs.io/en/stable/api/generated/sksurv.ensemble.Grad
+ientBoostingSurvivalAnalysis.html
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-57"
+literal "false"
+
+\end_inset
+
+‌Ott, H.
+ C., Matthiesen, T.
+ S., Saik Kia Goh, Black, L.
+ D., Kren, S.
+ M., Netoff, T.
+ I., & Taylor, D.
+ A.
+ (2008).
+ Perfusion-decellularized matrix: using nature’s platform to engineer a
+ bioartificial heart.
+ Nature Medicine, 14(2), 213–221.
+ https://doi.org/10.1038/nm1684
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-58"
+literal "false"
+
+\end_inset
+
+‌Sánchez, P.
+ L., M.
+ Eugenia Fernández-Santos, Costanza, S., Climent, A.
+ M., Moscoso, I., M.
+ Angeles Gonzalez-Nicolas, Sanz-Ruiz, R., Rodríguez, H., Kren, S.
+ M., Garrido, G., Escalante, J.
+ L., Bermejo, J., Elizaga, J., Menarguez, J., Yotti, R., Villar, del, M.
+ Angeles Espinosa, Guillem, M.
+ S., Willerson, J.
+ T., & Bernad, A.
+ (2015).
+ Acellular human heart matrix: A critical step toward whole heart grafts.
+ Biomaterials, 61, 279–289.
+ https://doi.org/10.1016/j.biomaterials.2015.04.056
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-59"
+literal "false"
+
+\end_inset
+
+‌Jin, Z., Li, Y., Yu, K., Liu, L., Fu, J., Yao, X., Zhang, A., & He, Y.
+ (2021).
+ 3D Printing of Physical Organ Models: Recent Developments and Challenges.
+ Advanced Science, 8(17).
+ https://doi.org/10.1002/advs.202101394
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-60"
+literal "false"
+
+\end_inset
+
+‌Nagashima, H., & Hitomi Matsunari.
+ (2016).
+ Growing human organs in pigs—A dream or reality? Theriogenology, 86(1),
+ 422–426.
+ https://doi.org/10.1016/j.theriogenology.2016.04.056
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-61"
+literal "false"
+
+\end_inset
+
+‌
 \end_layout
 
 \begin_layout Standard
