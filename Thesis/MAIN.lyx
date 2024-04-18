@@ -703,8 +703,8 @@ Konzultant:
 \emph default
 Ing.
  Pavel Strachota, Ph.D.
- Katedra matematiky, Fakulta jaderna a fyzikálne inzenyrska, Ceské vysoké
- udeni technické v Praze, Trojanova 13, 120 00 Praha 2
+ Katedra matematiky, Fakulta jaderná a fyzikálně inženýrská, Ceské vysoké
+ učení technické v Praze, Trojanova 13, 120 00 Praha 2
 \end_layout
 
 \begin_layout Standard
@@ -723,65 +723,19 @@ Ing.
 \lang czech
 Abstrakt:
 \emph default
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- Abstrakt max.
- na 10 řádků.
- 
+ Transplantace ledviny je zlatým standardem léčby selhání ledvin, který
+ ve srovnání s dialýzou přináší vyšší kvalitu života a delší očekávanou
+ délku života.
+ Před transplantací je maximalizována kompatibilita dárce a příjemce v naději
+ na lepší výsledky.
+ Existuje však nedostatek nástrojů, které by dokázaly přesně předpovědět
+ dlouhodobé výsledky po transplantaci.
+ Tato práce se pokouší tuto mezeru překlenout.
+ Na souboru dat UNOS jsme vycvičili několik modelů analýzy přežití pro transplan
+tace od žijících a zemřelých dárců.
+ Modely vykazují robustní výkonnost.
+ S využitím těchto modelů jsme vyvinuli aplikaci, která může pomoct lékařům
+ při rozhodování.
 \end_layout
 
 \begin_layout Standard
@@ -800,7 +754,11 @@ Abstrakt:
 \lang czech
 Klíčová slova:
 \emph default
- klíčová slova (nebo výrazy) seřazená podle abecedy a oddělená čárkou
+ Analýza přežití, Analýza přežití s gradientním posilováním, Inference strojovéh
+o učení, Předpověď délky života, Předpověď přežití, Regularizovaný Cox,
+ Random Survival Forest, scikit-survival, Strojové učení, Transplantace
+ ledviny, Transplantace od žijícího dárce, Transplantace od zemřelého dárce,
+ UNOS
 \end_layout
 
 \begin_layout Standard
@@ -845,17 +803,6 @@ Estimating patient's life expectancy after a successful kidney transplant
 Author:
 \emph default
  Kyrylo Stadniuk
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Kidney failure is a serious medical condition that affects millions of people
- worldwide.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -871,56 +818,19 @@ Kidney failure is a serious medical condition that affects millions of people
 \emph on
 Abstract:
 \emph default
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
- Max.
- 10 lines of English abstract text.
+ Kidney transplantation is the gold standard treatment for kidney failure
+ that provides an increased quality of life and a longer life expectancy
+ compared to dialysis.
+ Prior to transplantation, donor-recipient compatibility is maximized in
+ hopes of better outcomes.
+ However, there is a scarcity of tools capable of accurately forecasting
+ long-term post-transplant outcomes.
+ This thesis attempts to bridge this gap.
+ We trained several survival analysis models for living donor and deceased
+ donor transplantations on UNOS dataset.
+ Models exhibit a robust performance.
+ Leveraging these models, we developed an application to aid clinicians
+ in decision-making.
  
 \begin_inset Note Note
 status collapsed
@@ -967,22 +877,15 @@ Useful hints for writing the abstract: - Do not exceed the word limit.
 \emph on
 Key words:
 \emph default
- keywords in alphabetical order separated by commas 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-3-7
-\end_layout
-
-\end_inset
-
-
+ Deceased Donor Transplantation, Gradient Boosting Survival Analysis, Kidney
+ Transplantation, Lifespan Prediction, Living Donor Transplantation, Machine
+ Learning, Machine Learning Inference, Random Survival Forest, Regularized
+ Cox, scikit-survival, Survival Analysis, Survival Prediction, UNOS
 \end_layout
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -14507,6 +14410,19 @@ name "fig:predicted-hazard-over-days-lived"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add some concluding paragraph
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Discussion 
 \end_layout
@@ -14517,7 +14433,7 @@ status open
 
 \begin_layout Plain Layout
 add a paragraph discussing the scoring.
- after it's done.
+ if it makes sense.
 \end_layout
 
 \end_inset
