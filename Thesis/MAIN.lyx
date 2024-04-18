@@ -8590,39 +8590,6 @@ Data Preparation and Analysis
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-In this chapter I will:
-\end_layout
-
-\begin_layout Itemize
-make sense of the dataset
-\end_layout
-
-\begin_layout Itemize
-explore features, their impact on the survival, how do they correlate
-\end_layout
-
-\begin_layout Itemize
-explain my data pipeline and my approach to data processing
-\end_layout
-
-\begin_layout Itemize
-explain how do I build the dataset
-\end_layout
-
-\begin_layout Itemize
-the code for the image generation can be found in the github + give a link
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 In this chapter we are going to look into the dataset used in the study.
  Explore the most important features and their relationship with each other.
  Look into survival time...
@@ -9964,7 +9931,7 @@ noprefix "false"
  Women usually live longer 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-14"
+key "key-62"
 literal "false"
 
 \end_inset
@@ -9975,7 +9942,7 @@ literal "false"
  and the intensity of the infection is higher 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-15"
+key "key-63"
 literal "false"
 
 \end_inset
@@ -14395,18 +14362,135 @@ Scoring algorithm
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+Various methods have been proposed to evaluate the donor-recipient compatibility
+, such as the Estimated Post-Transplant Survival Score (EPTS) score 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-60"
+literal "false"
+
+\end_inset
+
+ , which is presently utilized in the US kidney allocation system and is
+ based on survival analysis techniques.
+ (Mark et al., 2019)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-64"
+literal "false"
+
+\end_inset
+
+ mentioned other scoring systems, such as Life Years from Transplant (LYFT)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-63"
+literal "false"
+
+\end_inset
+
+ and Recipient Risk Score (RRS)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-62"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Our bachelor project task included the development of a new scoring technique
+ for TX Matching.
+ Even though we diverged from integration with it, we still thought the
+ development of a scoring technique to be a worthwhile endeavor.
+ TX Matching (discussed in Subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:TX-Matching"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) uses the following formula for scoring:
+\end_layout
+
+\begin_layout Quotation
+score = 1 * (number of A and B antigen matches) 
+\end_layout
+
+\begin_deeper
+\begin_layout Quotation
++ 10 (number of DR antigen matches) 
+\end_layout
+
+\begin_layout Quotation
++ (bonus for compatible blood group) * (indicator of compatible blood group)
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+As we can see, it focuses on histo- and blood group compatibility, but it
+ doesn't take other factors, such as potential life expectancy, into account.
+ We wanted to address this.
+\end_layout
+
+\begin_layout Standard
+We aimed to develop a scoring technique based on the hazard predicted by
+ the Coxnet model.
+ We believed that patients who lived the longest would have the lowest hazard.
+ Based on this hazard, we would create a formula that would generate a score
+ ranging from 0 to 100, with 0 being the worst possible match and 100 being
+ the best possible match.
+ However, despite the strong performance on the c-index and integrated Brier
+ score, we discovered a lack of correlation (-0.262) between the days lived
+ and the predicted hazard, as depicted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:predicted-hazard-over-days-lived"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
-Estimated Post Transplant Survival (EPTS) score [1, 2].
- Other kidney transplant survival models such as the Recipient Risk Score
- (RSS) [3] and Life Years from Transplant (LYFT) [4], have also been proposed
- by researchers
+\align center
+\begin_inset Graphics
+	filename Images/scoring_attempt.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
--
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Plot of predicted hazard over days lived for LDT with event happening.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:predicted-hazard-over-days-lived"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -14414,56 +14498,8 @@ Estimated Post Transplant Survival (EPTS) score [1, 2].
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
 \begin_layout Plain Layout
-EPTS score: https://optn.transplant.hrsa.gov/media/1511/guide_to_calculating_interp
-reting_epts.pdf
-\end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-the cumulative hazard suits the place of transplantation score very well
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-predict on some large num of instances.
- then sort two lists by 1) the hazard and 2) by the amount of days lived.
- (mb plot)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- risk score that is predicted with the model
-\end_layout
-
-\begin_layout Plain Layout
-- mention txmatching scoring (photo on iPad)
-\end_layout
-
-\begin_layout Plain Layout
-- make up the formula: find out how the score looks like for the worst and
- the best instances.
- create formula to convert the predicted risk score to a number 0-100, with
- 0 the worst and 100 ideal transplantation.
 \end_layout
 
 \end_inset
@@ -14929,6 +14965,13 @@ noprefix "false"
 
 \begin_layout Subsection
 TX Matching
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:TX-Matching"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -15232,7 +15275,7 @@ Back End
  subsection.
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 two identical sentences.
@@ -15290,7 +15333,7 @@ noprefix "false"
  avenues for further development.
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 may not be right description
@@ -16780,6 +16823,17 @@ Nemati E, Einollahi B, Lesan Pezeshki M, Porfarziani V, Fattahi MR.
  2014 Jul 5;6(4):e12182.
  doi: 10.5812/numonthly.12182.
  PMID: 25695017; PMCID: PMC4317718.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+up untill this one are damaged.
+ some of the following might be as well
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -17546,7 +17600,61 @@ literal "false"
 
 \end_inset
 
-‌
+‌A Guide to Calculating and Interpreting the Estimated Post- ..., optn.transplant.hrs
+a.gov/media/1511/guide_to_calculating_interpreting_epts.pdf.
+ Accessed 16 Apr.
+ 2024.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-62"
+literal "false"
+
+\end_inset
+
+Baskin-Bey ES, Kremers W, Nyberg SL.
+ A recipient risk score for deceased donor renal allocation.
+ Am J Kidney Dis.
+ 2007 Feb;49(2):284-93.
+ doi: 10.1053/j.ajkd.2006.10.018.
+ PMID: 17261431.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-63"
+literal "false"
+
+\end_inset
+
+Wolfe RA, McCullough KP, Leichtman AB.
+ Predictability of survival models for waiting list and transplant patients:
+ calculating LYFT.
+ Am J Transplant.
+ 2009 Jul;9(7):1523-7.
+ doi: 10.1111/j.1600-6143.2009.02708.x.
+ PMID: 19656143.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-64"
+literal "false"
+
+\end_inset
+
+Mark E, Goldsman D, Gurbaxani B, Keskinocak P, Sokol J.
+ Using machine learning and an ensemble of methods to predict kidney transplant
+ survival.
+ PLoS One.
+ 2019 Jan 9;14(1):e0209068.
+ doi: 10.1371/journal.pone.0209068.
+ PMID: 30625130; PMCID: PMC6326487.
 \end_layout
 
 \begin_layout Standard
