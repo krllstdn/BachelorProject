@@ -736,6 +736,18 @@ tace od žijících a zemřelých dárců.
  Modely vykazují robustní výkonnost.
  S využitím těchto modelů jsme vyvinuli aplikaci, která může pomoct lékařům
  při rozhodování.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang czech
+udelej to poradne
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -754,11 +766,9 @@ tace od žijících a zemřelých dárců.
 \lang czech
 Klíčová slova:
 \emph default
- Analýza přežití, Analýza přežití s gradientním posilováním, Inference strojovéh
-o učení, Předpověď délky života, Předpověď přežití, Regularizovaný Cox,
- Random Survival Forest, scikit-survival, Strojové učení, Transplantace
- ledviny, Transplantace od žijícího dárce, Transplantace od zemřelého dárce,
- UNOS
+ Analýza přežití, Předpověď přežití, Regularizovaný Cox, Random Survival
+ Forest, Strojové učení, Transplantace ledviny, Transplantace od žijícího
+ dárce, Transplantace od zemřelého dárce, UNOS
 \end_layout
 
 \begin_layout Standard
@@ -787,6 +797,19 @@ Title:
 \size huge
 Estimating patient's life expectancy after a successful kidney transplant
  using machine learning methods
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\size huge
+nerozdelovat ty slova v titulu
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -823,7 +846,7 @@ Abstract:
  compared to dialysis.
  Prior to transplantation, donor-recipient compatibility is maximized in
  hopes of better outcomes.
- However, there is a scarcity of tools capable of accurately forecasting
+ However, there is a scarcity of tools capable of accurately predicting
  long-term post-transplant outcomes.
  This thesis attempts to bridge this gap.
  We trained several survival analysis models for living donor and deceased
@@ -880,7 +903,7 @@ Key words:
  Deceased Donor Transplantation, Gradient Boosting Survival Analysis, Kidney
  Transplantation, Lifespan Prediction, Living Donor Transplantation, Machine
  Learning, Machine Learning Inference, Random Survival Forest, Regularized
- Cox, scikit-survival, Survival Analysis, Survival Prediction, UNOS
+ Cox, Survival Analysis, UNOS
 \end_layout
 
 \begin_layout Standard
@@ -934,6 +957,16 @@ LatexCommand tableofcontents
 
 \begin_layout Chapter
 Introduction
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+remove the number
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1016,6 +1049,19 @@ add references to the Chapters
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+co muzes rict high level o te praci.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Kidney transplantation (KT) is the gold standard treatment for kidney failure
  that provides an increased quality of life and a longer life expectancy
  compared to dialysis.
@@ -1029,6 +1075,29 @@ Kidney transplantation (KT) is the gold standard treatment for kidney failure
  Leveraging trained machine learning models, we aim to develop an application
  to aid clinicians in decision-making.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+to je abstract, ne!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+proc je to zajimavy
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1098,6 +1167,77 @@ status open
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+how to make the intro good.
+ how to present the work in such a way to interest the reader?
+\end_layout
+
+\begin_layout Plain Layout
+- the problematics of kidney transplantation and the survival
+\end_layout
+
+\begin_layout Plain Layout
+- what we want to solve: the problem of unclear possible survival time of
+ given recipient.
+ and the absence of software for it.
+\end_layout
+
+\begin_layout Plain Layout
+- neco o machine learning.
+ standartni uvod do field
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+what I did in the work:
+\end_layout
+
+\begin_layout Plain Layout
+- brief history of KT
+\end_layout
+
+\begin_layout Plain Layout
+- intro to immunology of KT
+\end_layout
+
+\begin_layout Plain Layout
+- what is the problem my work solves: the absense of good post-transplant
+ survival predictive tools and the uncertainty what will happen after the
+ transplant.
+\end_layout
+
+\begin_layout Plain Layout
+- why it is particularly important now: more and more people are suffering
+ from diabetes and high blood pressure, which often result in chronic kidney
+ disease, which in its end stage necessitates transplantation.
+ 10% of population are suffering from different stages of CKD
+\end_layout
+
+\begin_layout Plain Layout
+- something about the AI hype:
+\end_layout
+
+\begin_layout Plain Layout
+- about the AI in medicine
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Medical Background
 \end_layout
@@ -1118,6 +1258,19 @@ pagestyle{headings}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+to samy je napsany to oznaxeny.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Kidney — An Overview
 \end_layout
@@ -1128,16 +1281,10 @@ The kidneys are reddish-brown, bean-shaped organs located on both sides
  They serve several critical functions, such as filtering blood, regulating
  blood pressure, aiding red blood cell production, and maintaining fluid
  balance.
- Structurally, a kidney consists of about 1 million 
-\emph on
-nephrons
-\emph default
-, each consisting of a small filter called a 
-\emph on
-glomerulus
-\emph default
-, attached to a tubule, responsible for filtering waste products from the
- blood and excreting them with small amounts of fluid as urine 
+ Structurally, a kidney consists of about 1 million nephrons, each consisting
+ of a small filter called a glomerulus, attached to a tubule, responsible
+ for filtering waste products from the blood and excreting them with small
+ amounts of fluid as urine 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-33"
@@ -1146,25 +1293,15 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Disfunctional Reference
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 Each kidney performs 50% of the normal kidney function.
  However, if one kidney is lost, the remaining kidney can adapt, increasing
  its capacity to as much as 75% of normal function.
- Kidney function is measured with 
+ Kidney function is measured with
 \emph on
-glomerular filtration rate (GFR)
+ glomerular filtration rate (GFR)
 \emph default
  
 \begin_inset CommandInset citation
@@ -1175,17 +1312,7 @@ literal "false"
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-There are two types of GFR: 
+ There are two types of GFR: 
 \emph on
 measured GFR (mGFR)
 \emph default
@@ -1194,8 +1321,8 @@ measured GFR (mGFR)
 estimated GFR (eGFR)
 \emph default
 .
- Measuring mGFR is a problematic and lengthy process, so healthcare practitioner
-s usually use a formula to calculate eGFR.
+ Measuring mGFR is problematic and lengthy, so healthcare practitioners
+ usually use a formula to calculate eGFR.
  An eGFR of 90 and above is the normal range.
  An eGFR of 15-89 is a range for different stages of chronic kidney disease.
  Values below 15 might indicate renal failure 
@@ -1207,23 +1334,13 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 Impairment in kidney function can have serious health consequences.
  There are many reasons why kidneys may become dysfunctional, such as end-stage
  chronic kidney disease, heavy metal poisoning, polycystic kidney disease,
- infection, nephrotoxic drugs, lupus, physical injury, etc 
+ infection, nephrotoxic drugs, lupus, and physical injury 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36,key-37"
@@ -1232,19 +1349,9 @@ literal "false"
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-Among these conditions, chronic kidney disease is the most prevalent — approxima
-tely 10% of the population worldwide is affected by some form of chronic
- kidney disease 
+ Among these conditions, chronic kidney disease is the most prevalent —
+ approximately 10% of the population worldwide is affected by some form
+ of chronic kidney disease 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-35"
@@ -1253,15 +1360,6 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
  
 \emph on
 Chronic kidney disease (CKD)
@@ -1276,15 +1374,6 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
  Diabetes and high blood pressure are responsible for the majority of cases
  of chronic kidney disease, with high blood sugar damaging the glomeruli
  and high blood pressure damaging the kidney blood vessels 
@@ -1296,15 +1385,6 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
  The latter interaction is associated with a negative feedback loop, where
  it is unclear whether kidney damage causes high blood pressure or vice
  versa 
@@ -1316,16 +1396,6 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1356,24 +1426,14 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 In conclusion, the kidneys play an essential role in maintaining overall
  health with their ability to filter waste, regulate blood pressure, and
  balance fluids.
- Kidney failure has serious health implications and there are multiple reasons
- for it.
+ Kidney failure has profound health implications, and there are multiple
+ reasons for it.
  Chronic kidney disease, resulting from various causes such as diabetes
  and hypertension, progressively impairs kidney function, leading to end-stage
  renal disease.
@@ -1424,16 +1484,6 @@ literal "false"
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1461,16 +1511,6 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1481,7 +1521,7 @@ However, kidney transplantation, despite its advances, faces significant
  decreasing the pool of available donors even further.
  In such cases, the immune system develops antibodies to the graft alloantigens,
  and any further transplantation of organs with similar antigens will result
- in hyperacute rejection (many of these termes are explained in 
+ in hyperacute rejection (these termes are explained in more detail in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Immunology-of-kidney"
@@ -1492,8 +1532,18 @@ noprefix "false"
 \end_inset
 
 ).
- This fact often leaves many patients unable to find a compatible donor
- after one or two rejection episodes 
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Tomas tells that they should be explained here
+\end_layout
+
+\end_inset
+
+This fact often leaves many patients unable to find a compatible donor after
+ one or two rejection episodes 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -1503,16 +1553,6 @@ literal "false"
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1528,16 +1568,6 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1551,7 +1581,7 @@ which occurs in 30%
 
 \end_inset
 
-affecting roughly 30% of individuals with advanced diabetes - simultaneous
+ affecting roughly 30% of individuals with advanced diabetes - simultaneous
  kidney and pancreas transplants are sometimes performed.
  This approach addresses renal failure and underlying diabetes, offering
  a comprehensive solution for these patients 
@@ -1559,16 +1589,6 @@ affecting roughly 30% of individuals with advanced diabetes - simultaneous
 LatexCommand cite
 key "key-32"
 literal "false"
-
-\end_inset
-
-.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
 
 \end_inset
 
@@ -1594,19 +1614,6 @@ The History of Kidney Transplantation
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:history-of-kidney-transplantation"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Write intro 
-\end_layout
 
 \end_inset
 
@@ -1658,21 +1665,12 @@ At the same time, in Lyon, Alexis Carrel and his colleagues were working
  stricture, and embolism 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41-reverse-proxy"
+key "key-1-kidney-transplantation-book"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
  His consequent move to The Rockefeller Institute for Medical Research in
  the United States led to further refinements of his method and the documentatio
 n of organ rejection.
@@ -1680,22 +1678,12 @@ n of organ rejection.
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41-reverse-proxy"
+key "key-2-nobel-prize-medicine"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1727,18 +1715,8 @@ xenografts
  the beginning of human transplantation attempts 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1,key-4"
+key "key-1-kidney-transplantation-book,key-4"
 literal "false"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
 
 \end_inset
 
@@ -1760,42 +1738,23 @@ on but also exposed the challenge of graft rejection.
  to improve graft survival 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41-reverse-proxy"
+key "key-1-kidney-transplantation-book"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
  Inspired by these findings, Carrel conducted his own experiments with irradiati
 on, achieving prolonged graft survival.
  However, these findings were never formally published 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41-reverse-proxy"
+key "key-1-kidney-transplantation-book"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1806,22 +1765,12 @@ The period of the 1930s and 1940s was stagnant compared to the beginning
  without considering Carrol's works and attempts at immunosuppression 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41-reverse-proxy"
+key "key-1-kidney-transplantation-book"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1843,22 +1792,12 @@ However, it was during that period that a significant milestone was achieved
  recovery, regaining normal kidney function 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41-reverse-proxy"
+key "key-4"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1911,22 +1850,12 @@ tropic hormone (more known as cortisone), it was deemed clinically insignificant
  From that time, many similar surgeries were performed in Boston 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1,key-3"
+key "key-1-kidney-transplantation-book,key-3"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1955,22 +1884,12 @@ d cortisone, an adrenal cortical hormone with mild immunosuppressive properties,
  inspiring human trials in Boston and Paris 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-42"
+key "key-3"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1981,23 +1900,12 @@ ical twins that lasted 20 years.
  transplant using radiation 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-42"
+key "key-3"
 literal "false"
 
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2016,23 +1924,12 @@ The quest for safer immunosuppressive methods led to the anticancer drug
 e was available for human use 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-42"
+key "key-3"
 literal "false"
 
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2042,31 +1939,31 @@ In 1963, a conference held by the National Research Council revealed a bleak
  It changed when Tom Starzl presented a protocol combining 6-MP with prednisone,
  leading to over one-year graft survival in 70% of cases.
  His results revolutionized the field, resulting in 50 new US transplantation
- programs and setting a 20-year standard in post-transplant immunosuppression
- 
+ programs and setting a twenty-year standard in post-transplant immunosuppressio
+n 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-42"
+key "key-3"
 literal "false"
 
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+In summary, 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-DR
+since
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-In summary, the late 1940s to the early 1960s was a period of discoveries
- and experimentation.
+the late 1940s to the early 1960s was a period of discoveries and experimentatio
+n.
  The use of cortisone in 1948, the administration of 6-MP for immunosuppression,
  and the invention of azathioprine in 1959 led to better immunosuppression,
  culminating in Tom Starzl's protocol, which became the standard for the
@@ -2095,23 +1992,12 @@ From 1964 to 1980, kidney transplantation saw gradual progress.
  oversight 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-42"
+key "key-3"
 literal "false"
 
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2156,22 +2042,12 @@ crossmatch test
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-42"
+key "key-3"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2206,22 +2082,12 @@ noprefix "false"
  and in selecting family donors 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-42"
+key "key-3"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2251,22 +2117,12 @@ e and prednisone was insufficient, effectively replacing cyclosporine as
  a usual baseline agent 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-42"
+key "key-3"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2280,7 +2136,6 @@ aking discoveries and persistent challenges.
  This sets the stage for the next section, which examines the fundamentals
  of immunology, laying the foundation for understanding the interplay between
  the immune system and the transplanted organ.
- .
 \begin_inset Note Note
 status open
 
@@ -2334,22 +2189,12 @@ immune system
  plays a crucial role in graft acceptance or rejection 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-54"
+key "key-6"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2380,23 +2225,12 @@ or
  is slower to respond but capable of providing more targeted responses 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-54"
+key "key-6"
 literal "false"
 
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2413,23 +2247,12 @@ Physical barriers, including epithelia and mucous membranes, constitute
  dead tissue and the initiation of repair after the tissue is damaged 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-54"
+key "key-6"
 literal "false"
 
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2504,22 +2327,12 @@ not ideal sentence
  in the pathogen's elimination 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-54"
+key "key-6"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2553,22 +2366,12 @@ memory cells
  response if the same antigen is encountered in the future 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-54"
+key "key-6"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2583,22 +2386,12 @@ s with diverse PRRs during the development in bone marrow.
  non-self is called tolerance 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-54"
+key "key-6"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \begin_inset Note Note
 status open
 
@@ -2695,6 +2488,19 @@ Immune response to the graft
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+tcells is not defined, as other things
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 There are three reasons why the immune system may react to the allograft:
  damage due to ischemia, reaction to the incompatible blood group antigens,
  and reaction to major histocompatibility complex (MHC) and minor histocompatibi
@@ -2734,24 +2540,14 @@ from the compromised cells
  to acute rejection 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41-reverse-proxy"
+key "key-1-kidney-transplantation-book"
 literal "false"
 
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-Because of that, the duration of ischemia is crucial in predicting the graft
- (and patient) survival.
+ Because of that, the duration of ischemia is crucial in predicting the
+ graft (and patient) survival.
 \end_layout
 
 \begin_layout Paragraph
@@ -2794,22 +2590,12 @@ e is to match organ recipients with ABO-identical organs to prevent potential
 e for transplantation 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41-reverse-proxy"
+key "key-1-kidney-transplantation-book"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -2876,23 +2662,12 @@ numerous
  to the MHC mismatch 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41-reverse-proxy"
+key "key-1-kidney-transplantation-book"
 literal "false"
 
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2903,21 +2678,12 @@ The MHC itself is divided into class I and class II antigens.
  role in immune response coordination 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41-reverse-proxy"
+key "key-1-kidney-transplantation-book"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
  In humans, each MHC class is further divided into three subgroups, as illustrat
 ed in Table 
 \begin_inset CommandInset ref
@@ -3087,22 +2853,12 @@ In clinical practice, clinicians assess and try to match donors and recipients
  immune responses 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41-reverse-proxy"
+key "key-1-kidney-transplantation-book"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -3438,21 +3194,12 @@ c non-responsiveness (tolerance) to an allograft.
  However, it has not gone further than animal models yet 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41-reverse-proxy"
+key "key-1-kidney-transplantation-book"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
  Tolerance is usually induced by prior exposure to donor antigens in a way
  that causes immune tolerance rather than sensitization in the recipient
  
@@ -3499,8 +3246,17 @@ To address the limitations of kidney transplantation, several solutions
  recent years.
  It has also found its way into the medical field, where it holds significant
  promise for solving the shortage of organs for transplantation.
- However, it faces the following challenges: 1) High cost in terms of time
- and money.
+ However
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+according to 59
+\end_layout
+
+\end_inset
+
+, it faces the following challenges: 1) High cost in terms of time and money.
  3D printers, materials, and software remain very expensive.
  2) The limited ability of the material to mimic soft tissue.
  3) Poor production precision.
@@ -3595,18 +3351,31 @@ Machine learning is a subfield of computer science that consists of building
 
 \begin_layout Standard
 Machine learning excels in problems that are either overly complex or have
- no known algorithm.
+ no known algorithm 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-57"
+key "key-9"
 literal "false"
 
 \end_inset
 
- It can help us generate knowledge.
- We can extract previously unknown correlations from the data and build
- knowledge.
- It might make fewer errors in decision-making than humans.
+.
+ It has the potential to help us create new knowledge by uncovering previously
+ unknown correlations within the data.
+ It might also make fewer errors in decision-making than humans.
+\end_layout
+
+\begin_layout Standard
+Every field is affected by human errors, and medicine is no exception.
+ Machine learning also makes mistakes, but if we would manage to get at
+ least 1% fewer errors than humans make, this would be a substantial achievement.
+ The human body is a complex system, where it is very difficult for human
+ mind to comprehend
+\series bold
+ 
+\series default
+all processes and how they  relate to each other.
+ Machine learning might be able to do that better than any human could.
 \end_layout
 
 \begin_layout Standard
@@ -3632,11 +3401,20 @@ reinforcement learning
 \emph on
 Supervised learning
 \emph default
- means that data is labeled, and we want to predict labels for the unlabeled
- data.
- The term labeled data is explained in the following section dedicated to
- supervised learning.
- Unsupervised learning deals with unlabeled data.
+ means that training data contains the desired solutions, referred to as
+ 
+\emph on
+labels
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3644,11 +3422,19 @@ Supervised learning
 \emph on
 Semi-supervised
 \emph default
- learning deals with partially labeled data, and we need to label it fully
+ learning deals with partially labeled data, which needs to be labeled fully
  either manually, or using techniques such as 
 \emph on
 clustering
 \emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
 .
  
 \end_layout
@@ -3660,44 +3446,58 @@ reinforcement learning
 \emph default
 , we create an environment, set up rewards for performing certain actions
  and punishment for others, and let the machine (actor) perform actions
- that produce the highest reward.
-\end_layout
+ that produce the highest reward 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
 
-\begin_layout Standard
-Every field is affected by human errors, and medicine is no exception.
- Machine learning also makes mistakes, but if we manage to get at least
- 1% fewer errors than humans make, this will be a substantial achievement.The
- human body is a complex system, where it is very difficult to comprehend
-\series bold
- 
-\series default
-all processes and and how they  relate to each other.
- In addition, machine learning can help us gain insight into them through
- accumulated data and discover new relations between them.
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 In this chapter, we will cover all theoretical backgrounds that might prove
  useful for solving our problem, including classical machine learning, statistic
-al survival analysis, basic steps that are required to 
-\series bold
-create machine learning system
-\series default
-s, and data preprocessing.
+al survival analysis, basic steps that are required to create machine learning
+ systems, and data preprocessing.
  We will begin by exploring supervised learning.
 \end_layout
 
 \begin_layout Section
-Supervised Learning
+Supervised Learning 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+burkov
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Supervised learning is the process of training a model on data where the
- outcome is known, to make predictions for data where the outcome is not
- known
+Drawing heavily on 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-60"
+key "key-10"
+literal "false"
+
+\end_inset
+
+ this section explores supervised learning.
+ 
+\emph on
+Supervised learning
+\emph default
+ is the process of training a model on data where the outcome is known,
+ to make predictions for data where the outcome is not known 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-12"
 literal "false"
 
 \end_inset
@@ -3734,16 +3534,6 @@ dataset
 \emph on
 feature vector
 \emph default
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-y
-\end_layout
-
-\end_inset
-
 .
  A feature vector is a vector that in each its dimension 
 \begin_inset Formula $j=1,...,D$
@@ -3775,7 +3565,15 @@ label
  or graph, in case of a regression.
  The goal of supervised learning algorithm is to create a model using the
  dataset that will take the feature vector as an input and produce a label
- or a more complex structure as an output.
+ or a more complex structure as an output 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3810,16 +3608,7 @@ Regression is a problem of predicting a
 \emph on
 target value
 \emph default
- given an unlabeled example.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-given->from
-\end_layout
-
-\end_inset
-
+ from an unlabeled example.
  The problem is solved by a regression learning algorithm that takes a set
  of labeled examples as input, and produces a model that takes an unlabeled
  example as input and outputs a target value.
@@ -3834,7 +3623,7 @@ Classification and regression tasks are similar in many ways and often for
 \end_layout
 
 \begin_layout Subsection
-Linear Regression
+Linear Regression 
 \end_layout
 
 \begin_layout Standard
@@ -3927,7 +3716,7 @@ To train the linear regression means to find optimal values
 
  so that the model makes as accurate predictions as possible.
  In graphical terms, it means finding such a hyperplane that fits data points
- from the training set as well as possible, as shown in image
+ from the training set as well as possible, as shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Linear-regression-for"
@@ -3946,10 +3735,6 @@ noprefix "false"
 wide false
 sideways false
 status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -3988,7 +3773,7 @@ name "fig:Linear-regression-for"
 \end_layout
 
 \begin_layout Standard
-To find optimal parameters we need to minimize the following expression:
+To find optimal parameters we need to minimize
 \end_layout
 
 \begin_layout Standard
@@ -3999,11 +3784,7 @@ To find optimal parameters we need to minimize the following expression:
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-It is called 
+ This expression is called a 
 \emph on
 mean squared error (MSE), 
 \emph default
@@ -4108,7 +3889,7 @@ Linear models are usually resilient to overfitting because they are simple.
 \end_layout
 
 \begin_layout Subsection
-Logistic Regression
+Logistic Regression 
 \end_layout
 
 \begin_layout Standard
@@ -4398,7 +4179,7 @@ Unfortunately, there is no closed-form solution for this optimization problem.
 \end_layout
 
 \begin_layout Subsection
-Support Vector Machines
+Support Vector Machines 
 \end_layout
 
 \begin_layout Standard
@@ -4832,14 +4613,46 @@ Unsupervised Learning
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add examples of algos used
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \emph on
 Unsupervised learning 
 \emph default
-deals with a dataset that does not have labels.
+deals with a dataset that does not have labels 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  There are three main branches of unsupervised learning: clustering, dimensional
-ity reduction and anomaly detection.
- 
+ity reduction and anomaly detection 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
 \emph on
 Clustering
 \emph default
@@ -4848,12 +4661,28 @@ Clustering
 \emph on
 exploratory data analysis (EDA),
 \emph default
- customer segmentation, dimensionality reduction, and anomaly detection.
+ customer segmentation, dimensionality reduction, and anomaly detection
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
  Clustering might be either soft, where an instance has a score of belonging
  to a particular cluster, or hard, where an instance belongs to only one
  class.
  The score might be the distance from the cluster centroid or an affinity
- (similarity score).
+ (similarity score) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -4862,7 +4691,15 @@ exploratory data analysis (EDA),
 \emph on
 Dimensionality reduction
 \emph default
- is useful for visualization and for the acceleration of learning.
+ is useful for visualization and for the acceleration of learning 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
  Datasets often have a lot of redundant data or the task requires a lot
  of features.
  Many algorithms, such as linear models, SVMs, decision trees, might have
@@ -4872,17 +4709,41 @@ Dimensionality reduction
 curse of dimensionality
 \emph default
  states that high dimensional data can cause slow learning and prevent us
- from getting an optimal model.
+ from getting an optimal model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
  Consequently, the reduction of the data dimensionality might be a good
  idea.
  However, it is worth noting that a dimensionality reduction algorithm might
  lose some useful information.
  A lot of modern algorithms, such as neural networks or ensemble algorithms,
  handle high dimensional data very well, and dimensionality reduction techniques
- are used less than in the past.
+ are used less than in the past 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  However, they are still used for data visualization and cases when we need
- to build an interpretable model while we are limited in theb number of
- algorithms we can use.
+ to build an interpretable model while we are limited in the number of algorithm
+s we can use 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -4890,7 +4751,15 @@ curse of dimensionality
 \emph on
 Anomaly (outlier) detection
 \emph default
- involves the detection of instances strongly deviating from the norm.
+ involves the detection of instances strongly deviating from the norm 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
  These instances are called 
 \emph on
 outliers
@@ -4899,28 +4768,40 @@ outliers
 \emph on
 inliers
 \emph default
-.
- Anomaly detection has many applications.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-exploratory data analysis (EDA)
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
 
 \end_inset
 
+.
+ Anomaly detection has many applications.
  For example, it can be used as a data preprocessing step to remove outliers
  from the dataset, which might improve the performance of the resulting
- model.
+ model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
  In addition, it is used in the 
 \emph on
 fraud detection
 \emph default
- task and the detection of faulty products in manufacturing facilities.
+ task and the detection of faulty products in manufacturing facilities 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -4931,106 +4812,15 @@ Novelty detection
 is closely related to anomaly detection.
  The only difference is that novelty detection assumes that the training
  dataset was not contaminated by outliers while anomaly detection does not
- make this assumption.
-\end_layout
-
-\begin_layout Subsection
-Principal Component Analysis (PCA)
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-napsat uvod co to je a jak a k cemu to je
-\end_layout
+ make this assumption 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-
-\emph on
-Principal components 
-\emph default
-are vectors that define a new coordinate system.
- The first vector goes in the direction of the highest variance.
- The second vector is orthogonal to the first one and goes in the direction
- of the second highest variance, and so on.
- If we were to reduce dimensionality to 
-\begin_inset Formula $D_{new}<D$
-\end_inset
-
-, we would pick 
-\begin_inset Formula $D_{new}$
-\end_inset
-
- largest principal components and 
-\emph on
-project
-\emph default
- instances onto them.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(Create images) 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-It is not advised to choose the number of dimensions arbitrarily.
- It is recommended to choose a number of dimensions that preserves a large
- amount of variance (e.g.
- 95%), or in case of visualization to reduce the number of dimensions down
- to two or three.
- There are different versions of PCA; kernel PCA, Incremental PCA (online
- or batch PCA), and Randomized PCA.
- 
-\end_layout
-
-\begin_layout Subsection
-Gaussian Mixtures 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-smazat nebo predelat
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\emph on
-Gaussian mixtures
-\emph default
- is a common algorithm that can be used for anomaly detection.
- Gaussian mixtures assume that the dataset is generated by several Gaussian
- distributions.
- Any instance lying in a region of low density is an anomaly.
- The density threshold has to be specified.
- If one gets too many false positives (good products labeled as faulty)
- they need to decrease the threshold.
- Consequently, if we get too many false negatives (faulty products labeled
- as good) the threshold has to be increased.
- Gaussian mixtures belong to soft clustering.
- Gaussian mixtures require the number of clusters to be specified.
- It needs to be run a couple of times to avoid suboptimal solutions.
+.
 \end_layout
 
 \begin_layout Section
@@ -5039,7 +4829,15 @@ Data Preparation
 
 \begin_layout Standard
 Due to factors such as curse of dimensionality and inherent noise, we cannot
- load raw data to an algorithm and expect good performance.
+ load raw data to an algorithm and expect good performance 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  Most often, the raw data has too many features and most of them have very
  little predictive power.
  We need to build a dataset first.
@@ -5047,9 +4845,25 @@ Due to factors such as curse of dimensionality and inherent noise, we cannot
 \emph on
 Feature engineering
 \emph default
- is responsible for transforming raw data into a dataset.
+ is responsible for transforming raw data into a dataset 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  It is a labor-demanding process that requires creativity and, most importantly,
- domain knowledge.
+ domain knowledge 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -5062,30 +4876,36 @@ informative
 \emph on
 high predictive power
 \emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
 .
  For example, in our task of predicting survival time, donor-recipient blood
  group compatibility or recipient's age is likely to have much higher predictive
  power than the donor's or recipient's citizenship.
- 
-\series bold
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-vic to rozvest.
-\end_layout
-
-\end_inset
-
-
+ As blood group compatibility is directly linked to the successful transplantati
+on, while the recipient's citizenship has little correlation with the genetic
+ similarities, which we would expect from datasets from other countries,
+ but we use the dataset from the United States - a country with very diverse
+ population.
 \end_layout
 
 \begin_layout Standard
 Moreover, it is possible to create new features with higher predictive power
- out of those with low predictive power.
+ out of those with low predictive power 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
  For example, the calculation of 
 \emph on
 estimated Glomerular Filtration Rate (eGFR)
@@ -5109,13 +4929,29 @@ Handling Categorical Features
 
 \begin_layout Standard
 The majority of machine learning algorithms primarily operate with numerical
- features.
+ features 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
  To handle categorical features (the ones with only a few possible values),
  such as the age group or a blood group, we can use 
 \emph on
 one-hot encoding
 \emph default
- to convert them to several binary ones.
+ to convert them to several binary ones 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  For instance, let's consider a blood group feature comprised of four primary
  blood groups: A, B, AB, and O.
  We can convert each blood group into a vector of four numerical values:
@@ -5173,14 +5009,22 @@ end{align*}
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
 This technique will increase the dimensionality of the dataset but this
  is a trade-off we have to make because if we were to assign a number to
  each group (1 to A, 2 to B, etc.), that would imply gradation or ranking
- among these categories, while there is none.
+ among these categories, while there is none 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -5193,6 +5037,14 @@ However, if the categorical feature does suggest some gradation, for example,
 \emph on
 ordinal encoding
 \emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9,key-10"
+literal "false"
+
+\end_inset
+
 .
  
 \end_layout
@@ -5215,11 +5067,27 @@ bins
 \emph on
 buckets
 \emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
 .
  For example, a patient's age can be transformed into age-range bins: 0
  to 18 years old, 18 to 25 y.o., 25 to 40 years old, and so on.
  This technique might help an a laearning algorithm learn better, particularly
- with smaller datasets.
+ with smaller datasets 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -5234,8 +5102,24 @@ Different ranges of feature values might pose a problem to some machine
 \series bold
  
 \series default
-as they do not handle them very well.
- It might result in a slower training time or a poorer performance.
+as they do not handle them very well 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9,key-10"
+literal "false"
+
+\end_inset
+
+.
+ It might result in a slower training time or a poorer performance 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  This problem is solved by 
 \emph on
 normalization
@@ -5281,7 +5165,15 @@ pridat vzorec pro '-1
 \begin_inset Formula $[0,1]$
 \end_inset
 
- without losing any information.
+ without losing any information 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  The normalization formula for value 
 \begin_inset Formula $x^{(j)}$
 \end_inset
@@ -5290,7 +5182,7 @@ pridat vzorec pro '-1
 \begin_inset Formula $j$
 \end_inset
 
-, looks like the following:
+ is expressed as:
 \end_layout
 
 \begin_layout Standard
@@ -5331,6 +5223,14 @@ standard normal distribution
 \begin_inset Formula $\sigma=1$
 \end_inset
 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
 .
  The standardization formula for value 
 \begin_inset Formula $x^{(j)}$
@@ -5340,7 +5240,7 @@ standard normal distribution
 \begin_inset Formula $j$
 \end_inset
 
-, looks like the following:
+ is given by:
 \end_layout
 
 \begin_layout Standard
@@ -5355,19 +5255,18 @@ standard normal distribution
 \end_layout
 
 \begin_layout Standard
-Typically, standardization is used for supervised learning,
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-premyslet nad carkou
-\end_layout
+Typically, standardization is used for supervised learning, in case feature
+ values are formed by standard distribution (bell curve) or a feature has
+ outliers.
+ In other cases, the normalization is preferred 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
 
 \end_inset
 
- in case feature values are formed by standard distribution (bell curve)
- or a feature has outliers.
- In other cases, the normalization is preferred.
+.
 \end_layout
 
 \begin_layout Subsection
@@ -5384,8 +5283,16 @@ name "subsec:Handling-Missing-Feature"
 \end_layout
 
 \begin_layout Standard
-Datasets frequently have missing values and to handle them, we have one
- of the following options:
+Datasets frequently have missing values and, according to Andrii Burkov
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+, to handle them, we have one of the following options:
 \end_layout
 
 \begin_layout Enumerate
@@ -5393,20 +5300,9 @@ Datasets frequently have missing values and to handle them, we have one
 \series bold
 Removal of rows with missing values
 \series default
-.
- The most direct and straightforward approach to managing missing data.
- If missing values are sparse or the dataset is large enough, the usage
- of this technique would be appropriate.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-and often preferred
-\end_layout
-
-\end_inset
-
-
+ is the most straightforward approach to managing missing data.
+ If missing values are sparse or the dataset is large enough, this technique
+ would be appropriate.
 \end_layout
 
 \begin_layout Enumerate
@@ -5415,8 +5311,8 @@ and often preferred
 Feature removal
 \series default
 .
- If the dataset has a feature with an excessive amount of missing values
- relative to its size, it is better to remove the feature.
+ If a feature in the dataset has excessive missing values relative to its
+ size, it is better to remove it.
 \end_layout
 
 \begin_layout Enumerate
@@ -5425,8 +5321,8 @@ Feature removal
 Regression imputation
 \series default
 .
- This technique implies the filling in a missing feature value with predictions
- of a machine learning regression algorithm.
+ This technique implies filling in a missing feature value with regression
+ algorithm predictions.
 \end_layout
 
 \begin_layout Enumerate
@@ -5445,16 +5341,27 @@ Mean/median imputation
 Constant value imputation
 \series default
 .
- This technique entails the filling the missing values with clearly too
- high or too low values.
- The motivation is for the algorithm to discern the value as an outlier
- while considering other features.
+ This technique entails filling the missing values with clearly too-high
+ or too-low values.
+ Because of that, the algorithm will be able to discern the value as an
+ outlier while considering other features.
  This method is not recommended as it can introduce bias.
 \end_layout
 
+\begin_layout Enumerate
+
+\series bold
+Adding a binary indicator for each feature with missing values
+\series default
+.
+ If features with missing values are few and the dataset is large, we can
+ add a binary indicator for each feature with missing values.
+ The missing value can be replaced with 0 or any other number.
+\end_layout
+
 \begin_layout Standard
-It is often impossible to tell which data imputation method would work the
- best and therefore, it should be checked experimentally.
+It is often impossible to tell which data imputation method would work best,
+ so it should be checked experimentally.
 \end_layout
 
 \begin_layout Section
@@ -5481,35 +5388,82 @@ Validation set (15% of the dataset)
 \end_layout
 
 \begin_layout Itemize
-Test set (15% of the dataset)
+Test set (15% of the dataset) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-The training set, being the largest of them, is employed to train the machine
- learning model.
- Validation and test sets, which are of identical sizes and often called
- hold-out sets, are used in subsequent stages of model evaluation.
+The training set, being the largest, is employed to train the machine learning
+ model.
+ Validation and test sets, which are identical in size and often called
+ hold-out sets, are used in subsequent stages of model evaluation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
-The rationale behind the use of separate training and validation sets is
- to prevent overfitting - a situation when the model performs well on the
- training data but poorly on the unseen data.
+The rationale behind using separate training and validation sets is to prevent
+ 
+\emph on
+overfitting
+\emph default
+ - when the model performs well on the training data but poorly on the unseen
+ data 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  Overfitting can occur if the model is tested and evaluated on the same
  dataset.
  As a result, the model may memorize the training examples and fail to make
  accurate predictions on the unseen data.
- To alleviate this, we use the validation set to fine-tune the model, and
- the test set to assess its performance before deploying it to production.
+ To alleviate this, we use the validation set to fine-tune the model and
+ the test set to assess its performance before deploying it to production
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-A typical workflow involves training the model on the training set, validation
- on the validation set using the selected metric, then adjusting the model's
- parameters to improve its performance.
+A typical workflow involves training the model on the training set, validating
+ it on the validation set using the selected metric, and then adjusting
+ the model's parameters to improve its performance.
  This process is repeated until no substantial improvement is observed.
- Finally, the model's performance is assessed on the test set.
- This iterative process is referred to as hyperparameter tuning.
+ Finally, the model's performance is assessed on the test set 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
+ This iterative process is referred to as 
+\emph on
+hyperparameter tuning.
 \end_layout
 
 \begin_layout Standard
@@ -5526,7 +5480,15 @@ k-fold cross-validation
  set only once.
  The only drawback is that it is highly computationally demanding, particularly
  with a high k value and larger datasets, as the model will be trained k
- times.
+ times, but with a small dataset it is a necessity 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5534,17 +5496,29 @@ A
 \emph on
 hyperparameter
 \emph default
- is a parameter specified before model training, in contrast to regular
- parameters that are calculated during training.
- Each model possesses a different set of hyperparameters and they profoundly
+ is a parameter specified before model training, unlike regular parameters
+ calculated during training.
+ Each model possesses a different set of hyperparameters, and they profoundly
  influence the model's performance.
  The number of trees in Random Forest and the C hyperparameter in Support
  Vector Machines are examples of hyperparameters.
  The task of finding the optimal combination of hyperparameters is called
- hyperparameter tuning.
+ 
+\emph on
+hyperparameter tuning
+\emph default
+.
  One strategy might be to select hyperparameters manually and observe their
- impact on the performance.
- However, utilizing the grid search is a better way.
+ impact on performance.
+ However, utilizing the grid search is a better way 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5558,19 +5532,44 @@ Grid search
  combination of hyperparameters.
  The performance of each individual model is assessed using k-fold cross-validat
 ion and the best combination of hyperparameters is selected.
- This approach is used in scikit-learn's implementation - GridSearchCV.
+ This approach is used in scikit-learn's implementation - GridSearchCV 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 Grid search proves to be effective when dealing with relatively few hyperparamet
 er combinations.
  However, with larger number of hyperparameter combinations, it is advisable
- to use RandomizedSearch (RandomizedSearchCV in scikit-learn).
+ to use RandomizedSearch (RandomizedSearchCV in scikit-learn 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+).
  This method is very similar to grid search but instead of trying every
  possible combination of provided values, it tests only a specified number
  of randomly selected hyperparameter combinations.
  The primary advantage of this method over grid search lies in more control
- over computational power and the time dedicated to hyperparameter tuning.
+ over computational power and the time dedicated to hyperparameter tuning
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -5586,8 +5585,17 @@ often referred to as
 \emph on
  time-to-event analysis, 
 \emph default
-is a statistical technique employed to analyze and predict the time until
- an event of interest occurs.
+is a statistical technique 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+branch of statistics?
+\end_layout
+
+\end_inset
+
+ employed to analyze and predict the time until an event of interest occurs.
  Its name originates from clinical and biological research where these methods
  are used to analyze survival time.
  These methods, however, found their use in areas far beyond clinical settings:
@@ -5635,7 +5643,7 @@ failure
  encounter 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-13,key-30"
+key "key-13-SA,key-30"
 literal "false"
 
 \end_inset
@@ -5668,6 +5676,16 @@ In this section, we will delve into fundamental survival analysis terminology,
 ng the most popular statistical methods, as well as one machine learning
  method tailored to the needs of survival analysis.
  Additionally, we will discuss ways to evaluate survival models effectively.
+ Unless referenced otherwise, the contents of this section are drawn from
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13-SA"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -5707,7 +5725,7 @@ censoring
  approaches to survival data impractical 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-38"
+key "key-27"
 literal "false"
 
 \end_inset
@@ -6146,7 +6164,7 @@ Survival function
  declining to 0.
  While understanding the probability of not failing at every time point
  is important, knowing the instantaneous risk might also be useful, leading
- us to the next tool: the hazard function.
+ us to the next concept: the hazard function.
 \begin_inset Note Note
 status open
 
@@ -6552,17 +6570,7 @@ literal "false"
 \emph on
 scikit-survival
 \emph default
- library (more on it in the Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Overview-of-Machine"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) will do that for us.
+ library will do that for us.
  
 \end_layout
 
@@ -6584,7 +6592,7 @@ machine learning based
  the estimated survival time 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-36"
+key "key-23"
 literal "false"
 
 \end_inset
@@ -6596,7 +6604,7 @@ literal "false"
  Typically, statistical methods are employed for low-dimensional data 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-36"
+key "key-23"
 literal "false"
 
 \end_inset
@@ -6612,7 +6620,7 @@ On the other hand, machine learning methods focus on the prediction of the
  Machine learning methods are mostly used with high-dimensional data 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-36"
+key "key-23"
 literal "false"
 
 \end_inset
@@ -6631,7 +6639,7 @@ Statistical methods can be further subdivided based on their assumptions
  learning, and multitask learning are included as well 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-36"
+key "key-23"
 literal "false"
 
 \end_inset
@@ -6642,19 +6650,6 @@ literal "false"
 \begin_layout Standard
 In the following sections, we will cover selected statistical methods and
  one machine learning technique.
- Machine learning techniques related to neural networks will be covered
- in Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Deep-Learning"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, dedicated to these advanced survival analysis techniques.
- 
 \end_layout
 
 \begin_layout Subsection
@@ -6689,13 +6684,12 @@ Non-parametric methods
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-36"
+key "key-23"
 literal "false"
 
 \end_inset
 
-.
- There are three main non-parametric methods: the Kaplan-Meier (KM) method,
+.There are three main non-parametric methods: the Kaplan-Meier (KM) method,
  the Nelson-Aalen (NA) estimator, and the Life-Table (LT) method.
  In the next section, we will cover Kaplan-Meier in more detail.
  The Life-Table method is more convenient than Kaplan-Meier for the estimation
@@ -6706,7 +6700,7 @@ literal "false"
  hazard functions 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-36"
+key "key-23"
 literal "false"
 
 \end_inset
@@ -6743,7 +6737,7 @@ noprefix "false"
  algorithm, and the Time-Dependent Cox model 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-36"
+key "key-23"
 literal "false"
 
 \end_inset
@@ -6768,13 +6762,12 @@ Parametric methods
  The AFT model represents survival time as a function of covariates 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-36"
+key "key-23"
 literal "false"
 
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -6893,17 +6886,17 @@ literal "false"
  Because of that the Kaplan-Meier estimator is sometimes referred to as
  the 
 \emph on
-product-limit method 
+product-limit method
+\emph default
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-36"
+key "key-23"
 literal "false"
 
 \end_inset
 
 .
-
-\emph default
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -7308,15 +7301,15 @@ LL(\beta)=-\sum_{j=1}^{N}\delta_{j}\{X_{j}\beta-log[\sum_{i\epsilon R_{j}}exp(X_
 
 \end_inset
 
-
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-36"
+key "key-23"
 literal "false"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -7431,7 +7424,7 @@ ridge regression.
  is set to zero, we get the regular Cox model 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-37"
+key "key-25"
 literal "false"
 
 \end_inset
@@ -7524,7 +7517,7 @@ alpha_min_ratio=0.01
  values up to 1% of the estimated maximum 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-37"
+key "key-25"
 literal "false"
 
 \end_inset
@@ -7618,7 +7611,7 @@ Similar to LASSO, the weight
  Its optimal value is typically estimated in a data-driven way 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-37"
+key "key-25"
 literal "false"
 
 \end_inset
@@ -7705,7 +7698,7 @@ Survival Trees
  a given feature that maximizes the survival difference 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-39"
+key "key-27"
 literal "false"
 
 \end_inset
@@ -7765,7 +7758,7 @@ For each tree, calculate the cumulative hazard function with the Nelson-Aalen
 Use OOB data to determine the prediction error of the ensemble 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-38"
+key "key-26"
 literal "false"
 
 \end_inset
@@ -7827,7 +7820,7 @@ Calibration
  is the agreement between the observed and predicted survival times 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-34"
+key "key-21"
 literal "false"
 
 \end_inset
@@ -7842,7 +7835,7 @@ The absence of bias in a situation when the validation set contains censored
  would be unreasonably optimistic 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-34"
+key "key-21"
 literal "false"
 
 \end_inset
@@ -7890,7 +7883,7 @@ Measures of concordance
  discrimination 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-34"
+key "key-21"
 literal "false"
 
 \end_inset
@@ -7930,7 +7923,7 @@ C-index
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-34"
+key "key-21"
 literal "false"
 
 \end_inset
@@ -7996,7 +7989,7 @@ literal "false"
  and may provide more stable estimates 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-34"
+key "key-21"
 literal "false"
 
 \end_inset
@@ -8055,7 +8048,7 @@ where
 According to the Scikit-survival's documentation 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-35"
+key "key-22"
 literal "false"
 
 \end_inset
@@ -8065,7 +8058,7 @@ literal "false"
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-34"
+key "key-21"
 literal "false"
 
 \end_inset
@@ -8101,16 +8094,6 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-I was unable to find usable uno's definition
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -8139,7 +8122,7 @@ area under the receiver operating characteristic curve
  can distinguish diseased patients from healthy ones 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-35"
+key "key-22"
 literal "false"
 
 \end_inset
@@ -8181,12 +8164,12 @@ specificity
  as positive 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-57"
+key "key-9"
 literal "false"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -8253,7 +8236,7 @@ dynamic controls
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-35"
+key "key-22"
 literal "false"
 
 \end_inset
@@ -8280,7 +8263,7 @@ Time-dependent ROC AUC and concordance index are great for assessing the
  tell us nothing about the accuracy of individual predictions 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-35"
+key "key-22"
 literal "false"
 
 \end_inset
@@ -8348,7 +8331,7 @@ x
  is the inverse probability of censoring weight 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-35"
+key "key-22"
 literal "false"
 
 \end_inset
@@ -8399,111 +8382,24 @@ Survival analysis provides a suite of techniques for the prediction of a
  precise predictions.
 \end_layout
 
-\begin_layout Section
-Overview of Machine Learning Libraries and Tools 
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Overview-of-Machine"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-python.
- what is the main disadvantage
-\end_layout
-
-\begin_layout Plain Layout
-numpy 
-\end_layout
-
-\begin_layout Plain Layout
-pandas
-\end_layout
-
-\begin_layout Subsection
-scikit learn
-\end_layout
-
-\begin_layout Plain Layout
-- pros
-\end_layout
-
-\begin_layout Plain Layout
-- cons
-\end_layout
-
-\begin_layout Plain Layout
-- where it is used
-\end_layout
-
-\begin_layout Subsection
-Keras
-\end_layout
-
-\begin_layout Subsection
-Tensorflow
-\end_layout
-
-\begin_layout Plain Layout
-- pros
-\end_layout
-
-\begin_layout Plain Layout
-- cons
-\end_layout
-
-\begin_layout Plain Layout
-- where it can be used
-\end_layout
-
-\begin_layout Subsection
-PyTorch
-\end_layout
-
-\begin_layout Plain Layout
-- pros
-\end_layout
-
-\begin_layout Plain Layout
-- cons
-\end_layout
-
-\begin_layout Plain Layout
-- where it can be used
-\end_layout
-
-\begin_layout Plain Layout
-it is more research driven
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Chapter
 Data Preparation and Analysis
 \end_layout
 
 \begin_layout Standard
 In this chapter we are going to look into the dataset used in the study.
- Explore the most important features and their relationship with each other.
- Look into survival time...
+ Explore the most important features and their influence on the survival
+ time.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Write normal intro.
 \end_layout
 
-\begin_layout Standard
-The dataset consists of 993 806 of records for both transplanted patients
- and ones from the waiting list, and 450 features comprised of waiting list
- data and already transplanted patients for kidney and pancreas transplant
- from October 1, 1987 to the present.
- Kidney transplants account for 490 172 records.
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -8763,37 +8659,8 @@ columns
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\series bold
-Description of feature engineering step
-\series default
-: 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Now, we need to filter out all records that might add noise to the data.
- Firstly, we remove patients who died of unrelated causes 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-better would be to censor them
-\end_layout
-
-\end_inset
-
-, such as accidents.
+ Firstly, we remove patients who died of unrelated causes, such as accidents.
  Next, we filter out all recipients from the pediatric group, as the transplanta
 tion at that age differs significantly from that of adults.
  Then, we delete rows with all ”Unknown” categories.
@@ -9436,6 +9303,15 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
  Let us confirm that on the data.
 \end_layout
 
@@ -9612,7 +9488,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -9840,6 +9716,15 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
  Quite a significant factor is the difference between male and female immune
  responses - males have a greater risk of getting an infection than females,
  and the intensity of the infection is higher 
@@ -9847,6 +9732,16 @@ literal "false"
 LatexCommand cite
 key "key-63"
 literal "false"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
 
 \end_inset
 
@@ -9884,6 +9779,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -9931,10 +9836,12 @@ Ethnicity
 \begin_layout Standard
 This subsection explores the survival curves of different ethnic groups.
  In Figure 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-31"
-literal "false"
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "km_race"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -9951,7 +9858,17 @@ literal "false"
 
 \end_inset
 
-) examining graft survival.
+) 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DR
+\end_layout
+
+\end_inset
+
+examining graft survival.
  
 \begin_inset Note Note
 status collapsed
@@ -10041,7 +9958,7 @@ name "km_dialysis"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -11341,7 +11258,7 @@ name "fig:Pie-Living-donor"
 \end_layout
 
 \begin_layout Section
-Dataset building, Exclusion Criteria and Noice Reduction
+Dataset building, Exclusion Criteria and Noise Reduction
 \end_layout
 
 \begin_layout Paragraph
@@ -11376,7 +11293,7 @@ Feature Engineering
 
 \begin_layout Standard
 We attempted to do feature engineering with donor-recipient height, weight,
- BMI, and age differences, as was done here 
+ BMI, and age differences, as was done in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-47-naqvi"
@@ -11421,7 +11338,7 @@ Problem Formulation
 \begin_layout Standard
 Predicting the survival time after a successful kidney transplant can be
  approached in three ways: as a regression problem, classification problem,
- or through survival analysis.
+ or survival analysis.
  
 \end_layout
 
@@ -11432,7 +11349,7 @@ regression
 \emph default
  model may seem an intuitive choice, as we want to predict a numerical value
  – the survival time.
- But it is not the best option for the following reasons:
+ However, it is not the best option for the following reasons:
 \end_layout
 
 \begin_layout Standard
@@ -11442,35 +11359,10 @@ regression
 The censored dataset
 \series default
 .
- The dataset has a high level of censoring – 76%
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-not true anymore.
- on training set it is less
-\end_layout
-
-\end_inset
-
-.
- The dataset contains the number of days survived, along with the survival
- status.
- Including both living and deceased patients would introduce too much noise
- to the model, making it highly inaccurate.
- It is impossible to predict the number of days survived with regression
- methods based on a dataset comprised of both living and deceased patients.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-change the last sentence
-\end_layout
-
-\end_inset
-
-
+ The dataset has a high level of censoring – 76%.
+ Including living and deceased patients would introduce too much noise to
+ the model, making it highly inaccurate because the survival time is unknown
+ for the living recipients.
 \end_layout
 
 \begin_layout Standard
@@ -11481,23 +11373,13 @@ Censoring removal would produce bias
 \series default
  
 \series bold
-and signifficantly reduce the dataset
+and significantly reduce the dataset
 \series default
 .
- We could remove all censored instances, but that would reduce the dataset
- from 500 000 to roughly 120 000 examples.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-omit the actual numbers
-\end_layout
-
-\end_inset
-
- It would also introduce significant bias, as the dataset would contain
+ We could remove all censored instances, but that would significantly reduce
+ the dataset and introduce significant bias, as the dataset would contain
  only deceased patients, and most of them passed away before the introduction
- of modern techniques for treating the rejection.
+ of modern techniques for treating rejection.
  As a result, the model created from such a dataset would be highly inaccurate.
  
 \end_layout
@@ -11510,34 +11392,35 @@ Regression predicts only one single number.
 
 \series default
  It poses a problem, especially over extended time frames, as there are
- too many factors that we can’t account for, leading to incorrect predictions.
+ too many factors that we cannot account for, leading to incorrect predictions.
  
 \end_layout
 
 \begin_layout Standard
-Another way of formulating the problem is 
-\emph on
-classification
-\emph default
-.
+Another way of formulating the problem is classification.
  We can theoretically divide the dataset into groups: ”less than one year”,
- ”one to five years”, ”five and more”, or even more groups and train a classifie
-r based on them, as it was done by ....
- et al..
- And again, we would face problems of censoring and bias mentioned above.
- So the classification is not the best option as well.
+ ”one to five years”, ”five and more,” or even more groups and train a classifie
+r based on them, as Naqvi et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-47-naqvi"
+literal "false"
+
+\end_inset
+
+.
+ did.
+ Again, we would face the problems of censoring and bias mentioned above,
+ so classification is not the best option.
  
 \end_layout
 
 \begin_layout Standard
-A more appropriate way of problem formulation is in terms of 
-\emph on
-survival analysis
-\emph default
-.
+A more appropriate way of problem formulation is survival analysis.
  Survival analysis methods handle censoring and provide a better form of
- prediction: survival function or hazard function, which represents survival
- probability or the failure rate at each moment in time, respectively.
+ prediction: the survival function or hazard function, which represents
+ survival probability or the failure rate at each moment in time, respectively.
 \begin_inset Note Note
 status open
 
@@ -11550,17 +11433,31 @@ vic to rozvest
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This is superior, because the predicted values - survival/hazard function
+ - are inherently uncertain.
+ And thinking in terms of probability is better 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Model Selection and Training Approach
 \end_layout
 
 \begin_layout Standard
-In our study, we utilized the algorithms from the scikit-survival library
- to train our models.
- When choosing the models that we would fully train and fine-tune in the
- end, we tried the majority of the models that scikit survival offers on
- a small subset of the dataset and chose the ones that perform best while
- taking adequate amounts of time.
+In our study, we used the scikit-survival library algorithms to train our
+ models.
+ When choosing the models we would fully train and fine-tune in the end,
+ we tried most of the models that scikit survival offers on a small subset
+ of data and chose the ones that perform best while taking adequate time.
  Despite SVM-based models demonstrating superior performance on the small
  subset of data, we decided against using them due to their inherent inability
  to handle large datasets, which results in extended training times and
@@ -11570,34 +11467,11 @@ In our study, we utilized the algorithms from the scikit-survival library
 \end_layout
 
 \begin_layout Standard
-After rigorous experimentation, we ultimately selected Random Survival Forest
- (RSF) and Gradient Boosted Survival Analysis (GBSA) as our preferred models.
- These are ensemble models that have been widely recognized for their high
- accuracy and robustness despite prolonged training time.
- We also explored CoxnetSurvivalAnalysis (Cox Elastic Net, later referred
- to as coxnet), which demonstrated a notably low training time, which gave
- us the freedom to experiment with less time invested compared to the other
- models.
- Further research led us to discover an approach to training the Coxnet
- in the scikit survival documentation
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-25"
-literal "false"
-
-\end_inset
-
-, which offered comparable performance to other models, requiring only a
- small fraction of the training time and computational resources.
- This showed that the Cox Elastic Net is more than a viable alternative
- to powerful and robust ensemble models, especially when time and computational
- resources are limited.
- 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-add a link to the documentation
+show the results
 \end_layout
 
 \end_inset
@@ -11606,13 +11480,65 @@ add a link to the documentation
 \end_layout
 
 \begin_layout Standard
+After rigorous experimentation, we ultimately selected CoxnetSurvivalAnalysis
+ (Cox Elastic Net, later referred to as coxnet) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-54"
+literal "false"
+
+\end_inset
+
+, Random Survival Forest (RSF) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-55"
+literal "false"
+
+\end_inset
+
+, and Gradient Boosted Survival Analysis (GBSA) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-56"
+literal "false"
+
+\end_inset
+
+ as our preferred models.
+ The latter two are ensemble models widely recognized for their high accuracy
+ and robustness despite prolonged training time.
+ The former demonstrated a notably low training time but worse results than
+ the ensemble models.
+ It allowed us to experiment with less time invested than the other models.
+ Further research led us to discover an approach to training the Coxnet
+ in the scikit survival documentation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-25"
+literal "false"
+
+\end_inset
+
+, which offered comparable performance to other models, requiring only a
+ tiny fraction of the training time and computational resources.
+ This showed that the Cox Elastic Net is more than a viable alternative
+ to powerful and robust ensemble models, especially when time and computational
+ resources are limited.
+ 
+\end_layout
+
+\begin_layout Standard
 However, we encountered some challenges due to the relatively large dataset,
  even after all exclusion criteria and the removal of NaN values.
  RSF and GBSA demonstrated a long training time and high computational demands.
  The latter resulted in frequent kernel crashes in our Jupyter notebooks
  after long hours of training.
- To mitigate these issues, we decided to divide our dataset based on living
- and deceased donors and to reduce the amount of used features.
+ To mitigate these issues, we divided our dataset based on living and deceased
+ donors and reduced the number of features used.
+ These subsets are later referred to by the name of the type of transplantation,
+ namely the deceased donor transplantation (DDT) and the living donor transplant
+ation(LDT).
  The models were trained for each subset separately.
  To reduce the number of features, we trained models on smaller subsets
  of data and removed ones that showed negative or zero feature importance.
@@ -11620,7 +11546,7 @@ However, we encountered some challenges due to the relatively large dataset,
  subset (KDPI for deceased and LIV_DON_TY for living) and to tailor our
  models to a specific type of transplantation.
  Sizes of the resulting datasets are as follows: 53,082 instances in living
- (42,465 in training), and 117,536 instances in deceased (94,028 training).
+ (42,465 in training) and 117,536 instances in deceased (94,028 training).
  By training separate models for each subset, we were able to develop potentiall
 y more accurate and effective models.
  
@@ -11646,36 +11572,14 @@ Results
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-cox elastic net is Regularized cox models
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 In this study, six models were fine-tuned and trained, three for each subset.
  We utilized the Cox Elastic Net, Random Survival Forest, and GradientBoostedSur
 vivalAnalysis models from the scikit-survival library.
  Two models were trained locally (Coxnet and GBSA), and one was trained
  in a cluster (RSF).
- The preferred model identified in this study was Coxnet, due to its impressive
- performance and relatively short training time of 30 to 180 seconds, compared
- to other models that can take several hours to train.
- 
-\end_layout
-
-\begin_layout Standard
-It is important to note that the older version of scikit-survival was used
- on the cluster - 0.14.0, due to the limitation in the Python version on the
- cluster where these models were trained (3.6.8).
- Locally, the latest version at time 0.22.1 was used.
- This fact will later have some implications.
+ The preferred model in this study is Coxnet due to its impressive performance
+ and short training time of 30 to 180 seconds compared to other models that
+ can take several hours to train.
  
 \end_layout
 
@@ -11704,9 +11608,13 @@ noprefix "false"
 
 \end_inset
 
- As can be seen, the deceased models perform worse than the living ones.
+.
+ As can be seen, the DDT models perform poorer than the living ones.
+ This is probably related to the inherent DDT limitation in donor-recipient
+ compatibility and the fact that the DDT dataset has older transplants from
+ when the techniques were not refined.
  Moreover, models have more or less the same performance for the same dataset,
- which might mean that models capture data well and the only bottleneck
+ which might mean that models capture data well, and the only bottleneck
  is the dataset.
  Consequently, the only potential way to improve the performance is to expand
  the dataset with further feature engineering.
@@ -11719,7 +11627,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -11952,7 +11860,7 @@ name "tab:living-comparison"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12182,11 +12090,11 @@ name "tab:deceased-comparison"
 \end_layout
 
 \begin_layout Standard
-In living, the winner is coxnet, because despite the fact that it has the
- same discrimination ability (c-index and mean AUC) as RSF, the overall
- performance (IBS) is better.
- For deceased, the winner is GBSA: it slightly outperforms other models
- across all metrics.
+In LDT, Coxnet performs the best.
+ Although it has the same discrimination ability (c-index and mean AUC)
+ as RSF, its overall performance (IBS) is better.
+ For the DDT, the winner is GBSA: it slightly outperforms other models across
+ all metrics.
 \end_layout
 
 \begin_layout Standard
@@ -12323,7 +12231,7 @@ maybe two figures in a row not the best for such graphics.
 
 \begin_layout Standard
 As time-dependent metrics, ROC AUC and Brier Score were chosen.
- Please, look at Figure 
+ Please look at Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:AUC-living"
@@ -12335,10 +12243,10 @@ noprefix "false"
 
 , where we can see the plot of AUC over time for all living models.
  Even though the mean AUCs are almost identical, values vary over time.
- From day 1000 to 2800 RSF performs better, then from day 2900 to day 4000
+ From day 1000 to 2800, RSF performs better, then from day 2900 to day 4000,
  coxnet and GBSA overperform RSF.
- From day 4000 to 5000 all models perform similarly, except for a small
- rise of coxnet and GBSA, which later converges back with RSF.
+ All models performed similarly from day 4000 to 5000 except for a slight
+ rise in coxnet and GBSA, which later converged with RSF.
  Day 5000 to 6000 RSF outperforms the two models again.
  RSF outperforms Coxnet and GBSA on 3/5 of the timeline, underperforms on
  1/5, and is mostly similar on 1/5.
@@ -12485,17 +12393,17 @@ noprefix "false"
 
 \end_inset
 
- we can see time-dependent Brier scores for all living models.
- Coxnet and GBSA here are identical, despite having different learners.
+, we can see time-dependent Brier scores for all living models.
+ Coxnet and GBSA are identical here despite having different learners.
  We had to adjust the visualization settings for the other to be seen.
- The RSF curve is slightly higher than the two, meaning that overall performance
- is slightly worse, despite mostly superior discrimination in the previous
+ The RSF curve is slightly higher than the two, meaning overall performance
+ is slightly worse despite mostly superior discrimination in the previous
  graph.
  
 \end_layout
 
 \begin_layout Standard
-In the Figure 
+In Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:AUC-deceased"
@@ -12505,7 +12413,7 @@ noprefix "false"
 
 \end_inset
 
- we can see the AUC graph for the deceased models.
+, we can see the AUC graph for the deceased models.
  GBSA shows superior discriminative ability, Coxnet is in the middle, and
  RSF shows the worst performance.
  Although all similarly rise over time.
@@ -12513,7 +12421,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Please, look at the Figure 
+Please, look at Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:BS-deceased"
@@ -12536,8 +12444,8 @@ In conclusion, for the living, RSF shows slightly superior discrimination
  For the deceased, GBSA shows superior discrimination to Coxnet and RSF,
  but the prediction accuracy (BS) is the same for GBSA and Coxnet, and worse
  for RSF.
- Overall, Coxnet is preferred for both living and deceased due to its low
- training time.
+ Coxnet is preferred for both living and deceased due to its low training
+ time.
  However, if training time is not a concern, GBSA may be preferred for the
  deceased cohort due to its slightly higher discriminative ability.
  
@@ -12561,10 +12469,8 @@ Coxnet
 \end_layout
 
 \begin_layout Standard
-Coxnet, also known as a Cox elastic net, or Cox regularized regression,
- is a linear model known for its ability to handle large datasets efficiently.
- The performance is impressive as well.
- 
+Coxnet, also known as a Cox elastic net or Cox regularized regression, is
+ a linear model that efficiently handles large datasets and performs well.
 \end_layout
 
 \begin_layout Standard
@@ -12763,7 +12669,7 @@ name "tab:Coxnet-performance"
 \end_layout
 
 \begin_layout Standard
-As can be seen in the Table 
+As Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Coxnet-performance"
@@ -12773,9 +12679,7 @@ noprefix "false"
 
 \end_inset
 
-, the Coxnet performed the best for the living group, the worst for the
- deceased.
- 
+ shows, Coxnet performed best for the living group and worst for the deceased.
 \end_layout
 
 \begin_layout Paragraph
@@ -12810,14 +12714,14 @@ and
 \end_inset
 
  ratio did not significantly impact the c-index, IBS, or mean AUC values.
- At both high (0.9) and low (<0.1) values of L1 ratio those values were about
+ At both high (0.9) and low (<0.1) values of L1 ratio, those values were about
  the same.
  However, a higher value of 
 \begin_inset Formula $L_{1}$
 \end_inset
 
  ratio (0.9) was selected for stability purposes, as suggested by the documentati
-on of the scikit survival library
+on of the scikit survival library 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-25"
@@ -12834,7 +12738,7 @@ To find the best
 \begin_inset Formula $\alpha$
 \end_inset
 
- we used the approach from the documentation
+ we used the approach from the documentation 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-25"
@@ -12864,9 +12768,8 @@ noprefix "false"
 
 , the hyperparameter tuning is usually performed with either GridSearch
  or RandomizedSearch.
- As there are not many alphas, we used GridSearchCV from scikit learn to
- find the best one.
- 
+ As there are few alphas, we used GridSearchCV from scikit-learn to find
+ the best one.
 \end_layout
 
 \begin_layout Paragraph
@@ -12879,9 +12782,8 @@ The importance of more than 60 features was examined with the permutation
  Only a fraction of them had any importance.
  Those of negative and zero importance were removed, increasing model performanc
 e.
- Interestingly, HLA had little influence on long-term survival, so they
- were removed and the model performance improved.
- This is similar to what was noted by Terasaki in 
+ Interestingly, HLA had little influence on long-term survival, similar
+ to what Terasaki noted in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Tissue-Typing"
@@ -12892,8 +12794,9 @@ noprefix "false"
 \end_inset
 
 .
- The coefficients from the trained models, which represent feature importance,
- are visualized in Figures 
+ So, they were removed, and the model performance improved. The coefficients
+ from the trained models, which represent feature importance, are visualized
+ in Figures 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:FI-forCoxnet-Living"
@@ -13001,8 +12904,11 @@ name "fig:FI-for-Coxnet-Deceased"
 \end_layout
 
 \begin_layout Standard
-As we can see, the most predictive features are the patient's diabetes status,
+As we can see, the most predictive features are the patient’s diabetes status,
  age, ethnicity, hepatitis C status, and dialysis.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -13022,7 +12928,7 @@ Feature Engineering
 
 \begin_layout Standard
 We attempted to do feature engineering with donor-recipient height, weight,
- bmi and age differences inspired by 
+ BMI, and age differences inspired by 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-47-naqvi"
@@ -13031,10 +12937,10 @@ literal "false"
 \end_inset
 
 .
- The introduction of these features actually worsened the performance, so
- they were excluded.
- The engineered feature that actually improved the performance is the number
- of days patient was on dialysis (DIALYSIS_TIME), inspired by 
+ The introduction of these features worsened the performance, so they were
+ excluded.
+ The engineered feature that improved the performance is the number of days
+ the patient was on dialysis (DIALYSIS_TIME), inspired by 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-48-aufhauser"
@@ -13052,11 +12958,10 @@ Data Pipelines
 \begin_layout Standard
 Data preprocessing is a critical step in machine learning, particularly
  for improving the accuracy and reliability of models.
- The two ways of data preprocessing are employed depending on the context:
- scikit-learn pipeline transformers, and the scikit-survival functions.
+ Depending on the context, one of two ways of data preprocessing is employed:
+ scikit-learn pipeline transformers or the scikit-survival functions.
  The former is used for KidneyLife production, while the latter is used
- for training and analyzing the feature importances.
- 
+ for training and analyzing feature importances.
 \end_layout
 
 \begin_layout Standard
@@ -13065,15 +12970,13 @@ Scikit-learn transformers produce a numpy array, while scikit-survival functions
  with the former.
  Moreover, the way of processing and the number of columns in outputs are
  different, so we could not just copy the column names from one to the other.
- As a result, the analysis of feature importances with transformers is virtually
- impossible.
- 
+ As a result, analyzing the importance of features with transformers is
+ virtually impossible.
 \end_layout
 
 \begin_layout Standard
-The reason for employing scikit-learn pipeline transformers is because we
- needed a pipeline that produces consistent results in the production environmen
-t.
+We employed scikit-learn pipeline transformers because we needed a pipeline
+ that produces consistent results in the production environment.
  Rather than developing a pipeline from scratch, the transformer pipeline
  used during model training is pickled and then used in production.
  However, this also means that if the model is to be used in production,
@@ -13087,27 +12990,11 @@ Random Survival Forest
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-grid search probably works on the cluster, but without specification of
- the uno C-index.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The random survival forest is a powerful ensemble machine learning algorithm.
+The random survival forest is a robust ensemble machine-learning algorithm.
  However, its training time is longer than the other methods, and it can
  be challenging to work with, especially during hyperparameter tuning.
- Moreover, RSF is known to be extremely memory-hungry during training and
- prediction, making it unsuitable for deployment.
+ Moreover, RSF is known to be highly memory-hungry during training and predictio
+n, making it unsuitable for deployment.
  
 \end_layout
 
@@ -13117,11 +13004,11 @@ On the positive side, RSF can learn well from smaller datasets.
  on smaller ones.
  It was observed during hyperparameter tuning, where we used a subset of
  1000 transplantations from the training dataset.
- RSF fitted them pretty well, and when evaluated on the whole test set,
- the performance was comparable to that of the full dataset.
- In fact, the difference in performance between the subset and the full
+ RSF fitted them well, and when evaluated on the whole test set, the performance
+ was comparable to that of the entire dataset.
+ In fact, the difference in performance between the subset and the whole
  dataset was minimal, as evidenced by the integrated Brier score (IBS) of
- 0.13906552 (1000 instances) compared to 0.139001 (full dataset).
+ 0.13906552 (1000 instances) compared to 0.139001 (whole dataset).
  
 \end_layout
 
@@ -13331,7 +13218,7 @@ noprefix "false"
 
 \end_inset
 
- presents the performance of RSF.
+ presents RSF's performance.
  Similarly to Coxnet and GBSA, it performs worse for the deceased than for
  the living.
  However, overall, the performance is quite similar between RSF and the
@@ -13344,9 +13231,8 @@ Hyperparameters
 \end_layout
 
 \begin_layout Standard
-Since the RSF was to be trained on a cluster with an outdated version of
- Python, we used a customized script that mimicked GridSearchCV without
- cross-validation for fine-tuning.
+The hyperparameters were finetuned with a script that mimicked GridSearchCV
+ without cross-validation for fine-tuning.
  The table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -13357,13 +13243,11 @@ noprefix "false"
 
 \end_inset
 
-.
- shows the fine-tuned hyperparameters, as well as the values that were tested
+shows the fine-tuned hyperparameters, as well as the values that were tested
  and ultimately selected.
- After experimenting with higher values (80), we chose to keep the number
- of estimators at 50 since we did not observe any noticeable improvement
- beyond that point, and the training time increased significantly from 60
- to 101 minutes.
+ After experimenting with higher values (80), we kept the number of estimators
+ at 50 since we did not observe any noticeable improvement beyond that point,
+ and the training time increased significantly from 60 to 101 minutes.
  Nonetheless, it is generally accepted that the greater the number of estimators
 , the better the results.
 \end_layout
@@ -13563,9 +13447,9 @@ noprefix "false"
 ” and ”FeatureSelection/rsf_living.ipynb” (calculated in cluster file deceased.
  ipynb).
  For the living, the most important ones are, as before, recipient age,
- diabetes status, dialysis status, dialysis time, etc.
- For the deceased, the situation is similar, but the recipient's serum creatinin
-e before transplant is a bit higher in the rating.
+ diabetes status, dialysis status, and dialysis time.
+ The situation is similar for the deceased, but the recipient's serum creatinine
+ before transplant is higher in the rating.
 \end_layout
 
 \begin_layout Standard
@@ -13655,12 +13539,12 @@ Training Time
 \end_layout
 
 \begin_layout Standard
-The living trained for 65 minutes, and the deceased for about 80 minutes.
+The LDT trained for 65 minutes, and the DDT for about 80 minutes.
  Both are on the 50 estimators.
  Upping the estimators is a potential avenue for improvement, but one would
  need to be careful not to overfit the model.
- And the training would take a long time: 200 estimators would require 4
- hours of training and we might overfit the model, or run out of RAM.
+ Moreover, the training would take a long time: 200 estimators would require
+ 4 hours of training, and one might overfit the model or run out of RAM.
  Overfitting can be avoided with regularization, but it is unlikely that
  it would surpass the performance of Coxnet survival by a large margin.
  
@@ -13675,15 +13559,15 @@ CoxnetSurvivalAnalysis is a model with gradient-boosted Cox proportional
  hazard loss with regression trees as the base learner.
  It is a relatively slow algorithm, as it can only run on one CPU core and
  trains only one estimator at a time.
- So the training time might be quite large as we cannot fully utilize the
+ The training time might be considerable as we cannot fully utilize the
  cluster computing power.
- However, that can also be an advantage, as we can train the model on PC
- locally.
+ However, that can also be advantageous, as we can train the model on a
+ PC.
  Additionally, the algorithm provides valuable insights during training,
  such as the predicted training time and loss and out-of-bag improvement
  for each estimator.
- This information is logged at regular intervals throughout the training
- process, providing a good approximation of the model's accuracy.
+ This information is logged regularly throughout the training process, approxima
+ting the model's accuracy well at that point of training.
 \end_layout
 
 \begin_layout Standard
@@ -13699,17 +13583,16 @@ noprefix "false"
 
 , we can see the performance of two GBSA models for living and deceased
  subsets.
- As with the two previous models, the living model shows better performance
- than the deceased model.
- For the deceased, it also happens to be the best of them all with c_index
- 0.699 and IBS 0.162.
+ As with the two previous models, the living model performs better than
+ the deceased model.
+ It is the best for the deceased with c_index 0.699 and IBS 0.162.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -13907,26 +13790,26 @@ Hyperparameters
 \begin_layout Standard
 We used three primary hyperparameters: the number of estimators, learning
  rate, and max_depth.
- Grid search estimated the best max_depth to be 6, however, experimentally
- we found that 4 gives better results.
+ Grid search estimated the best max_depth to be 6.
+ However, experimentally, we found that 4 gives better results.
  Through trial and error, we selected a learning rate of 0.2, which resulted
  in the best outcomes.
- With lower values (0.05, 0.1, 0.15) the model was underfitted, with higher
- (0.5, 1) overfit.
+ With lower values (0.05, 0.1, 0.15), the model was underfitted, with higher
+ (0.5, 1) overfitted.
  The number of estimators was determined using an early-stopping monitor,
- which is a widely used approach for GB algorithms.
+ a widely used approach for GB algorithms.
  The monitor analyzes the average improvement of the last 25 iterations
- and, if negative for the last 50, stops training.
+ and stops training if negative for the last 50.
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-mb odkazat na documentace
+add ref to docs
 \end_layout
 
 \end_inset
 
- For the deceased, the optimal number of estimators was 110 (trained 160),
+ The optimal number of estimators for the deceased was 110 (trained 160),
  and for the living, it was 94 (trained 144).
  Figures 
 \begin_inset CommandInset ref
@@ -14126,20 +14009,20 @@ Initially, we performed feature selection on models with a small number
  of features was deemed to have any importance.
  The result did not seem accurate.
  Since we already had several models trained with many more learners, we
- decided to assess feature importance on them.
+ decided to assess their feature importance.
  Subsequently, we discovered that many features initially deemed irrelevant
  were, in fact, relevant.
- Therefore, this particular approach to feature selection is not suitable
- for GBSA, and feature importance must be evaluated on a fully trained model.
+ Therefore, this particular feature selection approach is unsuitable for
+ GBSA, and feature importance must be evaluated on a fully trained model.
  For instance, RSF is unaffected by this issue, as feature importance remains
  more or less consistent for both trained and under-trained models.
 \end_layout
 
 \begin_layout Standard
-Another thing worth noting that this model, contrary to the others, had
- no features with negative feature importances, meaning the model is not
+Another thing worth noting is that this model, contrary to the others, had
+ no features with negative feature importance, meaning the model is not
  affected by wrongly chosen features.
- So the feature selection proces in case with this model can be more liberal.
+ So, the feature selection process for this model can be more liberal.
 \end_layout
 
 \begin_layout Paragraph
@@ -14167,8 +14050,8 @@ noprefix "false"
 
 \end_inset
 
- display the estimated feature importances for living and deceased GBSA,
- respectively, using permutation importance.
+ display the estimated feature importances for living and deceased GBSA
+ using permutation importance.
  Notably, in the living GBSA, a few features such as PRE_TX_TXFUS, KI_KREAT_PREO
 P, HCV_SEROSTATUS, and GENDER have negative importance.
  However, their removal only results in a minor performance decrease from
@@ -14265,8 +14148,8 @@ Scoring algorithm
 \end_layout
 
 \begin_layout Standard
-Various methods have been proposed to evaluate the donor-recipient compatibility
-, such as the Estimated Post-Transplant Survival Score (EPTS) score 
+Various methods have been proposed to evaluate donor-recipient compatibility,
+ such as the Estimated Post-Transplant Survival Score (EPTS) score 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-60"
@@ -14276,7 +14159,7 @@ literal "false"
 
  , which is presently utilized in the US kidney allocation system and is
  based on survival analysis techniques.
- (Mark et al., 2019)
+ (Mark et al., 2019) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-64"
@@ -14293,7 +14176,7 @@ literal "false"
 
 \end_inset
 
- and Recipient Risk Score (RRS)
+ and Recipient Risk Score (RRS) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-62"
@@ -14308,8 +14191,8 @@ literal "false"
 \begin_layout Standard
 Our bachelor project task included the development of a new scoring technique
  for TX Matching.
- Even though we diverged from integration with it, we still thought the
- development of a scoring technique to be a worthwhile endeavor.
+ Even though we diverged from integration with it, we still thought developing
+ a scoring technique was worthwhile.
  TX Matching (discussed in Subsection 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -14339,8 +14222,8 @@ score = 1 * (number of A and B antigen matches)
 
 \end_deeper
 \begin_layout Standard
-As we can see, it focuses on histo- and blood group compatibility, but it
- doesn't take other factors, such as potential life expectancy, into account.
+It focuses on histo- and blood group compatibility but does not consider
+ other factors, such as potential life expectancy.
  We wanted to address this.
 \end_layout
 
@@ -14348,7 +14231,7 @@ As we can see, it focuses on histo- and blood group compatibility, but it
 We aimed to develop a scoring technique based on the hazard predicted by
  the Coxnet model.
  We believed that patients who lived the longest would have the lowest hazard.
- Based on this hazard, we would create a formula that would generate a score
+ Based on this hazard, we would create a formula that would produce a score
  ranging from 0 to 100, with 0 being the worst possible match and 100 being
  the best possible match.
  However, despite the strong performance on the c-index and integrated Brier
@@ -14376,6 +14259,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename Images/scoring_attempt.png
+	scale 60
 
 \end_inset
 
@@ -14443,20 +14327,32 @@ add a paragraph discussing the scoring.
 
 \begin_layout Standard
 Our goal was to create a model that could estimate the life expectancy of
- transplant recipients.
- We developed six models in total, three for living donor transplantation
- (LDT) and three for deceased donor transplantation (DDT).
- Our models' performance was comparable to other research, with the highest
- c-index of 0.699 achieved for DDT using GBSA and 0.723 for LDT using Coxnet
- over a 15-year period.
- However, we found that DDT model performance was inferior to LDT, likely
- because the donor-recipient compatibility is rarely perfect due to the
- inability to perform in-depth compatibility analysis in the time the organ
- is available.
+ transplant recipients for subsequent use in our application.
+ We developed six models: three for living donor transplantation (LDT) and
+ three for deceased donor transplantation (DDT).
+ Our models' performance was comparable to the state of the art, with the
+ highest c-index of 0.699 achieved for DDT using GBSA and 0.723 for LDT using
+ Coxnet over a 15-year period.
+ However, we found that the DDT model performance was inferior to that of
+ LDT, likely because donor-recipient compatibility is rarely perfect due
+ to the inability to perform in-depth compatibility analysis at the time
+ the organ is available.
  Another reason might be related to the data itself.
  The DDT dataset might have more of older records when the techniques of
  transplantation and immunosuppression were not that refined, which might
- influence the prediction in a negative way.
+ negatively influence the prediction.
+ The distributions of living/deceased transplantations by year can be seen
+ in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Histogram-of-Deceased/Living"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -14472,8 +14368,7 @@ literal "false"
 
  achieved 0.724 Harrel's c index over a 5-year period with RSF and CoxPH
  on the UNOS dataset.
- Paquette et.
- al.
+ Paquette et al.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14482,10 +14377,9 @@ literal "false"
 
 \end_inset
 
- achieved c index of 0.65, 0.661, and 0.659, for the neural network–based models
- (DeepSurv, DeepHit, and RNN respectively) on the SRTR dataset.
- Senanayake et.
- al.
+ aachieved c index of 0.65, 0.661, and 0.659 for the neural network–based models
+ (DeepSurv, DeepHit, and RNN, respectively) on the SRTR dataset.
+ Senanayake et al.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14496,8 +14390,7 @@ literal "false"
 
  achieved a concordance index of 0.67 with a random survival forest on the
  ANZDATA dataset.
- Other SA studies from the Ravindhran et.
- al.
+ Other SA studies from the Ravindhran et al.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14521,16 +14414,12 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-While the individual feature importance varied between models, some features
+While the importance of individual features varied between models, some
  were consistently deemed more important than others.
  Across all models, recipient diabetes, age, and dialysis status or time
  were consistently among the most important features.
  Surprisingly, HLA features only hindered the performance or were unimportant
  enough.
- But features deemed important differed for each model.
- In Coxnet, for example, HCV_SEROSTATUS was particularly important, while
- in other models, it was less significant.
- 
 \end_layout
 
 \begin_layout Paragraph
@@ -14564,9 +14453,9 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-All of our models achieved performance very close to each other for each
- transplantation type, which means that models fitted data fairly well and
- the performance is limited only by the data.
+Our models achieved performance very close to each other for each transplantatio
+n type, which means that models fitted data reasonably well, and the performance
+ is limited only by the data.
  We have observed minor improvements after introducing the engineered feature
  DIALYSIS_TIME, so one could try to engineer better features.
  For example, calculate eGFR from age, serum creatinine, and gender for
@@ -14587,16 +14476,16 @@ try to do it
 
 \begin_layout Standard
 Training and testing were performed on data from the same UNOS dataset.
- We do not know how models will perform on other datasets, so it would be
- beneficial to evaluate the model performance on another dataset.
+ We do not know how models will perform on other datasets, so evaluating
+ the model performance on another dataset would be beneficial.
  Ideally, even to train a model on data from multiple datasets.
 \end_layout
 
 \begin_layout Standard
 Upping the estimators in random survival forest is a potential avenue for
  improvement, but one would need to be careful not to overfit the model.
- And that would take a long time: 200 estimators would require 4 hours of
- training and we might overfit the model, or run out of RAM.
+ That would take a long time: 200 estimators would require 4 hours of training,
+ and we might overfit the model or run out of RAM.
  Overfitting can be avoided with regularization, but it is unlikely to surpass
  the achieved performance by a large margin.
 \end_layout
@@ -14609,10 +14498,22 @@ Initially, we considered training a survival neural network.
  complex data, such as images or text.
  Our dataset is relatively simple, consisting of tabular data with no more
  than 40 features after one-hot preprocessing.
- Therefore, we believe that other algorithms should be equally effective.
- However, we acknowledge that training a neural network may still be a viable
- option for those willing to invest the time necessary to potentially achieve
- better performance.
+ Therefore, we believe that algorithms we use should be at least as effective.
+ However, training a neural network may still be a viable option for those
+ willing to invest the time necessary to potentially achieve better performance.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+reducing the dimensionality with the diminished intrepretability.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -14985,8 +14886,7 @@ To ensure the best possible matches, KidneyMatch collects more than 80 data
  contributes to the refinement and development of matching methods.
  Furthermore, KidneyMatching supports additional medical data such as scans
  and charts, enhancing user experience and allowing for more well-informed
- decision-making.
- 
+ decision-making 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-45"
@@ -15010,8 +14910,7 @@ KPDGUI (Kidney Paired Donation Graphical User Interface) is an interactive
  cannot proceed.
  What distinguishes it from the rest is that the application provides interactiv
 e visualization of the pool of incompatible pairs, non-directed donors,
- and the suggested loops and chains.
- 
+ and the suggested loops and chains 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-44"
@@ -15613,8 +15512,8 @@ literal "false"
  Simplicity, being one of the main principles of modern web design, was
  naturally prioritized as inference applications inherently have little
  complexity.
- Furthermore, the larger margins and paddings were employed to provide breathing
- room within the interface, preventing it from feeling overcrowded.
+ Furthermore, the larger margins and paddings were employed to provide 'breathin
+g room' within the interface, preventing it from feeling overcrowded.
  Lastly, the design exhibits responsiveness, accommodating a wide range
  of devices, from tablets to large 2k monitors, delivering a consistent
  and comfortable user experience across different screen sizes.
@@ -15906,8 +15805,8 @@ The DDT models achieved a c-index of 0.691 - 0.699 Uno c-index, while the
 status open
 
 \begin_layout Plain Layout
-That is not true.
- Why not?
+That is probably not true.
+ 
 \end_layout
 
 \end_inset
