@@ -1464,7 +1464,15 @@ The citation at the end of a paragraph indicates that the whole paragraph
 \end_layout
 
 \begin_layout Standard
-Kidney transplantation stands as the most commonly performed organ transplant
+According to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+, kidney transplantation stands as the most commonly performed organ transplant
  worldwide.
  This prevalence is partly due to the high incidence of diseases such as
  diabetes and chronic kidney disease, which often lead to chronic renal
@@ -1474,16 +1482,7 @@ Kidney transplantation stands as the most commonly performed organ transplant
  Kidneys can be obtained from both deceased and living donors - relatives
  or altruistic volunteers.
  Living donors can donate one kidney and continue to lead normal and healthy
- lives, significantly expanding the potential donor pool 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
- 
+ lives, significantly expanding the potential donor pool.
 \end_layout
 
 \begin_layout Standard
@@ -1502,15 +1501,7 @@ noprefix "false"
  transplant outcomes.
  Compared to organs such as the liver or bone marrow, kidneys do not present
  additional challenges such as graft versus host disease (GVHD), simplifying
- the transplantation process 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+ the transplantation process.
 \end_layout
 
 \begin_layout Standard
@@ -1519,89 +1510,46 @@ However, kidney transplantation, despite its advances, faces significant
  Two critical issues confront potential recipients: the scarcity of available
  organs and the risk of sensitization following a failed first transplant,
  decreasing the pool of available donors even further.
- In such cases, the immune system develops antibodies to the graft alloantigens,
- and any further transplantation of organs with similar antigens will result
- in hyperacute rejection (these termes are explained in more detail in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Immunology-of-kidney"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-).
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Tomas tells that they should be explained here
-\end_layout
-
-\end_inset
-
-This fact often leaves many patients unable to find a compatible donor after
- one or two rejection episodes 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
- 
+ In such cases, the immune system develops antibodies to the graft alloantigens
+ – proteins on the surface of the cell that are recognized by the recipient's
+ immune system as foreign.
+ An antigen is any substance that triggers an immune response, and an alloantige
+n is a type of antigen that varies between individuals of the same species
+ and helps the body distinguish its cells from the cells of an invader.
+ The antibodies bind with these alloantigens, marking the cells for destruction
+ by the recipient's immune system.
+ Hyperacute rejection, a rapid and severe rejection of the transplanted
+ organ, occurs when antibodies react immediately with the organ's alloantigens.
+ This happens mostly if the donor-recipient blood groups were mismatched
+ or the recipient was sensitized to similar alloantigens.
+ Most likely with the previous transplant.
+ This fact often leaves many patients unable to find a compatible donor
+ after one or two rejection episodes.
 \end_layout
 
 \begin_layout Standard
 Recipients of kidney transplants typically require life-long immunosuppression.
  While immunosuppressants are essential to prevent organ rejection, they
  are associated with severe side effects, such as increased risk of cancer,
- hypertension, and metabolic bone disease 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+ hypertension, and metabolic bone disease.
+ 
 \end_layout
 
 \begin_layout Standard
-Given the high incidence of renal failure in diabetic patients - 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-which occurs in 30%
-\end_layout
-
-\end_inset
-
- affecting roughly 30% of individuals with advanced diabetes - simultaneous
- kidney and pancreas transplants are sometimes performed.
+Given the high incidence of renal failure in diabetic patients, which occurs
+ in 30% of individuals with advanced diabetes, simultaneous kidney and pancreas
+ transplants are sometimes performed.
  This approach addresses renal failure and underlying diabetes, offering
- a comprehensive solution for these patients 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-
+ a comprehensive solution for these patients.
 \end_layout
 
 \begin_layout Standard
 In summary, kidney transplantation has become a vital and frequent medical
  procedure, offering improved quality of life to many suffering from kidney
  failure.
- The procedure, while simpler than other organ transplants, has its own
- set of challenges.
- The following section will delve into the history of kidney transplantation,
+ While simpler than other organ transplants, the procedure has its own challenge
+s.
+ The following section will examine the history of kidney transplantation,
  showing its path from the initial experiments to the most frequently performed
  organ transplantation today.
  The historical perspective will provide insights into the advancements
@@ -1625,8 +1573,16 @@ Early Animal Experiments
 \end_layout
 
 \begin_layout Standard
-Advancements in surgical methods at the beginning of the 20th century eventually
- led to experiments with organ transplantation.
+As outlined in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1-kidney-transplantation-book"
+literal "false"
+
+\end_inset
+
+, advancements in surgical methods at the beginning of the 20th century
+ eventually led to experiments with organ transplantation.
  One of the first recorded transplantations was an 
 \emph on
 autograft
@@ -1653,8 +1609,8 @@ allograft
 \emph on
 xenograft
 \emph default
-, a transplantation between individuals of different species, which resulted
- in brief function time as well.
+, a transplantation between individuals of different species, which also
+ resulted in brief function time.
 \end_layout
 
 \begin_layout Standard
@@ -1662,19 +1618,11 @@ At the same time, in Lyon, Alexis Carrel and his colleagues were working
  on vascular suturing methods.
  Carrel's technique, known as Carrel's seam, was a considerable improvement
  over existing methods, addressing the common issues of thrombosis, hemorrhage,
- stricture, and embolism 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-1-kidney-transplantation-book"
-literal "false"
-
-\end_inset
-
-.
+ stricture, and embolism.
  His consequent move to The Rockefeller Institute for Medical Research in
  the United States led to further refinements of his method and the documentatio
 n of organ rejection.
- For his contributions, Carrel received the Nobel Prize in Medicine in 1912
+ Carrel received the Nobel Prize in Medicine in 1912 for his contributions
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1687,9 +1635,9 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-These early experiments, although varied in their outcomes, were defining
- in shaping the future of the organ transplantation.
- They not only illustrated the possibility of organ transplantation, but
+These early experiments, although varied in their outcomes, were crucial
+ in shaping the future of organ transplantation.
+ They not only illustrated the possibility of organ transplantation but
  also highlighted the challenges, such as rejection, that would direct the
  course of future research.
  The insights gained in animal experiments laid the groundwork for the next
@@ -1704,11 +1652,11 @@ Early Human Transplantation
 \end_layout
 
 \begin_layout Standard
-The two first recorded human renal 
+The first recorded human renal 
 \emph on
 xenografts
 \emph default
- are credited to Mathieu Jaboulay in 1906.
+ were credited to Mathieu Jaboulay in 1906.
  It involved a pig and a goat as donor animals.
  One kidney was transplanted to the arm and the second to the thigh.
  Although each kidney functioned only for an hour, these efforts marked
@@ -1726,13 +1674,13 @@ literal "false"
  baby to a baboon, resulted in a lack of kidney function despite a successful
  connection of vessels.
  Inspired by a successful surgery, Unger attempted a monkey-to-human xenograft,
- which also resulted in failure.
+ which also failed.
 \end_layout
 
 \begin_layout Standard
 These experiments demonstrated the technical feasibility of kidney transplantati
 on but also exposed the challenge of graft rejection.
- Alexis Carrel, in a 1914 lecture, mentioned J.
+ In a 1914 lecture, Alexis Carrel mentioned J.
  B.
  Murphy's work on irradiation and benzol treatment, suggesting their potential
  to improve graft survival 
@@ -1744,8 +1692,8 @@ literal "false"
 \end_inset
 
 .
- Inspired by these findings, Carrel conducted his own experiments with irradiati
-on, achieving prolonged graft survival.
+ Inspired by these findings, Carrel conducted his experiments with irradiation,
+ achieving prolonged graft survival.
  However, these findings were never formally published 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1758,8 +1706,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The period of the 1930s and 1940s was stagnant compared to the beginning
- of the century.
+The 1930s and 1940s were stagnant compared to the beginning of the century.
  European surgical centers that studied transplantology before were in decline.
  Meanwhile, the Mayo Clinic in the US was conducting some cautious experiments
  without considering Carrol's works and attempts at immunosuppression 
@@ -1774,8 +1721,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-However, it was during that period that a significant milestone was achieved
- by Yurii Voronyi.
+However, it was during that period that Yurii Voronyi achieved a significant
+ milestone.
  On March 3, 1933, in Kherson, Ukraine, Voronyi performed the first human
  kidney allograft on a woman suffering from acute renal failure due to mercury
  chloride poisoning.
@@ -1787,7 +1734,7 @@ However, it was during that period that a significant milestone was achieved
  triggering an immune reaction.
  Despite this setback, Voronyi continued to perform similar transplantations.
  He viewed these transplants as temporary measures to bridge the gap until
- the recipient's own kidneys could recover.
+ the recipient's kidneys could recover.
  Out of the six transplants he performed, two patients experienced a complete
  recovery, regaining normal kidney function 
 \begin_inset CommandInset citation
@@ -1801,14 +1748,14 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The pioneering work of Jaboulay, Unger, and Voronyi not only demonstrated
- the technical feasibility of human organ transplantation, but also highlighted
- its main challenge of graft rejection.
- Despite the progress, the field has yet to witness success, largely due
+The pioneering work of Jaboulay, Unger, and Voronyi demonstrated the technical
+ feasibility of human organ transplantation and highlighted its main challenge
+ of graft rejection.
+ Despite the progress, the field has yet to witness success, primarily due
  to the lack of effective immunosuppression.
- In the next section, we will explore important moments of 1950s that transforme
-d human renal transplantation from a daring experiment to feasible medical
- procedure.
+ In the next section, we will explore essential moments of the 1950s that
+ transformed human renal transplantation from a daring experiment to a feasible
+ medical procedure.
 \end_layout
 
 \begin_layout Subsection*
@@ -1826,7 +1773,7 @@ tion.
 \begin_layout Standard
 Meanwhile, European surgeons were making significant advancements.
  Notably, Simonsen in Denmark, Dempster in London, and Küss in Paris concluded
- that it is preferable to place the kidney in the pelvis.
+ that placing the kidney in the pelvis is preferable.
  Furthermore, both Simonsen and Dempster deduced that the immune response
  was responsible for graft failure and hypothesized that the humoral mechanism
  of rejection was probable.
@@ -1843,9 +1790,9 @@ The early 1950s marked a period of active experimentation.
  Although some success was achieved with the administration of the adrenocortico
 tropic hormone (more known as cortisone), it was deemed clinically insignificant.
  Hume's further research suggested the potential benefits of prior blood
- transfusions, blood group compatibility, and removal of host's both kidneys
+ transfusions, blood group compatibility, and removal of both host's kidneys
  for transplant success - insights later validated with further research.
- On December 23, 1954, in Boston, Joseph Murray performed kidney allograft
+ On December 23, 1954, in Boston, Joseph Murray performed a kidney allograft
  from one identical twin to another, bypassing the rejection barrier.
  From that time, many similar surgeries were performed in Boston 
 \begin_inset CommandInset citation
@@ -1864,7 +1811,6 @@ To conclude, the early successes during the 1950s marked a transformative
  Works of Hume, Murray, and others underlined the critical role of immune
  response in graft survival, starting the quest for effective immunosuppression,
  to which the subsequent section is dedicated.
- 
 \end_layout
 
 \begin_layout Subsection*
@@ -1872,8 +1818,16 @@ Attempts in Immunosuppression
 \end_layout
 
 \begin_layout Standard
-The exploration of immunosuppression in transplantation began as early as
- the late 1940s.
+According to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+, the exploration of immunosuppression in transplantation began as early
+ as the late 1940s.
  At the Mayo Clinic in 1948, patients with rheumatoid arthritis were administere
 d cortisone, an adrenal cortical hormone with mild immunosuppressive properties,
  which provided temporary relief.
@@ -1881,31 +1835,15 @@ d cortisone, an adrenal cortical hormone with mild immunosuppressive properties,
  for transplantation purposes.
  It led researchers to revisit earlier experiments with irradiation.
  Experiments on mice by Joan Main and Richmond Prehn showed promising results,
- inspiring human trials in Boston and Paris 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-3"
-literal "false"
-
-\end_inset
-
-.
+ inspiring human trials in Boston and Paris.
 \end_layout
 
 \begin_layout Standard
 In 1958, Murray's team in Boston employed radiation in human transplantation,
- achieving a significant breakthrough with a kidney transplant between non-ident
-ical twins that lasted 20 years.
+ achieving a significant breakthrough with a 20-year-long kidney transplant
+ between non-identical twins.
  Similarly, in Paris, Jean Hamburger's team accomplished a 26-year functioning
- transplant using radiation 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-3"
-literal "false"
-
-\end_inset
-
-.
+ transplant using radiation.
 \end_layout
 
 \begin_layout Standard
@@ -1913,7 +1851,7 @@ The quest for safer immunosuppressive methods led to the anticancer drug
  6-mercaptopurine (6-MP).
  In 1959, Schwarz and Damesehek published a paper that described how 6-MP
  lowered immune response to foreign proteins in rabbits.
- Inspired by their work, Roy Calne performed his own dog experiments, showing
+ Inspired by their work, Roy Calne performed his dog experiments, showing
  promising results backed by Charles Zukoski and David Hume.
  Despite initial setbacks, Küss and others reported prolonged graft survival
  from non-related donors using total body irradiation (TBI) complemented
@@ -1921,15 +1859,7 @@ The quest for safer immunosuppressive methods led to the anticancer drug
  The introduction of azathioprine in 1959, a derivative of 6-MP, by Gertrude
  Elion and George Hitchings, further improved results.
  Their groundbreaking work earned them the Nobel Prize, and by 1961, azathioprin
-e was available for human use 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-3"
-literal "false"
-
-\end_inset
-
-.
+e was available for human use.
 \end_layout
 
 \begin_layout Standard
@@ -1940,37 +1870,19 @@ In 1963, a conference held by the National Research Council revealed a bleak
  leading to over one-year graft survival in 70% of cases.
  His results revolutionized the field, resulting in 50 new US transplantation
  programs and setting a twenty-year standard in post-transplant immunosuppressio
-n 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-3"
-literal "false"
-
-\end_inset
-
-.
+n.
 \end_layout
 
 \begin_layout Standard
-In summary, 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-since
-\end_layout
-
-\end_inset
-
-the late 1940s to the early 1960s was a period of discoveries and experimentatio
-n.
+In summary, the late 1940s to the early 1960s was a period of discoveries
+ and experimentation.
  The use of cortisone in 1948, the administration of 6-MP for immunosuppression,
  and the invention of azathioprine in 1959 led to better immunosuppression,
  culminating in Tom Starzl's protocol, which became the standard for the
  next two decades.
- The next section is dedicated to a phase of steady developments, in literature
- referred to as plateau, that would solidify the practice of kidney transplantat
-ion.
+ The following section is dedicated to a phase of steady developments in
+ the literature referred to as a plateau that would solidify the practice
+ of kidney transplantation.
 \end_layout
 
 \begin_layout Subsection*
@@ -1978,18 +1890,6 @@ Plateau
 \end_layout
 
 \begin_layout Standard
-From 1964 to 1980, kidney transplantation saw gradual progress.
- Dialysis, developed during WWII, finally became available for chronic renal
- failure as a result of the invention of Teflon arteriovenous conduits in
- the 1960s.
- Acceptance of brain death expanded donor pools.
- Organ preservation techniques also advanced: total body hypothermia was
- replaced by targeted cold solutions infusions that preserved organs better.
- By the mid-60s, longer preservation times allowed organ exchanges between
- centers.
- Concerns about equitable distribution of organs led to the National Transplant
- Act in 1984, establishing the United Network of Organ Sharing (UNOS) for
- oversight 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-3"
@@ -1997,12 +1897,23 @@ literal "false"
 
 \end_inset
 
-.
+ suggests that, from 1964 to 1980, kidney transplantation saw gradual progress.
+ Dialysis, developed during WWII, finally became available for chronic renal
+ failure as a result of the invention of Teflon arteriovenous conduits in
+ the 1960s.
+ Acceptance of brain death expanded donor pools.
+ Organ preservation techniques also advanced: total body hypothermia was
+ replaced by targeted cold solutions infusions that preserved organs better—by
+ the mid-60s, longer preservation times allowed organ exchanges between
+ centers.
+ Concerns about equitable distribution of organs led to the National Transplant
+ Act in 1984, establishing the United Network of Organ Sharing (UNOS) for
+ oversight.
 \end_layout
 
 \begin_layout Standard
-As techniques were improving and donor pools expanding in the period from
- 1964 to 1980, so was the understanding of the nuances of immune compatibility.
+As techniques improved and donor pools expanded from 1964 to 1980, so did
+ understanding of the nuances of immune compatibility.
  The following section describes the developments in tissue typing that
  would further expand the field of kidney transplantation.
 \end_layout
@@ -2019,9 +1930,17 @@ name "subsec:Tissue-Typing"
 \end_layout
 
 \begin_layout Standard
-The concept of tissue typing, suggested by Alexis Carrel in the early 20th
- century, remained unproven until Jean Dausset discovered the first human
- leukocyte antigen (HLA) in 1958 (more on HLA in 
+As 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+ further explains, the concept of tissue typing, suggested by Alexis Carrel
+ in the early 20th century, remained unproven until Jean Dausset discovered
+ the first human leukocyte antigen (HLA) in 1958 (more on HLA in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Immunology-of-kidney"
@@ -2032,21 +1951,13 @@ noprefix "false"
 \end_inset
 
 ).
- It wasn't until 1964, with Paul Terasaki's development of the microcytotoxicity
- assay, that testing for antibodies became reliable.
- The test involved mixing the donor's lymphocytes with the recipient's serum
- and swiftly became the standard, known as the 
+ It was not until 1964, with Paul Terasaki's development of the microcytotoxicit
+y assay, that testing for antibodies became reliable.
+ The test involved mixing the donor's lymphocytes with the recipient's serum,
+ which swiftly became the standard, known as the 
 \emph on
 crossmatch test
 \emph default
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-3"
-literal "false"
-
-\end_inset
-
 .
 \end_layout
 
@@ -2054,9 +1965,9 @@ literal "false"
 For several years, Terasaki performed typing for most U.S.
  transplant centers and found a couple of observations: 1) Positive crossmatch
  test predicts hyperacute rejection.
- The test is performed by mixing recipient's serum with donor's blood cells;
- if there is a reaction, the test is considered to be positive and the transplan
-tation cannot be performed.
+ The test is performed by mixing the recipient's serum with the donor's
+ blood cells; if there is a reaction, the test is considered positive, and
+ the transplantation cannot be performed.
  2) Matching can reliably identify optimal donors within a family, and it
  was assumed that the same principle would apply to non-related recipients.
 \end_layout
@@ -2064,10 +1975,10 @@ tation cannot be performed.
 \begin_layout Standard
 However, in 1970, Terasaki's review of his extensive database of cadaver
  renal allografts revealed no correlation with the typing.
- It raised much agitation in the tissue typing community, and his grant
- was temporarily suspended until others didn't report the same.
+ This raised much agitation in the tissue typing community, and his grant
+ was temporarily suspended until others reported the same.
  Since then, many crucial histocompatibility antigens have been discovered
- (Class II locus: D and DR, more on antigens in Section 
+ (Class II locus: D and DR; more on antigens in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Immunology-of-kidney"
@@ -2079,23 +1990,15 @@ noprefix "false"
 
 ).
  Histocompatibility matching remains essential in bone marrow transplantation
- and in selecting family donors 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-3"
-literal "false"
-
-\end_inset
-
-.
+ and in selecting family donors.
 \end_layout
 
 \begin_layout Standard
 While tissue typing and matching have played a crucial role in improving
  transplantation outcomes, the evolution of immunosuppressive drugs has
- been equally, if not more, important.
+ been equally, if not more, significant.
  The subsequent section elaborates on new developments in immunosuppressive
- drugs in upcoming years.
+ drugs in the coming years.
 \end_layout
 
 \begin_layout Subsection*
@@ -2103,18 +2006,7 @@ Advancements in Immunosuppression
 \end_layout
 
 \begin_layout Standard
-The discovery of cyclosporine in 1976 by Jean-François Borel marked a significan
-t milestone in the realm of transplantation.
- As a fungal derivative with potent immunosuppressive properties, cyclosporine
- drastically improved the outcomes of both renal and extra-renal transplants,
- surpassing the efficacy of the previously used drug, azathioprine.
- Similar to 6-MP, to achieve the best results, it had to be combined with
- prednisone.
- This protocol remained standard until 1989, when Tacrolimus, an even more
- powerful immunosuppressive agent, was introduced.
- Tacrolimus proved to be effective in cases where the combination of cyclosporin
-e and prednisone was insufficient, effectively replacing cyclosporine as
- a usual baseline agent 
+In continuation with 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-3"
@@ -2122,7 +2014,18 @@ literal "false"
 
 \end_inset
 
-.
+, the discovery of cyclosporine in 1976 by Jean-François Borel marked a
+ significant milestone in transplantation.
+ As a fungal derivative with potent immunosuppressive properties, cyclosporine
+ drastically improved the outcomes of both renal and extra-renal transplants,
+ surpassing the efficacy of the previously used drug, azathioprine.
+ Similar to 6-MP, to achieve the best results, it had to be combined with
+ prednisone.
+ This protocol remained standard until 1989, when Tacrolimus, an even more
+ powerful immunosuppressive agent, was introduced.
+ Tacrolimus proved effective in cases where the combination of cyclosporine
+ and prednisone was insufficient, effectively replacing cyclosporine as
+ a usual baseline agent.
 \end_layout
 
 \begin_layout Standard
@@ -2131,21 +2034,12 @@ aking discoveries and persistent challenges.
  From the pioneering attempts of xenografts in the early 20th century to
  the technical advancements and immunological breakthroughs of the mid-century
  — each milestone has been essential in shaping the current landscape of
- organ transplantation As we explored the history of kidney transplantation,
- a deeper understanding of the immune system has become crucial.
- This sets the stage for the next section, which examines the fundamentals
- of immunology, laying the foundation for understanding the interplay between
- the immune system and the transplanted organ.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-don't like the paragraph
-\end_layout
-
-\end_inset
-
-
+ organ transplantation.
+ As we explored the history of kidney transplantation, a deeper understanding
+ of the immune system has become crucial.
+ The following section examines the fundamentals of immunology, laying the
+ foundation for understanding the interplay between the immune system and
+ the transplanted organ.
 \end_layout
 
 \begin_layout Section
@@ -2160,24 +2054,15 @@ name "sec:Intro-to-Immunology"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add that cells are generated in thymus and in bone marrow
-\end_layout
-
-\begin_layout Itemize
-define MHC (major histocompatibility complex)
-\end_layout
+As detailed in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+literal "false"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-The 
+, the 
 \emph on
 immune system
 \emph default
@@ -2186,15 +2071,7 @@ immune system
  It is a network of many cells and tissues that compose a complex system
  that detects, evaluates, and responds to the invader.
  It is essential to understand these mechanisms, as the immune response
- plays a crucial role in graft acceptance or rejection 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-6"
-literal "false"
-
-\end_inset
-
-.
+ plays a crucial role in graft acceptance or rejection.
 \end_layout
 
 \begin_layout Standard
@@ -2222,37 +2099,21 @@ or
 \emph on
  acquired) immunity
 \emph default
- is slower to respond but capable of providing more targeted responses 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-6"
-literal "false"
-
-\end_inset
-
-.
+ is slower to respond but capable of providing more targeted responses.
 \end_layout
 
 \begin_layout Standard
 Physical barriers, including epithelia and mucous membranes, constitute
  the host's first line of defense and are a part of innate immunity.
- This branch of the immune system not only prevents invaders from infiltrating
- the host but also quickly destroys many microbes that succeed in breaching
- these barriers.
+ This branch of the immune system prevents invaders from infiltrating the
+ host and quickly destroys many microbes that succeed in breaching these
+ barriers.
  Innate immunity provides the necessary protection until adaptive immunity
  is activated.
- It also communicates to the adaptive immunity how to best respond to the
- invader.
- Furthermore, innate immunity plays an important role in the clearance of
- dead tissue and the initiation of repair after the tissue is damaged 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-6"
-literal "false"
-
-\end_inset
-
-.
+ It also communicates how to best respond to the invader to the adaptive
+ immunity.
+ Furthermore, innate immunity plays a vital role in the clearance of dead
+ tissue and the repair initiation after the tissue is damaged.
 \end_layout
 
 \begin_layout Standard
@@ -2265,15 +2126,15 @@ humoral
 cell-mediated immunity
 \emph default
 .
- Central to both humoral and cell-mediated immune responses are 
+ 
 \emph on
-lymphocytes
+Lymphocytes
 \emph default
 , also known as 
 \emph on
 white blood cells
 \emph default
-.
+, are central to both humoral and cell-mediated immune responses.
  
 \emph on
 B lymphocytes
@@ -2312,33 +2173,15 @@ PRRs
  
 \emph default
 PAMPs, which can take the form of molecules on the surface of a pathogen
- or its by-products
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-not ideal sentence
-\end_layout
-
-\end_inset
-
-.
- PRRs bind to PAMPs and initiate a targeted cascade of events that culminate
- in the pathogen's elimination 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-6"
-literal "false"
-
-\end_inset
-
-.
+ or its by-products.
+ PRRs bind to PAMPs and initiate a targeted cascade of events culminating
+ in the pathogen's elimination.
 \end_layout
 
 \begin_layout Standard
 On the other hand, T lymphocytes start to proliferate when encountering
  an antigen, forming an army of T cells.
- The created 'army' will eliminate the invader and will form long-term memory
+ The created 'army' will eliminate the invader and will form long-term memories
  about the pathogen.
  Activated T cells are divided into the following categories: helper T cells
  (
@@ -2363,15 +2206,7 @@ regulatory T lymphocytes
 memory cells
 \emph default
 , which remain in the body long-term to provide faster and stronger immune
- response if the same antigen is encountered in the future 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-6"
-literal "false"
-
-\end_inset
-
-.
+ response if the same antigen is encountered in the future.
 \end_layout
 
 \begin_layout Standard
@@ -2383,25 +2218,7 @@ s with diverse PRRs during the development in bone marrow.
  Cells that react to the host's own cells are eliminated, ensuring that
  only non-self-reactive cells are allowed in circulation.
  The principle of recognizing self vs.
- non-self is called tolerance 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-6"
-literal "false"
-
-\end_inset
-
-.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-MHC can be explained here
-\end_layout
-
-\end_inset
-
-
+ non-self is called tolerance.
 \end_layout
 
 \begin_layout Standard
@@ -2426,7 +2243,15 @@ name "sec:Immunology-of-kidney"
 \end_layout
 
 \begin_layout Standard
-The degree to which the immune system responds to a graft depends on the
+As outlined in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+, the degree to which the immune system responds to a graft depends on the
  type of graft.
  There are four types of grafts:
 \end_layout
@@ -2469,46 +2294,33 @@ Xenograft
 Autografts and isografts are generally accepted because they are genetically
  identical.
  Allografts, being genetically different, are typically identified as foreign
- by the immune system and as a result rejected.
+ by the immune system and rejected.
  Xenografts, which have the most significant genetic differences, are the
- most vigorously rejected by the immune system 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+ most vigorously rejected by the immune system.
  
 \end_layout
 
 \begin_layout Subsection
-Immune response to the graft
+Immune Response to the Graft
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-tcells is not defined, as other things
-\end_layout
+As detailed in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1-kidney-transplantation-book"
+literal "false"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-There are three reasons why the immune system may react to the allograft:
+, there are three reasons why the immune system may react to the allograft:
  damage due to ischemia, reaction to the incompatible blood group antigens,
  and reaction to major histocompatibility complex (MHC) and minor histocompatibi
 lity (miH) antigens.
 \end_layout
 
 \begin_layout Paragraph
-Ischemia Reperfusion Injury
+Ischemia-Reperfusion Injury
 \end_layout
 
 \begin_layout Standard
@@ -2537,15 +2349,7 @@ from the compromised cells
  These DAMPs are recognized by both innate and adaptive immunity, although
  the former is predominately activated.
  Such an immune response might damage the graft even more and contribute
- to acute rejection 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-1-kidney-transplantation-book"
-literal "false"
-
-\end_inset
-
-.
+ to acute rejection.
  Because of that, the duration of ischemia is crucial in predicting the
  graft (and patient) survival.
 \end_layout
@@ -2567,35 +2371,16 @@ diated rejection (AMR or ABMR).
 \begin_layout Standard
 There are four primary blood groups: A, B, O, and AB.
  Within this system, individuals with blood group O are so-called ”universal
- donors” – 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-patton doesnt like it.
- prob 2 separate sentences.
- 
-\end_layout
-
-\end_inset
-
-their organs can be transplanted to recipients with any ABO blood group.
+ donors.” Their organs can be transplanted to recipients with any ABO blood
+ group.
  Whereas recipients in the AB group can safely receive organs from recipients
- with any ABO blood group and are called ”universal recipients”.
- In clinical practice, however, particularly with deceased donors, the preferenc
-e is to match organ recipients with ABO-identical organs to prevent potential
+ with any ABO blood group and are called ”universal recipients.” In clinical
+ practice, however, particularly with deceased donors, the preference is
+ to match organ recipients with ABO-identical organs to prevent potential
  inequities in organ allocation and access.
  In the case of living donors, the principle of ABO-identity is somewhat
  more flexible, where organs from ABO-compatible donors are considered acceptabl
-e for transplantation 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-1-kidney-transplantation-book"
-literal "false"
-
-\end_inset
-
-.
+e for transplantation.
 \end_layout
 
 \begin_layout Paragraph
@@ -2603,7 +2388,15 @@ Histocompatibility
 \end_layout
 
 \begin_layout Standard
-Genetically similar tissues, known as 
+According to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+, genetically similar tissues, known as 
 \emph on
 histocompatible
 \emph default
@@ -2626,19 +2419,19 @@ major histocompatibility complex (MHC)
 \emph on
 human leukocyte antigen (HLA)
 \emph default
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
 .
 \end_layout
 
 \begin_layout Standard
-Histocompatibility antigens, genetically encoded antigens that cover cell
+As detailed in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1-kidney-transplantation-book"
+literal "false"
+
+\end_inset
+
+, histocompatibility antigens, genetically encoded antigens that cover cell
  surfaces, play a crucial role in recognizing self versus non-self.
  In all vertebrates, histocompatibility antigens are categorized into a
  single 
@@ -2656,18 +2449,10 @@ numerous
  systems.
  Mismatches in either MHC or miH result in an immune reaction, most severe
  in the case of MHC.
- Rejection in MHC-compatible donor-recipient pair is usually delayed, in
- some cases forever.
+ Rejection in MHC-compatible donor-recipient pairs is usually delayed and,
+ in some cases, forever.
  However, the miH mismatch might be so drastic that it would be comparable
- to the MHC mismatch 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-1-kidney-transplantation-book"
-literal "false"
-
-\end_inset
-
-.
+ to the MHC mismatch.
 \end_layout
 
 \begin_layout Standard
@@ -2675,15 +2460,7 @@ The MHC itself is divided into class I and class II antigens.
  MHC class I antigens cover the surfaces of most cells and can activate
  cytotoxic CD8 cells.
  MHC class II antigens, found on specific immune cells, play an essential
- role in immune response coordination 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-1-kidney-transplantation-book"
-literal "false"
-
-\end_inset
-
-.
+ role in immune response coordination.
  In humans, each MHC class is further divided into three subgroups, as illustrat
 ed in Table 
 \begin_inset CommandInset ref
@@ -2823,13 +2600,7 @@ HLA-DQ
 \end_layout
 
 \begin_layout Standard
-It is important to note that class I and II mismatches differ in their impact
- on graft survival.
- A mismatch of one or two class I antigens has little effect on graft survival,
- whereas a single mismatch in class II antigen is equivalent to a mismatch
- of 3 or 4 class I antigens.
- When there are mismatches in both class I and II antigens, the risk and
- severity of the rejection are notably increased 
+However, 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-32"
@@ -2837,7 +2608,13 @@ literal "false"
 
 \end_inset
 
-.
+ remarks, that class I and II mismatches differ in their impact on graft
+ survival.
+ A mismatch of one or two class I antigens has little effect on graft survival,
+ whereas a single mismatch in class II antigen is equivalent to a mismatch
+ of three or four class I antigens.
+ When there are mismatches in both class I and II antigens, the risk and
+ severity of the rejection are notably increased.
 \end_layout
 
 \begin_layout Paragraph*
@@ -2845,12 +2622,7 @@ HLA Typing and Matching
 \end_layout
 
 \begin_layout Standard
-In clinical practice, clinicians assess and try to match donors and recipients
- according to the number of HLA-A, -B, and -DR mismatches, ranging from
- zero mismatches (0-0-0) to a maximum of 6 mismatches (2-2-2).
- Generally, more emphasis is placed on DR loci due to the capability of
- CD4 T cell activation, which might trigger both humoral and cellular adaptive
- immune responses 
+As 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1-kidney-transplantation-book"
@@ -2858,11 +2630,24 @@ literal "false"
 
 \end_inset
 
-.
+ reports, in clinical practice, clinicians assess and try to match donors
+ and recipients according to the number of HLA-A, -B, and -DR mismatches,
+ ranging from zero mismatches (0-0-0) to a maximum of 6 mismatches (2-2-2).
+ Generally, more emphasis is placed on DR loci due to the capability of
+ CD4 T cell activation, which might trigger both humoral and cellular adaptive
+ immune responses.
 \end_layout
 
 \begin_layout Standard
-HLA typing of potential donors and recipient is conducted with a 
+As detailed in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+, HLA typing of potential donors and recipient is conducted with a 
 \emph on
 microcytotoxicity test
 \emph default
@@ -2874,15 +2659,7 @@ microcytotoxicity test
  is assessed by the cells' absorption of various dyes.
  If a cell has an MHC allele for which a particular antibody is specific,
  then the cell will die upon the addition of a complement, and these dead
- cells will take up a dye 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+ cells will take up a dye.
 \end_layout
 
 \begin_layout Standard
@@ -2907,15 +2684,7 @@ ation.
  pairings.
  It is particularly critical in kidney and bone marrow transplants, where
  HLA matching is vital, whereas heart and liver transplantation can withstand
- higher levels of mismatching 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+ higher levels of mismatching.
  
 \end_layout
 
@@ -2924,40 +2693,32 @@ Mechanisms of Graft Rejection
 \end_layout
 
 \begin_layout Standard
-Graft rejection is mainly due to cell-mediated immune response to alloantigens,
- predominantly MHC antigens, present on the graft cells.
+As 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+ further explains, graft rejection is mainly due to cell-mediated immune
+ response to alloantigens, predominantly MHC antigens, present on the graft
+ cells.
  The process of cell-mediated graft rejection is divided into two phases.
  The first is known as the sensitization phase, which involves the recognition
  of MHC and miH alloantigens by helper CD4 and killer CD8 cells, leading
  to their proliferation.
  The second stage, the effector stage, is where the actual destruction of
- the graft occurs 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+ the graft occurs.
  
 \end_layout
 
 \begin_layout Standard
 A range of effector mechanisms are involved in graft rejection.
- The most prevalent are cell-mediated reactions involving delayed-type hypersens
-itivity and cytotoxic T lymphocyte-mediated cytotoxicity.
+ Cell-mediated reactions involving delayed-type hypersensitivity and cytotoxic
+ T lymphocyte-mediated cytotoxicity are the most prevalent.
  Less common mechanisms are antibody-plus-complement lysis (cell disintegration)
- and destruction by antibody-dependent cell-mediated cytotoxicity (ADCC)
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+ and destruction by antibody-dependent cell-mediated cytotoxicity (ADCC).
  
 \end_layout
 
@@ -2966,7 +2727,15 @@ Clinical Manifestations of Graft Rejection
 \end_layout
 
 \begin_layout Standard
-The onset and severity of graft rejection varies depending on the organ
+In continuation with 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+, the onset and severity of graft rejection varies depending on the organ
  transplanted and the underlying immune response mechanisms involved.
  Rejection can be categorized into three types: hyperacute, acute, and chronic
  rejections.
@@ -2987,15 +2756,7 @@ es, can become sensitized to paternal alloantigens of the fetus; individuals
  with previous grafts may have antibodies against alloantigens of that graft;
  and naturally occurring antibodies to blood group antigens are always present,
  although pre-transplant blood group matching has made rejections of this
- nature rare 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+ nature rare.
 \end_layout
 
 \begin_layout Standard
@@ -3003,17 +2764,8 @@ literal "false"
 \emph on
 Acute rejections
 \emph default
- typically happen within the first few weeks post-transplant.
- This type of rejection is primarily mediated by adaptive immunity via T
- cell responses 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+ typically occur within the first few weeks after transplant.
+ They are primarily mediated by adaptive immunity via T-cell responses.
 \end_layout
 
 \begin_layout Standard
@@ -3021,21 +2773,13 @@ literal "false"
 \emph on
 Chronic rejections
 \emph default
-, on the other hand, happen from months to years after the transplantation
- and are mediated by both humoral and cell-mediated mechanisms.
+, on the other hand, occur months to years after the transplantation and
+ are mediated by both humoral and cell-mediated mechanisms.
  While the advancements in immunosuppression and tissue typing significantly
  improve short-term survival, little progress has been made in terms of
  long-term survival.
  Chronic rejections are hard to manage with immunosuppressants and may necessita
-te another transplantation 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+te another transplantation.
 \end_layout
 
 \begin_layout Subsection
@@ -3043,7 +2787,15 @@ Immunosuppression
 \end_layout
 
 \begin_layout Standard
-Most of the available immunosuppression methods, while essential in preventing
+As stated in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+literal "false"
+
+\end_inset
+
+, most of the available immunosuppression methods, while essential in preventing
  graft rejections, have the disadvantage of being non-specific, meaning
  they suppress immune reactions to all antigens, not only ones of the graft,
  placing the recipient at the risk of infection and, in some cases, more
@@ -3056,16 +2808,7 @@ Most of the available immunosuppression methods, while essential in preventing
  patients at risk of severe or even life-threatening complications.
  Moreover, long-term use of immunosuppressive agents puts patients at risk
  of cancer, hypertension, and metabolic bone disease.
- In this section, we will delve into commonly used immunosuppressive methods
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+ In this section, we will delve into commonly used immunosuppressive methods.
 \end_layout
 
 \begin_layout Standard
@@ -3090,15 +2833,7 @@ Methotrexate
 \emph default
 .
  However, their broad action on cell division can lead to significant adverse
- effects 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+ effects.
 \end_layout
 
 \begin_layout Standard
@@ -3118,14 +2853,6 @@ prednisone
 \emph on
 dexamethasone
 \emph default
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
 .
 \end_layout
 
@@ -3140,22 +2867,14 @@ Tacrolimus
 \emph default
 , and 
 \emph on
-rapamycin
+rapamycin,
 \emph default
  are also widely used due to their potent immunosuppressive properties in
  heart, liver, kidney, and bone marrow transplants.
  A substantial drawback is their nephrotoxicity.
  While CsA has been widely used, Tacrolimus and rapamycin, being much more
  potent, might be administered at much lower doses, minimizing the side
- effects 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+ effects.
 \end_layout
 
 \begin_layout Standard
@@ -3163,15 +2882,7 @@ Radiation, known for its effectiveness in destroying lymphocytes, is another
  lymphocyte elimination method employed just before transplantation.
  In one such procedure, lymph nodes, spleen, and thymus are irradiated.
  Later, newer, more tolerant to the graft alloantigens lymphocytes will
- emerge, as the bone marrow was unaffected 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-32"
-literal "false"
-
-\end_inset
-
-.
+ emerge, as the bone marrow was unaffected.
 \end_layout
 
 \begin_layout Standard
@@ -3186,12 +2897,12 @@ Transplant Tolerance
 \end_layout
 
 \begin_layout Standard
-Taking into account the detrimental effect of long-term immunosuppression,
- one of the primary objectives in transplantation is the induction of immunologi
-c non-responsiveness (tolerance) to an allograft.
- There are several pathways of immune non-responsiveness generation described
- in the literature.
- However, it has not gone further than animal models yet 
+Considering the detrimental effect of long-term immunosuppression, one of
+ the primary objectives in transplantation is the induction of immunologic
+ non-responsiveness (tolerance) to an allograft.
+ The literature describes several pathways of immune non-responsiveness
+ generation.
+ However, it has yet to go further than animal models 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1-kidney-transplantation-book"
@@ -3230,11 +2941,10 @@ Despite significant advances in recent years, the current approach to treating
 \end_layout
 
 \begin_layout Standard
-To address the limitations of kidney transplantation, several solutions
- have been proposed over the years.
- The most promising solutions are 3D printed organs, "ghost" organs, and
+Several solutions have been proposed over the years to address the limitations
+ of kidney transplantation.
+ The most promising solutions are 3D-printed organs, "ghost" organs, and
  pig-grown organs.
- 
 \end_layout
 
 \begin_layout Paragraph
@@ -3242,17 +2952,18 @@ To address the limitations of kidney transplantation, several solutions
 \end_layout
 
 \begin_layout Standard
-3D printing is a manufacturing technology that has gained popularity in
- recent years.
+
+\emph on
+3D printing
+\emph default
+ is a manufacturing technology that has gained popularity in recent years.
  It has also found its way into the medical field, where it holds significant
  promise for solving the shortage of organs for transplantation.
- However
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-according to 59
-\end_layout
+ However, according to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-59"
+literal "false"
 
 \end_inset
 
@@ -3263,15 +2974,7 @@ according to 59
  It is caused by limited imaging and 3D printing resolution.
  The limited space in 3D printers and the resulting need to divide large
  models into a couple of smaller ones and the subsequent assembling also
- contribute to poor precision 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-59"
-literal "false"
-
-\end_inset
-
-.
+ contribute to poor precision.
 \end_layout
 
 \begin_layout Paragraph
@@ -3302,11 +3005,12 @@ literal "false"
  The ECM does not have HLA or any other PAMPs, so it does not trigger an
  immune response.
  This approach will allow the use of organs that would otherwise be unusable
- due to incompatibilities and will reduce waiting times from years to weeks
- or months.
- Also the organ will be seen by the body as its own, so the immunosuppressants
- would not be needed.Theoretically, even non-human organ ECM can be utilized
- for transplantation to humans.
+ due to incompatibilities and reduce waiting times from years to weeks or
+ months.
+ Also, the body will see the organ as its own, so immunosuppressants will
+ not be needed.
+ Theoretically, even non-human organ ECM can be utilized for transplantation
+ to humans.
  Combined with recent advancements in stem cell production, this approach
  looks very promising.
 \end_layout
@@ -3331,9 +3035,8 @@ literal "false"
  For instance, (Nagashima & Hitomi Matsunari, 2016) injected pancreatic
  progenitor cells into a pig fetus with an apancreatic trait and observed
  successful fetal development and pancreatic function.
- Although the approach appears promising, it is unknown how it would work
- with human organs.
- 
+ Although the approach appears promising, how it would work with human organs
+ is unknown.
 \end_layout
 
 \begin_layout Chapter
@@ -3350,8 +3053,7 @@ Machine learning is a subfield of computer science that consists of building
 \end_layout
 
 \begin_layout Standard
-Machine learning excels in problems that are either overly complex or have
- no known algorithm 
+As detailed in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-9"
@@ -3359,7 +3061,8 @@ literal "false"
 
 \end_inset
 
-.
+, machine learning excels in problems that are either overly complex or
+ have no known algorithm.
  It has the potential to help us create new knowledge by uncovering previously
  unknown correlations within the data.
  It might also make fewer errors in decision-making than humans.
@@ -3367,20 +3070,25 @@ literal "false"
 
 \begin_layout Standard
 Every field is affected by human errors, and medicine is no exception.
- Machine learning also makes mistakes, but if we would manage to get at
- least 1% fewer errors than humans make, this would be a substantial achievement.
- The human body is a complex system, where it is very difficult for human
- mind to comprehend
-\series bold
- 
-\series default
-all processes and how they  relate to each other.
+ Machine learning also makes mistakes, but if we could manage to make at
+ least 1% fewer errors than humans, this would be a substantial achievement.
+ The human body is a complex system, and it is very difficult for the human
+ mind to comprehend all processes and how they relate to each other.
  Machine learning might be able to do that better than any human could.
 \end_layout
 
 \begin_layout Standard
-Based on the problem and, therefore, on our approach to building a dataset
- and the model, machine learning can be divided into four subfields: 
+As 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+ further explains, based on the problem and, therefore, on our approach
+ to building a dataset and the model, machine learning can be divided into
+ four subfields: 
 \emph on
 supervised
 \emph default
@@ -3406,14 +3114,6 @@ Supervised learning
 \emph on
 labels
 \emph default
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-9"
-literal "false"
-
-\end_inset
-
 .
 \end_layout
 
@@ -3427,14 +3127,6 @@ Semi-supervised
 \emph on
 clustering
 \emph default
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-9"
-literal "false"
-
-\end_inset
-
 .
  
 \end_layout
@@ -3446,15 +3138,7 @@ reinforcement learning
 \emph default
 , we create an environment, set up rewards for performing certain actions
  and punishment for others, and let the machine (actor) perform actions
- that produce the highest reward 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-9"
-literal "false"
-
-\end_inset
-
-.
+ that produce the highest reward.
 \end_layout
 
 \begin_layout Standard
@@ -3467,16 +3151,6 @@ al survival analysis, basic steps that are required to create machine learning
 
 \begin_layout Section
 Supervised Learning 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-burkov
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -3488,7 +3162,7 @@ literal "false"
 
 \end_inset
 
- this section explores supervised learning.
+ this section explores supervised learning and its algorithms.
  
 \emph on
 Supervised learning
@@ -3565,15 +3239,7 @@ label
  or graph, in case of a regression.
  The goal of supervised learning algorithm is to create a model using the
  dataset that will take the feature vector as an input and produce a label
- or a more complex structure as an output 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-10"
-literal "false"
-
-\end_inset
-
-.
+ or a more complex structure as an output.
 \end_layout
 
 \begin_layout Standard
@@ -3627,8 +3293,20 @@ Linear Regression
 \end_layout
 
 \begin_layout Standard
-Linear regression is a popular regression learning algorithm.
- The model produced is a linear combination of all features.
+As defined by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+, 
+\emph on
+linear regression 
+\emph default
+is a commonly used algorithm for regression learning.
+ The resulting model is a linear combination of all features.
 \end_layout
 
 \begin_layout Standard
@@ -3652,7 +3330,7 @@ f_{\bar{w},b}(\overline{x})=\overline{w}\overline{x}+b,\label{eq:lin_reg}
 
 \end_inset
 
-where N is the size of the collection, 
+ where N is the size of the collection, 
 \begin_inset Formula $\overline{x}_{i}$
 \end_inset
 
@@ -3672,7 +3350,11 @@ of D dimensions of example
 \begin_inset Formula $y_{i}\epsilon\mathbb{R}$
 \end_inset
 
- is the target value.
+ is the 
+\emph on
+target value
+\emph default
+.
  
 \begin_inset Formula $\overline{w}$
 \end_inset
@@ -3682,7 +3364,7 @@ of D dimensions of example
 \end_inset
 
 .
- Notation 
+ The notation 
 \begin_inset Formula $f_{\bar{w},b}(\overline{x})$
 \end_inset
 
@@ -3773,7 +3455,7 @@ name "fig:Linear-regression-for"
 \end_layout
 
 \begin_layout Standard
-To find optimal parameters we need to minimize
+To find optimal parameters, we need to minimize
 \end_layout
 
 \begin_layout Standard
@@ -3819,28 +3501,27 @@ The loss function measures the model's overall performance (MSE) or evaluates
 \end_layout
 
 \begin_layout Standard
-There is a 
-\emph on
-closed-form solution
-\emph default
- for finding optimal values 
+There is a closed-form solution for finding optimal values 
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
 .
- A closed-form solution is a simple algebraic expression that gives the
- result directly.
- In case of linear regression, it is the 
+ A 
+\emph on
+closed-form solution
+\emph default
+ is a simple algebraic expression that gives the result directly.
+ In the case of linear regression, it is the 
 \emph on
 normal equation
 \emph default
-, and it looks like the following:
+, and it is denoted by:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\mathbf{\overline{\mathbf{w}}^{*}=(x^{T}x)x^{T}y}.\label{eq:norm_eq}
+\mathbf{\overline{\mathbf{w}}^{*}=(x^{T}x)x^{T}y},\label{eq:norm_eq}
 \end{equation}
 
 \end_inset
@@ -3849,7 +3530,7 @@ normal equation
 \end_layout
 
 \begin_layout Standard
-Where 
+where 
 \begin_inset Formula $x^{T}$
 \end_inset
 
@@ -3871,10 +3552,10 @@ We could select another loss function, but according to Andriy Burkov, it
 \begin_inset Formula $y_{i}$
 \end_inset
 
- but that would create problems as the derivative of absolute value is not
- continuous.
- Therefore the function is not smooth, which might create unnecessary complicati
-ons during the optimization process.
+, but that would create problems as the derivative of absolute value is
+ not continuous.
+ Therefore, the function is not smooth, which might create unnecessary complicat
+ions during optimization.
  
 \end_layout
 
@@ -3883,9 +3564,19 @@ Linear models are usually resilient to overfitting because they are simple.
  The model overfits when it learns the intricacies of the training dataset
  so well that it remembers actual values instead of learning the underlying
  pattern.
- Such model is unable to make accurate predictions when confronted with
- unseen data.
- More on overfitting in section 3.6.
+ Such a model cannot make accurate predictions when confronted with unseen
+ data.
+ More on overfitting in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Model-Training-and-Hyperparameter-tuning"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -3898,16 +3589,48 @@ Logistic Regression
 Logistic regression 
 \emph default
 is a binary classifier that estimates the probability of an example belonging
- to a particular class.
+ to a particular class 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  If the predicted probability of the instance belonging to a class is greater
  than 50%, then the model concludes that it belongs to the class (referred
  to as positive class and labeled as 1).
  Otherwise, it predicts that the example does not belong to that class (but
- belongs to the negative class, labeled 0).
- Logistic regression comes from statistics where its mathematical formulation
- is similar to a regression, hence the name.
+ belongs to the negative class, labeled 0) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
+ Logistic regression comes from statistics, where its mathematical formulation
+ is similar to a regression, hence the name 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  Multiclass classification is available in softmax regression, a multiclass
- variant of logistic regression.
+ variant of logistic regression 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -3920,12 +3643,20 @@ As with linear regression, in logistic regression, we want to model
 \begin_inset Formula $\overline{x}$
 \end_inset
 
-, but in this case, it is not that straightforward.
+, but in this case, it is more complex 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Standard
-The logistic regression model looks like the following:
+The logistic regression model is denoted by:
 \end_layout
 
 \begin_layout Standard
@@ -3950,6 +3681,14 @@ Similar to linear regression, our task is to find optimal values
 
  and 
 \begin_inset Formula $b$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
 \end_inset
 
 .
@@ -3998,7 +3737,7 @@ noprefix "false"
 \begin_inset Formula $y_{i}$
 \end_inset
 
- is the positive class, the likelihood of 
+ is a positive class, the likelihood of 
 \begin_inset Formula $y_{i}$
 \end_inset
 
@@ -4011,9 +3750,17 @@ noprefix "false"
 \begin_inset Formula $y_{i}$
 \end_inset
 
- is the negative class, the likelihood for it being the negative class is
+ is the negative class, the likelihood of it being the negative class is
  given by 
 \begin_inset Formula $1-p$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
 \end_inset
 
 .
@@ -4024,10 +3771,6 @@ noprefix "false"
 wide false
 sideways false
 status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -4041,7 +3784,15 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Logistic function
+Logistic function.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Logistic-function."
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4059,20 +3810,52 @@ Logistic function
 \end_layout
 
 \begin_layout Standard
-In the figure we can see that if the 
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Logistic-function."
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ illustrates the logistic function.
+ The 
 \begin_inset Formula $y$
 \end_inset
 
- has a value lower than 
-\begin_inset Formula $\frac{1}{2}$
-\end_inset
-
-, it has negative 
+-axis is a decision boundary whose value corresponds to the predicted probabilit
+y.
+ The 
 \begin_inset Formula $x$
 \end_inset
 
- values and will be marked as a negative class.
- If 
+-axis corresponds to a feature's value.
+ In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Logistic-function."
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we can see that when 
+\begin_inset Formula $y$
+\end_inset
+
+ is less than 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, the corresponding 
+\begin_inset Formula $x$
+\end_inset
+
+ values are negative, classifying it as a negative class.
+ Conversely, if 
 \begin_inset Formula $y$
 \end_inset
 
@@ -4080,28 +3863,24 @@ In the figure we can see that if the
 \begin_inset Formula $\frac{1}{2}$
 \end_inset
 
-, it is positive.
- Although, depending on the context, the threshold may be different.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-ocitovat cely odstavec.
- Dohledat jak
-\end_layout
-
-\end_inset
-
-
+, it is classified as positive.
+ However, the specific threshold may vary depending on the context.
 \end_layout
 
 \begin_layout Standard
-In logistic regression, instead of 
+According to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+, in logistic regression, instead of 
 \emph on
 minimizing
 \emph default
- MSE we are trying to 
+ MSE, we try to 
 \emph on
 maximize
 \emph default
@@ -4117,7 +3896,7 @@ likelihood function
 maximum likelihood
 \emph default
 .
- It looks like the following: 
+ It is given by: 
 \end_layout
 
 \begin_layout Standard
@@ -4146,7 +3925,7 @@ noprefix "false"
 \emph on
 log-likelihood
 \emph default
- instead, to make calculations easier.
+ instead to make calculations easier.
  As 
 \begin_inset Formula $Log$
 \end_inset
@@ -4155,7 +3934,7 @@ log-likelihood
  its argument.
  The solution to this optimization problem is the same as the solution to
  the original problem.
- The log-likelihood function looks like the following: 
+ The log-likelihood function is expressed as: 
 \end_layout
 
 \begin_layout Standard
@@ -4170,11 +3949,27 @@ LogL_{\bar{w},b}\stackrel{def}{=}ln(L_{\overline{w},b}(\overline{x}))\stackrel[i
 \end_layout
 
 \begin_layout Standard
-Unfortunately, there is no closed-form solution for this optimization problem.
- Nonetheless, the function is convex, hence gradient descent (or any other
- optimization algorithm) pretty much guarantees the finding of the global
- minimum, provided that the learning rate is not too large and enough time
- is given.
+Unfortunately, this optimization problem has no closed-form solution 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9,key-10"
+literal "false"
+
+\end_inset
+
+.
+ Nonetheless, the function is convex.
+ Hence, gradient descent (or any other optimization algorithm) guarantees
+ the finding of the global minimum, provided that the learning rate is not
+ too large and enough time is given 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -4187,7 +3982,7 @@ Support Vector Machines
 \emph on
 Support vector machine (SVM)
 \emph default
- is a widely-used and powerful machine learning algorithm that can perform
+ is a widely used and powerful machine learning algorithm that can perform
  a wide range of tasks, including linear and nonlinear classification, regressio
 n, and outlier detection on small- to medium-sized datasets.
 \end_layout
@@ -4222,7 +4017,7 @@ The function
 \begin_inset Formula $sign$
 \end_inset
 
- returns +1 if the input is positive, and -1 if it is negative.
+ returns +1 if the input is positive and -1 if negative.
  To train the SVM means to find optimal values 
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
@@ -4244,7 +4039,7 @@ The function
 \end_layout
 
 \begin_layout Standard
-The concept behind support vector machines is demonstrated in Figure 
+Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:SVM-demonstration-for"
@@ -4254,7 +4049,7 @@ noprefix "false"
 
 \end_inset
 
-.
+ demonstrates the concept behind support vector machines.
  The image consists of two classes represented by red and blue dots, divided
  by a solid line termed the 
 \emph on
@@ -4291,7 +4086,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/svm1.jpeg
+	filename Images/svm1.png
 	scale 30
 
 \end_inset
@@ -4345,7 +4140,7 @@ and is equal to
 \begin_inset Formula $\frac{2}{||\overline{w}||}$
 \end_inset
 
-, so, to do that we need to 
+, so, to do that, we need to 
 \emph on
 minimize 
 \emph default
@@ -4379,9 +4174,9 @@ noprefix "false"
 \end_inset
 
 .
- In this case, the algorithm won't be able to find an optimal solution with
- no instances lying between the support vectors and the decision boundary.
- Consequently, the model is highly sensitive to outliers.
+ In this case, the algorithm cannot find an optimal solution with no instances
+ lying between the support vectors and the decision boundary.
+ Consequently, the model is susceptible to outliers.
 \end_layout
 
 \begin_layout Standard
@@ -4393,7 +4188,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/svm2.jpeg
+	filename Images/svm2.png
 	scale 30
 
 \end_inset
@@ -4402,7 +4197,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Linearly non separable dataset
+Linearly inseparable dataset.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Linearly-non-separable"
@@ -4476,7 +4272,7 @@ The optimization problem we want to solve is the following: Minimize
 
 , where N is the number of features.
  This problem can be modified so that the quadratic programming techniques
- could be used in the optimization process.
+ can be used in the optimization process.
  The modified formula is 
 \begin_inset Formula $\frac{1}{2}||\overline{w}||^{2}$
 \end_inset
@@ -4546,14 +4342,14 @@ where C is the hyperparameter that determines the trade-off between increasing
  For lower values of C, the algorithm will try to make fewer mistakes by
  sacrificing the margin size.
  (A larger margin is better for the generalization.) Lower values lead to
- wider streets and more margin violations, higher values lead to narrower
- streets and fewer margin violations.
+ wider streets and more margin violations.
+ Higher values lead to narrower streets and fewer margin violations.
 \end_layout
 
 \begin_layout Standard
 SVM with the hinge loss function is called 
 \emph on
-soft-margin SVM
+soft-margin SVM,
 \emph default
  while the original formulation that optimizes the Euclidian norm is referred
  to as 
@@ -4565,13 +4361,13 @@ hard-margin SVM
 \emph on
 Soft margin classification
 \emph default
- tries to mitigate the downsides of the 
+ tries to mitigate the downsides of 
 \emph on
 hard margin classification
 \emph default
- by trying to find a balance between keeping the margin as large as possible
- and mitigating the margin outliers (instances that lie on the margin or
- on the opposite side).
+ by finding a balance between keeping the margin as large as possible and
+ mitigating margin outliers (instances that lie on the margin or on the
+ opposite side).
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4588,7 +4384,7 @@ We can adapt SVM to work with nonlinearly separable datasets by applying
  The kernel trick means transforming the original space to a higher dimensional
  one during the cost function optimization with the hope that, in higher
  dimensional space, it will become linearly separable.
- In mathematical language: the kernel trick is mapping 
+ Mathematically, the kernel trick is mapping 
 \begin_inset Formula $\varphi:\overline{x}\rightarrow\varphi(\overline{x})$
 \end_inset
 
@@ -4601,11 +4397,8 @@ We can adapt SVM to work with nonlinearly separable datasets by applying
 \end_inset
 
  The kernel trick allows us to save a lot of non-necessary computations.
-\end_layout
-
-\begin_layout Standard
-There are multiple kernel functions.
- The most widely used are linear, polynomial, radial basis function (RBF),
+ Linear, polynomial, and radial basis function (RBF) are the most widely
+ used kernel functions.
 \end_layout
 
 \begin_layout Section
@@ -4630,7 +4423,7 @@ add examples of algos used
 \emph on
 Unsupervised learning 
 \emph default
-deals with a dataset that does not have labels 
+deals with a dataset without labels 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-10"
@@ -4639,8 +4432,8 @@ literal "false"
 \end_inset
 
 .
- There are three main branches of unsupervised learning: clustering, dimensional
-ity reduction and anomaly detection 
+ It has three main branches: clustering, dimensionality reduction, and anomaly
+ detection 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-9"
@@ -4691,7 +4484,7 @@ literal "false"
 \emph on
 Dimensionality reduction
 \emph default
- is useful for visualization and for the acceleration of learning 
+ is useful for visualization and learning acceleration 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-9"
@@ -4700,11 +4493,11 @@ literal "false"
 \end_inset
 
 .
- Datasets often have a lot of redundant data or the task requires a lot
+ Datasets often have a lot of redundant data, or the task requires a lot
  of features.
- Many algorithms, such as linear models, SVMs, decision trees, might have
- their performances compromised due to high-dimensional data.
- So called 
+ Many algorithms, such as linear models, SVMs, and decision trees, might
+ have their performances compromised due to high-dimensional data.
+ So-called 
 \emph on
 curse of dimensionality
 \emph default
@@ -4722,7 +4515,7 @@ literal "false"
  idea.
  However, it is worth noting that a dimensionality reduction algorithm might
  lose some useful information.
- A lot of modern algorithms, such as neural networks or ensemble algorithms,
+ Many modern algorithms, such as neural networks or ensemble algorithms,
  handle high dimensional data very well, and dimensionality reduction techniques
  are used less than in the past 
 \begin_inset CommandInset citation
@@ -4764,7 +4557,7 @@ literal "false"
 \emph on
 outliers
 \emph default
- or anomalies while regular ones are referred to as 
+ or anomalies, while regular ones are referred to as 
 \emph on
 inliers
 \emph default
@@ -4810,8 +4603,8 @@ literal "false"
 Novelty detection 
 \emph default
 is closely related to anomaly detection.
- The only difference is that novelty detection assumes that the training
- dataset was not contaminated by outliers while anomaly detection does not
+ The only difference is that novelty detection assumes that outliers did
+ not contaminate the training dataset, while anomaly detection does not
  make this assumption 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -4828,8 +4621,8 @@ Data Preparation
 \end_layout
 
 \begin_layout Standard
-Due to factors such as curse of dimensionality and inherent noise, we cannot
- load raw data to an algorithm and expect good performance 
+Due to factors such as the curse of dimensionality and inherent noise, we
+ cannot load raw data to an algorithm and expect good performance 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-10"
@@ -4838,7 +4631,7 @@ literal "false"
 \end_inset
 
 .
- Most often, the raw data has too many features and most of them have very
+ Most often, the raw data has too many features, and most of them have very
  little predictive power.
  We need to build a dataset first.
  
@@ -4888,8 +4681,8 @@ literal "false"
  For example, in our task of predicting survival time, donor-recipient blood
  group compatibility or recipient's age is likely to have much higher predictive
  power than the donor's or recipient's citizenship.
- As blood group compatibility is directly linked to the successful transplantati
-on, while the recipient's citizenship has little correlation with the genetic
+ Blood group compatibility is directly linked to the successful transplantation,
+ while the recipient's citizenship has little correlation with the genetic
  similarities, which we would expect from datasets from other countries,
  but we use the dataset from the United States - a country with very diverse
  population.
@@ -4952,7 +4745,7 @@ literal "false"
 \end_inset
 
 .
- For instance, let's consider a blood group feature comprised of four primary
+ For instance, let us consider a blood group feature comprised of four primary
  blood groups: A, B, AB, and O.
  We can convert each blood group into a vector of four numerical values:
 \end_layout
@@ -5013,10 +4806,10 @@ end{align*}
 \end_layout
 
 \begin_layout Standard
-This technique will increase the dimensionality of the dataset but this
- is a trade-off we have to make because if we were to assign a number to
- each group (1 to A, 2 to B, etc.), that would imply gradation or ranking
- among these categories, while there is none 
+This technique will increase the dimensionality of the dataset, but this
+ is a trade-off we have to make because assigning a number to each group
+ (1 to A, 2 to B, and so on) would imply gradation or ranking among these
+ categories, while there is none 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-10"
@@ -5078,8 +4871,8 @@ literal "false"
 .
  For example, a patient's age can be transformed into age-range bins: 0
  to 18 years old, 18 to 25 y.o., 25 to 40 years old, and so on.
- This technique might help an a laearning algorithm learn better, particularly
- with smaller datasets 
+ This technique might help the algorithm to learn better, particularly with
+ smaller datasets 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-10"
@@ -5120,15 +4913,15 @@ literal "false"
 \end_inset
 
 .
- This problem is solved by 
+ 
 \emph on
-normalization
+Normalization
 \emph default
  and 
 \emph on
 standardization
 \emph default
- scaling techniques.
+ scaling techniques solve this problem.
 \end_layout
 
 \begin_layout Standard
@@ -5213,13 +5006,13 @@ where
 \emph on
 Standardization
 \emph default
- is a scaling technique that scales numerical data in such a way that after
- scaling, it has properties of the 
+ is a scaling technique that scales numerical data so that after scaling,
+ it has the 
 \emph on
-standard normal distribution
+standard normal distribution 
 \emph default
- with the mean µ=0 (average value) and the standard deviation from the mean
- 
+properties with the mean µ=0 (average value) and the standard deviation
+ from the mean 
 \begin_inset Formula $\sigma=1$
 \end_inset
 
@@ -5255,10 +5048,10 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Typically, standardization is used for supervised learning, in case feature
- values are formed by standard distribution (bell curve) or a feature has
- outliers.
- In other cases, the normalization is preferred 
+Typically, standardization is used for supervised learning in cases where
+ feature values are formed by a standard distribution (bell curve) or a
+ feature has outliers.
+ In other cases, normalization is preferred 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-10"
@@ -5331,8 +5124,8 @@ Regression imputation
 Mean/median imputation
 \series default
 .
- This method involves the filling of missing feature values with their mean
- or median value.
+ This method involves filling missing feature values with their mean or
+ median value.
 \end_layout
 
 \begin_layout Enumerate
@@ -5376,7 +5169,7 @@ name "sec:Model-Training-and-Hyperparameter-tuning"
 \end_layout
 
 \begin_layout Standard
-It is a common practice to divide a dataset into three parts
+It is a common practice to divide a dataset into three parts:
 \end_layout
 
 \begin_layout Itemize
@@ -5480,7 +5273,7 @@ k-fold cross-validation
  set only once.
  The only drawback is that it is highly computationally demanding, particularly
  with a high k value and larger datasets, as the model will be trained k
- times, but with a small dataset it is a necessity 
+ times, but with a small dataset, it is a necessity 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-10"
@@ -5528,10 +5321,10 @@ Grid search
 \emph default
  is a standard way of performing hyperparameter fine-tuning.
  It includes defining hyperparameters to experiment with, providing values
- for each hyperparameter to be tested, and training a model for each possible
- combination of hyperparameters.
- The performance of each individual model is assessed using k-fold cross-validat
-ion and the best combination of hyperparameters is selected.
+ for each to be tested, and training a model for each possible combination
+ of hyperparameters.
+ The performance of each model is assessed using k-fold cross-validation,
+ and the best combination of hyperparameters is selected.
  This approach is used in scikit-learn's implementation - GridSearchCV 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -5544,9 +5337,9 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Grid search proves to be effective when dealing with relatively few hyperparamet
-er combinations.
- However, with larger number of hyperparameter combinations, it is advisable
+Grid search proves effective when dealing with relatively few hyperparameter
+ combinations.
+ However, with a larger number of hyperparameter combinations, it is advisable
  to use RandomizedSearch (RandomizedSearchCV in scikit-learn 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -5556,7 +5349,7 @@ literal "false"
 \end_inset
 
 ).
- This method is very similar to grid search but instead of trying every
+ This method is very similar to grid search, but instead of trying every
  possible combination of provided values, it tests only a specified number
  of randomly selected hyperparameter combinations.
  The primary advantage of this method over grid search lies in more control
