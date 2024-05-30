@@ -3770,13 +3770,13 @@ literal "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/logistic_regression.png
-	scale 30
+	scale 50
 
 \end_inset
 
@@ -3978,9 +3978,17 @@ Support Vector Machines
 \end_layout
 
 \begin_layout Standard
+According to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
 
+\end_inset
+
+, 
 \emph on
-Support vector machine (SVM)
+support vector machine (SVM)
 \emph default
  is a widely used and powerful machine learning algorithm that can perform
  a wide range of tasks, including linear and nonlinear classification, regressio
@@ -5378,19 +5386,10 @@ often referred to as
 \emph on
  time-to-event analysis, 
 \emph default
-is a statistical technique 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-branch of statistics?
-\end_layout
-
-\end_inset
-
- employed to analyze and predict the time until an event of interest occurs.
- Its name originates from clinical and biological research where these methods
- are used to analyze survival time.
+is a set of statistical techniques employed to analyze and predict the time
+ until an event of interest occurs.
+ Its name originates from clinical and biological research, where these
+ methods are used to analyze survival time.
  These methods, however, found their use in areas far beyond clinical settings:
  in business to predict the time until the customer ”churns” from a subscription
 ; in engineering to estimate the product longevity or the longevity of its
@@ -5430,7 +5429,7 @@ h or
 \emph on
 failure
 \emph default
-) encompasses any occurrence that permanently changes the state of the subject.
+) encompasses any occurrence that permanently changes the subject's state.
  It can be death, the onset of a disease, a relapse from remission, a recovery,
  or any other specified experience of interest that an individual might
  encounter 
@@ -5463,11 +5462,11 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In this section, we will delve into fundamental survival analysis terminology,
+This section will explain the fundamental survival analysis terminology,
  such as censoring and survival function.
- We will explore the classification of the survival analysis methods, highlighti
-ng the most popular statistical methods, as well as one machine learning
- method tailored to the needs of survival analysis.
+ We will explore the taxonomy of survival analysis methods, highlighting
+ the most popular statistical methods and one machine learning method tailored
+ to the needs of survival analysis.
  Additionally, we will discuss ways to evaluate survival models effectively.
  Unless referenced otherwise, the contents of this section are drawn from
  
@@ -5482,13 +5481,13 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Basic Terminology
+Essential Concepts
 \end_layout
 
 \begin_layout Standard
-In this subsection, we are going to cover the basic terminology required
- for survival analysis such as censoring, censoring assumptions, survival,
- and hazard functions.
+In this subsection, we will cover the essential terminology required for
+ survival analysis such as censoring, censoring assumptions, survival, and
+ hazard functions.
  
 \end_layout
 
@@ -5507,14 +5506,14 @@ Censoring
  partially known.
  For example, the dataset utilized in our research has 370,000 censored
  instances out of 500,000 performed transplantations.
- These patients were either still alive at the last date of observation
- or were lost to follow-up.
+ These patients were either alive at the last observation date or lost to
+ follow-up.
  This lack of complete information indicates 
 \emph on
 censoring
 \emph default
  in survival analysis.
- Censoring makes the application of standard statistical and machine learning
+ Censoring makes the application of standard statistical and machine-learning
  approaches to survival data impractical 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -5533,8 +5532,9 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename Images/censoring_ill.jpg
+	filename Images/censoring_ill.png
 	scale 50
 
 \end_inset
@@ -5547,7 +5547,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Censoring illustration
+The illustration of censoring.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Censoring-illustration"
@@ -5583,6 +5584,8 @@ noprefix "false"
  to the study timeline (the right side is the end of the study).
  Cross (X) denotes an occurrence of the event, and circle (O) corresponds
  to the patient's exit from the study.
+ No sign and the line ceasing at the end of the study means the patient
+ did not experience the event.
 \end_layout
 
 \begin_layout Standard
@@ -5604,10 +5607,10 @@ interval
 Right censoring
 \emph default
 , which is more common, occurs when we are sure that the event did not happen
- by a specific time and we don't know when it will happen.
+ by a specific time and we do not know when it will happen.
  The situation arises when the patient drops out of a study, or the study
- ends when they are still alive, as illustrated with patients B, E, and
- F in Figure 
+ ends when they are still alive, as illustrated with patients 2, 3, and
+ 4 in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Censoring-illustration"
@@ -5641,7 +5644,7 @@ Interval censoring
 \emph default
  happens when the event occurs within a particular timeframe, but the exact
  time is unknown.
- It can be the case in studies involving periodic patient follow-up, where
+ This can be the case in studies involving periodic patient follow-up, where
  the event can happen at any point between two visits.
 \end_layout
 
@@ -5672,9 +5675,9 @@ independent
 non-informative
 \emph default
 .
- Each shares certain similarities but also possesses unique distinctions
+ Each shares certain similarities but also possesses unique distinctions,
  which we will explore in detail.
- Censoring assumptions is the way censoring is managed.
+ Censoring assumptions are how censoring is managed.
 \end_layout
 
 \begin_layout Enumerate
@@ -5686,10 +5689,10 @@ Random Censoring
 \emph on
 t
 \emph default
- are assumed to have the same failure rate as remaining subjects provided
- the same survival experience.
- Subjects that were censored are selected randomly, meaning the study does
- not influence or bias which participants are censored.
+ are assumed to have the same failure rate as the remaining subjects, provided
+ they have the same survival experience.
+ The censored subjects are selected randomly, meaning the study does not
+ influence or bias which participants are censored.
 \end_layout
 
 \begin_layout Enumerate
@@ -5698,7 +5701,7 @@ t
 Independent Censoring
 \series default
 : Independent censoring occurs when the censoring is random within certain
- subgroups, defined by specific covariates.
+ subgroups defined by specific covariates.
  If no covariates are present, it defaults to random censoring.
  This distinction might not be apparent when examining a single subgroup.
 \end_layout
@@ -5709,7 +5712,7 @@ Independent Censoring
 Non-Informative Censoring
 \series default
 : Non-informative censoring occurs when censored instances do not provide
- any information on their survival prospects.
+ any information on the patient's survival prospects.
  In other words, whether or not the patient is censored, has no influence
  on experiencing the event.
 \end_layout
@@ -5729,7 +5732,7 @@ random
 \emph default
 .
  However, these assumptions are not equivalent.
- To better understand these concepts, let us look into some examples.
+ Let us examine some examples to better understand these concepts.
 \end_layout
 
 \begin_layout Standard
@@ -5739,15 +5742,15 @@ Consider a three-year disease occurrence study with 100 subjects at risk
  three-year disease risk.
  Suppose we want to extend the study for another two years on the remaining
  80 individuals.
- However, 40 refuse to continue in the study and, are, therefore, lost to
- follow-up (censored).
- Of the remaining 40, 5 contracted the disease.
+ However, 40 refused to continue in the study and were, therefore, lost
+ to follow-up (censored).
+ Of the remaining 40, five contracted the disease.
  Assuming those who left were representative of the remaining subjects (random
- and independent censoring), another 5 among the censored would have contracted
- it.
- Consequently, the five-year risk is 30% and the five-year survival is 70%
- under random and independent censoring assumptions.
- In this case, random and independent censoring are the same, as no predictor
+ and independent censoring), another five among the censored would have
+ contracted it.
+ Consequently, the five-year risk is 30%, and the five-year survival is
+ 70% under random and independent censoring assumptions.
+ In this case, random and independent censoring is the same, as no predictor
  variables are considered.
 \end_layout
 
@@ -5760,7 +5763,7 @@ To illustrate the difference between random and independent censoring, let
  for years between 3 and 5.
  Under the independent censoring assumption, we assume that out of 10 censored,
  2 contracted the disease.
- The five-year risk for group B is 52% with 48% survival under independent
+ The five-year risk for group B is 52%, with 48% survival under independent
  censoring assumptions.
 \end_layout
 
@@ -5770,31 +5773,20 @@ As we can see, the five-year risk in the two groups differs significantly
  (50% against 17%).
  Hence, the overall censoring is not random.
  However, it is random within each group, so the censoring is independent.
- On other hand, if in group B, 30 subjects out of 60 were censored at the
- three-year mark, the censoring proportion would be the same in both groups,
- and the overall censoring would be random as those censored would be the
- representatives of those who remained at risk.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-50 vs.
- 17???
-\end_layout
-
-\end_inset
-
-
+ Conversely, if in group B, 30 subjects out of 60 were censored at the three-yea
+r mark, the censoring proportion would be the same in both groups, and the
+ overall censoring would be random as those censored would be the representative
+s of those who remained at risk.
 \end_layout
 
 \begin_layout Standard
-To best illustrate what non-informative censoring is, let us demonstrate
- informative censoring.
+To best illustrate non-informative censoring, let us demonstrate informative
+ censoring.
  Let us take a group of subjects under random and independent censoring
  assumptions.
  Every time subject A gets an event, subject B leaves the study (e.g., B is
  A's relative).
- If the censored subjects are representative of subjects at risk it would
+ If the censored subjects are representative of subjects at risk, it would
  be random and independent censoring.
  Here, the censoring mechanism is directly related to the event occurrence,
  so the censoring is informative.
@@ -5819,17 +5811,7 @@ survivor function
 \end_inset
 
 , represents the probability that the patient survives, in other words,
- does not experience the event of interest beyond the
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-a
-\end_layout
-
-\end_inset
-
- given time 
+ does not experience the event of interest beyond a given time 
 \begin_inset Formula $t$
 \end_inset
 
@@ -5862,12 +5844,12 @@ where
 \end_inset
 
  is the random variable for the subject's survival time.
- For instance, if we want to know the likelihood that a patient is going
- to live for more than five years after a kidney transplant, we set 
+ For instance, if we want to know the likelihood that a patient will live
+ for more than five years after a kidney transplant, we set 
 \begin_inset Formula $t$
 \end_inset
 
- equal to 5, and we evaluate 
+ equal to 5 and evaluate 
 \begin_inset Formula $S(t)$
 \end_inset
 
@@ -5886,22 +5868,22 @@ The survival function has several key characteristics:
 \begin_layout Enumerate
 It continually decreases or maintains its value over time, theoretically
  extending from 0 to infinity.
- That is, if the study lasted indefinitely, the survival function would
- eventually fall to 0.
+ If the study lasted indefinitely, the survival function would eventually
+ fall to 0.
  In practical research scenarios, studies do not last forever, and not every
  patient experiences an event by the end of the study.
 \end_layout
 
 \begin_layout Enumerate
 As it represents a probability, the function value ranges from 0 to 1.
- At the beginning of the observation period it starts at 1, indicating 100%
- survival probability, and declines over time, potentially reaching 0 as
- the probability of survival decreases.
+ At the beginning of the observation period, it starts at 1, indicating
+ 100% survival probability, and declines over time, potentially reaching
+ 0 as the probability of survival decreases.
 \end_layout
 
 \begin_layout Enumerate
-Although the graph of the survival function is smooth by definition, in
- reality it is a step function.
+Although the survival function graph is smooth by definition, in reality,
+ it is a step function.
  This stepwise representation is due to the nature of real-world data, where
  events are recorded at specific, discrete time points rather than continuously
  
@@ -5956,18 +5938,8 @@ Survival function
  It presents a declining or constant trend starting at 1 and potentially
  declining to 0.
  While understanding the probability of not failing at every time point
- is important, knowing the instantaneous risk might also be useful, leading
+ is important, knowing the instantaneous risk might also be helpful, leading
  us to the next concept: the hazard function.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-kouknut na tuhle vetu a prepsat
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection*
@@ -6003,7 +5975,7 @@ hazard function
 \end_inset
 
 .
- It is expressed by the following equation: 
+ It is expressed as: 
 \end_layout
 
 \begin_layout Standard
@@ -6041,7 +6013,7 @@ Here,
 \begin_inset Formula $T$
 \end_inset
 
- will lie in the time interval between 
+ will lie in the interval between 
 \begin_inset Formula $t$
 \end_inset
 
@@ -6075,12 +6047,12 @@ conditional failure rate
 .
  Unlike probability, this rate has a scale from 0 to infinity — depending
  on the measure of time in days, weeks, or years.
- Essentially, by considering the limit as the 
+ By considering the limit as the 
 \begin_inset Formula $\Delta t$
 \end_inset
 
- approaches zero we basically get the instantaneous potential of failing
- at time 
+ approaches zero, we get the instantaneous potential of failing at time
+ 
 \begin_inset Formula $t$
 \end_inset
 
@@ -6091,12 +6063,12 @@ conditional failure rate
 To best illustrate the concept of instantaneous potential, let us refer
  to the concept of velocity.
  Velocity gives us the speed at a specific point in time.
- For instance, the velocity of 80 km/h, means that maintaining the same
- speed for an hour would result in traveling 80 kilometers.
- However, it doesn't predict how much the car will travel in reality.
+ For instance, 80 km/h velocity means that maintaining the same speed for
+ an hour would result in traveling 80 kilometers.
+ However, it does not predict how much the car will travel.
  The same works with the instantaneous potential: it might be high at one
  point but low at another, reflecting that both are measurements at an instant
- in time rather than an interval 
+ rather than an interval 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13-SA"
@@ -6274,7 +6246,7 @@ noprefix "false"
 \end_inset
 
 .
- And we can simplify our equation to:
+ We can simplify our equation to:
 \end_layout
 
 \begin_layout Standard
@@ -6378,9 +6350,17 @@ statistical
 \emph default
  and 
 \emph on
-machine learning based
+machine learning-based
 \emph default
- methods.
+ methods 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-23"
+literal "false"
+
+\end_inset
+
+.
  Both aim to estimate the survival time and the survival probability at
  the estimated survival time 
 \begin_inset CommandInset citation
@@ -6391,8 +6371,8 @@ literal "false"
 \end_inset
 
 .
- Statistical methods primarily characterize distributions of the event times
- and the statistical properties of the parameter estimation by estimating
+ Statistical methods primarily characterize the distributions of the event
+ times and the statistical properties of the parameter estimation by estimating
  the survival curves.
  Typically, statistical methods are employed for low-dimensional data 
 \begin_inset CommandInset citation
@@ -6406,8 +6386,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-On the other hand, machine learning methods focus on the prediction of the
- event occurrence at a given time.
+On the other hand, machine learning methods focus on predicting the occurrence
+ of events at a given time.
  They harness the strengths of traditional survival analysis while integrating
  different machine learning techniques, leading to more potent algorithms.
  Machine learning methods are mostly used with high-dimensional data 
@@ -6426,10 +6406,10 @@ Statistical methods can be further subdivided based on their assumptions
  and parameter usage into parametric, non-parametric, and semi-parametric
  methods.
  Machine learning methods, encompassing methods like survival trees, ensembles
- (random survival forests), neural networks, and support vector machines
+ (random survival forests), neural networks, and support vector machines,
  form a distinct category.
  Advanced machine learning techniques, such as active learning, transfer
- learning, and multitask learning are included as well 
+ learning, and multitask learning, are also included 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-23"
@@ -6482,15 +6462,16 @@ literal "false"
 
 \end_inset
 
-.There are three main non-parametric methods: the Kaplan-Meier (KM) method,
+.
+ There are three main non-parametric methods: the Kaplan-Meier (KM) method,
  the Nelson-Aalen (NA) estimator, and the Life-Table (LT) method.
  In the next section, we will cover Kaplan-Meier in more detail.
  The Life-Table method is more convenient than Kaplan-Meier for the estimation
  of survival curves when data subjects are segmented into distinct time
  intervals when dealing with an extensive number of subjects or a broad
  population scope.
- On the other hand, the Nelson-Aalen method is used for the estimation of
- hazard functions 
+ On the other hand, the Nelson-Aalen method is used to estimate hazard functions
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-23"
@@ -6509,9 +6490,9 @@ Semi-parametric models
  offer a middle ground between fully parametric models, which make specific
  distributional assumptions, and non-parametric models, which make very
  few assumptions.
- Among semi-parametric methods, the Cox model is the most frequently employed
- model for survival regression analysis.
- It is semi-parametric as the distribution of the outcome is unknown.
+ The Cox model is the most frequently employed model for survival regression
+ analysis among semi-parametric methods.
+ It is semi-parametric, as the distribution of the outcome is unknown.
  Unlike other approaches, this method is based on the proportional hazards
  assumption and uses partial likelihood for parameter estimation (more on
  that in 
@@ -6550,8 +6531,8 @@ Parametric methods
  In the domain of parametric models, linear regression is central.
  However, the Tobit model, Buckley-James regression, and penalized regression
  are the most favored.
- Beyond this, other parametric models like the Accelerated Failure Time
- (AFT) have gained traction.
+ Beyond this, other parametric models, like the Accelerated Failure Time
+ (AFT), have gained traction.
  The AFT model represents survival time as a function of covariates 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -6584,13 +6565,13 @@ Kaplan-Meier Survival Curves
 \emph on
 Kaplan-Meier
 \emph default
- is a non-parametric method of survival function creation.
+ is a non-parametric method of creating survival functions..
  It is 
 \emph on
 non-parametric
 \emph default
- because it does not take into account any covariates, or parameters, and
- requires only the survival time and the censoring indicator.
+ because it does not consider any covariates or parameters and requires
+ only the survival time and the censoring indicator.
  It works under an independent censoring assumption.
  The general Kaplan-Meier formula for plotting the survival function is
  the following: 
@@ -6676,7 +6657,7 @@ literal "false"
 \end_inset
 
 .
- Because of that the Kaplan-Meier estimator is sometimes referred to as
+ Because of that, the Kaplan-Meier estimator is sometimes referred to as
  the 
 \emph on
 product-limit method
@@ -6752,10 +6733,10 @@ These survival curves are often compared using the log-rank test.
 \emph on
 log-rank test
 \emph default
- is a way to compare two survival functions, that is often used in studies,
- where there is a target group and a placebo (control) group to assess the
- efficacy of the treatment or intervention in the study by comparing the
- survival curves of the two groups 
+ is a way to compare two survival functions.
+ It is often used in studies, with a target group and a placebo (control)
+ group to assess the efficacy of the treatment or intervention in the study
+ by comparing the survival curves of the two groups 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13-SA"
@@ -6767,11 +6748,11 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-To summarize, the Kaplan-Meier method provides a robust non-parametric approach
+To summarize, the Kaplan-Meier method provides a robust nonparametric approach
  for estimating survival functions, emphasizing its independence from covariates.
  While the log-rank test offers a mechanism to compare the survival curves
- and assess treatment efficacy, there are still situations that require
- taking covariates into consideration.
+ and assess treatment efficacy, some situations still require considering
+ covariates.
  That leads us to the Cox proportional hazards model, which inherently handles
  covariates.
 \end_layout
@@ -6792,7 +6773,7 @@ The
 \emph on
 Cox proportional hazards
 \emph default
- (also Cox PH) model is widely used in survival analysis semi-parametric
+ (also Cox PH) model is a widely used in survival analysis semi-parametric
  model.
  This section explores its formulation, key properties, and reasons for
  its widespread use in research.
@@ -7045,9 +7026,9 @@ Let us define the partial likelihood.
 \end_layout
 
 \begin_layout Standard
-By taking the product across all subject's probabilities we get the partial
+By taking the product across all subjects' probabilities, we get partial
  likelihood.
- Based on Cox assumption and the presence of censoring, partial likelihood
+ Based on Cox's assumption and the presence of censoring, partial likelihood
  is defined as follows:
 \end_layout
 
@@ -7072,7 +7053,7 @@ PL(\beta)=\prod_{j=1}^{N}\left[\frac{exp(X_{j}\beta)}{\sum_{i\epsilon R_{j}}exp(
 \begin_inset Formula $\delta=0$
 \end_inset
 
-, the individual probability is equal to 1 and the subject does not affect
+, the individual probability is equal to 1, and the subject does not affect
  the result.
  The vector of coefficients 
 \begin_inset Formula $\hat{\beta}$
@@ -7108,8 +7089,8 @@ literal "false"
 \begin_layout Standard
 Being a semi-parametric, this model is a safe choice because it consistently
  delivers a sufficiently reliable result.
- The risk of choosing the wrong model as often happens with parametric models,
- is practically non-existent.
+ The risk of choosing the wrong model, as often happens with parametric
+ models, is practically non-existent.
  However, if one is sure that a parametric model suits the problem, one
  should use the parametric model 
 \begin_inset CommandInset citation
@@ -7128,13 +7109,21 @@ Penalized Cox Models
 \end_layout
 
 \begin_layout Standard
-The Cox proportional hazards model is often chosen, since its coefficients
+According to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-25"
+literal "false"
+
+\end_inset
+
+, the Cox proportional hazards model is often chosen since its coefficients
  can be interpreted in terms of hazard ratios, offering meaningful insights.
- Yet, when estimating coefficients for many features, the standard Cox model
- collapses due to matrix inversion getting disrupted by correlations between
- features.
- Feature (column) correlations make a matrix singular, i.e.
- impossible to revert.
+ However, when estimating coefficients for many features, the standard Cox
+ model collapses due to matrix inversion getting disrupted by correlations
+ between features.
+ Feature (column) correlations make a matrix singular, i.e., impossible to
+ revert.
  In this section, we aim to explore the 
 \emph on
 Ridge regression
@@ -7157,12 +7146,20 @@ Ridge
 \end_layout
 
 \begin_layout Standard
-By incorporating an 
+As 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-25"
+literal "false"
+
+\end_inset
+
+ further explains, we can avoid the problem of the inability to revert singular
+ matrix by incorporating an 
 \begin_inset Formula $l_{2}$
 \end_inset
 
- penalty term on the coefficients, shrinking them to zero, we can avoid
- the problem of the inability to revert singular matrix.
+ penalty term on the coefficients, shrinking them to zero.
  Consequently, our objective has the following form: 
 \end_layout
 
@@ -7247,7 +7244,7 @@ LASSO
  Rather than merely shrinking the coefficients to zero, it performs feature
  selection as a part of the optimization process, where a subset of coefficients
  is set to zero and is, therefore, excluded, reducing the number of features
- we would need for prediction.
+ we need for prediction.
  Mathematically, we would replace the 
 \begin_inset Formula $l_{2}$
 \end_inset
@@ -7277,7 +7274,7 @@ The main drawback is that we cannot directly control the number of features
 \begin_inset Formula $\alpha$
 \end_inset
 
- essentially determines the number of features selected.
+ essentially determines the number of selected features.
  To achieve a refined model that requires fewer features, we need a data-driven
  way to determine the appropriate 
 \begin_inset Formula $\alpha$
@@ -7290,9 +7287,8 @@ The main drawback is that we cannot directly control the number of features
 
  that would ignore all features (coefficients are set to zero) and then
  gradually decreasing its value, possibly down to 1% of its starting value.
- Fortunately, it is implemented in scikit-survival's 
+
 \emph on
-sksurv.linear_model.CoxnetSurvivalAnalysis.
  
 \emph default
 We would need to set 
@@ -7307,7 +7303,12 @@ alpha_min_ratio=0.01
 \begin_inset Formula $\alpha$
 \end_inset
 
- values up to 1% of the estimated maximum 
+ values up to 1% of the estimated maximum.
+ Fortunately, it is implemented in scikit-survival's 
+\emph on
+sksurv.linear_model.CoxnetSurvivalAnalysis
+\emph default
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-25"
@@ -7324,9 +7325,9 @@ Elastic Net
 
 \begin_layout Standard
 The LASSO method is effective for selecting a subset of discriminative features.
- However, it is not without its shortcomings.
- The first is that LASSO is unable to select more features than there are
- instances in the training data set.
+ However, it has its shortcomings.
+ The first is that LASSO cannot select more features than there are instances
+ in the training data set.
  The second is its tendency to randomly select only one feature out of a
  set of highly correlated ones.
  The 
@@ -7387,7 +7388,7 @@ and
 \begin_inset Formula $l_{2}$
 \end_inset
 
- penalty only a small weight to improve the stability of the LASSO, for
+ penalty only a small weight to improve the stability of the LASSO; for
  example, 
 \begin_inset Formula $r=0.9$
 \end_inset
@@ -7410,7 +7411,17 @@ literal "false"
 \end_inset
 
 .
- More on that in the practical part, where we will choose the best 
+ More on that in Subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Coxnet"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, where we will choose the best 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -7418,28 +7429,15 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-don't forget to add a reference to the practical part
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-To conclude, Ridge, LASSO, and Elastic Net offer powerful extensions of
- the Cox PH model, especially when dealing with high-dimensional datasets
- and highly correlated features.
+To conclude, Ridge, LASSO, and Elastic Net are potent extensions of the
+ Cox PH model, especially when dealing with high-dimensional datasets and
+ highly correlated features.
  They help to regularize the Cox model and select only the most significant
  features, avoiding overfitting and assuring a more stable and interpretable
  model.
  Nevertheless, it is important to acknowledge their limitations.
- As linear models, they inherently capture only linear relationships, and
- non-linear relationships remain uncaptured.
+ As linear models, they capture only linear relationships, and non-linear
+ relationships remain uncaptured.
  That leads us to the next section dedicated to the Random Survival Forests,
  a machine learning approach.
  Machine learning techniques are known for their ability to catch complex
@@ -7469,21 +7467,22 @@ literal "false"
  Random Forests have gained popularity in the machine learning community
  due to their effectiveness in classification and regression machine learning
  tasks.
- Random Forest is built from multiple decision trees, averaging their prediction
-s allows for more accurate predictions than any single tree can provide.
+ Random Forest is built from multiple decision trees.
+ Averaging their predictions allows for more accurate predictions than any
+ single tree can provide.
  Similar to Random Forest, Random Survival Forest leverages the power of
- multiple survival trees making its predictions more robust.
+ multiple survival trees, making its predictions more robust.
  
 \end_layout
 
 \begin_layout Standard
-Random Survival Forest is comprised of 
+A Random Survival Forest is comprised of 
 \emph on
 Survival Trees
 \emph default
 .
  A survival tree is essentially a binary tree.
- It is developed by the iterative splitting of children nodes into two nodes
+ It is developed by iteratively splitting children nodes into two nodes
  until a certain criterion is met.
  An optimal node split is the one maximizing the survival difference between
  the children nodes.
@@ -7560,16 +7559,14 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In summary, the Random Survival Forest is a robust and powerful approach
- to survival analysis that harnesses the collective power of multiple survival
+In summary, the Random Survival Forest is a robust and powerful survival
+ analysis approach that harnesses the collective power of multiple survival
  trees.
- Having explored several survival analysis methods, it is crucial to be
- able to evaluate them properly, since the standard machine learning performance
- metrics are not always applicable to survival analysis due to the presence
- of censoring.
- The next section will introduce essential criteria for the evaluation of
- survival analysis models and the primary performance metrics created for
- this purpose.
+ Having explored several survival analysis methods, it is crucial to evaluate
+ them properly since the standard machine learning performance metrics are
+ not always applicable to survival analysis due to the presence of censoring.
+ The next section will introduce essential criteria for evaluating survival
+ analysis models and the primary performance metrics created for this purpose.
 \end_layout
 
 \begin_layout Subsection
@@ -7622,8 +7619,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The absence of bias in a situation when the validation set contains censored
- instances is a sign of a good performance measure.
+The absence of bias when the validation set contains censored instances
+ indicates a good performance measure.
  Otherwise, in the presence of high levels of censoring, the evaluation
  would be unreasonably optimistic 
 \begin_inset CommandInset citation
@@ -7705,11 +7702,11 @@ C-index
 \begin_inset Formula $(i,j)$
 \end_inset
 
-, the one with a shorter survival time 
+, the one with a shorter survival time, 
 \begin_inset Formula $T$
 \end_inset
 
-, has the higher predicted risk 
+ has the higher predicted risk, 
 \begin_inset Formula $M$
 \end_inset
 
@@ -7741,7 +7738,7 @@ C=P(M_{i}>M_{j}|T_{i}<T_{j}).
 \emph on
 Harrell's concordance index
 \emph default
- is the most widely used implementation of concordance index.
+ is the most widely used implementation of the concordance index.
  To compute Harrel's concordance index 
 \begin_inset Formula $C_{H}$
 \end_inset
@@ -7756,7 +7753,7 @@ comparable
 \begin_inset Quotes srd
 \end_inset
 
- if we can determine which of them experienced the event first 
+ if we can determine which patient experienced the event first 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-30"
@@ -7812,7 +7809,7 @@ where
 \end_inset
 
  is the indicator function.
- It is equal to 1 if its argument is true, and 0 if it is not.
+ It is equal to 1 if its argument is true and 0 if it is not.
  
 \begin_inset Formula $T^{obs}$
 \end_inset
@@ -7822,7 +7819,7 @@ where
 \begin_inset Formula $\Delta_{i}$
 \end_inset
 
- is a binary variable and 
+ is a binary variable, and 
 \begin_inset Formula $\Delta_{i}=1$
 \end_inset
 
@@ -7838,7 +7835,7 @@ where
 \end_layout
 
 \begin_layout Standard
-According to the Scikit-survival's documentation 
+According to Scikit-survival's documentation 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-22"
@@ -7846,8 +7843,7 @@ literal "false"
 
 \end_inset
 
- and Rahman et.
- al.
+ and Rahman et al.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -7858,8 +7854,7 @@ literal "false"
 
 , Harrell's concordance index becomes biased in the presence of censoring.
  The bias increases with the level of censoring.
- Uno et.
- al.
+ Uno et al.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -7892,7 +7887,7 @@ literal "false"
 \begin_layout Standard
 Having explored the concordance index and its modifications, it is evident
  that it provides valuable insight into the model's discriminatory abilities.
- Yet, it offers a singular value that characterizes a model's performance
+ However, it offers a singular value that characterizes a model's performance
  across different time points without considering fluctuations in concordance
  that tend to happen over time.
  To enhance our evaluation of model performance in terms of discrimination
@@ -7937,8 +7932,7 @@ true positive rate (TPR or sensitivity)
 false positive rate (FPR)
 \emph default
 .
- The FPR is the ratio of negative instances that are falsely classified
- as positive.
+ The FPR is the ratio of negative instances falsely classified as positive.
  It is equal to 
 \begin_inset Formula $1-$
 \end_inset
@@ -7967,12 +7961,12 @@ literal "false"
 
 \begin_layout Standard
 In survival analysis, we extend the ROC to continuous outcomes, where a
- patient is alive at the start of the observation, but might experience
- an event at some point later.
+ patient is alive at the start of the observation but might experience an
+ event later.
  Specificity and sensitivity, therefore, become time-dependent measures.
- It is specifically important, as model accuracy tends to be different at
+ It is especially important, as model accuracy tends to be different at
  different points in time.
- Here we consider 
+ Here, we consider 
 \emph on
 cumulative cases
 \emph default
@@ -7980,7 +7974,7 @@ cumulative cases
 \emph on
 dynamic controls
 \emph default
- at any given point in time 
+ at any given time 
 \begin_inset Formula $t$
 \end_inset
 
@@ -7989,7 +7983,7 @@ dynamic controls
 \emph on
 Cumulative cases
 \emph default
- are all subjects who experienced an event prior to or at time 
+ are all subjects who experienced an event before or at time 
 \begin_inset Formula $t$
 \end_inset
 
@@ -7997,7 +7991,7 @@ Cumulative cases
 \emph on
 dynamic controls
 \emph default
- are those who are yet to experience the event after time 
+ are those who have yet to experience the event after time 
 \begin_inset Formula $t$
 \end_inset
 
@@ -8017,7 +8011,7 @@ dynamic controls
 \end_inset
 
 .
- The time-dependent ROC AUC is especially useful when we want to predict
+ The time-dependent ROC AUC is especially helpful when we want to predict
  an event happening in a period up to time 
 \begin_inset Formula $t$
 \end_inset
@@ -8147,32 +8141,36 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The limitation of the time-dependent Brier Score is its applicability exclusivel
-y to the models that are capable of estimating the survival function.
- 
+The time-dependent Brier Score's limitation is that it applies exclusively
+ to models capable of estimating the survival function.
+ The 
 \emph on
 Integrated Brier Score
 \emph default
- provides a scalar value for general model evaluation.
- It is beneficial for model comparison, as time-dependent measures are a
- bit harder to compare than scalar values, and for the model fine-tuning
- process.
+ provides a scalar value for general model evaluation It is beneficial for
+ model comparison, as time-dependent measures are a bit harder to compare
+ than scalar values, and for the model fine-tuning process.
 \end_layout
 
 \begin_layout Standard
-Survival analysis provides a suite of techniques for the prediction of a
- time to event.
- As we explored its methods and evaluation metrics, it is evident that the
- traditional SA provides robust tools for handling censored data, evaluating
- risk factors, and making predictions over time.
- However, as data grows in both complexity and volume, there is a growing
- need for more advanced modeling techniques, leading us to advanced machine
- learning: deep learning.
- Deep Learning, with its ability to handle large and complex datasets, promises
- to expand traditional survival analysis methods.
- In the following section, we will explore how deep learning can be adapted
- for survival analysis to harness the power of neural networks for more
- precise predictions.
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this chapter, we covered various approaches for training machine learning
+ models.
+ We discussed the training process, data preparation, handling missing values,
+ and finding optimal hyperparameters for our models.
+ Additionally, we discussed survival analysis, which offers a range of technique
+s for predicting the time to an event.
+ It encompasses various models and performance metrics capable of handling
+ censored data during training, prediction, and model evaluation.
+ Now, we are well-equipped to perform our analysis.
+ However, before we proceed, let us ensure that we have a dataset to work
+ with and a solid understanding of the data .
 \end_layout
 
 \begin_layout Chapter
@@ -8180,19 +8178,9 @@ Data Preparation and Analysis
 \end_layout
 
 \begin_layout Standard
-In this chapter we are going to look into the dataset used in the study.
- Explore the most important features and their influence on the survival
+In this chapter, we will examine the study's dataset.
+ We will explore its most important features and their influence on survival
  time.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Write normal intro.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -8201,9 +8189,9 @@ Data Acquisition
 
 \begin_layout Standard
 The dataset provided by the IKEM (Institute of Clinical and Experimental
- Medicine in Prague) that we initially had was not suitable for any meaningful
+ Medicine in Prague) that we initially had was unsuitable for any meaningful
  analysis.
- It had very few records, an insufficient amount of features, a lot of missing
+ It had very few records, an insufficient number of features, many missing
  values, and quite outdated follow-ups.
  That is why it was decided to look for data elsewhere.
 \end_layout
@@ -8222,7 +8210,7 @@ High cost of acquiring the data
 \end_layout
 
 \begin_layout Itemize
-The need for association with local research group
+The need for association with a local research group
 \end_layout
 
 \begin_layout Itemize
@@ -8230,27 +8218,14 @@ The need for local citizenship.
 \end_layout
 
 \begin_layout Standard
-Fortunately, United Network for Organ Sharing (UNOS) agreed to provide their
- data for free upon the signing the data use agreement.
+Fortunately, the United Network for Organ Sharing (UNOS), a US organization,
+ agreed to provide their data for free upon signing the data use agreement.
  The database consists of 1,108,884 records for all kinds of transplants.
  The table that contained data crucial for our analysis encompassed both
  kidney and pancreas transplants, had 993 806 records and 457 columns for
  both transplanted patients and ones from the waiting list.
- Data span from October 1, 1987 to the September, 2022.
+ Data span from October 1, 1987, to September 2022.
  Kidney transplants account for 490 172 records.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-United states!
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -8258,18 +8233,8 @@ Data Loading
 \end_layout
 
 \begin_layout Standard
-The data were provided as a MongoDB database dump.
+The data were provided in the form of a MongoDB database dump.
  Unfortunately, the database dump alone was insufficient for data analysis.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-I don't like the sentence.
- Remove it or connect with another.
-\end_layout
-
-\end_inset
-
  It was necessary to run the database, import the database dump, and export
  data in the appropriate format.
  We set up the MongoDB database in a Docker container (Docker explained
@@ -8283,7 +8248,7 @@ noprefix "false"
 
 \end_inset
 
-) running locally on our Mac, as we weren't allowed to install Docker in
+) running locally on our PC, as we were not allowed to install Docker in
  our university cluster.
  The corresponding table was then exported to CSV, compressed into a zip
  archive, and uploaded to the cluster.
@@ -8291,16 +8256,23 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-The process of loading the data using the read_csv() method of the Pandas
- DataFrame was taking too long (about 5 minutes) due to the large size of
- the CSV file (80GB).
+The process of loading the data using the 
+\emph on
+read_csv()
+\emph default
+ method of the Pandas DataFrame was taking too long (about 5 minutes) due
+ to the large size of the CSV file (80GB).
  The nature of data science is quite iterative, so we had to optimize this
  inefficiency.
  As a result, it was decided to store data in a Parquet file.
- The DataFrame.to_parquet() method was used to dump the pandas DataFrame
- into the Parquet database file.
  Parquet is an efficient cloud computing format that works on the principles
- of databases, making it possible to load data more efficiently.
+ of databases, allowing for more efficient data loading.
+ The 
+\emph on
+DataFrame.to_parquet()
+\emph default
+ method was used to dump the pandas DataFrame into the Parquet database
+ file.
  This significantly reduced the loading time of the entire dataset to just
  38 seconds.
  Moreover, it allows for specifying the columns to load, which further reduces
@@ -8309,23 +8281,13 @@ The process of loading the data using the read_csv() method of the Pandas
 \end_layout
 
 \begin_layout Section
-Data Preprocessing Pipeline 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Return here during 5th Chapter
-\end_layout
-
-\end_inset
-
-
+Data Preprocessing Pipeline
 \end_layout
 
 \begin_layout Standard
-In this section we will describe the data pipeline that is used to create
- the dataset out of the raw data.
- The pipeline can be found in github repository of this paper: 
+This section will describe the data pipeline used to create the dataset
+ from the raw data.
+ The pipeline can be found in the GitHub repository of this paper: 
 \begin_inset CommandInset href
 LatexCommand href
 name "survival_pipeline.py"
@@ -8339,7 +8301,7 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
-Update the link or the file)
+Make sure it works
 \end_layout
 
 \end_inset
@@ -8354,7 +8316,7 @@ The work with the pipeline is pretty straightforward: we initialize the
 load()
 \emph default
  method.
- As is shown in the following block of python code:
+ As is shown in the following block of Python code:
 \end_layout
 
 \begin_layout Standard
@@ -8416,13 +8378,12 @@ y
  is a tuple consisting of two elements: PSTATUS and PTIME.
  PSTATUS is the boolean censoring indicator (True - the event happened,
  False - otherwise), PTIME is the number of days survived.
- This format of target value is required by all Scikit-survival estimators.
+ All Scikit-survival estimators require this format of the target value.
 \end_layout
 
 \begin_layout Standard
-The first step is to load the data into Pandas DataFrame from the parquet
- file.
- It is done by the Pandas method 
+The first step is to load the data from the parquet file into Pandas DataFrame.
+ It is done using the Pandas method 
 \emph on
 read_parquet(path, engine, columns)
 \emph default
@@ -8456,28 +8417,9 @@ Now, we need to filter out all records that might add noise to the data.
  Firstly, we remove patients who died of unrelated causes, such as accidents.
  Next, we filter out all recipients from the pediatric group, as the transplanta
 tion at that age differs significantly from that of adults.
- Then, we delete rows with all ”Unknown” categories.
- Finally, we will include only living or deceased patients, depending on
- the donor type we are training a model for.
+ Finally, depending on the donor type for which we are training a model,
+ we will include only living or deceased patients.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-We don't delete 
-\begin_inset Quotes sld
-\end_inset
-
-unknowns
-\begin_inset Quotes srd
-\end_inset
-
- as they may be inputted in the application
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -8499,11 +8441,11 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-At this point, data were pickled and downloaded, and the next step was carried
- out locally, as we faced issues while trying to install the latest versions
- of packages on the cluster.
- The latest versions are needed to ensure a seamless run of models and transform
-er pipelines in a production environment.
+At this point, data were pickled and downloaded, and the next steps were
+ carried out locally.
+ It is more comfortable to work locally and it is good to have a control
+ over the later stages of data processing in each iteration of training.
+ This helped to iterate faster and to get the results quicker.
 \end_layout
 
 \begin_layout Standard
@@ -8537,7 +8479,7 @@ Surv.from_arrays()
 \end_layout
 
 \begin_layout Standard
-And now we have the dataset to work with.
+At this point we have the dataset to work with.
 \end_layout
 
 \begin_layout Section
@@ -8545,75 +8487,13 @@ Exploratory Data Analysis
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Goals of this section:
-\end_layout
-
-\begin_layout Plain Layout
-- explore how different features influence survival
-\end_layout
-
-\begin_layout Plain Layout
-- look into the literature: what does it say
-\end_layout
-
-\begin_layout Plain Layout
-- explain why is this the case, speculate and link to the literature
-\end_layout
-
-\begin_layout Plain Layout
-- explain the dataset building
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In this section we are going to cover all the most signifficant features.
- The data were not adjusted to limit the influence of other factors, so
- the correlations we are trying to make here might not be fully correct,
- however some are confirmed in literature.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Feature distributions do on the training sets, survival curves on the whole
- dataset
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Transition from the subsub sections to unnumbered ones.
- remove 
-\begin_inset Quotes sld
-\end_inset
-
-in this section...
-\begin_inset Quotes srd
-\end_inset
-
- Make it shorter
-\end_layout
-
-\end_inset
-
-
+In this section, we will comprehensively cover the most significant features.
+ It is important to note that the data were not adjusted to limit the influence
+ of other factors.
+ As a result, the correlations we are attempting to make here may not be
+ entirely accurate; however, some have been confirmed in the existing literature.
+ The distributions of features are depicted based on the training sets,
+ and survival curves are analyzed using the entire dataset.
 \end_layout
 
 \begin_layout Subsection
@@ -8621,13 +8501,12 @@ General Data
 \end_layout
 
 \begin_layout Standard
-Here we will cover data for the whole DS with no division on living and
- deceased.
+Here, we will cover the whole dataset without division into living and deceased.
  We will see how some of these factors influence survival.
 \end_layout
 
 \begin_layout Standard
-In the Table 
+Table 
 \begin_inset ERT
 status open
 
@@ -8640,9 +8519,10 @@ ref{tab:feature_table}
 
 \end_inset
 
- you can see all features are used in this work
+ shows all the features used in this work.
+ 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 check if there are some new ones
@@ -8650,21 +8530,18 @@ check if there are some new ones
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-features used for each model can be found in feature importance of each
- model
-\end_layout
+ The features used in each model can be found in the feature importance
+ Figures of each model in Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Machine-Learning-Models"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -9056,7 +8933,7 @@ name "fig:bar_pstatus"
 \end_layout
 
 \begin_layout Standard
-Look at the figure 
+Look at Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:bar_pstatus"
@@ -9066,8 +8943,7 @@ noprefix "false"
 
 \end_inset
 
-, where you can see the pie chart of the distribution of the PSTATUS column
- values.
+, which shows a pie chart of the distribution of the PSTATUS column values.
  As can be seen, the percentage of censoring is 63%, which is pretty high.
 \end_layout
 
@@ -9082,34 +8958,17 @@ In this subsection, we will explore the influence of donor type (living
  living donors have higher life expectancy
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-29"
-literal "false"
-
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-30"
+key "key-16,key-17"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
  Let us confirm that on the data.
 \end_layout
 
 \begin_layout Standard
-Let us look at the Figure 
+Let us look at Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_donor_types"
@@ -9119,8 +8978,8 @@ noprefix "false"
 
 \end_inset
 
-, where are plotted two Kaplan-Meier survival curves for all patients from
- the dataset.
+, which plots two Kaplan-Meier survival curves for all patients from the
+ dataset.
  On the graph, we can see that the survival probability of the living donor
  transplant is indeed significantly higher than the survival probability
  of the deceased.
@@ -9253,8 +9112,8 @@ Survival curves for dialysis and gender
 \end_layout
 
 \begin_layout Standard
-This is the case because often there is no time to make full, in-depth HLA
- screening, allowing for some HLA mismatches.
+This is the case because often, there is no time to make full, in-depth
+ HLA screening, allowing for some HLA mismatches.
  Additionally, deceased transplants may suffer from mild kidney damage due
  to the delay in transplantation.
  Living donor transplants are most often performed between blood relatives
@@ -9262,7 +9121,7 @@ This is the case because often there is no time to make full, in-depth HLA
 \end_layout
 
 \begin_layout Standard
-Please, take a look at Figure 
+Please take a look at Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pie-Don-Ty"
@@ -9273,15 +9132,15 @@ noprefix "false"
 \end_inset
 
 .
- There you can see the distribution of donor types.
- As can be seen, the deceased donor transplantation is much more prevalent.
+ There, the distribution of donor types is shown.
+ Deceased donor transplantation is much more prevalent.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9325,8 +9184,8 @@ noprefix "false"
 
 \end_inset
 
- you can see the number of deceased/living transplantations by year.
- Even though the number of living transplantations grows each year, deceased
+, you can see the number of deceased/living transplantations by year.
+ Although the number of living transplantations grows each year, deceased
  transplantations still prevail.
 \end_layout
 
@@ -9349,12 +9208,13 @@ noprefix "false"
 \end_inset
 
 .
- As you can see, there are more males than females.
+ As can be seen, there are more males than females.
  Even though chronic kidney disease is more common in women, end-stage kidney
- failure and, therefore, kidney transplantation is more common in men
+ disease and, therefore, the need for kidney transplants is more common
+ in men
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-32"
+key "key-14"
 literal "false"
 
 \end_inset
@@ -9486,7 +9346,7 @@ Pie charts for donor type and gender
 
 \begin_layout Standard
 Let us take a look at gender's influence on survival.
- In Figure 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_sex"
@@ -9496,50 +9356,31 @@ noprefix "false"
 
 \end_inset
 
-, we can see the Kaplan-Meier survival curves for men and women on the whole
+ illustrates the Kaplan-Meier survival curves for men and women on the whole
  dataset.
  As can be seen from the graph, females generally have a lower risk than
  their male counterparts.
  Women usually live longer 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-62"
+key "key-14"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
  Quite a significant factor is the difference between male and female immune
- responses - males have a greater risk of getting an infection than females,
+ responses – males have a greater risk of getting an infection than females,
  and the intensity of the infection is higher 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-63"
+key "key-15"
 literal "false"
 
 \end_inset
 
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
 .
- Furthermore, the influence of immunosuppressants makes the problem of infection
+ Furthermore, the influence of immunosuppressants makes the risk of infection
  even worse.
 \end_layout
 
@@ -9549,7 +9390,7 @@ The Use of Dialysis
 
 \begin_layout Standard
 In this subsection, we will explore the influence of dialysis on survival.
- In the Figure 
+ In Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_dialysis"
@@ -9559,67 +9400,19 @@ noprefix "false"
 
 \end_inset
 
- we can see two survival curves for the patients who were on dialysis and
+, we can see two survival curves for the patients who were on dialysis and
  who were not.
  As can be seen, the patients who were on dialysis before the transplantation
  have a greater risk than those who were not.
  It agrees with 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-33"
+key "key-20,key-48-aufhauser"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Maybe add some more discussion
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Aufhauser, D.
- D., Peng, A.
- W., Murken, D.
- R., Concors, S.
- J., Abt, P.
- L., Sawinski, D., Bloom, R.
- D., Reese, P.
- P., & Levine, M.
- H.
- (2018).
- Impact of prolonged dialysis prior to renal transplantation.
- Clinical Transplantation, 32(6).
- https://doi.org/10.1111/ctr.13260
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection*
@@ -9628,7 +9421,7 @@ Ethnicity
 
 \begin_layout Standard
 This subsection explores the survival curves of different ethnic groups.
- In Figure 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_race"
@@ -9638,30 +9431,20 @@ noprefix "false"
 
 \end_inset
 
- are plotted seven survival curves for various ethnicities.
+ plots seven survival curves for various ethnicities are plotted.
  As can be seen in the image, five ethnicities share about the same survival
  probability, while two groups differ substantially from each other.
- White Americans had a higher survival probability than other ethnical groups,
- later converging to the others.
- It corresponds to (
+ White Americans had a higher survival probability than other ethnic groups,
+ later converging with the others.
+ This corresponds to 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-31"
+key "key-19"
 literal "false"
 
 \end_inset
 
-) 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DR
-\end_layout
-
-\end_inset
-
-examining graft survival.
+ examining graft survival.
  
 \begin_inset Note Note
 status collapsed
@@ -9680,18 +9463,13 @@ the distributions of ethnicity will be covered in the following sections
 The lowest survival probability was in the multiracial group.
  Their number, however, was also the lowest - only 1849 instances, so it
  is not enough to make any conclusions.
- This group might be removed as there are very little instances.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9834,7 +9612,7 @@ ref{tab:desc_deceased}
 
 \end_inset
 
- you will find the numerical value statistics for the deceased subset, which
+, we can see the numerical value statistics for the deceased subset, which
  includes a total of 117568 records.
  
 \end_layout
@@ -10017,7 +9795,7 @@ ref{tab:yn_deceased}
  on dialysis, did not receive blood transfusions, and did not have diabetes.
  The fact that the majority of recipients from the deceased donor subset
  were on dialysis may be attributed to the fact that the suitable living
- donor was not found in time and the deceased donor's kidney was received
+ donor was not found in time, and the deceased donor's kidney was received
  more or less as a last resort.
  
 \end_layout
@@ -10149,9 +9927,9 @@ noprefix "false"
 
  shows the ethnicity distribution of individuals who received a kidney from
  a deceased donor.
- It is worth noting that Black recipients make up 31.1% of the total, despite
+ It is worth noting that Black recipients make up 31.1% of the total despite
  constituting only 12% of the US population.
- White recipients account for 46.7% of the total, despite representing 60%
+ White recipients account for 46.7% of the total despite representing 60%
  of the US population.
  Hispanic/Latino recipients represent 14.8% of the total, while 18.5% of the
  overall US population.
@@ -10222,7 +10000,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -10265,7 +10043,7 @@ Living Group
 \end_layout
 
 \begin_layout Standard
-In Table 
+Table 
 \begin_inset ERT
 status open
 
@@ -10278,7 +10056,7 @@ ref{tab:desc_living}
 
 \end_inset
 
- you can see the basic statistics for the numerical values for the living
+ illustrates the basic statistics for the numerical values for the living
  subset that contains 52420 records.
  
 \end_layout
@@ -10670,11 +10448,11 @@ ref{tab:yn_living}
 
  provides information on the distribution of two Yes/No categories in the
  living donor subset, namely ON_DYALISIS and PRE_TX_TXFUS.
- The distribution of the ON_DYALISIS feature differs from the deceased donor
- subset.
- Here, ”Yes” and ”No” are much closer to each other.
+ The distribution of the ON_DYALISIS feature differs from that of the deceased
+ donor subset.
+ Here, the distributions of ”Yes” and ”No” are much closer to each other.
  This can be attributed to the fact that chronic kidney disease was caught
- in time and the appropriate living donor was found before the use of dialysis
+ in time, and the appropriate living donor was found before the use of dialysis
  was needed.
  Furthermore, the data indicate that the receivers of blood transfusions
  (PRE_TX_FUS) are in the minority.
@@ -11004,7 +10782,7 @@ noprefix "false"
 \end_inset
 
  shows the distribution of the living donor type feature that describes
- the biological/social relationship of a recipient to a donor.
+ a recipient's biological/social relationship to a donor.
  
 \end_layout
 
@@ -11059,10 +10837,12 @@ Exclusion Criteria
 \end_layout
 
 \begin_layout Standard
-To ensure accuracy, certain exclusion criteria were applied to the datasets.
- Individuals who were under the age of 18 or those who were deceased from
- unrelated causes were removed.
- While censoring may have been an option, this was deemed unnecessary.
+Certain exclusion criteria were applied to the datasets to ensure better
+ performance.
+ Individuals under the age of 18 or those deceased from unrelated causes
+ were removed.
+ While censoring such deceased patients may have been an option, this was
+ deemed unnecessary.
  Additionally, records with categorical values such as "Unknown" or "Not
  Done" were removed as they added noise to the models and hindered performance.
  However, these values were still used for training deployment models, as
@@ -11076,8 +10856,8 @@ Handling of missing values
 \begin_layout Standard
 When handling missing values, it was decided to remove entire rows rather
  than use mean imputation, which introduced bias to the model.
- Fortunately, due to the abundance of avalable data, this approach did not
- negatively impact the results.
+ Fortunately, due to the abundance of available data, this approach did
+ not negatively impact the results.
 \end_layout
 
 \begin_layout Section
@@ -11097,31 +10877,28 @@ literal "false"
 .
  However, these features had an adverse effect on performance, leading us
  to exclude them.
- The engineered feature that actually improved the performance is the number
+ The engineered feature that actually improved performance was the number
  of days the patient was on dialysis (DIALYSIS_TIME).
  The inspiration was drawn from 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-48-aufhauser"
+key "key-48-aufhauser,key-61"
 literal "false"
 
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-and EPTS score formula
 \end_layout
+
+\begin_layout Chapter
+Machine Learning Models 
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Machine-Learning-Models"
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Chapter
-Machine Learning Model
 \end_layout
 
 \begin_layout Section
@@ -11173,8 +10950,9 @@ and significantly reduce the dataset
  the dataset and introduce significant bias, as the dataset would contain
  only deceased patients, and most of them passed away before the introduction
  of modern techniques for treating rejection.
- As a result, the model created from such a dataset would be highly inaccurate.
- 
+ Additionally, the more recent transplants are all unsuccessful, that would
+ contribute to the bias.
+ As a result, the model trained on such a dataset would be highly inaccurate.
 \end_layout
 
 \begin_layout Standard
@@ -11202,7 +10980,6 @@ literal "false"
 
 \end_inset
 
-.
  did.
  Again, we would face the problems of censoring and bias mentioned above,
  so classification is not the best option.
@@ -11214,31 +10991,12 @@ A more appropriate way of problem formulation is survival analysis.
  Survival analysis methods handle censoring and provide a better form of
  prediction: the survival function or hazard function, which represents
  survival probability or the failure rate at each moment in time, respectively.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-vic to rozvest
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-This is superior, because the predicted values - survival/hazard function
- - are inherently uncertain.
- And thinking in terms of probability is better 
-\end_layout
-
-\end_inset
-
-
+ This formulation is superior to others because it acknowledges the inherent
+ uncertainty in predicting life expectancy.
+ Instead of providing overly specific predictions, survival analysis allows
+ for a probabilistic approach that accommodates natural variability.
+ By focusing on survival probability or hazard, we can make more meaningful
+ and realistic predictions.
 \end_layout
 
 \begin_layout Section
@@ -11324,14 +11082,15 @@ literal "false"
 \begin_layout Standard
 However, we encountered some challenges due to the relatively large dataset,
  even after all exclusion criteria and the removal of NaN values.
- RSF and GBSA demonstrated a long training time and high computational demands.
+ RSF and GBSA demonstrated a long training time, and RSF demonstrated high
+ computational demands.
  The latter resulted in frequent kernel crashes in our Jupyter notebooks
  after long hours of training.
  To mitigate these issues, we divided our dataset based on living and deceased
  donors and reduced the number of features used.
  These subsets are later referred to by the name of the type of transplantation,
  namely the deceased donor transplantation (DDT) and the living donor transplant
-ation(LDT).
+ation (LDT).
  The models were trained for each subset separately.
  To reduce the number of features, we trained models on smaller subsets
  of data and removed ones that showed negative or zero feature importance.
@@ -11885,7 +11644,7 @@ name "tab:deceased-comparison"
 \begin_layout Standard
 In LDT, Coxnet performs the best.
  Although it has the same discrimination ability (c-index and mean AUC)
- as RSF, its overall performance (IBS) is better.
+ as RSF, its overall performance (IBS) is superior to other models.
  For the DDT, the winner is GBSA: it slightly outperforms other models across
  all metrics.
 \end_layout
@@ -12214,7 +11973,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Please, look at Figure 
+Please look at Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:BS-deceased"
@@ -12224,8 +11983,8 @@ noprefix "false"
 
 \end_inset
 
-, where the Brier Score is plotted for the deceased models.
- Similarly to living, the performance of Coxnet and GBSA is identical, but
+, which plots the Brier Score for the deceased models.
+ Similarly to LDT, the performance of Coxnet and GBSA is identical, but
  RSF is slightly worse, although by a small margin.
  
 \end_layout
@@ -12241,24 +12000,18 @@ In conclusion, for the living, RSF shows slightly superior discrimination
  time.
  However, if training time is not a concern, GBSA may be preferred for the
  deceased cohort due to its slightly higher discriminative ability.
- 
+ Now, let us look at each of these models individually.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-let us look at each of those models individually
-\end_layout
+\begin_layout Subsection
+Coxnet 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Coxnet"
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Coxnet
 \end_layout
 
 \begin_layout Standard
@@ -12270,7 +12023,7 @@ Coxnet, also known as a Cox elastic net or Cox regularized regression, is
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12507,8 +12260,8 @@ and
 \end_inset
 
  ratio did not significantly impact the c-index, IBS, or mean AUC values.
- At both high (0.9) and low (<0.1) values of L1 ratio, those values were about
- the same.
+ At both high (0.9) and low (<0.1) values of the L1 ratio, those values were
+ about the same.
  However, a higher value of 
 \begin_inset Formula $L_{1}$
 \end_inset
@@ -12531,7 +12284,7 @@ To find the best
 \begin_inset Formula $\alpha$
 \end_inset
 
- we used the approach from the documentation 
+, we used the approach from the documentation 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-25"
@@ -12563,6 +12316,12 @@ noprefix "false"
  or RandomizedSearch.
  As there are few alphas, we used GridSearchCV from scikit-learn to find
  the best one.
+ The best 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ for the DDT was 0.000772369005962216, while 0.00021510636871239242 was the
+ best for LDT.
 \end_layout
 
 \begin_layout Paragraph
@@ -12609,7 +12368,7 @@ noprefix "false"
 
 \end_inset
 
-.
+ (negative values also indicate non-negative importance).
 \end_layout
 
 \begin_layout Standard
@@ -12630,7 +12389,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Feature Coeficient Importance for Coxnet Living
+Feature Coefficient Importance for Coxnet Living
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:FI-forCoxnet-Living"
@@ -12699,20 +12458,6 @@ name "fig:FI-for-Coxnet-Deceased"
 \begin_layout Standard
 As we can see, the most predictive features are the patient’s diabetes status,
  age, ethnicity, hepatitis C status, and dialysis.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-don';t forget to tell that the coeficient might have a negative value and
- it still means that the feature is important, unlike the permutation importance.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -13364,7 +13109,7 @@ ting the model's accuracy well at that point of training.
 \end_layout
 
 \begin_layout Standard
-In Table 
+Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:SGBA-result"
@@ -13374,8 +13119,7 @@ noprefix "false"
 
 \end_inset
 
-, we can see the performance of two GBSA models for living and deceased
- subsets.
+ shows the performance of two GBSA models for living and deceased subsets.
  As with the two previous models, the living model performs better than
  the deceased model.
  It is the best for the deceased with c_index 0.699 and IBS 0.162.
@@ -13593,15 +13337,16 @@ We used three primary hyperparameters: the number of estimators, learning
  a widely used approach for GB algorithms.
  The monitor analyzes the average improvement of the last 25 iterations
  and stops training if negative for the last 50.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add ref to docs
-\end_layout
+ The monitor implementation and further explanation can be found in the
+ documentation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-11"
+literal "false"
 
 \end_inset
 
+.
  The optimal number of estimators for the deceased was 110 (trained 160),
  and for the living, it was 94 (trained 144).
  Figures 
@@ -14149,8 +13894,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Mark et.
- al.
+Mark et al.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14170,7 +13914,7 @@ literal "false"
 
 \end_inset
 
- aachieved c index of 0.65, 0.661, and 0.659 for the neural network–based models
+ achieved c index of 0.65, 0.661, and 0.659 for the neural network–based models
  (DeepSurv, DeepHit, and RNN, respectively) on the SRTR dataset.
  Senanayake et al.
  
@@ -14215,6 +13959,24 @@ While the importance of individual features varied between models, some
  enough.
 \end_layout
 
+\begin_layout Standard
+We tried to design and implement a scoring algorithm focused on the life
+ expectancy.
+ However the assumption of a high correlation between the predicted hazard
+ and the days survived was wrong, which did not allow us to go any further.
+ However, there are working algorithms, such as the Estimated Post-Transplant
+ Survival Score (EPTS) score 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-60"
+literal "false"
+
+\end_inset
+
+, which is used in the US kidney allocation system and bases its formula
+ on the SA model prediction and several features.
+\end_layout
+
 \begin_layout Paragraph
 Limitations and Further Work
 \end_layout
@@ -14242,7 +14004,7 @@ literal "false"
 \end_inset
 
 , which trained model with the post-transplant 3-month serum creatinine,
- but with more features.
+ but we advise using more features.
 \end_layout
 
 \begin_layout Standard
@@ -14255,16 +14017,6 @@ n type, which means that models fitted data reasonably well, and the performance
  both recipient and donor and see how it influences performance.
  This feature can be more informative than all those features combined and
  can have less noise.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-try to do it
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -14291,22 +14043,10 @@ Initially, we considered training a survival neural network.
  complex data, such as images or text.
  Our dataset is relatively simple, consisting of tabular data with no more
  than 40 features after one-hot preprocessing.
- Therefore, we believe that algorithms we use should be at least as effective.
+ Therefore, we believe that the algorithms we use should be at least as
+ effective.
  However, training a neural network may still be a viable option for those
  willing to invest the time necessary to potentially achieve better performance.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-reducing the dimensionality with the diminished intrepretability.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Chapter
@@ -14314,8 +14054,7 @@ Applications
 \end_layout
 
 \begin_layout Standard
-The focus of this chapter is the software used in the realm of kidney transplant
-ation.
+This chapter focuses on the software used in kidney transplantation.
  We will start by exploring k
 \emph on
 idney pair donation
@@ -14333,7 +14072,17 @@ Existing Solutions
 \begin_layout Standard
 To the best of our knowledge, there is no survival estimation software for
  kidney transplantation as of yet.
- So let us review other adjacent solutions: kidney pair matching software.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+REMOVE OR REWRITE THE SENTENCE
+\end_layout
+
+\end_inset
+
+So, let us review other adjacent solutions: kidney pair matching software.
  We will review three options: TX Matching, KidneyMatch, and KPDGUI.
  It is worth noting that there is limited information available online about
  alternatives.
@@ -14553,8 +14302,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Another thing that such software does is it performs so-called virtual cross-mat
-ch.
+Such software also performs so-called virtual cross-match.
  It is a digital simulation of a test that predicts hyperacute rejection
  (briefly explained in 
 \begin_inset CommandInset ref
@@ -16168,6 +15916,13 @@ It is worth noting that the data have the assumption of well-matched pairs,
  
 \end_layout
 
+\begin_layout Standard
+Gradient Boosted Models — scikit-survival 0.22.2.
+ (2015).
+ Readthedocs.io.
+ https://scikit-survival.readthedocs.io/en/stable/user_guide/boosting.html
+\end_layout
+
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
@@ -16329,9 +16084,10 @@ literal "false"
 
 \end_inset
 
-Makary M A, Daniel M.
- Medical error—the third leading cause of death in the US BMJ 2016; 353
- :i2139 doi:10.1136/bmj.i2139
+Gradient Boosted Models — scikit-survival 0.22.2.
+ (2015).
+ Readthedocs.io.
+ https://scikit-survival.readthedocs.io/en/stable/user_guide/boosting.html
 \end_layout
 
 \begin_layout Bibliography
