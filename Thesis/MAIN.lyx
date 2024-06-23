@@ -731,11 +731,7 @@ Abstrakt:
  Existuje však nedostatek nástrojů, které by dokázaly přesně předpovědět
  dlouhodobé výsledky po transplantaci.
  Tato práce se pokouší tuto mezeru překlenout.
- Na souboru dat UNOS jsme vycvičili několik modelů analýzy přežití pro transplan
-tace od žijících a zemřelých dárců.
- Modely vykazují robustní výkonnost.
- S využitím těchto modelů jsme vyvinuli aplikaci, která může pomoct lékařům
- při rozhodování.
+ .
 \begin_inset Note Note
 status open
 
@@ -766,9 +762,19 @@ udelej to poradne
 \lang czech
 Klíčová slova:
 \emph default
- Analýza přežití, Předpověď přežití, Regularizovaný Cox, Random Survival
- Forest, Strojové učení, Transplantace ledviny, Transplantace od žijícího
- dárce, Transplantace od zemřelého dárce, UNOS
+ Analýza přežití, 
+\lang american
+Gradient Boosting Survival Analysis
+\lang czech
+, 
+\lang american
+Inference strojového učení,
+\lang czech
+ Předpověď přežití, Random Survival Forests, Regularizovaná Coxová regrese,
+ Strojové učení, Transplantace ledviny, Transplantace od žijícího dárce,
+ Transplantace od zemřelého dárce, 
+\lang american
+United Network for Organ Sharing (UNOS), Umělá Inteligence
 \end_layout
 
 \begin_layout Standard
@@ -846,17 +852,17 @@ Abstract:
  compared to dialysis.
  Prior to transplantation, donor-recipient compatibility is maximized in
  hopes of better outcomes.
- However, there is a scarcity of tools capable of accurately predicting
+ However, the estimation of long-term survival is still a challenge.
+ Additionally, there is a scarcity of tools capable of accurately predicting
  long-term post-transplant outcomes.
  This thesis attempts to bridge this gap.
- We trained several survival analysis models for living donor and deceased
- donor transplantations on UNOS dataset.
- Models exhibit a robust performance.
- Leveraging these models, we developed an application to aid clinicians
+ Several machine learning models were trained for living donor and deceased
+ donor transplantations on the UNOS dataset to estimate long-term survival
+ probability.
+ Leveraging these models, an application was developed to aid clinicians
  in decision-making.
- 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 It is organized in a similar way as the paper, i.e.
@@ -898,25 +904,16 @@ Useful hints for writing the abstract: - Do not exceed the word limit.
 \noindent
 
 \emph on
-Key words:
+Keywords:
 \emph default
- Deceased Donor Transplantation, Gradient Boosting Survival Analysis, Kidney
- Transplantation, Lifespan Prediction, Living Donor Transplantation, Machine
- Learning, Machine Learning Inference, Random Survival Forest, Regularized
- Cox, Survival Analysis, UNOS
+ Artificial Intelligence, Deceased Donor Transplantation, Gradient Boosting
+ Survival Analysis, Kidney Transplantation, Lifespan Prediction, Living
+ Donor Transplantation, Machine Learning, Machine Learning Inference, Random
+ Survival Forest, Regularized Cox regression, Survival Analysis, United
+ Network for Organ Sharing (UNOS)
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset Newpage newpage
 \end_inset
 
@@ -955,18 +952,8 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Chapter
+\begin_layout Chapter*
 Introduction
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-remove the number
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -978,6 +965,13 @@ status open
 
 \backslash
 pagestyle{headings}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Introduction}
 \end_layout
 
 \end_inset
@@ -1040,167 +1034,6 @@ maybe add more background info
 status open
 
 \begin_layout Plain Layout
-add references to the Chapters
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-co muzes rict high level o te praci.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Kidney transplantation (KT) is the gold standard treatment for kidney failure
- that provides an increased quality of life and a longer life expectancy
- compared to dialysis.
- Prior to transplantation, donor-recipient compatibility is maximized in
- hopes of better outcomes.
- However, there is a scarcity of tools capable of accurately forecasting
- long-term post-transplant outcomes.
- This thesis attempts to bridge this gap.
- In this thesis, we will train several machine learning models to predict
- the post-transplant outcomes in terms of survival function.
- Leveraging trained machine learning models, we aim to develop an application
- to aid clinicians in decision-making.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-to je abstract, ne!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-proc je to zajimavy
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In Chapter 2, we dive into the medical aspects of transplantation to better
- understand the domain.
- Specifically, we will review the characteristics of the kidney, common
- causes of kidney failure, clinical aspects of kidney transplantation, history
- of kidney transplantation, and immunology of kidney transplantation.
- We aim to provide a comprehensive description of the relevant medical concepts
- and principles related to kidney transplantation.
-\end_layout
-
-\begin_layout Standard
-In Chapter 3, we explore the fields of machine learning and survival analysis.
- We review the main branches of ML, supervised and unsupervised learning
- among them, and touch upon the most prevalent algorithms used in each.
- Additionally, we discuss approaches to data preparation, model training,
- and hyperparameter tuning in machine learning.
- Lastly, we provide a comprehensive overview of survival analysis, classic
- survival analysis methods, and machine-learning-based survival analysis
- techniques.
- 
-\end_layout
-
-\begin_layout Standard
-Chapter 4 is devoted to data.
- In this chapter, we intend to perform a comprehensive data analysis, including
- examining value distributions and the influence of various features on
- survival.
- In addition to that, we describe the process of data acquisition, data
- loading, and preprocessing pipeline, along with the feature engineering
- process.
- 
-\end_layout
-
-\begin_layout Standard
-Chapter 5 presents the results of our study.
- It includes the models trained for the deceased and living donor subgroups
- and their thorough evaluation.
- As part of this, models' performance metrics are examined and their evolution
- over time is analyzed.
- Moreover, feature importances are discussed to gain a better understanding
- of the factors that drive the models' predictions.
- Finally, models are compared based on their training experience and practicalit
-y.
- 
-\end_layout
-
-\begin_layout Standard
-In Chapter 6, we present KidneyLife, an inference application designed to
- facilitate the user-friendly
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-
- use of machine learning models for survival analysis.
- The application aims to aid physicians in the decision-making process by
- providing a comprehensive estimate of a kidney transplant recipient's life
- expectancy.
- Lastly, we explain its architecture and design considerations, and discuss
- existing software for KT.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-how to make the intro good.
- how to present the work in such a way to interest the reader?
-\end_layout
-
-\begin_layout Plain Layout
-- the problematics of kidney transplantation and the survival
-\end_layout
-
-\begin_layout Plain Layout
-- what we want to solve: the problem of unclear possible survival time of
- given recipient.
- and the absence of software for it.
-\end_layout
-
-\begin_layout Plain Layout
-- neco o machine learning.
- standartni uvod do field
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 what I did in the work:
 \end_layout
 
@@ -1226,7 +1059,7 @@ what I did in the work:
 \end_layout
 
 \begin_layout Plain Layout
-- something about the AI hype:
+- 
 \end_layout
 
 \begin_layout Plain Layout
@@ -1236,10 +1069,453 @@ what I did in the work:
 \end_inset
 
 
+\emph on
+Chronic kidney desease (CKD)
+\emph default
+ is a common desease with incidence of 8 to 16% of the population 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-35,key-66"
+literal "false"
+
+\end_inset
+
+, which often results in kidney failure.
+ 
+\emph on
+Kidney transplantation (KT)
+\emph default
+ is the best treatment for it.
+ However, there are not enough organs to meet the demand.
+ Every 10 minutes a new person is added to the transplant waiting list and
+ every day 17 people die waiting for the transplant 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-67"
+literal "false"
+
+\end_inset
+
+.
+ Given this shortage, it is paramount to maximize the longevity of a recipient.
+ While there are scoring techniques that take the estimated longevity into
+ consideration 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-60"
+literal "false"
+
+\end_inset
+
+, there is a scarcity of software dedicated solely to this problem.
+ Artificial intelligence and its subset, machine learning, increased in
+ popularity in recent years with its abillity to find patterns in large
+ amounts of data and solve practical problems, finding its uses in medicine.
+ Most prominent ones in genetic and molecular research leading to the discoverie
+s of new therapeutic targets 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-65"
+literal "false"
+
+\end_inset
+
+, that can be used for the development of novel treatments.
+ The objective of this thesis is to train predictive machine learning models
+ capable of accurately estimating patient's life expectancy and develop
+ a minimum viable product (MVP) of an application based on those models.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+mb remove the symptomps of CKD?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kidneys are vital organs that perform a multitude of functions from regulating
+ the fluid balance to aiding in red blood cell production.
+
+\series bold
+ 
+\series default
+However, due to widespread ilnesses such as diabetes and hypertension caused
+ by lifestyle choices kidneys gradually loose their function and might eventuall
+y fail.
+ This gradual decline is usually caught during routine health checks, but
+ in some cases patient starts to experience the first symptoms, such as
+ flank pain, 
+\begin_inset Quotes sld
+\end_inset
+
+foamy urine
+\begin_inset Quotes srd
+\end_inset
+
+, nocturia, and decreased urine output.
+ If CKD is more advanced, the patient might exhibit nausea, poor apetite,
+ fatigue, weight loss, shorness of breath, itching, or peripheral edema
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-66"
+literal "false"
+
+\end_inset
+
+.
+ If the kidneys failed and the suitable donor was not found the patient
+ is put on dialysis, a machine that mimicks the kidney function.
+ Dialysis severely limits the patient's mobility and life expectancy.
+ The latter is attributed to its inability to fully replicate the kidney
+ function.
+ Due to these two factors, the transplantation is preferrable.
+ Moreover, it should be performed as early as possible, as prolonged dialysis
+ has a tendency to negatively influence the results of the subsequent transplant
+ation.
+ There are two types of transplantation: living donor transplantation (LDT)
+ and the deceased donor transplantation (DDT).
+ LDT provides better results, but DDT is much more prevalent.
+ Prior to transplantation, donors and recipients are assessed on the compatibili
+ty.
+ Blood groups must be compatible and the recipient must not be immunologically
+ sensitized to the donor's human leukocyte antigens (HLA).
+ After the transplantation, the recipient must take multiple immunosuppressive
+ drugs and visit regular checkups to prevent rejection and other complications
+ caused by the treatment.
+\end_layout
+
+\begin_layout Standard
+Machine learning (ML) is a subset of artificial intelligence (AI) that is
+ known for its ability to process large amounts of data, finding complex
+ relationships and making predictions.
+ It has found a tremendous popularity in a wide range of fields and the
+ medicine is no exception.
+ Here it is used for the drug discovery, diagnostics, enhancing patient
+ care, and percenalized treatment.
+ We will utilize machine learning methods for survival analysis on UNOS
+ dataset to create several models to estimate the life expectancy after
+ a transplantation.
+ This might help clinicians to make more informed decisions about transplantatio
+n.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Motivation behind the paper
+\series default
+: We participated in the development of TX Matching, an open-source kidney
+ pair matching software, which estimates the optimal series of exchanges
+ between incompatible donor-recipient pairs.
+ And while developing it, we got interested with the results of transplants,
+ how many years after the transplant a person can live.
+ What happens after the transplantation.
+ What are the underlying medical pricinples that govern wheether the organ
+ will be accepted or rejected.
+ This thesis is a result of this interest and we hope that the reader will
+ share it with us.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Overview
+\series default
+: Now let us review the structure of this work.
+ In Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Medical-Background"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we explore the medical aspects of kidney transplantation.
+ Specifically, we review the organ characteristics, common causes of its
+ failure, clinical aspects of its transplantation, history of transplantation,
+ and the immunology of transplantation.
+ In Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Machine-Learning-Background"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we explore the fields of machine learning and survival analysis.
+ We review the main branches of ML and elaborate on the most prevalent technique
+s used in branch the most relevant to our task.
+ Additionally, we discuss approaches to data preparation, model training,
+ and hyperparameter tuning.
+ Lastly, we provide a comprehensive overview of survival analysis (SA),
+ its methods, and machine-learning-based survival analysis techniques.
+ Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Data-Preparation-and"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is devoted to data.
+ In this chapter, we perform a comprehensive analysis of the UNOS dataset,
+ including examining value distributions and the influence of various features
+ on survival.
+ In addition to that, we describe the process of data acquisition, data
+ loading, and preprocessing pipeline, along with the feature engineering
+ process.
+ Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Machine-Learning-Models"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents the results of our study.
+ It includes the thorough evaluation of models trained for the deceased
+ and living donor subgroups.
+ As part of this, models' performance metrics are examined and their changes
+ over time is analyzed.
+ Moreover, feature importances are discussed to gain a better understanding
+ of the factors that drive the models' predictions.
+ Models are compared based on the training experience, training time and
+ practicality.
+ Finally, the results are discussed and compared with the state-of-the-art.
+ In Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Applications"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we present KidneyLife, an inference application designed to use the trained
+ models.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The application aims to aid physicians in the decision-making process by
+ providing a comprehensive estimate of a kidney transplant recipient's life
+ expectancy.
+ 
+\end_layout
+
+\end_inset
+
+ Lastly, we explain its architecture and design considerations, and discuss
+ existing software for KT.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+- we didn't do deep survival learning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+intro paragraph
+\end_layout
+
+\begin_layout Plain Layout
+general -> specific
+\end_layout
+
+\begin_layout Plain Layout
+subtopics 
+\end_layout
+
+\begin_layout Plain Layout
+the first sentence must catch reader's attention and point to the direction
+ of the main subject.
+ might contain statistic or a quote
+\end_layout
+
+\begin_layout Plain Layout
+thesis statement is the last in the paragraph
+\end_layout
+
+\begin_layout Plain Layout
+4.
+ thesis statement should contain subtopics, which will be used as a paragraph
+ topics in the body.
+ order must be preserveed
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+1.
+ what 
+\end_layout
+
+\begin_layout Plain Layout
+2.
+ why
+\end_layout
+
+\begin_layout Plain Layout
+3.
+ the scope of the research
+\end_layout
+
+\begin_layout Plain Layout
+4.
+ limitations
+\end_layout
+
+\begin_layout Subsubsection*
+7 essentials
+\end_layout
+
+\begin_layout Plain Layout
+1.
+ opening section (1 paragraph)
+\end_layout
+
+\begin_layout Itemize
+introduce the field
+\end_layout
+
+\begin_layout Itemize
+introduce the research problem(gap)
+\end_layout
+
+\begin_layout Itemize
+state research aims
+\end_layout
+
+\begin_layout Itemize
+layout the intro chapter structure
+\end_layout
+
+\begin_layout Plain Layout
+2.
+ study background
+\end_layout
+
+\begin_layout Itemize
+relevatnt bg info to give a decent foundational understanding of the topic
+\end_layout
+
+\begin_layout Plain Layout
+3.
+ research gap
+\end_layout
+
+\begin_layout Itemize
+narrow the focus to the problem
+\end_layout
+
+\begin_layout Itemize
+what exactly is missing in literature and why is that a problem
+\end_layout
+
+\begin_layout Itemize
+what is already known, what is missing, why is it a problem
+\end_layout
+
+\begin_layout Plain Layout
+4.
+ aims, objectives and questions
+\end_layout
+
+\begin_layout Itemize
+clearly state the research aim
+\end_layout
+
+\begin_layout Itemize
+aim(high-level what) objectives are somthing specific
+\end_layout
+
+\begin_layout Itemize
+state the boundaries of the research, what you will and won't' do
+\end_layout
+
+\begin_layout Plain Layout
+5.
+ signifficance - value to the world
+\end_layout
+
+\begin_layout Itemize
+state how is the research might benefit to the world
+\end_layout
+
+\begin_layout Plain Layout
+6.
+ limitations
+\end_layout
+
+\begin_layout Itemize
+narrow scope, methodology, resource limitations, generalizability of the
+ findings, 
+\end_layout
+
+\begin_layout Plain Layout
+7.
+ structure
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
-Medical Background
+Medical Background 
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Medical-Background"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2857,6 +3133,20 @@ dexamethasone
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+maybe add a note about a rapamycin used in the life-extension and all that
+ things from Outlive by peter attia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Fungal metabolites, such as 
 \emph on
 Cyclosporine A (CsA)
@@ -3041,6 +3331,13 @@ literal "false"
 
 \begin_layout Chapter
 Machine Learning Background
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Machine-Learning-Background"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5517,7 +5814,7 @@ censoring
  approaches to survival data impractical 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-27"
+key "key-27-wang"
 literal "false"
 
 \end_inset
@@ -6355,7 +6652,7 @@ machine learning-based
  methods 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-23-wang"
 literal "false"
 
 \end_inset
@@ -6365,7 +6662,7 @@ literal "false"
  the estimated survival time 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-23-wang"
 literal "false"
 
 \end_inset
@@ -6377,7 +6674,7 @@ literal "false"
  Typically, statistical methods are employed for low-dimensional data 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-23-wang"
 literal "false"
 
 \end_inset
@@ -6393,7 +6690,7 @@ On the other hand, machine learning methods focus on predicting the occurrence
  Machine learning methods are mostly used with high-dimensional data 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-23-wang"
 literal "false"
 
 \end_inset
@@ -6412,7 +6709,7 @@ Statistical methods can be further subdivided based on their assumptions
  learning, and multitask learning, are also included 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-23-wang"
 literal "false"
 
 \end_inset
@@ -6457,7 +6754,7 @@ Non-parametric methods
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-23-wang"
 literal "false"
 
 \end_inset
@@ -6474,7 +6771,7 @@ literal "false"
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-23-wang"
 literal "false"
 
 \end_inset
@@ -6511,7 +6808,7 @@ noprefix "false"
  algorithm, and the Time-Dependent Cox model 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-23-wang"
 literal "false"
 
 \end_inset
@@ -6536,7 +6833,7 @@ Parametric methods
  The AFT model represents survival time as a function of covariates 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-23-wang"
 literal "false"
 
 \end_inset
@@ -6665,7 +6962,7 @@ product-limit method
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-23-wang"
 literal "false"
 
 \end_inset
@@ -7078,7 +7375,7 @@ LL(\beta)=-\sum_{j=1}^{N}\delta_{j}\{X_{j}\beta-log[\sum_{i\epsilon R_{j}}exp(X_
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-23"
+key "key-23-wang"
 literal "false"
 
 \end_inset
@@ -7112,7 +7409,7 @@ Penalized Cox Models
 According to 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-25-docs"
 literal "false"
 
 \end_inset
@@ -7149,7 +7446,7 @@ Ridge
 As 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-25-docs"
 literal "false"
 
 \end_inset
@@ -7214,7 +7511,7 @@ ridge regression.
  is set to zero, we get the regular Cox model 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-25-docs"
 literal "false"
 
 \end_inset
@@ -7311,7 +7608,7 @@ sksurv.linear_model.CoxnetSurvivalAnalysis
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-25-docs"
 literal "false"
 
 \end_inset
@@ -7405,7 +7702,7 @@ Similar to LASSO, the weight
  Its optimal value is typically estimated in a data-driven way 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-25-docs"
 literal "false"
 
 \end_inset
@@ -7458,7 +7755,7 @@ Random Survival Forest
  It is derived from the original Random Forest method developed by 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-28"
+key "key-28-breiman"
 literal "false"
 
 \end_inset
@@ -7490,7 +7787,7 @@ Survival Trees
  a given feature that maximizes the survival difference 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-27"
+key "key-27-wang"
 literal "false"
 
 \end_inset
@@ -7550,7 +7847,7 @@ For each tree, calculate the cumulative hazard function with the Nelson-Aalen
 Use OOB data to determine the prediction error of the ensemble 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-26"
+key "key-26-Ishwaran"
 literal "false"
 
 \end_inset
@@ -7610,7 +7907,7 @@ Calibration
  is the agreement between the observed and predicted survival times 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-21-rahman"
 literal "false"
 
 \end_inset
@@ -7625,7 +7922,7 @@ The absence of bias when the validation set contains censored instances
  would be unreasonably optimistic 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-21-rahman"
 literal "false"
 
 \end_inset
@@ -7673,7 +7970,7 @@ Measures of concordance
  discrimination 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-21-rahman"
 literal "false"
 
 \end_inset
@@ -7713,7 +8010,7 @@ C-index
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-21-rahman"
 literal "false"
 
 \end_inset
@@ -7779,7 +8076,7 @@ literal "false"
  and may provide more stable estimates 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-21-rahman"
 literal "false"
 
 \end_inset
@@ -7838,7 +8135,7 @@ where
 According to Scikit-survival's documentation 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-22-docs"
 literal "false"
 
 \end_inset
@@ -7847,7 +8144,7 @@ literal "false"
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-21-rahman"
 literal "false"
 
 \end_inset
@@ -7910,7 +8207,7 @@ area under the receiver operating characteristic curve
  can distinguish diseased patients from healthy ones 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-22-docs"
 literal "false"
 
 \end_inset
@@ -8023,7 +8320,7 @@ dynamic controls
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-22-docs"
 literal "false"
 
 \end_inset
@@ -8050,7 +8347,7 @@ Time-dependent ROC AUC and concordance index are great for assessing the
  tell us nothing about the accuracy of individual predictions 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-22-docs"
 literal "false"
 
 \end_inset
@@ -8118,7 +8415,7 @@ x
  is the inverse probability of censoring weight 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-22-docs"
 literal "false"
 
 \end_inset
@@ -8175,6 +8472,13 @@ s for predicting the time to an event.
 
 \begin_layout Chapter
 Data Preparation and Analysis
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Data-Preparation-and"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -11066,7 +11370,7 @@ literal "false"
  in the scikit survival documentation 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-25-docs"
 literal "false"
 
 \end_inset
@@ -12270,7 +12574,7 @@ and
 on of the scikit survival library 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-25-docs"
 literal "false"
 
 \end_inset
@@ -12287,7 +12591,7 @@ To find the best
 , we used the approach from the documentation 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-25"
+key "key-25-docs"
 literal "false"
 
 \end_inset
@@ -14051,6 +14355,13 @@ Initially, we considered training a survival neural network.
 
 \begin_layout Chapter
 Applications 
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Applications"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -16254,7 +16565,7 @@ Mange KC, Joffe MM, Feldman HI.
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-21"
+key "key-21-rahman"
 literal "false"
 
 \end_inset
@@ -16271,7 +16582,7 @@ Rahman MS, Ambler G, Choodari-Oskooei B, Omar RZ.
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-22"
+key "key-22-docs"
 literal "false"
 
 \end_inset
@@ -16286,7 +16597,7 @@ er_guide/evaluating-survival-models.html
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-23"
+key "key-23-wang"
 literal "false"
 
 \end_inset
@@ -16314,7 +16625,7 @@ status open
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-24"
+key "key-24-docs"
 literal "false"
 
 \end_inset
@@ -16341,7 +16652,7 @@ https://web.stanford.edu/~lutian/coursepdf/unit1.pdf
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-25"
+key "key-25-docs"
 literal "false"
 
 \end_inset
@@ -16366,7 +16677,7 @@ https://scikit-survival.readthedocs.io/en/stable/user_guide/coxnet.html
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-26"
+key "key-26-Ishwaran"
 literal "false"
 
 \end_inset
@@ -16392,7 +16703,7 @@ these 3 citations cause the glyph problem 26,27,28
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-27"
+key "key-27-wang"
 literal "false"
 
 \end_inset
@@ -16406,7 +16717,7 @@ Wang, H., & Li, G.
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-28"
+key "key-28-breiman"
 literal "false"
 
 \end_inset
@@ -17019,6 +17330,64 @@ Mark E, Goldsman D, Gurbaxani B, Keskinocak P, Sokol J.
  2019 Jan 9;14(1):e0209068.
  doi: 10.1371/journal.pone.0209068.
  PMID: 30625130; PMCID: PMC6326487.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-65"
+literal "false"
+
+\end_inset
+
+Hamet, P., & Tremblay, J.
+ (2017).
+ Artificial intelligence in medicine.
+ Metabolism, Clinical and Experimental, 69, S36–S40.
+ https://doi.org/10.1016/j.metabol.2017.01.011
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-66"
+literal "false"
+
+\end_inset
+
+‌Chen, T.
+ K., Knicely, D.
+ H., & Grams, M.
+ E.
+ (2019).
+ Chronic Kidney Disease Diagnosis and Management.
+ JAMA, 322(13), 1294–1294.
+ https://doi.org/10.1001/jama.2019.14745
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-67"
+literal "false"
+
+\end_inset
+
+‌Organ Donation Statistics | organdonor.gov.
+ (2024, March 29).
+ Organdonor.gov.
+ https://www.organdonor.gov/learn/organ-donation-statistics
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-68"
+literal "false"
+
+\end_inset
+
+‌
 \end_layout
 
 \begin_layout Standard
