@@ -503,7 +503,8 @@ I am grateful to Ing.
  Pavel Strachota for his invaluable support and insightful feedback throughout
  this project.
  I would also like to extend my sincerest appreciation to PaedDr Eliška
- Rafajová for her language assistance.
+ Rafajová and Bc.
+ Nathaniel Tobias Patton for their language assistance.
 \end_layout
 
 \begin_layout Standard
@@ -573,16 +574,6 @@ Kyrylo Stadniuk
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset Newpage newpage
 \end_inset
 
@@ -602,7 +593,7 @@ Název práce:
 \align block
 
 \series bold
-\size huge
+\size larger
 \lang czech
 Odhad délky života pacienta po úspěšné transplantaci ledviny pomocí metod
  strojového učení
@@ -682,7 +673,7 @@ Druh práce:
 Vedoucí práce:
 \emph default
  Ing.
- Tomás Kourim Mild Blue, s.r.o., Plzenská 27, Praha 5
+ Tomáš Kouřim Mild Blue, s.r.o., Plzeňská 168/27, Praha 5
 \end_layout
 
 \begin_layout Standard
@@ -800,22 +791,9 @@ Title:
 \align block
 
 \series bold
-\size huge
+\size larger
 Estimating patient's life expectancy after a successful kidney transplant
  using machine learning methods
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\size huge
-nerozdelovat ty slova v titulu
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -851,9 +829,9 @@ Abstract:
  that provides an increased quality of life and a longer life expectancy
  compared to dialysis.
  Prior to transplantation, donor-recipient compatibility is maximized in
- hopes of better outcomes.
- However, the estimation of long-term survival is still a challenge.
- Additionally, there is a scarcity of tools capable of accurately predicting
+ hopes of better outcomes, yet accurate long-term survival estimation remains
+ a challenge.
+ Moreover, there is a shortage of tools capable of accurately predicting
  long-term post-transplant outcomes.
  This thesis attempts to bridge this gap.
  Several machine learning models were trained for living donor and deceased
@@ -861,8 +839,12 @@ Abstract:
  probability.
  Leveraging these models, an application was developed to aid clinicians
  in decision-making.
+\end_layout
+
+\begin_layout Standard
+\noindent
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 It is organized in a similar way as the paper, i.e.
@@ -1070,9 +1052,10 @@ what I did in the work:
 
 
 \emph on
-Chronic kidney desease (CKD)
+Chronic kidney disease (CKD)
 \emph default
- is a common desease with incidence of 8 to 16% of the population 
+ is a common disease with an incidence of 8 to 16% of the population, often
+ leading to kidney failure 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-35,key-66"
@@ -1080,15 +1063,14 @@ literal "false"
 
 \end_inset
 
-, which often results in kidney failure.
+.
  
 \emph on
-Kidney transplantation (KT)
+Kidney transplantation
 \emph default
- is the best treatment for it.
- However, there are not enough organs to meet the demand.
- Every 10 minutes a new person is added to the transplant waiting list and
- every day 17 people die waiting for the transplant 
+ (KT) is the best treatment for it, but organs are scarce.
+ Every 10 minutes, a new patient joins the transplant waiting list, and
+ 17 people die each day while waiting 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-67"
@@ -1098,8 +1080,7 @@ literal "false"
 
 .
  Given this shortage, it is paramount to maximize the longevity of a recipient.
- While there are scoring techniques that take the estimated longevity into
- consideration 
+ Although some scoring techniques consider the estimated longevity 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-60"
@@ -1107,12 +1088,17 @@ literal "false"
 
 \end_inset
 
-, there is a scarcity of software dedicated solely to this problem.
- Artificial intelligence and its subset, machine learning, increased in
- popularity in recent years with its abillity to find patterns in large
- amounts of data and solve practical problems, finding its uses in medicine.
- Most prominent ones in genetic and molecular research leading to the discoverie
-s of new therapeutic targets 
+, there is a lack of software dedicated solely to this problem.
+ 
+\end_layout
+
+\begin_layout Standard
+Artificial intelligence (AI) and its subset, machine learning (ML), have
+ gained popularity with their ability to find patterns in large amounts
+ of data and solve practical problems, finding their uses in medicine.
+ The most prominent ones in genetic and molecular research have led to the
+ discovery of new therapeutic targets, enabling the development of novel
+ treatments 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-65"
@@ -1120,47 +1106,23 @@ literal "false"
 
 \end_inset
 
-, that can be used for the development of novel treatments.
- The objective of this thesis is to train predictive machine learning models
- capable of accurately estimating patient's life expectancy and develop
- a minimum viable product (MVP) of an application based on those models.
+.
+ This thesis aims to: 1) train predictive machine learning models capable
+ of accurately estimating patient life expectancy; 2) develop a minimum-viable-p
+roduct (MVP) application based on those models.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-mb remove the symptomps of CKD?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-Kidneys are vital organs that perform a multitude of functions from regulating
- the fluid balance to aiding in red blood cell production.
-
-\series bold
- 
-\series default
-However, due to widespread ilnesses such as diabetes and hypertension caused
- by lifestyle choices kidneys gradually loose their function and might eventuall
-y fail.
- This gradual decline is usually caught during routine health checks, but
- in some cases patient starts to experience the first symptoms, such as
- flank pain, 
-\begin_inset Quotes sld
-\end_inset
-
-foamy urine
-\begin_inset Quotes srd
-\end_inset
-
-, nocturia, and decreased urine output.
- If CKD is more advanced, the patient might exhibit nausea, poor apetite,
- fatigue, weight loss, shorness of breath, itching, or peripheral edema
- 
+Kidneys are vital organs with functions such as regulating fluid balance
+ and aiding red blood cell production.
+ Conditions like diabetes and hypertension, often linked to lifestyle choices,
+ can impair kidney function, leading to CKD.
+ Routine health checks usually identify this gradual decline, but in some
+ cases, the patient starts to experience the first symptoms, such as flank
+ pain, ”foamy urine”, nocturia, and decreased urine output.
+ With advanced CKD, the patient might exhibit nausea, poor appetite, fatigue,
+ weight loss, shortness of breath, itching, or peripheral edema 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-66"
@@ -1169,40 +1131,157 @@ literal "false"
 \end_inset
 
 .
- If the kidneys failed and the suitable donor was not found the patient
- is put on dialysis, a machine that mimicks the kidney function.
- Dialysis severely limits the patient's mobility and life expectancy.
- The latter is attributed to its inability to fully replicate the kidney
- function.
- Due to these two factors, the transplantation is preferrable.
- Moreover, it should be performed as early as possible, as prolonged dialysis
- has a tendency to negatively influence the results of the subsequent transplant
-ation.
- There are two types of transplantation: living donor transplantation (LDT)
- and the deceased donor transplantation (DDT).
- LDT provides better results, but DDT is much more prevalent.
- Prior to transplantation, donors and recipients are assessed on the compatibili
-ty.
- Blood groups must be compatible and the recipient must not be immunologically
- sensitized to the donor's human leukocyte antigens (HLA).
+ If kidneys fail and a suitable donor is not available, the patient must
+ undergo dialysis, a machine mimicking kidney function.
+ Dialysis severely limits patient mobility and life expectancy.
+ These factors make transplantation preferable.
+ Moreover, performing transplantation as early as possible is crucial, as
+ prolonged dialysis tends to adversely affect the subsequent transplantation. 
+\end_layout
+
+\begin_layout Standard
+There are two types of transplantation: living donor transplantation (LDT)
+ and deceased donor transplantation (DDT).
+ LDT provides superior results, but DDT is much more prevalent.
+ Prior to transplantation, donors and recipients undergo compatibility assessmen
+t.
+ Blood groups must be compatible, and the recipient immune system must not
+ be sensitized to the donor human leukocyte antigens (HLA), proteins on
+ cell surfaces crucial for immune system host recognition.
  After the transplantation, the recipient must take multiple immunosuppressive
  drugs and visit regular checkups to prevent rejection and other complications
  caused by the treatment.
 \end_layout
 
 \begin_layout Standard
-Machine learning (ML) is a subset of artificial intelligence (AI) that is
- known for its ability to process large amounts of data, finding complex
- relationships and making predictions.
- It has found a tremendous popularity in a wide range of fields and the
- medicine is no exception.
- Here it is used for the drug discovery, diagnostics, enhancing patient
- care, and percenalized treatment.
- We will utilize machine learning methods for survival analysis on UNOS
+Machine learning (ML) is a subset of artificial intelligence (AI) known
+ for its ability to process large amounts of data, find complex relationships,
+ and make predictions.
+ It has found tremendous popularity across numerous fields, including medicine.
+ Here, it is utilized for drug discovery, diagnostics, enhancing patient
+ care, and personalized treatment 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-65"
+literal "false"
+
+\end_inset
+
+.
+ We will utilize machine learning methods for survival analysis on the UNOS
  dataset to create several models to estimate the life expectancy after
- a transplantation.
- This might help clinicians to make more informed decisions about transplantatio
-n.
+ transplantation.
+ These models might help clinicians make more informed decisions about transplan
+tation.
+\end_layout
+
+\begin_layout Standard
+Now let us review the structure of this work.
+ In Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Medical-Background"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we explore the medical aspects of kidney transplantation.
+ Specifically, we review the organ characteristics, common causes of its
+ failure, clinical aspects of its transplantation, and the immunology of
+ transplantation.
+ Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Machine-Learning-Background"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ explores machine learning and survival analysis.
+ We review the main branches of ML and elaborate on the most prevalent technique
+s used in the branch most relevant to our task.
+ In addition to that, we discuss approaches to data preparation, model training,
+ and hyperparameter tuning.
+ Lastly, we provide a comprehensive overview of survival analysis (SA),
+ its methods, and machine-learning-based survival analysis techniques.
+ Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Data-Preparation-and"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is devoted to data.
+ In this chapter, we analyze the UNOS dataset, including examining value
+ distributions and the influence of various features on survival.
+ Moreover, we describe the data acquisition, data loading, and the preprocessing
+ pipeline, along with the feature engineering process. 
+\end_layout
+
+\begin_layout Standard
+Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Machine-Learning-Models"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents the results of our study and thoroughly evaluates trained models
+ for the deceased and living donor subgroups.
+ As part of this, we examine model performance metrics and analyze their
+ changes over time.
+ Furthermore, we analyze feature importance to understand the factors that
+ drive model predictions.
+ Models are compared based on training experience, training time, and practicali
+ty.
+ Finally, the results are discussed and compared with the state-of-the-art.
+ Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Applications"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ focuses on the software for KT.
+ We review existing software solutions and introduce KidneyLife, an inference
+ application based on the trained models.
+ The chapter delves into its architecture and design principles.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+- we didn't do deep survival learning
+\end_layout
+
+\begin_layout Plain Layout
+- only one dataset was used.
+ while the most extensive and diverse, still....
+\end_layout
+
+\begin_layout Plain Layout
+- models assume that the donor-recipient pair is well-matched, so they should
+ only be used for 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1232,125 +1311,8 @@ Motivation behind the paper
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Overview
-\series default
-: Now let us review the structure of this work.
- In Chapter 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Medical-Background"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, we explore the medical aspects of kidney transplantation.
- Specifically, we review the organ characteristics, common causes of its
- failure, clinical aspects of its transplantation, history of transplantation,
- and the immunology of transplantation.
- In Chapter 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Machine-Learning-Background"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, we explore the fields of machine learning and survival analysis.
- We review the main branches of ML and elaborate on the most prevalent technique
-s used in branch the most relevant to our task.
- Additionally, we discuss approaches to data preparation, model training,
- and hyperparameter tuning.
- Lastly, we provide a comprehensive overview of survival analysis (SA),
- its methods, and machine-learning-based survival analysis techniques.
- Chapter 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Data-Preparation-and"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- is devoted to data.
- In this chapter, we perform a comprehensive analysis of the UNOS dataset,
- including examining value distributions and the influence of various features
- on survival.
- In addition to that, we describe the process of data acquisition, data
- loading, and preprocessing pipeline, along with the feature engineering
- process.
- Chapter 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Machine-Learning-Models"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- presents the results of our study.
- It includes the thorough evaluation of models trained for the deceased
- and living donor subgroups.
- As part of this, models' performance metrics are examined and their changes
- over time is analyzed.
- Moreover, feature importances are discussed to gain a better understanding
- of the factors that drive the models' predictions.
- Models are compared based on the training experience, training time and
- practicality.
- Finally, the results are discussed and compared with the state-of-the-art.
- In Chapter 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Applications"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, we present KidneyLife, an inference application designed to use the trained
- models.
- 
 \begin_inset Note Note
 status collapsed
-
-\begin_layout Plain Layout
-The application aims to aid physicians in the decision-making process by
- providing a comprehensive estimate of a kidney transplant recipient's life
- expectancy.
- 
-\end_layout
-
-\end_inset
-
- Lastly, we explain its architecture and design considerations, and discuss
- existing software for KT.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- we didn't do deep survival learning
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
 
 \begin_layout Plain Layout
 intro paragraph
@@ -3138,7 +3100,7 @@ status open
 
 \begin_layout Plain Layout
 maybe add a note about a rapamycin used in the life-extension and all that
- things from Outlive by peter attia
+ things from Outlive by peter attia - NO:)
 \end_layout
 
 \end_inset
@@ -3303,6 +3265,16 @@ literal "false"
  to humans.
  Combined with recent advancements in stem cell production, this approach
  looks very promising.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+reference some paper that tells about making stem cells from fat
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -14154,20 +14126,6 @@ Discussion
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add a paragraph discussing the scoring.
- if it makes sense.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Our goal was to create a model that could estimate the life expectancy of
  transplant recipients for subsequent use in our application.
  We developed six models: three for living donor transplantation (LDT) and
@@ -14279,6 +14237,8 @@ literal "false"
 
 , which is used in the US kidney allocation system and bases its formula
  on the SA model prediction and several features.
+ The reason their scoring works might be that they add a lot of other factors
+ besides the model prediction to the formula.
 \end_layout
 
 \begin_layout Paragraph
@@ -14289,7 +14249,7 @@ Limitations and Further Work
 The inherent models' assumption is the compatibility of donor and recipient.
  Consequently, models should be used after the donor-recipient compatibility
  is confirmed.
- Otherwise, the predictions will be inaccurate.
+ Otherwise, the predictions might be inaccurate.
 \end_layout
 
 \begin_layout Standard
@@ -15042,6 +15002,8 @@ literal "false"
  applications.
  Each container within the Docker Compose application stack is called a
  service.
+ KidneyLife consists of three services: front end, back end, and the reverse
+ proxy.
 \end_layout
 
 \begin_layout Paragraph
@@ -15479,7 +15441,7 @@ Another feature worth implementing is an option of estimating the cumulative
 \end_layout
 
 \begin_layout Standard
-Furthermore, integrating the FHIR HL7 standard would enhance interoperability
+Furthermore, integrating the HL7 FHIR standard would enhance interoperability
  and data exchange between the application and the hospital's ecosystem.
  FHIR, which stands for 
 \emph on
@@ -15490,7 +15452,7 @@ Fast Healthcare Interoperability Resources
 Health Level Seven
 \emph default
  (HL7) standard for electronic healthcare data exchange.
- Although only a few hospital systems currently support FHIR HL7, its adoption
+ Although only a few hospital systems currently support HL7 FHIR, its adoption
  is viewed as the future of healthcare data exchange.
  
 \end_layout
@@ -15650,20 +15612,7 @@ The performance of the models was evaluated using the Uno concordance index
 \begin_layout Standard
 The DDT models achieved a c-index of 0.691 - 0.699 Uno c-index, while the
  LDT models achieved a 0.722-0.723.
- To the best of our knowledge, no other paper trained separate SA models
- for living donor and deceased donor transplantation.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-That is probably not true.
- 
-\end_layout
-
-\end_inset
-
-However, the results are comparable to other papers that trained models
+ However, the results are comparable to other papers that trained models
  without any separation.
  
 \end_layout
@@ -16057,11 +16006,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -16225,13 +16170,19 @@ It is worth noting that the data have the assumption of well-matched pairs,
  with KPD software and prior negative crossmatch results, otherwise, the
  results might be inaccurate.
  
-\end_layout
+\begin_inset Note Note
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gradient Boosted Models — scikit-survival 0.22.2.
  (2015).
  Readthedocs.io.
  https://scikit-survival.readthedocs.io/en/stable/user_guide/boosting.html
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
