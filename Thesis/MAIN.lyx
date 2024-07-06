@@ -502,8 +502,8 @@ I am grateful to Ing.
  Tomáš Kouřim for his expert guidance and to Dr.
  Pavel Strachota for his invaluable support and insightful feedback throughout
  this project.
- I would also like to extend my sincerest appreciation to PaedDr Eliška
- Rafajová and Bc.
+ I would also like to extend my sincerest appreciation to PaedDr.
+ Eliška Rafajová and Bc.
  Nathaniel Tobias Patton for their language assistance.
 \end_layout
 
@@ -973,19 +973,6 @@ pagestyle{headings}
 
 \backslash
 addcontentsline{toc}{chapter}{Introduction}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-this must be the most polished section of the thesis
 \end_layout
 
 \end_inset
@@ -1478,19 +1465,6 @@ pagestyle{headings}
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-to samy je napsany to oznaxeny.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Kidney — An Overview
 \end_layout
@@ -1667,20 +1641,6 @@ In conclusion, the kidneys play an essential role in maintaining overall
 
 \begin_layout Section
 Clinical Aspects of Kidney Transplantation 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-The citation at the end of a paragraph indicates that the whole paragraph
- has been taken from the source.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -8750,17 +8710,11 @@ In this section, we will comprehensively cover the most significant features.
  of other factors.
  As a result, the correlations we are attempting to make here may not be
  entirely accurate; however, some have been confirmed in the existing literature.
- The distributions of features are depicted based on the training sets,
- and survival curves are analyzed using the entire dataset.
+ All plots are based on the training dataset.
 \end_layout
 
 \begin_layout Subsection
 General Data
-\end_layout
-
-\begin_layout Standard
-Here, we will cover the whole dataset without division into living and deceased.
- We will see how some of these factors influence survival.
 \end_layout
 
 \begin_layout Standard
@@ -8777,7 +8731,8 @@ ref{tab:feature_table}
 
 \end_inset
 
- shows all the features used in this work.
+ lists the features used in this work along with their descriptions and
+ types.
  
 \begin_inset Note Note
 status collapsed
@@ -8788,8 +8743,8 @@ check if there are some new ones
 
 \end_inset
 
- The features used in each model can be found in the feature importance
- Figures of each model in Chapter 
+ The features used in each model differ from model to model and can be found
+ in the feature importance figures of each model in Chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Machine-Learning-Models"
@@ -8808,37 +8763,57 @@ status open
 
 \begin_layout Plain Layout
 
+
+\backslash
+label{tab:feature_table}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-begin{table} 
+begin{tabular}{lll}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
-centering 
-\backslash
-caption{Feature Table} 
-\backslash
-label{tab:feature_table} 
-\backslash
-begin{tabular}{lll} 
-\backslash
-toprule         Feature &                                        Description
- &         Type 
+toprule
+\end_layout
+
+\begin_layout Plain Layout
+
+        Feature &                                        Description & 
+        Type 
 \backslash
 
 \backslash
- 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
-midrule     ON
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+    ON
 \backslash
 _DIALYSIS &    The recipient's pre-transplant dialysis status.
  &  Categorical 
 \backslash
 
 \backslash
-    PRE
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   PRE
 \backslash
 _TX
 \backslash
@@ -8847,171 +8822,199 @@ _TXFUS &  The recipient's history of pre-transplant bloo...
 \backslash
 
 \backslash
-          GENDER &                                   Recipient gender &
-  Categorical 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+         GENDER &                                   Recipient gender & 
+ Categorical 
 \backslash
 
 \backslash
-          ETHCAT &                                Recipient ethnicity &
-  Categorical 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+         ETHCAT &                                Recipient ethnicity & 
+ Categorical 
 \backslash
 
 \backslash
-    DIABETES
-\backslash
-_DON &  The presence or absence of diabetes in the donor.
+
+\end_layout
+
+\begin_layout Plain Layout
+
+           DIAB &  Recipient diabetes status.
  &  Categorical 
 \backslash
 
 \backslash
-            DIAB &  The presence or absence of diabetes in the rec...
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ HCV
+\backslash
+_SEROSTATUS &  Recipient Hepatitis C status &  Categorical 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   DIABETES
+\backslash
+_DON &  Donor diabetes status.
  &  Categorical 
 \backslash
 
 \backslash
-  HCV
+
+\end_layout
+
+\begin_layout Plain Layout
+
+     ETHCAT
 \backslash
-_SEROSTATUS &  The presence or absence of Hepatitis C in the ...
+_DON &                                    Donor ethnicity.
  &  Categorical 
 \backslash
 
 \backslash
-    PRE
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        ABO
 \backslash
-_TX
-\backslash
-_TXFUS &  The recipient's history of pre-transplant bloo...
+_MAT &                   Donor recipient blood type match type.
  &  Categorical 
 \backslash
 
 \backslash
-          GENDER &                                   Recipient gender &
-  Categorical 
-\backslash
 
+\end_layout
+
+\begin_layout Plain Layout
+
+       HBV
 \backslash
-     ON
-\backslash
-_DIALYSIS &    The recipient's pre-transplant dialysis status.
+_CORE &  Recipient Hepatitis B status.
  &  Categorical 
 \backslash
 
 \backslash
-         ABO
-\backslash
-_MAT &                   Donor recipient blood type match &  Categorical
- 
-\backslash
 
-\backslash
-          ETHCAT &                                Recipient ethnicity &
-  Categorical 
-\backslash
+\end_layout
 
-\backslash
-      ETHCAT
-\backslash
-_DON &                                    Donor ethnicity &  Categorical
- 
-\backslash
+\begin_layout Plain Layout
 
-\backslash
-        HBV
-\backslash
-_CORE &  Whether or not the recipient has Hepatitis B.
- ...
- &  Categorical 
-\backslash
-
-\backslash
-            DIAB &  The presence or absence of diabetes in the rec...
- &  Categorical 
-\backslash
-
-\backslash
-  HCV
-\backslash
-_SEROSTATUS &  The presence or absence of Hepatitis C in the ...
- &  Categorical 
-\backslash
-
-\backslash
-      LIV
+     LIV
 \backslash
 _DON
 \backslash
-_TY &                                         Donor type &  Categorical
- 
+_TY &                                         Living donor type.
+ &  Categorical 
 \backslash
 
 \backslash
-             AGE &                        Recipient age at transplant &
-    Numerical 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            AGE &                        Recipient age at transplant.
+ &    Numerical 
 \backslash
 
 \backslash
-        BMI
+
+\end_layout
+
+\begin_layout Plain Layout
+
+       BMI
 \backslash
-_CALC &                        Recipient BMI at transplant &    Numerical
- 
+_CALC &                        Recipient BMI at transplant.
+ &    Numerical 
 \backslash
 
 \backslash
-         AGE
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        AGE
 \backslash
-_DON &                            Donor age at transplant &    Numerical
- 
+_DON &                            Donor age at transplant.
+ &    Numerical 
 \backslash
 
 \backslash
-       CREAT
+
+\end_layout
+
+\begin_layout Plain Layout
+
+      CREAT
 \backslash
-_TRR &                 Recipient creatinine at transplant &    Numerical
- 
+_TRR &                 Recipient serum creatinine at transplant.
+ &    Numerical 
 \backslash
 
 \backslash
-           NPKID &                     Number of previous transplants &
-    Numerical 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+          NPKID &                     Number of previous transplants.
+ &    Numerical 
 \backslash
 
 \backslash
-    COLD
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   COLD
 \backslash
 _ISCH
 \backslash
-_KI &  The duration kidneys are preserved at low temp...
+_KI &  The duration kidneys are preserved at low temperature.
  &    Numerical 
 \backslash
 
 \backslash
-  KI
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ KI
 \backslash
 _CREAT
 \backslash
-_PREOP &  Living donor preoperative serum creatinine (mg...
- &    Numerical 
-\backslash
-
-\backslash
-     SERUM
-\backslash
-_CREAT &          Recipient creatinine at discharge (mg/dL) &    Numerical
+_PREOP &  Living donor preoperative serum creatinine (mg/dL) &    Numerical
  
 \backslash
 
 \backslash
-           NPKID &                     Number of previous transplants &
-    Numerical 
-\backslash
 
-\backslash
-             AGE &                        Recipient age at transplant &
-    Numerical 
-\backslash
+\end_layout
 
-\backslash
-     HGT
+\begin_layout Plain Layout
+
+    HGT
 \backslash
 _CM
 \backslash
@@ -9020,7 +9023,12 @@ _CALC &                    Recipient height in centimeters &    Numerical
 \backslash
 
 \backslash
-    BMI
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   BMI
 \backslash
 _DON
 \backslash
@@ -9029,20 +9037,47 @@ _CALC &                                          Donor BMI &    Numerical
 \backslash
 
 \backslash
-         AGE
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	DIALYSIS
 \backslash
-_DON &                            Donor age at transplant &    Numerical
- 
+_TIME &  Days on dialysis.
+  & Numerical 
 \backslash
 
 \backslash
- 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    KDPI &  Kidney Donor Profile Index.
+ & Numerical 
 \backslash
-bottomrule 
+
 \backslash
-end{tabular} 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
-end{table}
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -9078,11 +9113,11 @@ survival data
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Images/EDA/Kaplan-Meier/PTIME_box.png
+	filename Images/EDA/survival-box.pdf
 	scale 60
 
 \end_inset
@@ -9091,7 +9126,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Box plot for the survival time
+Box Plots for the Survival Time for Deceased and Living Donor Groups
 \end_layout
 
 \end_inset
@@ -9116,7 +9151,7 @@ name "box_surv_time"
 \end_layout
 
 \begin_layout Standard
-Please look at Figure 
+Please refer to Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "box_surv_time"
@@ -9126,43 +9161,53 @@ noprefix "false"
 
 \end_inset
 
-, which shows the survival time box plot (PTIME column).
+, which shows the survival time box plot (PTIME column) for living and deceased
+ donor transplantations.
  The first quantile (
 \begin_inset Formula $Q_{1}$
 \end_inset
 
-) is equal to 867 days (2.4 years), the median is 2136 days (5.85 years),
- and the third quantile (
+) of the deceased donor subgroup is equal to 1770 days (4.85 years), the
+ median is 2926 days (8 years), and the third quantile (
 \begin_inset Formula $Q_{3}$
 \end_inset
 
-) is equal to 3828 days (10.5 years).
+) is equal to 3828 days (11.2 years).
  The interquartile range (
 \emph on
 IQR
 \emph default
-) is 2961 days, which forms the box.
- The left whisker extends from 0 days to the first quartile of 867 days.
- The right whisker is longer and extends from the third quartile to the
- 
-\begin_inset Formula $Q_{3}+1.5*IQR$
+) is 2058 days, which forms the box.
+ The whiskers extend from 0 days to 7397.3 (20.3 years) days.
+ Any value above 7397.3 is an outlier, as it is above the 99th percentile.
+ The statistics for the living are generally better: 
+\begin_inset Formula $Q_{1}$
 \end_inset
 
-, which in our case is 8269,5 days.
- Any value above 8269,5 can be considered an outlier.
+corresponds to 2287.75 days (6.3 years), the median is 3280 days (9 years),
+ and 
+\begin_inset Formula $Q_{3}$
+\end_inset
+
+is equal to 4426 days (12.1 years).
+ However, the 99th percentile is much closer to the value in the deceased
+ subgroup compared to the quantiles: 7623 days (20.9 years), which is only
+ 226 days of difference.
+ As can be seen the deceased donor subset has more outliers than the living
+ donor one.
+ This might be attributed to the larger number of instances.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/EDA/pie_PSTATUS.png
-	scale 60
+	filename Images/EDA/censoring-pie.pdf
 
 \end_inset
 
@@ -9170,7 +9215,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Pie chart of censored/non-censored values.
+Pie Charts of Censored/Non-censored Values for Deceased and Living Donor
+ Groups 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:bar_pstatus"
@@ -9201,8 +9247,43 @@ noprefix "false"
 
 \end_inset
 
-, which shows a pie chart of the distribution of the PSTATUS column values.
- As can be seen, the percentage of censoring is 63%, which is pretty high.
+, which shows pie charts of the PSTATUS column values for living and deceased
+ donor groups.
+ As can be seen, the percentage of censoring in deceased donor transplantation
+ subset is 51.6%, and in living donor transplantation 68.6%.
+ This difference might be attributed to the fact that the number of LDT
+ has started to grow only relatively recently (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Histogram-of-Deceased/Living"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and less recipients experiences the event, and that LDT tends to be slightly
+ more successful 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-16,key-17"
+literal "false"
+
+\end_inset
+
+, as also illustrated in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "box_surv_time"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Now, let us talk in more detail about the influence of the donor type on
+ survival.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -9223,10 +9304,7 @@ literal "false"
 
 .
  Let us confirm that on the data.
-\end_layout
-
-\begin_layout Standard
-Let us look at Figure 
+ Please refer to Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_donor_types"
@@ -9238,29 +9316,18 @@ noprefix "false"
 
 , which plots two Kaplan-Meier survival curves for all patients from the
  dataset.
- On the graph, we can see that the survival probability of the living donor
- transplant is indeed significantly higher than the survival probability
- of the deceased.
+ On the graph, we can see that the LDT survival probability is indeed higher
+ than the DDT survival probability.
+ This is the case because often, there is no time to make full, in-depth
+ HLA screening, allowing for some HLA mismatches.
+ Additionally, deceased transplants may suffer from mild kidney damage due
+ to the delay in transplantation.
+ Living donor transplants are most often performed between blood relatives
+ who share similar HLA, or there is more time to find a compatible not related
+ donor, resulting in better compatibility.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="1" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top" width="0pt">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -9269,8 +9336,8 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/EDA/Kaplan-Meier/Donor_type.png
-	scale 30
+	filename Images/EDA/donor-type-km.pdf
+	scale 85
 
 \end_inset
 
@@ -9278,7 +9345,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Kaplan-Meir survival curve donor types
+Kaplan-Meier Survival Curves for Donor Types
 \end_layout
 
 \end_inset
@@ -9298,12 +9365,7 @@ name "km_donor_types"
 
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -9312,8 +9374,8 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/EDA/Kaplan-Meier/Gender.png
-	scale 30
+	filename Images/EDA/gender-km.pdf
+	scale 85
 
 \end_inset
 
@@ -9321,7 +9383,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Kaplan-Meir survival curve for genders
+Kaplan-Meir Survival Curves for Genders
 \end_layout
 
 \end_inset
@@ -9341,43 +9403,6 @@ name "km_sex"
 
 \end_layout
 
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Survival curves for dialysis and gender 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This is the case because often, there is no time to make full, in-depth
- HLA screening, allowing for some HLA mismatches.
- Additionally, deceased transplants may suffer from mild kidney damage due
- to the delay in transplantation.
- Living donor transplants are most often performed between blood relatives
- who share similar HLA, resulting in better compatibility.
-\end_layout
-
 \begin_layout Standard
 Please take a look at Figure 
 \begin_inset CommandInset ref
@@ -9389,9 +9414,23 @@ noprefix "false"
 
 \end_inset
 
+, which illustrates the distribution of donor types in a pie chart.
+ As can be seen, deceased donor transplantation is much more prevalent.
+ Now let us look at the number of deceased/living donor transplants by year
+ on Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Histogram-of-Deceased/Living"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
 .
- There, the distribution of donor types is shown.
- Deceased donor transplantation is much more prevalent.
+ Although the number of living transplantations mostly grows each year,
+ deceased transplantations still prevail.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -9404,7 +9443,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename Images/EDA/donor_ty_by_year.png
-	scale 60
+	scale 45
 
 \end_inset
 
@@ -9418,7 +9457,7 @@ name "fig:Histogram-of-Deceased/Living"
 
 \end_inset
 
-Histogram of Deceased/Living Transplantations by Year
+Histogram of Deceased/Living Donor Transplantations by Year
 \end_layout
 
 \end_inset
@@ -9429,22 +9468,6 @@ Histogram of Deceased/Living Transplantations by Year
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-In Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Histogram-of-Deceased/Living"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, you can see the number of deceased/living transplantations by year.
- Although the number of living transplantations grows each year, deceased
- transplantations still prevail.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -9454,7 +9477,7 @@ Gender
 \begin_layout Standard
 In this subsection, we will explore the gender distribution in our dataset
  and its influence on survival.
- Let us explore the distribution of gender in our dataset.
+ Let us start with the distribution of gender in our dataset.
  Please look at Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -9469,7 +9492,7 @@ noprefix "false"
  As can be seen, there are more males than females.
  Even though chronic kidney disease is more common in women, end-stage kidney
  disease and, therefore, the need for kidney transplants is more common
- in men
+ in men 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-14"
@@ -9506,8 +9529,8 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/EDA/pie_don_ty.png
-	scale 55
+	filename Images/EDA/don-type-pie.pdf
+	scale 90
 
 \end_inset
 
@@ -9549,8 +9572,8 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/EDA/pie_gender.png
-	scale 55
+	filename Images/EDA/gender-pie.pdf
+	scale 90
 
 \end_inset
 
@@ -9589,7 +9612,7 @@ name "fig:pie_gender"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Pie charts for donor type and gender
+Pie Charts of Donor Type (Living/Deceased) and Gender
 \end_layout
 
 \end_inset
@@ -9603,7 +9626,7 @@ Pie charts for donor type and gender
 \end_layout
 
 \begin_layout Standard
-Let us take a look at gender's influence on survival.
+Now, let us take a look at gender's influence on survival.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -9673,74 +9696,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsubsection*
-Ethnicity
-\end_layout
-
 \begin_layout Standard
-This subsection explores the survival curves of different ethnic groups.
- Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "km_race"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- plots seven survival curves for various ethnicities are plotted.
- As can be seen in the image, five ethnicities share about the same survival
- probability, while two groups differ substantially from each other.
- White Americans had a higher survival probability than other ethnic groups,
- later converging with the others.
- This corresponds to 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-19"
-literal "false"
-
-\end_inset
-
- examining graft survival.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-the distributions of ethnicity will be covered in the following sections
- for each subset, as there are differences.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The lowest survival probability was in the multiracial group.
- Their number, however, was also the lowest - only 1849 instances, so it
- is not enough to make any conclusions.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="1" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top" width="0pt">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -9749,8 +9705,8 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/EDA/Kaplan-Meier/Dialysis.png
-	scale 30
+	filename Images/EDA/dialysis-km.pdf
+	scale 93
 
 \end_inset
 
@@ -9758,7 +9714,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Kaplan-Meir survival curve for using dialysis or not
+Kaplan-Meir Survival Curves for the Pre-transplant Usage of Dialysis or
+ not
 \end_layout
 
 \end_inset
@@ -9778,21 +9735,46 @@ name "km_dialysis"
 
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
+\begin_layout Subsubsection*
+Ethnicity
+\end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
+This subsection explores the survival curves of different ethnic groups.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "km_race"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ plots seven survival curves for various ethnicities are plotted.
+ As can be seen in the image, five ethnicities share about the same survival
+ probability, while three groups slightly differ from the rest other.
+ Multiracial has the best survival curve, yet later falls under the other
+ curves.
+ Native and Native Hawaiian have curves slightly below others.
+ For these three ethnicities, these survival curves are not enough to make
+ any conclusions, as these are also the least populated groups.
+ As for other ethnicities, they have mostly similar survival curves with
+ the exception of Asian group, which is slightly higher than the rest, yet
+ later converges with them.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename Images/EDA/Kaplan-Meier/Race.png
-	scale 30
+	filename Images/EDA/eth-km.pdf
+	scale 80
 
 \end_inset
 
@@ -9804,7 +9786,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Kaplan-Meir survival curve for ethnicities
+Kaplan-Meir Survival Curves for Ethnicities
 \end_layout
 
 \end_inset
@@ -9816,34 +9798,6 @@ name "km_race"
 
 \end_inset
 
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Survival Curves for dialysis and ethnicities
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -9877,7 +9831,7 @@ ref{tab:desc_deceased}
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -9945,8 +9899,7 @@ midrule
 
 \begin_layout Plain Layout
 
-    AGE           & 51.883259 & 13.112097 & 18.0 & 43.00 & 53.00 & 62.0 & 90.0
- 
+    AGE           & 51.88 & 13.11 & 18.0 & 43.00 & 53.00 & 62.0 & 90.0 
 \backslash
 
 \backslash
@@ -9957,7 +9910,7 @@ midrule
 
     BMI
 \backslash
-_CALC      & 27.770096 & 5.419293 & 15.0 & 23.80 & 27.30 & 31.3 & 72.2 
+_CALC      & 27.77 & 5.42 & 15.0 & 23.80 & 27.30 & 31.3 & 72.2 
 \backslash
 
 \backslash
@@ -9968,7 +9921,7 @@ _CALC      & 27.770096 & 5.419293 & 15.0 & 23.80 & 27.30 & 31.3 & 72.2
 
     AGE
 \backslash
-_DON       & 38.101618 & 16.595043 & 0.0 & 24.00 & 40.00 & 51.0 & 88.0 
+_DON       & 38.10 & 16.59 & 0.0 & 24.00 & 40.00 & 51.0 & 88.0 
 \backslash
 
 \backslash
@@ -9979,7 +9932,7 @@ _DON       & 38.101618 & 16.595043 & 0.0 & 24.00 & 40.00 & 51.0 & 88.0
 
     CREAT
 \backslash
-_TRR     & 8.251785 & 3.508183 & 0.1 & 5.70 & 7.82 & 10.3 & 28.2 
+_TRR     & 8.252 & 3.51 & 0.1 & 5.70 & 7.82 & 10.3 & 28.2 
 \backslash
 
 \backslash
@@ -9988,7 +9941,7 @@ _TRR     & 8.251785 & 3.508183 & 0.1 & 5.70 & 7.82 & 10.3 & 28.2
 
 \begin_layout Plain Layout
 
-    NPKID         & 0.122083 & 0.361227 & 0.0 & 0.00 & 0.00 & 0.0 & 5.0 
+    NPKID         & 0.12 & 0.36 & 0.0 & 0.00 & 0.00 & 0.0 & 5.0 
 \backslash
 
 \backslash
@@ -10001,7 +9954,7 @@ _TRR     & 8.251785 & 3.508183 & 0.1 & 5.70 & 7.82 & 10.3 & 28.2
 \backslash
 _ISCH
 \backslash
-_KI  & 18.016163 & 8.981343 & 0.0 & 11.87 & 17.00 & 23.0 & 99.0 
+_KI  & 18.02 & 8.98 & 0.0 & 11.87 & 17.00 & 23.0 & 99.0 
 \backslash
 
 \backslash
@@ -10060,7 +10013,7 @@ ref{tab:yn_deceased}
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -10106,7 +10059,7 @@ toprule
 
 \begin_layout Plain Layout
 
-    {} & Value & ON
+     Value & ON
 \backslash
 _DIALYSIS & PRE
 \backslash
@@ -10130,7 +10083,7 @@ midrule
 
 \begin_layout Plain Layout
 
-    N & No  & 25881 & 88215  & 109920 
+     No  & 25881 & 88215  & 109920 
 \backslash
 
 \backslash
@@ -10139,7 +10092,7 @@ midrule
 
 \begin_layout Plain Layout
 
-    Y & Yes & 91687 & 29353  & 7648   
+     Yes & 91687 & 29353  & 7648   
 \backslash
 
 \backslash
@@ -10185,30 +10138,38 @@ noprefix "false"
 
  shows the ethnicity distribution of individuals who received a kidney from
  a deceased donor.
- It is worth noting that Black recipients make up 31.1% of the total despite
- constituting only 12% of the US population.
- White recipients account for 46.7% of the total despite representing 60%
+ It is worth noting that Black recipients make up 31.1% despite constituting
+ only 12.6% of the US population.
+ White recipients account for 46.7% of the total despite representing 58.9%
  of the US population.
- Hispanic/Latino recipients represent 14.8% of the total, while 18.5% of the
+ Hispanic/Latino recipients represent 14.8% of the total, while 19.1% of the
  overall US population.
  The only group with similar percentages are Asians/non-Hispanic, who make
- up 5.9% of total deceased donor kidney recipients, which is almost equivalent
+ up 6.1% of total deceased donor kidney recipients, which is almost equivalent
  to their representation in the population at 5.6%.
  The remaining ethnicities constitute only 1.5%.
- 
+ US demographics data were taken from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-68"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/ETHCAT_DECEASED.png
-	scale 70
+	filename Images/EDA/ethncat-deceased-pie.pdf
+	scale 80
 
 \end_inset
 
@@ -10216,7 +10177,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-ETHCAT deceased pie chart
+Pie Chart of Ethnicity Destributions for the Deceased Donor Subset 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:ETHCAT-deceased-pie"
@@ -10247,24 +10208,25 @@ noprefix "false"
 
 \end_inset
 
- shows distributions for donor gender, donor diabetes, and hepatitis C status.
- The gender distribution is similar to the full dataset.
+ shows distributions for donor diabetes, and hepatitis C status.
  65.8% of the recipients do not have diabetes.
  33.5% have different forms of diabetes.
  The diabetes status of the remaining 0.8% is unknown.
+ Almost 90% of the recipients did not have Hepatite C, while 6.4% tested
+ positive.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/pie-deceased.png
-	scale 50
+	filename Images/EDA/diab-hcv-deceased-pie.pdf
+	scale 40
 
 \end_inset
 
@@ -10272,7 +10234,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Feature Frequencies in Deceased Sub group
+Pie Charts of Diabetes Status and Hepatite C Serological Status for the
+ Deceased Donor Subset
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:pie-deceased-features"
@@ -10321,7 +10284,7 @@ ref{tab:desc_living}
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -10535,7 +10498,7 @@ ref{tab:ethcat_deceased}
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -10719,7 +10682,7 @@ ref{tab:yn_living}
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -10765,7 +10728,7 @@ toprule
 
 \begin_layout Plain Layout
 
-    {} & Value & ON
+     Value & ON
 \backslash
 _DIALYSIS & PRE
 \backslash
@@ -10787,7 +10750,7 @@ midrule
 
 \begin_layout Plain Layout
 
-    N & No & 22488 & 42388 
+     No & 22488 & 42388 
 \backslash
 
 \backslash
@@ -10796,7 +10759,7 @@ midrule
 
 \begin_layout Plain Layout
 
-    Y & Yes & 29932 & 10032 
+     Yes & 29932 & 10032 
 \backslash
 
 \backslash
@@ -10852,7 +10815,7 @@ ref{tab:np_living}
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -10898,7 +10861,7 @@ toprule
 
 \begin_layout Plain Layout
 
-    {} & Value & HCV
+     Value & HCV
 \backslash
 _SEROSTATUS & HBV
 \backslash
@@ -10918,7 +10881,7 @@ midrule
 
 \begin_layout Plain Layout
 
-    N  & Negative  & 50237 & 43276 
+     Negative  & 50237 & 43276 
 \backslash
 
 \backslash
@@ -10927,7 +10890,7 @@ midrule
 
 \begin_layout Plain Layout
 
-    ND & Not Done  & 801   & 6429  
+     Not Done  & 801   & 6429  
 \backslash
 
 \backslash
@@ -10936,7 +10899,7 @@ midrule
 
 \begin_layout Plain Layout
 
-    P  & Positive & 1382  & 2715  
+     Positive & 1382  & 2715  
 \backslash
 
 \backslash
@@ -10995,11 +10958,12 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename Images/pie-living.png
+	filename Images/EDA/diab-abo-living-pie.pdf
 	scale 60
 
 \end_inset
@@ -11008,7 +10972,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Pie Chart for Gender, Diab and ABO match in living subgroup
+Pie Chart of Diabetes Status and ABO Match in Living Donor Subgroup
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Pie-GENDER-DIAB-ABO"
@@ -11048,12 +11012,12 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/LIV_DON_TY.png
+	filename Images/EDA/liv-don-ty-pie.pdf
 	scale 70
 
 \end_inset
@@ -11062,7 +11026,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Pie Chart for living donor type
+Pie Chart for Living Donor Type for the Living Donor Subset
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Pie-Living-donor"
@@ -11437,7 +11401,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -16151,15 +16115,53 @@ It is worth noting that the data have the assumption of well-matched pairs,
  Consequently, models and the application should be used only in conjunction
  with KPD software and prior negative crossmatch results, otherwise, the
  results might be inaccurate.
- 
-\begin_inset Note Note
+\end_layout
+
+\begin_layout Chapter*
+Data Source and Source Code
+\end_layout
+
+\begin_layout Standard
+The data reported here have been supplied by the United Network for Organ
+ Sharing as the contractor for the Organ Procurement and Transplantation
+ Network.
+ The interpretation and reporting of these data are the responsibility of
+ the author(s) and in no way should be seen as an official policy of or
+ interpretation by the OPTN or the U.S.
+ Government.
+\end_layout
+
+\begin_layout Standard
+Source code for both application and trained models can be found in the
+ following GitHub repository: ...
+ Data and trained models are of cource exluded.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-Gradient Boosted Models — scikit-survival 0.22.2.
- (2015).
- Readthedocs.io.
- https://scikit-survival.readthedocs.io/en/stable/user_guide/boosting.html
+
+
+\backslash
+listoffigures
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+listoftables
 \end_layout
 
 \end_inset
@@ -17320,29 +17322,12 @@ literal "false"
 
 \end_inset
 
-‌
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-the following bad citation: 30
-\end_layout
-
-\begin_layout Plain Layout
-The bug probably ruined some citations and will continue to ruin new ones
- on the addition
-\end_layout
-
-\begin_layout Plain Layout
-Don't forget to review the whole document and fix broken citations.
-\end_layout
-
-\end_inset
-
-
+‌USAFacts.
+ (2024, June 15).
+ US population by year, race, age, ethnicity, & more.
+ USAFacts; USAFacts.
+ https://usafacts.org/data/topics/people-society/population-and-demographics/our-
+changing-population/
 \end_layout
 
 \end_body
