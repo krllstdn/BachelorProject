@@ -3255,6 +3255,39 @@ name "chap:Machine-Learning-Background"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+cit konkretnejic tim hur
+\end_layout
+
+\begin_layout Plain Layout
+- long rank popsat
+\end_layout
+
+\begin_layout Plain Layout
+na taky popsat
+\end_layout
+
+\begin_layout Plain Layout
+vysvetit proc featuru josu ruzne v L Dc
+\end_layout
+
+\begin_layout Plain Layout
+EDA ocekava porovnatelne a obecne data bez zamereni na finalni modely.
+\end_layout
+
+\begin_layout Plain Layout
+rict o 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Machine learning is a subfield of computer science that consists of building
  algorithms capable of processing large amounts of data, finding patterns,
  and performing actions such as predictions or generating new data.
@@ -3281,8 +3314,8 @@ literal "false"
 
 \begin_layout Standard
 Every field is affected by human errors, and medicine is no exception.
- Machine learning also makes mistakes, but if we could manage to make at
- least 1% fewer errors than humans, this would be a substantial achievement.
+ Machine learning also makes mistakes, but achieving machine learning error
+ even 1% below the human error rate would be a remarkable accomplishment.
  The human body is a complex system, and it is very difficult for the human
  mind to comprehend all processes and how they relate to each other.
  Machine learning might be able to do that better than any human could.
@@ -3297,9 +3330,8 @@ literal "false"
 
 \end_inset
 
- further explains, based on the problem and, therefore, on our approach
- to building a dataset and the model, machine learning can be divided into
- four subfields: 
+ further explains, based on the problem and an approach to building a dataset
+ and the model, there are four types of learning: 
 \emph on
 supervised
 \emph default
@@ -3317,11 +3349,15 @@ reinforcement learning
 \emph default
 .
  
+\end_layout
+
+\begin_layout Standard
+
 \emph on
 Supervised learning
 \emph default
- means that training data contains the desired solutions, referred to as
- 
+ deals with labeled data, meaning that training data contains the desired
+ solutions, referred to as 
 \emph on
 labels
 \emph default
@@ -3333,13 +3369,25 @@ labels
 \emph on
 Semi-supervised
 \emph default
- learning deals with partially labeled data, which needs to be labeled fully
- either manually, or using techniques such as 
+ 
+\emph on
+learning
+\emph default
+ deals with partially labeled data, which needs to be labeled fully either
+ manually, or using techniques such as 
 \emph on
 clustering
 \emph default
 .
  
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Unsupervised learning
+\emph default
+ deals with unlabeled data.
 \end_layout
 
 \begin_layout Standard
@@ -3407,7 +3455,7 @@ In supervised learning the
 \emph on
 dataset
 \emph default
- is the collection of labeled examples 
+ is the collection of labeled samples 
 \begin_inset Formula $\{(\overline{x}_{i},y_{i})\}_{i=1}^{N}$
 \end_inset
 
@@ -3424,7 +3472,7 @@ feature vector
 \begin_inset Formula $j=1,...,D$
 \end_inset
 
- contains a value that describes an example in some way.
+ contains a value that describes a sample in some way.
  This value is called a 
 \emph on
 feature
@@ -3454,10 +3502,10 @@ label
 \end_layout
 
 \begin_layout Standard
-Classification is a problem of assigning a label to an unlabeled example.
+Classification is a problem of assigning a label to an unlabeled sample.
  This problem is solved by a classification learning algorithm that takes
- a labeled set of examples as input and produces a model that takes an unlabeled
- example as input and outputs a label.
+ a labeled set of samples as input and produces a model that takes an unlabeled
+ sample as input and outputs a label.
  If the set of labels has only two classes we talk about 
 \emph on
 binary classification
@@ -3487,8 +3535,8 @@ target value
 \emph default
  from an unlabeled example.
  The problem is solved by a regression learning algorithm that takes a set
- of labeled examples as input, and produces a model that takes an unlabeled
- example as input and outputs a target value.
+ of labeled samples as input, and produces a model that takes an unlabeled
+ sample as input and outputs a target value.
  
 \end_layout
 
@@ -3504,7 +3552,12 @@ Linear Regression
 \end_layout
 
 \begin_layout Standard
-As defined by 
+
+\emph on
+Linear regression 
+\emph default
+is a commonly used algorithm for regression learning.
+ The resulting model is a linear combination of all features 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-10"
@@ -3512,12 +3565,7 @@ literal "false"
 
 \end_inset
 
-, 
-\emph on
-linear regression 
-\emph default
-is a commonly used algorithm for regression learning.
- The resulting model is a linear combination of all features.
+.
 \end_layout
 
 \begin_layout Standard
@@ -3525,7 +3573,7 @@ The problem formulation we are trying to solve is as follows:
 \series bold
  
 \series default
-Given a collection of labeled examples
+Given a collection of labeled samples
 \series bold
  
 \series default
@@ -3549,12 +3597,12 @@ f_{\bar{w},b}(\overline{x})=\overline{w}\overline{x}+b,\label{eq:lin_reg}
 \emph on
 feature vector 
 \emph default
-of D dimensions of example 
+of D dimensions of sample 
 \begin_inset Formula $i=1,…,N$
 \end_inset
 
 , every feature 
-\begin_inset Formula $x_{i}^{(J)}\epsilon\mathbb{R},$
+\begin_inset Formula $x_{i}^{(j)}\epsilon\mathbb{R},j=1,...,D,$
 \end_inset
 
  
@@ -3632,7 +3680,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/linear_regression.png
+	filename Images/linear_regression.pdf
 	scale 50
 
 \end_inset
@@ -3641,7 +3689,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Linear regression for two-dimensional data
+Linear regression for Two-Dimensional Data
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Linear-regression-for"
@@ -3707,7 +3755,15 @@ evaluates individual predictions
  
 \emph default
 The loss function measures the model's overall performance (MSE) or evaluates
- each prediction (square error loss).
+ each prediction (square error loss) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+literal "false"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -3732,7 +3788,7 @@ normal equation
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\mathbf{\overline{\mathbf{w}}^{*}=(x^{T}x)x^{T}y},\label{eq:norm_eq}
+\mathbf{\overline{\mathbf{w}}^{*}=(x^{T}x)^{-1}x^{T}y},\label{eq:norm_eq}
 \end{equation}
 
 \end_inset
@@ -3777,7 +3833,7 @@ Linear models are usually resilient to overfitting because they are simple.
  pattern.
  Such a model cannot make accurate predictions when confronted with unseen
  data.
- More on overfitting in section 
+ More on overfitting in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Model-Training-and-Hyperparameter-tuning"
@@ -3986,7 +4042,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/logistic_regression.png
+	filename Images/logistic_regression.pdf
 	scale 50
 
 \end_inset
@@ -3995,8 +4051,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Logistic function.
- 
+Logistic Function 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Logistic-function."
@@ -4186,10 +4241,23 @@ literal "false"
 
 \begin_layout Subsection
 Support Vector Machines 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Support-Vector-Machines"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-According to 
+
+\emph on
+Support vector machine (SVM)
+\emph default
+ is a widely used and powerful machine learning algorithm that can perform
+ a wide range of tasks, including linear and nonlinear classification, regressio
+n, and outlier detection on small- to medium-sized datasets 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-10"
@@ -4197,13 +4265,7 @@ literal "false"
 
 \end_inset
 
-, 
-\emph on
-support vector machine (SVM)
-\emph default
- is a widely used and powerful machine learning algorithm that can perform
- a wide range of tasks, including linear and nonlinear classification, regressio
-n, and outlier detection on small- to medium-sized datasets.
+.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4300,12 +4362,12 @@ support vectors
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/svm1.png
+	filename Images/svm1.pdf
 	scale 30
 
 \end_inset
@@ -4314,7 +4376,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-SVM demonstration for two-dimensional dataset
+SVM Demonstration for Two-Dimensional Dataset
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:SVM-demonstration-for"
@@ -4402,12 +4464,12 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/svm2.png
+	filename Images/svm2.pdf
 	scale 30
 
 \end_inset
@@ -4416,8 +4478,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Linearly inseparable dataset.
- 
+Linearly Inseparable Dataset 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Linearly-non-separable"
@@ -4561,8 +4622,8 @@ where C is the hyperparameter that determines the trade-off between increasing
  For lower values of C, the algorithm will try to make fewer mistakes by
  sacrificing the margin size.
  (A larger margin is better for the generalization.) Lower values lead to
- wider streets and more margin violations.
- Higher values lead to narrower streets and fewer margin violations.
+ wider margins and more margin violations.
+ Higher values lead to narrower margins and fewer margin violations.
 \end_layout
 
 \begin_layout Standard
@@ -4620,6 +4681,341 @@ We can adapt SVM to work with nonlinearly separable datasets by applying
  used kernel functions.
 \end_layout
 
+\begin_layout Subsection
+Gradient Boosting
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+gbsa - papers/boosting.pdf>Boosting PH
+\end_layout
+
+\begin_layout Plain Layout
+trees are predicting the negative gradient of the loss (decrease)
+\end_layout
+
+\begin_layout Plain Layout
+this negative gradient is called a pseudo residual - difference between
+ actual and intermediate predicted value.
+\end_layout
+
+\begin_layout Plain Layout
+in GB, residual is the gradient of loss function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Decision Trees
+\end_layout
+
+\begin_layout Standard
+A Decision Tree is a versatile and highly interpretable machine learning
+ algorithm that can perform both classification and regression tasks.
+ It is a key component of 
+\emph on
+GradientBoostedSurvivalAnalysis
+\emph default
+.
+ Its extension, the Survival Tree, is also an essential component of the
+ 
+\emph on
+Random Survival Forest
+\emph default
+.
+ Both ensemble methods are used in this work and are discussed in Sections
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Gradient-Boosted-Survival"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Random-Survival-Forest"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, respectively.
+ Scikit-learn's 
+\emph on
+DecisionTreeRegressor
+\emph default
+ is utilized in 
+\emph on
+GradientBoostedSurvival Analysis,
+\emph default
+ so we will focus on regression rather than classification.
+ Scikit-learn employs the 
+\emph on
+Classification and Regression Tree (CART)
+\emph default
+ algorithm to train decision trees, so let us look into this algorithm in
+ more detail.
+\end_layout
+
+\begin_layout Standard
+In each node, the dataset is recursively split in two based on a feature
+ 
+\begin_inset Formula $k$
+\end_inset
+
+ and a threshold 
+\begin_inset Formula $t_{k}.$
+\end_inset
+
+ Such pair 
+\begin_inset Formula $(k,t_{k})$
+\end_inset
+
+ is chosen that produces the 
+\begin_inset Quotes sld
+\end_inset
+
+purest
+\begin_inset Quotes srd
+\end_inset
+
+ subsets.
+ A node is pure if all training instances it applies to belong to the same
+ class.
+ The following impurity methods are common: Gini impurity and entropy for
+ classification, while MSE for regression.
+\end_layout
+
+\begin_layout Standard
+Gini impurity is expressed as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G_{i}=1-\sum_{k=1}^{n}p_{i,k}^{2}
+\]
+
+\end_inset
+
+, where 
+\begin_inset Formula $p_{i,k}$
+\end_inset
+
+ is the ratio of 
+\begin_inset Formula $k$
+\end_inset
+
+ class instances among the training instances in the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ node.
+ Entropy is a term originating from physics, where it is a measure of molecular
+ disorder: it is zero if molecules are well-ordered and still.
+ In machine learning, it is used as a measure of impurity and is denoted
+ as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H_{i}=-\stackrel[p_{i,k}\neq0]{n}{\sum_{k=1}}p_{i,k}\log_{2}(p_{i,k}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consequently, the entropy is zero if all instances are of the same class.
+\end_layout
+
+\begin_layout Standard
+In regression, CART tries to split the dataset in each node in a way that
+ minimizes mean squared error (MSE) (seen previously in Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mse"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ The cost function for the decision tree regression is denoted as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+J(k,t_{k})=\frac{m_{left}}{m}MSE_{left}+\frac{m_{right}}{m}MSE_{right}\text{ where }\begin{cases}
+MSE_{node}=\sum_{i\in node}(\hat{y}_{node}-y^{(i)})^{2}\\
+\hat{y}=\frac{1}{m_{node}}\sum_{i\in node}y^{(i)}
+\end{cases}\label{eq:DT-regression-loss}
+\end{equation}
+
+\end_inset
+
+, where 
+\begin_inset Formula $m$
+\end_inset
+
+ is the number of instances in the dataset, and 
+\emph on
+left
+\emph default
+ and 
+\emph on
+right
+\emph default
+ mean that the value relates to the left or right node of the tree.
+ In classification, the loss function 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:DT-regression-loss"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ would contain Gini (G) or entropy (H) instead of MSE.
+ 
+\end_layout
+
+\begin_layout Standard
+It is worth noting that the other algorithms train the Decision Tree without
+ restrictions (for example.
+ the approach used in Survival Trees).
+ Then, during the 
+\emph on
+pruning
+\emph default
+ stage, all unnecessary nodes are removed.
+ A node is considered redundant if its purity improvement is not statistically
+ significant.
+ Statistical tests such as 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ test are used to estimate the probability of the improvement being the
+ result of a chance (the null hypothesis).
+ If the probability (p-value) is greater than a certain threshold (often
+ 5%), the node is deemed unnecessary, and its children are deleted.
+\end_layout
+
+\begin_layout Standard
+Linear algorithms, like linear regression, assume that data are linear.
+ In contrast, decision trees make no such assumption about the data.
+ As a result, Decision Trees are categorized as nonparametric algorithms.
+ This is because the number of parameters is not predefined before training,
+ allowing the algorithm to fit the data closely, possibly leading to overfitting.
+ To prevent overfitting, the algorithm needs to be regularized.
+ The following hyperparameters can help with regularization and preventing
+ overfitting:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+max_depth
+\emph default
+ - specifies the maximum depth of the decision tree.
+ The most important hyperparameter.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+min_samples_split
+\emph default
+ - sets the minimum number of samples a node must have before it can be
+ split.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+min_samples_leaf
+\emph default
+ - dictates the minimum number of samples a leaf node must have.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+max_leaf_nodes
+\emph default
+ - determines the maximum number of leaf nodes.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+max_features
+\emph default
+ - sets the maximum number of features that are evaluated for splitting
+ at each node.
+\end_layout
+
+\begin_layout Standard
+The most critical parameter to limit is 
+\emph on
+max_depth
+\emph default
+.
+ In general, increasing 
+\emph on
+min_*
+\emph default
+ and decreasing 
+\emph on
+max_*
+\emph default
+ will help to regularize the model.
+\end_layout
+
+\begin_layout Standard
+Once the decision tree is built and we need to make a prediction, the data
+ instance is passed through the tree.
+ It begins at the top node, known as the root node, and then it moves to
+ the left or right node based on the instance's value for the selected feature
+ of the node.
+ In this way, the instance traverses through all the descendant nodes until
+ it arrives at the terminal node, also known as the leaf node.
+ The target value at that node will serve as the prediction, whether for
+ regression or classification.
+ In the case of regression, this value represents the average of all the
+ target values that led to the leaf node.
+\end_layout
+
+\begin_layout Standard
+Now, let us discuss several limitations.
+ The first one is that the Decision Tree is a greedy algorithm, which means
+ that finding an optimal model is nearly impossible since it's an NP-complete
+ problem.
+ NP-complete problems are a class of problems that are both NP (solutions
+ can be verified in polynomial time) and NP-hard (any NP problem can be
+ reduced to it in polynomial time).
+ Additionally, decision trees are sensitive to small changes in data.
+ This can be addressed by using PCA or opting for the ensemble models mentioned
+ earlier, which are generally able to mitigate this instability.
+\end_layout
+
 \begin_layout Section
 Unsupervised Learning
 \end_layout
@@ -4651,8 +5047,8 @@ literal "false"
 \end_inset
 
 .
- It has three main branches: clustering, dimensionality reduction, and anomaly
- detection 
+ It has three main techniques: clustering, dimensionality reduction, and
+ anomaly detection 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-9"
@@ -4674,6 +5070,7 @@ Clustering
 exploratory data analysis (EDA),
 \emph default
  customer segmentation, dimensionality reduction, and anomaly detection
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-9"
@@ -4898,8 +5295,8 @@ literal "false"
 
 .
  For example, in our task of predicting survival time, donor-recipient blood
- group compatibility or recipient's age is likely to have much higher predictive
- power than the donor's or recipient's citizenship.
+ group compatibility or recipient's age are likely to have much higher predictiv
+e power than the donor's or recipient's citizenship.
  Blood group compatibility is directly linked to the successful transplantation,
  while the recipient's citizenship has little correlation with the genetic
  similarities, which we would expect from datasets from other countries,
@@ -5089,7 +5486,7 @@ literal "false"
 
 .
  For example, a patient's age can be transformed into age-range bins: 0
- to 18 years old, 18 to 25 y.o., 25 to 40 years old, and so on.
+ to 18, 18 to 25, 25 to 40, and so on.
  This technique might help the algorithm to learn better, particularly with
  smaller datasets 
 \begin_inset CommandInset citation
@@ -5161,7 +5558,7 @@ min-max scaling
 \series bold
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -5186,7 +5583,11 @@ literal "false"
 \end_inset
 
 .
- The normalization formula for value 
+ The 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ normalization formula for value 
 \begin_inset Formula $x^{(j)}$
 \end_inset
 
@@ -5512,8 +5913,28 @@ hyperparameter
  calculated during training.
  Each model possesses a different set of hyperparameters, and they profoundly
  influence the model's performance.
- The number of trees in Random Forest and the C hyperparameter in Support
- Vector Machines are examples of hyperparameters.
+ The number of trees in Random Forest (described in Subseection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Random-Survival-Forest"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and the C hyperparameter in Support Vector Machines (described in Subsection
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Support-Vector-Machines"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are examples of hyperparameters.
  The task of finding the optimal combination of hyperparameters is called
  
 \emph on
@@ -5591,7 +6012,7 @@ Survival Analysis
 \begin_layout Standard
 
 \emph on
-Survival analysis, 
+Survival analysis (SA), 
 \emph default
 often referred to as
 \emph on
@@ -5619,7 +6040,7 @@ survival time
 \emph default
 ) refers to the duration from the start of an individual's follow-up to
  the occurrence of an event.
- It is measured in days, weeks, months, or years 
+ It is usually measured in days, weeks, months, or years 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13-SA"
@@ -5740,12 +6161,12 @@ literal "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/censoring_ill.png
+	filename Images/censoring_ill.pdf
 	scale 50
 
 \end_inset
@@ -5758,8 +6179,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The illustration of censoring.
- 
+The Illustration of Censoring 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Censoring-illustration"
@@ -6112,12 +6532,12 @@ literal "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/survival_f.jpeg
+	filename Images/survival_f.pdf
 	scale 50
 
 \end_inset
@@ -6126,7 +6546,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Survival function
+Survival Function
 \end_layout
 
 \end_inset
@@ -6137,20 +6557,6 @@ Survival function
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Survival function 
-\begin_inset Formula $S(t)$
-\end_inset
-
- gives a comprehensive understanding of the probability of an individual
- surviving beyond a specific time point.
- It presents a declining or constant trend starting at 1 and potentially
- declining to 0.
- While understanding the probability of not failing at every time point
- is important, knowing the instantaneous risk might also be helpful, leading
- us to the next concept: the hazard function.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -6271,26 +6677,6 @@ conditional failure rate
 \end_layout
 
 \begin_layout Standard
-To best illustrate the concept of instantaneous potential, let us refer
- to the concept of velocity.
- Velocity gives us the speed at a specific point in time.
- For instance, 80 km/h velocity means that maintaining the same speed for
- an hour would result in traveling 80 kilometers.
- However, it does not predict how much the car will travel.
- The same works with the instantaneous potential: it might be high at one
- point but low at another, reflecting that both are measurements at an instant
- rather than an interval 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-13-SA"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
 
 \emph on
 The cumulative hazard function 
@@ -6321,29 +6707,15 @@ Where
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Does not tell that CHF is specific to each point in ttime (accumulated hazard)
- somewhere in text I may have referred to it as a scalar value.
- Check that!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename Images/hazard_f.jpeg
+	filename Images/hazard_f.pdf
 	scale 50
 
 \end_inset
@@ -6356,19 +6728,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The example of a hazard function.
- Note that it may signifficantly differ.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-divna veta.
- vyhodit
-\end_layout
-
-\end_inset
-
-
+Examples of Different Hazard Function Types
 \end_layout
 
 \end_inset
@@ -6396,7 +6756,7 @@ Some models, such as Cox Proportional Hazards, are written in terms of the
  hazard function, and it is necessary to be able to estimate the survival
  function out of the hazard function to make the model more flexible and
  accessible to a larger audience.
- Fortunately, there are ways to convert one into the other and vice versa.
+ Fortunately, there are ways to convert one into the other.
  In this subsection, we are going to describe techniques for these conversions.
  
 \end_layout
@@ -6479,7 +6839,7 @@ On the other hand, to obtain the hazard function from the survival function,
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-h(t)=-\left[\frac{dS(t)/dt}{S(t)}\right].\label{eq:surv_to_haz}
+h(t)=-\frac{dS(t)/dt}{S(t)}.\label{eq:surv_to_haz}
 \end{equation}
 
 \end_inset
@@ -6573,7 +6933,7 @@ literal "false"
 
 .
  Both aim to estimate the survival time and the survival probability at
- the estimated survival time 
+ that time 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-23-wang"
@@ -6719,7 +7079,7 @@ noprefix "false"
 ).
  There are a couple of variants of the basic Cox model: the penalized Cox
  model, which will be used in the practical part of this work, the CoxBoost
- algorithm, and the Time-Dependent Cox model 
+ algorithm, the Time-Dependent Cox model and many more 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-23-wang"
@@ -6762,7 +7122,7 @@ To conclude, statistical methods in survival analysis can be broadly categorized
  Among non-parametric methods, Kaplan-Meier stands out as particularly significa
 nt.
  It provides a robust and intuitive way to estimate survival functions.
- The following section delves deeper into the Kaplan-Meier method.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -6901,11 +7261,12 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename Images/EDA/Kaplan-Meier/Whole_dataset.png
+	filename Images/EDA/example-km.pdf
 	scale 50
 
 \end_inset
@@ -6918,7 +7279,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Survival curve estimated with KM 
+Survival Curve Estimated with KM on the training dataset 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Survival-curve-estimated"
@@ -6969,6 +7330,14 @@ To summarize, the Kaplan-Meier method provides a robust nonparametric approach
 \end_layout
 
 \begin_layout Subsubsection
+Nelson-Aalen
+\end_layout
+
+\begin_layout Subsubsection
+Log-rank test
+\end_layout
+
+\begin_layout Subsubsection
 Cox Proportional Hazards Method 
 \begin_inset CommandInset label
 LatexCommand label
@@ -7007,7 +7376,7 @@ The Cox proportional hazards model is defined in terms of a hazard at time
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-h(t,\mathbf{X})=h_{0}(t)\times exp\left[\sum_{i=1}^{p}\beta_{i}X_{i}\right],\label{eq:cox_ph}
+h(t,\mathbf{X})=h_{0}(t)\exp\left[\sum_{i=1}^{p}\beta_{i}X_{i}\right],\label{eq:cox_ph}
 \end{equation}
 
 \end_inset
@@ -7099,7 +7468,7 @@ hazard ratio
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\hat{HR}=\frac{h(t,X^{*}\mathbf{)}}{h(t,X)}=exp\left[\sum_{i=1}^{p}\hat{\beta_{i}}(X^{*}-X)\right]\label{eq:cox_ph_hazard_ratio}
+\hat{HR}=\frac{h(t,X^{*}\mathbf{)}}{h(t,X)}=\exp\left[\sum_{i=1}^{p}\hat{\beta_{i}}(X^{*}-X)\right]\label{eq:cox_ph_hazard_ratio}
 \end{equation}
 
 \end_inset
@@ -7295,24 +7664,6 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Being a semi-parametric, this model is a safe choice because it consistently
- delivers a sufficiently reliable result.
- The risk of choosing the wrong model, as often happens with parametric
- models, is practically non-existent.
- However, if one is sure that a parametric model suits the problem, one
- should use the parametric model 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-13-SA"
-literal "false"
-
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Subsubsection
@@ -7657,7 +8008,89 @@ To conclude, Ridge, LASSO, and Elastic Net are potent extensions of the
 \end_layout
 
 \begin_layout Subsection
+Machine Learning Methods
+\end_layout
+
+\begin_layout Subsubsection
+Survival Tree
+\end_layout
+
+\begin_layout Subsubsection
+Gradient Boosted Survival Analysis 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Gradient-Boosted-Survival"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Gradient-boosted Cox proportional hazard loss with regression trees as base
+ learner.
+\end_layout
+
+\begin_layout Plain Layout
+In each stage, a regression tree is fit on the negative gradient of the
+ loss function.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+loss=coxph
+\end_layout
+
+\begin_layout Plain Layout
+learning rate
+\end_layout
+
+\begin_layout Plain Layout
+n_estimators
+\end_layout
+
+\begin_layout Plain Layout
+subsample
+\end_layout
+
+\begin_layout Plain Layout
+min_samples_split
+\end_layout
+
+\begin_layout Plain Layout
+max_depth
+\end_layout
+
+\begin_layout Plain Layout
+random state
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Random Survival Forest 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Random-Survival-Forest"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8697,6 +9130,49 @@ Surv.from_arrays()
 \end_layout
 
 \begin_layout Standard
+At this stage, the pipeline is divided in two: for models trained locally
+ and models trained on the university cluster.
+ For models trained locally, we pickle and download the data.
+ And perform scaling for numerical features, one-hot encoding for categorical
+ ones and For models trained on the cluster, data are sent to the method
+ 
+\emph on
+_get_X_y().
+ 
+\emph default
+In both cases similar steps are taken: numerical columns are standardized
+ (with 
+\emph on
+sksurv.column.standardize()
+\emph default
+), categorical ones are one-hot encoded (with 
+\emph on
+sksurv.preprocessing.OneHotEncoder()
+\emph default
+), and target value is constructed with the 
+\emph on
+Surv.from_arrays()
+\emph default
+ method that accepts event and survival time and builds the y value acceptable
+ to scikit-survival algorithms.
+ 
+\end_layout
+
+\begin_layout Standard
+There is only one distinction in the pipeline for models used in the application.
+ We used custom transformers built with Scikit-learn to have the ability
+ to pickle the pipeline used for training and use it later in the application
+ to avoid the complexity and potential errors of developing a custom pipeline.
+ This approach ensures consistency and minimizes mistakes, thereby enhancing
+ the reliability of our model deployment process.
+ Models, unfortunately, need to be retrained with data from these transformers
+ for use in the application, as our chosen approach does not preserve the
+ column names, and we cannot assess feature importance with certainty.
+ The approach with scikit-survival methods described before allows for preservin
+g the column names and accurate feature importance assessment.
+\end_layout
+
+\begin_layout Standard
 At this point we have the dataset to work with.
 \end_layout
 
@@ -8711,6 +9187,9 @@ In this section, we will comprehensively cover the most significant features.
  As a result, the correlations we are attempting to make here may not be
  entirely accurate; however, some have been confirmed in the existing literature.
  All plots are based on the training dataset.
+ Features in DDT/LDT sections differ because different features were deemed
+ signifficant by the permutation importance algorithm for the given transplantat
+ion type.
 \end_layout
 
 \begin_layout Subsection
@@ -9151,7 +9630,7 @@ name "box_surv_time"
 \end_layout
 
 \begin_layout Standard
-Please refer to Figure 
+Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "box_surv_time"
@@ -9161,7 +9640,7 @@ noprefix "false"
 
 \end_inset
 
-, which shows the survival time box plot (PTIME column) for living and deceased
+ shows the survival time box plot (PTIME column) for living and deceased
  donor transplantations.
  The first quantile (
 \begin_inset Formula $Q_{1}$
@@ -9237,7 +9716,7 @@ name "fig:bar_pstatus"
 \end_layout
 
 \begin_layout Standard
-Look at Figure 
+Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:bar_pstatus"
@@ -9247,8 +9726,8 @@ noprefix "false"
 
 \end_inset
 
-, which shows pie charts of the PSTATUS column values for living and deceased
- donor groups.
+ shows pie charts of the PSTATUS column values for living and deceased donor
+ groups.
  As can be seen, the percentage of censoring in deceased donor transplantation
  subset is 51.6%, and in living donor transplantation 68.6%.
  This difference might be attributed to the fact that the number of LDT
@@ -9471,7 +9950,7 @@ Histogram of Deceased/Living Donor Transplantations by Year
 \end_layout
 
 \begin_layout Subsubsection*
-Gender
+Recipient Gender
 \end_layout
 
 \begin_layout Standard
@@ -9666,7 +10145,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection*
-The Use of Dialysis
+The Recipient Use of Dialysis
 \end_layout
 
 \begin_layout Standard
@@ -9700,13 +10179,13 @@ literal "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/EDA/dialysis-km.pdf
-	scale 93
+	scale 85
 
 \end_inset
 
@@ -9736,7 +10215,7 @@ name "km_dialysis"
 \end_layout
 
 \begin_layout Subsubsection*
-Ethnicity
+Recipient Ethnicity
 \end_layout
 
 \begin_layout Standard
@@ -9768,13 +10247,13 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/EDA/eth-km.pdf
-	scale 80
+	scale 70
 
 \end_inset
 
@@ -9825,7 +10304,7 @@ ref{tab:desc_deceased}
 \end_inset
 
 , we can see the numerical value statistics for the deceased subset, which
- includes a total of 117568 records.
+ includes a total of 117 568 records.
  
 \end_layout
 
@@ -10003,7 +10482,7 @@ ref{tab:yn_deceased}
 
 , we see the distribution of categorical Yes / No features.
  As we can see, the majority of kidney recipients from deceased donors were
- on dialysis, did not receive blood transfusions, and did not have diabetes.
+ on dialysis and did not receive blood transfusions.
  The fact that the majority of recipients from the deceased donor subset
  were on dialysis may be attributed to the fact that the suitable living
  donor was not found in time, and the deceased donor's kidney was received
@@ -10019,53 +10498,53 @@ status open
 
 
 \backslash
-begin{table}[htbp]
+begin{table}
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 centering
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 caption{Frequency of Yes/No Variables in Deceased Donor Group}
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 label{tab:yn_deceased}
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
-begin{tabular}{llrrr}
+begin{tabular}{llll}
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 toprule
 \end_layout
 
 \begin_layout Plain Layout
 
-     Value & ON
+Value &     ON
 \backslash
-_DIALYSIS & PRE
+_DIALYSIS &    PRE
 \backslash
 _TX
 \backslash
-_TXFUS & DIABETES
+_TXFUS &     DIABETES
 \backslash
 _DON 
 \backslash
@@ -10076,14 +10555,20 @@ _DON
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 midrule
 \end_layout
 
 \begin_layout Plain Layout
 
-     No  & 25881 & 88215  & 109920 
+  Yes &  25881 (22.01
+\backslash
+%) &  88215 (75.03
+\backslash
+%) &  109920 (93.49
+\backslash
+%) 
 \backslash
 
 \backslash
@@ -10092,7 +10577,13 @@ midrule
 
 \begin_layout Plain Layout
 
-     Yes & 91687 & 29353  & 7648   
+   No &  91687 (77.99
+\backslash
+%) &  29353 (24.97
+\backslash
+%) &     7648 (6.51
+\backslash
+%) 
 \backslash
 
 \backslash
@@ -10101,14 +10592,14 @@ midrule
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 bottomrule
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 end{tabular}
 \end_layout
@@ -10208,8 +10699,10 @@ noprefix "false"
 
 \end_inset
 
- shows distributions for donor diabetes, and hepatitis C status.
+ shows distributions for donor diabetes, and recipient hepatitis C status.
  65.8% of the recipients do not have diabetes.
+ Hepatitis C is a viral infection causing liver inflammation that can lead
+ to severe liver damage.
  33.5% have different forms of diabetes.
  The diabetes status of the remaining 0.8% is unknown.
  Almost 90% of the recipients did not have Hepatite C, while 6.4% tested
@@ -10478,7 +10971,7 @@ status open
 
 
 \backslash
-ref{tab:ethcat_deceased}
+ref{tab:ethcat_living}
 \end_layout
 
 \end_inset
@@ -10518,14 +11011,16 @@ centering
 
     
 \backslash
-caption{Frequency table for ETHCAT in Living Donor Group}
+caption{Frequency Table for ETHCAT and ETHCAT
+\backslash
+_DON in Living Donor Group}
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-label{tab:ethcat_deceased}
+label{tab:ethcat_living}
 \end_layout
 
 \begin_layout Plain Layout
@@ -10566,7 +11061,11 @@ midrule
 
 \begin_layout Plain Layout
 
-    White, non-Hispanic &  65.1 &  68.3 
+    White, non-Hispanic &  34127 (65.1
+\backslash
+%) &  35778 (68.25
+\backslash
+%) 
 \backslash
 
 \backslash
@@ -10575,7 +11074,11 @@ midrule
 
 \begin_layout Plain Layout
 
-    Black, non-Hispanic &  14.6 &  14.1 
+    Black, non-Hispanic &  7664 (14.6
+\backslash
+%) &  7386 (14.09
+\backslash
+%) 
 \backslash
 
 \backslash
@@ -10584,7 +11087,11 @@ midrule
 
 \begin_layout Plain Layout
 
-    Hispanic/Latino      &  14.4 &  12.7 
+    Hispanic/Latino      &  7565 (14.43
+\backslash
+% &  6639 (12.67
+\backslash
+%) 
 \backslash
 
 \backslash
@@ -10593,7 +11100,11 @@ midrule
 
 \begin_layout Plain Layout
 
-    Asian, non-Hispanic  &   4.5 &   3.7 
+    Asian, non-Hispanic  &   2340 (4.46
+\backslash
+%) &   1958 (3.74
+\backslash
+%) 
 \backslash
 
 \backslash
@@ -10602,7 +11113,11 @@ midrule
 
 \begin_layout Plain Layout
 
-    American Indian/Alaska Native, non-Hispanic &   0.7 &   0.6 
+    American Indian/Alaska Native, non-Hispanic &   365 (0.7
+\backslash
+%) &   291 (0.56
+\backslash
+%) 
 \backslash
 
 \backslash
@@ -10611,7 +11126,11 @@ midrule
 
 \begin_layout Plain Layout
 
-    Native Hawaiian/Other Pacific Islander, non-Hispanic &   0.4 &   0.4 
+    Native Hawaiian/Other Pacific Islander, non-Hispanic &   185 (0.35
+\backslash
+%) &  216 (0.41
+\backslash
+%) 
 \backslash
 
 \backslash
@@ -10620,7 +11139,11 @@ midrule
 
 \begin_layout Plain Layout
 
-    Multiracial, non-Hispanic &   0.3 &   0.3 
+    Multiracial, non-Hispanic &   174 (0.33
+\backslash
+%) &  152 (0.29
+\backslash
+% 
 \backslash
 
 \backslash
@@ -10693,48 +11216,52 @@ begin{table}[htbp]
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 centering
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
-caption{Frequency of Yes/No/Unknown Variables in Living Donor Group}
+caption{Frequency of Yes/No Variables in Living Donor Group}
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 label{tab:yn_living}
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
-begin{tabular}{llrr}
+begin{tabular}{lll}
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 toprule
 \end_layout
 
 \begin_layout Plain Layout
 
-     Value & ON
+Value &    ON
 \backslash
-_DIALYSIS & PRE
+_DIALYSIS (
+\backslash
+%)  &    PRE
 \backslash
 _TX
 \backslash
-_TXFUS 
+_TXFUS (
+\backslash
+%)  
 \backslash
 
 \backslash
@@ -10743,14 +11270,18 @@ _TXFUS
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 midrule
 \end_layout
 
 \begin_layout Plain Layout
 
-     No & 22488 & 42388 
+  Yes &  22488 (42.9
+\backslash
+%) &  42388 (80.86
+\backslash
+%) 
 \backslash
 
 \backslash
@@ -10759,7 +11290,11 @@ midrule
 
 \begin_layout Plain Layout
 
-     Yes & 29932 & 10032 
+   No &  29932 (57.1
+\backslash
+%) &  10032 (19.14
+\backslash
+%) 
 \backslash
 
 \backslash
@@ -10768,14 +11303,14 @@ midrule
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 bottomrule
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 end{tabular}
 \end_layout
@@ -10826,46 +11361,50 @@ begin{table}[htbp]
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 centering
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
-caption{Frequency of N/P/ND Variables in Living Donor Group}
+caption{Frequency of N/P Variables in Living Donor Group}
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 label{tab:np_living}
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
-begin{tabular}{llrr}
+begin{tabular}{llll}
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 toprule
 \end_layout
 
 \begin_layout Plain Layout
 
-     Value & HCV
+{} & Value &  HCV
 \backslash
-_SEROSTATUS & HBV
+_SEROSTATUS (
 \backslash
-_CORE 
+%)  &        HBV
+\backslash
+_CORE (
+\backslash
+%)  
 \backslash
 
 \backslash
@@ -10874,14 +11413,18 @@ _CORE
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 midrule
 \end_layout
 
 \begin_layout Plain Layout
 
-     Negative  & 50237 & 43276 
+N  &     N &  50237 (95.84
+\backslash
+%) &  43276 (82.56
+\backslash
+%) 
 \backslash
 
 \backslash
@@ -10890,7 +11433,11 @@ midrule
 
 \begin_layout Plain Layout
 
-     Not Done  & 801   & 6429  
+ND &     P &     801 (1.53
+\backslash
+%) &   6429 (12.26
+\backslash
+%) 
 \backslash
 
 \backslash
@@ -10899,7 +11446,11 @@ midrule
 
 \begin_layout Plain Layout
 
-     Positive & 1382  & 2715  
+P  &    ND &    1382 (2.64
+\backslash
+%) &    2715 (5.18
+\backslash
+%) 
 \backslash
 
 \backslash
@@ -10908,14 +11459,14 @@ midrule
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 bottomrule
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+
 \backslash
 end{tabular}
 \end_layout
@@ -11067,8 +11618,7 @@ Certain exclusion criteria were applied to the datasets to ensure better
  deemed unnecessary.
  Additionally, records with categorical values such as "Unknown" or "Not
  Done" were removed as they added noise to the models and hindered performance.
- However, these values were still used for training deployment models, as
- they might be useful in the application.
+ However, these values were still used for training application models.
 \end_layout
 
 \begin_layout Paragraph
@@ -11231,11 +11781,11 @@ In our study, we used the scikit-survival library algorithms to train our
  When choosing the models we would fully train and fine-tune in the end,
  we tried most of the models that scikit survival offers on a small subset
  of data and chose the ones that perform best while taking adequate time.
- Despite SVM-based models demonstrating superior performance on the small
- subset of data, we decided against using them due to their inherent inability
- to handle large datasets, which results in extended training times and
- frequent crashes when attempting to train on the slightly larger subset,
- not even mentioning the entire training set.
+ Despite SVM-based survival models demonstrating superior performance on
+ the small subset of data, we decided against using them due to their inherent
+ inability to handle large datasets, which results in extended training
+ times and frequent crashes when attempting to train on the slightly larger
+ than 1000 samples subset, not even mentioning the entire training set.
  
 \end_layout
 
@@ -11304,8 +11854,8 @@ literal "false"
 \begin_layout Standard
 However, we encountered some challenges due to the relatively large dataset,
  even after all exclusion criteria and the removal of NaN values.
- RSF and GBSA demonstrated a long training time, and RSF demonstrated high
- computational demands.
+ RSF and GBSA demonstrated a prolonged training time compared to Coxnet
+ (hours instead of minutes), and RSF demonstrated high computational demands.
  The latter resulted in frequent kernel crashes in our Jupyter notebooks
  after long hours of training.
  To mitigate these issues, we divided our dataset based on living and deceased
@@ -11324,6 +11874,15 @@ ation (LDT).
  By training separate models for each subset, we were able to develop potentiall
 y more accurate and effective models.
  
+\end_layout
+
+\begin_layout Standard
+After the removal of missing values, the combined datasets contain 170,618
+ instances, which is a significant reduction from the initial dataset of
+ nearly 500,000 samples.
+ Despite this reduction, the remaining samples are likely representative
+ of the omitted data, and the dataset size remains sufficient for effective
+ model training.
 \end_layout
 
 \begin_layout Standard
@@ -11349,8 +11908,8 @@ Results
 In this study, six models were fine-tuned and trained, three for each subset.
  We utilized the Cox Elastic Net, Random Survival Forest, and GradientBoostedSur
 vivalAnalysis models from the scikit-survival library.
- Two models were trained locally (Coxnet and GBSA), and one was trained
- in a cluster (RSF).
+ Two models were trained locally (Coxnet and GBSA) on Apple MacBook Air
+ 16GB RAM, and one was trained in a cluster (RSF).
  The preferred model in this study is Coxnet due to its impressive performance
  and short training time of 30 to 180 seconds compared to other models that
  can take several hours to train.
@@ -11384,9 +11943,10 @@ noprefix "false"
 
 .
  As can be seen, the DDT models perform poorer than the living ones.
- This is probably related to the inherent DDT limitation in donor-recipient
- compatibility and the fact that the DDT dataset has older transplants from
- when the techniques were not refined.
+ This is likely related to the inherent donor-recipient compatibility limitation
+s within the DDT dataset and the presence of older transplants performed
+ with less refined technniques.
+ These shortcomings are reflected in the models.
  Moreover, models have more or less the same performance for the same dataset,
  which might mean that models capture data well, and the only bottleneck
  is the dataset.
@@ -11634,7 +12194,7 @@ name "tab:living-comparison"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -11864,18 +12424,22 @@ name "tab:deceased-comparison"
 \end_layout
 
 \begin_layout Standard
-In LDT, Coxnet performs the best.
- Although it has the same discrimination ability (c-index and mean AUC)
- as RSF, its overall performance (IBS) is superior to other models.
- For the DDT, the winner is GBSA: it slightly outperforms other models across
- all metrics.
+For LDT, RSF shows slightly superior discrimination (AUC), but the overall
+ prediction accuracy (BS) is inferior to Coxnet and GBSA.
+ For the deceased, GBSA shows superior discrimination to Coxnet and RSF,
+ but the prediction accuracy (BS) is the very similar for GBSA and Coxnet,
+ and worse for RSF.
+ Coxnet is preferred for both living and deceased due to its low training
+ time.
+ However, if training time is not a concern, GBSA may be preferred for the
+ deceased cohort due to its slightly higher discriminative ability.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -11891,12 +12455,12 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align left
 \begin_inset Graphics
-	filename Images/AUC_living.png
+	filename Images/Results/AUC_living.pdf
 	scale 50
 
 \end_inset
@@ -11939,7 +12503,7 @@ status collapsed
 \begin_layout Plain Layout
 \align right
 \begin_inset Graphics
-	filename Images/BS_living.png
+	filename Images/Results/BS_living.pdf
 	scale 50
 
 \end_inset
@@ -12030,11 +12594,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -12054,7 +12614,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Images/AUC_deceased.png
+	filename Images/Results/AUC_deceased.pdf
 	scale 50
 
 \end_inset
@@ -12096,7 +12656,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Images/BS_deceased.png
+	filename Images/Results/BS_deceased.pdf
 	scale 50
 
 \end_inset
@@ -12211,20 +12771,6 @@ noprefix "false"
  
 \end_layout
 
-\begin_layout Standard
-In conclusion, for the living, RSF shows slightly superior discrimination
- (AUC), but the overall prediction accuracy (BS) is inferior to Coxnet and
- GBSA.
- For the deceased, GBSA shows superior discrimination to Coxnet and RSF,
- but the prediction accuracy (BS) is the same for GBSA and Coxnet, and worse
- for RSF.
- Coxnet is preferred for both living and deceased due to its low training
- time.
- However, if training time is not a concern, GBSA may be preferred for the
- deceased cohort due to its slightly higher discriminative ability.
- Now, let us look at each of these models individually.
-\end_layout
-
 \begin_layout Subsection
 Coxnet 
 \begin_inset CommandInset label
@@ -12242,212 +12788,27 @@ Coxnet, also known as a Cox elastic net or Cox regularized regression, is
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Dataset
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Uno c-index
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-IBS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Mean AUC
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Living
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.723
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.136
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.743
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Deceased
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.695
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.163
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.729
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Kaplan-Meier (for IBS reference)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.247
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Coxnet performance on the test set
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Coxnet-performance"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-As Table 
+As Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Coxnet-performance"
+reference "tab:living-comparison"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- shows, Coxnet performed best for the living group and worst for the deceased.
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:deceased-comparison"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ show, Coxnet performed better for the living group and worse for the deceased.
 \end_layout
 
 \begin_layout Paragraph
@@ -12557,7 +12918,7 @@ The importance of more than 60 features was examined with the permutation
  Those of negative and zero importance were removed, increasing model performanc
 e.
  Interestingly, HLA had little influence on long-term survival, similar
- to what Terasaki noted in 
+ to what Terasaki noted in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Tissue-Typing"
@@ -12602,7 +12963,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/coxnet_living_feature_importance.png
+	filename Images/Results/Coxnet_FI_living.pdf
 	scale 80
 
 \end_inset
@@ -12644,7 +13005,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/coxnet_deceased_feature_importance.png
+	filename Images/Results/Coxnet_FI_deceased.pdf
 	scale 55
 
 \end_inset
@@ -12713,6 +13074,19 @@ literal "false"
 
 \begin_layout Paragraph
 Data Pipelines
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+expanding on ...
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -12968,17 +13342,27 @@ name "tab:RSF-result"
 \end_layout
 
 \begin_layout Standard
-Table 
+Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:RSF-result"
+reference "tab:living-comparison"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- presents RSF's performance.
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:deceased-comparison"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ present RSF's performance.
  Similarly to Coxnet and GBSA, it performs worse for the deceased than for
  the living.
  However, overall, the performance is quite similar between RSF and the
@@ -13216,11 +13600,11 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Images/RSF_FI_living.png
+	filename Images/Results/RSF_FI_living.pdf
 	scale 70
 
 \end_inset
@@ -13233,7 +13617,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Feature Importance for RSF living
+Feature Importance for RSF LDT
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Feature-Importance-for-RSF-living"
@@ -13257,11 +13641,11 @@ name "fig:Feature-Importance-for-RSF-living"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Images/RSF_FI_deceased.png
+	filename Images/Results/RSF_FI_deceased.pdf
 	scale 50
 
 \end_inset
@@ -13274,7 +13658,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-RSF feature importance deceased
+RSF Feature Importance DDT
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:RSF-feature-importance-deceased"
@@ -13331,215 +13715,30 @@ ting the model's accuracy well at that point of training.
 \end_layout
 
 \begin_layout Standard
-Table 
+Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:SGBA-result"
+reference "tab:living-comparison"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- shows the performance of two GBSA models for living and deceased subsets.
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:deceased-comparison"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ show the performance of two GBSA models for living and deceased subsets.
  As with the two previous models, the living model performs better than
  the deceased model.
  It is the best for the deceased with c_index 0.699 and IBS 0.162.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Dataset
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Uno c-index
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-IBS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Mean AUC
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Living
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.722
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.135
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.743
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Deceased
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.699
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.162
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.734
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Kaplan-Meier (for IBS reference)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.247
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-SGBA results.
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:SGBA-result"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -13569,8 +13768,8 @@ literal "false"
 \end_inset
 
 .
- The optimal number of estimators for the deceased was 110 (trained 160),
- and for the living, it was 94 (trained 144).
+ The optimal number of estimators for the deceased was 110, and for the
+ living, it was 94.
  Figures 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -13778,13 +13977,6 @@ Initially, we performed feature selection on models with a small number
  more or less consistent for both trained and under-trained models.
 \end_layout
 
-\begin_layout Standard
-Another thing worth noting is that this model, contrary to the others, had
- no features with negative feature importance, meaning the model is not
- affected by wrongly chosen features.
- So, the feature selection process for this model can be more liberal.
-\end_layout
-
 \begin_layout Paragraph
 Feature Importance 
 \end_layout
@@ -13826,7 +14018,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Images/GBSA_FI_living.png
+	filename Images/Results/GBSA_FI_living.pdf
 	scale 70
 
 \end_inset
@@ -13839,7 +14031,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-GBSA living feature importance
+GBSA Feature Importance LDT
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:GBSA-living-feature"
@@ -13867,11 +14059,11 @@ name "fig:GBSA-living-feature"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Images/GBSA_FI_Deceased.png
+	filename Images/Results/GBSA_FI_deceased.pdf
 	scale 60
 
 \end_inset
@@ -13883,7 +14075,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-GBSA deceased feature importance
+GBSA Feature Importance DDT
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:GBSA-deceased-feature"
@@ -14013,12 +14205,12 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/scoring_attempt.png
+	filename Images/Results/scoring.pdf
 	scale 60
 
 \end_inset
@@ -14030,7 +14222,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Plot of predicted hazard over days lived for LDT with event happening.
+Plot of Predicted Hazard Over Days Survived for LDT with Event Happening.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:predicted-hazard-over-days-lived"
@@ -14080,9 +14272,8 @@ Our goal was to create a model that could estimate the life expectancy of
  highest c-index of 0.699 achieved for DDT using GBSA and 0.723 for LDT using
  Coxnet over a 15-year period.
  However, we found that the DDT model performance was inferior to that of
- LDT, likely because donor-recipient compatibility is rarely perfect due
- to the inability to perform in-depth compatibility analysis at the time
- the organ is available.
+ LDT, likely due to intrinsic limitations in donor-recipient compatibility
+ present in the DDT dataset.
  Another reason might be related to the data itself.
  The DDT dataset might have more of older records when the techniques of
  transplantation and immunosuppression were not that refined, which might
@@ -14274,7 +14465,7 @@ name "chap:Applications"
 This chapter focuses on the software used in kidney transplantation.
  We will start by exploring k
 \emph on
-idney pair donation
+idney paired donation
 \emph default
  (KPD), with its intricacies and necessary terminology.
  Then, we will examine three solutions for KPD.
@@ -14336,8 +14527,8 @@ kidney exchange program
 
 \begin_layout Standard
 An example of how KPD works is as follows.
- Suppose A, B, and C are donor-recipient pairs with incompatible donors,
- and a recipient is compatible with the donor from the next pair.
+ Suppose A, B, and C are incompatible donor-recipient pairs, and a recipient
+ is compatible with the donor from the next pair.
  Donor A donates their kidney to recipient B; donor B donates theirs to
  recipient C; and donor C donates theirs to recipient A.
  Such a sequence of transplantations is called a loop.
@@ -14617,7 +14808,7 @@ Furthermore, TX Matching has a wide range of configurable settings, allowing
 lity.
  Although, TX Matching is used primarily by the Czech Institute of Clinical
  and Experimental Medicine, efforts have been made to expand to other transplant
-ation centers, but unfortunately, they were unsuccessful.
+ation centers, but unfortunately, they were unsuccessful so far.
 \end_layout
 
 \begin_layout Subsection
@@ -14625,7 +14816,7 @@ KidneyMatch
 \end_layout
 
 \begin_layout Standard
-KidneyMatch is the software developed and used by The Alliance for Pair
+KidneyMatch is the software developed and used by The Alliance for Paired
  Kidney Donation (APKD).
  They highly emphasize the security of their app: multifactor authentication,
  role-based authorization, and audit trails on every action in the software.
@@ -14683,7 +14874,7 @@ literal "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -14796,7 +14987,7 @@ noprefix "false"
 
 \end_inset
 
-features KidneyLife's user interface.
+ features KidneyLife's user interface.
  On the left, you can see the form for the input of the data.
  On its top, you can notice a dropdown menu for the model selection.
  Categorical features can be selected through dropdowns, while numerical
@@ -14816,7 +15007,7 @@ noprefix "false"
 \end_inset
 
  under the ”Front End” subsection.
- Further insights into the UI you can get at 
+ Further insights into the UI you can get in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Functionality-and-UX"
@@ -14929,9 +15120,7 @@ name "subsec:Architecture"
 \end_layout
 
 \begin_layout Standard
-The application was built with Docker Compose.
- The Docker Compose stack consists of backend, frontend, and reverse proxy
- services.
+The application was built with Docker.
  Docker is a software platform that allows developers to package their applicati
 ons in containers, a standard unit of software that bundles code and its
  dependencies to ensure fast and reliable execution across various computing
@@ -15058,9 +15247,9 @@ The back-end REST API consists of two endpoints: one for prediction and
  the other for synthetic data generation.
  The prediction endpoint expects the request body with two parameters: the
  model name and the data dictionary.
- It then validates the data, loads the model, passes data through the data
- pipeline to make the data usable by the model, loads the model, makes a
- prediction, and sends the results to the front end as a response.
+ It then validates the data, passes data through the data pipeline to make
+ the data usable by the model, loads data into the model, makes a prediction,
+ and sends the results to the front end as a response.
 \end_layout
 
 \begin_layout Standard
@@ -15266,8 +15455,7 @@ literal "false"
 
 \end_inset
 
-, which is particularly advantageous for doctors, as they can benefit from
- anything making their lives calmer.
+.
  Moreover, blue is generally a safe color, as it appeals to a larger audience.
  Simplicity, being one of the main principles of modern web design, was
  naturally prioritized as inference applications inherently have little
@@ -15471,7 +15659,7 @@ Kidney Life Dashboard page concept
 Before implementing any of the mentioned points, we need to reach out to
  institutions to see if this application is what actually transplant centers
  need.
- In case if it is, the further development of the application can take place,
+ In case it is, the further development of the application can take place,
  making sure that it aligns with the needs of any given institution.
 \end_layout
 
@@ -15556,8 +15744,8 @@ The performance of the models was evaluated using the Uno concordance index
 \end_layout
 
 \begin_layout Standard
-The DDT models achieved a c-index of 0.691 - 0.699 Uno c-index, while the
- LDT models achieved a 0.722-0.723.
+The DDT models achieved an Uno c-index of 0.691 - 0.699, while the LDT models
+ achieved a 0.722-0.723.
  However, the results are comparable to other papers that trained models
  without any separation.
  
