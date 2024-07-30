@@ -4764,7 +4764,7 @@ purest
  A node is pure if all training instances it applies to belong to the same
  class.
  The following impurity methods are common: Gini impurity and entropy for
- classification, while MSE for regression.
+ classification, and MSE for regression.
 \end_layout
 
 \begin_layout Standard
@@ -4884,17 +4884,18 @@ pruning
 
  test are used to estimate the probability of the improvement being the
  result of a chance (the null hypothesis).
- If the probability (p-value) is greater than a certain threshold (often
- 5%), the node is deemed unnecessary, and its children are deleted.
+ If the probability (p-value) exceeds a certain threshold (often 5%), the
+ node is deemed unnecessary, and its children are deleted.
 \end_layout
 
 \begin_layout Standard
 Linear algorithms, like linear regression, assume that data are linear.
  In contrast, decision trees make no such assumption about the data.
- As a result, Decision Trees are categorized as nonparametric algorithms.
- This is because the number of parameters is not predefined before training,
- allowing the algorithm to fit the data closely, possibly leading to overfitting.
- To prevent overfitting, the algorithm needs to be regularized.
+ As a result, Decision Trees are classified as nonparametric algorithms
+ because the number of parameters is not predefined before training.
+ This flexibility allows the algorithm to fit the data closely, possibly
+ leading to overfitting.
+ Consequently, the algorithm needs to be regularized to prevent overfitting.
  The following hyperparameters can help with regularization and preventing
  overfitting:
 \end_layout
@@ -4938,8 +4939,7 @@ max_leaf_nodes
 \emph on
 max_features
 \emph default
- - sets the maximum number of features that are evaluated for splitting
- at each node.
+ - sets the maximum number of features evaluated for splitting at each node.
 \end_layout
 
 \begin_layout Standard
@@ -4948,7 +4948,7 @@ The most critical parameter to limit is
 max_depth
 \emph default
 .
- In general, increasing 
+ Increasing 
 \emph on
 min_*
 \emph default
@@ -4978,12 +4978,11 @@ Now, let us discuss several limitations.
  The first one is that the Decision Tree is a greedy algorithm, which means
  that finding an optimal model is nearly impossible since it's an NP-complete
  problem.
- NP-complete problems are a class of problems that are both NP (solutions
- can be verified in polynomial time) and NP-hard (any NP problem can be
- reduced to it in polynomial time).
+ NP-complete problems are both NP (solutions can be verified in polynomial
+ time) and NP-hard (any NP problem can be reduced to it in polynomial time).
  Additionally, decision trees are sensitive to small changes in data.
- This can be addressed by using PCA or opting for the ensemble models mentioned
- earlier, which are generally able to mitigate this instability.
+ This problem can be addressed by using PCA or opting for the ensemble models
+ mentioned earlier, which are generally able to mitigate this instability.
 \end_layout
 
 \begin_layout Subsection
@@ -5005,6 +5004,19 @@ Friedman, J.
 G.
  Ridgeway, “The state of boosting,” Computing Science and Statistics, 172–181,
  1999.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+general template/approach rather than detailed description of the GBSA
 \end_layout
 
 \end_inset
