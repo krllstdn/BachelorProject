@@ -4682,36 +4682,6 @@ We can adapt SVM to work with nonlinearly separable datasets by applying
 \end_layout
 
 \begin_layout Subsection
-Gradient Boosting
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-gbsa - papers/boosting.pdf>Boosting PH
-\end_layout
-
-\begin_layout Plain Layout
-trees are predicting the negative gradient of the loss (decrease)
-\end_layout
-
-\begin_layout Plain Layout
-this negative gradient is called a pseudo residual - difference between
- actual and intermediate predicted value.
-\end_layout
-
-\begin_layout Plain Layout
-in GB, residual is the gradient of loss function
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
 Decision Trees
 \end_layout
 
@@ -4844,8 +4814,8 @@ Consequently, the entropy is zero if all instances are of the same class.
 \end_layout
 
 \begin_layout Standard
-In regression, CART tries to split the dataset in each node in a way that
- minimizes mean squared error (MSE) (seen previously in Equation 
+In regression, CART tries to split the dataset in each node to minimize
+ mean squared error (MSE) (seen previously in Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:mse"
@@ -5016,8 +4986,8 @@ Now, let us discuss several limitations.
  earlier, which are generally able to mitigate this instability.
 \end_layout
 
-\begin_layout Section
-Unsupervised Learning
+\begin_layout Subsection
+Stochastic Gradient Boosting
 \end_layout
 
 \begin_layout Standard
@@ -5025,12 +4995,265 @@ Unsupervised Learning
 status open
 
 \begin_layout Plain Layout
-add examples of algos used
+Friedman, J.
+ (1999, March).
+ Stochastic gradient boosting.
+ Technical report, Stanford University, Statistics Department.
+\end_layout
+
+\begin_layout Plain Layout
+G.
+ Ridgeway, “The state of boosting,” Computing Science and Statistics, 172–181,
+ 1999.
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Boosting is an approach to building an ensemble model, where weak learners
+ are trained and added to the model in a sequential way, each trying to
+ correct its predecessor.
+ The most common boosting algorithms are AdaBoost and Gradient Boosting.
+ Gradient Boosting is an ensemble machine learning algorithm that uses Decision
+ Trees as a base learner.
+ Each subsequent learner is trained to fit the residuals of the previous
+ model.
+ Residuals are typically the difference between the predicted values and
+ the actual values.
+ In this context, however, they are called pseudo-residuals, as they represent
+ the negative gradients of the loss function.
+ In this section we will look into the modification of the Gradient Boosting
+ called Stochastic Gradient Boosting, which was presented in the same work
+ by Friedman.
+ The only difference from the original Gradient Boosting is that it draws
+ a subset of random instances from the training set to compute the negative
+ gradient (step 2) and train the base learner (step 3) instead of using
+ the whole training set.
+ We have chosen it over the original to shorten the training time.
+ 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\{(\mathbf{x}_{i},y_{i})\}_{i=0}^{n}$
+\end_inset
+
+ be the training set, 
+\begin_inset Formula $L(y_{i},F(\mathbf{x}))$
+\end_inset
+
+ be a diferentiable loss function, and 
+\begin_inset Formula $\{\pi(i)\}_{1}^{N}$
+\end_inset
+
+ be a random permutation of integers 
+\begin_inset Formula $\{1,...,N\}$
+\end_inset
+
+.
+ Then a subset of random instances of size 
+\begin_inset Formula $\widetilde{N}<N$
+\end_inset
+
+ is given by 
+\begin_inset Formula $\{(\mathbf{x}_{\pi(i)},y_{\pi(i)})\}_{i=0}^{\widetilde{N}}$
+\end_inset
+
+and the Stochastic Gradient Boosting is denoted as follows:
+\end_layout
+
+\begin_layout Standard
+Initialize the model 
+\begin_inset Formula $F_{0}(\mathbf{x})=\underset{\gamma}{\arg\min}\sum_{i=1}^{N}L(y_{i},\gamma)$
+\end_inset
+
+.
+ (find the predicted value, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, that minimizes the total error)
+\end_layout
+
+\begin_layout Standard
+For each tree 
+\begin_inset Formula $m=1,...,M$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(M is the number of trees to train, set by hypeparameter 
+\emph on
+n_estimators
+\emph default
+)
+\end_layout
+
+\end_inset
+
+ perform the following steps:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{\pi(i)\}_{1}^{N}=rand\_perm\{i\}_{1}^{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute the negative gradient (pseudo-residual)
+\begin_inset Formula 
+\[
+\tilde{y_{\pi(i),m}}=\left[\frac{\partial L(y_{\pi(i)},F(\mathbf{x}_{\pi(i)}))}{\partial F(\mathbf{x}_{\pi(i)})}\right]_{F(\mathbf{x)=F_{m-1}(}\mathbf{x})},i=1,...,\tilde{N}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Fit a regression tree to the residuals 
+\begin_inset Formula $\tilde{y}_{\pi(i),m}$
+\end_inset
+
+ and create terminal regions (leafs) 
+\begin_inset Formula $R_{lm}$
+\end_inset
+
+ for 
+\begin_inset Formula $l=1,...,L$
+\end_inset
+
+ (each leaf in a tree m) 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+boosting.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $l=1,...,L_{m}$
+\end_inset
+
+ compute 
+\begin_inset Formula $\gamma_{l,m}=\underset{\gamma}{\arg\min}\sum_{x_{\pi(i)}\in R_{l,m}}L(y_{\pi(i)},F_{m-1}(x_{\pi(i)})+\gamma)$
+\end_inset
+
+ – determine the output value 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ for each leaf 
+\begin_inset Formula $l$
+\end_inset
+
+ that minimizes the error.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Update 
+\begin_inset Formula $F_{m}(x)=F_{m-1}(\mathbf{x})+\nu\cdot\gamma_{l,m}I(\mathbf{x}\in R_{l,m})$
+\end_inset
+
+.
+ Where 
+\begin_inset Formula $\nu\in[0,1]$
+\end_inset
+
+ is a learning rate (or shrinkage parameter) which regulates how much influence
+ each trained tree has on the final result.
+ Generally, lower values are recommended and the number of estimators must
+ be increased accordingly.
+ 
+\begin_inset Formula $I()$
+\end_inset
+
+ is an indicator function and it is equal to one, only if 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+is in this region (leaf) 
+\begin_inset Formula $R_{l,m}$
+\end_inset
+
+, and zero otherwise.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\widetilde{N}=N$
+\end_inset
+
+ will produce no randomness and it would the regular Gradient Boosting algorithm.
+ Smaller fraction 
+\begin_inset Formula $\frac{\widetilde{N}}{N}$
+\end_inset
+
+would result in higher randomness and a higher variance of the learner.
+ So this value must be chosen wisely.
+ 
+\end_layout
+
+\begin_layout Standard
+Friedman suggested various algorithms based on this template with different
+ loss functions for regression and classification.
+ Ridgeway extended this algorithm to survival analysis, a branch of statistics
+ that studies time until event (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Survival-Analysis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ explains it in more detail), by using the Cox Proportional Hazards loss.
+ More on that is Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Gradient-Boosted-Survival"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+we will present the extended version of this algorithm adapted to survival
+ analysis in section ...
+ It mostly remains the same
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Unsupervised Learning
 \end_layout
 
 \begin_layout Standard
@@ -6006,7 +6229,14 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-Survival Analysis
+Survival Analysis 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Survival-Analysis"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -13696,6 +13926,21 @@ The LDT trained for 65 minutes, and the DDT for about 80 minutes.
 
 \begin_layout Subsection
 Gradient Boosting Survival Analysis
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+subsamples are 0.5 because Friedman.
+ (it is roughly bootstrap samples and if it would be lower the variance
+ would increase.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
