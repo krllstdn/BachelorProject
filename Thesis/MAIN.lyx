@@ -4688,7 +4688,7 @@ Decision Trees
 \begin_layout Standard
 A Decision Tree is a versatile and highly interpretable machine learning
  algorithm that can perform both classification and regression tasks.
- It is a key component of 
+ It is a critical component of 
 \emph on
 GradientBoostedSurvivalAnalysis
 \emph default
@@ -4764,7 +4764,7 @@ purest
  A node is pure if all training instances it applies to belong to the same
  class.
  The following impurity methods are common: Gini impurity and entropy for
- classification, and MSE for regression.
+ classification and MSE for regression.
 \end_layout
 
 \begin_layout Standard
@@ -4978,8 +4978,8 @@ Now, let us discuss several limitations.
  The first one is that the Decision Tree is a greedy algorithm, which means
  that finding an optimal model is nearly impossible since it's an NP-complete
  problem.
- NP-complete problems are both NP (solutions can be verified in polynomial
- time) and NP-hard (any NP problem can be reduced to it in polynomial time).
+ NP-complete problems are NP (solutions can be verified in polynomial time)
+ and NP-hard (any NP problem can be reduced to it in polynomial time).
  Additionally, decision trees are sensitive to small changes in data.
  This problem can be addressed by using PCA or opting for the ensemble models
  mentioned earlier, which are generally able to mitigate this instability.
@@ -4990,62 +4990,41 @@ Stochastic Gradient Boosting
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Friedman, J.
- (1999, March).
- Stochastic gradient boosting.
- Technical report, Stanford University, Statistics Department.
-\end_layout
-
-\begin_layout Plain Layout
-G.
- Ridgeway, “The state of boosting,” Computing Science and Statistics, 172–181,
- 1999.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-general template/approach rather than detailed description of the GBSA
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Boosting is an approach to building an ensemble model, where weak learners
- are trained and added to the model in a sequential way, each trying to
- correct its predecessor.
+ are trained and sequentially added to the model, each trying to correct
+ its predecessor.
  The most common boosting algorithms are AdaBoost and Gradient Boosting.
- Gradient Boosting is an ensemble machine learning algorithm that uses Decision
+ Gradient Boosting is an ensemble machine learning method that uses Decision
  Trees as a base learner.
  Each subsequent learner is trained to fit the residuals of the previous
- model.
+ model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+literal "false"
+
+\end_inset
+
+.
  Residuals are typically the difference between the predicted values and
  the actual values.
  In this context, however, they are called pseudo-residuals, as they represent
  the negative gradients of the loss function.
- In this section we will look into the modification of the Gradient Boosting
- called Stochastic Gradient Boosting, which was presented in the same work
- by Friedman.
+ This section will look into the modification of Gradient Boosting, called
+ Stochastic Gradient Boosting, presented in Friedman's work 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-69"
+literal "false"
+
+\end_inset
+
+.
  The only difference from the original Gradient Boosting is that it draws
  a subset of random instances from the training set to compute the negative
  gradient (step 2) and train the base learner (step 3) instead of using
  the whole training set.
  We have chosen it over the original to shorten the training time.
- 
 \end_layout
 
 \begin_layout Standard
@@ -5057,7 +5036,7 @@ Let
 \begin_inset Formula $L(y_{i},F(\mathbf{x}))$
 \end_inset
 
- be a diferentiable loss function, and 
+ be a differentiable loss function, and 
 \begin_inset Formula $\{\pi(i)\}_{1}^{N}$
 \end_inset
 
@@ -5082,12 +5061,11 @@ Initialize the model
 \begin_inset Formula $F_{0}(\mathbf{x})=\underset{\gamma}{\arg\min}\sum_{i=1}^{N}L(y_{i},\gamma)$
 \end_inset
 
-.
- (find the predicted value, 
+, where 
 \begin_inset Formula $\gamma$
 \end_inset
 
-, that minimizes the total error)
+ is the predicted value that minimizes the total error.
 \end_layout
 
 \begin_layout Standard
@@ -5095,21 +5073,15 @@ For each tree
 \begin_inset Formula $m=1,...,M$
 \end_inset
 
+ (where 
+\begin_inset Formula $M$
+\end_inset
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(M is the number of trees to train, set by hypeparameter 
+ is the number of treesspecified by the hyperparameter 
 \emph on
 n_estimators
 \emph default
-)
-\end_layout
-
-\end_inset
-
- perform the following steps:
+) perform the following steps:
 \end_layout
 
 \begin_layout Enumerate
@@ -5136,7 +5108,7 @@ Fit a regression tree to the residuals
 \begin_inset Formula $\tilde{y}_{\pi(i),m}$
 \end_inset
 
- and create terminal regions (leafs) 
+ and create terminal regions (leaves) 
 \begin_inset Formula $R_{lm}$
 \end_inset
 
@@ -5144,17 +5116,23 @@ Fit a regression tree to the residuals
 \begin_inset Formula $l=1,...,L$
 \end_inset
 
- (each leaf in a tree m) 
-\begin_inset Note Note
-status open
+, where 
+\begin_inset Formula $l$
+\end_inset
 
-\begin_layout Plain Layout
-boosting.pdf
-\end_layout
+ is each leaf in a tree 
+\begin_inset Formula $m$
+\end_inset
+
+) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-70"
+literal "false"
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -5163,7 +5141,7 @@ For
 \end_inset
 
  compute 
-\begin_inset Formula $\gamma_{l,m}=\underset{\gamma}{\arg\min}\sum_{x_{\pi(i)}\in R_{l,m}}L(y_{\pi(i)},F_{m-1}(x_{\pi(i)})+\gamma)$
+\begin_inset Formula $\gamma_{l,m}=\underset{\gamma}{\arg\min}\sum_{\mathbf{x}_{\pi(i)}\in R_{l,m}}L(y_{\pi(i)},F_{m-1}(\mathbf{x}_{\pi(i)})+\gamma)$
 \end_inset
 
  – determine the output value 
@@ -5190,8 +5168,9 @@ Update
 
  is a learning rate (or shrinkage parameter) which regulates how much influence
  each trained tree has on the final result.
- Generally, lower values are recommended and the number of estimators must
- be increased accordingly.
+ Generally, lower values are recommended, necessitating the increase of
+ the number of estimators.
+ Such combination generally leads to better generalization.
  
 \begin_inset Formula $I()$
 \end_inset
@@ -5211,21 +5190,31 @@ is in this region (leaf)
 \begin_inset Formula $\widetilde{N}=N$
 \end_inset
 
- will produce no randomness and it would the regular Gradient Boosting algorithm.
- Smaller fraction 
+ will produce no randomness, effectively resulting in the original Gradient
+ Boosting algorithm.
+ A smaller fraction, 
 \begin_inset Formula $\frac{\widetilde{N}}{N}$
 \end_inset
 
-would result in higher randomness and a higher variance of the learner.
- So this value must be chosen wisely.
+, introduces a trade-off: it increases randomness and decreases training
+ time but also leads to higher variance in the learner.
+ So, this value must be chosen wisely.
  
 \end_layout
 
 \begin_layout Standard
 Friedman suggested various algorithms based on this template with different
  loss functions for regression and classification.
- Ridgeway extended this algorithm to survival analysis, a branch of statistics
- that studies time until event (Section 
+ Ridgeway 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-70"
+literal "false"
+
+\end_inset
+
+ extended this algorithm to survival analysis, a branch of statistics that
+ studies time until event (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Survival-Analysis"
@@ -5246,22 +5235,7 @@ noprefix "false"
 
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-we will present the extended version of this algorithm adapted to survival
- analysis in section ...
- It mostly remains the same
-\end_layout
-
-\end_inset
-
-
+, which is dedicated to the algorithm used in the practical part.
 \end_layout
 
 \begin_layout Section
@@ -17773,6 +17747,33 @@ literal "false"
  USAFacts; USAFacts.
  https://usafacts.org/data/topics/people-society/population-and-demographics/our-
 changing-population/
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-69"
+literal "false"
+
+\end_inset
+
+Friedman, J.
+ (1999, March).
+ Stochastic gradient boosting.
+ Technical report, Stanford University, Statistics Department.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-70"
+literal "false"
+
+\end_inset
+
+G.
+ Ridgeway, “The state of boosting,” Computing Science and Statistics, 172–181,
+ 1999.
 \end_layout
 
 \end_body
