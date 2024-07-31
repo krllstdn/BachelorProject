@@ -474,7 +474,7 @@ Academic
 \begin_inset space ~
 \end_inset
 
-year: 2022/2023
+year: 2023/2024
 \end_layout
 
 \begin_layout Standard
@@ -981,44 +981,6 @@ addcontentsline{toc}{chapter}{Introduction}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-what I did in the work:
-\end_layout
-
-\begin_layout Plain Layout
-- brief history of KT
-\end_layout
-
-\begin_layout Plain Layout
-- intro to immunology of KT
-\end_layout
-
-\begin_layout Plain Layout
-- what is the problem my work solves: the absense of good post-transplant
- survival predictive tools and the uncertainty what will happen after the
- transplant.
-\end_layout
-
-\begin_layout Plain Layout
-- why it is particularly important now: more and more people are suffering
- from diabetes and high blood pressure, which often result in chronic kidney
- disease, which in its end stage necessitates transplantation.
- 10% of population are suffering from different stages of CKD
-\end_layout
-
-\begin_layout Plain Layout
-- 
-\end_layout
-
-\begin_layout Plain Layout
-- about the AI in medicine
-\end_layout
-
-\end_inset
-
 
 \emph on
 Chronic kidney disease (CKD)
@@ -4683,6 +4645,13 @@ We can adapt SVM to work with nonlinearly separable datasets by applying
 
 \begin_layout Subsection
 Decision Trees
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Decision-Trees"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4986,7 +4955,14 @@ Now, let us discuss several limitations.
 \end_layout
 
 \begin_layout Subsection
-Stochastic Gradient Boosting
+Stochastic Gradient Boosting 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Stochastic-Gradient-Boosting"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4994,8 +4970,17 @@ Boosting is an approach to building an ensemble model, where weak learners
  are trained and sequentially added to the model, each trying to correct
  its predecessor.
  The most common boosting algorithms are AdaBoost and Gradient Boosting.
- Gradient Boosting is an ensemble machine learning method that uses Decision
- Trees as a base learner.
+ Gradient Boosting is an
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+a framework for building many algorithms by optimizing different loss functions
+\end_layout
+
+\end_inset
+
+ ensemble machine learning method that uses Decision Trees as a base learner.
  Each subsequent learner is trained to fit the residuals of the previous
  model 
 \begin_inset CommandInset citation
@@ -7865,9 +7850,9 @@ log-partial likelihood
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-LL(\beta)=-\sum_{j=1}^{N}\delta_{j}\{X_{j}\beta-log[\sum_{i\epsilon R_{j}}exp(X_{i}\beta)]\}.
-\]
+\begin{equation}
+LL(\beta)=-\sum_{j=1}^{N}\delta_{j}\{X_{j}\beta-log[\sum_{i\epsilon R_{j}}exp(X_{i}\beta)]\}\label{eq:neg-partial-log-likelihood}
+\end{equation}
 
 \end_inset
 
@@ -8243,59 +8228,135 @@ name "subsec:Gradient-Boosted-Survival"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Gradient-boosted Cox proportional hazard loss with regression trees as base
- learner.
-\end_layout
-
-\begin_layout Plain Layout
-In each stage, a regression tree is fit on the negative gradient of the
- loss function.
-\end_layout
+Gradient Boosted Survival Analysis (GBSA) is a Gradient Boosting algorithm
+ (discussed in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Stochastic-Gradient-Boosting"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
+) adapted for survival analysis and implemented within the Scikit-survival
+ package.
+ Friedman's Gradient Boosting is adapted to survival analysis by setting
+ the partial log-likelihood as the loss function and following the algorithm
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-70"
+literal "false"
 
+\end_inset
+
+.
+ The partial log-likelihood allows for the inclusion of censored instances
+ without introducing bias.
+ GBSA shares many hyperparameters with the Decision Trees (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Decision-Trees"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), such as 
+\emph on
+max_depth
+\emph default
+, 
+\emph on
+min_samples_split
+\emph default
+ and others, for the apparent reason of trees being a base learner.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-loss=coxph
+In addition to Cox Proportional Hazards (”coxph” value of ”loss” hyperparameter)
+, GBSA also allows for choosing other loss functions, such as squared regression
+ loss (”squared”) that ignores predictions beyond the time of censoring
+ and inverse-probability of censoring weighted least squares error (”ipcwls”).
+ In this work, we will use the Cox Proportional Hazard loss.
+ Other hyperparameters that we have used are:
 \end_layout
 
-\begin_layout Plain Layout
-learning rate
+\begin_layout Itemize
+
+\emph on
+learning_rate
+\emph default
+ hyperparameter refers to the weight of each learner's contribution.
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Itemize
+
+\emph on
 n_estimators
-\end_layout
+\emph default
+ dictates how many estimators must be trained.
+ It is the value of 
+\begin_inset Formula $M$
+\end_inset
 
-\begin_layout Plain Layout
-subsample
-\end_layout
-
-\begin_layout Plain Layout
-min_samples_split
-\end_layout
-
-\begin_layout Plain Layout
-max_depth
-\end_layout
-
-\begin_layout Plain Layout
-random state
-\end_layout
+ from the Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Stochastic-Gradient-Boosting"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
+.
+\end_layout
 
+\begin_layout Itemize
+
+\emph on
+subsample
+\emph default
+ sets the fraction of the dataset to be used to train each individual learner.
+ Values span 
+\begin_inset Formula $(0,1]$
+\end_inset
+
+, where 
+\begin_inset Formula $1.0$
+\end_inset
+
+ denotes Gradient Boosting, while values less than 
+\begin_inset Formula $1.0$
+\end_inset
+
+ result in the Stochastic Gradient Boosting algorithm.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+random_state
+\emph default
+ allows us to control the randomness during training to ensure that any
+ performance improvements are due to deliberate changes rather than random
+ fluctuations.
+\end_layout
+
+\begin_layout Standard
+For more information on the numerous hyperparameters, you can refer to the
+ GBSA documentation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-56"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
