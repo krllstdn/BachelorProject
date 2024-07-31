@@ -1881,7 +1881,7 @@ However, it was during that period that Yurii Voronyi achieved a significant
  recovery, regaining normal kidney function 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-4"
+key "key-4-matevossian"
 literal "false"
 
 \end_inset
@@ -1963,7 +1963,7 @@ Attempts in Immunosuppression
 According to 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-3"
+key "key-3-barker"
 literal "false"
 
 \end_inset
@@ -2034,7 +2034,7 @@ Plateau
 \begin_layout Standard
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-3"
+key "key-3-barker"
 literal "false"
 
 \end_inset
@@ -2075,7 +2075,7 @@ name "subsec:Tissue-Typing"
 As 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-3"
+key "key-3-barker"
 literal "false"
 
 \end_inset
@@ -2151,7 +2151,7 @@ Advancements in Immunosuppression
 In continuation with 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-3"
+key "key-3-barker"
 literal "false"
 
 \end_inset
@@ -2199,7 +2199,7 @@ name "sec:Intro-to-Immunology"
 As detailed in 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-6"
+key "key-6-abbas"
 literal "false"
 
 \end_inset
@@ -4909,6 +4909,28 @@ max_leaf_nodes
 max_features
 \emph default
  - sets the maximum number of features evaluated for splitting at each node.
+ Supports the following values: integer, float, square root of all features
+ (
+\begin_inset Quotes sld
+\end_inset
+
+sqrt
+\begin_inset Quotes srd
+\end_inset
+
+), 
+\begin_inset Formula $log_{2}$
+\end_inset
+
+ of the number of features (
+\begin_inset Quotes sld
+\end_inset
+
+log2
+\begin_inset Quotes srd
+\end_inset
+
+), and None (all features)
 \end_layout
 
 \begin_layout Standard
@@ -4926,6 +4948,64 @@ min_*
 max_*
 \emph default
  will help to regularize the model.
+ There are other hyperparameters that are not related to regularization:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+criterion
+\emph default
+ hyperparameter specifies the function to assess the quality of a split.
+ In the scenario described above this is MSE.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+splitter
+\emph default
+ defines the strategy for choose the split at each node.
+ There are two available splitters: 
+\begin_inset Quotes sld
+\end_inset
+
+best
+\begin_inset Quotes srd
+\end_inset
+
+ to choose the best split and 
+\begin_inset Quotes sld
+\end_inset
+
+random
+\begin_inset Quotes srd
+\end_inset
+
+ to choose the random split.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+random_state
+\emph default
+ defines the randomness of the estimator, as features are randomly permuted
+ at each split.
+\end_layout
+
+\begin_layout Standard
+For more information on the hyperparameters, refer to the scikit-learn documenta
+tion 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-74"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -7536,6 +7616,13 @@ Nelson-Aalen
 
 \begin_layout Subsubsection
 Log-rank test
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Log-rank-test"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -8216,6 +8303,78 @@ Machine Learning Methods
 Survival Tree
 \end_layout
 
+\begin_layout Standard
+Survival Tree is an adaptation of a Decision Tree (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Decision-Trees"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) to Survival Analysis, presented by LeBlanc 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-71"
+literal "false"
+
+\end_inset
+
+.
+ Similarly to the CART algorithm, it recursively divides the dataset at
+ each node based on one feature that maximizes the dissimilarity in the
+ survival distribution instead of minimizing the MSE.
+ The dissimilarity is measured with a log-rank test (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Log-rank-test"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) or any other test that can handle the survival data.
+ LeBlanc shows that log-rank performs well for splitting survival data.
+ The scikit-survival implementation of the Survival Tree also uses log-rank.
+ In the original paper by LeBlanc, pruning was suggested as a way to deal
+ with overfitting.
+ However, after reviewing the source code for the scikit-survival's SurvivalTree
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-72"
+literal "false"
+
+\end_inset
+
+ and Scikit-learn's DepthFirstTreeBuilder 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-73"
+literal "false"
+
+\end_inset
+
+ (used in SurvivalTree), we saw that they did not use pruning.
+ The model should be regularized manually with hyperparameter tuning.
+ All key regularization hyperparameters are the same as in Decision Trees
+ (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Decision-Trees"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), namely max_depth, min_samples_split, and others.
+ 
+\end_layout
+
 \begin_layout Subsubsection
 Gradient Boosted Survival Analysis 
 \begin_inset CommandInset label
@@ -8228,8 +8387,15 @@ name "subsec:Gradient-Boosted-Survival"
 \end_layout
 
 \begin_layout Standard
-Gradient Boosted Survival Analysis (GBSA) is a Gradient Boosting algorithm
- (discussed in 
+Gradient Boosted Survival Analysis (GBSA) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-56"
+literal "false"
+
+\end_inset
+
+ is a Gradient Boosting algorithm (discussed in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Stochastic-Gradient-Boosting"
@@ -8289,7 +8455,7 @@ In addition to Cox Proportional Hazards (”coxph” value of ”loss” hyperpa
 \emph on
 learning_rate
 \emph default
- hyperparameter refers to the weight of each learner's contribution.
+ - hyperparameter sets the weight of each learner's contribution.
 \end_layout
 
 \begin_layout Itemize
@@ -8297,7 +8463,7 @@ learning_rate
 \emph on
 n_estimators
 \emph default
- dictates how many estimators must be trained.
+ - dictates how many estimators must be trained.
  It is the value of 
 \begin_inset Formula $M$
 \end_inset
@@ -8320,7 +8486,8 @@ noprefix "false"
 \emph on
 subsample
 \emph default
- sets the fraction of the dataset to be used to train each individual learner.
+ - sets the fraction of the dataset to be used to train each individual
+ learner.
  Values span 
 \begin_inset Formula $(0,1]$
 \end_inset
@@ -8341,7 +8508,7 @@ subsample
 \emph on
 random_state
 \emph default
- allows us to control the randomness during training to ensure that any
+ - allows us to control the randomness during training to ensure that any
  performance improvements are due to deliberate changes rather than random
  fluctuations.
 \end_layout
@@ -8448,6 +8615,16 @@ For each sample, develop a full-grown survival tree based on the selected
  splitting criterion.
  At each node, randomly select 
 \begin_inset Formula $\sqrt{p}$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+max_features
+\end_layout
+
 \end_inset
 
  (or other number) covariates, where 
@@ -13677,7 +13854,7 @@ shows the fine-tuned hyperparameters, as well as the values that were tested
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -16649,6 +16826,39 @@ listoftables
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+scikit-survival/sksurv/tree/tree.py at v0.23.0 · sebp/scikit-survival.
+ (2024).
+ GitHub.
+ https://github.com/sebp/scikit-survival/blob/v0.23.0/sksurv/tree/tree.py#L38-L676
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+scikit-learn/sklearn/tree/_tree.pyx at main · scikit-learn/scikit-learn.
+ (2024).
+ GitHub.
+ https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/tree/_tree.pyx#L14
+0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
@@ -16683,7 +16893,7 @@ Nobel prize in physiology or medicine (2022) Our Scientists.
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-3"
+key "key-3-barker"
 literal "false"
 
 \end_inset
@@ -16700,7 +16910,7 @@ Barker, C.
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-4"
+key "key-4-matevossian"
 literal "false"
 
 \end_inset
@@ -16714,7 +16924,7 @@ Matevossian, Edouard, et al.
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-5"
+key "key-5-punt"
 literal "false"
 
 \end_inset
@@ -16730,7 +16940,7 @@ PUNT, Jenni et al.
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-6"
+key "key-6-abbas"
 literal "false"
 
 \end_inset
@@ -17835,6 +18045,75 @@ literal "false"
 G.
  Ridgeway, “The state of boosting,” Computing Science and Statistics, 172–181,
  1999.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-71"
+literal "false"
+
+\end_inset
+
+Leblanc, M., & Crowley, J.
+ (1993).
+ Survival Trees by Goodness of Split.
+ Journal of the American Statistical Association, 88(422), 457–467.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-72"
+literal "false"
+
+\end_inset
+
+scikit-survival/sksurv/tree/tree.py at v0.23.0 · sebp/scikit-survival.
+ (2024).
+ GitHub.
+ https://github.com/sebp/scikit-survival/blob/v0.23.0/sksurv/tree/tree.py#L38-L676
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-73"
+literal "false"
+
+\end_inset
+
+scikit-learn/sklearn/tree/_tree.pyx at main · scikit-learn/scikit-learn.
+ (2024).
+ GitHub.
+ https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/tree/_tree.pyx#L14
+0
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-74"
+literal "false"
+
+\end_inset
+
+DecisionTreeRegressor.
+ (2024).
+ Scikit-Learn.
+ https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegress
+or.html
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-75"
+literal "false"
+
+\end_inset
+
+‌
 \end_layout
 
 \end_body
