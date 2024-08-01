@@ -461,10 +461,15 @@ Language
 \begin_inset space ~
 \end_inset
 
-advisor: 
+advisors: 
 \series bold
 PaedDr.
- Eliška Rafajová
+ Eliška Rafajová 
+\series default
+and
+\series bold
+ Bc.
+ Nathaniel Tobias Patton
 \end_layout
 
 \begin_layout Labeling
@@ -7542,7 +7547,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -7598,6 +7603,16 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+is discussed in the following section.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7608,14 +7623,21 @@ To summarize, the Kaplan-Meier method provides a robust nonparametric approach
  covariates.
  That leads us to the Cox proportional hazards model, which inherently handles
  covariates.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+rewrite
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
-Nelson-Aalen
-\end_layout
-
-\begin_layout Subsubsection
-Log-rank test
+Log-rank Test
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Log-rank-test"
@@ -7623,6 +7645,210 @@ name "subsec:Log-rank-test"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+- it is essentially a 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+test (already seen in DTs).
+ calculates 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+for each event time for each group and sums the results
+\end_layout
+
+\begin_layout Plain Layout
+LR - comparison between observed and expected 
+\begin_inset Formula $\frac{(\text{observed}-\text{expected})^{2}}{\text{expected}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+expected num of events assumes that the Null hypothesis is true (groups
+ are identical)
+\end_layout
+
+\begin_layout Plain Layout
+- LRT compares the distribution of the time until an event occurs of two
+ or more independent samples.
+\end_layout
+
+\begin_layout Plain Layout
+the null hypothesis: groups have identical distribution curves.
+\end_layout
+
+\begin_layout Plain Layout
+alternative hypothesis: the groups have different distribution curves.
+\end_layout
+
+\begin_layout Plain Layout
+as with all statistical hypothesis test we get a p value at the end of the
+ LRT.
+ (is it greater than the signifficance level of 0,05? if yes then null hypothesi
+s is retained and both groups have identical distribution curves.
+ if no the null hypothesis is rejected)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Log-rank Test is essentially a 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+test for two KM survival curves that can evaluate whether or not survival
+ (KM) curves for two or more groups are statistically equivalent (
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ test was already touched upon in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Decision-Trees"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Two curves are statistically equivalent if the produced p-value is lower
+ than the level of significance (
+\begin_inset Formula $0.05$
+\end_inset
+
+ or 
+\begin_inset Formula $0.01$
+\end_inset
+
+).
+ It is formed by the sum of the observed minus expected over all failure
+ times for one of the two groups 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13-SA"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The Null hypothesis 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+is being tested in the log-rank test, which states that groups have identical
+ distribution curves.
+ If the p-value from the 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ distribution table associated with the produced log-rank statistic is lower
+ than the level of significance, then the Null hypothesis is rejected, and
+ the curves are deemed statistically inequivalent.
+ Under the Null hypothesis, the log-rank statistic is approximately 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ with 
+\begin_inset Formula $n-1$
+\end_inset
+
+ degrees of freedom for 
+\begin_inset Formula $n$
+\end_inset
+
+ groups 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13-SA"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The log-rank statistic for two groups, 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+, is denoted as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{Log-rank statistic}=\frac{(O_{i}-E_{i})^{2}}{Var(O_{i}-E_{i})},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $Var()$
+\end_inset
+
+ is variance.
+ The formula for more than two groups is much more complex and involves
+ the calculation of covariates.
+ Fortunately, the log-rank can be approximated without the need for the
+ calculation of variance and covariance with the following formula:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\chi^{2}\approx\sum_{i}^{\#\text{of groups}}\left(\frac{O_{i}-E_{i}}{E_{i}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $i$
+\end_inset
+
+ is the group, 
+\begin_inset Formula $O_{i}$
+\end_inset
+
+ are summed observed, and 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+ are summed expected 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-13-SA"
+literal "false"
+
+\end_inset
+
+..
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Nelson-Aalen
 \end_layout
 
 \begin_layout Subsubsection
@@ -8336,7 +8562,7 @@ noprefix "false"
 
 \end_inset
 
-) or any other test that can handle the survival data.
+) or any other statistic test that can handle survival data.
  LeBlanc shows that log-rank performs well for splitting survival data.
  The scikit-survival implementation of the Survival Tree also uses log-rank.
  In the original paper by LeBlanc, pruning was suggested as a way to deal
@@ -8442,10 +8668,14 @@ min_samples_split
 \end_layout
 
 \begin_layout Standard
-In addition to Cox Proportional Hazards (”coxph” value of ”loss” hyperparameter)
-, GBSA also allows for choosing other loss functions, such as squared regression
- loss (”squared”) that ignores predictions beyond the time of censoring
- and inverse-probability of censoring weighted least squares error (”ipcwls”).
+In addition to Cox Proportional Hazards (”coxph” value of 
+\emph on
+loss
+\emph default
+ hyperparameter), GBSA also allows for choosing other loss functions, such
+ as squared regression loss (”squared”) that ignores predictions beyond
+ the time of censoring and inverse-probability of censoring weighted least
+ squares error (”ipcwls”).
  In this work, we will use the Cox Proportional Hazard loss.
  Other hyperparameters that we have used are:
 \end_layout
@@ -8561,6 +8791,45 @@ literal "false"
  Similar to Random Forest, Random Survival Forest leverages the power of
  multiple survival trees, making its predictions more robust.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+rf does not use survival trees...
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+It differs from gradient boosting in a way the trees are combined: in GB
+ they are connected sequentially, each trying to fix errors the previous
+ one, while Random Forest just trains 
+\begin_inset Formula $n$
+\end_inset
+
+ number of trees and averages their predictions.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Randomness
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8568,8 +8837,16 @@ A Random Survival Forest is comprised of
 \emph on
 Survival Trees
 \emph default
+, discussed in 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 .
- A survival tree is essentially a binary tree.
+ A Survival Tree is essentially a binary tree.
  It is developed by iteratively splitting children nodes into two nodes
  until a certain criterion is met.
  An optimal node split is the one maximizing the survival difference between
@@ -8585,6 +8862,11 @@ literal "false"
 
 .
  
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -14054,7 +14336,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -14095,7 +14377,7 @@ name "fig:Feature-Importance-for-RSF-living"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -14528,7 +14810,7 @@ name "fig:GBSA-living-feature"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -15257,16 +15539,6 @@ One of its core features is multi-national support that allows for collaboration
  including logistic feasibility.
  This feature ensures that matches are not only biologically compatible
  but also feasible according to other factors.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-tohle jsem si vymyslel, oveř to pls, případně navrhni opravy
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -16792,71 +17064,6 @@ The data reported here have been supplied by the United Network for Organ
 Source code for both application and trained models can be found in the
  following GitHub repository: ...
  Data and trained models are of cource exluded.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-listoffigures
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-listoftables
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-scikit-survival/sksurv/tree/tree.py at v0.23.0 · sebp/scikit-survival.
- (2024).
- GitHub.
- https://github.com/sebp/scikit-survival/blob/v0.23.0/sksurv/tree/tree.py#L38-L676
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-scikit-learn/sklearn/tree/_tree.pyx at main · scikit-learn/scikit-learn.
- (2024).
- GitHub.
- https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/tree/_tree.pyx#L14
-0
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Bibliography
