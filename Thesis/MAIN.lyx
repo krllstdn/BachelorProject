@@ -7108,9 +7108,9 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-S(t)=e^{-H(t)}
-\]
+\begin{equation}
+S(t)=e^{-H(t)}\label{eq:chf-to-surv}
+\end{equation}
 
 \end_inset
 
@@ -7843,12 +7843,63 @@ literal "false"
 
 \end_inset
 
-..
- 
+.
 \end_layout
 
 \begin_layout Subsubsection
 Nelson-Aalen
+\end_layout
+
+\begin_layout Standard
+The Nelson-Aalen estimator is a nonparametric estimator for cumulative hazard
+ function.
+ It is denoted by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{A}(t)=\sum_{t_{j}\leq t}\frac{d_{j}}{r_{j}},\label{eq:nelson-aalen}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $d_{j}$
+\end_inset
+
+ represents the number of patients who experienced the event, and 
+\begin_inset Formula $r_{j}$
+\end_inset
+
+is the number of patients at risk at the time 
+\begin_inset Formula $t_{j}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-75"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+NA is continuously increasing step function
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -8526,7 +8577,14 @@ Machine Learning Methods
 \end_layout
 
 \begin_layout Subsubsection
-Survival Tree
+Survival Tree 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Survival-Tree"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8599,6 +8657,16 @@ noprefix "false"
 
 ), namely max_depth, min_samples_split, and others.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -8613,7 +8681,11 @@ name "subsec:Gradient-Boosted-Survival"
 \end_layout
 
 \begin_layout Standard
-Gradient Boosted Survival Analysis (GBSA) 
+
+\emph on
+Gradient Boosted Survival Analysis (GBSA)
+\emph default
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-56"
@@ -8772,8 +8844,12 @@ name "subsec:Random-Survival-Forest"
 \emph on
 Random Survival Forest
 \emph default
- (RSF) is an ensemble machine learning method tailored for survival analysis.
- It is derived from the original Random Forest method developed by 
+ (RSF) is an ensemble machine-learning method for survival analysis.
+ It is derived from Breiman's original 
+\emph on
+Random Forest
+\emph default
+ method described in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-28-breiman"
@@ -8782,91 +8858,37 @@ literal "false"
 \end_inset
 
 .
- Random Forests have gained popularity in the machine learning community
- due to their effectiveness in classification and regression machine learning
- tasks.
- Random Forest is built from multiple decision trees.
- Averaging their predictions allows for more accurate predictions than any
- single tree can provide.
- Similar to Random Forest, Random Survival Forest leverages the power of
- multiple survival trees, making its predictions more robust.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-rf does not use survival trees...
-\end_layout
+ RSF uses the Survival Tree (discussed in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Survival-Tree"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-It differs from gradient boosting in a way the trees are combined: in GB
- they are connected sequentially, each trying to fix errors the previous
- one, while Random Forest just trains 
-\begin_inset Formula $n$
-\end_inset
-
- number of trees and averages their predictions.
-\end_layout
-
-\end_inset
-
-
+) as a base learner to predict the cumulative hazard function (CHF).
+ Randomness in a Random Survival Forest takes two forms: 1) randomly drawn
+ bootstrap samples used to grow a tree, and 2) a random number of variables
+ is chosen as candidates for splitting.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Randomness
+Random Survival Forest shares similarities with the Gradient Boosting: they
+ are ensemble models that use trees as base learners.
+ However, beyond the differences in specific trees used – where RSF employs
+ Survival Trees in contrast to decision trees used in GB — the two differ
+ in approach to building the ensemble.
+ Gradient Boosting builds its ensemble by sequentially adding base learners,
+ with each tree correcting the errors made by its predecessor.
+ On the other hand, Random Forests train all trees independently and then
+ average their predictions, allowing for the parallelization of computation
+ and possibly shorter training time.
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-A Random Survival Forest is comprised of 
-\emph on
-Survival Trees
-\emph default
-, discussed in 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-.
- A Survival Tree is essentially a binary tree.
- It is developed by iteratively splitting children nodes into two nodes
- until a certain criterion is met.
- An optimal node split is the one maximizing the survival difference between
- the children nodes.
- It is done by iterating through all features and finding such a value for
- a given feature that maximizes the survival difference 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-27-wang"
-literal "false"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\end_inset
-
-
+\begin_layout Paragraph
+Algorithm
 \end_layout
 
 \begin_layout Standard
@@ -8875,55 +8897,44 @@ Random Survival Forest training is comprised of the following steps:
 
 \begin_layout Enumerate
 Randomly draw 
-\begin_inset Formula $L$
-\end_inset
-
- bootstrap samples of size 
-\begin_inset Formula $n$
-\end_inset
-
- with replacement from the training dataset.
- 
-\begin_inset Formula $n$
-\end_inset
-
- is about two-thirds of the original data.
- The remaining instances, about one-third, are termed out-of-bag (OOB) observati
-ons and are not included in the bootstrap sample.
+\emph on
+B
+\emph default
+ bootstrap samples from the training dataset.
+ About one-third (37%) of each bootstrap is excluded and termed out-of-bag
+ (OOB) observations.
 \end_layout
 
 \begin_layout Enumerate
-For each sample, develop a full-grown survival tree based on the selected
- splitting criterion.
- At each node, randomly select 
-\begin_inset Formula $\sqrt{p}$
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-max_features
-\end_layout
-
-\end_inset
-
- (or other number) covariates, where 
-\begin_inset Formula $p$
-\end_inset
-
- is the total number of covariates.
- Stop developing when a certain condition is met (for example, when the
- terminal node has fewer observations than a predetermined threshold or
- the node reaches purity).
- 
+For each bootstrap sample, develop a survival tree.
+ At each node, randomly select p candidate variables.
+ Split the node using the candidate variable that maximizes the survival
+ difference between children nodes.
 \end_layout
 
 \begin_layout Enumerate
-For each tree, calculate the cumulative hazard function with the Nelson-Aalen
- estimator.
- Find a mean of all trees to find ensemble CHF.
+Develop until terminal node has no less than 
+\begin_inset Formula $d_{0}>0$
+\end_inset
+
+ unique deaths or a set value in one of the regularization hyperparameters
+ (from Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Decision-Trees"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is reached.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the cumulative hazard function (CHF) with the Nelson-Aalen estimator
+ for each tree.
+ Calculate the average of all trees to find the ensemble CHF.
 \end_layout
 
 \begin_layout Enumerate
@@ -8938,15 +8949,309 @@ literal "false"
 .
 \end_layout
 
+\begin_layout Paragraph
+Cumulative Hazard Function Calculation
+\end_layout
+
+\begin_layout Standard
+From the Nelson-Aalen estimator defined in Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:nelson-aalen"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the CHF estimate for each terminal node 
+\begin_inset Formula $h$
+\end_inset
+
+ of a tree is given by 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{H_{h}}(t)=\sum_{t_{l,h}\leq t}\frac{d_{l,h}}{r_{l,h}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All cases within the same leaf have the same CHF.
+ Let 
+\begin_inset Formula $H(t|\mathbf{x}_{i})$
+\end_inset
+
+be the CHF for the sample 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{x}_{i}$
+\end_inset
+
+covariates describing it.
+ We need to drop 
+\begin_inset Formula $\mathbf{x}_{i}$
+\end_inset
+
+down the survival tree to get this value.
+ After that, we will get the terminal node 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ Then CHF for sample 
+\begin_inset Formula $i$
+\end_inset
+
+ and terminal node 
+\begin_inset Formula $h$
+\end_inset
+
+ is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H(t|\mathbf{x_{\mathbf{i}}})=\hat{H_{h}}(t),\text{ if \ensuremath{\mathbf{x}_{i}\in h}}\label{eq:rsf-chf}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, we need to compute the CHF of the whole ensemble of 
+\begin_inset Formula $B$
+\end_inset
+
+ trees.
+ The OOB ensemble CHF for 
+\begin_inset Formula $i$
+\end_inset
+
+ is an average over bootstrap samples and is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H_{e}^{**}(t|\mathbf{x_{\mathbf{i}}})=\frac{\sum_{b=1}^{B}I_{i,b}H_{b}^{*}(t|\mathbf{x_{\mathbf{i}}})}{\sum_{b=1}^{B}I_{i,b}},
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+model evaluation
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $I_{i,b}$
+\end_inset
+
+ is an indicator function of 
+\begin_inset Formula $i$
+\end_inset
+
+ being in OOB case for tree 
+\begin_inset Formula $b$
+\end_inset
+
+ (equal to 
+\emph on
+1
+\emph default
+, if it is, 
+\emph on
+0
+\emph default
+ otherwise), 
+\begin_inset Formula $H_{b}^{*}(t|\mathbf{x_{\mathbf{i}}})$
+\end_inset
+
+ denotes the CHF 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:rsf-chf"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for tree trained from the 
+\begin_inset Formula $b$
+\end_inset
+
+th bootstrap.
+ The bootstrap ensemble CHF for sample 
+\begin_inset Formula $i$
+\end_inset
+
+ is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H_{e}^{*}(t|\mathbf{x_{\mathbf{i}}})=\frac{1}{B}\sum_{b=1}^{B}H_{b}^{*}(t|\mathbf{x_{\mathbf{i}}}).\label{eq:rsf-pred}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+predictions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notably, it uses all trees, not only those where 
+\begin_inset Formula $i$
+\end_inset
+
+ is in OOB.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Prediction
+\end_layout
+
+\begin_layout Standard
+To get the prediction, we need to drop the feature vector 
+\begin_inset Formula $\mathbf{x}_{i}$
+\end_inset
+
+ down the 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:rsf-pred"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The prediction of the ensemble is the average cumulative hazard function
+ among all learner's predictions.
+ However, we might want to predict a survival function.
+ Recall the Equation
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:chf-to-surv"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ From it, we can get the following formula to estimate the survival function
+ for the given
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S(t,\mathbf{x}_{i})=e^{-H_{e}^{*}(t|\mathbf{x_{\mathbf{i}}})}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Hyperparameters
+\end_layout
+
+\begin_layout Standard
+Most of the available hyperparameters, such as 
+\emph on
+max_depth
+\emph default
+ and 
+\emph on
+min_samples_split
+\emph default
+, are inherited from trees and are described in the Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Decision-Trees"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, while some are shared with gradient boosting, such as 
+\emph on
+random_state
+\emph default
+ and 
+\emph on
+n_estimators
+\emph default
+.
+ A unique hyperparameter, 
+\emph on
+n_jobs
+\emph default
+, allows for the specification of the number of CPU cores to use in training.
+ -1 means all cores; the default is set to 1.
+ Refer to the Random Survival Forest documentation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-55"
+literal "false"
+
+\end_inset
+
+ to see all hyperparameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 In summary, the Random Survival Forest is a robust and powerful survival
  analysis approach that harnesses the collective power of multiple survival
  trees.
- Having explored several survival analysis methods, it is crucial to evaluate
- them properly since the standard machine learning performance metrics are
- not always applicable to survival analysis due to the presence of censoring.
- The next section will introduce essential criteria for evaluating survival
- analysis models and the primary performance metrics created for this purpose.
+ We have explored several survival analysis methods, and it is crucial to
+ evaluate them properly since the standard machine learning performance
+ metrics are rarely applicable to survival analysis due to the presence
+ of censoring.
+ The following section will introduce essential criteria for evaluating
+ survival analysis models and the primary performance metrics created for
+ this purpose.
 \end_layout
 
 \begin_layout Subsection
@@ -9256,7 +9561,7 @@ literal "false"
  are too few instances beyond this time point 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21,key-22"
+key "key-21-rahman,key-22-docs"
 literal "false"
 
 \end_inset
@@ -18320,7 +18625,10 @@ literal "false"
 
 \end_inset
 
-‌
+‌Nelson-Aalen Estimator.
+ (n.d.).
+ https://www.medicine.mcgill.ca/epidemiology/hanley/c609/material/NelsonAalenEstima
+tor.pdf
 \end_layout
 
 \end_body
