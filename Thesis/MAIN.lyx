@@ -912,11 +912,8 @@ Useful hints for writing the abstract: - Do not exceed the word limit.
 \emph on
 Keywords:
 \emph default
- Artificial Intelligence, Deceased Donor Transplantation, Gradient Boosting
- Survival Analysis, Kidney Transplantation, Lifespan Prediction, Living
- Donor Transplantation, Machine Learning, Machine Learning Inference, Random
- Survival Forest, Regularized Cox regression, Survival Analysis, United
- Network for Organ Sharing (UNOS)
+ Gradient Boosted Survival Analysis, Kidney Transplantation, Machine Learning,
+ Random Survival Forest, Regularized Cox regression, Survival Analysis
 \end_layout
 
 \begin_layout Standard
@@ -1005,8 +1002,8 @@ literal "false"
 Kidney transplantation
 \emph default
  (KT) is the best treatment for it, but organs are scarce.
- Every 10 minutes, a new patient joins the transplant waiting list, and
- 17 people die each day while waiting 
+ Only in the US, every 10 minutes, a new patient joins the transplant waiting
+ list, and 17 people die each day while waiting 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-67"
@@ -1810,7 +1807,7 @@ xenografts
  the beginning of human transplantation attempts 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1-kidney-transplantation-book,key-4"
+key "key-1-kidney-transplantation-book,key-4-matevossian"
 literal "false"
 
 \end_inset
@@ -1944,7 +1941,7 @@ tropic hormone (more known as cortisone), it was deemed clinically insignificant
  From that time, many similar surgeries were performed in Boston 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-1-kidney-transplantation-book,key-3"
+key "key-1-kidney-transplantation-book,key-3-barker"
 literal "false"
 
 \end_inset
@@ -3642,13 +3639,13 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/linear_regression.pdf
-	scale 50
+	scale 65
 
 \end_inset
 
@@ -3749,13 +3746,13 @@ closed-form solution
 \emph on
 normal equation
 \emph default
-, and it is denoted by:
+, and it is given by
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\mathbf{\overline{\mathbf{w}}^{*}=(x^{T}x)^{-1}x^{T}y},\label{eq:norm_eq}
+\mathbf{\overline{\mathbf{w}}^{*}=(x}^{T}\mathbf{x)^{-1}x}^{T}\mathbf{y},\label{eq:norm_eq}
 \end{equation}
 
 \end_inset
@@ -3890,7 +3887,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The logistic regression model is denoted by:
+The logistic regression model is given by
 \end_layout
 
 \begin_layout Standard
@@ -4010,7 +4007,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Images/logistic_regression.pdf
-	scale 50
+	scale 75
 
 \end_inset
 
@@ -4129,7 +4126,7 @@ likelihood function
 maximum likelihood
 \emph default
 .
- It is given by: 
+ It is given by 
 \end_layout
 
 \begin_layout Standard
@@ -4159,21 +4156,17 @@ noprefix "false"
 log-likelihood
 \emph default
  instead to make calculations easier.
- As 
-\begin_inset Formula $Log$
-\end_inset
-
- is a strictly increasing function, maximizing it is the same as maximizing
- its argument.
+ As Log is a strictly increasing function, maximizing it is the same as
+ maximizing its argument.
  The solution to this optimization problem is the same as the solution to
  the original problem.
- The log-likelihood function is expressed as: 
+ The log-likelihood function is expressed as
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-LogL_{\bar{w},b}\stackrel{def}{=}ln(L_{\overline{w},b}(\overline{x}))\stackrel[i=1]{N}{\sum}y_{i}lnf_{\bar{w},b}(\overline{x})+(1-y_{i})ln(1-f_{\bar{w},b}(\overline{x})).\label{eq:log_likelihood}
+\log L_{\bar{w},b}\stackrel{def}{=}\ln(L_{\overline{w},b}(\overline{x}))\stackrel[i=1]{N}{\sum}y_{i}\ln f_{\bar{w},b}(\overline{x})+(1-y_{i})\ln(1-f_{\bar{w},b}(\overline{x})).\label{eq:log_likelihood}
 \end{equation}
 
 \end_inset
@@ -4252,7 +4245,7 @@ y.
 The model is described by the equation 
 \begin_inset Formula 
 \[
-f(x)=sign(\overline{w}\overline{x}-b).
+f(x)=\text{sign}(\overline{w}\overline{x}-b).
 \]
 
 \end_inset
@@ -4261,11 +4254,7 @@ f(x)=sign(\overline{w}\overline{x}-b).
 \end_layout
 
 \begin_layout Standard
-The function 
-\begin_inset Formula $sign$
-\end_inset
-
- returns +1 if the input is positive and -1 if negative.
+The function sign returns +1 if the input is positive and -1 if negative.
  To train the SVM means to find optimal values 
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
@@ -4335,7 +4324,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Images/svm1.pdf
-	scale 30
+	scale 75
 
 \end_inset
 
@@ -4437,7 +4426,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Images/svm2.pdf
-	scale 30
+	scale 75
 
 \end_inset
 
@@ -4471,7 +4460,7 @@ name "fig:Linearly-non-separable"
 
 \begin_layout Standard
 Every optimization problem requires constraints, and for the support vector
- machine, they are the following:
+ machine, they are given by
 \end_layout
 
 \begin_layout Enumerate
@@ -4529,13 +4518,13 @@ The optimization problem we want to solve is the following: Minimize
 \end_inset
 
 .
- The updated optimization problem looks like this:
+ The updated optimization problem can expressed as
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-min\frac{1}{2}||\overline{w}||^{2}\text{such that }y_{i}(\overline{w}\overline{x_{i}}-b)\geqslant1,i=1,...,N\label{eq:svm_optimisation}
+\min\frac{1}{2}||\overline{w}||^{2}\text{such that }y_{i}(\overline{w}\overline{x_{i}}-b)\geqslant1,i=1,...,N.\label{eq:svm_optimisation}
 \end{equation}
 
 \end_inset
@@ -4559,13 +4548,13 @@ To introduce the ability of SVM to handle nonlinearly separable data (but
  If it is not, the data point does not lie on the right side of the decision
  boundary.
  The function value is proportional to the distance from the decision boundary.
- The resulting cost function looks like the following:
+ The resulting cost function looks is expressed as
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-C||\overline{w}||^{2}+\frac{1}{N}\stackrel[j=1]{N}{\sum}max(0,1-y_{i}(\overline{w}\overline{x_{i}}-b)),\label{eq:svm_loss}
+C||\overline{w}||^{2}+\frac{1}{N}\stackrel[j=1]{N}{\sum}\max(0,1-y_{i}(\overline{w}\overline{x_{i}}-b)),\label{eq:svm_loss}
 \end{equation}
 
 \end_inset
@@ -4748,12 +4737,12 @@ Gini impurity is expressed as
 \begin_layout Standard
 \begin_inset Formula 
 \[
-G_{i}=1-\sum_{k=1}^{n}p_{i,k}^{2}
+G_{i}=1-\sum_{k=1}^{n}p_{i,k}^{2},
 \]
 
 \end_inset
 
-, where 
+ where 
 \begin_inset Formula $p_{i,k}$
 \end_inset
 
@@ -4800,7 +4789,7 @@ noprefix "false"
 \end_inset
 
 ).
- The cost function for the decision tree regression is denoted as
+ The cost function for the decision tree regression is given by
 \end_layout
 
 \begin_layout Standard
@@ -4809,12 +4798,12 @@ noprefix "false"
 J(k,t_{k})=\frac{m_{left}}{m}MSE_{left}+\frac{m_{right}}{m}MSE_{right}\text{ where }\begin{cases}
 MSE_{node}=\sum_{i\in node}(\hat{y}_{node}-y^{(i)})^{2}\\
 \hat{y}=\frac{1}{m_{node}}\sum_{i\in node}y^{(i)}
-\end{cases}\label{eq:DT-regression-loss}
+\end{cases},\label{eq:DT-regression-loss}
 \end{equation}
 
 \end_inset
 
-, where 
+ where 
 \begin_inset Formula $m$
 \end_inset
 
@@ -5128,7 +5117,7 @@ and the Stochastic Gradient Boosting is denoted as follows:
 
 \begin_layout Standard
 Initialize the model 
-\begin_inset Formula $F_{0}(\mathbf{x})=\underset{\gamma}{\arg\min}\sum_{i=1}^{N}L(y_{i},\gamma)$
+\begin_inset Formula $F_{0}(\mathbf{x})=\underset{\gamma}{\text{argmin}}\sum_{i=1}^{N}L(y_{i},\gamma)$
 \end_inset
 
 , where 
@@ -5211,7 +5200,7 @@ For
 \end_inset
 
  compute 
-\begin_inset Formula $\gamma_{l,m}=\underset{\gamma}{\arg\min}\sum_{\mathbf{x}_{\pi(i)}\in R_{l,m}}L(y_{\pi(i)},F_{m-1}(\mathbf{x}_{\pi(i)})+\gamma)$
+\begin_inset Formula $\gamma_{l,m}=\underset{\gamma}{\text{argmin}}\sum_{\mathbf{x}_{\pi(i)}\in R_{l,m}}L(y_{\pi(i)},F_{m-1}(\mathbf{x}_{\pi(i)})+\gamma)$
 \end_inset
 
  – determine the output value 
@@ -5874,7 +5863,7 @@ literal "false"
 \begin_inset Formula $j$
 \end_inset
 
- is expressed as:
+ is expressed as
 \end_layout
 
 \begin_layout Standard
@@ -5932,7 +5921,7 @@ literal "false"
 \begin_inset Formula $j$
 \end_inset
 
- is given by:
+ is given by
 \end_layout
 
 \begin_layout Standard
@@ -6453,7 +6442,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Images/censoring_ill.pdf
-	scale 50
+	scale 70
 
 \end_inset
 
@@ -6733,7 +6722,7 @@ survivor function
 \end_inset
 
 .
- Mathematically, it is denoted by:
+ Mathematically, it is denoted by
 \end_layout
 
 \begin_layout Standard
@@ -6824,7 +6813,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Images/survival_f.pdf
-	scale 50
+	scale 75
 
 \end_inset
 
@@ -6878,7 +6867,7 @@ hazard function
 \end_inset
 
 .
- It is expressed as: 
+ It is given by
 \end_layout
 
 \begin_layout Standard
@@ -6971,7 +6960,7 @@ further extends our understanding by quantifying the accumulated risk over
  time.
  It is the area under the hazard function that allows us to say which group
  has a greater risk.
- It is defined by the following function:
+ It is expressed as
 \end_layout
 
 \begin_layout Standard
@@ -7002,7 +6991,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Images/hazard_f.pdf
-	scale 50
+	scale 65
 
 \end_inset
 
@@ -7057,7 +7046,7 @@ Let us start by considering how to obtain the survival function
 \end_inset
 
 .
- The relationship is captured in the following equation:
+ The relationship is given by
 \end_layout
 
 \begin_layout Standard
@@ -7103,13 +7092,13 @@ noprefix "false"
 \end_inset
 
 .
- We can simplify our equation to:
+ We can simplify our equation to
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-S(t)=e^{-H(t)}\label{eq:chf-to-surv}
+S(t)=e^{-H(t)}.\label{eq:chf-to-surv}
 \end{equation}
 
 \end_inset
@@ -7119,7 +7108,7 @@ S(t)=e^{-H(t)}\label{eq:chf-to-surv}
 
 \begin_layout Standard
 On the other hand, to obtain the hazard function from the survival function,
- we can utilize the following relationship: 
+ we can utilize the relationship
 \end_layout
 
 \begin_layout Standard
@@ -7431,7 +7420,7 @@ non-parametric
  only the survival time and the censoring indicator.
  It works under an independent censoring assumption.
  The general Kaplan-Meier formula for plotting the survival function is
- the following: 
+ given by
 \end_layout
 
 \begin_layout Standard
@@ -7471,7 +7460,7 @@ literal "false"
 \end_inset
 
 .
- This function can also be expressed as a product limit:
+ This function can also be expressed as a product limit
 \end_layout
 
 \begin_layout Standard
@@ -7547,13 +7536,12 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/EDA/example-km.pdf
-	scale 50
 
 \end_inset
 
@@ -7603,37 +7591,6 @@ literal "false"
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-is discussed in the following section.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-To summarize, the Kaplan-Meier method provides a robust nonparametric approach
- for estimating survival functions, emphasizing its independence from covariates.
- While the log-rank test offers a mechanism to compare the survival curves
- and assess treatment efficacy, some situations still require considering
- covariates.
- That leads us to the Cox proportional hazards model, which inherently handles
- covariates.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-rewrite
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -7641,62 +7598,6 @@ Log-rank Test
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Log-rank-test"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-- it is essentially a 
-\begin_inset Formula $\chi^{2}$
-\end_inset
-
-test (already seen in DTs).
- calculates 
-\begin_inset Formula $\chi^{2}$
-\end_inset
-
-for each event time for each group and sums the results
-\end_layout
-
-\begin_layout Plain Layout
-LR - comparison between observed and expected 
-\begin_inset Formula $\frac{(\text{observed}-\text{expected})^{2}}{\text{expected}}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-expected num of events assumes that the Null hypothesis is true (groups
- are identical)
-\end_layout
-
-\begin_layout Plain Layout
-- LRT compares the distribution of the time until an event occurs of two
- or more independent samples.
-\end_layout
-
-\begin_layout Plain Layout
-the null hypothesis: groups have identical distribution curves.
-\end_layout
-
-\begin_layout Plain Layout
-alternative hypothesis: the groups have different distribution curves.
-\end_layout
-
-\begin_layout Plain Layout
-as with all statistical hypothesis test we get a p value at the end of the
- LRT.
- (is it greater than the signifficance level of 0,05? if yes then null hypothesi
-s is retained and both groups have identical distribution curves.
- if no the null hypothesis is rejected)
-\end_layout
 
 \end_inset
 
@@ -7795,26 +7696,22 @@ The log-rank statistic for two groups,
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\text{Log-rank statistic}=\frac{(O_{i}-E_{i})^{2}}{Var(O_{i}-E_{i})},
+\text{Log-rank statistic}=\frac{(O_{i}-E_{i})^{2}}{\text{Var}(O_{i}-E_{i})},
 \]
 
 \end_inset
 
-where 
-\begin_inset Formula $Var()$
-\end_inset
-
- is variance.
+where Var() is variance.
  The formula for more than two groups is much more complex and involves
  the calculation of covariates.
  Fortunately, the log-rank can be approximated without the need for the
- calculation of variance and covariance with the following formula:
+ calculation of variance and covariance as follows
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\chi^{2}\approx\sum_{i}^{\#\text{of groups}}\left(\frac{O_{i}-E_{i}}{E_{i}}\right)
+\chi^{2}\approx\sum_{i}^{\#\text{of groups}}\left(\frac{O_{i}-E_{i}}{E_{i}}\right),
 \]
 
 \end_inset
@@ -7890,16 +7787,6 @@ literal "false"
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-NA is continuously increasing step function
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -7935,7 +7822,7 @@ The Cox proportional hazards model is defined in terms of a hazard at time
 \begin_inset Formula $\mathbf{X}$
 \end_inset
 
-:
+ and is expressed as
 \end_layout
 
 \begin_layout Standard
@@ -8027,13 +7914,13 @@ hazard ratio
 \emph default
  (HR) is a measure of the influence of an intervention on the outcome.
  A hazard ratio is defined as the hazard for one individual divided by the
- hazard for the other, as illustrated with the following formula:
+ hazard for the other, as illustrated with the following
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\hat{HR}=\frac{h(t,X^{*}\mathbf{)}}{h(t,X)}=\exp\left[\sum_{i=1}^{p}\hat{\beta_{i}}(X^{*}-X)\right]\label{eq:cox_ph_hazard_ratio}
+HR=\frac{h(t,X^{*}\mathbf{)}}{h(t,X)}=\exp\left[\sum_{i=1}^{p}\hat{\beta_{i}}(X^{*}-X)\right].\label{eq:cox_ph_hazard_ratio}
 \end{equation}
 
 \end_inset
@@ -8156,7 +8043,7 @@ Let us define the partial likelihood.
 \begin_inset Formula $X_{j}$
 \end_inset
 
- can be described as follows:
+ can be expressed as
 \end_layout
 
 \begin_layout Standard
@@ -8180,7 +8067,7 @@ By taking the product across all subjects' probabilities, we get partial
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-PL(\beta)=\prod_{j=1}^{N}\left[\frac{exp(X_{j}\beta)}{\sum_{i\epsilon R_{j}}exp(X_{i}\beta)}\right]^{\delta_{J}}.\label{eq:partial-likelihood}
+PL(\beta)=\prod_{j=1}^{N}\left[\frac{\exp(X_{j}\beta)}{\sum_{i\epsilon R_{j}}\exp(X_{i}\beta)}\right]^{\delta_{J}}.\label{eq:partial-likelihood}
 \end{equation}
 
 \end_inset
@@ -8215,20 +8102,12 @@ log-partial likelihood
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-LL(\beta)=-\sum_{j=1}^{N}\delta_{j}\{X_{j}\beta-log[\sum_{i\epsilon R_{j}}exp(X_{i}\beta)]\}\label{eq:neg-partial-log-likelihood}
+LL(\beta)=-\sum_{j=1}^{N}\delta_{j}\left\{ X_{j}\beta-\log\left[\sum_{i\epsilon R_{j}}\exp(X_{i}\beta)\right]\right\} \text{ }\cite{key-23-wang}.\label{eq:neg-partial-log-likelihood}
 \end{equation}
 
 \end_inset
 
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-23-wang"
-literal "false"
 
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Subsubsection
@@ -8287,13 +8166,13 @@ literal "false"
 \end_inset
 
  penalty term on the coefficients, shrinking them to zero.
- Consequently, our objective has the following form: 
+ Consequently, our objective is expressed as
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-arg\max_{\beta}\log PL(\beta)-\frac{\alpha}{2}\sum_{j=1}^{p}\beta_{j}^{2}.
+\arg\max_{\beta}\log PL(\beta)-\frac{\alpha}{2}\sum_{j=1}^{p}\beta_{j}^{2}.
 \]
 
 \end_inset
@@ -8380,13 +8259,13 @@ LASSO
 \begin_inset Formula $l_{1}$
 \end_inset
 
- penalty, leading to the following optimization problem: 
+ penalty, leading to the following optimization problem
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-arg\max_{\beta}\log PL(\beta)-\alpha\sum_{j=1}^{p}|\beta_{j}|.
+\text{arg}\max_{\beta}\log PL(\beta)-\alpha\sum_{j=1}^{p}|\beta_{j}|.
 \]
 
 \end_inset
@@ -8470,13 +8349,13 @@ and
 \end_inset
 
  penalties in a weighted manner, as is shown in the following optimization
- problem:
+ problem
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-arg\max_{\beta}\log PL(\beta)-\alpha\left(r\sum_{j=1}^{p}|\beta_{j}|+\frac{1-r}{2}\sum_{j=1}^{p}\beta_{j}^{2}\right),
+\arg\max_{\beta}\log PL(\beta)-\alpha\left(r\sum_{j=1}^{p}|\beta_{j}|+\frac{1-r}{2}\sum_{j=1}^{p}\beta_{j}^{2}\right),
 \]
 
 \end_inset
@@ -8565,8 +8444,7 @@ To conclude, Ridge, LASSO, and Elastic Net are potent extensions of the
  Nevertheless, it is important to acknowledge their limitations.
  As linear models, they capture only linear relationships, and non-linear
  relationships remain uncaptured.
- That leads us to the next section dedicated to the Random Survival Forests,
- a machine learning approach.
+ That leads us to the next sections dedicated to machine learning methods.
  Machine learning techniques are known for their ability to catch complex
  non-linear relationships, often outperforming traditional statistical methods
  in predictive accuracy.
@@ -8656,17 +8534,6 @@ noprefix "false"
 \end_inset
 
 ), namely max_depth, min_samples_split, and others.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -9015,13 +8882,13 @@ down the survival tree to get this value.
 \begin_inset Formula $h$
 \end_inset
 
- is given by
+ is denoted by
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-H(t|\mathbf{x_{\mathbf{i}}})=\hat{H_{h}}(t),\text{ if \ensuremath{\mathbf{x}_{i}\in h}}\label{eq:rsf-chf}
+H(t|\mathbf{x_{\mathbf{i}}})=\hat{H_{h}}(t),\text{ if \ensuremath{\mathbf{x}_{i}\in h}}.\label{eq:rsf-chf}
 \end{equation}
 
 \end_inset
@@ -9103,7 +8970,7 @@ th bootstrap.
 \begin_inset Formula $i$
 \end_inset
 
- is given by
+ is expressed as
 \end_layout
 
 \begin_layout Standard
@@ -9170,8 +9037,11 @@ noprefix "false"
 \end_inset
 
 .
- From it, we can get the following formula to estimate the survival function
- for the given
+ From it, the formula to estimate the survival function for the given 
+\begin_inset Formula $\mathbf{x}_{i}$
+\end_inset
+
+ is given by
 \end_layout
 
 \begin_layout Standard
@@ -9404,7 +9274,7 @@ literal "false"
 \end_inset
 
 .
- Mathematically, this is expressed as:
+ Mathematically, this is expressed as
 \end_layout
 
 \begin_layout Standard
@@ -9474,7 +9344,7 @@ literal "false"
 
 \begin_layout Standard
 Mathematically, Harrell's C-index is defined as a ratio between the number
- of concordant and comparable pairs:
+ of concordant and comparable pairs and is denoted as
 \end_layout
 
 \begin_layout Standard
@@ -9764,13 +9634,13 @@ overall performance
 \end_inset
 
 .
- It is defined by the following equation:
+ It is defined as follows
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-BS^{c}(t)=\frac{1}{n}\sum_{i=1}^{n}I(y_{i}\leq t\wedge\delta_{i}=1)\frac{(0-\hat{\pi}(t|\mathbf{x}_{i}))^{2}}{\hat{G}(y_{i})}+I(y_{i}>t)\frac{(1-\hat{\pi}(t|\mathbf{x}_{i}))^{2}}{\hat{G}(t)}
+BS^{c}(t)=\frac{1}{n}\sum_{i=1}^{n}I(y_{i}\leq t\wedge\delta_{i}=1)\frac{(0-\hat{\pi}(t|\mathbf{x}_{i}))^{2}}{\hat{G}(y_{i})}+I(y_{i}>t)\frac{(1-\hat{\pi}(t|\mathbf{x}_{i}))^{2}}{\hat{G}(t)},
 \]
 
 \end_inset
@@ -9787,7 +9657,7 @@ where
 
 
 \series default
-is a model’s predicted probability of remaining event-free up to the time
+ is a model’s predicted probability of remaining event-free up to the time
  point 
 \begin_inset Formula $t$
 \end_inset
@@ -10009,9 +9879,6 @@ load()
 \emph default
  method.
  As is shown in the following block of Python code:
-\end_layout
-
-\begin_layout Standard
 \begin_inset listings
 lstparams "language=Python,numbers=left,basicstyle={\ttfamily},breaklines=true,tabsize=4"
 inline false
@@ -10023,6 +9890,7 @@ from surv_data_pipeline.survival_pipeline import ScikitSurvivalDataLoader
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 
 \end_layout
 
@@ -10188,7 +10056,20 @@ sksurv.column.standardize()
 \emph default
 ), categorical ones are one-hot encoded (with 
 \emph on
-sksurv.preprocessing.OneHotEncoder()
+sksurv.preprocessing.One
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+-
+\end_layout
+
+\end_inset
+
+HotEncoder()
 \emph default
 ), and target value is constructed with the 
 \emph on
@@ -10851,13 +10732,13 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/EDA/donor-type-km.pdf
-	scale 85
+	scale 80
 
 \end_inset
 
@@ -10889,13 +10770,13 @@ name "km_donor_types"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/EDA/gender-km.pdf
-	scale 85
+	scale 80
 
 \end_inset
 
@@ -10957,13 +10838,13 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/EDA/donor_ty_by_year.png
-	scale 45
+	scale 65
 
 \end_inset
 
@@ -11226,7 +11107,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Images/EDA/dialysis-km.pdf
-	scale 85
+	scale 80
 
 \end_inset
 
@@ -13483,26 +13364,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="1" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align left
+\align center
 \begin_inset Graphics
 	filename Images/Results/AUC_living.pdf
-	scale 50
+	scale 80
 
 \end_inset
 
@@ -13510,7 +13375,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-AUC for all living models
+Time-Dependent AUC for LDT models
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:AUC-living"
@@ -13530,22 +13395,17 @@ name "fig:AUC-living"
 
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
-\align right
+\align center
 \begin_inset Graphics
 	filename Images/Results/BS_living.pdf
-	scale 50
+	scale 80
 
 \end_inset
 
@@ -13553,7 +13413,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Time-dependent Brier Score for all living models
+Time-dependent Brier Score for LDT models
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:BS-living"
@@ -13561,41 +13421,6 @@ name "fig:BS-living"
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Time dependent Brier and AUC scores for all living models
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-maybe two figures in a row not the best for such graphics.
- Try using that in data analysis section.
 \end_layout
 
 \end_inset
@@ -13638,25 +13463,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="1" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top" width="0pt">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/Results/AUC_deceased.pdf
-	scale 50
+	scale 80
 
 \end_inset
 
@@ -13664,7 +13474,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-AUC deceased
+Time-Dependent AUC For DDT
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:AUC-deceased"
@@ -13684,21 +13494,17 @@ name "fig:AUC-deceased"
 
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/Results/BS_deceased.pdf
-	scale 50
+	scale 80
 
 \end_inset
 
@@ -13709,7 +13515,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-BS deceased
+Time-Dependent Brier Score For DDT models 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:BS-deceased"
@@ -13721,34 +13527,6 @@ name "fig:BS-deceased"
 
 \end_inset
 
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Time dependent Brier and AUC scores for all deceased models
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -13999,13 +13777,13 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/Results/Coxnet_FI_living.pdf
-	scale 80
+	scale 85
 
 \end_inset
 
@@ -14041,13 +13819,13 @@ name "fig:FI-forCoxnet-Living"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/Results/Coxnet_FI_deceased.pdf
-	scale 55
+	scale 80
 
 \end_inset
 
@@ -14641,12 +14419,13 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\align left
 \begin_inset Graphics
 	filename Images/Results/RSF_FI_living.pdf
-	scale 70
+	scale 75
 
 \end_inset
 
@@ -14682,12 +14461,12 @@ name "fig:Feature-Importance-for-RSF-living"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/Results/RSF_FI_deceased.pdf
-	scale 50
+	scale 70
 
 \end_inset
 
@@ -14854,7 +14633,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -15070,12 +14849,12 @@ P, HCV_SEROSTATUS, and GENDER have negative importance.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/Results/GBSA_FI_living.pdf
-	scale 70
+	scale 75
 
 \end_inset
 
@@ -15115,12 +14894,12 @@ name "fig:GBSA-living-feature"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Images/Results/GBSA_FI_deceased.pdf
-	scale 60
+	scale 75
 
 \end_inset
 
@@ -17366,9 +17145,9 @@ The data reported here have been supplied by the United Network for Organ
 \end_layout
 
 \begin_layout Standard
-Source code for both application and trained models can be found in the
- following GitHub repository: ...
- Data and trained models are of cource exluded.
+The source code for both the application and trained models can be found
+ in the following GitHub repository: https://github.com/krllstdn/BachelorProject
+ Data and trained models are, of course, excluded.
 \end_layout
 
 \begin_layout Bibliography
@@ -17397,8 +17176,14 @@ literal "false"
 \end_inset
 
 Nobel prize in physiology or medicine (2022) Our Scientists.
- Available at: https://www.rockefeller.edu/our-scientists/alexis-carrel/2565-nobel
--prize/ (Accessed: February 6, 2023).
+ Available at: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.rockefeller.edu/our-scientists/alexis-carrel/2565-nobel-prize/"
+
+\end_inset
+
+ (Accessed: February 6, 2023).
  
 \end_layout
 
@@ -17416,7 +17201,14 @@ Barker, C.
  (2013).
  Historical Overview of Transplantation.
  Cold Spring Harbor Perspectives in Medicine, 3(4).
- https://doi.org/10.1101/cshperspect.a014977
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://doi.org/10.1101/cshperspect.a014977"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -17475,8 +17267,14 @@ literal "false"
 \end_inset
 
 NCI Dictionary of Cancer terms (no date) National Cancer Institute.
- Available at: https://www.cancer.gov/publications/dictionaries/cancer-terms/def/a
-bo-blood-group-system (Accessed: March 6, 2023).
+ Available at: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/abo-blood-group-system"
+
+\end_inset
+
+ (Accessed: March 6, 2023).
  
 \end_layout
 
@@ -17493,7 +17291,14 @@ Dean L.
  Bethesda (MD): National Center for Biotechnology Information (US); 2005.
  Chapter 2, Blood group antigens are surface markers on the red blood cell
  membrane.
- Available from: https://www.ncbi.nlm.nih.gov/books/NBK2264/
+ Available from: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.ncbi.nlm.nih.gov/books/NBK2264/"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -17535,7 +17340,14 @@ literal "false"
 Gradient Boosted Models — scikit-survival 0.22.2.
  (2015).
  Readthedocs.io.
- https://scikit-survival.readthedocs.io/en/stable/user_guide/boosting.html
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://scikit-survival.readthedocs.io/en/stable/user_guide/boosting.html"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -17635,17 +17447,6 @@ Nemati E, Einollahi B, Lesan Pezeshki M, Porfarziani V, Fattahi MR.
  2014 Jul 5;6(4):e12182.
  doi: 10.5812/numonthly.12182.
  PMID: 25695017; PMCID: PMC4317718.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-up untill this one are damaged.
- some of the following might be as well
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Bibliography
@@ -17678,8 +17479,22 @@ Guillermo García García, Arpana Iyengar, François Kaze, Ciara Kierans, Cesar
  Padilla-Altamira, Valerie A.
  Luyckx, Sex and gender differences in chronic kidney disease and access
  to care around the globe, Seminars in Nephrology, Volume 42, Issue 2, 2022,
- Pages 101-113, ISSN 0270-9295, https://doi.org/10.1016/j.semnephrol.2022.04.001.
- (https://www.sciencedirect.com/science/article/pii/S0270929522000092)
+ Pages 101-113, ISSN 0270-9295, 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://doi.org/10.1016/j.semnephrol.2022.04.001"
+
+\end_inset
+
+.
+ (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.sciencedirect.com/science/article/pii/S0270929522000092"
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -17727,8 +17542,14 @@ literal "false"
 Evaluating survival models — scikit-survival 0.21.0.
  (n.d.).
  Readthedocs.Io.
- Retrieved July 18, 2023, from https://scikit-survival.readthedocs.io/en/stable/us
-er_guide/evaluating-survival-models.html
+ Retrieved July 18, 2023, from h
+\begin_inset CommandInset href
+LatexCommand href
+target "ttps://scikit-survival.readthedocs.io/en/stable/user_guide/evaluating-survival-models.html"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -17774,7 +17595,7 @@ Definitions:, 1.
  Stanford.edu.
  Retrieved October 23, 2023, from 
 \begin_inset Flex URL
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -17825,16 +17646,6 @@ literal "false"
  S.
  (2008).
  Random survival forests.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-these 3 citations cause the glyph problem 26,27,28
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Bibliography
@@ -17892,7 +17703,14 @@ Enrico Longato, Vettoretti, M., & Barbara Di Camillo.
  A practical perspective on the concordance index for the evaluation and
  selection of prognostic time-to-event models.
  Journal of Biomedical Informatics, 108, 103496–103496.
- https://doi.org/10.1016/j.jbi.2020.103496
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://doi.org/10.1016/j.jbi.2020.103496"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -17940,7 +17758,20 @@ Health.
  (2022).
  Kidneys.
  Vic.gov.au.
- https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/kidneys
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/kidneys}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -17953,8 +17784,14 @@ literal "false"
 
 ‌Facts About Chronic Kidney Disease.
  (2020, May 15).
- National Kidney Foundation; https://www.kidney.org/atoz/content/about-chronic-kid
-ney-disease
+ National Kidney Foundation; 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.kidney.org/atoz/content/about-chronic-kidney-disease"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -17971,7 +17808,14 @@ literal "false"
  (2021).
  Chronic kidney disease.
  The Lancet, 398(10302), 786–802.
- https://doi.org/10.1016/s0140-6736(21)00519-5
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://doi.org/10.1016/s0140-6736(21)00519-5"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -17986,7 +17830,24 @@ literal "false"
  (2019, May 23).
  Everything You Need to Know About Kidney Failure.
  Healthline; Healthline Media.
- https://www.healthline.com/health/kidney-failure#outlook
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.healthline.com/health/kidney-failure#outlook"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18001,8 +17862,14 @@ literal "false"
  (2022, August 29).
  National Institute of Diabetes and Digestive and Kidney Diseases; NIDDK
  - National Institute of Diabetes and Digestive and Kidney Diseases.
- https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease
--ckd/causes
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/causes"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18015,7 +17882,17 @@ literal "false"
 
 Estimated Glomerular Filtration Rate (eGFR).
  (2015, December 24).
- National Kidney Foundation; https://www.kidney.org/atoz/content/gfr
+ National Kidney Foundation; https://www.kidney.org/atoz/content/gfr 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18029,7 +17906,24 @@ literal "false"
 What is a Container? | Docker.
  (2023, October 26).
  Docker.
- https://www.docker.com/resources/what-container/
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.docker.com/resources/what-container/"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18043,7 +17937,24 @@ literal "false"
 ‌Use Docker Compose.
  (2024).
  Docker Documentation.
- https://docs.docker.com/get-started/08_using_compose/
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://docs.docker.com/get-started/08_using_compose/"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18057,7 +17968,24 @@ literal "false"
 What is a Reverse Proxy Server? | NGINX.
  (2023, June).
  NGINX.
- https://www.nginx.com/resources/glossary/reverse-proxy-server/
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.nginx.com/resources/glossary/reverse-proxy-server/"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18072,7 +18000,24 @@ Kendra Cherry, Mse.
  (2022, November 22).
  How the color blue impacts moods, feelings, and behaviors.
  Verywell Mind.
- https://www.verywellmind.com/the-color-psychology-of-blue-2795815 
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.verywellmind.com/the-color-psychology-of-blue-2795815"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -18086,14 +18031,19 @@ literal "false"
 Kidney Paired Donation (KPD) Program.
  (2024, January 3).
  Professional Education.
- https://professionaleducation.blood.ca/en/organs-and-tissues/programs/kidney-pair
-ed-donation-kpd-program 
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://professionaleducation.blood.ca/en/organs-and-tissues/programs/kidney-paired-donation-kpd-program"
+
+\end_inset
+
+ 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-maybe images should be referenced in some other way.
- check it!
+retrieved when?
 \end_layout
 
 \end_inset
@@ -18119,7 +18069,14 @@ literal "false"
  KPDGUI: An interactive application for optimization and management of a
  virtual kidney paired donation program.
  Computers in Biology and Medicine, 108, 345–353.
- https://doi.org/10.1016/j.compbiomed.2019.03.013
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://doi.org/10.1016/j.compbiomed.2019.03.013"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18134,7 +18091,24 @@ literal "false"
  Donation.
  (2022, December 9).
  Alliance for Paired Kidney Donation |.
- https://paireddonation.org/4-key-features-of-the-apkd-software-program/
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://paireddonation.org/4-key-features-of-the-apkd-software-program/"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18157,7 +18131,14 @@ Aufhauser, D.
  (2018).
  Impact of prolonged dialysis prior to renal transplantation.
  Clinical Transplantation, 32(6).
- https://doi.org/10.1111/ctr.13260
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://doi.org/10.1111/ctr.13260"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18280,7 +18261,14 @@ Yoo, K.D., Noh, J., Lee, H.
  A Machine Learning Approach Using Survival Statistics to Predict Graft
  Survival in Kidney Transplant Recipients: A Multicenter Cohort Study.
  Sci Rep 7, 8904 (2017).
- https://doi.org/10.1038/s41598-017-08008-8
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://doi.org/10.1038/s41598-017-08008-8"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18294,8 +18282,31 @@ literal "false"
 sksurv.linear_model.CoxnetSurvivalAnalysis — scikit-survival 0.22.2.
  (2015).
  Readthedocs.io.
- https://scikit-survival.readthedocs.io/en/stable/api/generated/sksurv.linear_model.
-CoxnetSurvivalAnalysis.html#sksurv.linear_model.CoxnetSurvivalAnalysis
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{https://scikit-survival.readthedocs.io/en/stable/api/generated/sksurv.linear_mo
+del.CoxnetSurvivalAnalysis.html#sksurv.linear_model.CoxnetSurvivalAnalysis}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18309,8 +18320,31 @@ literal "false"
 ‌sksurv.ensemble.RandomSurvivalForest — scikit-survival 0.22.2.
  (2015).
  Readthedocs.io.
- https://scikit-survival.readthedocs.io/en/stable/api/generated/sksurv.ensemble.Rand
-omSurvivalForest.html
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{https://scikit-survival.readthedocs.io/en/stable/api/generated/sksurv.ensemble.R
+andomSurvivalForest.html}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18324,8 +18358,31 @@ literal "false"
 ‌sksurv.ensemble.GradientBoostingSurvivalAnalysis — scikit-survival 0.22.2.
  (2015).
  Readthedocs.io.
- https://scikit-survival.readthedocs.io/en/stable/api/generated/sksurv.ensemble.Grad
-ientBoostingSurvivalAnalysis.html
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{https://scikit-survival.readthedocs.io/en/stable/api/generated/sksurv.ensemble.G
+radientBoostingSurvivalAnalysis.html}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18347,7 +18404,14 @@ literal "false"
  Perfusion-decellularized matrix: using nature’s platform to engineer a
  bioartificial heart.
  Nature Medicine, 14(2), 213–221.
- https://doi.org/10.1038/nm1684
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://doi.org/10.1038/nm1684"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18358,20 +18422,11 @@ literal "false"
 
 \end_inset
 
-‌Sánchez, P.
- L., M.
- Eugenia Fernández-Santos, Costanza, S., Climent, A.
- M., Moscoso, I., M.
- Angeles Gonzalez-Nicolas, Sanz-Ruiz, R., Rodríguez, H., Kren, S.
- M., Garrido, G., Escalante, J.
- L., Bermejo, J., Elizaga, J., Menarguez, J., Yotti, R., Villar, del, M.
- Angeles Espinosa, Guillem, M.
- S., Willerson, J.
- T., & Bernad, A.
- (2015).
+‌Sánchez PL, Fernández-Santos ME, Costanza S, et al.
  Acellular human heart matrix: A critical step toward whole heart grafts.
- Biomaterials, 61, 279–289.
- https://doi.org/10.1016/j.biomaterials.2015.04.056
+ Biomaterials.
+ 2015;61:279-289.
+ doi:10.1016/j.biomaterials.2015.04.056
 \end_layout
 
 \begin_layout Bibliography
@@ -18386,7 +18441,14 @@ literal "false"
  (2021).
  3D Printing of Physical Organ Models: Recent Developments and Challenges.
  Advanced Science, 8(17).
- https://doi.org/10.1002/advs.202101394
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://doi.org/10.1002/advs.202101394"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18401,7 +18463,14 @@ literal "false"
  (2016).
  Growing human organs in pigs—A dream or reality? Theriogenology, 86(1),
  422–426.
- https://doi.org/10.1016/j.theriogenology.2016.04.056
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://doi.org/10.1016/j.theriogenology.2016.04.056"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18412,8 +18481,15 @@ literal "false"
 
 \end_inset
 
-‌A Guide to Calculating and Interpreting the Estimated Post- ..., optn.transplant.hrs
-a.gov/media/1511/guide_to_calculating_interpreting_epts.pdf.
+‌A Guide to Calculating and Interpreting the Estimated Post-Transplant Survival
+ (EPTS) Score Used in the Kidney Allocation System (KAS) 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://optn.transplant.hrsa.gov/media/1511/guide_to_calculating_interpreting_epts.pdf"
+
+\end_inset
+
+.
  Accessed 16 Apr.
  2024.
  
@@ -18481,7 +18557,14 @@ Hamet, P., & Tremblay, J.
  (2017).
  Artificial intelligence in medicine.
  Metabolism, Clinical and Experimental, 69, S36–S40.
- https://doi.org/10.1016/j.metabol.2017.01.011
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://doi.org/10.1016/j.metabol.2017.01.011"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18499,7 +18582,14 @@ literal "false"
  (2019).
  Chronic Kidney Disease Diagnosis and Management.
  JAMA, 322(13), 1294–1294.
- https://doi.org/10.1001/jama.2019.14745
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://doi.org/10.1001/jama.2019.14745"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18513,7 +18603,24 @@ literal "false"
 ‌Organ Donation Statistics | organdonor.gov.
  (2024, March 29).
  Organdonor.gov.
- https://www.organdonor.gov/learn/organ-donation-statistics
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.organdonor.gov/learn/organ-donation-statistics"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18528,8 +18635,24 @@ literal "false"
  (2024, June 15).
  US population by year, race, age, ethnicity, & more.
  USAFacts; USAFacts.
- https://usafacts.org/data/topics/people-society/population-and-demographics/our-
-changing-population/
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://usafacts.org/data/topics/people-society/population-and-demographics/our-changing-population/"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18584,7 +18707,24 @@ literal "false"
 scikit-survival/sksurv/tree/tree.py at v0.23.0 · sebp/scikit-survival.
  (2024).
  GitHub.
- https://github.com/sebp/scikit-survival/blob/v0.23.0/sksurv/tree/tree.py#L38-L676
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://github.com/sebp/scikit-survival/blob/v0.23.0/sksurv/tree/tree.py#L38-L676"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18598,8 +18738,24 @@ literal "false"
 scikit-learn/sklearn/tree/_tree.pyx at main · scikit-learn/scikit-learn.
  (2024).
  GitHub.
- https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/tree/_tree.pyx#L14
-0
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/tree/_tree.pyx#L140"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18613,8 +18769,31 @@ literal "false"
 DecisionTreeRegressor.
  (2024).
  Scikit-Learn.
- https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegress
-or.html
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegr
+essor.html}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -18627,8 +18806,31 @@ literal "false"
 
 ‌Nelson-Aalen Estimator.
  (n.d.).
- https://www.medicine.mcgill.ca/epidemiology/hanley/c609/material/NelsonAalenEstima
-tor.pdf
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{https://www.medicine.mcgill.ca/epidemiology/hanley/c609/material/NelsonAalenEst
+imator.pdf}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+retrieved when?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
