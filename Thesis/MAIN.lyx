@@ -8512,7 +8512,7 @@ literal "false"
 
 \end_inset
 
- and Scikit-learn's DepthFirstTreeBuilder 
+ and scikit-learn's DepthFirstTreeBuilder 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-73"
@@ -8570,7 +8570,7 @@ noprefix "false"
 
 \end_inset
 
-) adapted for survival analysis and implemented within the Scikit-survival
+) adapted for survival analysis and implemented within the scikit-survival
  package.
  Friedman's Gradient Boosting is adapted to survival analysis by setting
  the partial log-likelihood as the loss function and following the algorithm
@@ -9390,7 +9390,7 @@ where
 \end_layout
 
 \begin_layout Standard
-According to Scikit-survival's documentation 
+According to scikit-survival's documentation 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-22-docs"
@@ -9938,7 +9938,7 @@ y
  is a tuple consisting of two elements: PSTATUS and PTIME.
  PSTATUS is the boolean censoring indicator (True - the event happened,
  False - otherwise), PTIME is the number of days survived.
- All Scikit-survival estimators require this format of the target value.
+ All scikit-survival estimators require this format of the target value.
 \end_layout
 
 \begin_layout Standard
@@ -10022,7 +10022,7 @@ StandardScaler()
 \emph on
 OneHotEncoder()
 \emph default
-) in the Scikit-learn transformer pipeline.
+) in the scikit-learn transformer pipeline.
  The pipeline is pickled for later use in the application to transform the
  user input into data digestible by the model.
  Numerical and categorical values then comprise the 
@@ -10082,7 +10082,7 @@ Surv.from_arrays()
 
 \begin_layout Standard
 There is only one distinction in the pipeline for models used in the application.
- We used custom transformers built with Scikit-learn to have the ability
+ We used custom transformers built with scikit-learn to have the ability
  to pickle the pipeline used for training and use it later in the application
  to avoid the complexity and potential errors of developing a custom pipeline.
  This approach ensures consistency and minimizes mistakes, thereby enhancing
@@ -10705,7 +10705,7 @@ literal "false"
 
 .
  Let us confirm that on the data.
- Please refer to Figure 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "km_donor_types"
@@ -10715,8 +10715,7 @@ noprefix "false"
 
 \end_inset
 
-, which plots two Kaplan-Meier survival curves for all patients from the
- dataset.
+ plots two Kaplan-Meier survival curves for all patients from the dataset.
  On the graph, we can see that the LDT survival probability is indeed higher
  than the DDT survival probability.
  This is the case because often, there is no time to make full, in-depth
@@ -10805,7 +10804,7 @@ name "km_sex"
 \end_layout
 
 \begin_layout Standard
-Please take a look at Figure 
+Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pie-Don-Ty"
@@ -10815,7 +10814,7 @@ noprefix "false"
 
 \end_inset
 
-, which illustrates the distribution of donor types in a pie chart.
+ illustrates the distribution of donor types in a pie chart.
  As can be seen, deceased donor transplantation is much more prevalent.
  Now let us look at the number of deceased/living donor transplants by year
  on Figure 
@@ -10878,8 +10877,7 @@ Recipient Gender
 \begin_layout Standard
 In this subsection, we will explore the gender distribution in our dataset
  and its influence on survival.
- Let us start with the distribution of gender in our dataset.
- Please look at Figure 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:pie_gender"
@@ -10889,7 +10887,7 @@ noprefix "false"
 
 \end_inset
 
-.
+ illustrates he distribution of gender in our dataset.
  As can be seen, there are more males than females.
  Even though chronic kidney disease is more common in women, end-stage kidney
  disease and, therefore, the need for kidney transplants is more common
@@ -12874,8 +12872,8 @@ s within the DDT dataset and the presence of older transplants performed
  is the dataset.
  Consequently, the only potential way to improve the performance is to expand
  the dataset with further feature engineering.
- For more detailed information on the training of each model, please refer
- to the corresponding section from the following sections.
+ For more detailed information on the training of each model,  refer to
+ the corresponding section from the following sections.
  
 \end_layout
 
@@ -13435,7 +13433,7 @@ name "fig:BS-living"
 
 \begin_layout Standard
 As time-dependent metrics, ROC AUC and Brier Score were chosen.
- Please look at Figure 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:AUC-living"
@@ -13445,7 +13443,7 @@ noprefix "false"
 
 \end_inset
 
-, where we can see the plot of AUC over time for all living models.
+ plots AUC over time for all living models.
  Even though the mean AUCs are almost identical, values vary over time.
  From day 1000 to 2800, RSF performs better, then from day 2900 to day 4000,
  coxnet and GBSA overperform RSF.
@@ -13574,7 +13572,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Please look at Figure 
+Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:BS-deceased"
@@ -13584,7 +13582,7 @@ noprefix "false"
 
 \end_inset
 
-, which plots the Brier Score for the deceased models.
+ plots the Brier Score for the deceased models.
  Similarly to LDT, the performance of Coxnet and GBSA is identical, but
  RSF is slightly worse, although by a small margin.
  
@@ -15820,8 +15818,8 @@ noprefix "false"
  On the bottom of the form, you can see the Submit button, which sends the
  data to the server to make a prediction and performs checks for correct
  input and the absence of missing values.
- For more details on the validation and the front-end application, please
- refer to Section 
+ For more details on the validation and the front-end application, refer
+ to Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Architecture"
@@ -17109,7 +17107,7 @@ An application named KidneyLife has been developed to assist physicians
  The application is considered a minimum viable product (MVP), and its functiona
 lity may be significantly expanded according to the needs of interested
  institutions.
- For further details, please refer to the 
+ For further details, refer to the 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Future-Work"
