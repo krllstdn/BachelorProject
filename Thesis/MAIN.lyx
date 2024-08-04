@@ -178,7 +178,7 @@ status open
 \backslash
 def
 \backslash
-documentdate{August 2, 2023}
+documentdate{August 5, 2024}
 \end_layout
 
 \begin_layout Plain Layout
@@ -540,6 +540,10 @@ Author's declaration:
 \noindent
 I declare that this Bachelor's Degree Project is entirely my own work and
  I have listed all the used sources in the bibliography.
+ During the project, GitHub Copilot provided some assistance with coding.
+ Additionally, I used Grammarly and ChatGPT to help with rephrasing and
+ generating ideas for better sentence formulation.
+ For grammar corrections, I relied on Grammarly.
 \end_layout
 
 \begin_layout Standard
@@ -1016,7 +1020,7 @@ literal "false"
  Although some scoring techniques consider the estimated longevity 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-60"
+key "key-61"
 literal "false"
 
 \end_inset
@@ -1192,214 +1196,6 @@ noprefix "false"
  We review existing software solutions and introduce KidneyLife, an inference
  application based on the trained models.
  The chapter delves into its architecture and design principles.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-- we didn't do deep survival learning
-\end_layout
-
-\begin_layout Plain Layout
-- only one dataset was used.
- while the most extensive and diverse, still....
-\end_layout
-
-\begin_layout Plain Layout
-- models assume that the donor-recipient pair is well-matched, so they should
- only be used for 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\series bold
-Motivation behind the paper
-\series default
-: We participated in the development of TX Matching, an open-source kidney
- pair matching software, which estimates the optimal series of exchanges
- between incompatible donor-recipient pairs.
- And while developing it, we got interested with the results of transplants,
- how many years after the transplant a person can live.
- What happens after the transplantation.
- What are the underlying medical pricinples that govern wheether the organ
- will be accepted or rejected.
- This thesis is a result of this interest and we hope that the reader will
- share it with us.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-intro paragraph
-\end_layout
-
-\begin_layout Plain Layout
-general -> specific
-\end_layout
-
-\begin_layout Plain Layout
-subtopics 
-\end_layout
-
-\begin_layout Plain Layout
-the first sentence must catch reader's attention and point to the direction
- of the main subject.
- might contain statistic or a quote
-\end_layout
-
-\begin_layout Plain Layout
-thesis statement is the last in the paragraph
-\end_layout
-
-\begin_layout Plain Layout
-4.
- thesis statement should contain subtopics, which will be used as a paragraph
- topics in the body.
- order must be preserveed
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-1.
- what 
-\end_layout
-
-\begin_layout Plain Layout
-2.
- why
-\end_layout
-
-\begin_layout Plain Layout
-3.
- the scope of the research
-\end_layout
-
-\begin_layout Plain Layout
-4.
- limitations
-\end_layout
-
-\begin_layout Subsubsection*
-7 essentials
-\end_layout
-
-\begin_layout Plain Layout
-1.
- opening section (1 paragraph)
-\end_layout
-
-\begin_layout Itemize
-introduce the field
-\end_layout
-
-\begin_layout Itemize
-introduce the research problem(gap)
-\end_layout
-
-\begin_layout Itemize
-state research aims
-\end_layout
-
-\begin_layout Itemize
-layout the intro chapter structure
-\end_layout
-
-\begin_layout Plain Layout
-2.
- study background
-\end_layout
-
-\begin_layout Itemize
-relevatnt bg info to give a decent foundational understanding of the topic
-\end_layout
-
-\begin_layout Plain Layout
-3.
- research gap
-\end_layout
-
-\begin_layout Itemize
-narrow the focus to the problem
-\end_layout
-
-\begin_layout Itemize
-what exactly is missing in literature and why is that a problem
-\end_layout
-
-\begin_layout Itemize
-what is already known, what is missing, why is it a problem
-\end_layout
-
-\begin_layout Plain Layout
-4.
- aims, objectives and questions
-\end_layout
-
-\begin_layout Itemize
-clearly state the research aim
-\end_layout
-
-\begin_layout Itemize
-aim(high-level what) objectives are somthing specific
-\end_layout
-
-\begin_layout Itemize
-state the boundaries of the research, what you will and won't' do
-\end_layout
-
-\begin_layout Plain Layout
-5.
- signifficance - value to the world
-\end_layout
-
-\begin_layout Itemize
-state how is the research might benefit to the world
-\end_layout
-
-\begin_layout Plain Layout
-6.
- limitations
-\end_layout
-
-\begin_layout Itemize
-narrow scope, methodology, resource limitations, generalizability of the
- findings, 
-\end_layout
-
-\begin_layout Plain Layout
-7.
- structure
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Chapter
@@ -4690,7 +4486,7 @@ DecisionTreeRegressor
 \emph default
  is utilized in 
 \emph on
-GradientBoostedSurvival Analysis,
+GradientBoostedSurvivalAnalysis,
 \emph default
  so we will focus on regression rather than classification.
  Scikit-learn employs the 
@@ -4833,7 +4629,15 @@ noprefix "false"
 \begin_layout Standard
 It is worth noting that the other algorithms train the Decision Tree without
  restrictions (for example.
- the approach used in Survival Trees).
+ the approach used in Survival Trees 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-71"
+literal "false"
+
+\end_inset
+
+).
  Then, during the 
 \emph on
 pruning
@@ -4859,8 +4663,7 @@ Linear algorithms, like linear regression, assume that data are linear.
  This flexibility allows the algorithm to fit the data closely, possibly
  leading to overfitting.
  Consequently, the algorithm needs to be regularized to prevent overfitting.
- The following hyperparameters can help with regularization and preventing
- overfitting:
+ The following hyperparameters can help regularize the model:
 \end_layout
 
 \begin_layout Itemize
@@ -4869,7 +4672,7 @@ Linear algorithms, like linear regression, assume that data are linear.
 max_depth
 \emph default
  - specifies the maximum depth of the decision tree.
- The most important hyperparameter.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -4951,7 +4754,7 @@ max_*
 criterion
 \emph default
  hyperparameter specifies the function to assess the quality of a split.
- In the scenario described above this is MSE.
+ In the scenario described above this is set to MSE.
 \end_layout
 
 \begin_layout Itemize
@@ -5238,7 +5041,7 @@ Update
 \begin_inset Formula $\mathbf{x}$
 \end_inset
 
-is in this region (leaf) 
+ is in this region (leaf) 
 \begin_inset Formula $R_{l,m}$
 \end_inset
 
@@ -5868,9 +5671,9 @@ literal "false"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\bar{x}^{(j)}=\frac{x^{(j)}-min(j)}{max(j)-min(j)},
-\]
+\begin{equation}
+\bar{x}^{(j)}=\frac{x^{(j)}-min(j)}{max(j)-min(j)},\label{eq:normalization}
+\end{equation}
 
 \end_inset
 
@@ -7553,7 +7356,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Survival Curve Estimated with KM on the training dataset 
+Survival Curve Estimated with KM on the Training Dataset 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Survival-curve-estimated"
@@ -8501,8 +8304,7 @@ noprefix "false"
 ) or any other statistic test that can handle survival data.
  LeBlanc shows that log-rank performs well for splitting survival data.
  The scikit-survival implementation of the Survival Tree also uses log-rank.
- In the original paper by LeBlanc, pruning was suggested as a way to deal
- with overfitting.
+ In the original paper, pruning was suggested as a way to deal with overfitting.
  However, after reviewing the source code for the scikit-survival's SurvivalTree
  
 \begin_inset CommandInset citation
@@ -8624,7 +8426,7 @@ loss
 \emph on
 learning_rate
 \emph default
- - hyperparameter sets the weight of each learner's contribution.
+ - hyperparameter that sets the weight of each learner's contribution.
 \end_layout
 
 \begin_layout Itemize
@@ -8633,21 +8435,6 @@ learning_rate
 n_estimators
 \emph default
  - dictates how many estimators must be trained.
- It is the value of 
-\begin_inset Formula $M$
-\end_inset
-
- from the Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Stochastic-Gradient-Boosting"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Itemize
@@ -8665,7 +8452,7 @@ subsample
 \begin_inset Formula $1.0$
 \end_inset
 
- denotes Gradient Boosting, while values less than 
+ means Gradient Boosting, while values less than 
 \begin_inset Formula $1.0$
 \end_inset
 
@@ -8683,8 +8470,8 @@ random_state
 \end_layout
 
 \begin_layout Standard
-For more information on the numerous hyperparameters, you can refer to the
- GBSA documentation 
+For more information on the hyperparameters, you can refer to the GBSA documenta
+tion 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-56"
@@ -8855,7 +8642,7 @@ All cases within the same leaf have the same CHF.
 \begin_inset Formula $H(t|\mathbf{x}_{i})$
 \end_inset
 
-be the CHF for the sample 
+ be the CHF for the sample 
 \begin_inset Formula $i$
 \end_inset
 
@@ -8863,12 +8650,12 @@ be the CHF for the sample
 \begin_inset Formula $\mathbf{x}_{i}$
 \end_inset
 
-covariates describing it.
+ covariates describing it.
  We need to drop 
 \begin_inset Formula $\mathbf{x}_{i}$
 \end_inset
 
-down the survival tree to get this value.
+ down the survival tree to get this value.
  After that, we will get the terminal node 
 \begin_inset Formula $h$
 \end_inset
@@ -12594,7 +12381,14 @@ name "chap:Machine-Learning-Models"
 \end_layout
 
 \begin_layout Section
-Problem Formulation
+Problem Formulation 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Problem-Formulation"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -13359,7 +13153,7 @@ For LDT, RSF shows slightly superior discrimination (AUC), but the overall
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -13397,7 +13191,7 @@ name "fig:AUC-living"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -13458,7 +13252,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -13496,7 +13290,7 @@ name "fig:AUC-deceased"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -13964,201 +13758,6 @@ On the positive side, RSF can learn well from smaller datasets.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Dataset
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Uno c-index
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-IBS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Mean AUC
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Living
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.723
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.139
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.744
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Deceased
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.691
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.164
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.724
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Kaplan-Meier (for IBS reference)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.247
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-RSF.
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:RSF-result"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -14417,7 +14016,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align left
@@ -14459,7 +14058,7 @@ name "fig:Feature-Importance-for-RSF-living"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -14514,21 +14113,6 @@ The LDT trained for 65 minutes, and the DDT for about 80 minutes.
 
 \begin_layout Subsection
 Gradient Boosting Survival Analysis
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-subsamples are 0.5 because Friedman.
- (it is roughly bootstrap samples and if it would be lower the variance
- would increase.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -14847,7 +14431,7 @@ P, HCV_SEROSTATUS, and GENDER have negative importance.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -14892,7 +14476,7 @@ name "fig:GBSA-living-feature"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -14929,7 +14513,14 @@ name "fig:GBSA-deceased-feature"
 \end_layout
 
 \begin_layout Section
-Scoring algorithm
+Scoring
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Scoring"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -14937,12 +14528,12 @@ Various methods have been proposed to evaluate donor-recipient compatibility,
  such as the Estimated Post-Transplant Survival Score (EPTS) score 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-60"
+key "key-61"
 literal "false"
 
 \end_inset
 
- , which is presently utilized in the US kidney allocation system and is
+, which is presently utilized in the US kidney allocation system and is
  based on survival analysis techniques.
  (Mark et al., 2019) 
 \begin_inset CommandInset citation
@@ -15014,36 +14605,61 @@ It focuses on histo- and blood group compatibility but does not consider
 
 \begin_layout Standard
 We aimed to develop a scoring technique based on the hazard predicted by
- the Coxnet model.
- We believed that patients who lived the longest would have the lowest hazard.
+ the GBSA model.
+ Our primary assumption was that patients who lived the longest would have
+ the lowest hazard.
  Based on this hazard, we would create a formula that would produce a score
  ranging from 0 to 100, with 0 being the worst possible match and 100 being
- the best possible match.
- However, despite the strong performance on the c-index and integrated Brier
- score, we discovered a lack of correlation (-0.262) between the days lived
- and the predicted hazard, as depicted in Figure 
+ the best possible.
+ So, let us look at the predicted hazard for each time group.
+\end_layout
+
+\begin_layout Standard
+Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:predicted-hazard-over-days-lived"
+reference "fig:Mean-Predicted-Hazard-GBSA"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-.
+ illustrates the mean predicted hazard for four groups: ”less than 1 year”,
+ ”1-5 years”, ”5-10 years”, and ”more than 10 years”.
+ As can be seen, there is an expected trend of decreasing predicted hazards.
+ However, let us look closer.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Mean-Predicted-Hazard-GBSA-year"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ illustrates the mean predicted hazard for each year and patients, with
+ patients who have survived more than ten years categorized into a separate
+ group.
+ As can be seen, in the group ”less than 1 year”, the hazard is expectedly
+ high.
+ The”2 years” and ”3 years” groups are similar and have lower hazards than
+ the first group.
+ Then, however, in ”4 years” it starts to increase, culminating in ”5 years”.
+ Only then does the mean hazard start declining, as expected.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Images/Results/scoring.pdf
+	filename Images/Results/scoring_by_group.pdf
 	scale 60
 
 \end_inset
@@ -15055,10 +14671,10 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Plot of Predicted Hazard Over Days Survived for LDT with Event Happening.
+Mean Predicted Hazard by Survival Time Groups for GBSA Deceased
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:predicted-hazard-over-days-lived"
+name "fig:Mean-Predicted-Hazard-GBSA"
 
 \end_inset
 
@@ -15067,10 +14683,6 @@ name "fig:predicted-hazard-over-days-lived"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -15080,16 +14692,399 @@ name "fig:predicted-hazard-over-days-lived"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
-add some concluding paragraph
+\align center
+\begin_inset Graphics
+	filename Images/Results/scoring_by_year_group.pdf
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mean Predicted Hazard by Survival Time Groups for GBSA Deceased
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Mean-Predicted-Hazard-GBSA-year"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Based on this, we can speculate that the score might be somewhat accurate
+ only for patients with lower predicted hazards, who are likely to live
+ for more than five years.
+ Even though there is an expected trend, these are mean values.
+ The actual predictions have quite a significant standard deviation (0.86)
+ in all groups, suggesting that the predicted hazard cannot be the sole
+ deciding factor.
+ As discussed at the beginning of this Chapter (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Problem-Formulation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), it seems that it is indeed hard to reduce such a complex topic as survival
+ to a single number.
+ The survival, hazard, and cumulative hazard functions should be assessed
+ alongside other factors to make a well-informed decision.
+\end_layout
+
+\begin_layout Paragraph
+The Scoring
+\end_layout
+
+\begin_layout Standard
+As part of our task to create a scoring formula, we are presenting the following
+ scoring formula:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\text{score}=100*\left(\frac{1}{2}C_{hazard}+\frac{1}{2}C_{age}\right),\label{eq:scoring}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $C_{hazard}$
+\end_inset
+
+ is the hazard coefficient, and 
+\begin_inset Formula $C_{age}$
+\end_inset
+
+ is the age coefficient.
+ 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ is the weight of the coefficient.
+ The weight of the coefficient for 
+\emph on
+n
+\emph default
+ features is calculated as 
+\begin_inset Formula $\frac{1}{n+1}$
+\end_inset
+
+, with 1 accounting for the hazard.
+ 
+\begin_inset Formula $C_{hazard}$
+\end_inset
+
+ is expressed by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C_{hazard}=1-\frac{H_{predicted}-H_{min}}{H_{max}-H_{min}},
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $H$
+\end_inset
+
+ is a hazard.
+ The fraction is the normalization equation, seen in Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:normalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, subtracted from one to reflect the fact that the lower the hazard the
+ better.
+ The normalization formula was chosen as it reflects the statistical properties
+ of the feature, while keeping it in range from 0 to 1, resulting in a good
+ coefficient.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{age}$
+\end_inset
+
+ is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C_{age}=\begin{cases}
+0 & \text{if }age\geqslant80\\
+1-\frac{age-18}{80-18} & \text{otherwise}
+\end{cases},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 80 is an arbitrarily chosen marginal age, after which the transplantations
+ are not performed.
+ In real-life situations, it could and should differ.
+ 18 is the minimum age because pediatric transplantation is a unique field
+ on its own.
+ The reason for subtracting the normalization fraction from 1 is the same
+ as previously - the younger the age, the better the outcome.
+\end_layout
+
+\begin_layout Standard
+We have focused on the recipient age feature, one of the most predictive
+ features in all models except GBSA Living.
+ However, additional features can and should be included to improve scoring
+ accuracy.
+ We suggest incorporating the following features into the formula: dialysis
+ status and/or dialysis time and recipient diabetes status.
+ These features had a high importance in all our models.
+ By doing this, one would be following the approach used in the EPTS.
+ In EPTS, factors such as years on dialysis, diabetes, prior transplants,
+ and age were included.
+ Although the hazard prediction was not directly included in the formula,
+ the equation was derived from Cox proportional hazards.
+\end_layout
+
+\begin_layout Paragraph
+Examples
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table}[htbp]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Scoring}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{tab:scoring}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lll}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+toprule
+\end_layout
+
+\begin_layout Plain Layout
+
+ Predicted Hazard &      Score & Survival (Days) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+		-0.854124 &  67.079316 &    2113.0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+         0.203719 &  41.642521 &    5537.0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+         0.593991 &  32.258065 &    2513.0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        -0.979759 &  70.100331 &     964.0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        -0.344581 &  54.826901 &    4793.0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+         0.258669 &  40.321190 &    1428.0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+         0.058312 &  45.138960 &    5561.0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        -1.074110 &  72.369084 &    2142.0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+         1.313032 &  14.968083 &       2.0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        -1.266887 &  77.004577 &    2685.0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{tab:scoring}
+\end_layout
+
+\end_inset
+
+ shows the score for each predicted hazard for ten random samples from the
+ test set.
+ As can be seen, the score caught a lousy transplantation with only two
+ days survived by giving it a score of 14.
+ However, for more successful transplantations, it is less accurate.
 \end_layout
 
 \begin_layout Section
@@ -15105,14 +15100,14 @@ Our goal was to create a model that could estimate the life expectancy of
  highest c-index of 0.699 achieved for DDT using GBSA and 0.723 for LDT using
  Coxnet over a 15-year period.
  However, we found that the DDT model performance was inferior to that of
- LDT, likely due to intrinsic limitations in donor-recipient compatibility
+ LDT, likely due to inherent limitations in donor-recipient compatibility
  present in the DDT dataset.
  Another reason might be related to the data itself.
  The DDT dataset might have more of older records when the techniques of
  transplantation and immunosuppression were not that refined, which might
  negatively influence the prediction.
- The distributions of living/deceased transplantations by year can be seen
- in Figure 
+ The distributions of living/deceased transplantations by year on the whole
+ dataset can be seen in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Histogram-of-Deceased/Living"
@@ -15157,7 +15152,7 @@ literal "false"
 
 \end_inset
 
- achieved a concordance index of 0.67 with a random survival forest on the
+ achieved a concordance index of 0.67 with a Random Survival Forest on the
  ANZDATA dataset.
  Other SA studies from the Ravindhran et al.
  
@@ -15192,23 +15187,48 @@ While the importance of individual features varied between models, some
 \end_layout
 
 \begin_layout Standard
-We tried to design and implement a scoring algorithm focused on the life
- expectancy.
- However the assumption of a high correlation between the predicted hazard
- and the days survived was wrong, which did not allow us to go any further.
- However, there are working algorithms, such as the Estimated Post-Transplant
- Survival Score (EPTS) score 
+We designed and implemented a prototype of a scoring algorithm (Equation
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:scoring"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) focused on the life expectancy.
+ It is based on predicted hazard and the age of the recipient.
+ We have found that it probably will not provide accurate estimates for
+ people with higher predicted hazard as high predicted hazard could mean
+ 1 year survived as well as five.
+ Refer to the Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Scoring"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for further details.
+ We recommend incorporating additional factors into the scoring system,
+ following the approach used in the Estimated Post-Transplant Survival Score
+ (EPTS) 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-60"
+key "key-61"
 literal "false"
 
 \end_inset
 
-, which is used in the US kidney allocation system and bases its formula
- on the SA model prediction and several features.
- The reason their scoring works might be that they add a lot of other factors
- besides the model prediction to the formula.
+.
+ In EPTS, factors such as years on dialysis, diabetes, prior transplants,
+ and age were included.
+ Although the model prediction was not directly included in the formula,
+ the equation itself was derived from Cox proportional hazards.
 \end_layout
 
 \begin_layout Paragraph
@@ -15270,6 +15290,16 @@ Upping the estimators in random survival forest is a potential avenue for
 \end_layout
 
 \begin_layout Standard
+Scoring definitely needs more work.
+ While it is able to catch really bad transplantations, with more successful
+ ones (that do not experience hyperacute or acute rejection) it is less
+ accurate.
+ We suggest adding more features into the formula, or trying a different
+ approach altogether.
+ 
+\end_layout
+
+\begin_layout Standard
 Initially, we considered training a survival neural network.
  However, after reviewing the literature, we found that the models we had
  already used had provided similar or better performance than neural networks.
@@ -15313,17 +15343,7 @@ Existing Solutions
 \begin_layout Standard
 To the best of our knowledge, there is no survival estimation software for
  kidney transplantation as of yet.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-REMOVE OR REWRITE THE SENTENCE
-\end_layout
-
-\end_inset
-
-So, let us review other adjacent solutions: kidney pair matching software.
+ So, let us review other adjacent solutions: kidney pair matching software.
  We will review three options: TX Matching, KidneyMatch, and KPDGUI.
  It is worth noting that there is limited information available online about
  alternatives.
@@ -17099,7 +17119,7 @@ The feature selection was performed by evaluating the importance of the
 \begin_layout Standard
 An application named KidneyLife has been developed to assist physicians
  in their decision-making process by offering a comprehensive estimate of
- the expected lifespan of a recipient of a kidney transplant.
+ the expected lifespan of a kidney transplant recipient.
  The application employs Coxnet models for LDT and DDT.
  Users can enter values for the selected features, click ”Submit,” and obtain
  a prediction in the form of a survival function.
@@ -17121,11 +17141,11 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-It is worth noting that the data have the assumption of well-matched pairs,
- despite the fact that HLA features were excluded in the end.
- Consequently, models and the application should be used only in conjunction
- with KPD software and prior negative crossmatch results, otherwise, the
- results might be inaccurate.
+It is worth noting that the data assume well-matched pairs despite HLA features
+ being excluded in the end.
+ Consequently, models and the application should be used only with KPD software
+ and prior negative crossmatch results.
+ Otherwise, the results might be inaccurate.
 \end_layout
 
 \begin_layout Chapter*
