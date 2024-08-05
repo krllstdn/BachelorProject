@@ -742,8 +742,8 @@ Abstrakt:
  Tato práce se pokouší tuto mezeru překlenout trénováním několika prediktivních
  modelů strojového učení pro transplantace od žijících dárců (LDT) a zemřelých
  dárců (DDT), včetně regularizované Coxovy regrese, náhodných přežívacích
- lesů a přežívacích stromů s gradientním boostingem, s cílem odhadnout pravděpod
-obnost dlouhodobého přežití.
+ lesů a rozhodovacích stromů s gradientním boostingem, s cílem odhadnout
+ pravděpodobnost dlouhodobého přežití.
  Modely LDT dosáhly indexu shody Uno (c-index) 0.72 a integrovaného Brierova
  skóre (IBS) 0.136, zatímco modely DDT dosáhly c-indexu Uno 0.69 a IBS 0.162.
  S využitím těchto modelů byla vyvinuta aplikace, která má lékařům pomoci
@@ -768,19 +768,12 @@ obnost dlouhodobého přežití.
 \lang czech
 Klíčová slova:
 \emph default
- Analýza přežití, 
+ 
 \lang american
-Gradient Boosting Survival Analysis
-\lang czech
-, 
-\lang american
-Inference strojového učení,
+Gradient Boosting Survival Analysis,
 \lang czech
  Předpověď přežití, Random Survival Forests, Regularizovaná Coxová regrese,
- Strojové učení, Transplantace ledviny, Transplantace od žijícího dárce,
- Transplantace od zemřelého dárce, 
-\lang american
-United Network for Organ Sharing (UNOS), Umělá Inteligence
+ Strojové učení, Transplantace ledviny
 \end_layout
 
 \begin_layout Standard
@@ -855,7 +848,7 @@ Abstract:
  This thesis attempts to bridge this gap by training several predictive
  machine learning models for living donor (LDT) and deceased donor transplantati
 ons (DDT), including Cox elastic net regression, random survival forests,
- and gradient-boosted survival trees, to estimate long-term survival probabiliti
+ and gradient-boosted decision trees, to estimate long-term survival probabiliti
 es.
  LDT models achieved an Uno concordance index of 0.72 and an integrated Brier
  score (IBS) of 0.136, while DDT models achieved an Uno c-index of 0.69 and
@@ -1113,7 +1106,7 @@ tation.
 \end_layout
 
 \begin_layout Standard
-Now let us review the structure of this work.
+Now, let us review the structure of this work.
  In Chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1182,6 +1175,8 @@ noprefix "false"
  Models are compared based on training experience, training time, and practicali
 ty.
  Finally, the results are discussed and compared with the state-of-the-art.
+ The chapter concludes with the presentation of a prototype of transplantation
+ scoring.
  Chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1426,7 +1421,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-ABO blood group and histocompatibility (defined in 
+ABO blood group and histocompatibility (defined in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Immunology-of-kidney"
@@ -2936,7 +2931,7 @@ Lab-grown Organs
 \end_layout
 
 \begin_layout Standard
-(Ott et al., 2008)
+(Ott et al., 2008) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-57"
@@ -2944,7 +2939,7 @@ literal "false"
 
 \end_inset
 
- and (Sánchez et al., 2015)
+ and (Sánchez et al., 2015) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-58"
@@ -3008,39 +3003,6 @@ Machine Learning Background
 \begin_inset CommandInset label
 LatexCommand label
 name "chap:Machine-Learning-Background"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-cit konkretnejic tim hur
-\end_layout
-
-\begin_layout Plain Layout
-- long rank popsat
-\end_layout
-
-\begin_layout Plain Layout
-na taky popsat
-\end_layout
-
-\begin_layout Plain Layout
-vysvetit proc featuru josu ruzne v L Dc
-\end_layout
-
-\begin_layout Plain Layout
-EDA ocekava porovnatelne a obecne data bez zamereni na finalni modely.
-\end_layout
-
-\begin_layout Plain Layout
-rict o 
-\end_layout
 
 \end_inset
 
@@ -3726,7 +3688,7 @@ Once we found
 \begin_inset Formula $(\overline{w}^{*},b^{*})$
 \end_inset
 
- for the 
+ for the Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:log_reg"
@@ -3937,7 +3899,7 @@ L_{\bar{w},b}\stackrel{def}{=}\underset{i=1...N}{\prod}f_{\bar{w},b}(\overline{x
 \end_layout
 
 \begin_layout Standard
-On the other hand, due to the exponential function in equation 
+On the other hand, due to the exponential function in Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:max_likelihood"
@@ -4957,7 +4919,7 @@ n_estimators
 Compute the negative gradient (pseudo-residual)
 \begin_inset Formula 
 \[
-\tilde{y_{\pi(i),m}}=\left[\frac{\partial L(y_{\pi(i)},F(\mathbf{x}_{\pi(i)}))}{\partial F(\mathbf{x}_{\pi(i)})}\right]_{F(\mathbf{x)=F_{m-1}(}\mathbf{x})},i=1,...,\tilde{N}
+\tilde{y_{\pi(i),m}}=\left[\frac{\partial L(y_{\pi(i)},F(\mathbf{x}_{\pi(i)}))}{\partial F(\mathbf{x}_{\pi(i)})}\right]_{F(\mathbf{x)=F_{m-1}(}\mathbf{x})},i=1,...,\tilde{N.}
 \]
 
 \end_inset
@@ -4994,6 +4956,7 @@ literal "false"
 
 \end_inset
 
+.
  
 \end_layout
 
@@ -7672,7 +7635,7 @@ time-independent.
 
 \emph default
  The exponential function ensures that the function is non-negative, satisfying
- the definition of the hazard function
+ the definition of the hazard function 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-13-SA"
@@ -8362,7 +8325,7 @@ literal "false"
 
 \end_inset
 
- is a Gradient Boosting algorithm (discussed in 
+ is a Gradient Boosting algorithm (discussed in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Stochastic-Gradient-Boosting"
@@ -8813,7 +8776,7 @@ noprefix "false"
  The prediction of the ensemble is the average cumulative hazard function
  among all learner's predictions.
  However, we might want to predict a survival function.
- Recall the Equation
+ Recall the Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:chf-to-surv"
@@ -9587,7 +9550,7 @@ The data were provided in the form of a MongoDB database dump.
  It was necessary to run the database, import the database dump, and export
  data in the appropriate format.
  We set up the MongoDB database in a Docker container (Docker explained
- in 
+ in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Architecture"
@@ -9772,7 +9735,7 @@ tion at that age differs significantly from that of adults.
 \begin_layout Standard
 The next step is to handle missing (NaN) values.
  It is done with _handle_nan() method.
- We tried using mean and median imputation techniques from 
+ We tried using mean and median imputation techniques from Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Handling-Missing-Feature"
@@ -9953,6 +9916,27 @@ status open
 
 
 \backslash
+begin{table}[ht]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Table of Features and Their Types}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 label{tab:feature_table}
 \end_layout
 
@@ -10005,7 +9989,7 @@ _DIALYSIS &    The recipient's pre-transplant dialysis status.
 \backslash
 _TX
 \backslash
-_TXFUS &  The recipient's history of pre-transplant bloo...
+_TXFUS &  The recipient's history of pre-transplant blood transfusions.
  &  Categorical 
 \backslash
 
@@ -10082,7 +10066,7 @@ _DON &                                    Donor ethnicity.
 
         ABO
 \backslash
-_MAT &                   Donor recipient blood type match type.
+_MAT &                   Donor-recipient blood type match type.
  &  Categorical 
 \backslash
 
@@ -10266,6 +10250,13 @@ end{tabular}
 
 \begin_layout Plain Layout
 
+
+\backslash
+end{table}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -10314,15 +10305,15 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Box Plots for the Survival Time for Deceased and Living Donor Groups
-\end_layout
+Box Plots for the Survival Time for Deceased and Living Donor Groups 
+\begin_inset CommandInset label
+LatexCommand label
+name "box_surv_time"
 
 \end_inset
 
 
-\begin_inset CommandInset label
-LatexCommand label
-name "box_surv_time"
+\end_layout
 
 \end_inset
 
@@ -10440,7 +10431,7 @@ noprefix "false"
  As can be seen, the percentage of censoring in deceased donor transplantation
  subset is 51.6%, and in living donor transplantation 68.6%.
  This difference might be attributed to the fact that the number of LDT
- has started to grow only relatively recently (
+ has started to grow only relatively recently (Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Histogram-of-Deceased/Living"
@@ -10459,7 +10450,7 @@ literal "false"
 
 \end_inset
 
-, as also illustrated in 
+, as also illustrated in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "box_surv_time"
@@ -10482,7 +10473,7 @@ Donor Type
 In this subsection, we will explore the influence of donor type (living
  or diseased) on survival.
  It is a well-established fact that recipients who receive kidneys from
- living donors have higher life expectancy
+ living donors have higher life expectancy 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-16,key-17"
@@ -12309,7 +12300,7 @@ name "fig:Pie-Living-donor"
 \end_layout
 
 \begin_layout Section
-Dataset building, Exclusion Criteria and Noise Reduction
+Dataset Building, Exclusion Criteria and Noise Reduction
 \end_layout
 
 \begin_layout Paragraph
@@ -12495,11 +12486,12 @@ In our study, we used the scikit-survival library algorithms to train our
  When choosing the models we would fully train and fine-tune in the end,
  we tried most of the models that scikit survival offers on a small subset
  of data and chose the ones that perform best while taking adequate time.
- Despite SVM-based survival models demonstrating superior performance on
- the small subset of data, we decided against using them due to their inherent
- inability to handle large datasets, which results in extended training
- times and frequent crashes when attempting to train on the slightly larger
- than 1000 samples subset, not even mentioning the entire training set.
+ We had high hopes for SVM-based survival models, but despite them demonstrating
+ superior performance on the small subset of data, we decided against using
+ them due to their inherent inability to handle large datasets, which results
+ in extended training times and frequent crashes when attempting to train
+ on the slightly larger than 1000 samples subset, not even mentioning the
+ entire training set.
  
 \end_layout
 
@@ -12518,7 +12510,7 @@ show the results
 
 \begin_layout Standard
 After rigorous experimentation, we ultimately selected CoxnetSurvivalAnalysis
- (Cox Elastic Net, later referred to as coxnet) 
+ (Cox Elastic Net, later referred to as Coxnet) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-54"
@@ -12571,7 +12563,8 @@ However, we encountered some challenges due to the relatively large dataset,
  RSF and GBSA demonstrated a prolonged training time compared to Coxnet
  (hours instead of minutes), and RSF demonstrated high computational demands.
  The latter resulted in frequent kernel crashes in our Jupyter notebooks
- after long hours of training.
+ after long hours of training due to the RAM shortage (on machine with 384
+ GB RAM).
  To mitigate these issues, we divided our dataset based on living and deceased
  donors and reduced the number of features used.
  These subsets are later referred to by the name of the type of transplantation,
@@ -12599,21 +12592,6 @@ After the removal of missing values, the combined datasets contain 170,618
  model training.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add features used in the living and deceased as new table (but they are
- already shown for each model in feature importance......) just mention then that
- features are there.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Results
 \end_layout
@@ -12623,10 +12601,12 @@ In this study, six models were fine-tuned and trained, three for each subset.
  We utilized the Cox Elastic Net, Random Survival Forest, and GradientBoostedSur
 vivalAnalysis models from the scikit-survival library.
  Two models were trained locally (Coxnet and GBSA) on Apple MacBook Air
- 16GB RAM, and one was trained in a cluster (RSF).
+ 16GB RAM, and one was trained in a university cluster (RSF).
  The preferred model in this study is Coxnet due to its impressive performance
  and short training time of 30 to 180 seconds compared to other models that
  can take several hours to train.
+ All notebooks can be found in this project's GitHub repository in Code
+ folder.
  
 \end_layout
 
@@ -12660,7 +12640,7 @@ noprefix "false"
  This is likely related to the inherent donor-recipient compatibility limitation
 s within the DDT dataset and the presence of older transplants performed
  with less refined technniques.
- These shortcomings are reflected in the models.
+ These dataset shortcomings are reflected in the models.
  Moreover, models have more or less the same performance for the same dataset,
  which might mean that models capture data well, and the only bottleneck
  is the dataset.
@@ -12884,7 +12864,7 @@ Kaplan-Meier (for IBS reference)
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Model comparison for living dataset
+Model Comparison for LDT Models
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:living-comparison"
@@ -13117,7 +13097,7 @@ Kaplan-Meier (for IBS reference)
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Model comparison for deceased dataset
+Model Comparison for DDT Models
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:deceased-comparison"
@@ -13140,13 +13120,11 @@ name "tab:deceased-comparison"
 \begin_layout Standard
 For LDT, RSF shows slightly superior discrimination (AUC), but the overall
  prediction accuracy (BS) is inferior to Coxnet and GBSA.
- For the deceased, GBSA shows superior discrimination to Coxnet and RSF,
- but the prediction accuracy (BS) is the very similar for GBSA and Coxnet,
- and worse for RSF.
- Coxnet is preferred for both living and deceased due to its low training
- time.
+ For the deceased, GBSA is the best model across all metrics.
+ Due to its low training time, Coxnet is the preferred model for both LDT
+ and DDT.
  However, if training time is not a concern, GBSA may be preferred for the
- deceased cohort due to its slightly higher discriminative ability.
+ DDT cohort due to its slightly higher discriminative ability.
 \end_layout
 
 \begin_layout Standard
@@ -13394,8 +13372,20 @@ name "subsec:Coxnet"
 \end_layout
 
 \begin_layout Standard
-Coxnet, also known as a Cox elastic net or Cox regularized regression, is
- a linear model that efficiently handles large datasets and performs well.
+
+\emph on
+Coxnet
+\emph default
+, also known as a 
+\emph on
+Cox elastic net
+\emph default
+ or 
+\emph on
+Cox regularized regression
+\emph default
+, is a linear model that efficiently handles large datasets and performs
+ well.
 \end_layout
 
 \begin_layout Standard
@@ -13540,9 +13530,8 @@ noprefix "false"
 \end_inset
 
 .
- So, they were removed, and the model performance improved. The coefficients
- from the trained models, which represent feature importance, are visualized
- in Figures 
+ So, they were removed, and the model performance improved. The feature importanc
+es are visualized in Figures 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:FI-forCoxnet-Living"
@@ -13562,7 +13551,7 @@ noprefix "false"
 
 \end_inset
 
- (negative values also indicate non-negative importance).
+.
 \end_layout
 
 \begin_layout Standard
@@ -13575,7 +13564,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Images/Results/Coxnet_FI_living.pdf
-	scale 85
+	scale 70
 
 \end_inset
 
@@ -13583,7 +13572,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Feature Coefficient Importance for Coxnet Living
+Feature Permutation Importance for Coxnet Living
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:FI-forCoxnet-Living"
@@ -13617,7 +13606,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Images/Results/Coxnet_FI_deceased.pdf
-	scale 80
+	scale 65
 
 \end_inset
 
@@ -13625,7 +13614,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Feature Coefficient Importance for Coxnet Deceased
+Feature Permutation Importance for Coxnet Deceased
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:FI-for-Coxnet-Deceased"
@@ -13650,8 +13639,8 @@ name "fig:FI-for-Coxnet-Deceased"
 \end_layout
 
 \begin_layout Standard
-As we can see, the most predictive features are the patient’s diabetes status,
- age, ethnicity, hepatitis C status, and dialysis.
+As we can see, the most predictive features are the patient age, patient
+ diabetes status, dialysis, and recipient ethnicity.
 \end_layout
 
 \begin_layout Paragraph
@@ -13688,46 +13677,25 @@ Data Pipelines
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-expanding on ...
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Data preprocessing is a critical step in machine learning, particularly
- for improving the accuracy and reliability of models.
- Depending on the context, one of two ways of data preprocessing is employed:
- scikit-learn pipeline transformers or the scikit-survival functions.
- The former is used for KidneyLife production, while the latter is used
- for training and analyzing feature importances.
-\end_layout
-
-\begin_layout Standard
-Scikit-learn transformers produce a numpy array, while scikit-survival functions
- output pandas data frame, which means that the column names are not preserved
- with the former.
- Moreover, the way of processing and the number of columns in outputs are
- different, so we could not just copy the column names from one to the other.
- As a result, analyzing the importance of features with transformers is
- virtually impossible.
-\end_layout
-
-\begin_layout Standard
-We employed scikit-learn pipeline transformers because we needed a pipeline
- that produces consistent results in the production environment.
- Rather than developing a pipeline from scratch, the transformer pipeline
- used during model training is pickled and then used in production.
- However, this also means that if the model is to be used in production,
- it needs to be retrained using scikit-learn pipeline transformers.
- It is worth noting that the approach to preprocessing does not affect model
- performance.
+Coxnet models are the only two models used in KidneyLife (they are the most
+ lightweight and fast in prediction of all trained).
+ That necessitates a data input pipeline to provide the data the model expects.
+ Fortunately, it is possible to pickle scikit-learn's transformer pipelines
+ used in training and use them later to process the input values.
+ However, they have a downside of not preserving the column names (at least
+ we were not able to preserve them), making the feature importance analysis
+ impossible.
+ Because of that, we use two data pipelines for different use cases.
+ The second pipeline is suggested in the scikit-survival documentation approach:
+ directly using the scikit-survival's functions 
+\emph on
+encode_categorical()
+\emph default
+ and 
+\emph on
+encode_numerical()
+\emph default
+.
 \end_layout
 
 \begin_layout Subsection
@@ -13735,11 +13703,27 @@ Random Survival Forest
 \end_layout
 
 \begin_layout Standard
-The random survival forest is a robust ensemble machine-learning algorithm.
- However, its training time is longer than the other methods, and it can
- be challenging to work with, especially during hyperparameter tuning.
+The 
+\emph on
+Random Survival Forest
+\emph default
+ is a robust ensemble machine-learning algorithm with Survival Trees as
+ a base learned (discussed in more detail in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Random-Survival-Forest"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ However, its training time is longer than Coxnet, and it can be challenging
+ to work with due to its high computational requirements (depending on the
+ number of learners), especially during hyperparameter tuning.
  Moreover, RSF is known to be highly memory-hungry during training and predictio
-n, making it unsuitable for deployment.
+n, making it unsuitable for use in the application.
  
 \end_layout
 
@@ -13803,7 +13787,7 @@ noprefix "false"
 
 \end_inset
 
-shows the fine-tuned hyperparameters, as well as the values that were tested
+ shows the fine-tuned hyperparameters, as well as the values that were tested
  and ultimately selected.
  After experimenting with higher values (80), we kept the number of estimators
  at 50 since we did not observe any noticeable improvement beyond that point,
@@ -14007,9 +13991,9 @@ noprefix "false"
 ” and ”FeatureSelection/rsf_living.ipynb” (calculated in cluster file deceased.
  ipynb).
  For the living, the most important ones are, as before, recipient age,
- diabetes status, dialysis status, and dialysis time.
- The situation is similar for the deceased, but the recipient's serum creatinine
- before transplant is higher in the rating.
+ diabetes status, dialysis status, recipient ethnicity, and dialysis time.
+ For the deceased, recipient age, recipient diabetes status and recipient
+ pretransplant serum creatinine are top three features.
 \end_layout
 
 \begin_layout Standard
@@ -14105,10 +14089,20 @@ The LDT trained for 65 minutes, and the DDT for about 80 minutes.
  Upping the estimators is a potential avenue for improvement, but one would
  need to be careful not to overfit the model.
  Moreover, the training would take a long time: 200 estimators would require
- 4 hours of training, and one might overfit the model or run out of RAM.
- Overfitting can be avoided with regularization, but it is unlikely that
- it would surpass the performance of Coxnet survival by a large margin.
- 
+ 4 hours of training, and one might run out of RAM.
+ Overfitting can be avoided with regularization, but it is unlikely to surpass
+ current performance by a large margin, as we already have reached values
+ observed in the literature (discussed in more detail in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Discussion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsection
@@ -14116,8 +14110,22 @@ Gradient Boosting Survival Analysis
 \end_layout
 
 \begin_layout Standard
-CoxnetSurvivalAnalysis is a model with gradient-boosted Cox proportional
- hazard loss with regression trees as the base learner.
+
+\emph on
+GradientBoostedSurvivalAnalysis
+\emph default
+ is a model with gradient-boosted Cox proportional hazard loss with regression
+ trees as the base learner, as discussed in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Gradient-Boosted-Survival"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
  It is a relatively slow algorithm, as it can only run on one CPU core and
  trains only one estimator at a time.
  The training time might be considerable as we cannot fully utilize the
@@ -14155,7 +14163,7 @@ noprefix "false"
  show the performance of two GBSA models for living and deceased subsets.
  As with the two previous models, the living model performs better than
  the deceased model.
- It is the best for the deceased with c_index 0.699 and IBS 0.162.
+ It is the best among the DDT models with c_index 0.699 and IBS 0.162.
 \end_layout
 
 \begin_layout Paragraph
@@ -14165,7 +14173,11 @@ Hyperparameters
 \begin_layout Standard
 We used three primary hyperparameters: the number of estimators, learning
  rate, and max_depth.
- Grid search estimated the best max_depth to be 6.
+ Grid search estimated the best 
+\emph on
+max_depth
+\emph default
+ to be 6.
  However, experimentally, we found that 4 gives better results.
  Through trial and error, we selected a learning rate of 0.2, which resulted
  in the best outcomes.
@@ -14382,16 +14394,39 @@ Feature Selection
 \begin_layout Standard
 Initially, we performed feature selection on models with a small number
  of learners, and it produced an interesting result: only a small selection
- of features was deemed to have any importance.
+ of features was deemed important.
  The result did not seem accurate.
  Since we already had several models trained with many more learners, we
  decided to assess their feature importance.
  Subsequently, we discovered that many features initially deemed irrelevant
  were, in fact, relevant.
- Therefore, this particular feature selection approach is unsuitable for
- GBSA, and feature importance must be evaluated on a fully trained model.
+ Therefore, this feature selection approach is unsuitable for GBSA, and
+ feature importance must be evaluated on a fully trained model.
  For instance, RSF is unaffected by this issue, as feature importance remains
  more or less consistent for both trained and under-trained models.
+ This makes sense, as the model is improving with each trained estimator
+ (the algorithm is described in Sections 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Stochastic-Gradient-Boosting"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Gradient-Boosted-Survival"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), contrary to RSF, where it can perform with a relatively low quantity
+ of learners because each learner is an individual estimator.
 \end_layout
 
 \begin_layout Paragraph
@@ -14712,7 +14747,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Mean Predicted Hazard by Survival Time Groups for GBSA Deceased
+Mean Predicted Hazard by Detailed Survival Time Groups for GBSA Deceased
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Mean-Predicted-Hazard-GBSA-year"
@@ -14761,7 +14796,7 @@ The Scoring
 \end_layout
 
 \begin_layout Standard
-As part of our task to create a scoring formula, we are presenting the following
+As part of our task to create a scoring, we are presenting the following
  scoring formula:
 \end_layout
 
@@ -14804,7 +14839,7 @@ n
 \begin_inset Formula $C_{hazard}$
 \end_inset
 
- is expressed by
+ is denoted by
 \end_layout
 
 \begin_layout Standard
@@ -14910,7 +14945,7 @@ centering
 
 
 \backslash
-caption{Scoring}
+caption{Calculated Score for Given Predicted Hazard}
 \end_layout
 
 \begin_layout Plain Layout
@@ -15089,6 +15124,13 @@ ref{tab:scoring}
 
 \begin_layout Section
 Discussion 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Discussion"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -15198,12 +15240,11 @@ noprefix "false"
 
 \end_inset
 
-) focused on the life expectancy.
- It is based on predicted hazard and the age of the recipient.
- We have found that it probably will not provide accurate estimates for
- people with higher predicted hazard as high predicted hazard could mean
- 1 year survived as well as five.
- Refer to the Section 
+) focused on life expectancy.
+ It is based on predicted hazard and the recipient's age.
+ We have found that it is not very accurate for people with successful transplan
+ts, but it can catch potentially unsuccessful ones.
+ Refer to Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Scoring"
@@ -15214,21 +15255,6 @@ noprefix "false"
 \end_inset
 
  for further details.
- We recommend incorporating additional factors into the scoring system,
- following the approach used in the Estimated Post-Transplant Survival Score
- (EPTS) 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-61"
-literal "false"
-
-\end_inset
-
-.
- In EPTS, factors such as years on dialysis, diabetes, prior transplants,
- and age were included.
- Although the model prediction was not directly included in the formula,
- the equation itself was derived from Cox proportional hazards.
 \end_layout
 
 \begin_layout Paragraph
@@ -15257,7 +15283,7 @@ literal "false"
 
 \end_inset
 
-, which trained model with the post-transplant 3-month serum creatinine,
+, which trained a model with the post-transplant 3-month serum creatinine,
  but we advise using more features.
 \end_layout
 
@@ -15290,13 +15316,11 @@ Upping the estimators in random survival forest is a potential avenue for
 \end_layout
 
 \begin_layout Standard
-Scoring definitely needs more work.
- While it is able to catch really bad transplantations, with more successful
- ones (that do not experience hyperacute or acute rejection) it is less
- accurate.
- We suggest adding more features into the formula, or trying a different
- approach altogether.
- 
+The scoring is not finished and needs more work.
+ While it can catch really bad transplantations, it is less accurate with
+ more successful ones (that do not experience hyperacute or acute rejection).
+ We suggest adding more features to the formula or trying a different approach
+ altogether.
 \end_layout
 
 \begin_layout Standard
@@ -15307,10 +15331,9 @@ Initially, we considered training a survival neural network.
  complex data, such as images or text.
  Our dataset is relatively simple, consisting of tabular data with no more
  than 40 features after one-hot preprocessing.
- Therefore, we believe that the algorithms we use should be at least as
- effective.
- However, training a neural network may still be a viable option for those
- willing to invest the time necessary to potentially achieve better performance.
+ Therefore, the algorithms we use should be at least as effective.
+ However, training a neural network is still a viable option for those willing
+ to invest the time necessary to achieve better performance.
 \end_layout
 
 \begin_layout Chapter
@@ -15774,12 +15797,11 @@ Overview
 \begin_layout Standard
 We present KidneyLife, an inference application dedicated to the user-friendly
  use of machine learning models for survival analysis.
- The application aims to aid physicians in their decision-making process
- by providing a comprehensive estimate of a kidney transplant recipient's
- lifespan.
- Due to models' assumption of donor-recipient compatibility, it should be
- used in conjunction with the previously described KPD software or other
- compatibility matching software.
+ The application aims to aid physicians in decision-making by comprehensively
+ estimating a kidney transplant recipient's lifespan.
+ Due to the models' assumption of donor-recipient compatibility, it should
+ be used with the previously described KPD software or other compatibility-match
+ing software.
 \end_layout
 
 \begin_layout Standard
@@ -15850,7 +15872,7 @@ noprefix "false"
 \end_inset
 
  under the ”Front End” subsection.
- Further insights into the UI you can get in Section 
+ Further insights into the UI can be seen in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Functionality-and-UX"
@@ -15895,9 +15917,9 @@ two identical sentences.
 \end_layout
 
 \begin_layout Standard
-Under the Submit button, you can find a button fetching synthetical data
- from the server.
- It allows for quick model illustration without the need for manual data
+Under the Submit button, you can find a button fetching synthetic data from
+ the server.
+ This allows for quick model illustration without the need for manual data
  entry.
  The details of the synthetic data generation can be found in Section 
 \begin_inset CommandInset ref
@@ -15922,8 +15944,8 @@ Back End
 
 \begin_layout Standard
 It is important to note that KidneyLife should be perceived as a minimum
- viable product (MVP), offering a minimum usable set of features for user
- feedback.
+ viable product (MVP) or, rather, a proof of concept, offering a minimum
+ usable set of features for user feedback.
  This approach was adopted to address the rapidly growing development complexity
  and uncertainty of user needs and preferences.
  Section 
@@ -15936,8 +15958,8 @@ noprefix "false"
 
 \end_inset
 
- outlines initial conceptualization of the application and the potential
- avenues for further development.
+ outlines the application's initial conceptualization and potential avenues
+ for further development.
  
 \begin_inset Note Note
 status open
@@ -15979,7 +16001,15 @@ literal "false"
  Docker compose is a utility for building and distributing multi-container
  applications.
  Each container within the Docker Compose application stack is called a
- service.
+ service 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-40"
+literal "false"
+
+\end_inset
+
+.
  KidneyLife consists of three services: front end, back end, and the reverse
  proxy.
 \end_layout
@@ -16429,9 +16459,6 @@ Fast Healthcare Interoperability Resources
 Health Level Seven
 \emph default
  (HL7) standard for electronic healthcare data exchange.
- Although only a few hospital systems currently support HL7 FHIR, its adoption
- is viewed as the future of healthcare data exchange.
- 
 \end_layout
 
 \begin_layout Standard
@@ -16440,9 +16467,9 @@ If any of these changes are to take place, we need to add continuous integration
  CI/CD automates testing and deployment processes, improving efficiency
  and reducing the risk of errors.
  While the deployment has already been automated, the testing has not.
- Git Hub Actions can be utilized to test the application automatically on
- the server every time the changes are pushed to Git Hub, ensuring that
- pull requests cannot be merged into the main branch if the tests fail.
+ GitHub Actions can be utilized to test the application automatically on
+ the server every time the changes are pushed to GitHub, ensuring that pull
+ requests cannot be merged into the main branch if the tests fail.
  While the tests for the backend already exist, automating them with GitHub
  actions would be the next step.
 \end_layout
@@ -16549,7 +16576,7 @@ addcontentsline{toc}{chapter}{Conclusion}
 The study involved training six models to predict the survival outcome of
  kidney transplantation, three for each type of transplantation – living
  donor transplantation (LDT) and deceased donor transplantation (DDT).
- The study used regularised Cox (Coxnet) 
+ The study used regularized Cox (Coxnet) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-54"
@@ -16557,7 +16584,7 @@ literal "false"
 
 \end_inset
 
-, gradient boosted survival analysis (GBSA) 
+, Gradient-Boosted Survival Analysis (GBSA) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-56"
@@ -16565,7 +16592,7 @@ literal "false"
 
 \end_inset
 
-, and random survival forest (RSF) 
+, and Random Survival Forest (RSF) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-55"
@@ -16589,9 +16616,8 @@ The performance of the models was evaluated using the Uno concordance index
 \begin_layout Standard
 The DDT models achieved an Uno c-index of 0.691 - 0.699, while the LDT models
  achieved a 0.722-0.723.
- However, the results are comparable to other papers that trained models
- without any separation.
- 
+ However, the results are comparable to those of other papers that trained
+ models without separation.
 \end_layout
 
 \begin_layout Standard
@@ -16974,8 +17000,9 @@ noprefix "false"
 
 \end_inset
 
- were found to be the best, however, some further fine-tuning might be needed,
- especially with the number of estimators in the random survival forest.
+ were found to be the best.
+ However, further fine-tuning might be needed, especially with the number
+ of estimators in the Random Survival Forest.
  
 \end_layout
 
@@ -17110,10 +17137,19 @@ The feature selection was performed by evaluating the importance of the
  of features with negative and zero importance.
  More than 70 features were considered and engineered, only for most of
  them to be excluded.
- The following features showed the highest importance across models: DIAB,
- AGE, ETHNCAT, HCV_SEROSTATUS, ON_DIALYSIS, and GENDER.
+ The following features were most important across models: DIAB, AGE, ETHNCAT,
+ HCV_SEROSTATUS, ON_DIALYSIS, and GENDER.
  Table 6.1 provides a description and type for each of these features.
  
+\end_layout
+
+\begin_layout Standard
+A prototype of a transplant scoring system was developed using trained models.
+ While it can catch bad transplantations, it cannot tell which successful
+ transplantations are better.
+ This might be due to the inherent difficulty of accurately predicting survival,
+ as too many factors influencing survival cannot be included in the dataset.
+ In any event, more work is needed to make any conclusions.
 \end_layout
 
 \begin_layout Standard
@@ -17127,7 +17163,7 @@ An application named KidneyLife has been developed to assist physicians
  The application is considered a minimum viable product (MVP), and its functiona
 lity may be significantly expanded according to the needs of interested
  institutions.
- For further details, refer to the 
+ For further details, refer to the Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Future-Work"
@@ -17164,7 +17200,14 @@ The data reported here have been supplied by the United Network for Organ
 
 \begin_layout Standard
 The source code for both the application and trained models can be found
- in the following GitHub repository: https://github.com/krllstdn/BachelorProject
+ in the following GitHub repository: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://github.com/krllstdn/BachelorProject"
+literal "false"
+
+\end_inset
+
  Data and trained models are, of course, excluded.
 \end_layout
 
@@ -17361,7 +17404,8 @@ Gradient Boosted Models — scikit-survival 0.22.2.
  
 \begin_inset CommandInset href
 LatexCommand href
-target "https://scikit-survival.readthedocs.io/en/stable/user_guide/boosting.html"
+target "https://scikit-survival.readthedocs.io/en/v0.22.2/user_guide/boosting.html"
+literal "false"
 
 \end_inset
 
@@ -17848,20 +17892,10 @@ literal "false"
  (2019, May 23).
  Everything You Need to Know About Kidney Failure.
  Healthline; Healthline Media.
- 
+ Retrieved 5 August, 2024 from 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.healthline.com/health/kidney-failure#outlook"
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
-\end_layout
 
 \end_inset
 
@@ -17900,17 +17934,14 @@ literal "false"
 
 Estimated Glomerular Filtration Rate (eGFR).
  (2015, December 24).
- National Kidney Foundation; https://www.kidney.org/atoz/content/gfr 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
-\end_layout
+ National Kidney Foundation; Retrieved 5 August, 2024 from 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.kidney.org/atoz/content/gfr"
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -17924,7 +17955,7 @@ literal "false"
 What is a Container? | Docker.
  (2023, October 26).
  Docker.
- 
+ Retrieved 5 August, 2024 from 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.docker.com/resources/what-container/"
@@ -17932,16 +17963,6 @@ target "https://www.docker.com/resources/what-container/"
 \end_inset
 
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Bibliography
@@ -17955,7 +17976,7 @@ literal "false"
 ‌Use Docker Compose.
  (2024).
  Docker Documentation.
- 
+ Retrieved 5 August, 2024 from 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://docs.docker.com/get-started/08_using_compose/"
@@ -17963,16 +17984,6 @@ target "https://docs.docker.com/get-started/08_using_compose/"
 \end_inset
 
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Bibliography
@@ -17986,20 +17997,10 @@ literal "false"
 What is a Reverse Proxy Server? | NGINX.
  (2023, June).
  NGINX.
- 
+ Retrieved 5 August, 2024 from 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.nginx.com/resources/glossary/reverse-proxy-server/"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
-\end_layout
 
 \end_inset
 
@@ -18018,7 +18019,7 @@ Kendra Cherry, Mse.
  (2022, November 22).
  How the color blue impacts moods, feelings, and behaviors.
  Verywell Mind.
- 
+ Retrieved 5 August, 2024 from 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.verywellmind.com/the-color-psychology-of-blue-2795815"
@@ -18026,16 +18027,6 @@ target "https://www.verywellmind.com/the-color-psychology-of-blue-2795815"
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
-\end_layout
-
-\end_inset
-
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -18048,21 +18039,10 @@ literal "false"
 
 Kidney Paired Donation (KPD) Program.
  (2024, January 3).
- Professional Education.
- 
+ Professional Education.Retrieved 5 August, 2024 from 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://professionaleducation.blood.ca/en/organs-and-tissues/programs/kidney-paired-donation-kpd-program"
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
-\end_layout
 
 \end_inset
 
@@ -18108,21 +18088,10 @@ literal "false"
 ‌4 Key Features of the APKD Software Program | Alliance for Paired Kidney
  Donation.
  (2022, December 9).
- Alliance for Paired Kidney Donation |.
- 
+ Alliance for Paired Kidney Donation | Retrieved 5 August, 2024 from 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://paireddonation.org/4-key-features-of-the-apkd-software-program/"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
-\end_layout
 
 \end_inset
 
@@ -18300,7 +18269,7 @@ literal "false"
 sksurv.linear_model.CoxnetSurvivalAnalysis — scikit-survival 0.22.2.
  (2015).
  Readthedocs.io.
- 
+ Retrieved 5 August, 2024 from 
 \begin_inset ERT
 status open
 
@@ -18308,18 +18277,8 @@ status open
 
 
 \backslash
-url{https://scikit-survival.readthedocs.io/en/stable/api/generated/sksurv.linear_mo
-del.CoxnetSurvivalAnalysis.html#sksurv.linear_model.CoxnetSurvivalAnalysis}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
+url{https://scikit-survival.readthedocs.io/en/v0.22.2/api/generated/sksurv.linear_mod
+el.CoxnetSurvivalAnalysis.html}
 \end_layout
 
 \end_inset
@@ -18338,7 +18297,7 @@ literal "false"
 ‌sksurv.ensemble.RandomSurvivalForest — scikit-survival 0.22.2.
  (2015).
  Readthedocs.io.
- 
+ Retrieved 5 August, 2024 from 
 \begin_inset ERT
 status open
 
@@ -18346,18 +18305,8 @@ status open
 
 
 \backslash
-url{https://scikit-survival.readthedocs.io/en/stable/api/generated/sksurv.ensemble.R
-andomSurvivalForest.html}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
+url{https://scikit-survival.readthedocs.io/en/v0.22.2/api/generated/sksurv.ensemble.Ra
+ndomSurvivalForest.html}
 \end_layout
 
 \end_inset
@@ -18376,7 +18325,7 @@ literal "false"
 ‌sksurv.ensemble.GradientBoostingSurvivalAnalysis — scikit-survival 0.22.2.
  (2015).
  Readthedocs.io.
- 
+ Retrieved 5 August, 2024 from 
 \begin_inset ERT
 status open
 
@@ -18384,18 +18333,8 @@ status open
 
 
 \backslash
-url{https://scikit-survival.readthedocs.io/en/stable/api/generated/sksurv.ensemble.G
-radientBoostingSurvivalAnalysis.html}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
+url{https://scikit-survival.readthedocs.io/en/v0.22.2/api/generated/sksurv.ensemble.Gr
+adientBoostingSurvivalAnalysis.html}
 \end_layout
 
 \end_inset
@@ -18621,24 +18560,15 @@ literal "false"
 ‌Organ Donation Statistics | organdonor.gov.
  (2024, March 29).
  Organdonor.gov.
- 
+ Retrieved May 20, 2024 from 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.organdonor.gov/learn/organ-donation-statistics"
+literal "false"
 
 \end_inset
 
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Bibliography
@@ -18653,20 +18583,10 @@ literal "false"
  (2024, June 15).
  US population by year, race, age, ethnicity, & more.
  USAFacts; USAFacts.
- 
+ Retrieved June 23, 2024 from 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://usafacts.org/data/topics/people-society/population-and-demographics/our-changing-population/"
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
-\end_layout
 
 \end_inset
 
@@ -18725,7 +18645,7 @@ literal "false"
 scikit-survival/sksurv/tree/tree.py at v0.23.0 · sebp/scikit-survival.
  (2024).
  GitHub.
- 
+ Retrieved 5 August 2024 from 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://github.com/sebp/scikit-survival/blob/v0.23.0/sksurv/tree/tree.py#L38-L676"
@@ -18733,16 +18653,6 @@ target "https://github.com/sebp/scikit-survival/blob/v0.23.0/sksurv/tree/tree.py
 \end_inset
 
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Bibliography
@@ -18756,7 +18666,7 @@ literal "false"
 scikit-learn/sklearn/tree/_tree.pyx at main · scikit-learn/scikit-learn.
  (2024).
  GitHub.
- 
+ Retrieved 5 August, 2024 from 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/tree/_tree.pyx#L140"
@@ -18764,16 +18674,6 @@ target "https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/tree/_tre
 \end_inset
 
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Bibliography
@@ -18787,7 +18687,7 @@ literal "false"
 DecisionTreeRegressor.
  (2024).
  Scikit-Learn.
- 
+ Retrieved 5 August 2024 from 
 \begin_inset ERT
 status open
 
@@ -18802,16 +18702,6 @@ essor.html}
 \end_inset
 
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Bibliography
@@ -18824,7 +18714,7 @@ literal "false"
 
 ‌Nelson-Aalen Estimator.
  (n.d.).
- 
+ Retrieved 5 August 2024 from 
 \begin_inset ERT
 status open
 
@@ -18834,16 +18724,6 @@ status open
 \backslash
 url{https://www.medicine.mcgill.ca/epidemiology/hanley/c609/material/NelsonAalenEst
 imator.pdf}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-retrieved when?
 \end_layout
 
 \end_inset
